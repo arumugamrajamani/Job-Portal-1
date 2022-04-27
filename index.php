@@ -10,14 +10,6 @@
 
 <title>Job Portal</title>
 
-<link rel="shortcut icon" type="image/x-icon" href="layout/images/favicon.ico" >
-
-<link href="layout/css/bootstrap-custom.css" rel="stylesheet" type="text/css"/>
-<script src="layout/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-
-<link href="layout/css/fontawesome.min.css" type="text/css" rel="stylesheet">
-
-<link href="layout/css/custom.css" rel="stylesheet" type="text/css"/>
 
 
 </head>

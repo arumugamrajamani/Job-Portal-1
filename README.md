@@ -1,2 +1,3 @@
 # Job-Portal
-hello this is a line that i edited -justine
+
+Haru haru welcome to our job portal git repository

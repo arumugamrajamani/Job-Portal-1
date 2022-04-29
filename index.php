@@ -17,7 +17,12 @@
         again i want to add this to the new branch
         <h1>Try ko mag re sync</h1>
         New branch stuff
+<<<<<<< HEAD
         new braaanchhh
+=======
+        
+        these changes are from the remote repository :DD
+>>>>>>> main
 
     </body>
 

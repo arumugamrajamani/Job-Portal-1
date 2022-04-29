@@ -15,11 +15,7 @@
     <body>
         <h1>Try ko mag re sync</h1>
         New branch stuff
-        <h1>Try ko mag re sync</h1>
-        <h1>Try ko mag re sync</h1>
-        <h1>Try ko mag re sync</h1>
-        <h1>Try ko mag re sync</h1>
-        <h1>Try ko mag re sync</h1>
+
     </body>
 
 </html>

@@ -27,15 +27,18 @@ This project was given to us by our employer from the company Melham Constructio
 -Marc John B. Castillo<br>
 -Ralph Eriez I. Ronquillo<br>
 <br>
+<br>
 **Maintaintance**<br>
 -Angelo Kenneth Arrojo<br>
+<br>
 <br>
 **Upgrade**<br>
 -John Ronald Tiamzon<br>
 <br>
+<br>
 **Documantation**<br>
 -Adrian Nunag<br>
--Angelica Pagunsan<br>
+<br>
 <br>
 **Tester**<br>
 -Jeanelle L. Cansino<br>

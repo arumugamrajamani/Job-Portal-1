@@ -58,6 +58,7 @@ body{
 .container1{
     background: #FDF6EC;
     position: absolute;
+    width: 100%;
     width: 232px;
     height: 550px;
     left: 33px;
@@ -193,6 +194,7 @@ h1{
     background: #EDBEA4;
 }
  .container2{
+    width: 90%;
     position: absolute;
     width: 1600px;
     height: 272px;

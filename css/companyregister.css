@@ -59,7 +59,7 @@ h2{
 .container{
     position: relative;
     width: 954px;
-    height: 1300px;
+    height: 1500px;
     left: 59px;
     top: 70px;
     background: #FDF6EC;
@@ -84,4 +84,7 @@ h2{
     font-size: 25px;
     line-height: 30px;
     color: #FFFFFF;
+}hr{
+    border:1px solid black;
+    
 }

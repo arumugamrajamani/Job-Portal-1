@@ -87,11 +87,13 @@ input[type="checkbox"]{
     width:100px;
     color: #FFFFFF;
     background-color: #00C2D6;
+}.btn1{
+    line-height: 0.5;
 }
 form #alogin{
     margin-top: 5px;
     color: blue;
-    padding: 80px;
+    
     text-align: center;
 }.c1{
     background-color: transparent;

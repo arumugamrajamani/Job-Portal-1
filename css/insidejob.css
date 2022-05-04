@@ -1,0 +1,41 @@
+body{
+    background: #FDF6EC;
+}.masthead{
+    background-size: cover;
+    min-height: 100vh;
+ 
+    
+}.search-box{
+   
+    width: 500px;
+    border-style:outset;
+}.btn-outline{
+    background-color: #00C2D6;
+    
+}.navbar-light{
+    background-color: #FFFFFF;
+    margin:0%;
+}.navbar-expand-lg{
+    height:100px;
+    width:100%;
+    margin-left: 5px;
+    
+}.btn-outline-secondary{
+    background-color: #00C2D6;
+    color: white;
+    border: #00C2D6;
+    border-style:outset;
+    
+}.para{
+    background-color: #EDBEA4;
+}.para2{
+    background-color: #EDBEA4;
+    
+}.position{
+    margin-left: 400px;
+}.page-footer{
+    background-color: #FDF6EC;
+
+}
+
+/*/Colors  #EDBEA4 #FDF6EC #00C2D6 #FDF6EC #FFFFFF/*/

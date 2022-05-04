@@ -38,7 +38,7 @@ This project was given to us by our employer from the company Melham Constructio
 <br>
 **Documantation**<br>
 -Adrian Nunag<br>
-John Christian G. Galang<br>
+-John Christian G. Galang<br>
 <br>
 <br>
 **Tester**<br>

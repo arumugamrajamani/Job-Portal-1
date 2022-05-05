@@ -7,7 +7,10 @@
     <title>JOBSEEKER SIGN UP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/jobseekersignup.css">
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <?php
+    include 'js/jobseekerssignupAJAX.php';
+    ?>
 </head>
 
 <body>
@@ -44,7 +47,7 @@
     </div>
 
     <br>
-    <form class="container needs-validation" novalidate>
+    <form class="container needs-validation" action="">
         <div class="col-sm-9 text-start row mb-3">
             <h1>JOBSEEKER REGISTRATION FORM</h1>
         </div>
@@ -54,7 +57,7 @@
             
             <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control error" id="fullname">               
+                <input type="text" class="form-control error" id="fullName">               
                 <div class="text-danger"> Please enter full name</div>
             </div>
         </div>
@@ -75,24 +78,22 @@
         <div class="row mb-3 ms-4">
             <label for="confirmpassword" class="col-sm-2 col-form-label">Confirm Password</label>
             <div class="col-sm-9">
-                <input type="password" required="" class="form-control" id="confirmpassword">
+                <input type="password" required="" class="form-control" id="confirmPassword">
                 <div class="invalid-feedback"> Please confirm your password</div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="mobilenumber" class="col-sm-2 col-form-label">Mobile Number</label>
             <div class="col-sm-9">
-                <input type="number" required="" class="form-control" id="mobilenumber">
+                <input type="number" required="" class="form-control" id="mobileNumber">
                 <div class="invalid-feedback"> Please enter your mobile number</div>
             </div>
         </div>
         <br>
         <div class="text-center text-light">
-            <button type="submit" class="btn-info" id="SAVE-NOW">SIGN UP</button>
+            <button type="button" class="btn-info" id="signUp">SIGN UP</button>
         </div>
-       
-        
-       </form>
+    </form>
 
     <br><br><br><br><br>
     <footer class="page-footer"><br>

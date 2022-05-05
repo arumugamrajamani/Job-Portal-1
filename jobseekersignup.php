@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JOBSEEKER SIGN UP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/jobseekersignup.css">
+<<<<<<< HEAD
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <?php
     include 'js/jobseekerssignupAJAX.php';
     ?>
+=======
+>>>>>>> 3de2fec997119a915314e1214339b7a3dc5e00cc
 </head>
 
 <body>
@@ -22,7 +26,6 @@
     
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav ms-auto text-center">
-    
     
                         <nav class="navbar navbar-light ">
                             <li><a class="nav-link me-5 fs-5" href="contactus.php">Contact Us</a></li>
@@ -54,11 +57,17 @@
         <h2 class="text-black text-center mt-4">Account Information</h2>
         <hr>
         <div class="row mb-3 mt-3 ms-4">
-            
             <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
             <div class="col-sm-9">
                 <input type="text" class="form-control error" id="fullName">               
                 <div class="text-danger"> Please enter full name</div>
+            </div>
+        </div>
+        <div class="row mb-3 ms-4">
+            <label for="mobilenumber" class="col-sm-2 col-form-label">Mobile Number</label>
+            <div class="col-sm-9">
+                <input type="number" required="" class="form-control" id="mobilenumber">
+                <div class="invalid-feedback"> Please enter your mobile number</div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
@@ -82,6 +91,7 @@
                 <div class="invalid-feedback"> Please confirm your password</div>
             </div>
         </div>
+<<<<<<< HEAD
         <div class="row mb-3 ms-4">
             <label for="mobilenumber" class="col-sm-2 col-form-label">Mobile Number</label>
             <div class="col-sm-9">
@@ -89,6 +99,8 @@
                 <div class="invalid-feedback"> Please enter your mobile number</div>
             </div>
         </div>
+=======
+>>>>>>> 3de2fec997119a915314e1214339b7a3dc5e00cc
         <br>
         <div class="text-center text-light">
             <button type="button" class="btn-info" id="signUp">SIGN UP</button>
@@ -156,25 +168,5 @@
             </div>
         </div>
     </footer>
-    <script>(function () {
-        'use strict'
-      
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation')
-      
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-          .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-              if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-              }
-      
-              form.classList.add('was-validated')
-            }, false)
-          })
-      })()</script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

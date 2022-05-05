@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jobseeker Signup</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/sign-up-here.css">
 </head>
 <body>
@@ -40,6 +41,7 @@
 			</nav>         
 		</div>
 	</div>
+
     <div class="masthead" style="background-image: url('./image/fbg1.png');">
     		<br><br><br>    	
     		<div class="signup-here">
@@ -60,76 +62,68 @@
     				</div>
         		</form>
     		</div>
-  		 </div>
-   	</div>
-   
-   
-<footer class="page-footer"><br>
-	<div class="container-fluid text-center text-md-left mt-5">
-		<div class="row">
-			<div class="col-md-2 mx-auto mb-4">
-				<h6 class="text-uppercase font-weight-bold">JOB SEEKER</h6>
-				<hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 50px; height: 2px">
-				<ul class="list-unstyled">
-					<li class="my-0"><a href="#">Register</a></li>
-					<li class="my-0"><a href="#">Job Search</a></li>
-					<li class="my-0"><a href="#">How it works</a></li>
-				</ul>
-			</div>
-
-			<div class="col-md-2 mx-auto mb-4">
-				<h6 class="text-uppercase font-weight-bold">EMPLOYER</h6>
-				<hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px">
-
-				<ul class="list-unstyled">
-					<li class="my-0"><a href="#">Register</a></li>
-					<li class="my-0"><a href="#">Post a job</a></li>
-					<li class="my-0"><a href="#">How it works</a></li>
-
-				</ul>
-			</div>
-
-			<div class="col-md-2 mx-auto mb-4">
-				<h6 class="text-uppercase font-weight-bold">AVAILABLE JOBS</h6>
-				<hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height: 2px">
-				<ul class="list-unstyled">
-					<li class="my-0"><a>Graphic Design</a></li>
-					<li class="my-0"><a>Programmers</a></li>
-					<li class="my-0"><a>Blogging VAs</a></li>
-					<li class="my-0"> <a>Webmaster VAs</a></li>
-					<li class="my-0"> <a>Wordpress expert</a></li>
-				</ul>
-			</div>
-
-			<div class="col-md-2 mx-auto mb-4">
-				<h6 class="text-uppercase font-weight-bold">OTHER INFORMATIONS</h6>
-				<hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; height: 2px">
-				<ul class="list-unstyled">
-					<li class="my-0"></i> <a href="#">About us</a></li>
-					<li class="my-0"></i> <a href="faq.php">FAQ</a></li>
-                    <li class="my-0"></i> <a href="contactus.php">Contact us</a></li>
-					<li class="my-0"></i><a href="#">Privacy Policy</a></li>
-					<li class="my-0"></i> <a href="#">Terms of use</a></li>
-				</ul>
-			</div>
-			<div class="col-md-2 mx-auto mb-4">
-				<h6 class="text-uppercase font-weight-bold">CONTACT US</h6>
-				<hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px">
-				<ul class="list-unstyled">
-					<img class="my-0" src="image/twitter.png" alt="logo" href="#" style="width: 50px; height: 50px">
-					<img class="my-0" src="image/facebook.png" alt="logo" href="#" style="width: 50px; height: 50px">
-					<img class="my-0" src="image/insta.png" alt="logo" href="#" style="width: 50px; height: 50px">
-				</ul>
-			</div>
-
-
-		</div>
+  		</div>
 	</div>
 
+	<footer class="page-footer"><br>
+		<div class="container-fluid text-center text-md-left mt-5">
+			<div class="row">
+				<div class="col-md-2 mx-auto mb-4">
+					<h6 class="text-uppercase font-weight-bold">JOB SEEKER</h6>
+					<hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 50px; height: 2px">
+					<ul class="list-unstyled">
+						<li class="my-0"><a href="#">Register</a></li>
+						<li class="my-0"><a href="#">Job Search</a></li>
+						<li class="my-0"><a href="#">How it works</a></li>
+					</ul>
+				</div>
 
+				<div class="col-md-2 mx-auto mb-4">
+					<h6 class="text-uppercase font-weight-bold">EMPLOYER</h6>
+					<hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px">
 
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
+					<ul class="list-unstyled">
+						<li class="my-0"><a href="#">Register</a></li>
+						<li class="my-0"><a href="#">Post a job</a></li>
+						<li class="my-0"><a href="#">How it works</a></li>
+
+					</ul>
+				</div>
+
+				<div class="col-md-2 mx-auto mb-4">
+					<h6 class="text-uppercase font-weight-bold">AVAILABLE JOBS</h6>
+					<hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height: 2px">
+					<ul class="list-unstyled">
+						<li class="my-0"><a>Graphic Design</a></li>
+						<li class="my-0"><a>Programmers</a></li>
+						<li class="my-0"><a>Blogging VAs</a></li>
+						<li class="my-0"> <a>Webmaster VAs</a></li>
+						<li class="my-0"> <a>Wordpress expert</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 mx-auto mb-4">
+					<h6 class="text-uppercase font-weight-bold">OTHER INFORMATIONS</h6>
+					<hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; height: 2px">
+					<ul class="list-unstyled">
+						<li class="my-0"></i> <a href="#">About us</a></li>
+						<li class="my-0"></i> <a href="faq.php">FAQ</a></li>
+						<li class="my-0"></i> <a href="contactus.php">Contact us</a></li>
+						<li class="my-0"></i><a href="#">Privacy Policy</a></li>
+						<li class="my-0"></i> <a href="#">Terms of use</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2 mx-auto mb-4">
+					<h6 class="text-uppercase font-weight-bold">CONTACT US</h6>
+					<hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px">
+					<ul class="list-unstyled">
+						<img class="my-0" src="image/twitter.png" alt="logo" href="#" style="width: 50px; height: 50px">
+						<img class="my-0" src="image/facebook.png" alt="logo" href="#" style="width: 50px; height: 50px">
+						<img class="my-0" src="image/insta.png" alt="logo" href="#" style="width: 50px; height: 50px">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

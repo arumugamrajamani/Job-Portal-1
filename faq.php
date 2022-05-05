@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/faq.css">
 </head>
 <body>
@@ -41,12 +42,11 @@
 			</nav>         
 		</div>
 	</div>
+
     <div class="masthead" style="background-image: url('./image/fbg1.png');">
         <br>
         <h1 class="text-center">How can we help you?</h1>
-        
      	<div class="col-md-6 col-lg-6 col-11 mx-auto my-auto search-box">
-        
     		<div class="input-group form-container ">
             	<input type="text" name="search" class="form-control search-input" placeholder="Search a Question" autofocus="autofocus" autocomplete="off">
             	<span class="input-group-btn">
@@ -146,6 +146,5 @@
 			</div>
         </div>
 	</footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

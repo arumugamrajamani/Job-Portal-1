@@ -7,8 +7,10 @@
     <title>Contact us</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/contactus.css">
 </head>
+
 <body>
     <div class="color-overlay">
         <div class="container-fluid">
@@ -39,31 +41,33 @@
     </div>
 
     <div class="masthead" style="background-image: url('./image/fbg1.png');">
-        <form class="container needs-validation" novalidate>
+        <form class="container">
             <div class="col-sm-12 text-start row mb-3">
                 <h1 class="text-center">CONTACT US</h1>
                 <P class="text-center">Got a question? we'd love to her from you. Send us <br> message and we'll  respond as soon as possible</P>
             </div>      
             <div class="row mb-3 mt-3 ms-4">              
                 <div class="col-sm-11">                   
-                    <input type="text" class="form-control error" id="fullname" placeholder="FULL NAME">               
-                    <div class="text-danger"> Please enter your full name</div>
+                    <input type="text" class="form-control" id="fullname" placeholder="FULL NAME">               
+                    <div class="text-danger" id="fullname-errorMsg"></div>
                 </div>
             </div>
             <div class="row mb-3 ms-4">      
                 <div class="col-sm-11">
-                    <input type="email" class="form-control border border-success" id="email" placeholder="EMAIL ADDRESS">
-                    
+                    <input type="email" class="form-control" id="email" placeholder="EMAIL ADDRESS">
+                    <div class="text-danger" id="email-errorMsg"></div>
                 </div>
             </div>
             <div class="row mb-3 ms-4">
                 <div class="col-sm-11">
-                    <textarea id="concern" name="concern" rows="7" cols="59" placeholder="CONCERN"></textarea>
+                    <textarea id="concern" rows="7" cols="59" placeholder="CONCERN"></textarea>
+                    <div class="text-danger" id="concern-errorMsg"></div>
                 </div>
             </div>
             <div class="text-center text-light">
                 <button type="submit" class="btn-info" id="submit">SEND MESSAGE</button>
             </div>
+        </form>
     </div>
 
     <br><br><br><br><br><br><br><br>
@@ -125,5 +129,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/contactus.js"></script>
 </body>
 </html>

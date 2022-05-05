@@ -1,8 +1,9 @@
 .masthead{
     background-size: cover;
     min-height: 100vh;
-}
-.search-box{
+ 
+    
+}.search-box{
    
     width: 500px;
     border-style:outset;
@@ -33,75 +34,23 @@
 }.page-footer{
     background-color: #FDF6EC;
 
-}
-.container{
-    position: absolute;
+}.container{
     width: 557px;
     height: 563px;
-    left: 700px;
-    top: 129px;
-    background: #FFFFFF;
-}
-h1{
-    position: absolute;
-    width: 241px;
-    height: 35px;
-    left: 160px;
-    top: -0px;
+    background-color: #FFFFFF;
+    position: relative;
+    top:30px;
+}h1{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
-    line-height: 44px;
-    color: #372732;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-p{
-    position: absolute;
-    width: 490px;
-    height: 51px;
-    left: 30px;
-    top: 55px;
+}p{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    color: #372732;
-}
-#text{
-    
-    position: absolute;
-    width: 439px;
-    height: 62px;
-    left: 60px;
-    top: 130px;
-    background: #E5E5E5;
-}
-#text1{
-    position: absolute;
-    width: 439px;
-    height: 63px;
-    left: 60px;
-    top: 220px;
-    background: #E5E5E5;
-}
-#text2{
-    position: absolute;
-    width: 439px;
-    height: 167px;
-    left: 60px;
-    top: 310px;
-    background: #E5E5E5;
-   
-}
-#submit{
-    position: absolute;
-    width: 250px;
-    height: 43px;
-    left: 145px;
-    top: 500px;
+}#submit{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -111,4 +60,8 @@ p{
     color: #FDF6EC;
     background: #00C2D6;
     border-radius: 10px;
+}.error{
+    border: 1px solid red;
 }
+
+/*/Colors  #EDBEA4 #FDF6EC #00C2D6 #FDF6EC #FFFFFF/*/

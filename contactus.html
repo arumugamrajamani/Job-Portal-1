@@ -30,7 +30,7 @@
                             id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item me-4 fs-5" href="companyregister.html">Employer</a></li>
-             				<li><a class="dropdown-item me-4 fs-5"href="signup.html">JobSeeker</a></li>
+             				<li><a class="dropdown-item me-4 fs-5"href="jobseekersignup.html">JobSeeker</a></li>
                         </ul>
 
                             <li><a class="nav-link fs-5" href="login.html">Login</a></li>
@@ -42,15 +42,34 @@
   	</div>
 </div>
 <div class="masthead" style="background-image: url('./image/fbg1.png');">
-    <div class="container">
+    
        
-        <h1>CONTACT US</h1>
-        <P>Got a question? we'd love to her from you. Send us <br> message and we'll  respond as soon as possible</P>
-        <input type="text" id="text" placeholder="NAME">
-        <input type="text" id="text1" placeholder="EMAIL ADDRESS">
-        <input type="text" id="text2" placeholder="CONCERN">
-        <input type="submit" id="submit" value="SEND MESSAGE">
-    </div>
+        <form class="container needs-validation" novalidate>
+            <div class="col-sm-12 text-start row mb-3">
+                <h1 class="text-center">CONTACT US</h1>
+                <P class="text-center">Got a question? we'd love to her from you. Send us <br> message and we'll  respond as soon as possible</P>
+            </div>      
+            <div class="row mb-3 mt-3 ms-4">              
+                <div class="col-sm-11">                   
+                    <input type="text" class="form-control error" id="fullname" placeholder="FULL NAME">               
+                    <div class="text-danger"> Please enter your full name</div>
+                </div>
+            </div>
+            <div class="row mb-3 ms-4">      
+                <div class="col-sm-11">
+                    <input type="email" class="form-control border border-success" id="email" placeholder="EMAIL ADDRESS">
+                    
+                </div>
+            </div>
+            <div class="row mb-3 ms-4">
+                <div class="col-sm-11">
+                    <textarea id="concern" name="concern" rows="7" cols="59" placeholder="CONCERN"></textarea>
+                </div>
+            </div>
+            <div class="text-center text-light">
+                <button type="submit" class="btn-info" id="submit">SEND MESSAGE</button>
+            </div>
+    
 </div>
     <br><br><br><br><br><br><br><br>
     <footer class="page-footer"><br>

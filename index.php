@@ -22,8 +22,8 @@
 
 
                         <nav class="navbar navbar-light ">
-                            <li><a class="nav-link me-5 fs-5" href="contactus.html">Contact Us</a></li>
-                                <a href="findajob.html">
+                            <li><a class="nav-link me-5 fs-5" href="contactus.php">Contact Us</a></li>
+                                <a href="findajob.php">
                                 <button class="btn btn-outline-secondary me-5 fs-5"type="button">Find a Job</button></a>
                                 <button class="btn btn-outline-secondary me-5 fs-5"type="button">Post a Job</button>
 
@@ -31,11 +31,11 @@
                                 <a class="nav-link dropdown-toggle fs-5" href="#"
                                 id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item me-4 fs-5" href="companyregister.html">Employer</a></li>
- 								<li><a class="dropdown-item me-4 fs-5"href="signup.html">JobSeeker</a></li>
+                                <li><a class="dropdown-item me-4 fs-5" href="companyregister.php">Employer</a></li>
+ 								<li><a class="dropdown-item me-4 fs-5"href="jobseekersignup.php">JobSeeker</a></li>
                             </ul>
 
-                                <li><a class="nav-link fs-5" href="login.html">Login</a></li>
+                                <li><a class="nav-link fs-5" href="login.php">Login</a></li>
                             	<li><a class="nav-link fs-5" href="#"><img src="image/profileicon1.png"alt="Profile" width="50" height="30"></a></li>
                         </nav>
                     </ul>
@@ -62,7 +62,11 @@
                 </div>
                 <br>
                 <div class="text-center">
-                    <button type="button" onclick="location.href='findajob.html'" class="btn btn-outline-secondary btn-sm fs-6">Browse All Job Post </button>
+<<<<<<< HEAD:index.php
+                    <button type="button" onclick="location.href='findajob.php'" class="btn btn-outline-secondary btn-sm fs-6">Browse All Job Post </button>
+=======
+                    <button type="button" onclick="location.href='findajob.php'" class="btn btn-outline-secondary btn-sm fs-6">Browse All Job Post </button>
+>>>>>>> c6806ea475b404fadd2eb21ace210b2c5cd575d9:index.php
 
                 </div>
                 <br><br>
@@ -168,8 +172,13 @@
                     <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; height: 2px">
                     <ul class="list-unstyled">
                         <li class="my-0"></i> <a href="#">About us</a></li>
-                        <li class="my-0"></i> <a href="faq.html">FAQ</a></li>
-                        <li class="my-0"></i> <a href="contactus.html">Contact us</a></li>
+<<<<<<< HEAD:index.php
+                        <li class="my-0"></i> <a href="faq.php">FAQ</a></li>
+                        <li class="my-0"></i> <a href="contactus.php">Contact us</a></li>
+=======
+                        <li class="my-0"></i> <a href="faq.php">FAQ</a></li>
+                        <li class="my-0"></i> <a href="contactus.php">Contact us</a></li>
+>>>>>>> c6806ea475b404fadd2eb21ace210b2c5cd575d9:index.php
                         <li class="my-0"></i><a href="#">Privacy Policy</a></li>
                         <li class="my-0"></i> <a href="#">Terms of use</a></li>
                     </ul>

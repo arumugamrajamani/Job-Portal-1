@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Techployment</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"crossorigin="anonymous">
-        <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techployment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css">
 </head>
-
 <body>
 
     <div class="color-overlay">
@@ -16,11 +15,8 @@
             <nav class="navbar navbar-expand-lg  h6 navbar-light bg">
                     <a href="#" class="navbar-brand">
                     <img src="image/flogo.png" alt="Job Portal Logo" width="120" height="95"></a>
-
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav ms-auto text-center">
-
-
                         <nav class="navbar navbar-light ">
                             <li><a class="nav-link me-5 fs-5" href="contactus.php">Contact Us</a></li>
                                 <a href="findajob.php">
@@ -34,7 +30,6 @@
                                 <li><a class="dropdown-item me-4 fs-5" href="companyregister.php">Employer</a></li>
  								<li><a class="dropdown-item me-4 fs-5"href="jobseekersignup.php">JobSeeker</a></li>
                             </ul>
-
                                 <li><a class="nav-link fs-5" href="login.php">Login</a></li>
                             	<li><a class="nav-link fs-5" href="#"><img src="image/profileicon1.png"alt="Profile" width="50" height="30"></a></li>
                         </nav>
@@ -168,13 +163,8 @@
                     <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; height: 2px">
                     <ul class="list-unstyled">
                         <li class="my-0"></i> <a href="#">About us</a></li>
-<<<<<<< HEAD:index.php
                         <li class="my-0"></i> <a href="faq.php">FAQ</a></li>
                         <li class="my-0"></i> <a href="contactus.php">Contact us</a></li>
-=======
-                        <li class="my-0"></i> <a href="faq.php">FAQ</a></li>
-                        <li class="my-0"></i> <a href="contactus.php">Contact us</a></li>
->>>>>>> c6806ea475b404fadd2eb21ace210b2c5cd575d9:index.php
                         <li class="my-0"></i><a href="#">Privacy Policy</a></li>
                         <li class="my-0"></i> <a href="#">Terms of use</a></li>
                     </ul>
@@ -198,8 +188,7 @@
     </footer>
 
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
-
+	
 </body>
 
 </html>

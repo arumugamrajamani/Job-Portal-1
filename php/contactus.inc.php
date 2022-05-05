@@ -17,7 +17,7 @@
 
         // Check if the email is empty
         if(empty($email)){
-            $emailRR = array('status' => 'error', 'message' => 'Fullname is required!');
+            $emailRR = array('status' => 'error', 'message' => 'Email is required!');
         // Check if email is valid
         } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){ 
             $emailRR = array('status' => 'error', 'message' => 'Email is not valid!');

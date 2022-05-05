@@ -12,7 +12,7 @@
     <div class="color-overlay">
 		<div class="container-fluid">
 			<nav class="navbar navbar-expand-lg  h6 navbar-light bg">
-					<a href="index.html" class="navbar-brand">
+					<a href="index.php" class="navbar-brand">
 					<img src="image/flogo.png" alt="Job Portal Logo" width="120" height="95"></a>
 	
 				<div class="collapse navbar-collapse" id="toggleMobileMenu">
@@ -24,9 +24,9 @@
 							<li><a class="nav-link me-5 fs-5" href="contactus.php">Contact Us</a></li>
 								<a href="findajob.php">
 =======
-							<li><a class="nav-link me-5 fs-5" href="contactus.html">Contact Us</a></li>
-								<a href="findajob.html">
->>>>>>> c6806ea475b404fadd2eb21ace210b2c5cd575d9:forgotpass.html
+							<li><a class="nav-link me-5 fs-5" href="contactus.php">Contact Us</a></li>
+								<a href="findajob.php">
+>>>>>>> c6806ea475b404fadd2eb21ace210b2c5cd575d9:forgotpass.php
 								<button class="btn btn-outline-secondary me-5 fs-5"type="button">Find a Job</button></a>
 								<button class="btn btn-outline-secondary me-5 fs-5"type="button">Post a Job</button>
 	
@@ -38,9 +38,9 @@
 								<li><a class="dropdown-item me-4 fs-5" href="companyregister.php">Employer</a></li>
 				 				<li><a class="dropdown-item me-4 fs-5"href="jobseekersignup.php">JobSeeker</a></li>
 =======
-								<li><a class="dropdown-item me-4 fs-5" href="companyregister.html">Employer</a></li>
-				 				<li><a class="dropdown-item me-4 fs-5"href="jobseekersignup.html">JobSeeker</a></li>
->>>>>>> c6806ea475b404fadd2eb21ace210b2c5cd575d9:forgotpass.html
+								<li><a class="dropdown-item me-4 fs-5" href="companyregister.php">Employer</a></li>
+				 				<li><a class="dropdown-item me-4 fs-5"href="jobseekersignup.php">JobSeeker</a></li>
+>>>>>>> c6806ea475b404fadd2eb21ace210b2c5cd575d9:forgotpass.php
 							</ul>
 	
 								<li><a class="nav-link fs-5" href="login.php">Login</a></li>
@@ -109,9 +109,9 @@
                         <li class="my-0"></i> <a href="faq.php">FAQ</a></li>
                         <li class="my-0"></i> <a href="contactus.php">Contact us</a></li>
 =======
-                        <li class="my-0"></i> <a href="faq.html">FAQ</a></li>
-                        <li class="my-0"></i> <a href="contactus.html">Contact us</a></li>
->>>>>>> c6806ea475b404fadd2eb21ace210b2c5cd575d9:forgotpass.html
+                        <li class="my-0"></i> <a href="faq.php">FAQ</a></li>
+                        <li class="my-0"></i> <a href="contactus.php">Contact us</a></li>
+>>>>>>> c6806ea475b404fadd2eb21ace210b2c5cd575d9:forgotpass.php
                         <li class="my-0"></i><a href="#">Privacy Policy</a></li>
                         <li class="my-0"></i> <a href="#">Terms of use</a></li>
                     </ul>

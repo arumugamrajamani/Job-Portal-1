@@ -62,11 +62,7 @@
                 </div>
                 <br>
                 <div class="text-center">
-<<<<<<< HEAD:index.php
                     <button type="button" onclick="location.href='findajob.php'" class="btn btn-outline-secondary btn-sm fs-6">Browse All Job Post </button>
-=======
-                    <button type="button" onclick="location.href='findajob.php'" class="btn btn-outline-secondary btn-sm fs-6">Browse All Job Post </button>
->>>>>>> c6806ea475b404fadd2eb21ace210b2c5cd575d9:index.php
 
                 </div>
                 <br><br>

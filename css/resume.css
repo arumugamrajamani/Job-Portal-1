@@ -1,0 +1,168 @@
+.masthead{
+    background-size: cover;
+    min-height: 100vh;
+    margin:0%;
+    margin-top:0;
+ 
+    
+}.btn-outline{
+    background-color: #00C2D6;
+    
+}.navbar-light{
+    background-color: #FFFFFF;
+
+    margin:0%;
+}
+.btn-outline-secondary{
+    background-color: #00C2D6;
+    color: white;
+    border: #00C2D6;
+    border-style:outset;
+    
+}
+.signup-here{
+    width: 500px;
+    height: 550px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 100px;
+    background: #FFFFFF;
+    border-radius: 3px;
+}
+p{
+    width: 405px;
+    height: 15px;
+    left: 463px;
+    top: 538px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #372732;
+    }
+
+#submit{
+    position: relative;
+    width: 120px;
+    height: 32px;
+    left: 150px;
+    top: 32px;
+    background: #00C2D6;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #FDF6EC;
+}
+#preview{
+    position: relative;
+    width: 120px;
+    height: 32px;
+    left: 10px;
+    top: -20px;
+    background: #00C2D6;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #FDF6EC;
+}
+
+/*/h1{
+text-align: center;
+padding-top: 15px;
+}*/
+form{
+    width: 450px;
+    margin-left: 20px;
+}
+
+form label{
+    display:flexbox;
+    margin-left: 0px;
+}
+form input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
+
+input[type="button"]{
+    width: 200px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 50px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+
+.login-page{
+    width: 340px;
+    height: 300px;
+    text-align: center;
+   
+    margin: auto;
+    margin-top: 50px;
+    background-color: #EDBEA4;
+    border-radius: 3px;
+    padding-top: 50px;
+}.bt{
+    margin-left: 45px;
+    height: 30px;
+    width:100px;
+    color: #FFFFFF;
+    background-color: #00C2D6;
+}.btn1{
+    line-height: 0.5;
+}
+form #alogin{
+    margin-top: 5px;
+    color: blue;
+    
+    text-align: center;
+}.c1{
+    background-color: transparent;
+    
+    position:absolute;
+    margin-left:20rem;
+    margin-top:0.2rem;
+
+
+}.c2{
+    background-color: transparent;
+    position:absolute;
+    margin-left:20rem;
+    margin-top:8rem;
+}.card-title{
+    position:relative;
+    text-align: center;
+    margin-right: 1px;
+    bottom:20px;
+}.img1{
+    margin-left: 10px;
+}.img2{
+    margin-left: 10px;
+}
+.row mb-2 ms4{
+    position: relative;
+    width: 954px;
+    height: 1500px;
+    left: 59px;
+    top: 70px;
+    background: #FDF6EC;
+}

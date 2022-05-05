@@ -1,0 +1,90 @@
+body{
+    background: #FFFFFF;
+    font-family: sans-serif;
+}.search-box{
+   
+    width: 500px;
+    border-style:outset;
+}.btn-outline{
+    background-color: #00C2D6;
+    
+}.navbar-light{
+    background-color: #FFFFFF;
+    margin:0%;
+}.navbar-expand-lg{
+    height:100px;
+    width:100%;
+    margin-left: 5px;
+    
+}.btn-outline-secondary{
+    background-color: #00C2D6;
+    color: white;
+    border: #00C2D6;
+    border-style:outset;
+    
+}.para{
+    background-color: #EDBEA4;
+}.para2{
+    background-color: #EDBEA4;
+    
+}.position{
+    margin-left: 400px;
+}.page-footer{
+    background-color: #FDF6EC;
+
+}
+h1{
+    position: absolute;
+    width: 954px;
+    height: 74px;
+    left: -0px;
+    top: -73px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700px;
+    font-size: 25px;
+    line-height: 70px;
+    color: #FFFFFF;
+    background: #EDBEA4;
+}
+h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #372732;
+}
+.container{
+    position: relative;
+    width: 954px;
+    height: 1500px;
+    left: 59px;
+    top: 70px;
+    background: #FDF6EC;
+}
+.container input{
+    width: 586px;
+    height: 39px;
+    left: 477px;
+    top: 686px;
+}
+#exampleFormControlTextarea1{
+    width: 586px;
+    height: 174px;
+    left: 477px;
+    top: 686px;
+}
+#SAVE-NOW{
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+}hr{
+    border:1px solid black;
+    
+}

@@ -51,11 +51,17 @@
         <h2 class="text-black text-center mt-4">Account Information</h2>
         <hr>
         <div class="row mb-3 mt-3 ms-4">
-            
             <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
             <div class="col-sm-9">
                 <input type="text" class="form-control error" id="fullname">               
                 <div class="text-danger"> Please enter full name</div>
+            </div>
+        </div>
+        <div class="row mb-3 ms-4">
+            <label for="mobilenumber" class="col-sm-2 col-form-label">Mobile Number</label>
+            <div class="col-sm-9">
+                <input type="number" required="" class="form-control" id="mobilenumber">
+                <div class="invalid-feedback"> Please enter your mobile number</div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
@@ -77,13 +83,6 @@
             <div class="col-sm-9">
                 <input type="password" required="" class="form-control" id="confirmpassword">
                 <div class="invalid-feedback"> Please confirm your password</div>
-            </div>
-        </div>
-        <div class="row mb-3 ms-4">
-            <label for="mobilenumber" class="col-sm-2 col-form-label">Mobile Number</label>
-            <div class="col-sm-9">
-                <input type="number" required="" class="form-control" id="mobilenumber">
-                <div class="invalid-feedback"> Please enter your mobile number</div>
             </div>
         </div>
         <br>

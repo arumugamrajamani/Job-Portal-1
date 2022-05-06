@@ -58,11 +58,9 @@
     color: #FDF6EC;
     background: #00C2D6;
     border-radius: 10px;
-}.error{
-    border: 1px solid red;
 }
 textarea {
     resize: none;
-  }
+}
 
 /*/Colors  #EDBEA4 #FDF6EC #00C2D6 #FDF6EC #FFFFFF/*/

@@ -10,7 +10,7 @@ $(document).ready(function() {
     $('#fullname').on('keyup', function() {
         let fullname = $('#fullname').val();
         if (fullname.length == 0) {
-            $('#fullname').removeClass().addClass('form-control error');
+            $('#fullname').removeClass().addClass('form-control border-warning');
             $('#fullname-errorMsg').text("Fullname is required.");
         } else {
             $('#fullname').removeClass().addClass('form-control border-success');
@@ -23,10 +23,10 @@ $(document).ready(function() {
         let email = $('#email').val();
         console.log(email)
         if (email.length == 0) {
-            $('#email').removeClass().addClass('form-control error');
+            $('#email').removeClass().addClass('form-control border-warning');
             $('#email-errorMsg').text("Email is required.");
         } else if(isEmail(email) == false) {
-            $('#email').removeClass().addClass('form-control error');
+            $('#email').removeClass().addClass('form-control border-warning');
             $('#email-errorMsg').text("Email is not valid.");
         } else {
             $('#email').removeClass().addClass('form-control border-success');
@@ -38,7 +38,7 @@ $(document).ready(function() {
     $('#concern').on('keyup', function() {
         let concern = $('#concern').val();
         if (concern.length == 0) {
-            $('#concern').removeClass().addClass('form-control error');
+            $('#concern').removeClass().addClass('form-control border-warning');
             $('#concern-errorMsg').text("Concern is required.");
         } else {
             $('#concern').removeClass().addClass('form-control border-success');
@@ -89,7 +89,7 @@ $(document).ready(function() {
                 } else {
                     // If there is an error in fullname, then display error border and error message
                     if(data.fullnameRR.status == "error"){
-                        $('#fullname').removeClass().addClass('form-control error');
+                        $('#fullname').removeClass().addClass('form-control border-warning');
                         $('#fullname-errorMsg').text(data.fullnameRR.message);
                     } else {
                     // Else display success border and remove error message
@@ -99,7 +99,7 @@ $(document).ready(function() {
 
                     // If there is an error in email, then display error border and error message
                     if(data.emailRR.status == "error"){
-                        $('#email').removeClass().addClass('form-control error');
+                        $('#email').removeClass().addClass('form-control border-warning');
                         $('#email-errorMsg').text(data.emailRR.message);
                     } else {
                     // Else display success border and remove error message
@@ -109,7 +109,7 @@ $(document).ready(function() {
 
                     // If there is an error in concern, then display error border and error message
                     if(data.concernRR.status == "error"){
-                        $('#concern').removeClass().addClass('form-control error');
+                        $('#concern').removeClass().addClass('form-control border-warning');
                         $('#concern-errorMsg').text(data.concernRR.message);
                     } else {
                     // Else display success border and remove error message

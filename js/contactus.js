@@ -84,7 +84,7 @@ $(document).ready(function() {
                 // if response is notsent   
                 }else if(data.status == "notsent"){
                     // Display email danger notification using toastr
-                    toastr.danger(data.message , 'Failed to sent!')
+                    toastr.warning(data.message , 'Failed to sent!')
                 // if response is error
                 } else {
                     // If there is an error in fullname, then display error border and error message

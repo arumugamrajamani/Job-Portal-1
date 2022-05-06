@@ -1,8 +1,6 @@
 .masthead{
     background-size: cover;
     min-height: 100vh;
- 
-    
 }.search-box{
    
     width: 500px;
@@ -63,5 +61,8 @@
 }.error{
     border: 1px solid red;
 }
+textarea {
+    resize: none;
+  }
 
 /*/Colors  #EDBEA4 #FDF6EC #00C2D6 #FDF6EC #FFFFFF/*/

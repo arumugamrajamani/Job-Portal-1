@@ -26,7 +26,7 @@
     //Port to connect smtp
     $mail->Port = "587";
 
-    //Fix error from PHPMailer SMTP Error: Could not connect to SMTP host
+    // Fix error from PHPMailer SMTP Error: Could not connect to SMTP host
     $mail->SMTPOptions = array(
         'ssl' => array(
         'verify_peer' => false,

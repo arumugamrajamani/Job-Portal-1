@@ -1,0 +1,99 @@
+$(document).ready(function(){
+    // Function to be used to check if mobile number is valid, return boolean result(true or false)
+    function isNumber(mobile) 
+    { 
+        var regex = new RegExp(/^[0-9-+]+$/);   
+        return regex.test(mobile); 
+    } 
+
+    // Function to be used to check if email is valid, return boolean result(true or false)
+    function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+
+    // Trigger this when user started to type in fullname input and validate it
+    $('#fullname').on('keyup', function() {
+        let fullname = $('#fullname').val();
+        if(fullname.length == 0) {
+            $('#fullname').removeClass().addClass('form-control border-danger');
+            $('#fullname-errorMsg').text("Fullname is required.");
+        } else {
+            $('#fullname').removeClass().addClass('form-control border-success');
+            $('#fullname-errorMsg').text(null);
+        }
+    })
+
+    // Trigger this when user started to type in mobile number input and validate it
+    $('#mobilenumber').on('keyup', function() {
+        let mobilenumber = $('#mobilenumber').val();
+        if(mobilenumber.length == 0) {
+            $('#mobilenumber').removeClass().addClass('form-control border-danger');
+            $('#mobilenumber-errorMsg').text("Mobile number is required.");
+        } else if(isNumber(mobilenumber) == false) {
+            $('#mobilenumber').removeClass().addClass('form-control border-danger');
+            $('#mobilenumber-errorMsg').text("Mobile number is not valid.");
+        } else {
+            $('#mobilenumber').removeClass().addClass('form-control border-success');
+            $('#mobilenumber-errorMsg').text(null);
+        }
+    })
+
+    // Trigger this when user started to type in email input and validate it
+    $('#email').on('keyup', function() {
+        let email = $('#email').val();
+        console.log(email)
+        if (email.length == 0) {
+            $('#email').removeClass().addClass('form-control border-danger');
+            $('#email-errorMsg').text("Email is required.");
+        } else if(isEmail(email) == false) {
+            $('#email').removeClass().addClass('form-control border-danger');
+            $('#email-errorMsg').text("Email is not valid.");
+        } else {
+            $('#email').removeClass().addClass('form-control border-success');
+            $('#email-errorMsg').text(null);
+        }
+    })
+
+    // Trigger this when user started to type in password input and validate it
+    $('#password').on('keyup', function() {
+        let password = $('#password').val();
+        if(password.length == 0) {
+            $('#password').removeClass().addClass('form-control border-danger');
+            $('#password-errorMsg').text("Password is required.");
+        } else if(password.length < 8 || password.length > 30) {
+            $('#password').removeClass().addClass('form-control border-danger');
+            $('#password-errorMsg').text("Password must be between 8 and 30 characters.");
+        } 
+        else {
+            $('#password').removeClass().addClass('form-control border-success');
+            $('#password-errorMsg').text(null);
+        }
+    })
+    
+    // Trigger this when user started to type in confirm password input and validate it
+    $('#confirmpassword').on('keyup', function() {
+        let password = $('#password').val();
+        let confirmpassword = $('#confirmpassword').val();
+        if(confirmpassword.length == 0){
+            $('#confirmpassword').removeClass().addClass('form-control border-danger');
+            $('#cpassword-errorMsg').text("Confirm password is required.");
+        } else if(password != confirmpassword) {
+            $('#confirmpassword').removeClass().addClass('form-control border-danger');
+            $('#cpassword-errorMsg').text("Password does not match.");
+        } else {
+            $('#confirmpassword').removeClass().addClass('form-control border-success');
+            $('#cpassword-errorMsg').text(null);
+        }
+    })
+
+    // Trigger this when user clicked on sign-up button
+    $('form').submit(function(event) {
+        event.preventDefault();
+        let fullname = $('#fullname').val();
+        let mobilenumber = $('#mobilenumber').val();
+        let email = $('#email').val();
+        let password = $('#password').val();
+        let confirmpassword = $('#confirmpassword').val();
+    })
+})

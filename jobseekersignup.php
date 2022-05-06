@@ -7,6 +7,8 @@
     <title>JOBSEEKER SIGN UP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- jQuery cdn link below -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/jobseekersignup.css">
 <<<<<<< HEAD
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -59,36 +61,46 @@
         <div class="row mb-3 mt-3 ms-4">
             <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
             <div class="col-sm-9">
+<<<<<<< HEAD
                 <input type="text" class="form-control error" id="fullName">               
                 <div class="text-danger"> Please enter full name</div>
+=======
+                <input type="text" class="form-control border-error" id="fullname">               
+                <div class="text-danger" id="fullname-errorMsg"></div>
+>>>>>>> 20532f2551daf331dfb873874de38504a06dc4cf
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="mobilenumber" class="col-sm-2 col-form-label">Mobile Number</label>
             <div class="col-sm-9">
-                <input type="number" required="" class="form-control" id="mobilenumber">
-                <div class="invalid-feedback"> Please enter your mobile number</div>
+                <input type="text" class="form-control" id="mobilenumber" maxlength="13">
+                <div class="text-danger" id="mobilenumber-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="email" class="col-sm-2 col-form-label">Email</label>
             <div class="col-sm-9">
-                <input type="email" class="form-control error" id="email">
-                <div class="text-danger"> Please enter your email address</div>
+                <input type="email" class="form-control" id="email">
+                <div class="text-danger" id="email-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="password" class="col-sm-2 col-form-label">Password</label>
             <div class="col-sm-9">
-                <input type="password" required="" class="form-control border border-success" id="password">
-                <div class="invalid-feedback"> Please enter your password</div>
+                <input type="password" class="form-control" id="password">
+                <div class="text-danger" id="password-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="confirmpassword" class="col-sm-2 col-form-label">Confirm Password</label>
             <div class="col-sm-9">
+<<<<<<< HEAD
                 <input type="password" required="" class="form-control" id="confirmPassword">
                 <div class="invalid-feedback"> Please confirm your password</div>
+=======
+                <input type="password" required="" class="form-control" id="confirmpassword">
+                <div class="text-danger" id="cpassword-errorMsg"></div>
+>>>>>>> 20532f2551daf331dfb873874de38504a06dc4cf
             </div>
         </div>
 <<<<<<< HEAD
@@ -103,7 +115,11 @@
 >>>>>>> 3de2fec997119a915314e1214339b7a3dc5e00cc
         <br>
         <div class="text-center text-light">
+<<<<<<< HEAD
             <button type="button" class="btn-info" id="signUp">SIGN UP</button>
+=======
+            <button type="submit" class="btn-info" id="signup">SIGN UP</button>
+>>>>>>> 20532f2551daf331dfb873874de38504a06dc4cf
         </div>
     </form>
 
@@ -168,5 +184,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/jobseekersignup.js"></script>
 </body>
 </html>

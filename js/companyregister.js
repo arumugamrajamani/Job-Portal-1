@@ -209,6 +209,23 @@ $(document).ready(function(){
             $('#password-errorMsg').text(null);
         }
     })
+    
+    
+    // Trigger this when user started to type in confirm password input and validate it
+    $('#confirmpassword').on('keyup', function() {
+        let password = $('#password').val();
+        let confirmpassword = $('#confirmpassword').val();
+        if(confirmpassword.length == 0){
+            $('#confirmpassword').removeClass().addClass('form-control border-danger');
+            $('#cpassword-errorMsg').text("Confirm password is required.");
+        } else if(password != confirmpassword) {
+            $('#confirmpassword').removeClass().addClass('form-control border-danger');
+            $('#confirmpassword-errorMsg').text("Password does not match.");
+        } else {
+            $('#confirmpassword').removeClass().addClass('form-control border-success');
+            $('#confirmpassword-errorMsg').text(null);
+        }
+    })
 
         //--------------------------------End of Login Details--------------------------------------------------
 

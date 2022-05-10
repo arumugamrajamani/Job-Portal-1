@@ -32,7 +32,7 @@ $(document).ready(function(){
             $('#mobilenumber-errorMsg').text("Mobile number is required.");
         } else if(isNumber(mobilenumber) == false) {
             $('#mobilenumber').removeClass().addClass('form-control border-danger');
-            $('#mobilenumber-errorMsg').text("Mobile number is not valid.");
+            $('#mobilenumber-errorMsg').text("Mobile number must be numeric.");
         } else {
             $('#mobilenumber').removeClass().addClass('form-control border-success');
             $('#mobilenumber-errorMsg').text(null);
@@ -95,5 +95,21 @@ $(document).ready(function(){
         let email = $('#email').val();
         let password = $('#password').val();
         let confirmpassword = $('#confirmpassword').val();
+
+        $.ajax({
+            url: 'php/jobseekersignup.inc.php',
+            type: 'POST',
+            data: {
+                submit: true,
+                fullname: fullname,
+                mobilenumber: mobilenumber,
+                email: email,
+                password: password,
+                confirmpassword: confirmpassword
+            },
+            success: function(data) {
+                alert(data);
+            }
+        })
     })
 })

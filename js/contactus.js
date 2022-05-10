@@ -82,13 +82,13 @@ $(document).ready(function() {
                     // Display email success notification using toastr
                     toastr.success('Thank you for your concern.', 'Successfully send!')
                 // if response is notsent   
-                }else if(data.status == "notsent"){
+                } else if(data.status == "notsent") {
                     // Display email danger notification using toastr
                     toastr.warning(data.message , 'Failed to sent!')
                 // if response is error
                 } else {
                     // If there is an error in fullname, then display error border and error message
-                    if(data.fullnameRR.status == "error"){
+                    if(data.fullnameRR.status == "error") {
                         $('#fullname').removeClass().addClass('form-control border-danger');
                         $('#fullname-errorMsg').text(data.fullnameRR.message);
                     } else {
@@ -98,7 +98,7 @@ $(document).ready(function() {
                     }
 
                     // If there is an error in email, then display error border and error message
-                    if(data.emailRR.status == "error"){
+                    if(data.emailRR.status == "error") {
                         $('#email').removeClass().addClass('form-control border-danger');
                         $('#email-errorMsg').text(data.emailRR.message);
                     } else {
@@ -108,7 +108,7 @@ $(document).ready(function() {
                     }
 
                     // If there is an error in concern, then display error border and error message
-                    if(data.concernRR.status == "error"){
+                    if(data.concernRR.status == "error") {
                         $('#concern').removeClass().addClass('form-control border-danger');
                         $('#concern-errorMsg').text(data.concernRR.message);
                     } else {

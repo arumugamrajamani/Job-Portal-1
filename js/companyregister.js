@@ -211,7 +211,7 @@ $(document).ready(function(){
     })
     
     
-    // Trigger this when user started to type in confirm password input and validate it
+    // Trigger this when user started to type in confirm password input and validate 
     $('#confirmpassword').on('keyup', function() {
         let password = $('#password').val();
         let confirmpassword = $('#confirmpassword').val();
@@ -226,6 +226,7 @@ $(document).ready(function(){
             $('#confirmpassword-errorMsg').text(null);
         }
     })
+    
 
         //--------------------------------End of Login Details--------------------------------------------------
 

@@ -44,12 +44,12 @@
         </div>
 		<div class="login-page">
         	<form>
-            	<input type="text" placeholder="USERNAME">
+            	<input type="text" name="username" placeholder="USERNAME">
             	<label class="fw-bold"></label>
-            	<input type="password" placeholder="PASSWORD">
+            	<input type="password" name="password" placeholder="PASSWORD">
             	<label class="fw-bold"></label> <br> <br>
             	<div>
-            		<button class="btn btn1 bt me-5 fs-7 fw-bold" type="button">LOGIN</button>
+            		<button class="btn btn1 bt me-5 fs-7 fw-bold" type="button" name="login">LOGIN</button>
             		<br>
             		<a id="alogin" href="forgotpass.php">Forget Password?</a>
         		</div>

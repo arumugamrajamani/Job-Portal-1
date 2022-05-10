@@ -76,7 +76,7 @@ h2{
     left: 477px;
     top: 686px;
 }
-#SAVE-NOW{
+#signup{
     position: relative;
     font-family: 'Inter';
     font-style: normal;
@@ -89,4 +89,10 @@ h2{
     
 }.error{
     border: 1px solid red;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

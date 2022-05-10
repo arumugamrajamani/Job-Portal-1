@@ -12,6 +12,8 @@
         $companydescription = $_POST['companydescription'];
         $contactnumber = $_POST['contactnumber'];
         $companyemail = $_POST['companyemail'];
+        $companyLogo = $_POST['companyLogo'];
+        $dtipermit = $_POST['dtipermit'];
         $emailaddress = $_POST['emailaddress'];
         $password = $_POST['password'];
         $confirmpassword = $_POST['confirmpassword'];

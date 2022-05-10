@@ -58,11 +58,7 @@
         <div class="row mb-3 mt-3 ms-4">
             <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
             <div class="col-sm-9">
-<<<<<<< HEAD
-                <input type="text" class="form-control border-error" id="fullname">               
-=======
                 <input type="text" class="form-control" id="fullname">               
->>>>>>> cca3de630361093799b38591e4f8fc850c8d0666
                 <div class="text-danger" id="fullname-errorMsg"></div>
             </div>
         </div>
@@ -90,19 +86,11 @@
         <div class="row mb-3 ms-4">
             <label for="confirmpassword" class="col-sm-2 col-form-label">Confirm Password</label>
             <div class="col-sm-9">
-<<<<<<< HEAD
-                <input type="password" required="" class="form-control" id="confirmpassword">
-                <div class="text-danger" id="cpassword-errorMsg"></div>
-            </div>
-        </div>
-        <br>
-=======
                 <input type="password" class="form-control" id="confirmpassword">
                 <div class="text-danger" id="cpassword-errorMsg"></div>
             </div>
         </div>
 
->>>>>>> cca3de630361093799b38591e4f8fc850c8d0666
         <div class="text-center text-light">
             <button type="submit" class="btn-info" id="signup">SIGN UP</button>
         </div>

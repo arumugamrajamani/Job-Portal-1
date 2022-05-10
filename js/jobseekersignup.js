@@ -95,5 +95,74 @@ $(document).ready(function(){
         let email = $('#email').val();
         let password = $('#password').val();
         let confirmpassword = $('#confirmpassword').val();
+        // AJAX REQUEST TO SERVER
+        $.ajax({
+            url: 'php/jobseekersignup.inc.php',
+            type: 'POST',
+            data: {
+                submit: true,
+                fullname: fullname,
+                mobilenumber: mobilenumber,
+                email: email,
+                password: password,
+                confirmpassword: confirmpassword
+            },
+            dataType: 'json',
+            success: function(data) {
+                if(data.status == 'success') {
+                    // Toastr message and redirecting to login page after 3 seconds
+                    toastr.success('You will be redirected to login page', 'Account Successfully Created!', {
+                        timeOut: 3000,
+                        preventDuplicates: true,
+                        progressBar: true,
+                        // Redirect 
+                        onHidden: function() {
+                            window.location.href = 'login.php';
+                        }
+                    });
+                } else {
+                    // if there is an error in fullname, display error message
+                    if(data.fullnameRR.status == 'error') {
+                        $('#fullname').removeClass().addClass('form-control border-danger');
+                        $('#fullname-errorMsg').text(data.fullnameRR.message);
+                    } else {
+                        $('#fullname').removeClass().addClass('form-control border-success');
+                        $('#fullname-errorMsg').text(null);
+                    }
+                    // if there is an error in number, display error message
+                    if(data.mobilenumberRR.status == 'error') {
+                        $('#mobilenumber').removeClass().addClass('form-control border-danger');
+                        $('#mobilenumber-errorMsg').text(data.mobilenumberRR.message);
+                    } else {
+                        $('#mobilenumber').removeClass().addClass('form-control border-success');
+                        $('#mobilenumber-errorMsg').text(null);
+                    }
+                    // if there is an error in email, display error message
+                    if(data.emailRR.status == 'error') {
+                        $('#email').removeClass().addClass('form-control border-danger');
+                        $('#email-errorMsg').text(data.emailRR.message);
+                    } else {
+                        $('#email').removeClass().addClass('form-control border-success');
+                        $('#email-errorMsg').text(null);
+                    }
+                    // if there is an error in password, display error message
+                    if(data.passwordRR.status == 'error') {
+                        $('#password').removeClass().addClass('form-control border-danger');
+                        $('#password-errorMsg').text(data.passwordRR.message);
+                    } else {
+                        $('#password').removeClass().addClass('form-control border-success');
+                        $('#password-errorMsg').text(null);
+                    }
+                    // if there is an error in confirm password, display error message
+                    if(data.confirmpasswordRR.status == 'error') {
+                        $('#confirmpassword').removeClass().addClass('form-control border-danger');
+                        $('#cpassword-errorMsg').text(data.confirmpasswordRR.message);
+                    } else {
+                        $('#confirmpassword').removeClass().addClass('form-control border-success');
+                        $('#cpassword-errorMsg').text(null);
+                    }
+                }   
+            }
+        })
     })
 })

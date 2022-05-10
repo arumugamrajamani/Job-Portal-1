@@ -58,13 +58,8 @@
         <div class="row mb-3 mt-3 ms-4">
             <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
             <div class="col-sm-9">
-<<<<<<< HEAD
-                <input type="text" class="form-control error" id="fullName">               
-                <div class="text-danger"> Please enter full name</div>
-=======
-                <input type="text" class="form-control border-error" id="fullname">               
+                <input type="text" class="form-control" id="fullname">               
                 <div class="text-danger" id="fullname-errorMsg"></div>
->>>>>>> 20532f2551daf331dfb873874de38504a06dc4cf
             </div>
         </div>
         <div class="row mb-3 ms-4">
@@ -91,32 +86,13 @@
         <div class="row mb-3 ms-4">
             <label for="confirmpassword" class="col-sm-2 col-form-label">Confirm Password</label>
             <div class="col-sm-9">
-<<<<<<< HEAD
-                <input type="password" required="" class="form-control" id="confirmPassword">
-                <div class="invalid-feedback"> Please confirm your password</div>
-=======
-                <input type="password" required="" class="form-control" id="confirmpassword">
+                <input type="password" class="form-control" id="confirmpassword">
                 <div class="text-danger" id="cpassword-errorMsg"></div>
->>>>>>> 20532f2551daf331dfb873874de38504a06dc4cf
             </div>
         </div>
-<<<<<<< HEAD
-        <div class="row mb-3 ms-4">
-            <label for="mobilenumber" class="col-sm-2 col-form-label">Mobile Number</label>
-            <div class="col-sm-9">
-                <input type="number" required="" class="form-control" id="mobileNumber">
-                <div class="invalid-feedback"> Please enter your mobile number</div>
-            </div>
-        </div>
-=======
->>>>>>> 3de2fec997119a915314e1214339b7a3dc5e00cc
-        <br>
+
         <div class="text-center text-light">
-<<<<<<< HEAD
-            <button type="button" class="btn-info" id="signUp">SIGN UP</button>
-=======
             <button type="submit" class="btn-info" id="signup">SIGN UP</button>
->>>>>>> 20532f2551daf331dfb873874de38504a06dc4cf
         </div>
     </form>
 

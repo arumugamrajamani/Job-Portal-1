@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMPLOYER SIGN UP</title>
+    <title>EMPLOYER SIGN UP</title>  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/companyregister.css">
+    <!-- jQuery cdn link below -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="color-overlay">
@@ -50,15 +52,18 @@
         <h2 class="text-black text-center mt-4">EMPLOYER DETAILS</h2>
         <hr>
         <div class="row mb-3 mt-3 ms-4">
-            <label for="employerfullname" class="col-sm-2 col-form-label">Employer Full Name</label>
+            <label for="employerFullName" class="col-sm-2 col-form-label">Employer Full Name</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" id="employerfullname">
+                <input type="text" class="form-control border-error" id="employerFullName">               
+                <div class="text-danger" id="fullname-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="employerposition" class="col-sm-2 col-form-label">Employer Position</label>
-            <div class="col-sm-9">
-                <input type="text" class="form-control" id="employerposition">
+            <div class="col-sm-8">
+                <input type="text" class="form-control border-error" id="employerposition">
+                         
+                <div class="text-danger" id="employerposition-errorMsg"></div>
             </div>
         </div>
         <h2 class="text-black text-center mt-5">COMPANY DETAILS</h2>
@@ -66,67 +71,80 @@
         <div class="row mb-3 mt-3 ms-4">
             <label for="companyname" class="col-sm-2 col-form-label">Company Name</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" id="companyname">
+                <input type="text" class="form-control border-error" id="companyname">               
+                <div class="text-danger" id="companyname-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="companyaddress" class="col-sm-2 col-form-label">Company Address</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" id="companyaddress">
+                <input type="text" class="form-control border-error" id="companyaddress">               
+                <div class="text-danger" id="companyaddress-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="companyceoname" class="col-sm-2 col-form-label">Company CEO Name</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" id="companyceoname">
+                <input type="text" class="form-control border-error" id="companyceoname">               
+                <div class="text-danger" id="companyceoname-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="companysize" class="col-sm-2 col-form-label">Company Size</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" id="companysize">
+                <input type="text" class="form-control border-error" id="companysize">               
+                <div class="text-danger" id="companysize-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="companyrevenue" class="col-sm-2 col-form-label">Company Revenue</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" id="companyrevenue">
+                <input type="text" class="form-control border-error" id="companyrevenue">               
+                <div class="text-danger" id="companyrevenue-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="industry" class="col-sm-2 col-form-label">Industry</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" id="industry">
+                <input type="text" class="form-control border-error" id="industry">               
+                <div class="text-danger" id="industry-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="companydescription" class="col-sm-2 col-form-label">Company Description</label>
             <div class="col-sm-9">
-                <textarea class="form-control" placeholder="Description Here" id="companydescription" rows="5"></textarea>
+                <!-- idk if ok na lagay ko lang dito yung countChar() -->
+                <textarea class="form-control" onkeyup="countChar(this)" maxlength="1000" placeholder="Description Here" id="companydescription" rows="5" ></textarea>               
+                <div id="charNum">1000</div>
+                <div class="text-danger" id="companydescription-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="contactnumber" class="col-sm-2 col-form-label">Contact Number</label>
             <div class="col-sm-9">
-                <input type="number" class="form-control" id="contactnumber">
+                <input type="text" class="form-control border-error" id="contactnumber">               
+                <div class="text-danger" id="contactnumber-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="companyemail" class="col-sm-2 col-form-label">Company Email</label>
             <div class="col-sm-9">
-                <input type="email" class="form-control" id="companyemail">
+                <input type="text" class="form-control border-error" id="companyemail">               
+                <div class="text-danger" id="companyemail-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="companyLogo" class="col-sm-2 col-form-label">Company Logo</label>
             <div class="col-sm-9">
-                <input type="file" class="form-control" id="companyLogo">
+                <input type="file" class="form-control border-error" id="companyLogo">               
+                <div class="text-danger" id="companyLogo-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 ms-4">
             <label for="dtipermit" class="col-sm-2 col-form-label">DTI Business Registration & Permit</label>
             <div class="col-sm-9">
-                <input type="file" class="form-control" id="dtipermit">
+                <input type="file" class="form-control border-error" id="dtipermit">               
+                <div class="text-danger" id="dtipermit-errorMsg"></div>
             </div>
         </div>
         
@@ -135,19 +153,22 @@
         <div class="row mb-3 mt-3 ms-4">
             <label for="emailaddress" class="col-sm-2 col-form-label">Email address</label>
             <div class="col-sm-9">
-                <input type="email" class="form-control" id="emailaddress">
+                <input type="text" class="form-control border-error" id="emailaddress">               
+                <div class="text-danger" id="emailaddress-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 mt-3 ms-4">
             <label for="password" class="col-sm-2 col-form-label">Password</label>
             <div class="col-sm-9">
-                <input type="password" class="form-control" id="password">
+                <input type="password" class="form-control border-error" id="password">               
+                <div class="text-danger" id="password-errorMsg"></div>
             </div>
         </div>
         <div class="row mb-3 mt-3 ms-4">
             <label for="confirmpassword" class="col-sm-2 col-form-label">Confirm password</label>
             <div class="col-sm-9">
-                <input type="password" class="form-control" id="confirmpassword">
+                <input type="password" class="form-control border-error" id="confirmpassword">               
+                <div class="text-danger" id="confirmpassword-errorMsg"></div>
             </div>
         </div>
 
@@ -218,5 +239,18 @@
             </div>
         </div>
     </footer>
+    
+    <script src="js/companyregister.js"></script>
+    <script>
+    //function for the counter
+    function countChar(val) {
+        var len = val.value.length;
+        if (len >= 1000) {
+          val.value = val.value.substring(50, 1000);
+        } else {
+          $('#charNum').text(1000 - len);
+        }
+      };
+    </script>
 </body>
 </html>

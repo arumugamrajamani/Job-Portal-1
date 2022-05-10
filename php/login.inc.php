@@ -16,7 +16,7 @@ if(isset($_POST['login']))
 
     if(empty($password))
     {
-    	$passErr
+    	$passErr;
     }
 }
 

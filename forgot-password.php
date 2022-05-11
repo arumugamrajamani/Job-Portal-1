@@ -7,7 +7,7 @@
     <title>Forget password</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/forgotpass.css">
+    <link rel="stylesheet" href="css/forgot-password.css">
 </head>
 <body>
     <div class="color-overlay">
@@ -18,8 +18,6 @@
 	
 				<div class="collapse navbar-collapse" id="toggleMobileMenu">
 					<ul class="navbar-nav ms-auto text-center">
-	
-	
 						<nav class="navbar navbar-light ">
 							<li><a class="nav-link me-5 fs-5" href="contactus.php">Contact Us</a></li>
 								<a href="findajob.php">
@@ -42,15 +40,16 @@
 			</nav>         
 		</div>
 	</div>
-    <div class="masthead" style="background-image: url('./image/fbg1.png');">
-            
+
+    <div class="masthead" style="background-image: url('./image/fbg1.png');"> 
     	<div class="container">
         	<h1>Forgot your password?</h1>
         	<label>Enter your email and we will send you <br> instruction to reset it.</label>
-        	<input type="email" placeholder="Email Address">
-        	<input type="button" value="RESET PASSWORD">
+        	<input class="error" type="email" placeholder="Email Address">
+            <label class="text-danger"> Email is invalid</label>
+            <a href="otp-verification.php">
+        	<input class="mb-2" type="button" value="RESET PASSWORD"></a>
     	</div>
-   
     </div>
     
     <br><br><br><br><br><br>
@@ -113,7 +112,6 @@
                 </div>
             </div>
         </div>
-    </footer>
-        
+    </footer>    
 </body>
 </html>

@@ -1,5 +1,5 @@
 body{
-    background: #FFFFFF;
+    background: #FDF6EC;
     font-family: sans-serif;
 }.search-box{
    
@@ -23,9 +23,9 @@ body{
     border-style:outset;
     
 }.para{
-    background-color: #EDBEA4;
+    background-color: #FFFFFF;
 }.para2{
-    background-color: #EDBEA4;
+    background-color: #FFFFFF;
     
 }.position{
     margin-left: 400px;
@@ -45,7 +45,7 @@ h1{
     font-size: 25px;
     line-height: 70px;
     color: #FFFFFF;
-    background: #EDBEA4;
+    background: #00C2D6;
 }
 h2{
     font-family: 'Inter';
@@ -62,7 +62,7 @@ h2{
     height: 1500px;
     left: 59px;
     top: 70px;
-    background: #FDF6EC;
+    background: #FFFFFF;
 }
 .container input{
     width: 586px;
@@ -87,8 +87,12 @@ h2{
 }hr{
     border:1px solid black;
     
+}input[type=file]::file-selector-button {
+    
+    background-color: #00C2D6;
+    color: white;
+    
 }
-
 #charNum{
     text-align: right;
     color: #686868;

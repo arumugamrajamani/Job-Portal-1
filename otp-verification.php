@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/otp-verification.css">
 </head>
 <body>
     <div class="color-overlay">
 		<div class="container-fluid">
-			<nav class="navbar navbar-expand-lg  h6 navbar-light bg">
+			<nav class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0">
 					<a href="index.php" class="navbar-brand">
 					<img src="image/flogo.png" alt="Job Portal Logo" width="120" height="95"></a>
+	
 				<div class="collapse navbar-collapse" id="toggleMobileMenu">
 					<ul class="navbar-nav ms-auto text-center">
 						<nav class="navbar navbar-light ">
@@ -21,6 +23,7 @@
 								<a href="findajob.php">
 								<button class="btn btn-outline-secondary me-5 fs-5"type="button">Find a Job</button></a>
 								<button class="btn btn-outline-secondary me-5 fs-5"type="button">Post a Job</button>
+	
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle fs-5" href="#"
 								id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
@@ -28,36 +31,38 @@
 								<li><a class="dropdown-item me-4 fs-5" href="companyregister.php">Employer</a></li>
 				 				<li><a class="dropdown-item me-4 fs-5"href="jobseekersignup.php">JobSeeker</a></li>
 							</ul>
-							<li><a class="nav-link fs-5" href="login.php">Login</a></li>
-							<li><a class="nav-link fs-5" href="#"><img src="image/profileicon1.png"alt="Profile" width="50" height="30"></a></li>
+	
+								<li><a class="nav-link fs-5" href="login.php">Login</a></li>
+							  	<li><a class="nav-link fs-5" href="#"><img src="image/profileicon1.png"alt="Profile" width="50" height="30"></a></li>
 						</nav>
 					</ul>
 				</div>
 			</nav>         
 		</div>
 	</div>
+    <div class="masthead">
+        <br><br><br><br><br>
 
-    <div class="masthead" style="background-image: url('./image/fbg1.png');">
-        <br><br><br>
-        <div class="container">
-            <h1 class="text-center">EMPLOYMENT POWERED </h1>
-            <h1 class="text-center">BY TECHNOLOGY </h1>
-        </div>
-		<div class="login-page bg-white">
-        	<form>
-            	<input type="text" placeholder="USERNAME">
-            	<label class="fw-bold"></label>
-            	<input type="password" placeholder="PASSWORD">
-            	<label class="fw-bold"></label> <br> <br>
-            	<div>
-            		<button class="btn btn1 bt me-5 mb-2 fs-7 fw-bold" type="button">LOGIN</button>
-            		<br>
-            		<a id="alogin" href="forgot-password.php">Forget Password?</a>
-        		</div>
-        	</form>
+        <div class="container pt-5" style="width: 630px;">
+           <h3 class="text-center mt-5 bg0 p-2 fs-10 font-family-Inter text-white">CODE VERIFICATION</h3>
+           <section class="text-center bg-white">
+               <br>
+               <div class="p-4 bg1">
+                    <strong class="Code"  style="font-size: 2rem; font-family: Inter;">CODE </strong>
+                    <input class="mt-3 text-center fw-bold fs-5" type="text" id="code" style="width:430px; height: 60px;" placeholder="Enter Code Here*" >
+					<label class="error text-danger"> OTP code is incorrect</label>
+					<label class=" d-flex my-2 justify-content-center"></i>Enter the code that was sent in your email to reset your password</label>
+                </div>
+				<a href="reset-password.php">
+                	<button class="btn btn1 bt fs-7 fw-bold m-3 justify-content-center text-white" type="button" style="border-radius: 13px;">Submit</button>
+				</a>	
+				<a href="forgot-password.php">
+					<button class="btn btn1 bt fs-7 fw-bold m-3 justify-content-center text-white" type="button" style="border-radius: 13px;">Re-Enter Email</button>
+				</a>
+           </section>
+       
         </div>
     </div>
-        
 		<footer class="page-footer"><br>
 			<div class="container-fluid text-center text-md-left mt-5">
 				<div class="row">

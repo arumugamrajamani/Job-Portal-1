@@ -1,4 +1,5 @@
 <?php
+    session_start();
     // Include the database connection file and establish a connection
     include'db-connection.php';
     // Function for checking if email is existing in the database, return boolean true or false
@@ -30,6 +31,8 @@
 
             // Return this as status success response
             $response = array('status' => 'success'); 
+            //sets the email as the OTP email in session
+            $_SESSION["OTPemail"] = $email;
         }else{
             // If not successful, return the error reponse
             $response = array('status' => 'error', 'emailRR' => $emailRR);

@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="css/forgot-password.css">
     <!-- jQuery cdn link below -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <!-- Toast CDN for design of toastr -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 <body>
@@ -47,14 +45,15 @@
 	</div>
 
     <div class="masthead" style="background-image: url('./image/fbg1.png');"> 
-    	<form class="container">
+    	<form class="container" method="POST">
         	<h1>Forgot your password?</h1>
         	<label>Enter your email and we will send you <br> instruction to reset it.</label>
         	<input class="error" type="email" id="email" placeholder="Email Address">
-            <label class="text-danger" id="email-errorMsg"> Email is invalid</label>
+            <label class="text-danger" id="email-errorMsg"></label>
         	<button type="submit" class="btn-info" id="submit">Reset Password</button>
         </form>
     </div>
+
     
     <br><br><br><br><br><br>
     <footer class="page-footer"><br>

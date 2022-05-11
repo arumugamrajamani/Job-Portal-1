@@ -12,6 +12,28 @@ $(document).ready(function(){
         return regex.test(email);
     }
 
+    // Function to clear all the fields including the error messages and error borders
+    function clearFields() {
+        // Clear all the fields
+        $("#fullname").val("");
+        $("#email").val("");
+        $("#mobilenumber").val("");
+        $("#password").val("");
+        $("#confirmpassword").val("");
+        // Clear all the error messages
+        $("#fullname-errorMsg").text(null);
+        $("#email-errorMsg").text(null);
+        $("#mobilenumber-errorMsg").text(null);
+        $("#password-errorMsg").text(null);
+        $("#cpassword-errorMsg").text(null);
+        // Clear all the error borders
+        $('#fullname').removeClass().addClass('form-control');
+        $('#email').removeClass().addClass('form-control');
+        $('#mobilenumber').removeClass().addClass('form-control');
+        $('#password').removeClass().addClass('form-control');
+        $('#confirmpassword').removeClass().addClass('form-control');
+    }
+
     // Trigger this when user started to type in fullname input and validate it
     $('#fullname').on('keyup', function() {
         let fullname = $('#fullname').val();
@@ -110,6 +132,8 @@ $(document).ready(function(){
             dataType: 'json',
             success: function(data) {
                 if(data.status == 'success') {
+                    // Function to clear all the fields including the error messages and error borders
+                    clearFields();
                     // Toastr message and redirecting to login page after 3 seconds
                     toastr.success('You will be redirected to login page', 'Account Successfully Created!', {
                         timeOut: 3000,

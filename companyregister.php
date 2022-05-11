@@ -61,8 +61,7 @@
         <div class="row mb-3 ms-4">
             <label for="employerposition" class="col-sm-2 col-form-label">Employer Position</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control border-error" id="employerposition">
-                         
+                <input type="text" class="form-control border-error" id="employerposition"> 
                 <div class="text-danger" id="employerposition-errorMsg"></div>
             </div>
         </div>
@@ -173,9 +172,8 @@
         </div>
 
         <div class="text-center text-light">
-            <button type="submit" class="btn-info" id="SAVE-NOW">SIGN UP</button>
+            <button type="submit" class="btn-info" id="signup">SIGN UP</button>
         </div>
-        
     </form>
 
     <br><br><br><br><br>
@@ -241,16 +239,5 @@
     </footer>
     
     <script src="js/companyregister.js"></script>
-    <script>
-    //function for the counter
-    function countChar(val) {
-        var len = val.value.length;
-        if (len >= 1000) {
-          val.value = val.value.substring(50, 1000);
-        } else {
-          $('#charNum').text(1000 - len);
-        }
-      };
-    </script>
 </body>
 </html>

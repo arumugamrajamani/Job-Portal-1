@@ -12,8 +12,6 @@
         }
     }
     if(isset($_POST['submit'])){        
-        //generate otp code
-        $otp_code = rand(999999, 111111);
         // Get the data from the form
         $email = $_POST['email'];
         // Validation for email
@@ -25,10 +23,11 @@
 
         //check if the email is valid and if it exist
         if($emailRR['status'] == 'success'){
+            //generate otp code
+            $otp_code = rand(999999, 111111);
             $email = mysqli_real_escape_string($conn, $email);
+            mysqli_query($GLOBALS['conn'], "UPDATE jobseeker SET otp_code = '$otp_code' WHERE jobseeker.email = '$email'");
 
-
-            
             // Return this as status success response
             $response = array('status' => 'success'); 
         }else{

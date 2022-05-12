@@ -62,10 +62,11 @@
 					<label class=" d-flex my-2 justify-content-center"></i>Enter the code that was sent to your email:</label>
 					<b><?php echo $_SESSION["OTPemail"];?></b>
                 </div>
-                	<button class="btn btn1 bt fs-7 fw-bold m-3 justify-content-center text-white" id="submit" type="submit" style="border-radius: 13px;">Submit</button>	
 				<a href="forgot-password.php">
 					<button class="btn btn1 bt fs-7 fw-bold m-3 justify-content-center text-white" type="button" style="border-radius: 13px;">Re-Enter Email</button>
 				</a>
+                <button class="btn btn1 bt fs-7 fw-bold m-3 justify-content-center text-white" id="submit" type="submit" style="border-radius: 13px;">Submit</button>	
+
 			</form>
         </div>
     </div>

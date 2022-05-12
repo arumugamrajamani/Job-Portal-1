@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 
+    toastr.info('Check your spam if you cant find it.', 'Enter the code that was sent to your email.');
     //when form is submittd
     $("form").submit(function(event){
         event.preventDefault();

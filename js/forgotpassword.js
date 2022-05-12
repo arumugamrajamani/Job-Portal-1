@@ -26,7 +26,6 @@ $(document).ready(function(){
 
     //when form is submittd
     $("form").submit(function(event){
-        // Display email success notification using toastr
         toastr.info('Please wait.', 'Wait for the server to process.');
         event.preventDefault();
         let email = $('#email').val()
@@ -49,6 +48,8 @@ $(document).ready(function(){
                 }else{
                     $('#email').removeClass().addClass('form-control border-danger');
                     $('#email-errorMsg').text("Email is not in our records.");
+                    
+                    toastr.warning("We can't find you", 'Email is not in our records.');
                     //re enable the button
                     $("#submit").attr("disabled", false);
                 }

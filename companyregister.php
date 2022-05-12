@@ -114,8 +114,8 @@
             <label for="companydescription" class="col-sm-2 col-form-label">Company Description</label>
             <div class="col-sm-9">
                 <!-- idk if ok na lagay ko lang dito yung countChar() -->
-                <textarea class="form-control" onkeyup="countChar(this)" maxlength="1000" placeholder="Description Here" id="companydescription" rows="5" ></textarea>               
-                <div id="charNum">1000</div>
+                <textarea class="form-control" onkeyup="countChar(this)" style="width: 88%;" maxlength="1000" placeholder="Description Here" id="companydescription" rows="5" ></textarea>               
+                <div id="charNum" style="width: 88%;">1000</div>
                 <div class="text-danger" id="companydescription-errorMsg"></div>
             </div>
         </div>

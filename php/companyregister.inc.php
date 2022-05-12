@@ -1,4 +1,8 @@
 <?php
+    // Include the database connection file and establish a connection
+    include'db-connection.php';
+
+
     if(isset($_POST['submit'])){
         // Get the values from the form
         $employerFullName = $_POST['employerFullName'];
@@ -21,6 +25,12 @@
 
         //<!------------------------ Start of validation ------------------------------------->
         
+        // Validation for fullname
+        if(empty($employerFullName)) {
+            $employerFullName = array('status' => 'error', 'message' => 'Employer Fullname is required.');
+        } else {
+            $employerFullName = array('status' => 'success');
+        }
 
 
         //<!------------------------ End of validation ------------------------------------->

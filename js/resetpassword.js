@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    
 
     // Trigger this when user started to type in password input and validate it
     $('#password').on('keyup', function() {

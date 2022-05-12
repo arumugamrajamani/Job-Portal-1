@@ -58,6 +58,7 @@
                     <strong class="Code"  style="font-size: 2rem; font-family: Inter;">CODE </strong>
                     <input class="mt-3 text-center fw-bold fs-5" maxlength="6" type="text" id="otp" style="width:430px; height: 60px;" placeholder="Enter Code Here" >
 					<label class="error text-danger" id="otp-errorMsg"></label>
+					<label class=" d-flex my-2 justify-content-center"></i>Check your spam</label>
 					<label class=" d-flex my-2 justify-content-center"></i>Enter the code that was sent to your email:</label>
 					<b><?php echo $_SESSION["OTPemail"];?></b>
                 </div>

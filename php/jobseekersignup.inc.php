@@ -43,7 +43,7 @@
         } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $emailRR = array('status' => 'error', 'message' => 'Email is invalid.');
         } elseif(isEmailExist($email)) {
-            $emailRR = array('status' => 'error', 'message' => 'Email is already exist.');
+            $emailRR = array('status' => 'error', 'message' => 'Email is already used.');
         } else {
             $emailRR = array('status' => 'success');
         }

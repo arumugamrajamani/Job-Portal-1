@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +11,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/otp-verification.css">
+    <!-- jQuery cdn link below -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Toast CDN for functionality of toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Toast CDN for design of toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 <body>
     <div class="color-overlay">
@@ -40,27 +50,28 @@
 			</nav>         
 		</div>
 	</div>
+	
     <div class="masthead">
         <br><br><br><br><br>
 
         <div class="container pt-5" style="width: 630px;">
            <h3 class="text-center mt-5 bg0 p-2 fs-10 font-family-Inter text-white">CODE VERIFICATION</h3>
-           <section class="text-center bg-white">
+           <form class="text-center bg-white" method="POST">
                <br>
                <div class="p-4 bg1">
                     <strong class="Code"  style="font-size: 2rem; font-family: Inter;">CODE </strong>
-                    <input class="mt-3 text-center fw-bold fs-5" type="text" id="code" style="width:430px; height: 60px;" placeholder="Enter Code Here*" >
-					<label class="error text-danger"> OTP code is incorrect</label>
-					<label class=" d-flex my-2 justify-content-center"></i>Enter the code that was sent in your email to reset your password</label>
+                    <input class="mt-3 text-center fw-bold fs-5" maxlength="6" type="text" id="otp" style="width:430px; height: 60px;" placeholder="Enter Code Here" >
+					<label class="error text-danger" id="otp-errorMsg"></label>
+					<label class=" d-flex my-2 justify-content-center"></i>Check your spam</label>
+					<label class=" d-flex my-2 justify-content-center"></i>Enter the code that was sent to your email:</label>
+					<b><?php echo $_SESSION["OTPemail"];?></b>
                 </div>
-				<a href="reset-password.php">
-                	<button class="btn btn1 bt fs-7 fw-bold m-3 justify-content-center text-white" type="button" style="border-radius: 13px;">Submit</button>
-				</a>	
 				<a href="forgot-password.php">
 					<button class="btn btn1 bt fs-7 fw-bold m-3 justify-content-center text-white" type="button" style="border-radius: 13px;">Re-Enter Email</button>
 				</a>
-           </section>
-       
+                <button class="btn btn1 bt fs-7 fw-bold m-3 justify-content-center text-white" id="submit" type="submit" style="border-radius: 13px;">Submit</button>	
+
+			</form>
         </div>
     </div>
 		<footer class="page-footer"><br>
@@ -123,5 +134,9 @@
 				</div>
 			</div>
 		</footer>
+		
+	<script src="js/otpverification.js"></script>
+
+</body>
 </body>
 </html>

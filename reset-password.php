@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +12,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/reset-password.css">
+	  <!-- jQuery cdn link below -->
+	  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div class="color-overlay">
@@ -47,37 +53,47 @@
         <br><br><br><br><br><br><br>
 
         <div class="container pt-5" style="width: 630px;">
-           <h4 class="text-center mt-5 bg0 p-2 fs-5 text-white">Password Reset</h4>
-           <section class="text-center bg-white">
+           <h2 class="text-center mt-5 bg0 p-3 text-white">Password Reset</h2>
+           <form class="text-center bg-white" >
                <br>
-               <div class="p-4 bg1 ">
-                <i class="bi bi-file-lock"  style="font-size: 2rem;"></i>
-                <input class="input mt-3 text-center fw-bold fs-5 success" type="password" id="password" style="width:450px; height: 40px;" placeholder="New Password" >
-                <span class="icon" onclick="showHide()">
-                    <i class='bi bi-eye'  aria-hidden="true"  style="font-size: 2rem;"></i>
-                    <i class='bi bi-eye-slash' style="font-size: 2rem;"></i>
-                </span>
-		
-                <label class=" d-flex mb-2 justify-content-center text1" ></i>New password must be 8 characters</label>
-        
-                <i class="bi bi-file-lock"  style="font-size: 2rem;"></i>
-                <input class="input mt-3 text-center fw-bold fs-5 error1" type="password" id="password1" style="width:450px; height: 40px;" placeholder="New Password" >
-                <span class="icon1" onclick="showHide1()">
-                    <i class='bi bi-eye'  aria-hidden="true"  style="font-size: 2rem;"></i>
-                    <i class='bi bi-eye-slash' style="font-size: 2rem;"></i>
-                </span>
-				<label class="text-danger error">Password is required</label>
-            </div>
+			   Change password for <b><?php echo $_SESSION["OTPemail"];?></b>
+			   <br><br>
+               <div class="p-5 bg1 ">
+					<div class="row mb-1 mt-3">
+						<label for="password" class=" bi bi-file-lock col-sm-1 col-form-label" style="font-size: 1.5rem;"></label>
+						<div class="col-sm-9">
+							<input type="password" class="form-control border-error" id="password" placeholder="Password">               
+							<div class="text-danger" id="password-errorMsg"></div>
+						</div>
+						<div class="col-sm-1">
+							<span class="icon" onclick="showHide()">
+								<i class='bi bi-eye'  aria-hidden="true"  style="font-size: 1.5rem;"></i>
+								<i class='bi bi-eye-slash' style="font-size: 1.5rem;"></i>
+							</span>
+						</div>
+					</div>
+					<div class="row mb-1 mt-3">
+						<label for="password" class=" bi bi-file-lock col-sm-1 col-form-label" style="font-size: 1.5rem;"></label>
+						<div class="col-sm-9">
+							<input type="password" class="form-control border-error" id="repassword" placeholder="Retype Password">               
+							<div class="text-danger" id="repassword-errorMsg"></div>
+						</div>
+						<div class="col-sm-1">
+							<span class="icon1" onclick="showHide1()">
+								<i class='bi bi-eye'  aria-hidden="true"  style="font-size: 1.5rem;"></i>
+								<i class='bi bi-eye-slash' style="font-size: 1.5rem;"></i>
+							</span>
+						</div>
+					</div>
+
+            	</div>
                 <br>
-                <a href="#myModal" role="button" class="btn btn-lg text-white fw-bold mb-4" data-bs-toggle="modal" id="resetpass">Reset Password</a>
-           </section>
-           
+                <button  role="button" class="btn btn-lg text-white fw-bold mb-4" data-bs-toggle="modal" id="resetpass" type="submit">Reset Password</button>
+		   </form>
         </div>
         
-            
+
         
-
-
     </div>
 
 		<footer class="page-footer"><br>
@@ -175,7 +191,7 @@
 
     }function showHide1(){
         let icon = document.querySelector(".icon1"),
-            input= document.getElementById("password1");
+            input= document.getElementById("repassword");
             
         
             if (input.type === "password"){
@@ -188,5 +204,7 @@
 
     }
 </script>
+
+<script src="js/resetpassword.js"></script>
 </body>
 </html>

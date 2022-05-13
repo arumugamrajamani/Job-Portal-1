@@ -1,4 +1,13 @@
 <?php
+    // Function for validating if input is valid fullname
+    function isValidFullname($fullname){
+        if(preg_match("/^[a-zA-Z .]*$/", $fullname)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     if(isset($_POST['submit'])){
         // Get the values from the form
         $fullname = $_POST['fullname'];
@@ -10,6 +19,8 @@
         // Check if the name is empty
         if(empty($fullname)){
             $fullnameRR = array('status' => 'error', 'message' => 'Fullname is required.');
+        } else if(!isValidFullname($fullname)){
+            $fullnameRR = array('status' => 'error', 'message' => 'Only characters are allowed.');
         } else {
             $fullnameRR = array('status' => 'success');
         }

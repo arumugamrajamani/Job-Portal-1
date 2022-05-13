@@ -7,6 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/login.css">
+	<!-- jQuery cdn link below -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+ 
 </head>
 <body>
     <div class="color-overlay">
@@ -45,10 +48,10 @@
         </div>
 		<div class="login-page bg-white">
         	<form>
-            	<input type="text" placeholder="USERNAME">
-            	<label class="fw-bold"></label>
-            	<input type="password" placeholder="PASSWORD">
-            	<label class="fw-bold"></label> <br> <br>
+            	<input type="email" id="email" placeholder="Email">
+            	<label class="text-danger" id="email-errorMsg"></label>
+            	<input type="password" id="password" placeholder="PASSWORD">
+            	<label class="text-danger" id="password-errorMsg"></label>
             	<div>
             		<button class="btn btn1 bt me-5 mb-2 fs-7 fw-bold" type="button">LOGIN</button>
             		<br>
@@ -118,5 +121,7 @@
 				</div>
 			</div>
 		</footer>
+		
+		<script src="js/login.js"></script>
 </body>
 </html>

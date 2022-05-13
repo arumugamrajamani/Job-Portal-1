@@ -1,7 +1,6 @@
 $(document).ready(function(){
     // Function to be used to check if mobile number is valid, return boolean result(true or false)
-    function isNumber(mobile) 
-    { 
+    function isNumber(mobile) { 
         var regex = new RegExp(/^[0-9-+]+$/);
         return regex.test(mobile); 
     } 
@@ -11,6 +10,20 @@ $(document).ready(function(){
         var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         return regex.test(email);
     }
+
+    // Function to used to check if name is valid string, return boolean result(true or false)
+    function isValidName(name) {
+        var regex = new RegExp(/^[a-zA-Z .]+$/);
+        return regex.test(name);
+    }
+
+    // Function for clearing input value, border color and error message
+    function clearFields() {
+        $('form')[0].reset();
+        $('.text-danger').text(null);
+        $('.form-control').removeClass('border-danger');
+        $('.form-control').removeClass('border-success');
+    }
     //--------------------------------Employer Details details----------------------------------------------
 
     // Trigger this when user started to type in fullname input and validate it
@@ -19,6 +32,9 @@ $(document).ready(function(){
         if(fullname.length == 0) {
             $('#employerFullName').removeClass().addClass('form-control border-danger');
             $('#fullname-errorMsg').text("Fullname is required.");
+        } else if(!isValidName(fullname)) {
+            $('#employerFullName').removeClass().addClass('form-control border-danger');
+            $('#fullname-errorMsg').text("Only characters are allowed.");
         } else {
             $('#employerFullName').removeClass().addClass('form-control border-success');
             $('#fullname-errorMsg').text(null);
@@ -72,6 +88,9 @@ $(document).ready(function(){
         if(fullname.length == 0) {
             $('#companyceoname').removeClass().addClass('form-control border-danger');
             $('#companyceoname-errorMsg').text("Company CEO Name is required.");
+        } else if(!isValidName(fullname)) {
+            $('#companyceoname').removeClass().addClass('form-control border-danger');
+            $('#companyceoname-errorMsg').text("Only characters are allowed.");
         } else {
             $('#companyceoname').removeClass().addClass('form-control border-success');
             $('#companyceoname-errorMsg').text(null);
@@ -212,7 +231,7 @@ $(document).ready(function(){
         let confirmpassword = $('#confirmpassword').val();
         if(confirmpassword.length == 0){
             $('#confirmpassword').removeClass().addClass('form-control border-danger');
-            $('#cpassword-errorMsg').text("Confirm password is required.");
+            $('#confirmpassword-errorMsg').text("Confirm password is required.");
         } else if(password != confirmpassword) {
             $('#confirmpassword').removeClass().addClass('form-control border-danger');
             $('#confirmpassword-errorMsg').text("Password does not match.");
@@ -275,9 +294,19 @@ $(document).ready(function(){
             success: function(data) {
                 // Checking if the data is success or not
                 if(data.status == "success") {
-                    alert(data.message);
+                    clearFields();
+                    toastr.success('You will be redirected to login page', 'Account Successfully Created!', {
+                        timeOut: 3000,
+                        preventDuplicates: true,
+                        progressBar: true,
+                        // Redirect to login page
+                        onHidden: function() {
+                            window.location.href = 'login.php';
+                        }
+                    });
                 // Checking of each input status and display error message
                 } else {
+                    // <---------------------------------Employers Details---------------------------------------------------->
                     // Checking of status of employer name
                     if(data.employerNameRR.status == "error") {
                         $('#employerFullName').removeClass().addClass('form-control border-danger');
@@ -294,6 +323,7 @@ $(document).ready(function(){
                         $('#employerposition').removeClass().addClass('form-control success-danger');
                         $('#employerposition-errorMsg').text(null)
                     }
+                    // <---------------------------------Company Details---------------------------------------------------->                   
                     // Checking of status of company name
                     if(data.companyNameRR.status == "error") {
                         $('#companyname').removeClass().addClass('form-control border-danger');
@@ -341,6 +371,71 @@ $(document).ready(function(){
                     } else {
                         $('#industry').removeClass().addClass('form-control border-success');
                         $('#industry-errorMsg').text(null)
+                    }
+                    // Checking of status of company description
+                    if(data.companyDescriptionRR.status == "error") {
+                        $('#companydescription').removeClass().addClass('form-control border-danger');
+                        $('#companydescription-errorMsg').text(data.companyDescriptionRR.message);
+                    } else {
+                        $('#companydescription').removeClass().addClass('form-control border-success');
+                        $('#companydescription-errorMsg').text(null)
+                    }
+                    // Checking of status of contact number
+                    if(data.contactNumberRR.status == "error") {
+                        $('#contactnumber').removeClass().addClass('form-control border-danger');
+                        $('#contactnumber-errorMsg').text(data.contactNumberRR.message);
+                    } else {
+                        $('#contactnumber').removeClass().addClass('form-control border-success');
+                        $('#contactnumber-errorMsg').text(null)
+                    }
+                    // Checking of status of contact number
+                    if(data.companyEmailRR.status == "error") {
+                        $('#companyemail').removeClass().addClass('form-control border-danger');
+                        $('#companyemail-errorMsg').text(data.companyEmailRR.message);
+                    } else {
+                        $('#companyemail').removeClass().addClass('form-control border-success');
+                        $('#companyemail-errorMsg').text(null)
+                    }
+                    // Checking of status of company logo
+                    if(data.companyLogoRR.status == "error") {
+                        // $('#companyLogo').removeClass().addClass('form-control border-danger');
+                        $('#companyLogo-errorMsg').text(data.companyLogoRR.message);
+                    } else {
+                        // $('#companyLogo').removeClass().addClass('form-control border-success');
+                        $('#companyLogo-errorMsg').text(null)
+                    }
+                    // Checking of status of company logo
+                    if(data.permitRR.status == "error") {
+                        // $('#companyLogo').removeClass().addClass('form-control border-danger');
+                        $('#dtipermit-errorMsg').text(data.permitRR.message);
+                    } else {
+                        // $('#companyLogo').removeClass().addClass('form-control border-success');
+                        $('#dtipermit-errorMsg').text(null)
+                    }
+                    // <---------------------------------Login Details---------------------------------------------------->
+                    // Checking of status of email number
+                    if(data.emailRR.status == "error") {
+                        $('#emailaddress').removeClass().addClass('form-control border-danger');
+                        $('#emailaddress-errorMsg').text(data.emailRR.message);
+                    } else {
+                        $('#emailaddress').removeClass().addClass('form-control border-success');
+                        $('#emailaddress-errorMsg').text(null)
+                    }
+                    // Checking of status of password 
+                    if(data.passwordRR.status == "error") {
+                        $('#password').removeClass().addClass('form-control border-danger');
+                        $('#password-errorMsg').text(data.passwordRR.message);
+                    } else {
+                        $('#password').removeClass().addClass('form-control border-success');
+                        $('#password-errorMsg').text(null)
+                    }
+                    // Checking of status of confirm password
+                    if(data.confirmPasswordRR.status == "error") {
+                        $('#confirmpassword').removeClass().addClass('form-control border-danger');
+                        $('#confirmpassword-errorMsg').text(data.confirmPasswordRR.message);
+                    } else {
+                        $('#confirmpassword').removeClass().addClass('form-control border-success');
+                        $('#confirmpassword-errorMsg').text(null)
                     }
                 }
             }    

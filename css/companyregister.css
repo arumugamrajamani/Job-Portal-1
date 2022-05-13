@@ -2,7 +2,6 @@ body{
     background: #FDF6EC;
     font-family: sans-serif;
 }.search-box{
-   
     width: 500px;
     border-style:outset;
 }.btn-outline{
@@ -59,7 +58,7 @@ h2{
 .container{
     position: relative;
     width: 954px;
-    height: 1500px;
+    height: 1800px;
     left: 59px;
     top: 70px;
     background: #FFFFFF;

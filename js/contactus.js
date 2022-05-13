@@ -6,12 +6,29 @@ $(document).ready(function() {
         return regex.test(email);
     }
 
+    // Function to used to check if name is valid string, return boolean result(true or false)
+    function isValidName(name) {
+        var regex = new RegExp(/^[a-zA-Z .]+$/);
+        return regex.test(name);
+    }
+
+    // Function for clearing all the fields
+    function clearFields() {
+        $('input').val(null);
+        $('textarea').val(null);
+        $('.text-danger').text(null);
+        $('.form-control').removeClass().addClass('form-control');
+    }
+
     // Trigger this when user started to type in fullname input and validate it
     $('#fullname').on('keyup', function() {
         let fullname = $('#fullname').val();
         if (fullname.length == 0) {
             $('#fullname').removeClass().addClass('form-control border-danger');
             $('#fullname-errorMsg').text("Fullname is required.");
+        } else if (!isValidName(fullname)) {
+            $('#fullname').removeClass().addClass('form-control border-danger');
+            $('#fullname-errorMsg').text("Only characters are allowed.");
         } else {
             $('#fullname').removeClass().addClass('form-control border-success');
             $('#fullname-errorMsg').text(null);
@@ -67,18 +84,7 @@ $(document).ready(function() {
             success: function(data){
                 // If response is success
                 if(data.status == "success"){
-                    // Set inputs border as default
-                    $('#fullname').removeClass().addClass('form-control');
-                    $('#email').removeClass().addClass('form-control');
-                    $('#concern').removeClass();
-                    // Set error message as default
-                    $('#fullname-errorMsg').text(null);
-                    $('#email-errorMsg').text(null);
-                    $('#concern-errorMsg').text(null);
-                    // Set value as nule
-                    $('#fullname').val(null);
-                    $('#email').val(null);
-                    $('#concern').val(null);
+                    clearFields()
                     // Display email success notification using toastr
                     toastr.success('Thank you for your concern.', 'Successfully send!')
                 // if response is notsent   

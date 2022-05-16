@@ -3,8 +3,6 @@
     min-height: 100vh;
     margin:0%;
     margin-top:0;
- 
-    
 }.btn-outline{
     background-color: #00C2D6;
     
@@ -26,7 +24,7 @@
     
     margin: auto;
     margin-top: 50px;
-    background-color: #FFF;
+    background-color: #EDBEA4;
     border-radius: 3px;
 }
 
@@ -80,7 +78,7 @@ input[type="checkbox"]{
     margin-top: 50px;
     background-color: #EDBEA4;
     border-radius: 3px;
-    padding-top: 50px;
+    padding-top: 10px;
 }.bt{
     margin-left: 45px;
     height: 35px;
@@ -118,4 +116,24 @@ form #alogin{
     margin-left: 10px;
 }.img2{
     margin-left: 10px;
+}.span{
+    position:absolute;
+    top:200px;
+}.icon1{
+    position: absolute;
+    margin-left: 260px;
+
+}
+.icon{
+    position: absolute;
+   
+}
+.icon .bi-eye{
+    display: none;
+}.icon.is-active .bi-eye{
+     display:flex;
+     margin-top: 10px;
+}.icon.is-active .bi-eye-slash{
+    display: none;
+
 }

@@ -40,6 +40,7 @@
             $response = array('status' => 'error', 'passwordRR' => $passwordRR, 'confirmpasswordRR' => $confirmpasswordRR);
         }
         // Return the response
+        session_destroy();
         echo json_encode($response);
     }
 

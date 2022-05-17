@@ -2,6 +2,30 @@
     // Include the database connection file and establish a connection
     include'db-connection.php';
 
+    // Function for checking in jobseeker table
+    function isJobseeker($email){
+        // Query to check if email is existing in jobseeker table
+        $checkEmail = mysqli_query($GLOBALS['conn'], "SELECT jobseeker_id ,email, password FROM jobseeker WHERE email = '$email'");
+        // Check if email is existing in our database
+        if(mysqli_num_rows($checkEmail) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // Function for checking in employer table
+    function isEmployer($email){
+        // Query to check if email is existing in employer table
+        $checkEmail = mysqli_query($GLOBALS['conn'], "SELECT employer_id, email, password FROM employer WHERE email = '$email'");
+        // Check if email is existing in our database
+        if(mysqli_num_rows($checkEmail) > 0) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+    
     //  Function for Sanitizing all input data 
     function sanitize_input($data){
         $data = trim($data);
@@ -65,7 +89,7 @@
             $emailRR = array('status' => 'error', 'message' => 'Email is required.');
         } elseif(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             $emailRR = array('status' => 'error', 'message' => 'Email is invalid.');
-        } elseif(isEmailExist($_POST['email'])) {
+        } elseif(isEmployer($_POST['email']) || isJobseeker($_POST['email'])) {
             $emailRR = array('status' => 'error', 'message' => 'Email is already used.');
         } else {
             $emailRR = array('status' => 'success');

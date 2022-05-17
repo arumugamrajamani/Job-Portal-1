@@ -29,10 +29,19 @@
         // Check if all the validation are successful or not
         if($passwordRR['status'] == 'success' && $confirmpasswordRR['status'] == 'success') {
             $pwHash = password_hash($password, PASSWORD_DEFAULT);
-            //change the password of the email in the database
-            mysqli_query($conn,"UPDATE jobseeker SET password = '$pwHash' WHERE email = '$email'");
-            //change the OTP to null
-            mysqli_query($conn,"UPDATE jobseeker SET otp_code = NULL WHERE email = '$email'");
+
+            if ($_SESSION["emailType"] == "jobseeker"){// if its an jobseeker it will look for the email and otp code in the jobseeker table
+                //change the password of the email in the database
+                mysqli_query($conn,"UPDATE jobseeker SET password = '$pwHash' WHERE email = '$email'");
+                //change the OTP to null
+                mysqli_query($conn,"UPDATE jobseeker SET otp_code = NULL WHERE email = '$email'");
+            }else if ($_SESSION["emailType"] == "employer"){ // if its an employer it will look for the email and otp code in the emp table
+                //change the password of the email in the database
+                mysqli_query($conn,"UPDATE employer SET password = '$pwHash' WHERE email = '$email'");
+                //change the OTP to null
+                mysqli_query($conn,"UPDATE employer SET otp_code = NULL WHERE email = '$email'");
+            }
+            
             // Return this as status success response
             $response = array('status' => 'success');          
         } else {

@@ -23,8 +23,6 @@
 
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav ms-auto text-center">
-
-
                         <nav class="navbar navbar-light ">
                             <li>
                                 <a class="nav-link me-5 fs-5" href="#aboutus">About Us</a></li>

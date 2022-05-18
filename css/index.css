@@ -2,10 +2,7 @@
 .masthead{
     background-size: cover;
     min-height: 100vh;
- 
-    
 }.search-box{
-   
     width: 500px;
     border-style:outset;
 }.btn-outline{

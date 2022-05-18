@@ -27,7 +27,7 @@
                     <ul class="navbar-nav ms-auto text-center">
     
                         <nav class="navbar navbar-light ">
-                            <li><a class="nav-link me-5 fs-5" href="contactus.php">Contact Us</a></li>
+                            <li><a class="nav-link me-5 fs-5" href="index.php#contactus">Contact Us</a></li>
                                 <a href="findajob.php">
                                 <button class="btn btn-outline-secondary me-5 fs-5"type="button">Find a Job</button></a>
                                 <button class="btn btn-outline-secondary me-5 fs-5"type="button">Post a Job</button>
@@ -38,7 +38,6 @@
                                 <li><a class="dropdown-item me-4 fs-5" href="companyregister.php">Employer</a></li>
                                 <li><a class="dropdown-item me-4 fs-5" href="jobseekersignup.php">JobSeeker</a></li>
                             </ul>
-    
                                 <li><a class="nav-link fs-5" href="login.php">Login</a></li>
                                 <li><a class="nav-link fs-5" href="#"><img src="image/profileicon1.png"alt="Profile" width="50" height="30"></a></li>
                         </nav>

@@ -14,7 +14,8 @@ $(document).ready(function() {
 
     // Function for clearing all the fields
     function clearFields() {
-        $('input').val(null);
+        $('#fullname').val(null);
+        $('#email').val(null);
         $('textarea').val(null);
         $('.text-danger').text(null);
         $('.form-control').removeClass().addClass('form-control');

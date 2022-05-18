@@ -66,6 +66,10 @@ $(document).ready(function() {
 
     // Trigger this when user click the send message button
     $('form').submit(function(event) {
+        
+        toastr.info('Please wait.', 'Wait for the server to process.');
+        //disanable the button to prevent spam
+        $("#submit").attr("disabled", true);
         event.preventDefault();
         // Create and assigned variable 
         let fullname = $('#fullname').val();
@@ -124,6 +128,8 @@ $(document).ready(function() {
                         $('#concern-errorMsg').text(null);
                     }                    
                 }
+                    //re enable the button
+                    $("#submit").attr("disabled", false);
             }
         })
     })

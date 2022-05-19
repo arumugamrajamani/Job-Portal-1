@@ -1,10 +1,8 @@
+
 .masthead{
     background-size: cover;
     min-height: 100vh;
- 
-    
 }.search-box{
-   
     width: 500px;
     border-style:outset;
 }.btn-outline{
@@ -25,15 +23,51 @@
     border-style:outset;
     
 }.para{
-    background-color: #EDBEA4;
+    background-color: #FFFFFF;
 }.para2{
-    background-color: #EDBEA4;
+    background-color: #FFFFFF;
     
 }.position{
     margin-left: 400px;
 }.page-footer{
-    background-color: #FDF6EC;
+    background-color: #FFFFFF;
 
+}.con1{
+    width: 557px;
+    height: 563px;
+    background-color: #FFFFFF;
+    position: relative;
+    top:30px;
+}h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+}p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}#submit{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FDF6EC;
+    background: #00C2D6;
+    border-radius: 10px;
+}.error{
+    border: 1px solid red;
+}.con0{
+    min-height: 100vh;
+}.mh1{
+    background-size: cover;
+    background-color: #FDF6EC;
+    min-height: 400vh;
+ 
+    
 }
 
 /*/Colors  #EDBEA4 #FDF6EC #00C2D6 #FDF6EC #FFFFFF/*/

@@ -26,7 +26,7 @@
 					<ul class="navbar-nav ms-auto text-center">
 	
 						<nav class="navbar navbar-light ">
-							<li><a class="nav-link me-5 fs-5" href="contactus.php">Contact Us</a></li>
+							<li><a class="nav-link me-5 fs-5" href="index.php#contactus">Contact Us</a></li>
 								<a href="searchjob.php">
 								<button class="btn btn-outline-secondary me-5 fs-5"type="button">Find a Job</button></a>
 								<button class="btn btn-outline-secondary me-5 fs-5"type="button">Post a Job</button>

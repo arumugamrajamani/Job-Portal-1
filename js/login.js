@@ -18,6 +18,8 @@ $(document).ready(function(){
                     alert("Succesfully login as Jobseeker");
                 } else if(data == "employer") {
                     alert("Succesfully login as Employer");
+                } else if(data == "admin") {
+                    alert("Succesfully login as Admin");
                 } else {
                     toastr.error(data, "Login Failed!" , {
                         timeOut: 3000,

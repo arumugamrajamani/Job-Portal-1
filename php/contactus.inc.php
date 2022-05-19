@@ -51,7 +51,7 @@
             //Set sender email
             $mail->setFrom(EMAIL,'Techployment PH');
             //Add recipient
-            $mail->addAddress('marcjohncastillo24@gmail.com');
+            $mail->addAddress('concerns.techployementph@gmail.com');
             //Email subject
             $mail->Subject = "Concern from ".$fullname;
             //Email body

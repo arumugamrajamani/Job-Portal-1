@@ -43,13 +43,14 @@
             }
             
             // Return this as status success response
-            $response = array('status' => 'success');          
+            $response = array('status' => 'success');  
+            // Return the response
+            session_destroy();        
         } else {
             // If not successful, return the error reponse
             $response = array('status' => 'error', 'passwordRR' => $passwordRR, 'confirmpasswordRR' => $confirmpasswordRR);
         }
-        // Return the response
-        session_destroy();
+
         echo json_encode($response);
     }
 

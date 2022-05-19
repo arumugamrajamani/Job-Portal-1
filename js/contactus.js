@@ -67,7 +67,7 @@ $(document).ready(function() {
     // Trigger this when user click the send message button
     $('form').submit(function(event) {
         
-        toastr.info('Please wait.', 'Wait for the server to process.');
+        toastr.info('Please wait.', 'Processing Concern.');
         //disanable the button to prevent spam
         $("#submit").attr("disabled", true);
         event.preventDefault();
@@ -91,7 +91,7 @@ $(document).ready(function() {
                 if(data.status == "success"){
                     clearFields()
                     // Display email success notification using toastr
-                    toastr.success('Thank you for your concern.', 'Successfully send!')
+                    toastr.success('Thank you for your concern.', 'Successfully sent!')
                 // if response is notsent   
                 } else if(data.status == "notsent") {
                     // Display email danger notification using toastr
@@ -130,6 +130,12 @@ $(document).ready(function() {
                 }
                     //re enable the button
                     $("#submit").attr("disabled", false);
+            },
+            error: function(){
+                //re enable the button
+                $("#submit").attr("disabled", false);
+                // Display email danger notification using toastr
+                toastr.warning("Error!" , 'Failed to sent!');
             }
         })
     })

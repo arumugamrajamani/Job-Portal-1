@@ -40,6 +40,11 @@
                 mysqli_query($conn,"UPDATE employer SET password = '$pwHash' WHERE email = '$email'");
                 //change the OTP to null
                 mysqli_query($conn,"UPDATE employer SET otp_code = NULL WHERE email = '$email'");
+            }else { //if its an admin it will look for the email and otp code in the admin table
+                //change the password of the email in the database
+                mysqli_query($conn, "UPDATE admin SET password = '$pwHash' WHERE email = '$email'");
+                //change the otp to null
+                mysqli_query($conn, "UPDATE admin SET otp_code = NULL WHERE email = '$email'");
             }
             
             // Return this as status success response

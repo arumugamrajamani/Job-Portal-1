@@ -16,7 +16,10 @@
        
         }else if ($_SESSION["emailType"] == "employer"){ // if its an employer it will look for the email and otp code in the emp table
             $checkOtpQuery = mysqli_query($GLOBALS['conn'], "SELECT * FROM employer WHERE otp_code = '$otp' AND email = '$email'");
+        }else{
+            $checkOtpQuery = mysqli_query($GLOBALS['conn'], "SELECT * FROM admin WHERE otp_code = '$otp' AND email = '$email'");
         }
+        
         if(mysqli_num_rows($checkOtpQuery) > 0) {
             return true;
         } else {

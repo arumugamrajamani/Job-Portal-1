@@ -27,6 +27,18 @@
         }
     }
     
+    // Function for checking in admin table
+    function isAdmin($email){
+        // Query to check if email is existing in employer table
+        $checkEmail = mysqli_query($GLOBALS['conn'], "SELECT admin_id, email FROM admin WHERE email = '$email'");
+        // Check if email is existing in our database
+        if(mysqli_num_rows($checkEmail) > 0) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
     if(isset($_POST['submit'])){        
         // Get the data from the form
         $email = $_POST['email'];
@@ -39,7 +51,12 @@
             $emailRR = array('status' => 'success');
             //sets session emailType if employer
             $_SESSION["emailType"] = "jobseeker";
-        } else {
+        }else if(isAdmin($email)){
+            $emailRR = array('status' => 'success');
+            //sets session emailType if admin
+            $_SESSION["emailType"] = "admin";
+        }
+        else {
             $emailRR = array('status' => 'error');
         }
 
@@ -69,6 +86,8 @@
             }else if ($_SESSION["emailType"] == "employer"){ // if its an employer it will look for the email and otp code in the emp table
                 mysqli_query($GLOBALS['conn'], "UPDATE employer SET otp_code = '$otp_code' WHERE employer.email = '$email'");
                 
+            }else {
+                mysqli_query($GLOBALS['conn'], "UPDATE admin SET otp_code = '$otp_code' WHERE admin.email = '$email'" );
             }
 
             //Finally send email

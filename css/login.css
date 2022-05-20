@@ -1,15 +1,26 @@
 .masthead{
-    background-size: cover;
+    background-color: #00C2D6;
     min-height: 100vh;
+    margin:0%;
+    margin-top:0;
+ 
+    
+}.search-box{
+   
+    width: 500px;
+    border-style:outset;
 }.btn-outline{
     background-color: #00C2D6;
     
 }.navbar-light{
     background-color: #FFFFFF;
-
     margin:0%;
-}
-.btn-outline-secondary{
+}.navbar-expand-lg{
+    height:100px;
+    width:100%;
+    margin-left: 5px;
+    
+}.btn-outline-secondary{
     background-color: #00C2D6;
     color: white;
     border: #00C2D6;
@@ -68,12 +79,12 @@ input[type="checkbox"]{
 
 
 .login-page{
-    width: 340px;
-    height: 350px;
+    width: 350px;
+    height: 420px;
     text-align: center;
    
-    margin: auto;
-    margin-top: 50px;
+    margin-left: 140px;
+    margin-top: 120px;
     background-color: #EDBEA4;
     border-radius: 3px;
     padding-top: 10px;
@@ -134,4 +145,8 @@ form #alogin{
 }.icon.is-active .bi-eye-slash{
     display: none;
 
+}
+
+footer{
+    background-color: #00C2D6;
 }

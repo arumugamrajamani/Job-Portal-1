@@ -1,7 +1,8 @@
 body{
-    background: #FDF6EC;
+    background: #00C2D6;
     font-family: sans-serif;
 }.search-box{
+   
     width: 500px;
     border-style:outset;
 }.btn-outline{
@@ -29,7 +30,7 @@ body{
 }.position{
     margin-left: 400px;
 }.page-footer{
-    background-color: #FDF6EC;
+    background-color: #00C2D6;
 
 }
 h1{
@@ -58,9 +59,9 @@ h2{
 .container{
     position: relative;
     width: 954px;
-    height: 1800px;
-    left: 59px;
-    top: 70px;
+    height: 1710px;
+    left: 5px;
+    top: 110px;
     background: #FFFFFF;
 }
 .container input{
@@ -75,24 +76,24 @@ h2{
     left: 477px;
     top: 686px;
 }
-#signup{
+#SAVE-NOW{
     position: relative;
-    font-family: 'Inter';
+   
     font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
+    font-weight: 800;
+    font-size: 15px;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
     line-height: 30px;
-    color: #FFFFFF;
+    border: 0;
+    background-color: #00C2D6;
 }hr{
     border:1px solid black;
     
 }input[type=file]::file-selector-button {
     
     background-color: #00C2D6;
-    color: white;
+    color: black;
     
-}
-#charNum{
-    text-align: right;
-    color: #686868;
-}
+  }

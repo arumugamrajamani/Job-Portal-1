@@ -17,145 +17,90 @@
 </head>
 
 <body>
-    <div class="color-overlay">
+<div class="color-overlay">
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg  h6 navbar-light bg">
-                    <a href="index.php" class="navbar-brand">
+            <nav class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0">
+                    <a href="index.php" class="navbar-brand ms-3">
                     <img src="image/flogo.png" alt="Job Portal Logo" width="120" height="95"></a>
-    
+
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav ms-auto text-center">
-    
                         <nav class="navbar navbar-light ">
-                            <li><a class="nav-link me-5 fs-5" href="index.php#contactus">Contact Us</a></li>
-                                <a href="findajob.php">
-                                <button class="btn btn-outline-secondary me-5 fs-5"type="button">Find a Job</button></a>
-                                <button class="btn btn-outline-secondary me-5 fs-5"type="button">Post a Job</button>
-    
+                            <li>
+                                <a class="nav-link me-5 fs-5" href="index.php#home">Home</a></li>
+                                <a class="nav-link me-5 fs-5" href="index.php#aboutus">About Us</a></li>
+                                <a class="nav-link me-5 fs-5" href="index.php#contactus">Contact Us</a></li>            
+                                <a class="nav-link me-5 fs-5" href="index.php#faq">FAQ</a></li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
+                                <a class="nav-link dropdown-toggle fs-5 me-4" href="#"
+                                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item me-4 fs-5" href="companyregister.php">Employer</a></li>
-                                <li><a class="dropdown-item me-4 fs-5" href="jobseekersignup.php">JobSeeker</a></li>
+                                <li><a class="dropdown-item me-4 fs-5"href="jobseekersignup.php">JobSeeker</a></li>
                             </ul>
-                                <li><a class="nav-link fs-5" href="login.php">Login</a></li>
-                                <li><a class="nav-link fs-5" href="#"><img src="image/profileicon1.png"alt="Profile" width="50" height="30"></a></li>
+
+                                <li><a class="nav-link fs-5" href="login.php">Login</a></li>   
                         </nav>
                     </ul>
                 </div>
             </nav>         
         </div>
     </div>
-
-    <br>
-    <form class="container needs-validation" action="">
-        <div class="col-sm-9 text-start row mb-3">
-            <h1>JOBSEEKER REGISTRATION FORM</h1>
-        </div>
-        <h2 class="text-black text-center mt-4">Account Information</h2>
-        <hr>
-        <div class="row mb-3 mt-3 ms-4">
-            <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
-            <div class="col-sm-9">
-                <input type="text" class="form-control" id="fullname">               
-                <div class="text-danger" id="fullname-errorMsg"></div>
+    <br><br><br>
+    <br><br><br>
+    <div class="ms-5 mb-5" style="width: 1800px;height:100vh;background-color: #FDF6EC;"><br><br>
+        <form class="container">
+            <div class="col-sm-9 text-start row mb-3" style="background-color: #00C2D6;">
+                <h1 class="text-dark fw-bold">JOB SEEKER REGISTRATION FORM</h1>
             </div>
-        </div>
-        <div class="row mb-3 ms-4">
-            <label for="mobilenumber" class="col-sm-2 col-form-label">Mobile Number</label>
-            <div class="col-sm-9">
-                <input type="text" class="form-control" id="mobilenumber" maxlength="13">
-                <div class="text-danger" id="mobilenumber-errorMsg"></div>
-            </div>
-        </div>
-        <div class="row mb-3 ms-4">
-            <label for="email" class="col-sm-2 col-form-label">Email</label>
-            <div class="col-sm-9">
-                <input type="email" class="form-control" id="email">
-                <div class="text-danger" id="email-errorMsg"></div>
-            </div>
-        </div>
-        <div class="row mb-3 ms-4">
-            <label for="password" class="col-sm-2 col-form-label">Password</label>
-            <div class="col-sm-9">
-                <input type="password" class="form-control" id="password">
-                <div class="text-danger" id="password-errorMsg"></div>
-            </div>
-        </div>
-        <div class="row mb-3 ms-4">
-            <label for="confirmpassword" class="col-sm-2 col-form-label">Confirm Password</label>
-            <div class="col-sm-9">
-                <input type="password" class="form-control" id="confirmpassword">
-                <div class="text-danger" id="cpassword-errorMsg"></div>
-            </div>
-        </div>
-
-        <div class="text-center text-light">
-            <button type="submit" class="btn-info" id="signup">SIGN UP</button>
-        </div>
-    </form>
-
-    <br><br><br><br><br>
-    <footer class="page-footer"><br>
-        <div class="container-fluid text-center text-md-left mt-5">
-            <div class="row">
-				<div class="col-md-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">JOB SEEKER</h6>
-                    <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 50px; height: 2px">
-                    <ul class="list-unstyled">
-                        <li class="my-0"><a href="#">Register</a></li>
-                        <li class="my-0"><a href="#">Job Search</a></li>
-                        <li class="my-0"><a href="#">How it works</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">EMPLOYER</h6>
-                    <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px">
-
-                    <ul class="list-unstyled">
-                        <li class="my-0"><a href="#">Register</a></li>
-                        <li class="my-0"><a href="#">Post a job</a></li>
-                        <li class="my-0"><a href="#">How it works</a></li>
-
-                    </ul>
-                </div>
-
-                <div class="col-md-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">AVAILABLE JOBS</h6>
-                    <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height: 2px">
-                    <ul class="list-unstyled">
-                        <li class="my-0"><a>Graphic Design</a></li>
-                        <li class="my-0"><a>Programmers</a></li>
-                        <li class="my-0"><a>Blogging VAs</a></li>
-                        <li class="my-0"> <a>Webmaster VAs</a></li>
-                        <li class="my-0"> <a>Wordpress expert</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">OTHER INFORMATIONS</h6>
-                    <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; height: 2px">
-                    <ul class="list-unstyled">
-                        <li class="my-0"></i> <a href="#">About us</a></li>
-                        <li class="my-0"></i> <a href="faq.php">FAQ</a></li>
-                        <li class="my-0"></i> <a href="contactus.php">Contact us</a></li>
-                        <li class="my-0"></i><a href="#">Privacy Policy</a></li>
-                        <li class="my-0"></i> <a href="#">Terms of use</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">CONTACT US</h6>
-                    <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px">
-                    <ul class="list-unstyled">
-                        <img class="my-0" src="image/twitter.png" alt="logo" href="#" style="width: 50px; height: 50px">
-                        <img class="my-0" src="image/facebook.png" alt="logo" href="#" style="width: 50px; height: 50px">
-                        <img class="my-0" src="image/insta.png" alt="logo" href="#" style="width: 50px; height: 50px">
-                    </ul>
+            <h2 class="text-black text-center mt-4">ACCOUNT INFORMATION</h2>
+            <hr>
+            <div class="row mb-3 mt-3 ms-4">
+                <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
+                <div class="col-sm-9">
+                    <input style="background: #ECECEC;" type="text" class="form-control" id="fullname">               
+                    <div class="text-danger" id="fullname-errorMsg"></div>
                 </div>
             </div>
-        </div>
-    </footer>
+            <div class="row mb-3 ms-4">
+                <label for="mobilenumber" class="col-sm-2 col-form-label">Mobile Number</label>
+                <div class="col-sm-9">
+                    <input style="background: #ECECEC;" type="text" class="form-control" id="mobilenumber">
+                    <div class="text-danger" id="mobilenumber-errorMsg"></div>
+                </div>
+            </div>
+            <div class="row mb-3 ms-4">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-9">
+                    <input style="background: #ECECEC;" type="email" class="form-control" id="email">
+                    <div class="text-danger" id="email-errorMsg"></div>
+                </div>
+            </div>
+            <div class="row mb-3 ms-4">
+                <label for="password" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-9">
+                    <input style="background: #ECECEC;" type="password" class="form-control" id="password">
+                    <div class="text-danger" id="password-errorMsg"></div>
+                </div>
+            </div>
+            <div class="row mb-3 ms-4">
+                <label for="confirmpassword" class="col-sm-2 col-form-label">Confirm Password</label>
+                <div class="col-sm-9">
+                    <input style="background: #ECECEC;" type="password" class="form-control" id="confirmpassword">
+                    <div class="text-danger" id="cpassword-errorMsg"></div>
+                </div>
+            </div>
+            
+            <br>
+            <div class="text-center text-light">
+                <button type="submit" class=" text-dark" id="SAVE-NOW" style="background-color: #00C2D6;border: 0; width: 100px;height:40px;border-radius: 14px;">SIGN UP</button>
+            </div>    
+        </form>
+
+        <div style="margin-left: 1000px; margin-top: -600px;">
+            <img src="image/online-registration.png" alt="Registration" width="700" height="800">
+        </div>  
+    </div>
 
     <script src="js/jobseekersignup.js"></script>
 </body>

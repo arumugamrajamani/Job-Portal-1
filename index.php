@@ -18,14 +18,14 @@
     <div class="color-overlay">
         <div class="container-fluid">
             <nav id="navbar-example2" class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow " >
-                    <a href="#" class="navbar-brand ms-3">
+                    <a href="index.php" class="navbar-brand ms-3">
                     <img src="image/flogo.png" alt="Job Portal Logo" width="120" height="95"></a>
 
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav ms-auto text-center nav-tabs">
                             <nav class="navbar navbar-light">     
-                                <li><a class="nav-link me-5 fs-5 btn1 " href="#home">Home</a></li>
-                                <li><a class="nav-link me-5 fs-5 btn1 " href="#aboutus">About Us</a></li>
+                                <li><a class="nav-link me-5 fs-5 btn1" href="#home">Home</a></li>
+                                <li><a class="nav-link me-5 fs-5 btn1" href="#aboutus">About Us</a></li>
                                 <li><a class="nav-link me-5 fs-5" href="#contactus">Contact Us</a></li>
                                 <li><a class="nav-link me-5 fs-5" href="#faq">FAQ</a></li>
                                 
@@ -33,11 +33,10 @@
                                 <a class="nav-link dropdown-toggle fs-5 mx-3" href="#"
                                 id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item me-4 fs-5" href="companyregister.html">Employer</a></li>
- 								<li><a class="dropdown-item me-4 fs-5"href="jobseekersignup.html">JobSeeker</a></li>
+                                <li><a class="dropdown-item me-4 fs-5" href="companyregister.php">Employer</a></li>
+ 								<li><a class="dropdown-item me-4 fs-5"href="jobseekersignup.php">JobSeeker</a></li>
                             </ul>
-
-                                <li><a class="nav-link fs-5 me-4" href="login.html">Login</a></li>
+                                <li><a class="nav-link fs-5 me-4" href="login.php">Login</a></li>
                             	<li><a class="nav-link fs-5" href="#"></a></li>
                         </nav>
                     </ul>
@@ -65,7 +64,7 @@
                                 </div>
                             </div><br>
                         <div class="text-center">
-                            <button type="button" onclick="location.href='searchjob-home.html'" class="btn btn-sm fs-6 text-dark fw-bold" style="background-color: #ffff; border-radius: 10px;">Browse All Job Post </button>
+                            <button type="button" onclick="location.href='searchjob-home.php'" class="btn btn-sm fs-6 text-dark fw-bold" style="background-color: #ffff; border-radius: 10px;">Browse All Job Post </button>
         
                         </div>
                     </div>
@@ -1447,9 +1446,9 @@
                     <ul class="list-unstyled">
                         <li class="my-0"></i> <a href="#aboutus" class="text-dark">About us</a></li>
                         <li class="my-0"></i> <a href="#faq" class="text-dark">FAQ</a></li>
-                        <li class="my-0"></i> <a href="termsandcondition.html" class="text-dark">Terms and conditions</a></li>
-                        <li class="my-0"></i><a href="privacypolicy.html" class="text-dark">Privacy Policy</a></li>
-                        <li class="my-0"></i> <a href="termsofuse.html" class="text-dark">Terms of use</a></li>
+                        <li class="my-0"></i> <a href="termsandcondition.php" class="text-dark">Terms and conditions</a></li>
+                        <li class="my-0"></i><a href="privacypolicy.php" class="text-dark">Privacy Policy</a></li>
+                        <li class="my-0"></i> <a href="termsofuse.php" class="text-dark">Terms of use</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2 mx-auto mb-4 text-center">

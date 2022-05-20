@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Techployment</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
         <!-- JQuery CDN below -->
@@ -46,30 +47,26 @@
     </div>
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <section class="masthead" id="home">
-        
-                    <br><br><br>
-                    <h1 class="mt-5 ms-4 pt-5 text-center tag1">Employment powered by Technology. </h1><br>
-                <div class="container d-flex">
-                
-                    <div>
-                            <p class="mt-0 tag2 " style="text-align: justify;text-justify: inter-word;font-size: 29px;">Are you sick of standing in endless lines? Today, technology gives you an advantage in the job market by allowing you to apply with a single click and from the comfort of your home.  Now is the time to apply! Use <strong> Tech-Ployment  </strong>and get your first online job!</p>
-                            <br>
-                            <div class="row height d-flex justify-content-center align-items-center">
-                                <div class="col-md-12">
-                                <div class="search">
-                                    <i class="bi bi-search"></i>
-                                    <input type="text" class="form-control" placeholder="Search a job" style="border-radius: 14px;">
-                                    <button class="btn" style="background-color: #00C2D6;border-radius: 14px;">Search</button>
-                                </div>  
-                                </div>
-                            </div><br>
-                        <div class="text-center">
-                            <button type="button" onclick="location.href='searchjob-home.php'" class="btn btn-sm fs-6 text-dark fw-bold" style="background-color: #ffff; border-radius: 10px;">Browse All Job Post </button>
-        
+            <br><br><br>
+            <h1 class="mt-5 ms-4 pt-5 text-center tag1">Employment powered by Technology. </h1><br>
+            <div class="container d-flex">
+                <div>
+                    <p class="mt-0 tag2 " style="text-align: justify;text-justify: inter-word;font-size: 29px;">Are you sick of standing in endless lines? Today, technology gives you an advantage in the job market by allowing you to apply with a single click and from the comfort of your home.  Now is the time to apply! Use <strong> Tech-Ployment  </strong>and get your first online job!</p><br>
+                    <div class="row height d-flex justify-content-center align-items-center">
+                        <div class="col-md-12">
+                            <div class="search">
+                                <i class="bi bi-search"></i>
+                                <input type="text" class="form-control" placeholder="Search a job" style="border-radius: 14px;">
+                                <button class="btn" style="background-color: #00C2D6;border-radius: 14px;">Search</button>
+                            </div>  
                         </div>
+                    </div><br>
+                    <div class="text-center">
+                        <button type="button" onclick="location.href='searchjob-home.php'" class="btn btn-sm fs-6 text-dark fw-bold" style="background-color: #ffff; border-radius: 10px;">Browse All Job Post </button>
                     </div>
-                        <img src="image/bg2-homepage.png" alt="background-2" class="ms-5" >
                 </div>
+                    <img src="image/bg2-homepage.png" alt="background-2" class="ms-5" >
+            </div>
                 <br><br><br><br><br><br>
         </section>  
         <section id="aboutus"  style="background:#FDF6EC;">

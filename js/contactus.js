@@ -1,3 +1,7 @@
+var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#navbar-example'
+})
+
 $(document).ready(function() {
 
     // Function to be used to check if email is valid, return boolean result(true or false)

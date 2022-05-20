@@ -29,7 +29,7 @@
     
     // Function for checking in admin table
     function isAdmin($email){
-        // Query to check if email is existing in employer table
+        // Query to check if email is existing in admin table
         $checkEmail = mysqli_query($GLOBALS['conn'], "SELECT admin_id, email FROM admin WHERE email = '$email'");
         // Check if email is existing in our database
         if(mysqli_num_rows($checkEmail) > 0) {

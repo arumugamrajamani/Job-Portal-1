@@ -172,7 +172,7 @@
             </div>
     
             <div class="text-center text-light">
-                <button type="submit" class="btn-info" id="signup">SIGN UP</button>
+                <button type="submit" class="btn-info" id="SAVE-NOW">SIGN UP</button>
             </div>
         </form>
     </div>

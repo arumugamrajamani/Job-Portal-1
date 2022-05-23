@@ -2,7 +2,7 @@
 
 welcome to our job portal git repository
 <br><br>
-This project was given to us by our employer from the company Melham Construction Company as an intern
+This project was given to us by our employer from the company Melham Construction Corporation as an intern
 <br><br>
 **Our team**
 <br>

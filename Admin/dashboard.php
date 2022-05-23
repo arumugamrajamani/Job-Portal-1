@@ -35,11 +35,11 @@
   <br>
   
   <div class="sidebar shadow-lg"><br><br>
-    <a href="dashboard.html" style="background-color: #00C2D6;"><i class="bi bi-speedometer"></i> Dashboard</a><br>
-    <a href="employer-management.html"><i class="bi bi-person-workspace"></i> Employers Management</a><br>
-    <a href="jobseekermanagement.html"><i class="bi bi-search"></i> Job Seeker Management</a><br>
-    <a href="jobpostmanagement.html"><i class="bi bi-file-earmark-post-fill"></i> Job Post Management</a><br>
-    <a href="jobcategoriesmanagement.html"><i class="bi bi-briefcase"></i> Job Categories Management</a><br>
+    <a href="dashboard.php" style="background-color: #00C2D6;"><i class="bi bi-speedometer"></i> Dashboard</a><br>
+    <a href="employer-management.php"><i class="bi bi-person-workspace"></i> Employers Management</a><br>
+    <a href="jobseeker-management.php"><i class="bi bi-search"></i> Job Seeker Management</a><br>
+    <a href="jobpostmanagement.php"><i class="bi bi-file-earmark-post-fill"></i> Job Post Management</a><br>
+    <a href="jobcategoriesmanagement.php"><i class="bi bi-briefcase"></i> Job Categories Management</a><br>
   </div>
 
 

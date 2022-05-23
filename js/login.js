@@ -19,7 +19,7 @@ $(document).ready(function(){
                 } else if(data == "employer") {
                     alert("Succesfully login as Employer");
                 } else if(data == "admin") {
-                    alert("Succesfully login as Admin");
+                    window.location.href = "admin/dashboard.php";
                 } else {
                     toastr.error(data, "Login Failed!" , {
                         timeOut: 3000,

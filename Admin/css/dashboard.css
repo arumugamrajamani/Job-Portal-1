@@ -1,0 +1,142 @@
+body {
+    background: #00C2D6;
+    font-family: sans-serif;
+}
+.search-box{
+
+    width: 500px;
+    border-style:outset;
+    }.btn-outline{
+    background-color: #00C2D6;
+    
+    }.navbar-light{
+    background-color: #FFFFFF;
+    margin:0%;
+    }.navbar-expand-lg{
+    height:70px;
+    width:100%;
+    margin-left: 5px;
+    
+    }.btn-outline-secondary{
+    background-color: #00C2D6;
+    color: white;
+    border: #00C2D6;
+    border-style:outset;
+    
+    }.account-drop{
+    text-align: center;
+    position: relative;
+    
+    background-color: #372732;
+    width:50px;
+    }.nav-item .dropdown-item{
+    position: relative;
+    width:150px;
+    
+    }
+    .nav-item .dropdown-item:hover{
+    background-color: #8B8383;
+    }
+#menu{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+    color: #372732;
+}
+#title-sub{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #372732;
+}
+#btn-info{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 25px;
+    height: 35px;
+    color: white;
+}
+
+.sidebar {
+    margin: 0;
+    padding-top:80px;
+    width: 300px;
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active { 
+    color: white;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color:  #00C2D6;
+    color: black;
+    
+}
+
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+.sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+.sidebar a {
+    text-align: center;
+    float: none;
+}
+}
+p{
+    margin-top: 100px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 70px;
+    text-align: center;
+    background: white;
+}
+h2{
+    
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 21px;
+line-height: 25px;
+color: black;
+
+}

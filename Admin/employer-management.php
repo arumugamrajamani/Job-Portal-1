@@ -147,55 +147,55 @@
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                     <label for="companyaddress" class="col-sm-3 ">Company Address:</label>
                     <div class="col-sm-8">
-                        <h5 id="companyaddress">Dasmarinas City, Cavite, Philippines</h5>
+                        <h5 id="companyaddress"></h5>
                     </div>
                 </div>
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                   <label for="companyceoname" class="col-sm-3 ">Company CEO Name:</label>
                   <div class="col-sm-8">
-                      <h5 id="companyceoname">Monkey D. Luffy</h5>
+                      <h5 id="companyceoname"></h5>
                   </div>
                 </div>
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                   <label for="companysize" class="col-sm-3 ">Company Size:</label>
                   <div class="col-sm-8">
-                      <h5 id="companysize">50</h5>
+                      <h5 id="companysize"></h5>
                   </div>
                 </div>
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                   <label for="companyrevenue" class="col-sm-3 ">Company Revenue:</label>
                   <div class="col-sm-8">
-                      <h5 id="companyrevenue">$100,000</h5>
+                      <h5 id="companyrevenue"></h5>
                   </div> 
                 </div>
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                   <label for="industry" class="col-sm-3 ">Industry:</label>
                   <div class="col-sm-8">
-                      <h5 id="industry">Engineering</h5>
+                      <h5 id="industry"></h5>
                   </div> 
                 </div>
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                   <label for="companynumber" class="col-sm-3 ">Company Number:</label>
                   <div class="col-sm-8">
-                      <h5 id="companynumber">29271922459</h5>
+                      <h5 id="companynumber"></h5>
                   </div> 
                 </div>
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                   <label for="companyemail" class="col-sm-3 ">Company Email:</label>
                   <div class="col-sm-8">
-                      <h5 id="companyemail">factset@gmail.com</h5>
+                      <h5 id="companyemail"></h5>
                   </div> 
                 </div>
                 <div class="row mb-3 mt-0 ms-4">
                   <label for="companydescription" class="col-sm-3 fw-bold ">Company Description:</label>
                   <div class="col-sm-8">
-                      <p id="companyrdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi voluptas deserunt saepe laborum accusamus laboriosam id porro inventore quos est.</p>
+                      <p id="companydescription"></p>
                   </div> 
                 </div>
                 <div class="row mb-3 mt-0 ms-4">
                   <label for="datecreated" class="col-sm-3 fw-bold">Date/Time Created:</label>
                   <div class="col-sm-8">
-                      <h5 id="datecreated">May 19, 2022</h5>
+                      <h5 id="datecreated"></h5>
                   </div> 
                 </div>
               </form>

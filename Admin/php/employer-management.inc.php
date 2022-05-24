@@ -43,8 +43,8 @@
                             <td>{$email}</td>
                             <td><i class='fa-solid fa-file-lines me-1'></i><a href='{$permitName}' download='{$permitOriginalName}'>{$permitOriginalName}</a></td>
                             <td>" .isVerified($status). "</td> 
-                            <td data-title='Action' style='width: 250px;'>
-                                <button style='width: 40px; border: 0;' class='btn-primary' type='button' data-id='{$employerId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-viewdetails'><i class='fa-solid fa-eye'></i></button>
+                            <td style='width: 250px;'>
+                                <button style='width: 40px; border: 0;' class='btn-primary more-details' type='button' data-id='{$employerId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-viewdetails'><i class='fa-solid fa-eye'></i></button>
                                 <button style='width: 40px; border: 0;' class='btn-success' type='button' data-id='{$employerId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails'><i class='fa fa-pen-to-square'></i></button>
                                 <button class='btn btn-danger' type='button' id='btn-info' data-id='{$employerId}'  data-bs-toggle='modal' data-bs-target='#exampleModal'><i class='bi bi-trash3'></i></button>
                             </td>
@@ -53,5 +53,38 @@
         // Return this output variable to the ajax call
         echo $output;
     } 
+
+    // When user click more details button
+    if($_POST['moreDetails']){
+        $employerId = mysqli_real_escape_string($conn, $_POST['employerId']);
+        // Create query to get the employer information
+        $moreDetailsQuery = mysqli_query($conn, "SELECT * FROM employer WHERE employer_id = '$employerId'");
+        $row = mysqli_fetch_assoc($moreDetailsQuery);
+        // Get the employer information needed to more details modal
+        $companyAddress = $row['company_address'];
+        $companyCEO = $row['company_ceo'];
+        $companySize = $row['company_size'];
+        $companyRevenue = $row['company_revenue'];
+        $industry = $row['industry'];
+        $contactNumber = $row['contact_number'];
+        $companyEmail = $row['company_email'];
+        $companyDescription = nl2br($row['company_description']);
+        $dateCreated = $row['date_created'];
+
+        // Create Assoc array to return to the ajax call
+        $response = array(
+            'companyAddress' => $companyAddress,
+            'companyCEO' => $companyCEO,
+            'companySize' => $companySize,
+            'companyRevenue' => $companyRevenue,
+            'industry' => $industry,
+            'contactNumber' => $contactNumber,
+            'companyEmail' => $companyEmail,
+            'companyDescription' => $companyDescription,
+            'dateCreated' => $dateCreated
+        );
+
+        echo json_encode($response);
+    }
 
 ?>

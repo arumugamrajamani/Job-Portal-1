@@ -48,8 +48,8 @@
 
     <div style="width: 1450px; height: 800px;  margin-left: 390px;" class="container-fluid p-md-5 mt-4 bg-white">
       <form class="d-flex">      
-        <input style="border-radius: 0%; border-top-left-radius: 10px; border-bottom-left-radius: 10px; width: 300px;" class="form-control icon" type="search" placeholder="Search an employer" aria-label="Search">
-        <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
+        <input style="border-radius: 0%; border-top-left-radius: 10px; border-bottom-left-radius: 10px; width: 300px;" id="search" class="form-control icon" type="text" placeholder="Search an employer" aria-label="Search">
+        <button class="btn text-dark fw-bold search" type="button"><i class="bi bi-search"></i></button>
       </form>
             <form id="main-form">
                 <div style="width: inherit;" class=" col-auto ">

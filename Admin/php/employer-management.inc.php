@@ -14,9 +14,16 @@
     if(isset($_POST['loadData'])){
         // Variable for holding the result of the query
         $output = "";
+        // Check if search is present
+        if(isset($_POST['search'])){
+            $search = $_POST['search'];
+            $statement = "SELECT * FROM employer WHERE company_name LIKE '%$search%' OR employer_name LIKE '%$search%' OR employer_position LIKE '%$search%' OR email LIKE '%$search%'";
+        } else {
+            $statement = "SELECT * FROM employer";
+        }
         // Get all employer information from the database
-        $CheckEmployerInfo = mysqli_query($conn, "SELECT * FROM employer");
-        while($row = mysqli_fetch_assoc($CheckEmployerInfo)){
+        $EmployerInfoQuery = mysqli_query($conn, $statement);
+        while($row = mysqli_fetch_assoc($EmployerInfoQuery)){
             // Get the employer information needed to table
             $employerId = $row['employer_id'];
             $companyLogo = "../storage/" .$row['company_logo_name'];

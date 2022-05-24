@@ -15,6 +15,7 @@
             $email = $row['email'];
             $number = $row['mobile_number'];
             $date = $row['date_created'];
+            //storing the data into $output.
             $output .=  "
             <tr style='height: 6rem; border: none; box-shadow: none;'>
                 <td class='view-pp'><img src='{$profilePicture}' alt='' style='width: 60px; cursor: pointer;' data-bs-toggle='modal' data-bs-target='#profile-picture'></td>

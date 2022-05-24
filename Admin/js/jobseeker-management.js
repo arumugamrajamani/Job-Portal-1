@@ -14,7 +14,7 @@ $(document).ready(function() {
             }
         })
     }
-        // Function for searching of company logo src and displaying to modal
+        // Function for searching of profile picture src and displaying to modal
         $('#body-h').on('click', '.view-pp', function(){
             let src = $(this).find('img').attr('src')
             $('#view-pp').attr('src', src)

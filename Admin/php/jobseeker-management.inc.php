@@ -3,7 +3,7 @@
     include '../../php/db-connection.php';
 
     //check if profile pic is not null && if file exists  then returns a string value of the profile picture
-    function isProfilePicNull($profilePic){
+    function getProfilePicLoc($profilePic){
         if($profilePic != NULL && file_exists ("../../storage/".$profilePic )){
             return "../storage/".$profilePic;
         }else{
@@ -24,7 +24,7 @@
         //fetch all the jobseeker info from the database
         $checkJobseekerInfo = mysqli_query($conn, $statement);
         while($row = mysqli_fetch_assoc($checkJobseekerInfo)){
-            $profilePicture = isProfilePicNull($row['profile_picture']);
+            $profilePicture = getProfilePicLoc($row['profile_picture']);
             $jobseekerId = $row['jobseeker_id'];
             $fullName = $row['fullname'];
             // $profilePicture = "../storage/".$row['profile_picture'];

@@ -109,6 +109,7 @@ background-color: #8B8383;
     border-bottom-right-radius: 10px;
 }
 
+
 .sidebar a {
     display: block;
     color: black;
@@ -124,6 +125,13 @@ background-color: #8B8383;
     background-color:  #00C2D6;
     color: black;
     
+}
+
+td {
+    height: 80px;
+    width: 160px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 div.content {

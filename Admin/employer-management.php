@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://kit.fontawesome.com/e5ed048aee.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+     <!-- jQuery cdn link below -->
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/employer-management.css">
     <title>Employer Management</title>
@@ -36,13 +38,14 @@
     </div>
     <br>
     <div class="sidebar"><br><br>
-    <a href="dashboard.php" ><i class="bi bi-speedometer"></i> Dashboard</a><br>
-    <a href="employer-management.php" style="background-color: #00C2D6;"><i class="bi bi-person-workspace"></i> Employers Management</a><br>
-    <a href="jobseeker-management.php"><i class="bi bi-search"></i> Job Seeker Management</a><br>
-    <a href="jobpostmanagement.php"><i class="bi bi-file-earmark-post-fill"></i> Job Post Management</a><br>
-    <a href="jobcategoriesmanagement.php"><i class="bi bi-briefcase"></i> Job Categories Management</a><br>
+      <a href="dashboard.php" ><i class="bi bi-speedometer"></i> Dashboard</a><br>
+      <a href="employer-management.php" style="background-color: #00C2D6;"><i class="bi bi-person-workspace"></i> Employers Management</a><br>
+      <a href="jobseeker-management.php"><i class="bi bi-search"></i> Job Seeker Management</a><br>
+      <a href="jobpostmanagement.php"><i class="bi bi-file-earmark-post-fill"></i> Job Post Management</a><br>
+      <a href="jobcategoriesmanagement.php"><i class="bi bi-briefcase"></i> Job Categories Management</a><br>
     </div>
     <br><br><br>
+
     <div style="width: 1450px; height: 800px;  margin-left: 390px;" class="container-fluid p-md-5 mt-4 bg-white">
       <form class="d-flex">      
         <input style="border-radius: 0%; border-top-left-radius: 10px; border-bottom-left-radius: 10px; width: 300px;" class="form-control icon" type="search" placeholder="Search an employer" aria-label="Search">
@@ -51,83 +54,44 @@
             <form id="main-form">
                 <div style="width: inherit;" class=" col-auto ">
                   <section class="type p-1">
-                      <div class="bg-color-header text-center">
-                        <h3 style="padding:10px; background: #ffff;">
-                          
-                          
-                        
-                        </h3>
-                      </div>
-                      <div class="table-responsive" id="no-more-tables" >
-                          <table class="table basic-table table-headers table table-hover" >
+                    <div class="bg-color-header text-center">
+                      <h3 style="padding:10px; background: #ffff;">
+                      </h3>
+                    </div>
+                    <div class="table-responsive" id="no-more-tables" >
+                        <table class="table basic-table table-headers table table-hover" >
+                            <thead style="background: rgba(0, 194, 214, 0.5);" class="text-dark text-center" id="title-sub" style="text-align:center ;">
+                                <tr>
+                                    <th>Company Logo</th>
+                                    <th>Company</th>
+                                    <th>Employer Name</th>
+                                    <th>Employer Position</th>
+                                    <th>Email address</th>
+                                    <th>DTI Business Permit</th>
+                                    <th>Status</th>      
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
                             
-                              <thead style="background: rgba(0, 194, 214, 0.5);" class="text-dark text-center" id="title-sub" style="text-align:center ;">
-                                  <tr>
-                                      <th>Company Logo</th>
-                                      <th>Company</th>
-                                      <th>Employer Name</th>
-                                      <th>Employer Position</th>
-                                      <th>Email address</th>
-                                      <th>DTI Business Permit</th>
-                                      <th>Status</th>      
-                                      <th>Action</th>
-                                  </tr>
-                              </thead>
-                              
-                              <tbody class="bg-light text-dark" id="body-h" style="text-align: center; line-height: 80px; border: 0;" >
-                                  <tr style="height: 6rem; border: none; box-shadow: none;width: 6rem; border: 0;">
-                                      <td data-title="companylogo"><b><img src="image/comlogo.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#companylogo"></b></td>
-                                      <td data-title="companyname" > Factset</td>
-                                      <td data-title="employername">Monkey D. Luffy</td>
-                                      <td data-title="employerposition">Pirate King</td>
-                                      <td data-title="emailaddress" >monkeydluffy@gmail.com</td>
-                                      <td data-title="dtibusinesspermit"><i class="fa-solid fa-file-lines me-1"></i><a href="#">Dtibusinesspermit.pdf</a></td>
-                                      <td data-title="status">Verified</td> 
-                                      <td data-title="Action" style="width: 250px;">
-                                        <button style="width: 40px; border: 0;" class="btn-primary" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#modal-viewdetails"><i class="fa-solid fa-eye"></i></button>
-                                        <button style="width: 40px; border: 0;" class="btn-success" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa fa-pen-to-square"></i></button>
-                                        
-                                        <button class="btn btn-danger" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button></td>
-                                  </tr>
-                                </tbody>
-                                <tbody class="bg-light text-dark" id="body-h" style="text-align: center; line-height: 80px;" >
-                                  <tr style="height: 6rem; border: none; box-shadow: none;width: 6rem;">
-                                    <td data-title="companylogo"><b><img src="image/smlogo.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#companylogo"></b></td>
-                                    <td data-title="companyname" >SM Prime</td>
-                                    <td data-title="employername">Roronoa Zoro</td>
-                                    <td data-title="employerposition">Swordsman</td>
-                                    <td data-title="emailaddress" >roronoazoro@gmail.com</td>
-                                    <td data-title="dtibusinesspermit"><i class="fa-solid fa-file-lines me-1"></i><a href="#">Dtibusinesspermit.pdf</a></td>
-                                    <td data-title="status">Verified</td> 
+                            <tbody class="bg-light text-dark" id="body-h" style="text-align: center; line-height: 30px; border: 0;">
+                              <!-- <tr style="height: 6rem; border: none; box-shadow: none;width: 6rem; border: 0;">
+                                  <td data-title="companylogo"><b><img src="image/comlogo.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#companylogo"></b></td>
+                                  <td data-title="companyname" > Factset</td>
+                                  <td data-title="employername">Monkey D. Luffy</td>
+                                  <td data-title="employerposition">Pirate King</td>
+                                  <td data-title="emailaddress" >monkeydluffy@gmail.com</td>
+                                  <td data-title="dtibusinesspermit"><i class="fa-solid fa-file-lines me-1"></i><a href="#">Dtibusinesspermit.pdf</a></td>
+                                  <td data-title="status">Verified</td> 
+                                  <td data-title="Action" style="width: 250px;">
+                                    <button style="width: 40px; border: 0;" class="btn-primary" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#modal-viewdetails"><i class="fa-solid fa-eye"></i></button>
+                                    <button style="width: 40px; border: 0;" class="btn-success" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa fa-pen-to-square"></i></button>
                                     
-                                    <td data-title="Action" style="width: 250px;">
-                                      <button style="width: 40px; border: 0;" class="btn-primary" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#modal-viewdetails"><i class="fa-solid fa-eye"></i></button>
-                                      <button style="width: 40px; border: 0;" class="btn-success" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>
-                                      
-                                      <button class="btn btn-danger" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button></td>
-                                </tr>
-                              </tbody>
-                                <tbody class="bg-light text-dark" id="body-h" style="text-align: center; line-height: 80px;" >
-                                  <tr style="height: 6rem; border: none; box-shadow: none;width: 6rem;">
-                                    <td data-title="companylogo"><b><img src="image/roblogo.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#companylogo"></b></td>
-                                    <td data-title="companyname" >Robinson</td>
-                                    <td data-title="employername">Nico Robin</td>
-                                    <td data-title="employerposition">Archeologist</td>
-                                    <td data-title="emailaddress" >nicorobin@gmail.com</td>
-                                    <td data-title="dtibusinesspermit"><i class="fa-solid fa-file-lines me-1"></i><a href="#">Dtibusinesspermit.pdf</a></td>
-                                    <td data-title="status">Verified</td> 
-                                    
-                                    <td data-title="Action" style="width: 250px;">
-                                      <button style="width: 40px; border: 0;" class="btn-primary" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#modal-viewdetails"><i class="fa-solid fa-eye"></i></button>
-                                      <button style="width: 40px; border: 0;" class="btn-success" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>
-                                      
-                                      <button class="btn btn-danger" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button></td>
-                                </tr>
-                              </tbody>
-                          </table>
-                        
-                      </div>
-                   
+                                    <button class="btn btn-danger" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button></td>
+                              </tr> -->
+                            </tbody>
+                        </table>
+    
+                    </div>
                   </section>
                 </div>  
               </form>
@@ -144,8 +108,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" style="margin-left: 110px;">
-          <img src="image/comlogo.png" style="width: 250px;" alt="">
-          
+          <img id="view-logo" src="" style="width: 250px;" alt="">
         </div>
         
       </div>
@@ -324,14 +287,11 @@
                     <label for="verify" class="col-sm-3 fw-bold">Verification Status:</label>
                     <div class="col-sm-8 " style="margin-left:0px;">
                       <select class="form-select" aria-label="Default select example" id="verify">
-                        
                         <option value="1">Verified</option>
                         <option value="2">Not verified</option>
-                  
                       </select>
                     </div>
                 </div>
-     
             </form>
           </div>
         </div>
@@ -342,6 +302,6 @@
       </div>
     </div>
   </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  </body>
+  <script src="js/employer-management.js"></script>
+</body>
 </html>

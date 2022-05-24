@@ -7,14 +7,30 @@
         $output = "";
         //fetch all the jobseeker info from the database
         $checkJobseekerInfo = mysqli_query($conn, "SELECT * FROM jobseeker");
-        while($row = mysqli_fetch_assoc($CheckEmployerInfo)){
+        while($row = mysqli_fetch_assoc($checkJobseekerInfo)){
             $jobseekerId = $row['jobseeker_id'];
             $fullName = $row['fullname'];
-            $profilePicture = "../storage".$row['profile_picture'];
+            $profilePicture = "../storage/".$row['profile_picture'];
             $resume = "../storage".$row['resume'];
             $email = $row['email'];
-            $output .= "";
+            $number = $row['mobile_number'];
+            $date = $row['date_created'];
+            $output .=  "
+            <tr style='height: 6rem; border: none; box-shadow: none;'>
+                <td class='view-pp'><img src='{$profilePicture}' alt='' style='width: 60px; cursor: pointer;' data-bs-toggle='modal' data-bs-target='#profile-picture'></td>
+                <td>{$fullName}</td>            
+                <td>{$number}</td>            
+                <td>{$email}</td>            
+                <td>{$date}</td>  
+                <td>
+                <button style='width: 40px; border: 0;' class='btn-success' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails'><i class='fa-solid fa-pen-to-square'></i></button>                                  
+                <button class='btn btn-danger' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#exampleModal'><i class='bi bi-trash3'></i></button></td>
+                </td>       
+            </tr>"                                
+;
         }
+        // Return this output variable to the ajax call
+        echo $output;
 
     }
 ?>

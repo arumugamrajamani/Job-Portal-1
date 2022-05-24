@@ -10,6 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/jobseekermanagement.css">
+    <!-- Jquerry -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <title>Job seekers Management</title>
   </head>
   <body>
@@ -68,43 +71,9 @@
                                   </tr>
                               </thead>
                               <tbody class="bg-light text-dark" id="body-h" style="text-align: center; line-height: 70px;" >
-                                  <tr style="height: 6rem; border: none; box-shadow: none;">
-                                      <td data-title="profilepicture"><img src="image/male.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#profile"></td>
-                                      <td data-title="jobseekername">Bryan D. Ubalde</td>
-                                      <td data-title="contactnumber">09*********</td>
-                                      <td data-title="emailaddress">bryanubalde01@gmail.com</td>
-                                      <td data-title="dateapplied">April 19, 2022</td>
-                                      <td data-title="action">              
-                                      <button style="width: 40px; border: 0;" class="btn-success" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>                                  
-                                      <button class="btn btn-danger" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button></td>
-                                  </tr>
-                                </tbody>
-                                <tbody class="bg-light text-dark" id="body-h" style="text-align: center; line-height: 70px;" >
-                                  <tr style="height: 6rem; border: none; box-shadow: none;">
-                                      <td data-title="profilepicture"><img src="image/female.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#profile"></td>
-                                      <td data-title="jobseekername">Kimberly ann S. Flores</td>
-                                      <td data-title="contactnumber">09*********</td>
-                                      <td data-title="emailaddress">kimberlyannflores32@gmail.com</td>
-                                      <td data-title="dateapplied">May 05, 2022</td>
-                                      <td data-title="action">
-                                        <button style="width: 40px; border: 0;" class="btn-success" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>                                  
-                                        <button class="btn btn-danger" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button></td>
-                                  </tr>
-                                </tbody>
-                                <tbody class="bg-light text-dark" id="body-h" style="text-align: center; line-height: 70px;" >
-                                  <tr style="height: 6rem; border: none; box-shadow: none;">
-                                      <td data-title="profilepicture"><img src="image/female.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#profile"></td>
-                                      <td data-title="jobseekername">Daniela Torres</td>
-                                      <td data-title="contactnumber">09*********</td>
-                                      <td data-title="emailaddress">danielatorres24@gmail.com</td>
-                                      <td data-title="dateapplied">May 13, 2022</td>
-                                      <td data-title="action">
-                                        <button style="width: 40px; border: 0;" class="btn-success" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>                                  
-                                        <button class="btn btn-danger" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button></td>
-                                  </tr>
+
                                 </tbody>
                           </table>
-                          
                       </div>
                     </div>
                   </section>
@@ -112,6 +81,24 @@
             </form>
 
           </div>
+
+  <!--Company logo modal-->
+  <div class="modal fade" id="profile-picture" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 style="color: #00C2D6;">Profile Picture</h3>
+         
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="margin-left: 110px;">
+          <img id="view-pp" src="" style="width: 250px;" alt="">
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
   
   <!-- Delete button modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -191,6 +178,7 @@
             <button type="button" class="btn btn-secondary" style="width: 70px;" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
+  <script src="js/jobseeker-management.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>

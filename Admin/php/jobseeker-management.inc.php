@@ -2,9 +2,9 @@
     //includes db connection from 2 folders back
     include '../../php/db-connection.php';
 
-    //check if profile pic is null then returns a string value
+    //check if profile pic is not null && if file exists  then returns a string value of the profile picture
     function isProfilePicNull($profilePic){
-        if($profilePic != NULL){
+        if($profilePic != NULL && file_exists ("../../storage/".$profilePic )){
             return "../storage/".$profilePic;
         }else{
             return "../storage/noProfilePic.png";

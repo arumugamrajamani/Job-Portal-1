@@ -1,6 +1,15 @@
 <?php
     //includes db connection from 2 folders back
     include '../../php/db-connection.php';
+
+    //check if profile pic is null then returns a string value
+    function isProfilePicNull($profilePic){
+        if($profilePic != NULL){
+            return "../storage/".$profilePic;
+        }else{
+            return "../storage/noProfilePic.png";
+        }
+    }
     
     if(isset($_POST['loadData'])){
         //Variable to hold the querryu result
@@ -8,9 +17,10 @@
         //fetch all the jobseeker info from the database
         $checkJobseekerInfo = mysqli_query($conn, "SELECT * FROM jobseeker");
         while($row = mysqli_fetch_assoc($checkJobseekerInfo)){
+            $profilePicture = isProfilePicNull($row['profile_picture']);
             $jobseekerId = $row['jobseeker_id'];
             $fullName = $row['fullname'];
-            $profilePicture = "../storage/".$row['profile_picture'];
+            // $profilePicture = "../storage/".$row['profile_picture'];
             $resume = "../storage".$row['resume'];
             $email = $row['email'];
             $number = $row['mobile_number'];

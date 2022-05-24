@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     // Call this function to reload the table data at first time
     load_data();
     // Function for loading of table data

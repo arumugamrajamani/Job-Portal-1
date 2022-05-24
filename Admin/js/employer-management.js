@@ -22,7 +22,7 @@ $(document).ready(function() {
         $('#view-logo').attr('src', src)
     })
 
-    // Trigger this when user started to search in the search bar
+    // Trigger this when user started to type in the search bar
     $('#search').keyup(function () {
         let search = $(this).val();
         if(search != ''){

@@ -14,8 +14,15 @@
     if(isset($_POST['loadData'])){
         //Variable to hold the querryu result
         $output = "";
+        // Check if search is present
+        if(isset($_POST['search'])){
+            $search = $_POST['search'];
+            $statement = "SELECT * FROM jobseeker WHERE fullname LIKE '%$search%' OR mobile_number LIKE '%$search%' OR email LIKE '%$search%'";
+        } else {
+            $statement = "SELECT * FROM jobseeker";
+        }
         //fetch all the jobseeker info from the database
-        $checkJobseekerInfo = mysqli_query($conn, "SELECT * FROM jobseeker");
+        $checkJobseekerInfo = mysqli_query($conn, $statement);
         while($row = mysqli_fetch_assoc($checkJobseekerInfo)){
             $profilePicture = isProfilePicNull($row['profile_picture']);
             $jobseekerId = $row['jobseeker_id'];

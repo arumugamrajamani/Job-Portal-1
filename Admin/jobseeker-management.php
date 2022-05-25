@@ -13,7 +13,9 @@
     <!-- Jquerry -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <title>Job seekers Management</title>
+    <!-- Toast CDN for design of toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<title>Job seekers Management</title>
   </head>
   <body>
     <div class="color-overlay">
@@ -105,12 +107,13 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title ms-5" id="exampleModalLabel">Are you sure you want to delete this?</h5>
+          <h5 class="modal-title ms-5" id="exampleModalLabel">Are you sure you want to delete</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body" style="margin-left: 170px;">
-          <button type="button" class="btn btn-success" style="width: 70px;">Yes</button>
-          <button type="button" class="btn btn-danger" style="width: 70px;">No</button>
+        <div class="modal-body" style="text-align: center;">
+          <h5 id="jobseekerNameDisp"></h5>
+          <button type="button" id = "del-yes" class="btn btn-success" style="width: 70px;">Yes</button>
+          <button type="button" id="del-no" data-bs-dismiss="modal" class="btn btn-danger" style="width: 70px;">No</button>
         </div>
         
       </div>

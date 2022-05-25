@@ -2,7 +2,7 @@
     //includes db connection from 2 folders back
     include '../../php/db-connection.php';
 
-    //check if profile pic is not null && if file exists  then returns a string value of the profile picture
+    //check if profile pic is not null && if file exists  then returns a string value of the profile picture location
     function getProfilePicLoc($profilePic){
         if($profilePic != NULL && file_exists ("../../storage/".$profilePic )){
             return "../storage/".$profilePic;
@@ -24,10 +24,10 @@
         //fetch all the jobseeker info from the database
         $checkJobseekerInfo = mysqli_query($conn, $statement);
         while($row = mysqli_fetch_assoc($checkJobseekerInfo)){
+            $jobseekerId = $row['jobseeker_id'];
             $profilePicture = getProfilePicLoc($row['profile_picture']);
             $jobseekerId = $row['jobseeker_id'];
             $fullName = $row['fullname'];
-            // $profilePicture = "../storage/".$row['profile_picture'];
             $resume = "../storage".$row['resume'];
             $email = $row['email'];
             $number = $row['mobile_number'];
@@ -41,14 +41,48 @@
                 <td>{$email}</td>            
                 <td>{$date}</td>  
                 <td>
-                <button style='width: 40px; border: 0;' class='btn-success' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails'><i class='fa-solid fa-pen-to-square'></i></button>                                  
-                <button class='btn btn-danger' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#exampleModal'><i class='bi bi-trash3'></i></button></td>
-                </td>       
-            </tr>"                                
-;
+                <button  class='btn-success' style='width: 40px; border: 0;' type='button' id='btn-info' data-id='{$jobseekerId}' data-bs-toggle='modal' data-bs-target='#modal-editdetails'><i class='fa-solid fa-pen-to-square'></i></button>                                  
+                <button class='btn btn-danger delete-Btn' type='button' id='btn-info' data-id='{$jobseekerId}' data-bs-toggle='modal' data-bs-target='#exampleModal'><i class='bi bi-trash3'></i></button></td>
+                </td>
+            </tr>";
         }
         // Return this output variable to the ajax call
         echo $output;
-
     }
+
+
+    // When user click delete button
+    if($_POST['deleteBtn']){
+        $jobseekerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
+        // Create query to get the employer information
+        $jobseekerQuery = mysqli_query($conn, "SELECT * FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
+        $row = mysqli_fetch_assoc($jobseekerQuery);
+        // Get the jobseeker information needed to show for the delete modal
+        $fullname = $row['fullname'];
+        // Create Assoc array to return to the ajax call
+        $response = array(
+            'fullname' => $fullname
+        );
+
+        echo json_encode($response);
+    }
+    
+    // When user yes button in the delete modal
+    if($_POST['deleteYes']){
+        $jobseekerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
+        // Create query to get the employer information
+        $jobseekerQuery = mysqli_query($conn, "SELECT * FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
+        $row = mysqli_fetch_assoc($jobseekerQuery);
+        //deleting the jobseeker in the database
+        mysqli_query($conn,"DELETE FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
+        // Get the jobseeker information needed to show for the delete modal
+        $fullname = $row['fullname'];
+        // Create Assoc array to return to the ajax call
+        $response = array(
+            'fullname' => $fullname
+        );
+
+        echo json_encode($response);
+    }
+
 ?>

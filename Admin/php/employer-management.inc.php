@@ -10,6 +10,26 @@
         }
     }
 
+    // Function for getting the company logo file name and dti file name
+    function getFiles($employerId){
+        $GetFileQuery = mysqli_query($GLOBALS['conn'], "SELECT company_logo_name, permit_new_name FROM employer WHERE employer_id = '$employerId'");
+        $row = mysqli_fetch_assoc($GetFileQuery);
+        // Create assoc array
+        $files = array(
+            'company_logo_name' => $row['company_logo_name'],
+            'permit_new_name' => $row['permit_new_name']
+        );
+        // Return assoc array
+        return $files;
+    }
+
+    // Function for unlinking the files
+    function unlinkFiles($companyLogoName, $permitName){
+        // Unlink the files
+        unlink("../../storage/" . $companyLogoName);
+        unlink("../../storage/" . $permitName);
+    }
+
     // For loading of the employer management information
     if(isset($_POST['loadData'])){
         // Variable for holding the result of the query
@@ -46,7 +66,7 @@
                             <td style='width: 250px;'>
                                 <button style='width: 40px; border: 0;' class='btn-primary more-details' type='button' data-id='{$employerId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-viewdetails'><i class='fa-solid fa-eye'></i></button>
                                 <button style='width: 40px; border: 0;' class='btn-success' type='button' data-id='{$employerId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails'><i class='fa fa-pen-to-square'></i></button>
-                                <button class='btn btn-danger' type='button' id='btn-info' data-id='{$employerId}'  data-bs-toggle='modal' data-bs-target='#exampleModal'><i class='bi bi-trash3'></i></button>
+                                <button class='btn btn-danger delete-employer' type='button' id='btn-info' data-id='{$employerId}'  data-bs-toggle='modal' data-bs-target='#modal-delete'><i class='bi bi-trash3'></i></button>
                             </td>
                         </tr>";            
         }
@@ -55,7 +75,7 @@
     } 
 
     // When user click more details button
-    if($_POST['moreDetails']){
+    if(isset($_POST['moreDetails'])){
         $employerId = mysqli_real_escape_string($conn, $_POST['employerId']);
         // Create query to get the employer information
         $moreDetailsQuery = mysqli_query($conn, "SELECT * FROM employer WHERE employer_id = '$employerId'");
@@ -85,6 +105,18 @@
         );
 
         echo json_encode($response);
+    }
+
+    // When user click yes in delete employer modal confirmation
+    if(isset($_POST['deleteEmployer'])){
+        $employerId = mysqli_real_escape_string($conn, $_POST['employerId']);
+        $companyLogoName = getFiles($employerId)['company_logo_name'];
+        $permitName = getFiles($employerId)['permit_new_name'];
+        // Unlink the files
+        unlinkFiles($companyLogoName, $permitName);
+        // Create query to delete the employer
+        mysqli_query($conn, "DELETE FROM employer WHERE employer_id = '$employerId'");
+        // Return nothing
     }
 
 ?>

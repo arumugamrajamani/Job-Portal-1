@@ -101,7 +101,7 @@
 
   
   <!-- Delete button modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="deleteJobseeker" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -110,8 +110,8 @@
         </div>
         <div class="modal-body" style="text-align: center;">
           <h5 id="jobseekerNameDisp"></h5>
-          <button type="button" id = "del-yes" class="btn btn-success" style="width: 70px;">Yes</button>
-          <button type="button" id="del-no" data-bs-dismiss="modal" class="btn btn-danger" style="width: 70px;">No</button>
+          <button type="button" id="del-yes" value="" class="btn btn-success" style="width: 70px;">Yes</button>
+          <button type="button" data-bs-dismiss="modal" class="btn btn-danger" style="width: 70px;">No</button>
         </div>
         
       </div>

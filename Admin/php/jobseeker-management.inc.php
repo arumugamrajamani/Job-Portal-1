@@ -42,7 +42,7 @@
                 <td>{$date}</td>  
                 <td>
                 <button  class='btn-success' style='width: 40px; border: 0;' type='button' id='btn-info' data-id='{$jobseekerId}' data-bs-toggle='modal' data-bs-target='#modal-editdetails'><i class='fa-solid fa-pen-to-square'></i></button>                                  
-                <button class='btn btn-danger delete-Btn' type='button' id='btn-info' data-id='{$jobseekerId}' data-bs-toggle='modal' data-bs-target='#exampleModal'><i class='bi bi-trash3'></i></button></td>
+                <button class='btn btn-danger delete-Btn' type='button' id='btn-info' data-id='{$jobseekerId}' data-bs-toggle='modal' data-bs-target='#deleteJobseeker'><i class='bi bi-trash3'></i></button></td>
                 </td>
             </tr>";
         }
@@ -50,39 +50,11 @@
         echo $output;
     }
 
-
-    // When user click delete button
-    if($_POST['deleteBtn']){
-        $jobseekerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
-        // Create query to get the employer information
-        $jobseekerQuery = mysqli_query($conn, "SELECT * FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
-        $row = mysqli_fetch_assoc($jobseekerQuery);
-        // Get the jobseeker information needed to show for the delete modal
-        $fullname = $row['fullname'];
-        // Create Assoc array to return to the ajax call
-        $response = array(
-            'fullname' => $fullname
-        );
-
-        echo json_encode($response);
+    // when user delete a jobseeker
+    if(isset($_POST['deleteJobseeker'])){
+        // Create query delete code here
+        echo $_POST['jobseekerId'];
     }
-    
-    // When user yes button in the delete modal
-    if($_POST['deleteYes']){
-        $jobseekerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
-        // Create query to get the employer information
-        $jobseekerQuery = mysqli_query($conn, "SELECT * FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
-        $row = mysqli_fetch_assoc($jobseekerQuery);
-        //deleting the jobseeker in the database
-        mysqli_query($conn,"DELETE FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
-        // Get the jobseeker information needed to show for the delete modal
-        $fullname = $row['fullname'];
-        // Create Assoc array to return to the ajax call
-        $response = array(
-            'fullname' => $fullname
-        );
 
-        echo json_encode($response);
-    }
 
 ?>

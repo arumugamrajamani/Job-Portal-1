@@ -33,43 +33,30 @@ $(document).ready(function() {
         }
     });
 
-    /* when the admin clicks on the delete button of a job seeker this will trigger.
-    it will pass the employer id from the attr 'data-id' to the jobseeker-management.inc.php  */
+    // Trigger this when user click delete button and pass the data-id value on selected button to yes button in delete modal
     $('#body-h').on('click', '.delete-Btn', function(){
         let jobseekerId = $(this).attr('data-id');
-        $('#del-yes').attr('data-id', jobseekerId);
-        $.ajax({
-            url: "php/jobseeker-management.inc.php",
-            type: "POST",
-            data: {
-                deleteBtn: true,
-                jobseekerId: jobseekerId
-            },
-            dataType: "JSON",
-            success: function(data){
-                // Display the info reponse from the server into the delete modal
-                $('#jobseekerNameDisp').text("Name: " + data.fullname);
-            }
-        })
+        $('#del-yes').val(jobseekerId);
     });
 
-    /* when the admin clicks on the YES button of the modal this will trigger.
-    it will pass the employer id from the attr 'data-id' of the yes button to the jobseeker-management.inc.php  */
-    $('.modal-body').on('click', '#del-yes', function(){
-        let jobseekerId = $(this).attr('data-id');
+    // Trigger this when user click yes on delete modal
+    $('#del-yes').click(function(){
+        let jobseekerId = $(this).val();
         $.ajax({
             url: "php/jobseeker-management.inc.php",
             type: "POST",
             data: {
-                deleteYes: true,
+                deleteJobseeker: true,
                 jobseekerId: jobseekerId
             },
-            dataType: "JSON",
             success: function(data){
-                toastr.info(data.fullname + ' Was Deleted Succesfully.', 'Deleted succesfully!');
-                load_data();
+                alert(data)
+                // Uncomment this line below if you want to hide the delete modal
+                // $('#deleteJobseeker').modal('hide');
+                // Uncomment this line below if you want to reload the table data after deleting
+                // load_data();
             }
         })
-    });
+    })
 
 })

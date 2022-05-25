@@ -57,4 +57,28 @@ $(document).ready(function() {
             }
         })
     })
+
+    // Trigger this when user click delete button and pass the employer id to the delete modal
+    $('#body-h').on('click', '.delete-employer', function(){
+        let employerId = $(this).attr('data-id');
+        $('#yes-delete').val(employerId);
+    })
+
+    // Trigger this when user click yes in delete employer modal confirmation
+    $('#yes-delete').click(function(){
+        let employerId = $(this).val();
+        $.ajax({
+            url: "php/employer-management.inc.php",
+            type: "POST",
+            data: {
+                deleteEmployer: true,
+                employerId: employerId
+            },
+            success: function(data){
+                $('#modal-delete').modal('hide');
+                load_data();
+            }
+        })
+    })
+
 })

@@ -115,7 +115,7 @@
     </div>
 
     <!--Delete modal-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -123,8 +123,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body" style="margin-left: 170px;">
-            <button type="button" class="btn btn-success" style="width: 70px;">Yes</button>
-            <button type="button" class="btn btn-danger" style="width: 70px;">No</button>
+            <button type="button" id="yes-delete" class="btn btn-success" style="width: 70px;">Yes</button>
+            <button type="button" class="btn btn-danger" style="width: 70px;" data-bs-dismiss="modal">No</button>
           </div>
         </div>
       </div>
@@ -139,10 +139,10 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="container" style="width:700px;height: 700px;background-color: #FDF6EC;">
+            <div class="container" style="width:700px;height: 750px;background-color: #FDF6EC;">
               <form class="container">
 
-                <h2 class="text-black text-center mt-0 fw-bold">COMPANY DETAILS</h2>
+                <h2 class="text-black text-center mt-0 fw-bold">MORE DETAILS</h2>
                 <hr>
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                     <label for="companyaddress" class="col-sm-3 ">Company Address:</label>
@@ -218,75 +218,85 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="container" style="width:700px;height: 800px;background-color: #FDF6EC;">
+            <div class="container" style="width:700px;height: 950px;background-color: #FDF6EC;">
               <form class="container">
-
-                <h2 class="text-black text-center mt-0 fw-bold">COMPANY DETAILS</h2>
+                <h2 class="text-black text-center mt-0 fw-bold">EDIT DETAILS</h2>
                 <hr>
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
-                    <label for="companyaddress" class="col-sm-3 ">Company Address:</label>
+                    <label for="e-employerfullname" class="col-sm-3 ">Employer fullname:</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" id="companyaddress">
+                      <input type="text" class="form-control" id="e-employerfullname">
                     </div>
                 </div>
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
-                  <label for="companyceoname" class="col-sm-3 ">Company CEO Name:</label>
+                    <label for="e-employerposition" class="col-sm-3 ">Employer Position:</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="e-employerposition">
+                    </div>
+                </div>
+                <div class="row mb-3 mt-0 ms-4 fw-bold">
+                    <label for="e-companyname" class="col-sm-3 ">Company Name:</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="e-companyname">
+                    </div>
+                </div>
+                <div class="row mb-3 mt-0 ms-4 fw-bold">
+                    <label for="e-companyaddress" class="col-sm-3 ">Company Address:</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="e-companyaddress">
+                    </div>
+                </div>
+                <div class="row mb-3 mt-0 ms-4 fw-bold">
+                  <label for="e-companyceoname" class="col-sm-3 ">Company CEO Name:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="companyceoname">
+                    <input type="text" class="form-control" id="e-companyceoname">
                   </div>
                 </div>
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
-                  <label for="companysize" class="col-sm-3 ">Company Size:</label>
+                  <label for="e-companysize" class="col-sm-3 ">Company Size:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="companysize">
+                    <input type="text" class="form-control" id="e-companysize">
                   </div>
                 </div>
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
-                  <label for="companyrevenue" class="col-sm-3 ">Company Revenue:</label>
+                  <label for="e-companyrevenue" class="col-sm-3 ">Company Revenue:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="companyrevenue">
+                    <input type="text" class="form-control" id="e-companyrevenue">
                   </div> 
                 </div>
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
-                  <label for="industry" class="col-sm-3 ">Industry:</label>
+                  <label for="e-industry" class="col-sm-3 ">Industry:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="industry">
+                    <input type="text" class="form-control" id="e-industry">
                   </div> 
                 </div>
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
-                  <label for="companynumber" class="col-sm-3 ">Company Number:</label>
+                  <label for="e-companynumber" class="col-sm-3 ">Company Number:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="companynumber">
+                    <input type="text" class="form-control" id="e-companynumber">
                   </div> 
                 </div>
                 <div class="row mb-3 mt-0 ms-4 fw-bold">
-                  <label for="companyemail" class="col-sm-3 ">Company Email:</label>
+                  <label for="e-companyemail" class="col-sm-3 ">Company Email:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="companyemail">
+                    <input type="text" class="form-control" id="e-companyemail">
                   </div> 
                 </div>
                 <div class="row mb-3 mt-0 ms-4">
-                  <label for="companydescription" class="col-sm-3 fw-bold ">Company Description:</label>
+                  <label for="e-companydescription" class="col-sm-3 fw-bold ">Company Description:</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" placeholder="Description Here" style="width: 100%;" id="companydescription" rows="5"></textarea>
+                    <textarea class="form-control" placeholder="Description Here" style="width: 100%;" id="e-companydescription" rows="5"></textarea>
                   </div> 
                 </div>
                 <div class="row mb-3 mt-0 ms-4">
-                  <label for="datecreated" class="col-sm-3 fw-bold">Date/Time Created:</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="datecreated">
-                  </div> 
+                    <label for="verify" class="col-sm-3 fw-bold">Verification Status:</label>
+                    <div class="col-sm-8 " style="margin-left:0px;">
+                      <select class="form-select" aria-label="Default select example" id="verify">
+                        <option value="1">Verified</option>
+                        <option value="2">Not verified</option>
+                      </select>
+                    </div>
                 </div>
-                
-                  <div class="row mb-3 mt-0 ms-4">
-                      <label for="verify" class="col-sm-3 fw-bold">Verification Status:</label>
-                      <div class="col-sm-8 " style="margin-left:0px;">
-                        <select class="form-select" aria-label="Default select example" id="verify">
-                          <option value="1">Verified</option>
-                          <option value="2">Not verified</option>
-                        </select>
-                      </div>
-                  </div>
               </form>
             </div>
           </div>

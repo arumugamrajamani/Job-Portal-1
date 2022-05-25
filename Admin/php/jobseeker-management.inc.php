@@ -53,7 +53,9 @@
     // when user delete a jobseeker
     if(isset($_POST['deleteJobseeker'])){
         // Create query delete code here
-        echo $_POST['jobseekerId'];
+        //deleting the jobseeker in the database
+        $jobseekerId = $_POST['jobseekerId'];        
+        mysqli_query($conn,"DELETE FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
     }
 
 

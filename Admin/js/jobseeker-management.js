@@ -50,11 +50,9 @@ $(document).ready(function() {
                 jobseekerId: jobseekerId
             },
             success: function(data){
-                alert(data)
-                // Uncomment this line below if you want to hide the delete modal
-                // $('#deleteJobseeker').modal('hide');
-                // Uncomment this line below if you want to reload the table data after deleting
-                // load_data();
+                toastr.success('Job Seeker Was Deleted Succesfully.', 'Deleted Succesfully!');
+                $('#deleteJobseeker').modal('hide');
+                load_data();   
             }
         })
     })

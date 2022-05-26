@@ -33,7 +33,7 @@
                           <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown" >
                               <li><a class="dropdown-item  fs-5 text-white" href="#"><i class="bi bi-person-circle" style="font-size:30px;"></i> My Profile</a></li>
                               <li><hr class="dropdown-divider bg-white"></li>
-                              <li><a class="dropdown-item fs-5 text-white"href="#">Sign Out</a></li>
+                              <li><a class="dropdown-item fs-5 text-white" href="php/logout.php" name="logout" id="logout">Sign Out</a></li>
                           </ul>
                   </ul>
               </div>

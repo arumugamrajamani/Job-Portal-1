@@ -20,13 +20,13 @@
             
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                 <ul class="navbar-nav ms-auto  text-center">
-                        <li class="nav-item dropdown me-5">
-                            <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-circle" style="font-size:30px;"></i></a>
-                        <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown" >
-                            <li><a class="dropdown-item  fs-5 text-white" href="#"><i class="bi bi-person-circle" style="font-size:30px;"></i> My Profile</a></li>
-                            <li><hr class="dropdown-divider bg-white"></li>
-                            <li><a class="dropdown-item fs-5 text-white" href="php/logout.php">Sign Out</a></li>
-                        </ul>
+                    <li class="nav-item dropdown me-5">
+                        <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-circle" style="font-size:30px;"></i></a>
+                    <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown" >
+                        <li><a class="dropdown-item  fs-5 text-white" href="#"><i class="bi bi-person-circle" style="font-size:30px;"></i> My Profile</a></li>
+                        <li><hr class="dropdown-divider bg-white"></li>
+                        <li><a class="dropdown-item fs-5 text-white" href="php/logout.php">Sign Out</a></li>
+                    </ul>
                 </ul>
             </div>
         </nav>         
@@ -54,12 +54,10 @@ include '../php/db-connection.php';
             <h2><i class="bi bi-person-fill  fa-3x"></i> REGISTERED <br> EMPLOYERS</h2>
           </div>
             <?php
-
               $query = "SELECT * FROM employer";  
               $query_run = mysqli_query($conn, $query);
               $row = mysqli_num_rows($query_run);
                 echo '<p>'.$row.' </p>';
-
             ?>
         </form>
       </div>
@@ -72,14 +70,12 @@ include '../php/db-connection.php';
           <h2><i class="bi bi-briefcase-fill"></i> REGISTERED <br> JOB SEEKERS</h2>
         </div>
             <?php
-
               $query = "SELECT * FROM jobseeker";  
               $query_run = mysqli_query($conn, $query);
               $row = mysqli_num_rows($query_run);
                 echo '<p>'.$row.' </p>';
-
             ?>
-       </form>
+      </form>
       </div>
     </div>
     <br>
@@ -89,66 +85,17 @@ include '../php/db-connection.php';
           <div style="background: #00C2D6;  margin-left: -12px; margin-right: -12px; padding: 5px;border-radius: 24px 24px 0px 0px;" class="text-center">
             <h2><i class="bi bi-bar-chart"></i> NUMBER OF JOBS <br> (Per Category)</h2>
           </div>
-<br>
+          <br>
           <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-          <script>
-            var xValues = ["Virtual Assistant", "Web Development", "Graphic and Multimedia", "Project Management",];
-            var yValues = [500, 400, 300, 200, 100];
-            var barColors = ["#50677B","#372732", "#000000"," #EDBEA4",];
-            
-            new Chart("myChart", {
-              type: "bar",
-              data: {
-                labels: xValues,
-                datasets: [{
-                  backgroundColor: barColors,
-                  data: yValues
-                }]
-              },
-              options: {
-                legend: {display: false},
-                title: {
-                  display: true,
-                  text: "Job Categories Number"
-                }
-              }
-            });
-            </script>
         </form>
       </div>
-
       <div style="background: #FDF6EC; width: 30px;"  class="col-sm-1 bg-white"></div>
-
       <div class="col-sm-5" style="border-radius: 24px; background: #ECECEC;">
         <form>
           <div style="background: #00C2D6;  margin-left: -12px; margin-right: -12px; padding: 5px; border-radius: 24px 24px 0px 0px;" class="text-center">
             <h2><i class="bi bi-bar-chart"></i> ACTIVE AND INACTIVE <br> JOBS</h2>
           </div>
-
           <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
-          <script>
-            var xValues = ["ACTIVE", "INACTIVE", ];
-            var yValues = [500, 400, 300, 200, 100];
-            var barColors = ["#50677B","#372732",];
-            
-            new Chart("myChart1", {
-              type: "bar",
-              data: {
-                labels: xValues,
-                datasets: [{
-                  backgroundColor: barColors,
-                  data: yValues
-                }]
-              },
-              options: {
-                legend: {display: false},
-                title: {
-                  display: true,
-                }
-              }
-            });
-            </script>
-
         </form>
       </div>
     </div>

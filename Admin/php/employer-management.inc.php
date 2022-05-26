@@ -1,6 +1,14 @@
 <?php
     include'../../php/db-connection.php';
 
+    //  Function for Sanitizing all input data 
+    function sanitize_input($data){
+        $data = trim($data);
+        $data = stripcslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
     // Function for checking if verified or not
     function isVerified($status){
         if($status == 1){
@@ -156,6 +164,36 @@
         );
 
         echo json_encode($response);
+    }
+
+    // When user click save details button in edit modal
+    if(isset($_POST['saveDetails'])){
+        // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
+        $employerId = mysqli_real_escape_string($conn, sanitize_input($_POST['employerId']));
+        $employerName = mysqli_real_escape_string($conn, sanitize_input($_POST['employerName']));
+        $employerPosition = mysqli_real_escape_string($conn, sanitize_input($_POST['employerPosition']));
+        $companyName = mysqli_real_escape_string($conn, sanitize_input($_POST['companyName']));
+        $companyAddress = mysqli_real_escape_string($conn, sanitize_input($_POST['companyAddress']));
+        $CEOname = mysqli_real_escape_string($conn, sanitize_input($_POST['CEOname']));
+        $companySize = mysqli_real_escape_string($conn, sanitize_input($_POST['companySize']));
+        $companyRevenue = mysqli_real_escape_string($conn, sanitize_input($_POST['companyRevenue']));
+        $industry = mysqli_real_escape_string($conn, sanitize_input($_POST['industry']));
+        $companyNumber = mysqli_real_escape_string($conn, sanitize_input($_POST['companyNumber']));
+        $companyEmail = mysqli_real_escape_string($conn, sanitize_input($_POST['companyEmail']));
+        $companyDescription = mysqli_real_escape_string($conn, sanitize_input($_POST['companyDescription']));
+        $verificationStatus = mysqli_real_escape_string($conn, sanitize_input($_POST['verificationStatus']));
+
+        // Create query to update the employer information
+        $updateQuery = mysqli_query($conn, "UPDATE employer SET employer_name = '$employerName', employer_position = '$employerPosition', 
+            company_name = '$companyName', company_address = '$companyAddress', company_ceo = '$CEOname', company_size = '$companySize', 
+            company_revenue = '$companyRevenue', industry = '$industry', contact_number = '$companyNumber', company_email = '$companyEmail', 
+            company_description = '$companyDescription', is_verified = '$verificationStatus' WHERE employer_id = '$employerId'");
+
+        if($updateQuery) {
+            echo "success";
+        } else {
+            echo "failed";
+        }
     }
 
 ?>

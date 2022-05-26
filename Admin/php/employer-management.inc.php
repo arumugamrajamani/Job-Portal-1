@@ -1,6 +1,14 @@
 <?php
     include'../../php/db-connection.php';
 
+    //  Function for Sanitizing all input data 
+    function sanitize_input($data){
+        $data = trim($data);
+        $data = stripcslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
     // Function for checking if verified or not
     function isVerified($status){
         if($status == 1){
@@ -65,7 +73,7 @@
                             <td>" .isVerified($status). "</td> 
                             <td style='width: 250px;'>
                                 <button style='width: 40px; border: 0;' class='btn-primary more-details' type='button' data-id='{$employerId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-viewdetails'><i class='fa-solid fa-eye'></i></button>
-                                <button style='width: 40px; border: 0;' class='btn-success' type='button' data-id='{$employerId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails'><i class='fa fa-pen-to-square'></i></button>
+                                <button style='width: 40px; border: 0;' class='btn-success fetch-details' type='button' data-id='{$employerId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails'><i class='fa fa-pen-to-square'></i></button>
                                 <button class='btn btn-danger delete-employer' type='button' id='btn-info' data-id='{$employerId}'  data-bs-toggle='modal' data-bs-target='#modal-delete'><i class='bi bi-trash3'></i></button>
                             </td>
                         </tr>";            
@@ -117,6 +125,75 @@
         // Create query to delete the employer
         mysqli_query($conn, "DELETE FROM employer WHERE employer_id = '$employerId'");
         // Return nothing
+    }
+
+    // When user click edit button return the selected employer information
+    if(isset($_POST['fetchDetails'])){
+        $employerId = mysqli_real_escape_string($conn, $_POST['employerId']);
+        // Create query to get the employer information
+        $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM employer WHERE employer_id = '$employerId'");
+        $row = mysqli_fetch_assoc($fetchDetailsQuery);
+        // Get the employer information needed to edit modal
+        $employerName = $row['employer_name'];
+        $employerPosition = $row['employer_position'];
+        $companyName = $row['company_name'];
+        $companyAddress = $row['company_address']; 
+        $CEOname = $row['company_ceo'];
+        $companySize = $row['company_size'];
+        $companyRevenue = $row['company_revenue'];
+        $industry = $row['industry'];
+        $companyNumber = $row['contact_number'];
+        $companyEmail = $row['company_email'];
+        $companyDescription = $row['company_description'];
+        $verificationStatus = $row['is_verified'];
+
+        // Create Assoc array to return to the ajax call
+        $response = array(
+            'employerName' => $employerName,
+            'employerPosition' => $employerPosition,
+            'companyName' => $companyName,
+            'companyAddress' => $companyAddress,
+            'CEOname' => $CEOname,
+            'companySize' => $companySize,
+            'companyRevenue' => $companyRevenue,
+            'industry' => $industry,
+            'companyNumber' => $companyNumber,
+            'companyEmail' => $companyEmail,
+            'companyDescription' => $companyDescription,
+            'verificationStatus' => $verificationStatus
+        );
+
+        echo json_encode($response);
+    }
+
+    // When user click save details button in edit modal
+    if(isset($_POST['saveDetails'])){
+        // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
+        $employerId = mysqli_real_escape_string($conn, sanitize_input($_POST['employerId']));
+        $employerName = mysqli_real_escape_string($conn, sanitize_input($_POST['employerName']));
+        $employerPosition = mysqli_real_escape_string($conn, sanitize_input($_POST['employerPosition']));
+        $companyName = mysqli_real_escape_string($conn, sanitize_input($_POST['companyName']));
+        $companyAddress = mysqli_real_escape_string($conn, sanitize_input($_POST['companyAddress']));
+        $CEOname = mysqli_real_escape_string($conn, sanitize_input($_POST['CEOname']));
+        $companySize = mysqli_real_escape_string($conn, sanitize_input($_POST['companySize']));
+        $companyRevenue = mysqli_real_escape_string($conn, sanitize_input($_POST['companyRevenue']));
+        $industry = mysqli_real_escape_string($conn, sanitize_input($_POST['industry']));
+        $companyNumber = mysqli_real_escape_string($conn, sanitize_input($_POST['companyNumber']));
+        $companyEmail = mysqli_real_escape_string($conn, sanitize_input($_POST['companyEmail']));
+        $companyDescription = mysqli_real_escape_string($conn, sanitize_input($_POST['companyDescription']));
+        $verificationStatus = mysqli_real_escape_string($conn, sanitize_input($_POST['verificationStatus']));
+
+        // Create query to update the employer information
+        $updateQuery = mysqli_query($conn, "UPDATE employer SET employer_name = '$employerName', employer_position = '$employerPosition', 
+            company_name = '$companyName', company_address = '$companyAddress', company_ceo = '$CEOname', company_size = '$companySize', 
+            company_revenue = '$companyRevenue', industry = '$industry', contact_number = '$companyNumber', company_email = '$companyEmail', 
+            company_description = '$companyDescription', is_verified = '$verificationStatus' WHERE employer_id = '$employerId'");
+
+        if($updateQuery) {
+            echo "success";
+        } else {
+            echo "failed";
+        }
     }
 
 ?>

@@ -1,3 +1,12 @@
+<?php 
+session_start();
+
+if(!isset($_SESSION['user_type']))
+{
+ header('location: ../login.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,26 +51,43 @@
     <a href="jobcategoriesmanagement.php"><i class="bi bi-briefcase"></i> Job Categories Management</a><br>
   </div>
 
+<?php 
+include '../php/db-connection.php';
+?>
 
   <div style="margin-top: 100px; width: 1450px; margin-left: 380px; height: 820px; padding-top: 50px;" class="container-fluid bg-white">
     <div style="height: 350px; margin-left: 200px;"class="row">
       <div class="col-sm-5"style="border-radius: 24px; background: #ECECEC;">
-        <form>
+        <form method="POST">
           <div style="background: #00C2D6; margin-left: -12px; margin-right: -12px; padding: 5px; border-radius: 24px 24px 0px 0px;" class="text-center">
             <h2><i class="bi bi-person-fill  fa-3x"></i> REGISTERED <br> EMPLOYERS</h2>
           </div>
-          <p>5,000</p>
+            <?php
+
+              $query = "SELECT * FROM employer";  
+              $query_run = mysqli_query($conn, $query);
+              $row = mysqli_num_rows($query_run);
+                echo '<p>'.$row.' </p>';
+
+            ?>
         </form>
       </div>
 
       <div style="background: #FDF6EC; width: 30px;" class="col-sm-1 bg-white"></div>
 
       <div class="col-sm-5" style="border-radius: 24px; background: #ECECEC;">
-        <form>
+        <form method="POST">
         <div style="background: #00C2D6;  margin-left: -12px; margin-right: -12px; padding: 5px; border-radius: 24px 24px 0px 0px;" class="text-center">
           <h2><i class="bi bi-briefcase-fill"></i> REGISTERED <br> JOB SEEKERS</h2>
         </div>
-        <p>7,000</p>
+            <?php
+
+              $query = "SELECT * FROM jobseeker";  
+              $query_run = mysqli_query($conn, $query);
+              $row = mysqli_num_rows($query_run);
+                echo '<p>'.$row.' </p>';
+
+            ?>
        </form>
       </div>
     </div>
@@ -137,6 +163,8 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+  <script src="js/dashboard.js"></script>
 </body>
 </html>

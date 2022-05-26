@@ -293,7 +293,7 @@
                     <div class="col-sm-8 " style="margin-left:0px;">
                       <select class="form-select" aria-label="Default select example" id="verify">
                         <option value="1">Verified</option>
-                        <option value="2">Not verified</option>
+                        <option value="0">Not Verified</option>
                       </select>
                     </div>
                 </div>

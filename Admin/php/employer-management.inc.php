@@ -65,7 +65,7 @@
                             <td>" .isVerified($status). "</td> 
                             <td style='width: 250px;'>
                                 <button style='width: 40px; border: 0;' class='btn-primary more-details' type='button' data-id='{$employerId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-viewdetails'><i class='fa-solid fa-eye'></i></button>
-                                <button style='width: 40px; border: 0;' class='btn-success' type='button' data-id='{$employerId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails'><i class='fa fa-pen-to-square'></i></button>
+                                <button style='width: 40px; border: 0;' class='btn-success fetch-details' type='button' data-id='{$employerId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails'><i class='fa fa-pen-to-square'></i></button>
                                 <button class='btn btn-danger delete-employer' type='button' id='btn-info' data-id='{$employerId}'  data-bs-toggle='modal' data-bs-target='#modal-delete'><i class='bi bi-trash3'></i></button>
                             </td>
                         </tr>";            
@@ -117,6 +117,45 @@
         // Create query to delete the employer
         mysqli_query($conn, "DELETE FROM employer WHERE employer_id = '$employerId'");
         // Return nothing
+    }
+
+    // When user click edit button return the selected employer information
+    if(isset($_POST['fetchDetails'])){
+        $employerId = mysqli_real_escape_string($conn, $_POST['employerId']);
+        // Create query to get the employer information
+        $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM employer WHERE employer_id = '$employerId'");
+        $row = mysqli_fetch_assoc($fetchDetailsQuery);
+        // Get the employer information needed to edit modal
+        $employerName = $row['employer_name'];
+        $employerPosition = $row['employer_position'];
+        $companyName = $row['company_name'];
+        $companyAddress = $row['company_address']; 
+        $CEOname = $row['company_ceo'];
+        $companySize = $row['company_size'];
+        $companyRevenue = $row['company_revenue'];
+        $industry = $row['industry'];
+        $companyNumber = $row['contact_number'];
+        $companyEmail = $row['company_email'];
+        $companyDescription = $row['company_description'];
+        $verificationStatus = $row['is_verified'];
+
+        // Create Assoc array to return to the ajax call
+        $response = array(
+            'employerName' => $employerName,
+            'employerPosition' => $employerPosition,
+            'companyName' => $companyName,
+            'companyAddress' => $companyAddress,
+            'CEOname' => $CEOname,
+            'companySize' => $companySize,
+            'companyRevenue' => $companyRevenue,
+            'industry' => $industry,
+            'companyNumber' => $companyNumber,
+            'companyEmail' => $companyEmail,
+            'companyDescription' => $companyDescription,
+            'verificationStatus' => $verificationStatus
+        );
+
+        echo json_encode($response);
     }
 
 ?>

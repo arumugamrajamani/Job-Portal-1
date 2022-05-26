@@ -81,4 +81,32 @@ $(document).ready(function() {
         })
     })
 
+    // Trigger this when user click edit button
+    $('#body-h').on('click', '.fetch-details', function(){
+        let employerId = $(this).attr('data-id');
+        $.ajax({
+            url: "php/employer-management.inc.php",
+            type: "POST",
+            data: {
+                fetchDetails: true,
+                employerId: employerId
+            },
+            dataType: "JSON",
+            success: function(data){
+                // Insert the fetch information into edit modal inputs fields
+                $('#e-employerfullname').val(data.employerName);
+                $('#e-employerposition').val(data.employerPosition);
+                $('#e-companyname').val(data.companyName);
+                $('#e-companyaddress').val(data.companyAddress);
+                $('#e-companyceoname').val(data.CEOname);
+                $('#e-companysize').val(data.companySize);
+                $('#e-companyrevenue').val(data.companyRevenue);
+                $('#e-industry').val(data.industry);
+                $('#e-companynumber').val(data.companyNumber);
+                $('#e-companyemail').val(data.companyEmail);
+                $('#e-companydescription').val(data.companyDescription);
+                $('select#verify').val(data.verificationStatus);
+            }
+        })    
+    })
 })

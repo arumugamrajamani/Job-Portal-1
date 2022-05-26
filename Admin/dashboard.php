@@ -1,12 +1,3 @@
-<?php 
-session_start();
-
-if(!isset($_SESSION['user_type']))
-{
- header('location: ../login.php');
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +25,7 @@ if(!isset($_SESSION['user_type']))
                         <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown" >
                             <li><a class="dropdown-item  fs-5 text-white" href="#"><i class="bi bi-person-circle" style="font-size:30px;"></i> My Profile</a></li>
                             <li><hr class="dropdown-divider bg-white"></li>
-                            <li><a class="dropdown-item fs-5 text-white"href="#">Sign Out</a></li>
+                            <li><a class="dropdown-item fs-5 text-white" href="php/logout.php">Sign Out</a></li>
                         </ul>
                 </ul>
             </div>
@@ -162,9 +153,6 @@ include '../php/db-connection.php';
       </div>
     </div>
   </div>
-
-
-
   <script src="js/dashboard.js"></script>
 </body>
 </html>

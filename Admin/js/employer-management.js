@@ -16,6 +16,11 @@ $(document).ready(function() {
         })
     }
 
+    function GetSearchValue(){
+        var search = $('#search').val();
+        load_data(search);
+    }
+
     // Function for searching of company logo src and displaying to modal
     $('#body-h').on('click', '.view-logo', function(){
         let src = $(this).find('img').attr('src')
@@ -77,7 +82,7 @@ $(document).ready(function() {
             success: function(){
                 $('#modal-delete').modal('hide');
                 toastr.success('', 'Successfully Deleted!');
-                load_data();
+                GetSearchValue();
             }
         })
     })
@@ -152,7 +157,7 @@ $(document).ready(function() {
             success: function(){
                 $('#modal-editdetails').modal('hide');
                 toastr.success('', 'Successfully Updated!');
-                load_data();
+                GetSearchValue();
             }
         })
     })

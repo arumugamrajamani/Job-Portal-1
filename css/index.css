@@ -1,14 +1,11 @@
 body{
     position: relative;
-} .container{
+}.container{
 margin-top: 50px;
-}
-
-.masthead{
+}.masthead{
     background-size: cover;
     min-height: 100vh;
     background-color: #00C2D6;
- 
 }.btn-outline{
     background-color: #00C2D6;
     
@@ -16,21 +13,64 @@ margin-top: 50px;
     background-color: #FFFFFF;
     margin:0%;
 }.navbar-expand-lg{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
     height:100px;
     width:100%;
-    margin-left: 5px;
+}.dropdown-item{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 550;
+    font-size: 20px;
+    width: 100%;
+
+}.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.dropdown-menu{
+    width: 80px;
     
-}.btn-outline-secondary{
-    background-color: #00C2D6;
-    color: white;
+}.dropdown-menu:hover{
+    display: block;
    
-    border: 0;
-    width: 90px;
-    height: 40px;
+}
+.navbar .nav-link:hover{
+    background-color: #00C2D6;
     border-radius: 10px;
+   
     
+}.dropdown-menu .dropdown-item:hover{
+    background-color: #00C2D6;
+    border-radius: 10px;
+
+}.nav-link {
+    color: black !important;
+  
+  }
+  .nav-link.active {
+    color: black !important;
+    background-color: #00C2D6;
+    border-radius: 10px;
+    box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
     
-}.para{
+  }
+.dropdown:hover{
+    background-color: #00C2D6;
+    border-radius: 10px;
+    box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+   
+    
+
+}
+.para{
     background-color: #FFFFFF;
 }.para2{
     background-color: #FFFFFF;
@@ -40,7 +80,10 @@ margin-top: 50px;
 }.page-footer{
     background-color: #00C2D6;
 
-}.con1{
+}.page-footer .ul .li .a:target{
+    text-decoration: #000000;
+}
+.con1{
     width: 557px;
     height: 563px;
     background-color: #FFFFFF;
@@ -51,15 +94,20 @@ margin-top: 50px;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
-}p{
+}
+p{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
+}.tech{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }#submit{
-    font-family: 'Inter';
+    font-family: 'Montserrat', sans-serif;
+   
     font-style: normal;
-    font-weight: 400;
+    font-weight: 455;
     font-size: 24px;
     line-height: 29px;
     text-align: center;
@@ -77,20 +125,27 @@ margin-top: 50px;
  
     
 }.tag1{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     font-style: normal;
     color: #000000;
     font-weight: 700;
-    font-size: 75px;
+    font-size: 68px;
     
 }.tag2{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
+    font-weight: 500;
 }.aboutus{
     font-family: 'Montserrat', sans-serif;
-font-style: normal;
-font-weight: 700;
-font-size: 45px;
+    
+    font-weight: 800;
+    font-size: 45px;
+}h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 455;
 }
 .search{
 position: relative;
@@ -100,9 +155,9 @@ box-shadow: 0 0 40px rgba(51, 51, 51, .1);
 
 .search input{
 
- height: 60px;
- text-indent: 25px;
- border: 2px solid #d6d4d4;
+height: 60px;
+text-indent: 25px;
+border: 2px solid #d6d4d4;
 
 
 }
@@ -110,29 +165,51 @@ box-shadow: 0 0 40px rgba(51, 51, 51, .1);
 
 .search input:focus{
 
- box-shadow: none;
- border: 2px solid blue;
+box-shadow: none;
+border: 2px solid blue;
 
 
 }
 
 .search .bi-search{
 
- position: absolute;
- top: 20px;
- left: 16px;
+position: absolute;
+top: 20px;
+left: 16px;
 
 }
 
 .search button{
 
- position: absolute;
- top: 5px;
- right: 5px;
- height: 50px;
- width: 110px;
- background: blue;
+position: absolute;
+top: 5px;
+right: 5px;
+height: 50px;
+width: 110px;
+background: blue;
 
+}.contactus{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}.faq{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}.accordion-button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 455;
+    font-size: 20px;
+}h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 755;
+    
+}.systems{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 755;
+}h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 755;
 }
 
 

@@ -38,7 +38,7 @@
 									<li><a class="dropdown-item " href="companyregister.php">Employer</a></li>
 									<li><a class="dropdown-item " href="jobseekersignup.php">JobSeeker</a></li>
 								</ul>
-								<li><a class="nav-link me-4 ms-3" href="login.php">Login</a></li>
+								<li><a class="nav-link me-4 ms-3" href="login.php" style="background-color:#00C2D6; border-radius:10px;">Login</a></li>
 								<li><a class="nav-link" href="#"></a></li>
 							</nav>
 						</ul>

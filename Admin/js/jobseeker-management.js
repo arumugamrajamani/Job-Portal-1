@@ -62,6 +62,7 @@ $(document).ready(function() {
         let jobseekerId = $(this).attr('data-id');
         // Pass the jobseeker Id to the save details button in edit modal
         $('#save-edit').val(jobseekerId);
+
         $.ajax({
             url: "php/jobseeker-management.inc.php",
             type: "POST",
@@ -75,7 +76,6 @@ $(document).ready(function() {
                 $('#e-jobseekername').val(data.jobseekerName);
                 $('#e-contactnumber').val(data.jobseekerNumber);
                 $('#e-emailaddress').val(data.jobseekerEmail);
-
             }
         })
     });

@@ -65,9 +65,9 @@
 
     // When user click edit button return the selected employer information
     if(isset($_POST['fetchDetails'])){
-        $employerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
+        $jobseekerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
         // Create query to get the employer information
-        $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM jobseeker WHERE jobseeker_id = 'jobseekerId'");
+        $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
         $row = mysqli_fetch_assoc($fetchDetailsQuery);
         // Get the employer information needed to edit modal
         $jobseekerName = $row['fullname'];

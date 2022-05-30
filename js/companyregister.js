@@ -282,7 +282,7 @@ $(document).ready(function(){
         formData.append('password', password);
         formData.append('confirmPassword', confirmpassword);
         formData.append('submit', "true");
-
+        
         // Create ajax request
         $.ajax({
             url: "php/companyregister.inc.php",
@@ -295,14 +295,13 @@ $(document).ready(function(){
                 // Checking if the data is success or not
                 if(data.status == "success") {
                     clearFields();
-                    toastr.success('You will be redirected to login page', 'Account Successfully Created!', {
-                        timeOut: 3000,
-                        preventDuplicates: true,
-                        progressBar: true,
-                        // Redirect to login page
-                        onHidden: function() {
-                            window.location.href = 'login.php';
-                        }
+                    // Create sweet alert to display error messages and return to index page
+                    swal({
+                        title: "Account Succesfully Created!",
+                        icon: "success",
+                        button: "Okay",
+                    }).then(function() {
+                        window.location = "login.php";
                     });
                 // Checking of each input status and display error message
                 } else {

@@ -22,7 +22,7 @@ $(document).ready(function(){
         // Clear all the fields
         $('input').val(null);
         // Clear all the error messages
-        $(".text-danger").text(null);
+        $('.text-danger').text(null);
         // Clear all the error borders
         $('.form-control').removeClass().addClass('form-control');
     }
@@ -60,7 +60,6 @@ $(document).ready(function(){
     // Trigger this when user started to type in email input and validate it
     $('#email').on('keyup', function() {
         let email = $('#email').val();
-        console.log(email)
         if (email.length == 0) {
             $('#email').removeClass().addClass('form-control border-danger');
             $('#email-errorMsg').text("Email is required.");
@@ -113,7 +112,7 @@ $(document).ready(function(){
         let email = $('#email').val();
         let password = $('#password').val();
         let confirmpassword = $('#confirmpassword').val();
-
+        
         $.ajax({
             url: 'php/jobseekersignup.inc.php',
             type: 'POST',
@@ -130,15 +129,13 @@ $(document).ready(function(){
                 if(data.status == 'success') {
                     // Function to clear all the fields including the error messages and error borders
                     clearFields();
-                    // Toastr message and redirecting to login page after 3 seconds
-                    toastr.success('You will be redirected to login page', 'Account Successfully Created!', {
-                        timeOut: 3000,
-                        preventDuplicates: true,
-                        progressBar: true,
-                        // Redirect 
-                        onHidden: function() {
-                            window.location.href = 'login.php';
-                        }
+                    // Create sweet alert to display error messages and return to index page
+                    swal({
+                        title: "Account Succesfully Created!",
+                        icon: "success",
+                        button: "Okay",
+                    }).then(function() {
+                        window.location = "login.php";
                     });
                 } else {
                     // if there is an error in fullname, display error message

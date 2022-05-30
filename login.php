@@ -4,6 +4,11 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+	<!--Font-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -17,42 +22,39 @@
 </head>
 <body>
 	<div class="color-overlay">
-		<div class="container-fluid">
-			<nav class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0">
-					<a href="index.php" class="navbar-brand ms-3">
-					<img src="image/flogo.png"  alt="Job Portal Logo" width="120" height="95"></a>
-				<div class="collapse navbar-collapse" id="toggleMobileMenu">
-					<ul class="navbar-nav ms-auto text-center">
-						<nav class="navbar navbar-light ">
-							<li style="font-weight: bolder;">
-								<a class="nav-link me-5 fs-5" href="index.php#home">Home</a></li>
-								<a class="nav-link me-5 fs-5" href="index.php#aboutus">About Us</a></li>
-								<a class="nav-link me-5 fs-5" href="index.php#contactus">Contact Us</a></li>
-								<a class="nav-link me-5 fs-5" href="index.php#faq">FAQ</a></li>			
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle fs-5 me-3" href="#"
-								id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item me-4 fs-5" href="companyregister.php">Employer</a></li>
-								<li><a class="dropdown-item me-4 fs-5" href="jobseekersignup.php">JobSeeker</a></li>
-							</ul>
-								<li><button class="btn btn-outline-secondary me-5 fs-5 text-dark" type="button" style="font-weight: bolder;">LOG IN</button></li>
-						</nav>
-					</ul>
-				</div>
-			</nav>         
-		</div>
-	</div><br><br><br><br>
-
+			<div class="container-fluid">
+				<nav id="navbar-example2" class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow " >
+					<a href="#" class="navbar-brand ms-3">
+					<img src="image/flogo.png" alt="Job Portal Logo" width="120" height="95"></a>
+					<div class="collapse navbar-collapse" id="toggleMobileMenu">
+						<ul class="navbar-nav ms-auto text-center fw-bold">
+							<nav class="navbar navbar-light">     
+								<li><a class="nav-link me-5  btn1 " href="index.php#home">Home</a></li>
+								<li><a class="nav-link me-5  btn1 " href="index.php#aboutus">About Us</a></li>
+								<li><a class="nav-link me-5 " href="index.php#contactus">Contact Us</a></li>
+								<li><a class="nav-link me-5 " href="index.php#faq">FAQ</a></li>
+								<li class="nav-item dropdown"><a class="nav-link dropdown-toggle  mx-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item " href="companyregister.php">Employer</a></li>
+									<li><a class="dropdown-item " href="jobseekersignup.php">JobSeeker</a></li>
+								</ul>
+								<li><a class="nav-link me-4 ms-3" href="login.php">Login</a></li>
+								<li><a class="nav-link" href="#"></a></li>
+							</nav>
+						</ul>
+					</div>
+				</nav>         
+			</div>
+		</div><br><br><br><br>
 	<div class="masthead">
-			<br><br><br>
+		<br><br><br>
 		
 		<div class="container d-flex">
 			<div class="d-block">
 				<div class="login-page bg-white shadow" style="border-radius: 20px;">
-					<h4 class="fw-bold mt-2" style="color: #00C2D6;">Welcome to <br> TechPloyment</h4><br>
+					<h4 class="mt-2" style="color: #00C2D6;">Welcome to <br> TechPloyment</h4><br>
 					<h6 class="fw-bold">Login with your email and password</h6>
-					<form> 
+					<form>
 						<input class="mt-3" id="email" type="text" placeholder="EMAIL" style="background-color: #ECECEC;border-radius: 30px;border: 0;font-weight: 700;">
 						<label></label>
 						<div class="d-flex">
@@ -68,14 +70,14 @@
 						<div><br>
 							<button id="login" class="btn btn1 bt me-5 mb-2 fs-7 fw-bold text-dark" type="button" style="border-radius: 20px; border: 0;">LOGIN</button>
 							<br><br>
-							<a id="alogin" href="forgot-password.php" style="color: #00C2D6;">Forgot your password?</a><br>
+							<a id="alogin" href="forgot-password.html" style="color: #00C2D6;">Forgot your password?</a><br>
 						</div>
 					</form>	
 				</div>
 			</div>
 			<img src="image/work 1.png" class="ms-5" alt="Job Portal Logo" width="650px" height="650px">
 		</div>
-	</div>
+	</div>	
 	<script src="js/login.js"></script>
 </body>
 </html>

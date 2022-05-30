@@ -1,14 +1,8 @@
 .masthead{
-    background-color: #00C2D6;
+    background-size: cover;
     min-height: 100vh;
-    margin:0%;
-    margin-top:0;
+    background-color: #00C2D6;
  
-    
-}.search-box{
-   
-    width: 500px;
-    border-style:outset;
 }.btn-outline{
     background-color: #00C2D6;
     
@@ -16,10 +10,51 @@
     background-color: #FFFFFF;
     margin:0%;
 }.navbar-expand-lg{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
     height:100px;
     width:100%;
-    margin-left: 5px;
     
+    
+}.dropdown-item{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 550;
+    font-size: 20px;
+    width: 100%;
+   
+   
+}.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.dropdown-menu{
+    width: 80px;
+    
+}.dropdown-menu:hover{
+    display: block;
+}
+.navbar .nav-link:hover{
+    background-color: #00C2D6;
+    border-radius: 15px;
+}.dropdown-menu .dropdown-item:hover{
+    background-color: #00C2D6;
+    border-radius: 10px;
+
+}.nav-link {
+    color: black !important;
+  
+  }
+  .nav-link.active {
+    color: black !important;
+    background-color: #00C2D6;
+    border-radius: 10px;
+  }
+.dropdown:hover{
+    background-color: #00C2D6;
+    border-radius: 10px;
+    
+   
+
 }.btn-outline-secondary{
     background-color: #00C2D6;
     color: white;
@@ -125,9 +160,6 @@ form #alogin{
     margin-left: 10px;
 }.img2{
     margin-left: 10px;
-}.span{
-    position:absolute;
-    top:200px;
 }.icon1{
     position: absolute;
     margin-left: 260px;
@@ -149,4 +181,7 @@ form #alogin{
 
 footer{
     background-color: #00C2D6;
+}h4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }

@@ -2,6 +2,14 @@
     //includes db connection from 2 folders back
     include '../../php/db-connection.php';
 
+        //  Function for Sanitizing all input data 
+        function sanitize_input($data){
+            $data = trim($data);
+            $data = stripcslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+
     //check if profile pic is not null && if file exists  then returns a string value of the profile picture location
     function getProfilePicLoc($profilePic){
         if($profilePic != NULL && file_exists ("../../storage/".$profilePic )){
@@ -83,6 +91,25 @@
 
         echo json_encode($response);
     }
+
+        // When user click save details button in edit modal
+        if(isset($_POST['saveDetails'])){
+            // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
+            $jobseekerId = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerId']));
+            $jobseekerName = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerName']));
+            $jobseekerNumber = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerNumber']));
+            $jobseekerEmail = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerEmail']));
+
+    
+            // Create query to update the jobseeker information
+            $updateQuery = mysqli_query($conn, "UPDATE jobseeker SET fullname = '$jobseekerName', mobile_number = '$jobseekerNumber', email = '$jobseekerEmail' WHERE jobseeker_id = '$jobseekerId'");
+    
+            if($updateQuery) {
+                echo "success";
+            } else {
+                echo "failed";
+            }
+        }
 
 
 ?>

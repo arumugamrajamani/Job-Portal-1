@@ -22,6 +22,11 @@ $(document).ready(function() {
         $('#view-pp').attr('src', src)
     });
 
+    
+    function GetSearchValue(){
+        var search = $('#search').val();
+        load_data(search);
+    }
 
     // Trigger this when user started to search in the search bar
     $('#search').keyup(function () {
@@ -50,9 +55,9 @@ $(document).ready(function() {
                 jobseekerId: jobseekerId
             },
             success: function(data){
-                toastr.success('Job Seeker Was Deleted Succesfully.', 'Deleted Succesfully!');
                 $('#deleteJobseeker').modal('hide');
-                load_data();   
+                toastr.success('', 'Successfully Deleted!');
+                GetSearchValue();
             }
         })
     });
@@ -79,5 +84,33 @@ $(document).ready(function() {
             }
         })
     });
+
+       // Trigger this when user click the save details in edit modal
+       $('#save-edit').click(function(){
+        // Get all the input values from the edit modal
+        let jobseekerId = $(this).val();
+        let jobseekerName = $('#e-jobseekername').val();
+        let jobseekerNumber = $('#e-contactnumber').val();
+        let jobseekerEmail = $('#e-emailaddress').val();
+
+
+        $.ajax({
+            url: "php/jobseeker-management.inc.php",
+            type: "POST",
+            data: {
+                saveDetails: true,
+                jobseekerId: jobseekerId,
+                jobseekerName: jobseekerName,
+                jobseekerNumber: jobseekerNumber,
+                jobseekerEmail: jobseekerEmail
+
+            },
+            success: function(){
+                $('#modal-editdetails').modal('hide');
+                toastr.success('', 'Successfully Updated!');
+                GetSearchValue();
+            }
+        })
+    })
 
 })

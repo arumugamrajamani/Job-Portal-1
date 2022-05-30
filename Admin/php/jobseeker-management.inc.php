@@ -46,7 +46,7 @@
                 <td>{$email}</td>            
                 <td>{$date}</td>  
                 <td>
-                <button  class='btn-success' style='width: 40px; border: 0;' type='button' id='btn-info' data-id='{$jobseekerId}' data-bs-toggle='modal' data-bs-target='#modal-editdetails'><i class='fa-solid fa-pen-to-square'></i></button>                                  
+                <button  class='btn-success fetch-details' style='width: 40px; border: 0;' type='button' id='btn-info' data-id='{$jobseekerId}' data-bs-toggle='modal' data-bs-target='#modal-editdetails'><i class='fa-solid fa-pen-to-square'></i></button>                                  
                 <button class='btn btn-danger delete-Btn' type='button' id='btn-info' data-id='{$jobseekerId}' data-bs-toggle='modal' data-bs-target='#deleteJobseeker'><i class='bi bi-trash3'></i></button></td>
                 </td>
             </tr>";
@@ -61,6 +61,27 @@
         //deleting the jobseeker in the database
         $jobseekerId = $_POST['jobseekerId'];        
         mysqli_query($conn,"DELETE FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
+    }
+
+    // When user click edit button return the selected employer information
+    if(isset($_POST['fetchDetails'])){
+        $employerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
+        // Create query to get the employer information
+        $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM jobseeker WHERE jobseeker_id = 'jobseekerId'");
+        $row = mysqli_fetch_assoc($fetchDetailsQuery);
+        // Get the employer information needed to edit modal
+        $jobseekerName = $row['fullname'];
+        $jobseekerNumber = $row['mobile_number'];
+        $jobseekerEmail = $row['email'];
+
+        // Create Assoc array to return to the ajax call
+        $response = array(
+            'jobseekerName' => $jobseekerName,
+            'jobseekerNumber' => $jobseekerNumber,
+            'jobseekerEmail' => $jobseekerEmail
+        );
+
+        echo json_encode($response);
     }
 
 

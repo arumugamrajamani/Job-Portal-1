@@ -154,19 +154,19 @@
               <div class="row mb-3 mt-0 ms-4 fw-bold">
                   <label for="jobseekername" class="col-sm-3 ">Jobseeker Name</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="jobseekername">
+                    <input type="text" class="form-control" id="e-jobseekername">
                   </div>
               </div>
               <div class="row mb-3 mt-0 ms-4 fw-bold">
                 <label for="contactnumber" class="col-sm-3 ">Contact Number</label>
                 <div class="col-sm-8">
-                  <input type="number" class="form-control" id="contactnumber">
+                  <input type="number" class="form-control" id="e-contactnumber">
                 </div>
               </div>
               <div class="row mb-3 mt-0 ms-4 fw-bold">
                 <label for="emailaddress" class="col-sm-3 ">Email address</label>
                 <div class="col-sm-8">
-                  <input type="email" class="form-control" id="emailaddress">
+                  <input type="email" class="form-control" id="e-emailaddress">
                 </div>
               </div>
               
@@ -177,7 +177,7 @@
             
           </div><br>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success">Save Details</button>
+            <button type="button" id="save-edit" class="btn btn-success">Save Details</button>
             <button type="button" class="btn btn-secondary" style="width: 70px;" data-bs-dismiss="modal">Close</button>
           </div>
         </div>

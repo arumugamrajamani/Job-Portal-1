@@ -10,6 +10,11 @@
             return "../storage/noProfilePic.png";
         }
     }
+
+    // Convert old date time into textual format
+    function dateTimeConvertion($date){ 
+        return date('M d, Y, h:i A', strtotime($date)); 
+    }
     
     if(isset($_POST['loadData'])){
         //Variable to hold the querryu result
@@ -31,7 +36,7 @@
             $resume = "../storage".$row['resume'];
             $email = $row['email'];
             $number = $row['mobile_number'];
-            $date = $row['date_created'];
+            $date = dateTimeConvertion($row['date_created']);
             //storing the data into $output.
             $output .=  "
             <tr style='height: 6rem; border: none; box-shadow: none;'>

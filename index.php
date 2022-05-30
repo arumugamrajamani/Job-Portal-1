@@ -1,150 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Techployment</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
-        <!-- JQuery CDN below -->
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        <!-- Toast CDN for functionality of toastr -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- Toast CDN for design of toastr -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techployment</title>
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,455;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
+    <!-- JQuery CDN below -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Toast CDN for functionality of toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Toast CDN for design of toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
     <div class="color-overlay">
         <div class="container-fluid">
             <nav id="navbar-example2" class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow " >
-                    <a href="index.php" class="navbar-brand ms-3">
-                    <img src="image/flogo.png" alt="Job Portal Logo" width="120" height="95"></a>
-
+                <a href="#" class="navbar-brand ms-3">
+                <img src="image/flogo.png" alt="Job Portal Logo" width="120" height="95"></a>
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
-                    <ul class="navbar-nav ms-auto text-center nav-tabs">
-                            <nav class="navbar navbar-light">     
-                                <li><a class="nav-link me-5 fs-5 btn1" href="#home">Home</a></li>
-                                <li><a class="nav-link me-5 fs-5 btn1" href="#aboutus">About Us</a></li>
-                                <li><a class="nav-link me-5 fs-5" href="#contactus">Contact Us</a></li>
-                                <li><a class="nav-link me-5 fs-5" href="#faq">FAQ</a></li>
-                                
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle fs-5 mx-3" href="#"
-                                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
+                    <ul class="navbar-nav ms-auto text-center fw-bold">
+                        <nav class="navbar navbar-light">     
+                            <li><a class="nav-link me-5  btn1 " href="#home">Home</a></li>
+                            <li><a class="nav-link me-5  btn1 " href="#aboutus">About Us</a></li>
+                            <li><a class="nav-link me-5 " href="#contactus">Contact Us</a></li>
+                            <li><a class="nav-link me-5 " href="#faq">FAQ</a></li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle  mx-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item me-4 fs-5" href="companyregister.php">Employer</a></li>
- 								<li><a class="dropdown-item me-4 fs-5"href="jobseekersignup.php">JobSeeker</a></li>
+                                <li><a class="dropdown-item " href="companyregister.php">Employer</a></li>
+                                <li><a class="dropdown-item " href="jobseekersignup.php">JobSeeker</a></li>
                             </ul>
-                                <li><a class="nav-link fs-5 me-4" href="login.php">Login</a></li>
-                            	<li><a class="nav-link fs-5" href="#"></a></li>
+                            <li><a class="nav-link me-4 ms-3" href="login.php">Login</a></li>
+                            <li><a class="nav-link" href="#"></a></li>
                         </nav>
                     </ul>
                 </div>
             </nav>         
-    	</div>
+        </div>
     </div>
+
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <section class="masthead" id="home">
             <br><br><br>
-            <h1 class="mt-5 ms-4 pt-5 text-center tag1">Employment powered by Technology. </h1><br>
+            <h1 class="mt-5 ms-4 pt-5 text-center tag1">Employment powered by Technology. </h1>
             <div class="container d-flex">
                 <div>
-                    <p class="mt-0 tag2 " style="text-align: justify;text-justify: inter-word;font-size: 29px;">Are you sick of standing in endless lines? Today, technology gives you an advantage in the job market by allowing you to apply with a single click and from the comfort of your home.  Now is the time to apply! Use <strong> Tech-Ployment  </strong>and get your first online job!</p><br>
+                    <p class="mt-0 tag2 fw-bold" style="text-align: justify;text-justify: inter-word;font-size: 29px;">Are you sick of standing in endless lines? Today, technology gives you an advantage in the job market by allowing you to apply with a single click and from the comfort of your home.  Now is the time to apply! Use <strong class="tech"> Tech-Ployment  </strong>and get your first online job!</p>
+                    <br>
                     <div class="row height d-flex justify-content-center align-items-center">
                         <div class="col-md-12">
-                            <div class="search">
-                                <i class="bi bi-search"></i>
-                                <input type="text" class="form-control" placeholder="Search a job" style="border-radius: 14px;">
-                                <button class="btn" style="background-color: #00C2D6;border-radius: 14px;">Search</button>
-                            </div>  
+                        <div class="search">
+                            <i class="bi bi-search"></i>
+                            <input type="text" class="form-control" placeholder="Search a job" style="border-radius: 14px;">
+                            <button class="btn" style="background-color: #00C2D6;border-radius: 14px;">Search</button>
+                        </div>  
                         </div>
                     </div><br>
                     <div class="text-center">
                         <button type="button" onclick="location.href='searchjob-home.php'" class="btn btn-sm fs-6 text-dark fw-bold" style="background-color: #ffff; border-radius: 10px;">Browse All Job Post </button>
                     </div>
                 </div>
-                    <img src="image/bg2-homepage.png" alt="background-2" class="ms-5" >
+                <img src="image/bg2-homepage.png" alt="background-2" class="ms-5" >
             </div>
-                <br><br><br><br><br><br>
-        </section>  
-        <section id="aboutus"  style="background:#FDF6EC;">
-                <br><br><br>
-            
-                <h4 class="text-center pt-4 mt-5 aboutus">About Us</h4><br>
-                <br>
+            <br><br><br><br><br><br>
+        </section>
 
+        <section id="aboutus"  style="background:#FDF6EC;">
+            <br><br><br>
+            <h4 class="text-center pt-4 mt-5 aboutus">About Us</h4>
+            <br><br>
             <div class="para ms-5 shadow-sm pb-2 mt-0" style="width: 95%;">
-                        
                 <h3 class="text-center p-2" style="height:50px;color: #372732;background-color: #00C2D6;">Meet Our Team</h3><br>
-                <p class="text-center fs-5" style="color: #372732;font-family: 'Inter';font-style: normal;"> We are Melham Construction Corporation interns who want to create a
-                                            website for available jobs online. The traditional method of applying for jobs <br> has been
-                                            innovated, and on this page we offer a minimalist, clean, and simple to use website for both
-                                            job seekers and employers. Tech-Ployment is a <br> combination of technology and employment in
-                                            which employability is now empowered by our modern technology.</p>
-                        
+                <p class="text-center fs-5" style="color: #372732;"> We are Melham Construction Corporation interns who want to create a
+                                website for available jobs online. The traditional method of applying for jobs <br> has been
+                                innovated, and on this page we offer a minimalist, clean, and simple to use website for both
+                                job seekers and employers. Tech-Ployment is a <br> combination of technology and employment in
+                                which employability is now empowered by our modern technology.</p>
             </div><br><br>
             <div class="para ms-5 shadow-sm " style="width: 95%;">
-                
                 <h3 class="text-center pt-2" style="height:50px; color: #372732;background-color: #00C2D6;">Vision</h3><br>
-                <p class="text-center fs-5" style="color: #372732;font-family: 'Inter';font-style: normal;"> To establish a career portal that can help both job seekers and employees in a healthy community.</p>
+                <p class="text-center fs-5" style="color: #372732;"> To establish a career portal that can help both job seekers and employees in a healthy community.</p>
                 <br><br>     
             </div><br><br>
-            <div class="para ms-5 shadow-sm " style="width: 95%;">
-                
+            <div class="para ms-5 shadow-sm " style="width: 95%;">  
                 <h3 class="text-center p-2" style="height:50px;color: #372732;background-color: #00C2D6;">Mission</h3><br>
-                <p class="text-center fs-5" style="color: #372732;font-family: 'Inter';font-style: normal;"> To assist seekers and employers achieve their employment objectives. With creativity and skill, the ageny collaborates with community partners to adapt to changing needs and posibilities.</p>
+                <p class="text-center fs-5" style="color: #372732;"> To assist seekers and employers achieve their employment objectives. With creativity and skill, the ageny collaborates with community partners to adapt to changing needs and posibilities.</p>
                 <br><br>          
             </div><br><br>
             <div class="para ms-5 shadow-sm " style="width: 95%;">
-                
                 <h3 class="text-center p-2" style="height:50px;color: #372732;background-color: #00C2D6;">Goal</h3><br>
-                <p class="text-center fs-5" style="color: #372732;font-family: 'Inter';font-style: normal;"> This initiative aims to provide job seekers with a simple and effective job site. This aim to create an environment in which finding a job online is more time efficient and convenient than looking for one in person.</p>
+                <p class="text-center fs-5" style="color: #372732;"> This initiative aims to provide job seekers with a simple and effective job site. This aim to create an environment in which finding a job online is more time efficient and convenient than looking for one in person.</p>
                 <br><br>       
             </div>
                 <br><br>
             <div class="para2 ms-5 shadow-sm" style="width: 95%;">
-                    
                 <div class="fs-5 ms-6 text-center" >
-                    <h4 class="p-2" style="height:50px;color: #372732;background-color: #00C2D6;">Our Services</h4>
+                    <h3 class="p-2" style="height:50px;color: #372732;background-color: #00C2D6;">Our Services</h3>
                     <p>We serve individuals by connecting employers with workers who are looking for jobs. We want to instill confidence in everyone's outsourcing experience.</p><br>
-                    <h4 class="" style="color: #372732;">Why we do it</h4>
+                    <h3 class="" style="color: #372732;">Why we do it</h3>
                     <p>Because it has an impact on people's lives.</p><br>
-                
                 </div>
             </div>
             <br><br><br><br><br><br><br>
         </section>
+
         <section class="con0" id="contactus" style="background-color: #00C2D6;"><br><br><br><br>
             <div class="d-flex">
-                <form class="container con1 needs-validation shadow" novalidate style="margin-left: 400px;">
-                    <br>
-                    <div class="col-sm-12 text-start row mb-3">
-                        <h1 class="text-center">CONTACT US</h1>
-                        <P class="text-center">Got a question? We'd love to hear from you. Send us <br> message and we'll  respond as soon as possible</P>
-                    </div>      
-                    <div class="row mb-3 mt-3 ms-4">              
-                        <div class="col-sm-11">                   
-                            <input type="text" class="form-control" id="fullname" placeholder="FULL NAME" style="background:#ECECEC;">               
-                            <div class="text-danger" id="fullname-errorMsg"></div>
-                        </div>
+                <form class="container con1 shadow" novalidate style="margin-left: 400px;">
+                <br>
+                <div class="col-sm-12 text-start row mb-3">
+                    <h1 class="text-center">CONTACT US</h1>
+                    <P class="text-center">Got a question? We'd love to hear from you. Send us <br> message and we'll  respond as soon as possible</P>
+                </div>      
+                <div class="row mb-3 mt-3 ms-4">              
+                    <div class="col-sm-11">                   
+                        <input type="text" class="form-control" id="fullname" placeholder="FULL NAME" style="background:#ECECEC;">               
+                        <div class="text-danger" id="fullname-errorMsg"></div>
                     </div>
-                    <div class="row mb-3 ms-4">      
-                        <div class="col-sm-11">
-                            <input type="email" class="form-control" id="email" placeholder="EMAIL ADDRESS" style="background:#ECECEC;">
-                            <div class="text-danger" id="email-errorMsg"></div>
-                        </div>
+                </div>
+                <div class="row mb-3 ms-4">      
+                    <div class="col-sm-11">
+                        <input type="email" class="form-control" id="email" placeholder="EMAIL ADDRESS" style="background:#ECECEC;">
+                        <div class="text-danger" id="email-errorMsg"></div>
                     </div>
-                    <div class="row mb-3 ms-4">
-                        <div class="col-sm-11">
-                            <textarea id="concern" name="concern" rows="7" cols="59" placeholder="CONCERN" style="background:#ECECEC; border: 0;"></textarea>
-                            <div class="text-danger" id="concern-errorMsg"></div>
-                        </div>
+                </div>
+                <div class="row mb-3 ms-4">
+                    <div class="col-sm-11">
+                        <textarea id="concern" name="concern" rows="4" cols="58" placeholder="CONCERN"></textarea>
+                        <div class="text-danger" id="concern-errorMsg"></div>
                     </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn-info text-dark" style="width:300px;" id="submit">SEND MESSAGE</button>
-                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn-info text-dark" style="width:300px;" id="submit">SEND MESSAGE</button>
+                </div>
                 </form>
                 <div class="d-block ms-5">
                     <img src="image/bg-contactus.png" class="mt-5" alt="" style="margin-right: 300px;">
@@ -153,12 +149,12 @@
             </div>
             <br><br>
         </section>
+
         <section class="masthead mh1" id="faq">
-            <br>
-            <br><br><br><br><br>
+            <br><br><br><br><br><br>
             <div class="container" style="width: 1200px;">
                 <div class="accordion" id="accordion">
-                    <h1 class="text-center">FREQUENTLY ASKED QUESTIONS</h1><br>
+                    <h1 class="text-center faq">FREQUENTLY ASKED QUESTIONS</h1><br>
                         <div class="row height d-flex justify-content-center align-items-center">
                         <div class="col-md-8">
                             <div class="search">
@@ -169,7 +165,7 @@
                         </div>
                         </div><br>
                     <h3 class="text-center">How can we help?</h3>
-                    <h4 class="fw-bold" >SYSTEMS</h4>
+                    <h4 class="systems" >SYSTEMS</h4>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -988,7 +984,6 @@
                         <h2 class="accordion-header" id="heading45">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse45" aria-expanded="false" aria-controls="collapse45">
                                 How can I protect myself from job scams?
-
                             </button>
                         </h2>
                         <div id="collapse45" class="accordion-collapse collapse" aria-labelledby="heading45" data-bs-parent="#accordion">
@@ -1269,7 +1264,6 @@
                         <h2 class="accordion-header" id="heading57">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse57" aria-expanded="false" aria-controls="collapse57">
                                 How long will it take me to land a job after graduation?
-
                             </button>
                         </h2>
                         <div id="collapse57" class="accordion-collapse collapse" aria-labelledby="heading57" data-bs-parent="#accordion">
@@ -1332,125 +1326,119 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="heading60">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse60" aria-expanded="false" aria-controls="collapse60">
-                                What skills do I need to get a 6-
-                                figure job?
-                            </button>
-                        </h2>
-                        <div id="collapse60" class="accordion-collapse collapse" aria-labelledby="heading60" data-bs-parent="#accordion">
-                            <div class="accordion-body">
-                                <p>
-                                    Your ability is a key determining element in obtaining a
-                                    high-paying job. There are numerous in-demand
-                                    abilities that might help you earn well. Acquiring a skill
-                                    does not always imply good compensation; your value
-                                    in a given function is determined by your proficiency.
-                                </p>
-                            </div>
+                            What skills do I need to get a 6-
+                            figure job?
+                        </button>
+                    </h2>
+                    <div id="collapse60" class="accordion-collapse collapse" aria-labelledby="heading60" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <p>
+                                Your ability is a key determining element in obtaining a
+                                high-paying job. There are numerous in-demand
+                                abilities that might help you earn well. Acquiring a skill
+                                does not always imply good compensation; your value
+                                in a given function is determined by your proficiency.
+                            </p>
                         </div>
-                    </div><br>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading61">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse61" aria-expanded="false" aria-controls="collapse61">
-                                What skill are employers looking
-                                for in job seekers?
-                            </button>
-                        </h2>
-                        <div id="collapse61" class="accordion-collapse collapse" aria-labelledby="heading61" data-bs-parent="#accordion">
-                            <div class="accordion-body">
-                                <p>
-                                    Many people think of hard talents when we discuss
-                                    abilities. Employers like to hire people with specific
-                                    hard talents, which is why they post job openings. Many
-                                    eligible people apply for a job after it is advertised.
-                                </p>
-                            </div>
+                    </div>
+                </div><br>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading61">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse61" aria-expanded="false" aria-controls="collapse61">
+                            What skill are employers looking
+                            for in job seekers?
+                        </button>
+                    </h2>
+                    <div id="collapse61" class="accordion-collapse collapse" aria-labelledby="heading61" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <p>
+                                Many people think of hard talents when we discuss
+                                abilities. Employers like to hire people with specific
+                                hard talents, which is why they post job openings. Many
+                                eligible people apply for a job after it is advertised.
+                            </p>
                         </div>
-                    </div><br>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading62">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse62" aria-expanded="false" aria-controls="collapse62">
-                                What do employers want from job
-                                seekers?
-                                
-                            </button>
-                        </h2>
-                        <div id="collapse62" class="accordion-collapse collapse" aria-labelledby="heading62" data-bs-parent="#accordion">
-                            <div class="accordion-body">
-                                <p>
-                                    What an employer looks for in job candidates differs
-                                    depending on the type of work the job seeker seeks and
-                                    who the employer deems an ideal prospect. Aside from
-                                    the work requirements, there are a few characteristics
-                                    that employers look for in job applicants.
-                                </p>
-                            </div>
+                    </div>
+                </div><br>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading62">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse62" aria-expanded="false" aria-controls="collapse62">
+                            What do employers want from job
+                            seekers?
+                            
+                        </button>
+                    </h2>
+                    <div id="collapse62" class="accordion-collapse collapse" aria-labelledby="heading62" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <p>
+                                What an employer looks for in job candidates differs
+                                depending on the type of work the job seeker seeks and
+                                who the employer deems an ideal prospect. Aside from
+                                the work requirements, there are a few characteristics
+                                that employers look for in job applicants.
+                            </p>
                         </div>
-                    </div><br>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading63">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse63" aria-expanded="false" aria-controls="collapse63">
-                                Can I get a job by sending a cold email to employers?
-                            </button>
-                        </h2>
-                        <div id="collapse63" class="accordion-collapse collapse" aria-labelledby="heading63" data-bs-parent="#accordion">
-                            <div class="accordion-body">
-                                <p>
-                                    Yes, you can acquire a job by sending employers cold
-                                    emails. Even though many people believe that sending
-                                    cold emails to the wrong person is a dangerous job
-                                    search approach, you can still obtain good employment
-                                    prospects by doing so (HR manager, CEO, etc.). While
-                                    some businesses frown upon job seekers sending cold
-                                    emails, others view it as a sign of interest and readiness
-                                    to work.
-                                </p>
-                            </div>
+                    </div>
+                </div><br>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading63">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse63" aria-expanded="false" aria-controls="collapse63">
+                            Can I get a job by sending a cold email to employers?
+                        </button>
+                    </h2>
+                    <div id="collapse63" class="accordion-collapse collapse" aria-labelledby="heading63" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <p>
+                                Yes, you can acquire a job by sending employers cold
+                                emails. Even though many people believe that sending
+                                cold emails to the wrong person is a dangerous job
+                                search approach, you can still obtain good employment
+                                prospects by doing so (HR manager, CEO, etc.). While
+                                some businesses frown upon job seekers sending cold
+                                emails, others view it as a sign of interest and readiness
+                                to work.
+                            </p>
                         </div>
-                    </div><br><br><br>
-                </div>
+                    </div>
+                </div><br><br><br>
             </div>
-        </section>   
+        </section>--
     </div>        
 
     <footer class="page-footer shadow-sm"><br>
         <div class="container-fluid text-start text-md-left mt-5">
             <div class="row">
 				<div class="col-md-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">JOB SEEKER</h6>
-                  
+                    <h6 class="text-uppercase ">JOB SEEKER</h6>
                     <ul class="list-unstyled">
-                        <li class="my-0"><a href="#" class="text-dark">Register</a></li>
-                        <li class="my-0"><a href="#" class="text-dark">Job Search</a></li>
-                        <li class="my-0"><a href="#" class="text-dark">How it works</a></li>
+                        <li class="my-0"><a href="jobseekersignup.php" class="text-dark" style="text-decoration: none;">Register</a></li>
+                        <li class="my-0"><a href="searchjob-home.php" class="text-dark" style="text-decoration: none;">Job Search</a></li>
+                        <li class="my-0"><a href="howitworks-jobseeker.php" class="text-dark" style="text-decoration: none;">How it works</a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">EMPLOYER</h6>
-                    
-
+                    <h6 class="text-uppercase ">EMPLOYER</h6>
                     <ul class="list-unstyled">
-                        <li class="my-0"><a href="#" class="text-dark">Register</a></li>
-                        <li class="my-0"><a href="#" class="text-dark">Post a job</a></li>
-                        <li class="my-0"><a href="#" class="text-dark">How it works</a></li>
-
+                        <li class="my-0"><a href="companyregister.php" class="text-dark" style="text-decoration: none;">Register</a></li>
+                        <li class="my-0"><a href="companyregister.php" class="text-dark" style="text-decoration: none;">Post a job</a></li>
+                        <li class="my-0"><a href="howitworks-employ.php" class="text-dark" style="text-decoration: none;">How it works</a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">OTHER INFORMATIONS</h6>
-                    
+                    <h6 class="text-uppercase ">OTHER INFORMATIONS</h6>
                     <ul class="list-unstyled">
-                        <li class="my-0"></i> <a href="#aboutus" class="text-dark">About us</a></li>
-                        <li class="my-0"></i> <a href="#faq" class="text-dark">FAQ</a></li>
-                        <li class="my-0"></i> <a href="termsandcondition.php" class="text-dark">Terms and conditions</a></li>
-                        <li class="my-0"></i><a href="privacypolicy.php" class="text-dark">Privacy Policy</a></li>
-                        <li class="my-0"></i> <a href="termsofuse.php" class="text-dark">Terms of use</a></li>
+                        <li class="my-0"></i> <a href="#faq" class="text-dark" style="text-decoration: none;">FAQ</a></li>
+                        <li class="my-0"></i> <a href="#aboutus" class="text-dark" style="text-decoration: none;">About us</a></li>               
+                        <li class="my-0"></i><a href="privacypolicy.php" class="text-dark" style="text-decoration: none;">Privacy Policy</a></li>
+                        <li class="my-0"></i> <a href="termsofuse.php" class="text-dark" style="text-decoration: none;">Terms of use</a></li>
+                        <li class="my-0"></i> <a href="termsandcondition.php" class="text-dark" style="text-decoration: none;">Terms and conditions</a></li>
                     </ul>
                 </div>
+
                 <div class="col-md-2 mx-auto mb-4 text-center">
-                    <h6 class="text-uppercase font-weight-bold">CONTACT US</h6>
-                    
+                    <h6 class="text-uppercase ">CONTACT US</h6>
                     <ul class="list-unstyled d-flex">
                         <img class="my-0" src="image/gmail.png" alt="logo" href="#" style="width: 50px; height: 25px">
                         concerns.techploymentph@gmail.com
@@ -1459,11 +1447,12 @@
             </div>
         </div>
     </footer>
-    <div class="container-fluid bg-white text-center">
-        <h5 class="mt-5 ms-2"> Copyrignt © TechPloyment 2022. All Rights Reserved. Developed by MCC Interns 2022, Job Portal</h5>
+
+    <div class="container-fluid d-flex bg-white text-center pt-3">
+        <h5 > Copyrignt © TechPloyment 2022. All Rights Reserved.</h5>
+        <h5 style="margin-left: 1000px;">Developed by MCC Interns 2022, Job Portal</h5>
         <br>
     </div>
-
     <script src="js/contactus.js"></script>
 </body>
 </html>

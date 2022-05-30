@@ -38,6 +38,11 @@
         unlink("../../storage/" . $permitName);
     }
 
+    // Convert old date time into textual format
+    function dateTimeConvertion($date){ 
+        return date('M d, Y, h:i A', strtotime($date)); 
+    }
+
     // For loading of the employer management information
     if(isset($_POST['loadData'])){
         // Variable for holding the result of the query
@@ -97,7 +102,7 @@
         $contactNumber = $row['contact_number'];
         $companyEmail = $row['company_email'];
         $companyDescription = nl2br($row['company_description']);
-        $dateCreated = $row['date_created'];
+        $dateCreated = dateTimeConvertion($row['date_created']);
 
         // Create Assoc array to return to the ajax call
         $response = array(

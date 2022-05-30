@@ -1,27 +1,58 @@
-body{
-    background: #00C2D6;
-    font-family: sans-serif;
-}.search-box{
-   
-    width: 500px;
-    border-style:outset;
-}.btn-outline{
+.masthead{
+    background-size: cover;
+    min-height: 100vh;
     background-color: #00C2D6;
-    
+ 
 }.navbar-light{
     background-color: #FFFFFF;
     margin:0%;
-}.navbar-expand-lg{
+}
+.navbar-expand-lg{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
     height:100px;
     width:100%;
-    margin-left: 5px;
     
-}.btn-outline-secondary{
+    
+}.dropdown-item{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 550;
+    font-size: 20px;
+    width: 100%;
+   
+   
+}.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.dropdown-menu{
+    width: 80px;
+    
+}.dropdown-menu:hover{
+    display: block;
+}
+.navbar .nav-link:hover{
     background-color: #00C2D6;
-    color: white;
-    border: #00C2D6;
-    border-style:outset;
+    border-radius: 15px;
+}.dropdown-menu .dropdown-item:hover{
+    background-color: #00C2D6;
+    border-radius: 10px;
+
+}.nav-link {
+    color: black !important;
+  
+  }
+  .nav-link.active {
+    color: black !important;
+    background-color: #00C2D6;
+    border-radius: 10px;
+  }
+.dropdown:hover{
+    background-color: #00C2D6;
+    border-radius: 10px;
     
+   
+
 }.para{
     background-color: #FFFFFF;
 }.para2{
@@ -39,7 +70,7 @@ h1{
     height: 74px;
     left: -0px;
     top: -73px;
-    font-family: 'Inter';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700px;
     font-size: 25px;
@@ -48,7 +79,7 @@ h1{
     background: #00C2D6;
 }
 h2{
-    font-family: 'Inter';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 25px;
@@ -59,7 +90,7 @@ h2{
 .container{
     position: relative;
     width: 954px;
-    height: 1710px;
+    height: 1500px;
     left: 5px;
     top: 110px;
     background: #FFFFFF;
@@ -78,12 +109,12 @@ h2{
 }
 #SAVE-NOW{
     position: relative;
-   
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 800;
-    font-size: 15px;
-    width: 250px;
-    height: 50px;
+    font-size: 20px;
+    width: 350px;
+    height: 60px;
     border-radius: 10px;
     line-height: 30px;
     border: 0;
@@ -94,6 +125,9 @@ h2{
 }input[type=file]::file-selector-button {
     
     background-color: #00C2D6;
-    color: black;
-    
-  }
+    color: black;    
+}
+.form-control{
+    background-color: #ECECEC;
+    border-radius: 10px;
+}

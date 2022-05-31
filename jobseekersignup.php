@@ -58,35 +58,30 @@
                     <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
                     <div class="col-sm-9">
                         <input style="background: #ECECEC;" type="text" class="form-control" id="fullname">               
-                        <div class="text-danger" id="fullname-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="mobilenumber" class="col-sm-2 col-form-label">Mobile Number</label>
                     <div class="col-sm-9">
                         <input style="background: #ECECEC;" type="text" class="form-control" id="mobilenumber">
-                        <div class="text-danger" id="mobilenumber-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="email" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-9">
                         <input style="background: #ECECEC;" type="email" class="form-control" id="email">
-                        <div class="text-danger" id="email-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="password" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-sm-9">
                         <input style="background: #ECECEC;" type="password" class="form-control" id="password">
-                        <div class="text-danger" id="password-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="confirmpassword" class="col-sm-2 col-form-label">Confirm Password</label>
                     <div class="col-sm-9">
                         <input style="background: #ECECEC;" type="password" class="form-control" id="confirmpassword">
-                        <div class="text-danger" id="cpassword-errorMsg"></div>
                     </div>
                 </div>
                 <br>

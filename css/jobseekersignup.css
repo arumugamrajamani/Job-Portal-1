@@ -1,70 +1,68 @@
-.masthead{
+.masthead {
     background-size: cover;
     min-height: 110vh;
     background-color: #00C2D6;
- 
-}.btn-outline{
+}
+.btn-outline {
     background-color: #00C2D6;
     
-}.navbar-light{
+}
+.navbar-light {
     background-color: #FFFFFF;
     margin:0%;
-}.navbar-expand-lg{
+}
+.navbar-expand-lg {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     height:100px;
-    width:100%;
-    
-    
-}.dropdown-item{
+    width:100%;    
+}
+.dropdown-item {
     font-family: 'Montserrat', sans-serif;
     font-weight: 550;
     font-size: 20px;
     width: 100%;
-   
-   
-}.dropdown:hover .dropdown-menu{
+}
+.dropdown:hover .dropdown-menu {
     display: block;
 }
-
-.dropdown-menu{
-    width: 80px;
-    
-}.dropdown-menu:hover{
+.dropdown-menu {
+    width: 80px;  
+} 
+.dropdown-menu:hover {
     display: block;
-}
-.navbar .nav-link:hover{
+} 
+.navbar .nav-link:hover {
     background-color: #00C2D6;
     border-radius: 15px;
-}.dropdown-menu .dropdown-item:hover{
+} 
+.dropdown-menu .dropdown-item:hover {
     background-color: #00C2D6;
     border-radius: 10px;
-
-}.nav-link {
+} 
+.nav-link {
+    color: black !important;  
+} 
+.nav-link.active {
     color: black !important;
-  
-  }
-  .nav-link.active {
-    color: black !important;
     background-color: #00C2D6;
     border-radius: 10px;
-  }
-.dropdown:hover{
-    background-color: #00C2D6;
-    border-radius: 10px;
-    
-   
-
 }
-.para{
+.dropdown:hover {
+    background-color: #00C2D6;
+    border-radius: 10px;
+}
+.para {
     background-color: #EDBEA4;
-}.para2{
+}
+.para2 {
     background-color: #EDBEA4;
     
-}.position{
+}
+.position {
     margin-left: 400px;
 }
-h1{
+h1 {
     position: absolute;
     width: 954px;
     height: 74px;
@@ -78,7 +76,7 @@ h1{
     color: #FFFFFF;
     background: #00C2D6;
 }
-h2{
+h2 {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -87,7 +85,7 @@ h2{
     text-align: center;
     color: #372732;
 }
-.container{
+.container {
     position: relative;
     margin-left: 0px;
     width: 900px;
@@ -96,19 +94,19 @@ h2{
     top: 70px;
     background: #FFFFFF;
 }
-.container input{
+.container input {
     width: 586px;
     height: 39px;
     left: 477px;
     top: 686px;
 }
-#exampleFormControlTextarea1{
+#exampleFormControlTextarea1 {
     width: 586px;
     height: 174px;
     left: 477px;
     top: 686px;
 }
-#SAVE-NOW{
+#SAVE-NOW {
     position: relative;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -116,9 +114,10 @@ h2{
     font-size: 18px;
     line-height: 30px;
     color: #FFFFFF;
-}hr{
+}
+hr {
     border:1px solid black;
-    
-}.error{
-    border: 1px solid red;
+} 
+input {
+    margin-bottom: 11px; 
 }

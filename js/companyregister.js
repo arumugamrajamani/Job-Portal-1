@@ -20,7 +20,6 @@ $(document).ready(function(){
     // Function for clearing input value, border color and error message
     function clearFields() {
         $('form')[0].reset();
-        $('.text-danger').text(null);
         $('.form-control').removeClass('border-danger');
         $('.form-control').removeClass('border-success');
     }
@@ -30,26 +29,24 @@ $(document).ready(function(){
     $('#employerFullName').on('keyup', function() {
         let fullname = $('#employerFullName').val();
         if(fullname.length == 0) {
-            $('#employerFullName').removeClass().addClass('form-control border-danger');
-            $('#fullname-errorMsg').text("Fullname is required.");
+            $('#employerFullName').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#employerFullName').popover({ placement: 'right', content: 'Employer Fullname is required.'}).popover('show');
         } else if(!isValidName(fullname)) {
-            $('#employerFullName').removeClass().addClass('form-control border-danger');
-            $('#fullname-errorMsg').text("Only characters are allowed.");
+            $('#employerFullName').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#employerFullName').popover({ placement: 'right', content: 'Only characters are allowed.'}).popover('show');
         } else {
-            $('#employerFullName').removeClass().addClass('form-control border-success');
-            $('#fullname-errorMsg').text(null);
+            $('#employerFullName').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
 
     // Trigger this when user started to type in employerposition input and validate it
     $('#employerposition').on('keyup', function() {
-        let fullname = $('#employerposition').val();
-        if(fullname.length == 0) {
-            $('#employerposition').removeClass().addClass('form-control border-danger');
-            $('#employerposition-errorMsg').text("Employer Position is required.");
+        let position = $('#employerposition').val();
+        if(position.length == 0) {
+            $('#employerposition').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#employerposition').popover({ placement: 'right', content: 'Employer Position is required.'}).popover('show');
         } else {
-            $('#employerposition').removeClass().addClass('form-control border-success');
-            $('#employerposition-errorMsg').text(null);
+            $('#employerposition').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
 
@@ -60,40 +57,38 @@ $(document).ready(function(){
 
     // Trigger this when user started to type in companyname input and validate it
     $('#companyname').on('keyup', function() {
-        let fullname = $('#companyname').val();
-        if(fullname.length == 0) {
-            $('#companyname').removeClass().addClass('form-control border-danger');
-            $('#companyname-errorMsg').text("Company Name is required.");
+        let companyName = $('#companyname').val();
+        if(companyName.length == 0) {
+            $('#companyname').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#companyname').popover({ placement: 'right', content: 'Company Name is required.'}).popover('show');
+            // $('#companyname-errorMsg').text("Company Name is required.");
         } else {
-            $('#companyname').removeClass().addClass('form-control border-success');
-            $('#companyname-errorMsg').text(null);
+            $('#companyname').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
 
     // Trigger this when user started to type in companyaddress input and validate it
     $('#companyaddress').on('keyup', function() {
-        let fullname = $('#companyaddress').val();
-        if(fullname.length == 0) {
-            $('#companyaddress').removeClass().addClass('form-control border-danger');
-            $('#companyaddress-errorMsg').text("Company Address is required.");
+        let address = $('#companyaddress').val();
+        if(address.length == 0) {
+            $('#companyaddress').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#companyaddress').popover({ placement: 'right', content: 'Company Address is required.'}).popover('show');
         } else {
-            $('#companyaddress').removeClass().addClass('form-control border-success');
-            $('#companyaddress-errorMsg').text(null);
+            $('#companyaddress').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
 
     // Trigger this when user started to type in companyceoname input and validate it
     $('#companyceoname').on('keyup', function() {
-        let fullname = $('#companyceoname').val();
-        if(fullname.length == 0) {
-            $('#companyceoname').removeClass().addClass('form-control border-danger');
-            $('#companyceoname-errorMsg').text("Company CEO Name is required.");
-        } else if(!isValidName(fullname)) {
-            $('#companyceoname').removeClass().addClass('form-control border-danger');
-            $('#companyceoname-errorMsg').text("Only characters are allowed.");
+        let CEOname = $('#companyceoname').val();
+        if(CEOname.length == 0) {
+            $('#companyceoname').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#companyceoname').popover({ placement: 'right', content: 'Company CEO Name is required.'}).popover('show');
+        } else if(!isValidName(CEOname)) {
+            $('#companyceoname').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#companyceoname').popover({ placement: 'right', content: 'Only characters are allowed.'}).popover('show');
         } else {
-            $('#companyceoname').removeClass().addClass('form-control border-success');
-            $('#companyceoname-errorMsg').text(null);
+            $('#companyceoname').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
 
@@ -101,14 +96,13 @@ $(document).ready(function(){
     $('#companysize').on('keyup', function() {
         let companysize = $('#companysize').val();
         if(companysize.length == 0) {
-            $('#companysize').removeClass().addClass('form-control border-danger');
-            $('#companysize-errorMsg').text("Company Size is required.");
+            $('#companysize').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#companysize').popover({ placement: 'right', content: 'Company Size is required.'}).popover('show');
         }else if(!isNumber(companysize)){
-            $('#companysize').removeClass().addClass('form-control border-danger');
-            $('#companysize-errorMsg').text("Numbers only. ex. 100000 or 100");
+            $('#companysize').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#companysize').popover({ placement: 'right', content: 'Only numbers are allowed.'}).popover('show');
         }else {
-            $('#companysize').removeClass().addClass('form-control border-success');
-            $('#companysize-errorMsg').text(null);
+            $('#companysize').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
     
@@ -116,26 +110,24 @@ $(document).ready(function(){
     $('#companyrevenue').on('keyup', function() {
         let companyrevenue = $('#companyrevenue').val();
         if(companyrevenue.length == 0) {
-            $('#companyrevenue').removeClass().addClass('form-control border-danger');
-            $('#companyrevenue-errorMsg').text("Company Revenue is required.");
+            $('#companyrevenue').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#companyrevenue').popover({ placement: 'right', content: 'Company Revenue is required.'}).popover('show');
         }else if(!isNumber(companyrevenue)){
-            $('#companyrevenue').removeClass().addClass('form-control border-danger');
-            $('#companyrevenue-errorMsg').text("Numbers only. ex. 100000 or 100");
+            $('#companyrevenue').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#companyrevenue').popover({ placement: 'right', content: 'Only numbers are allowed.'}).popover('show');
         }else {
-            $('#companyrevenue').removeClass().addClass('form-control border-success');
-            $('#companyrevenue-errorMsg').text(null);
+            $('#companyrevenue').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
 
     // Trigger this when user started to type in industry input and validate it
     $('#industry').on('keyup', function() {
-        let fullname = $('#industry').val();
-        if(fullname.length == 0) {
-            $('#industry').removeClass().addClass('form-control border-danger');
-            $('#industry-errorMsg').text("Industry is required.");
+        let industry = $('#industry').val();
+        if(industry.length == 0) {
+            $('#industry').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#industry').popover({ placement: 'right', content: 'Industry is required.'}).popover('show');
         } else {
-            $('#industry').removeClass().addClass('form-control border-success');
-            $('#industry-errorMsg').text(null);
+            $('#industry').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
 
@@ -144,13 +136,13 @@ $(document).ready(function(){
     $('#companydescription').on('keyup', function() {
         let companydescription = $('#companydescription').val();
         if(companydescription.length == 0) {
-            $('#companydescription').removeClass().addClass('form-control border-danger');
-            $('#companydescription-errorMsg').text("Company Description is required.");
+            $('#companydescription').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#companydescription').popover({ placement: 'right', content: 'Company Description is required.'}).popover('show');
         }else if(companydescription.length < 50){
-            $('#companydescription').removeClass().addClass('form-control border-danger');
-            $('#companydescription-errorMsg').text("Atleast 50 characters are required.");
+            $('#companydescription').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#companydescription').popover({ placement: 'right', content: 'Atleast 50 characters are required.'}).popover('show');
         }else {
-            $('#companydescription').removeClass().addClass('form-control border-success');
+            $('#companydescription').removeClass().addClass('form-control border-success').popover('dispose');
             $('#companydescription-errorMsg').text(null);
         }
     })
@@ -159,14 +151,13 @@ $(document).ready(function(){
     $('#contactnumber').on('keyup', function() {
         let contactnumber = $('#contactnumber').val();
         if(contactnumber.length == 0) {
-            $('#contactnumber').removeClass().addClass('form-control border-danger');
-            $('#contactnumber-errorMsg').text("Contact Number is required.");
+            $('#contactnumber').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#contactnumber').popover({ placement: 'right', content: 'Contact Number is required.'}).popover('show');
         }else if(!isNumber(contactnumber)){
-            $('#contactnumber').removeClass().addClass('form-control border-danger');
-            $('#contactnumber-errorMsg').text("Please enter a valid number.");
+            $('#contactnumber').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#contactnumber').popover({ placement: 'right', content: 'Only numbers are allowed.'}).popover('show');
         }else {
-            $('#contactnumber').removeClass().addClass('form-control border-success');
-            $('#contactnumber-errorMsg').text(null);
+            $('#contactnumber').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })       
     
@@ -175,14 +166,13 @@ $(document).ready(function(){
         let companyemail = $('#companyemail').val();
         console.log(companyemail)
         if (companyemail.length == 0) {
-            $('#companyemail').removeClass().addClass('form-control border-danger');
-            $('#companyemail-errorMsg').text("Email is required.");
+            $('#companyemail').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#companyemail').popover({ placement: 'right', content: 'Company Email is required.'}).popover('show');
         } else if(isEmail(companyemail) == false) {
-            $('#companyemail').removeClass().addClass('form-control border-danger');
-            $('#companyemail-errorMsg').text("Email is not valid.");
+            $('#companyemail').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#companyemail').popover({ placement: 'right', content: 'Email is invalid.'}).popover('show');
         } else {
-            $('#companyemail').removeClass().addClass('form-control border-success');
-            $('#companyemail-errorMsg').text(null);
+            $('#companyemail').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
 
@@ -197,14 +187,13 @@ $(document).ready(function(){
         let emailaddress = $('#emailaddress').val();
         console.log(emailaddress)
         if (emailaddress.length == 0) {
-            $('#emailaddress').removeClass().addClass('form-control border-danger');
-            $('#emailaddress-errorMsg').text("Email is required.");
+            $('#emailaddress').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#emailaddress').popover({ placement: 'right', content: 'Email Address is required.'}).popover('show');
         } else if(isEmail(emailaddress) == false) {
-            $('#emailaddress').removeClass().addClass('form-control border-danger');
-            $('#emailaddress-errorMsg').text("Email is not valid.");
+            $('#emailaddress').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#emailaddress').popover({ placement: 'right', content: 'Email is invalid.'}).popover('show');
         } else {
-            $('#emailaddress').removeClass().addClass('form-control border-success');
-            $('#emailaddress-errorMsg').text(null);
+            $('#emailaddress').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
 
@@ -212,32 +201,30 @@ $(document).ready(function(){
     $('#password').on('keyup', function() {
         let password = $('#password').val();
         if(password.length == 0) {
-            $('#password').removeClass().addClass('form-control border-danger');
-            $('#password-errorMsg').text("Password is required.");
+            $('#password').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#password').popover({ placement: 'right', content: 'Password is required.'}).popover('show');
         } else if(password.length < 8 || password.length > 30) {
-            $('#password').removeClass().addClass('form-control border-danger');
-            $('#password-errorMsg').text("Password must be between 8 and 30 characters.");
+            $('#password').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#password').popover({ placement: 'right', content: 'Password must be between 8 and 30 characters.'}).popover('show');
         } 
         else {
-            $('#password').removeClass().addClass('form-control border-success');
-            $('#password-errorMsg').text(null);
+            $('#password').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
     
-    
+    .popover('dispose')
     // Trigger this when user started to type in confirm password input and validate 
     $('#confirmpassword').on('keyup', function() {
         let password = $('#password').val();
         let confirmpassword = $('#confirmpassword').val();
         if(confirmpassword.length == 0){
-            $('#confirmpassword').removeClass().addClass('form-control border-danger');
-            $('#confirmpassword-errorMsg').text("Confirm password is required.");
+            $('#confirmpassword').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#confirmpassword').popover({ placement: 'right', content: 'Confirm Password is required.'}).popover('show');
         } else if(password != confirmpassword) {
-            $('#confirmpassword').removeClass().addClass('form-control border-danger');
-            $('#confirmpassword-errorMsg').text("Password does not match.");
+            $('#confirmpassword').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#confirmpassword').popover({ placement: 'right', content: 'Password does not match.'}).popover('show');
         } else {
-            $('#confirmpassword').removeClass().addClass('form-control border-success');
-            $('#confirmpassword-errorMsg').text(null);
+            $('#confirmpassword').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
     //--------------------------------End of Login Details--------------------------------------------------   
@@ -309,132 +296,116 @@ $(document).ready(function(){
                     // Checking of status of employer name
                     if(data.employerNameRR.status == "error") {
                         $('#employerFullName').removeClass().addClass('form-control border-danger');
-                        $('#fullname-errorMsg').text(data.employerNameRR.message);
+                        $('#employerFullName').popover({ placement: 'right', content: data.employerNameRR.message}).popover('show');
                     } else {
                         $('#employerFullName').removeClass().addClass('form-control border-success');
-                        $('#fullname-errorMsg').text(null);
                     }
                     // Checking of status of employer position
                     if(data.employerPositionRR.status == "error") {
                         $('#employerposition').removeClass().addClass('form-control border-danger');
-                        $('#employerposition-errorMsg').text(data.employerPositionRR.message);
+                        $('#employerposition').popover({ placement: 'right', content: data.employerPositionRR.message}).popover('show');
                     } else {
                         $('#employerposition').removeClass().addClass('form-control success-danger');
-                        $('#employerposition-errorMsg').text(null)
                     }
                     // <---------------------------------Company Details---------------------------------------------------->                   
                     // Checking of status of company name
                     if(data.companyNameRR.status == "error") {
                         $('#companyname').removeClass().addClass('form-control border-danger');
-                        $('#companyname-errorMsg').text(data.companyNameRR.message);
+                        $('#companyname').popover({ placement: 'right', content: data.companyNameRR.message}).popover('show');
                     } else {
                         $('#companyname').removeClass().addClass('form-control border-success');
-                        $('#companyname-errorMsg').text(null)
                     }
                     // Checking of status of company address
                     if(data.companyAddressRR.status == "error") {
                         $('#companyaddress').removeClass().addClass('form-control border-danger');
-                        $('#companyaddress-errorMsg').text(data.companyAddressRR.message);
+                        $('#companyaddress').popover({ placement: 'right', content: data.companyAddressRR.message}).popover('show');
                     } else {
                         $('#companyaddress').removeClass().addClass('form-control border-success');
-                        $('#companyaddress-errorMsg').text(null)
                     }
                     // Checking of status of company CEO
                     if(data.companyCEORR.status == "error") {
                         $('#companyceoname').removeClass().addClass('form-control border-danger');
-                        $('#companyceoname-errorMsg').text(data.companyCEORR.message);
+                        $('#companyceoname').popover({ placement: 'right', content: data.companyCEORR.message}).popover('show');
                     } else {
                         $('#companyceoname').removeClass().addClass('form-control border-success');
-                        $('#companyceoname-errorMsg').text(null)
                     }
                     // Checking of status of company size
                     if(data.companySizeRR.status == "error") {
                         $('#companysize').removeClass().addClass('form-control border-danger');
-                        $('#companysize-errorMsg').text(data.companySizeRR.message);
+                        $('#companysize').popover({ placement: 'right', content: data.companySizeRR.message}).popover('show');
                     } else {
                         $('#companysize').removeClass().addClass('form-control border-success');
-                        $('#companysize-errorMsg').text(null)
                     }
                     // Checking of status of company revenue
                     if(data.companyRevenueRR.status == "error") {
                         $('#companyrevenue').removeClass().addClass('form-control border-danger');
-                        $('#companyrevenue-errorMsg').text(data.companyRevenueRR.message);
+                        $('#companyrevenue').popover({ placement: 'right', content: data.companyRevenueRR.message}).popover('show');
                     } else {
                         $('#companyrevenue').removeClass().addClass('form-control border-success');
-                        $('#companyrevenue-errorMsg').text(null)
                     }
                     // Checking of status of industry
                     if(data.industryRR.status == "error") {
                         $('#industry').removeClass().addClass('form-control border-danger');
-                        $('#industry-errorMsg').text(data.industryRR.message);
+                        $('#industry').popover({ placement: 'right', content: data.industryRR.message}).popover('show');
                     } else {
                         $('#industry').removeClass().addClass('form-control border-success');
-                        $('#industry-errorMsg').text(null)
                     }
                     // Checking of status of company description
                     if(data.companyDescriptionRR.status == "error") {
                         $('#companydescription').removeClass().addClass('form-control border-danger');
-                        $('#companydescription-errorMsg').text(data.companyDescriptionRR.message);
+                        $('#companydescription').popover({ placement: 'right', content: data.companyDescriptionRR.message}).popover('show');
                     } else {
                         $('#companydescription').removeClass().addClass('form-control border-success');
-                        $('#companydescription-errorMsg').text(null)
                     }
                     // Checking of status of contact number
                     if(data.contactNumberRR.status == "error") {
                         $('#contactnumber').removeClass().addClass('form-control border-danger');
-                        $('#contactnumber-errorMsg').text(data.contactNumberRR.message);
+                        $('#contactnumber').popover({ placement: 'right', content: data.contactNumberRR.message}).popover('show');
                     } else {
                         $('#contactnumber').removeClass().addClass('form-control border-success');
-                        $('#contactnumber-errorMsg').text(null)
                     }
                     // Checking of status of contact number
                     if(data.companyEmailRR.status == "error") {
                         $('#companyemail').removeClass().addClass('form-control border-danger');
-                        $('#companyemail-errorMsg').text(data.companyEmailRR.message);
+                        $('#companyemail').popover({ placement: 'right', content: data.companyEmailRR.message}).popover('show');
                     } else {
                         $('#companyemail').removeClass().addClass('form-control border-success');
-                        $('#companyemail-errorMsg').text(null)
                     }
                     // Checking of status of company logo
                     if(data.companyLogoRR.status == "error") {
-                        // $('#companyLogo').removeClass().addClass('form-control border-danger');
-                        $('#companyLogo-errorMsg').text(data.companyLogoRR.message);
+                        $('#companyLogo').removeClass().addClass('form-control border-danger').popover('dispose');
+                        $('#companyLogo').popover({ placement: 'right', content: data.companyLogoRR.message}).popover('show');
                     } else {
-                        // $('#companyLogo').removeClass().addClass('form-control border-success');
-                        $('#companyLogo-errorMsg').text(null)
+                        $('#companyLogo').removeClass().addClass('form-control border-success').popover('dispose');
                     }
                     // Checking of status of company logo
                     if(data.permitRR.status == "error") {
-                        // $('#companyLogo').removeClass().addClass('form-control border-danger');
-                        $('#dtipermit-errorMsg').text(data.permitRR.message);
+                        $('#dtipermit').removeClass().addClass('form-control border-danger').popover('dispose');
+                        $('#dtipermit').popover({ placement: 'right', content: data.permitRR.message}).popover('show');
                     } else {
-                        // $('#companyLogo').removeClass().addClass('form-control border-success');
-                        $('#dtipermit-errorMsg').text(null)
+                        $('#dtipermit').removeClass().addClass('form-control border-success').popover('dispose');
                     }
                     // <---------------------------------Login Details---------------------------------------------------->
                     // Checking of status of email number
                     if(data.emailRR.status == "error") {
                         $('#emailaddress').removeClass().addClass('form-control border-danger');
-                        $('#emailaddress-errorMsg').text(data.emailRR.message);
+                        $('#emailaddress').popover({ placement: 'right', content: data.emailRR.message}).popover('show');
                     } else {
                         $('#emailaddress').removeClass().addClass('form-control border-success');
-                        $('#emailaddress-errorMsg').text(null)
                     }
                     // Checking of status of password 
                     if(data.passwordRR.status == "error") {
                         $('#password').removeClass().addClass('form-control border-danger');
-                        $('#password-errorMsg').text(data.passwordRR.message);
+                        $('#password').popover({ placement: 'right', content: data.passwordRR.message}).popover('show');
                     } else {
                         $('#password').removeClass().addClass('form-control border-success');
-                        $('#password-errorMsg').text(null)
                     }
                     // Checking of status of confirm password
                     if(data.confirmPasswordRR.status == "error") {
                         $('#confirmpassword').removeClass().addClass('form-control border-danger');
-                        $('#confirmpassword-errorMsg').text(data.confirmPasswordRR.message);
+                        $('#confirmpassword').popover({ placement: 'right', content: data.confirmPasswordRR.message}).popover('show');
                     } else {
                         $('#confirmpassword').removeClass().addClass('form-control border-success');
-                        $('#confirmpassword-errorMsg').text(null)
                     }
                 }
             }    

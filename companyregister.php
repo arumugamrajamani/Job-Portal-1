@@ -56,14 +56,12 @@
                     <label for="employerFullName" class="col-sm-3 col-form-label">Employer Full Name</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="employerFullName">
-                        <div class="text-danger" id="fullname-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="employerposition" class="col-sm-3 col-form-label">Employer Position</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="employerposition">
-                        <div class="text-danger" id="employerposition-errorMsg"></div>
                     </div>
                 </div>
                 <h2 class="text-black text-center mt-5">COMPANY DETAILS</h2>
@@ -72,77 +70,66 @@
                     <label for="companyname" class="col-sm-3 col-form-label">Company Name</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="companyname">
-                        <div class="text-danger" id="companyname-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="companyaddress" class="col-sm-3 col-form-label">Company Address</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="companyaddress">
-                        <div class="text-danger" id="companyaddress-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="companyceoname" class="col-sm-3 col-form-label">Company CEO Name</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="companyceoname">
-                        <div class="text-danger" id="companyceoname-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="companysize" class="col-sm-3 col-form-label">Company Size</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="companysize">
-                        <div class="text-danger" id="companysize-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="companyrevenue" class="col-sm-3 col-form-label">Company Revenue</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="companyrevenue">
-                        <div class="text-danger" id="companyrevenue-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="industry" class="col-sm-3 col-form-label">Industry</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="industry">
-                        <div class="text-danger" id="industry-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="companydescription" class="col-sm-3 col-form-label">Company Description</label>
                     <div class="col-sm-9">
                         <textarea class="form-control" placeholder="Description Here" style="width: 88%;background-color: #ECECEC; border-radius:10px;" id="companydescription" rows="5"></textarea>
-                        <div class="text-danger" id="companydescription-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="contactnumber" class="col-sm-3 col-form-label">Contact Number</label>
                     <div class="col-sm-9">
                         <input type="number" class="form-control" id="contactnumber">
-                        <div class="text-danger" id="contactnumber-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="companyemail" class="col-sm-3 col-form-label">Company Email</label>
                     <div class="col-sm-9">
                         <input type="email" class="form-control" id="companyemail">
-                        <div class="text-danger" id="companyemail-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="companyLogo" class="col-sm-3 col-form-label">Company Logo</label>
                     <div class="col-sm-9">
                         <input type="file" class="form-control" id="companyLogo">
-                        <div class="text-danger" id="companyLogo-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="dtipermit" class="col-sm-3 col-form-label">DTI Business Registration & Permit</label>
                     <div class="col-sm-9">
                         <input type="file" class="form-control" id="dtipermit">
-                        <div class="text-danger" id="dtipermit-errorMsg"></div>
                     </div>
                 </div>
                 
@@ -152,21 +139,18 @@
                     <label for="emailaddress" class="col-sm-3 col-form-label">Email address</label>
                     <div class="col-sm-9">
                         <input type="email" class="form-control" id="emailaddress">
-                        <div class="text-danger" id="emailaddress-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 mt-3 ms-4">
                     <label for="password" class="col-sm-3 col-form-label">Password</label>
                     <div class="col-sm-9">
                         <input type="password" class="form-control" id="password">
-                        <div class="text-danger" id="password-errorMsg"></div>
                     </div>
                 </div>
                 <div class="row mb-3 mt-3 ms-4">
                     <label for="confirmpassword" class="col-sm-3 col-form-label">Confirm password</label>
                     <div class="col-sm-9">
                         <input type="password" class="form-control" id="confirmpassword">
-                        <div class="text-danger" id="confirmpassword-errorMsg"></div>
                     </div>
                 </div>
 

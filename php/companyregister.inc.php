@@ -88,7 +88,7 @@
         // <---------------------------------------Employers Details Validation---------------------------------------------------->
         // Validation for employee name
         if(empty($_POST['employerName'])) {
-            $employerNameRR = array('status' => 'error', 'message' => 'Fullname is required.');
+            $employerNameRR = array('status' => 'error', 'message' => 'Employer Fullname is required.');
         } elseif(!isValidFullname($_POST['employerName'])) {
             $employerNameRR = array('status' => 'error', 'message' => 'Only characters are allowed.');
         } else {
@@ -132,7 +132,7 @@
         if(empty($_POST['companySize'])) {
             $companySizeRR = array('status' => 'error', 'message' => 'Company Size is required.');
         } elseif(!isValidNumber($_POST['companySize'])) {
-            $companySizeRR = array('status' => 'error', 'message' => 'Numbers only. ex. 100000 or 100');
+            $companySizeRR = array('status' => 'error', 'message' => 'Only numbers are allowed.');
         } else {
             $companySizeRR = array('status' => 'success');
             $companySize = sanitize_input($_POST['companySize']);
@@ -141,7 +141,7 @@
         if(empty($_POST['companyRevenue'])) {
             $companyRevenueRR = array('status' => 'error', 'message' => 'Company Revenue is required.');
         } elseif(!isValidNumber($_POST['companyRevenue'])) {
-            $companyRevenueRR = array('status' => 'error', 'message' => 'Numbers only. ex. 100000 or 100');
+            $companyRevenueRR = array('status' => 'error', 'message' => 'Only numbers are allowed.');
         } else {
             $companyRevenueRR = array('status' => 'success');
             $companyRevenue = sanitize_input($_POST['companyRevenue']);
@@ -168,7 +168,7 @@
         if(empty($_POST['contactNumber'])) {
             $contactNumberRR = array('status' => 'error', 'message' => 'Contact Number is required.');
         } elseif(!preg_match('/^[0-9]*$/', $_POST['contactNumber'])) {
-            $contactNumberRR = array('status' => 'error', 'message' => 'Please enter a valid number.');
+            $contactNumberRR = array('status' => 'error', 'message' => 'Only numbers are allowed.');
         } else {
             $contactNumberRR = array('status' => 'success');
             $contactNumber = sanitize_input($_POST['contactNumber']);
@@ -178,7 +178,7 @@
         if(empty($_POST['companyEmail'])) {
             $companyEmailRR = array('status' => 'error', 'message' => 'Company Email is required.');
         } elseif(!filter_var($_POST['companyEmail'], FILTER_VALIDATE_EMAIL)) {
-            $companyEmailRR = array('status' => 'error', 'message' => 'Email is not valid.');
+            $companyEmailRR = array('status' => 'error', 'message' => 'Email is invalid.');
         } else {
             $companyEmailRR = array('status' => 'success');
             $companyEmail = sanitize_input($_POST['companyEmail']);
@@ -210,9 +210,9 @@
 
         // Validation for email 
         if(empty($_POST['email'])) {
-            $emailRR = array('status' => 'error', 'message' => 'Email is required.');
+            $emailRR = array('status' => 'error', 'message' => 'Email Address is required.');
         } elseif(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            $emailRR = array('status' => 'error', 'message' => 'Email is not valid.');
+            $emailRR = array('status' => 'error', 'message' => 'Email is invalid.');
         } elseif(isEmployer($_POST['email']) || isJobseeker($_POST['email'])) {
             $emailRR = array('status' => 'error', 'message' => 'Email is already used.');
         } else {
@@ -233,9 +233,9 @@
 
         // Validation for confirmpassword
         if(empty($_POST['confirmPassword'])) {
-            $confirmPasswordRR = array('status' => 'error', 'message' => 'Confirm password is required.');
+            $confirmPasswordRR = array('status' => 'error', 'message' => 'Confirm Password is required.');
         } elseif($_POST['password'] != $_POST['confirmPassword']) {
-            $confirmPasswordRR = array('status' => 'error', 'message' => 'Confirm password does not match.');
+            $confirmPasswordRR = array('status' => 'error', 'message' => 'Confirm Password does not match.');
         } else {
             $confirmPasswordRR = array('status' => 'success');
         }

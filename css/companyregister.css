@@ -1,85 +1,98 @@
-.masthead{
+.masthead {
     background-size: cover;
     min-height: 100vh;
-    background-color: #00C2D6;
- 
-}.navbar-light{
-    background-color: #FFFFFF;
-    margin:0%;
+    background-color: #00c2d6;
 }
-.navbar-expand-lg{
-    font-family: 'Montserrat', sans-serif;
+
+.navbar-light {
+    background-color: #ffffff;
+    margin: 0%;
+}
+
+.navbar-expand-lg {
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
-    height:100px;
-    width:100%;
-    
-    
-}.dropdown-item{
-    font-family: 'Montserrat', sans-serif;
+    height: 100px;
+    width: 100%;
+}
+
+.dropdown-item {
+    font-family: "Montserrat", sans-serif;
     font-weight: 550;
     font-size: 20px;
     width: 100%;
-   
-   
-}.dropdown:hover .dropdown-menu{
+}
+
+.dropdown:hover .dropdown-menu {
     display: block;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     width: 80px;
-    
-}.dropdown-menu:hover{
+}
+
+.dropdown-menu:hover {
     display: block;
 }
-.navbar .nav-link:hover{
-    background-color: #00C2D6;
+
+.navbar .nav-link:hover {
+    background-color: #00c2d6;
     border-radius: 15px;
-}.dropdown-menu .dropdown-item:hover{
-    background-color: #00C2D6;
-    border-radius: 10px;
-
-}.nav-link {
-    color: black !important;
-  
-  }
-  .nav-link.active {
-    color: black !important;
-    background-color: #00C2D6;
-    border-radius: 10px;
-  }
-.dropdown:hover{
-    background-color: #00C2D6;
-    border-radius: 10px;
-    
-   
-
-}.para{
-    background-color: #FFFFFF;
-}.para2{
-    background-color: #FFFFFF;
-    
-}.position{
-    margin-left: 400px;
-}.page-footer{
-    background-color: #00C2D6;
-
 }
-h1{
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #00c2d6;
+    border-radius: 10px;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.nav-link.active {
+    color: black !important;
+    background-color: #00c2d6;
+    border-radius: 10px;
+}
+
+.dropdown:hover {
+    background-color: #00c2d6;
+    border-radius: 10px;
+}
+
+.para {
+    background-color: #ffffff;
+}
+
+.para2 {
+    background-color: #ffffff;
+}
+
+.position {
+    margin-left: 400px;
+}
+
+.page-footer {
+    background-color: #00c2d6;
+}
+
+h1 {
     position: absolute;
     width: 954px;
     height: 74px;
     left: -0px;
     top: -73px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 700px;
     font-size: 25px;
     line-height: 70px;
-    color: #FFFFFF;
-    background: #00C2D6;
+    color: #ffffff;
+    background: #00c2d6;
 }
-h2{
-    font-family: 'Montserrat', sans-serif;
+
+h2 {
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 25px;
@@ -87,29 +100,33 @@ h2{
     text-align: center;
     color: #372732;
 }
-.container{
+
+.container {
     position: relative;
     width: 954px;
     height: 1500px;
     left: 5px;
     top: 110px;
-    background: #FFFFFF;
+    background: #ffffff;
 }
-.container input{
+
+.container input {
     width: 586px;
     height: 39px;
     left: 477px;
     top: 686px;
 }
-#exampleFormControlTextarea1{
+
+#exampleFormControlTextarea1 {
     width: 586px;
     height: 174px;
     left: 477px;
     top: 686px;
 }
-#SAVE-NOW{
+
+#SAVE-NOW {
     position: relative;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 20px;
@@ -118,16 +135,24 @@ h2{
     border-radius: 10px;
     line-height: 30px;
     border: 0;
-    background-color: #00C2D6;
-}hr{
-    border:1px solid black;
-    
-}input[type=file]::file-selector-button {
-    
-    background-color: #00C2D6;
-    color: black;    
+    background-color: #00c2d6;
 }
-.form-control{
-    background-color: #ECECEC;
+
+hr {
+    border: 1px solid black;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #00c2d6;
+    color: black;
+}
+
+.form-control {
+    background-color: #ececec;
     border-radius: 10px;
+    margin-bottom: 7px;
+}
+
+.popover {
+    overflow: visible
 }

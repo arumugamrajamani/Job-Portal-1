@@ -31,14 +31,13 @@ $(document).ready(function(){
     $('#fullname').on('keyup', function() {
         let fullname = $('#fullname').val();
         if(fullname.length == 0) {
-            $('#fullname').removeClass().addClass('form-control border-danger');
-            $('#fullname-errorMsg').text("Fullname is required.");
+            $('#fullname').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#fullname').popover({ placement: 'right', content: 'Fullname is required.'}).popover('show');
         } else if(!isValidName(fullname)) {
-            $('#fullname').removeClass().addClass('form-control border-danger');
-            $('#fullname-errorMsg').text("Only characters are allowed.");
+            $('#fullname').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#fullname').popover({ placement: 'right', content: 'Only characters are allowed.' }).popover('show');
         } else {
-            $('#fullname').removeClass().addClass('form-control border-success');
-            $('#fullname-errorMsg').text(null);
+            $('#fullname').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
 
@@ -46,14 +45,13 @@ $(document).ready(function(){
     $('#mobilenumber').on('keyup', function() {
         let mobilenumber = $('#mobilenumber').val();
         if(mobilenumber.length == 0) {
-            $('#mobilenumber').removeClass().addClass('form-control border-danger');
-            $('#mobilenumber-errorMsg').text("Mobile number is required.");
+            $('#mobilenumber').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#mobilenumber').popover({ placement: 'right', content: 'Mobile number is required.'}).popover('show');
         } else if(isNumber(mobilenumber) == false) {
-            $('#mobilenumber').removeClass().addClass('form-control border-danger');
-            $('#mobilenumber-errorMsg').text("Mobile number must be numeric.");
+            $('#mobilenumber').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#mobilenumber').popover({ placement: 'right', content: 'Mobile number must be numeric.'}).popover('show');
         } else {
-            $('#mobilenumber').removeClass().addClass('form-control border-success');
-            $('#mobilenumber-errorMsg').text(null);
+            $('#mobilenumber').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
 
@@ -61,14 +59,13 @@ $(document).ready(function(){
     $('#email').on('keyup', function() {
         let email = $('#email').val();
         if (email.length == 0) {
-            $('#email').removeClass().addClass('form-control border-danger');
-            $('#email-errorMsg').text("Email is required.");
+            $('#email').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#email').popover({ placement: 'right', content: 'Email is required.'}).popover('show');
         } else if(isEmail(email) == false) {
-            $('#email').removeClass().addClass('form-control border-danger');
-            $('#email-errorMsg').text("Email is not valid.");
+            $('#email').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#email').popover({ placement: 'right', content: 'Email is invalid.'}).popover('show');
         } else {
-            $('#email').removeClass().addClass('form-control border-success');
-            $('#email-errorMsg').text(null);
+            $('#email').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
 
@@ -76,15 +73,14 @@ $(document).ready(function(){
     $('#password').on('keyup', function() {
         let password = $('#password').val();
         if(password.length == 0) {
-            $('#password').removeClass().addClass('form-control border-danger');
-            $('#password-errorMsg').text("Password is required.");
+            $('#password').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#password').popover({ placement: 'right', content: 'Password is required.'}).popover('show');
         } else if(password.length < 8 || password.length > 30) {
-            $('#password').removeClass().addClass('form-control border-danger');
-            $('#password-errorMsg').text("Password must be between 8 and 30 characters.");
+            $('#password').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#password').popover({ placement: 'right', content: 'Password must be between 8 and 30 characters.'}).popover('show');
         } 
         else {
-            $('#password').removeClass().addClass('form-control border-success');
-            $('#password-errorMsg').text(null);
+            $('#password').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
     
@@ -93,14 +89,13 @@ $(document).ready(function(){
         let password = $('#password').val();
         let confirmpassword = $('#confirmpassword').val();
         if(confirmpassword.length == 0){
-            $('#confirmpassword').removeClass().addClass('form-control border-danger');
-            $('#cpassword-errorMsg').text("Confirm password is required.");
+            $('#confirmpassword').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#confirmpassword').popover({ placement: 'right', content: 'Confirm password is required.'}).popover('show');
         } else if(password != confirmpassword) {
-            $('#confirmpassword').removeClass().addClass('form-control border-danger');
-            $('#cpassword-errorMsg').text("Password does not match.");
+            $('#confirmpassword').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#confirmpassword').popover({ placement: 'right', content: 'Confirm password does not match.'}).popover('show');
         } else {
-            $('#confirmpassword').removeClass().addClass('form-control border-success');
-            $('#cpassword-errorMsg').text(null);
+            $('#confirmpassword').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
 
@@ -141,42 +136,37 @@ $(document).ready(function(){
                     // if there is an error in fullname, display error message
                     if(data.fullnameRR.status == 'error') {
                         $('#fullname').removeClass().addClass('form-control border-danger');
-                        $('#fullname-errorMsg').text(data.fullnameRR.message);
+                        $('#fullname').popover({ placement: 'right', content: data.fullnameRR.message }).popover('show');
                     } else {
-                        $('#fullname').removeClass().addClass('form-control border-success');
-                        $('#fullname-errorMsg').text(null);
+                        $('#fullname').removeClass().addClass('form-control border-success').popover('dispose');
                     }
                     // if there is an error in number, display error message
                     if(data.mobilenumberRR.status == 'error') {
                         $('#mobilenumber').removeClass().addClass('form-control border-danger');
-                        $('#mobilenumber-errorMsg').text(data.mobilenumberRR.message);
+                        $('#mobilenumber').popover({ placement: 'right', content: data.mobilenumberRR.message }).popover('show');
                     } else {
-                        $('#mobilenumber').removeClass().addClass('form-control border-success');
-                        $('#mobilenumber-errorMsg').text(null);
+                        $('#mobilenumber').removeClass().addClass('form-control border-success').popover('dispose');
                     }
                     // if there is an error in email, display error message
                     if(data.emailRR.status == 'error') {
                         $('#email').removeClass().addClass('form-control border-danger');
-                        $('#email-errorMsg').text(data.emailRR.message);
+                        $('#email').popover({ placement: 'right', content: data.emailRR.message }).popover('show');
                     } else {
-                        $('#email').removeClass().addClass('form-control border-success');
-                        $('#email-errorMsg').text(null);
+                        $('#email').removeClass().addClass('form-control border-success').popover('dispose');
                     }
                     // if there is an error in password, display error message
                     if(data.passwordRR.status == 'error') {
                         $('#password').removeClass().addClass('form-control border-danger');
-                        $('#password-errorMsg').text(data.passwordRR.message);
+                        $('#password').popover({ placement: 'right', content: data.passwordRR.message }).popover('show');
                     } else {
-                        $('#password').removeClass().addClass('form-control border-success');
-                        $('#password-errorMsg').text(null);
+                        $('#password').removeClass().addClass('form-control border-success').popover('dispose');
                     }
                     // if there is an error in confirm password, display error message
                     if(data.confirmpasswordRR.status == 'error') {
                         $('#confirmpassword').removeClass().addClass('form-control border-danger');
-                        $('#cpassword-errorMsg').text(data.confirmpasswordRR.message);
+                        $('#confirmpassword').popover({ placement: 'right', content: data.confirmpasswordRR.message }).popover('show');
                     } else {
-                        $('#confirmpassword').removeClass().addClass('form-control border-success');
-                        $('#cpassword-errorMsg').text(null);
+                        $('#confirmpassword').removeClass().addClass('form-control border-success').popover('dispose');
                     }
                 }   
             }

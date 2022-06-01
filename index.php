@@ -152,15 +152,15 @@
 
         <section class="masthead mh1" id="faq">
             <br><br><br><br><br><br>
-            <div class="container" style="width: 1200px;">
+            <div class="container" id="faq-list" style="width: 1200px;">
                 <div class="accordion" id="accordion">
                     <h1 class="text-center faq">FREQUENTLY ASKED QUESTIONS</h1><br>
                         <div class="row height d-flex justify-content-center align-items-center">
                         <div class="col-md-8">
                             <div class="search">
                             <i class="bi bi-search"></i>
-                            <input type="text" class="form-control" placeholder="Search a question" style="border-radius: 14px;">
-                            <button class="btn" style="background-color: #00C2D6;border-radius: 14px;">Search</button>
+                            <input type="text" class="form-control" id="faqsearch-text" placeholder="Search a question" style="border-radius: 14px;">
+                            <button class="btn" id="faqsearch" style="background-color: #00C2D6;border-radius: 14px;">Search</button>
                             </div>  
                         </div>
                         </div><br>
@@ -1454,5 +1454,6 @@
         <br>
     </div>
     <script src="js/contactus.js"></script>
+    <script src="js/faqsearch.js"></script>
 </body>
 </html>

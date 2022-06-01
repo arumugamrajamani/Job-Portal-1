@@ -29,10 +29,10 @@
 					<div class="collapse navbar-collapse" id="toggleMobileMenu">
 						<ul class="navbar-nav ms-auto text-center fw-bold">
 							<nav class="navbar navbar-light">     
-								<li><a class="nav-link me-5  btn1 " href="index.php#home">Home</a></li>
-								<li><a class="nav-link me-5  btn1 " href="index.php#aboutus">About Us</a></li>
-								<li><a class="nav-link me-5 " href="index.php#contactus">Contact Us</a></li>
-								<li><a class="nav-link me-5 " href="index.php#faq">FAQ</a></li>
+								<li><a class="nav-link me-5" href="index.php#home">Home</a></li>
+								<li><a class="nav-link me-5" href="index.php#aboutus">About Us</a></li>
+								<li><a class="nav-link me-5" href="index.php#contactus">Contact Us</a></li>
+								<li><a class="nav-link me-5" href="index.php#faq">FAQ</a></li>
 								<li class="nav-item dropdown"><a class="nav-link dropdown-toggle  mx-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
 								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 									<li><a class="dropdown-item " href="companyregister.php">Employer</a></li>

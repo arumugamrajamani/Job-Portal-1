@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2">
     <div class="color-overlay">
         <div class="container-fluid">
             <nav id="navbar-example2" class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow " >
@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+    <div data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <section class="masthead" id="home">
             <br><br><br>
             <h1 class="mt-5 ms-4 pt-5 text-center tag1">Employment powered by Technology. </h1>

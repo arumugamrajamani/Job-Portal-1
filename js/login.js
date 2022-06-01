@@ -1,6 +1,7 @@
 $(document).ready(function(){
     // Trigger this when user click login button
-    $('#login').on('click', function(){
+    $('form').submit(function(event){
+        event.preventDefault();
         let email = $('#email').val();
         let password = $('#password').val();
 

@@ -21,8 +21,6 @@ $(document).ready(function(){
     function clearFields() {
         // Clear all the fields
         $('input').val(null);
-        // Clear all the error messages
-        $('.text-danger').text(null);
         // Clear all the error borders
         $('.form-control').removeClass().addClass('form-control');
     }
@@ -145,28 +143,28 @@ $(document).ready(function(){
                         $('#mobilenumber').removeClass().addClass('form-control border-danger');
                         $('#mobilenumber').popover({ placement: 'right', content: data.mobilenumberRR.message }).popover('show');
                     } else {
-                        $('#mobilenumber').removeClass().addClass('form-control border-success').popover('dispose');
+                        $('#mobilenumber').removeClass().addClass('form-control border-success');
                     }
                     // if there is an error in email, display error message
                     if(data.emailRR.status == 'error') {
                         $('#email').removeClass().addClass('form-control border-danger');
                         $('#email').popover({ placement: 'right', content: data.emailRR.message }).popover('show');
                     } else {
-                        $('#email').removeClass().addClass('form-control border-success').popover('dispose');
+                        $('#email').removeClass().addClass('form-control border-success');
                     }
                     // if there is an error in password, display error message
                     if(data.passwordRR.status == 'error') {
                         $('#password').removeClass().addClass('form-control border-danger');
                         $('#password').popover({ placement: 'right', content: data.passwordRR.message }).popover('show');
                     } else {
-                        $('#password').removeClass().addClass('form-control border-success').popover('dispose');
+                        $('#password').removeClass().addClass('form-control border-success');
                     }
                     // if there is an error in confirm password, display error message
                     if(data.confirmpasswordRR.status == 'error') {
                         $('#confirmpassword').removeClass().addClass('form-control border-danger');
                         $('#confirmpassword').popover({ placement: 'right', content: data.confirmpasswordRR.message }).popover('show');
                     } else {
-                        $('#confirmpassword').removeClass().addClass('form-control border-success').popover('dispose');
+                        $('#confirmpassword').removeClass().addClass('form-control border-success');
                     }
                 }   
             }

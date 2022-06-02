@@ -68,24 +68,27 @@
             $permitOriginalName = $row['permit_original_name'];
             $status = $row['is_verified'];
             // Append the employer information to the output variable
-            $output .= "<tr style='height: 6rem; border: none; box-shadow: none;width: 6rem; border: 0;'>
-                            <td class='view-logo'><img src='{$companyLogo}' alt='' style='width: 60px; cursor: pointer;' data-bs-toggle='modal' data-bs-target='#companylogo'></td>
-                            <td>{$companyName}</td>
-                            <td>{$employerName}</td>
-                            <td>{$employerPosition}</td>
-                            <td>{$email}</td>
-                            <td><i class='fa-solid fa-file-lines me-1'></i><a href='{$permitName}' download='{$permitOriginalName}'>{$permitOriginalName}</a></td>
-                            <td>" .isVerified($status). "</td> 
-                            <td style='width: 250px;'>
-                                <button style='width: 40px; border: 0;' class='btn-primary more-details' type='button' data-id='{$employerId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-viewdetails'><i class='fa-solid fa-eye'></i></button>
-                                <button style='width: 40px; border: 0;' class='btn-success fetch-details' type='button' data-id='{$employerId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails'><i class='fa fa-pen-to-square'></i></button>
-                                <button class='btn btn-danger delete-employer' type='button' id='btn-info' data-id='{$employerId}'  data-bs-toggle='modal' data-bs-target='#modal-delete'><i class='bi bi-trash3'></i></button>
-                            </td>
-                        </tr>";            
+            $output .= "<tr class='tr'>
+                        <td class='view-logo'><img src='{$companyLogo}' alt='' class='img-logo' data-bs-toggle='modal' data-bs-target='#companylogo'></td>
+                        <td>{$companyName}</td>
+                        <td>{$employerName}</td>
+                        <td>{$employerPosition}</td>
+                        <td>{$email}</td>
+                        <td><i class='fa-solid fa-file-lines me-1'></i><a href='{$permitName}' download='{$permitOriginalName}'>{$permitOriginalName}</a></td>
+                        <td>".isVerified($status)."</td> 
+                        <td>
+                            <button class='btn-primary more-details' data-id='{$employerId}'  type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-viewdetails' title='View Details'><i class='fa-solid fa-eye'></i></button>
+                            <button class='btn-success fetch-details'  data-id='{$employerId}' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails' title='Edit Details'><i class='fa fa-pen-to-square'></i></button>
+                            <button class='btn btn-danger delete-employer' data-id='{$employerId}' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-delete' title='Delete'><i class='bi bi-trash3'></i></button>
+                        </td>
+                    </tr>";            
         }
+
         // Return this output variable to the ajax call
         echo $output;
     } 
+
+    
 
     // When user click more details button
     if(isset($_POST['moreDetails'])){

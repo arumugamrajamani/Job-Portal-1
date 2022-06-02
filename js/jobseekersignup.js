@@ -127,7 +127,8 @@ $(document).ready(function(){
                         title: "Account Succesfully Created!",
                         icon: "success",
                         button: "Okay",
-                    }).then(function() {
+                    })
+                    .then(function() {
                         window.location = "login.php";
                     });
                 } else {

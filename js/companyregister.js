@@ -287,7 +287,8 @@ $(document).ready(function(){
                         title: "Account Succesfully Created!",
                         icon: "success",
                         button: "Okay",
-                    }).then(function() {
+                    })
+                    .then(function() {
                         window.location = "login.php";
                     });
                 // Checking of each input status and display error message

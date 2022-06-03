@@ -16,16 +16,15 @@
         <nav class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow-sm">
             <a href="#" class="navbar-brand ms-5">
             <img src="image/flogo.png" alt="Job Portal Logo" width="80" height="60"></a>
-            <h6 class="position-relative">Job Post Management</h6>
+            <h6 class="position-relative">Admin Dashboard</h6>
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                 <ul class="navbar-nav ms-auto  text-center">
                     <li class="nav-item dropdown me-5">
                         <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-circle"></i></a>
-                    </li>
                     <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown" >
                         <li><a class="dropdown-item  fs-5 text-white" href="admin-profile.php"><i class="bi bi-person-circle"></i> My Profile</a></li>
                         <li><hr class="dropdown-divider bg-white"></li>
-                        <li><a class="dropdown-item fs-5 text-white"href="#">Sign Out</a></li>
+                        <li><a class="dropdown-item fs-5 text-white" href="php/logout.php">Sign Out</a></li>
                     </ul>
                 </ul>
             </div>

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://kit.fontawesome.com/e5ed048aee.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- jQuery cdn link below -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -26,13 +25,13 @@
             <h6 class="position-relative">Employers Management</h6>
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                 <ul class="navbar-nav ms-auto  text-center">
-                  <li class="nav-item dropdown me-5">
-                      <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-circle"></i></a>
-                  <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown" >
-                      <li><a class="dropdown-item  fs-5 text-white" href="adminprofile.php"><i class="bi bi-person-circle"></i> My Profile</a></li>
-                      <li><hr class="dropdown-divider bg-white"></li>
-                      <li><a class="dropdown-item fs-5 text-white"href="#">Sign Out</a></li>
-                  </ul>
+                    <li class="nav-item dropdown me-5">
+                        <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-circle"></i></a>
+                    <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown" >
+                        <li><a class="dropdown-item  fs-5 text-white" href="adminprofile.php"><i class="bi bi-person-circle"></i> My Profile</a></li>
+                        <li><hr class="dropdown-divider bg-white"></li>
+                        <li><a class="dropdown-item fs-5 text-white"href="#">Sign Out</a></li>
+                    </ul>
                 </ul>
             </div>
         </nav>         
@@ -138,55 +137,55 @@
                                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                                     <label for="companyaddress" class="col-sm-3 ">Company Address:</label>
                                     <div class="col-sm-8">
-                                        <h5 id="companyaddress">Dasmarinas City, Cavite, Philippines</h5>
+                                        <h5 id="companyaddress"></h5>
                                     </div>
                                 </div>
                                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                                     <label for="companyceoname" class="col-sm-3 ">Company CEO Name:</label>
                                     <div class="col-sm-8">
-                                        <h5 id="companyceoname">Monkey D. Luffy</h5>
+                                        <h5 id="companyceoname"></h5>
                                     </div>
                                 </div>
                                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                                     <label for="companysize" class="col-sm-3 ">Company Size:</label>
                                     <div class="col-sm-8">
-                                        <h5 id="companysize">50</h5>
+                                        <h5 id="companysize"></h5>
                                     </div>
                                 </div>
                                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                                     <label for="companyrevenue" class="col-sm-3 ">Company Revenue:</label>
                                     <div class="col-sm-8">
-                                        <h5 id="companyrevenue">$100,000</h5>
+                                        <h5 id="companyrevenue"></h5>
                                     </div> 
                                 </div>
                                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                                     <label for="industry" class="col-sm-3 ">Industry:</label>
                                     <div class="col-sm-8">
-                                        <h5 id="industry">Engineering</h5>
+                                        <h5 id="industry"></h5>
                                     </div> 
                                 </div>
                                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                                     <label for="companynumber" class="col-sm-3 ">Company Number:</label>
                                     <div class="col-sm-8">
-                                        <h5 id="companynumber">29271922459</h5>
+                                        <h5 id="companynumber"></h5>
                                     </div> 
                                 </div>
                                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                                     <label for="companyemail" class="col-sm-3 ">Company Email:</label>
                                     <div class="col-sm-8">
-                                        <h5 id="companyemail">factset@gmail.com</h5>
+                                        <h5 id="companyemail"></h5>
                                     </div> 
                                 </div>
                                 <div class="row mb-3 mt-0 ms-4">
                                     <label for="companydescription" class="col-sm-3 fw-bold ">Company Description:</label>
                                     <div class="col-sm-8">
-                                        <p id="companyrdescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi voluptas deserunt saepe laborum accusamus laboriosam id porro inventore quos est.</p>
+                                        <p id="companyrdescription"></p>
                                     </div> 
                                 </div>
                                 <div class="row mb-3 mt-0 ms-4">
                                     <label for="datecreated" class="col-sm-3 fw-bold">Date/Time Created:</label>
                                     <div class="col-sm-8">
-                                        <h5 id="datecreated">May 19, 2022</h5>
+                                        <h5 id="datecreated"></h5>
                                     </div> 
                                 </div>
                             </form>

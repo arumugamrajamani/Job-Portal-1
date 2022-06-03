@@ -28,7 +28,7 @@
                     <li class="nav-item dropdown me-5">
                         <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-circle"></i></a>
                     <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown" >
-                        <li><a class="dropdown-item  fs-5 text-white" href="admin-profile.html"><i class="bi bi-person-circle"></i> My Profile</a></li>
+                        <li><a class="dropdown-item  fs-5 text-white" href="admin-profile.php"><i class="bi bi-person-circle"></i> My Profile</a></li>
                         <li><hr class="dropdown-divider bg-white"></li>
                         <li><a class="dropdown-item fs-5 text-white"href="#">Sign Out</a></li>
                     </ul>
@@ -40,13 +40,13 @@
     <button class="openbtn" title="Open Sidebar" onclick="openNav()"><i id="list-i" class="bi bi-list fa-2x"></i></button>
     <div class="sidebar shadow-lg" id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn text-dark" title="Close Sidebar" onclick="closeNav()">×</a>
-        <a href="dashboard.html"><img class="me-3" src="image/dashboard.png"> Dashboard</a><br>
-        <a href="employer-management.html"><img class="me-3" src="image/employers.png"> Employers Management</a><br>
-        <a href="jobseeker-management.html" class="highlight"><img class="me-3" src="image/jobseeker.png"> Job Seeker Management</a><br>
-        <a href="jobpost-management.html"><img class="me-3" src="image/jobpost.png"> Job Post Management</a><br>
-        <a href="jobcategories-management.html"><img class="me-3" src="image/jobcategory.png"> Job Categories Management</a><br>
-        <a href="admin-profile.html"><img class="me-3" src="image/profilesetting.png"> Profile Setting</a><br>
-        <a href="recycle-bin-employer.html"><img class="me-3" src="image/recycle-bin.png"> Recycle Bin</a><br>
+        <a href="dashboard.php"><img class="me-3" src="image/dashboard.png"> Dashboard</a><br>
+        <a href="employer-management.php"><img class="me-3" src="image/employers.png"> Employers Management</a><br>
+        <a href="jobseeker-management.php" class="highlight"><img class="me-3" src="image/jobseeker.png"> Job Seeker Management</a><br>
+        <a href="jobpost-management.php"><img class="me-3" src="image/jobpost.png"> Job Post Management</a><br>
+        <a href="jobcategories-management.php"><img class="me-3" src="image/jobcategory.png"> Job Categories Management</a><br>
+        <a href="admin-profile.php"><img class="me-3" src="image/profilesetting.png"> Profile Setting</a><br>
+        <a href="recycle-bin-employer.php"><img class="me-3" src="image/recycle-bin.png"> Recycle Bin</a><br>
     </div>
     <br><br><br>
     <div class="container-responsive p-md-5 mt-4 bg-white" id="main">

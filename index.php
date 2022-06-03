@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,455;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- JQuery CDN below -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- Toast CDN for functionality of toastr -->
@@ -23,27 +24,27 @@
 <body data-bs-spy="scroll" data-bs-target="#navbar-example2">
     <div class="color-overlay">
         <div class="container-fluid">
-            <nav id="navbar-example2" class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow " >
+            <nav id="navbar-example2" class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow ">
                 <a href="#" class="navbar-brand ms-3">
-                <img src="image/flogo.png" alt="Job Portal Logo" width="120" height="95"></a>
+                    <img src="image/flogo.png" alt="Job Portal Logo" width="120" height="95"></a>
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav ms-auto text-center fw-bold">
-                        <nav class="navbar navbar-light">     
+                        <nav class="navbar navbar-light">
                             <li><a class="nav-link me-5  btn1 " href="#home">Home</a></li>
                             <li><a class="nav-link me-5  btn1 " href="#aboutus">About Us</a></li>
                             <li><a class="nav-link me-5 " href="#contactus">Contact Us</a></li>
                             <li><a class="nav-link me-5 " href="#faq">FAQ</a></li>
                             <li class="nav-item dropdown"><a class="nav-link dropdown-toggle  mx-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item " href="companyregister.php">Employer</a></li>
-                                <li><a class="dropdown-item " href="jobseekersignup.php">JobSeeker</a></li>
-                            </ul>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item " href="companyregister.php">Employer</a></li>
+                                    <li><a class="dropdown-item " href="jobseekersignup.php">JobSeeker</a></li>
+                                </ul>
                             <li><a class="nav-link me-4 ms-3" href="login.php">Login</a></li>
                             <li><a class="nav-link" href="#"></a></li>
                         </nav>
                     </ul>
                 </div>
-            </nav>         
+            </nav>
         </div>
     </div>
 
@@ -53,56 +54,56 @@
             <h1 class="mt-5 ms-4 pt-5 text-center tag1">Employment powered by Technology. </h1>
             <div class="container d-flex">
                 <div>
-                    <p class="mt-0 tag2 fw-bold" style="text-align: justify;text-justify: inter-word;font-size: 29px;">Are you sick of standing in endless lines? Today, technology gives you an advantage in the job market by allowing you to apply with a single click and from the comfort of your home.  Now is the time to apply! Use <strong class="tech"> Tech-Ployment  </strong>and get your first online job!</p>
+                    <p class="mt-0 tag2 fw-bold" style="text-align: justify;text-justify: inter-word;font-size: 29px;">Are you sick of standing in endless lines? Today, technology gives you an advantage in the job market by allowing you to apply with a single click and from the comfort of your home. Now is the time to apply! Use <strong class="tech"> Tech-Ployment </strong>and get your first online job!</p>
                     <br>
                     <div class="row height d-flex justify-content-center align-items-center">
                         <div class="col-md-12">
-                        <div class="search">
-                            <i class="bi bi-search"></i>
-                            <input type="text" class="form-control" placeholder="Search a job" style="border-radius: 14px;">
-                            <button class="btn" style="background-color: #00C2D6;border-radius: 14px;">Search</button>
-                        </div>  
+                            <div class="search">
+                                <i class="bi bi-search"></i>
+                                <input type="text" class="form-control" placeholder="Search a job" style="border-radius: 14px;">
+                                <button class="btn" style="background-color: #00C2D6;border-radius: 14px;">Search</button>
+                            </div>
                         </div>
                     </div><br>
                     <div class="text-center">
                         <button type="button" onclick="location.href='searchjob-home.php'" class="btn btn-sm fs-6 text-dark fw-bold" style="background-color: #ffff; border-radius: 10px;">Browse All Job Post </button>
                     </div>
                 </div>
-                <img src="image/bg2-homepage.png" alt="background-2" class="ms-5" >
+                <img src="image/bg2-homepage.png" alt="background-2" class="ms-5">
             </div>
             <br><br><br><br><br><br>
         </section>
 
-        <section id="aboutus"  style="background:#FDF6EC;">
+        <section id="aboutus" style="background:#FDF6EC;">
             <br><br><br>
             <h4 class="text-center pt-4 mt-5 aboutus">About Us</h4>
             <br><br>
             <div class="para ms-5 shadow-sm pb-2 mt-0" style="width: 95%;">
                 <h3 class="text-center p-2" style="height:50px;color: #372732;background-color: #00C2D6;">Meet Our Team</h3><br>
                 <p class="text-center fs-5" style="color: #372732;"> We are Melham Construction Corporation interns who want to create a
-                                website for available jobs online. The traditional method of applying for jobs <br> has been
-                                innovated, and on this page we offer a minimalist, clean, and simple to use website for both
-                                job seekers and employers. Tech-Ployment is a <br> combination of technology and employment in
-                                which employability is now empowered by our modern technology.</p>
+                    website for available jobs online. The traditional method of applying for jobs <br> has been
+                    innovated, and on this page we offer a minimalist, clean, and simple to use website for both
+                    job seekers and employers. Tech-Ployment is a <br> combination of technology and employment in
+                    which employability is now empowered by our modern technology.</p>
             </div><br><br>
             <div class="para ms-5 shadow-sm " style="width: 95%;">
                 <h3 class="text-center pt-2" style="height:50px; color: #372732;background-color: #00C2D6;">Vision</h3><br>
                 <p class="text-center fs-5" style="color: #372732;"> To establish a career portal that can help both job seekers and employees in a healthy community.</p>
-                <br><br>     
+                <br><br>
             </div><br><br>
-            <div class="para ms-5 shadow-sm " style="width: 95%;">  
+            <div class="para ms-5 shadow-sm " style="width: 95%;">
                 <h3 class="text-center p-2" style="height:50px;color: #372732;background-color: #00C2D6;">Mission</h3><br>
                 <p class="text-center fs-5" style="color: #372732;"> To assist seekers and employers achieve their employment objectives. With creativity and skill, the ageny collaborates with community partners to adapt to changing needs and posibilities.</p>
-                <br><br>          
+                <br><br>
             </div><br><br>
             <div class="para ms-5 shadow-sm " style="width: 95%;">
                 <h3 class="text-center p-2" style="height:50px;color: #372732;background-color: #00C2D6;">Goal</h3><br>
                 <p class="text-center fs-5" style="color: #372732;"> This initiative aims to provide job seekers with a simple and effective job site. This aim to create an environment in which finding a job online is more time efficient and convenient than looking for one in person.</p>
-                <br><br>       
-            </div>
                 <br><br>
+            </div>
+            <br><br>
             <div class="para2 ms-5 shadow-sm" style="width: 95%;">
-                <div class="fs-5 ms-6 text-center" >
+                <div class="fs-5 ms-6 text-center">
                     <h3 class="p-2" style="height:50px;color: #372732;background-color: #00C2D6;">Our Services</h3>
                     <p>We serve individuals by connecting employers with workers who are looking for jobs. We want to instill confidence in everyone's outsourcing experience.</p><br>
                     <h3 class="" style="color: #372732;">Why we do it</h3>
@@ -115,32 +116,32 @@
         <section class="con0" id="contactus" style="background-color: #00C2D6;"><br><br><br><br>
             <div class="d-flex">
                 <form class="container con1 shadow" novalidate style="margin-left: 400px;">
-                <br>
-                <div class="col-sm-12 text-start row mb-3">
-                    <h1 class="text-center">CONTACT US</h1>
-                    <P class="text-center">Got a question? We'd love to hear from you. Send us <br> message and we'll  respond as soon as possible</P>
-                </div>      
-                <div class="row mb-3 mt-3 ms-4">              
-                    <div class="col-sm-11">                   
-                        <input type="text" class="form-control" id="fullname" placeholder="FULL NAME" style="background:#ECECEC;">               
-                        <div class="text-danger" id="fullname-errorMsg"></div>
+                    <br>
+                    <div class="col-sm-12 text-start row mb-3">
+                        <h1 class="text-center">CONTACT US</h1>
+                        <P class="text-center">Got a question? We'd love to hear from you. Send us <br> message and we'll respond as soon as possible</P>
                     </div>
-                </div>
-                <div class="row mb-3 ms-4">      
-                    <div class="col-sm-11">
-                        <input type="email" class="form-control" id="email" placeholder="EMAIL ADDRESS" style="background:#ECECEC;">
-                        <div class="text-danger" id="email-errorMsg"></div>
+                    <div class="row mb-3 mt-3 ms-4">
+                        <div class="col-sm-11">
+                            <input type="text" class="form-control" id="fullname" placeholder="FULL NAME" style="background:#ECECEC;">
+                            <div class="text-danger" id="fullname-errorMsg"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="row mb-3 ms-4">
-                    <div class="col-sm-11">
-                        <textarea id="concern" name="concern" rows="4" cols="58" placeholder="CONCERN"></textarea>
-                        <div class="text-danger" id="concern-errorMsg"></div>
+                    <div class="row mb-3 ms-4">
+                        <div class="col-sm-11">
+                            <input type="email" class="form-control" id="email" placeholder="EMAIL ADDRESS" style="background:#ECECEC;">
+                            <div class="text-danger" id="email-errorMsg"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn-info text-dark" style="width:300px;" id="submit">SEND MESSAGE</button>
-                </div>
+                    <div class="row mb-3 ms-4">
+                        <div class="col-sm-11">
+                            <textarea id="concern" name="concern" rows="4" cols="58" placeholder="CONCERN"></textarea>
+                            <div class="text-danger" id="concern-errorMsg"></div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn-info text-dark" style="width:300px;" id="submit">SEND MESSAGE</button>
+                    </div>
                 </form>
                 <div class="d-block ms-5">
                     <img src="image/bg-contactus.png" class="mt-5" alt="" style="margin-right: 300px;">
@@ -155,17 +156,17 @@
             <div class="container" id="faq-list" style="width: 1200px;">
                 <div class="accordion" id="accordion">
                     <h1 class="text-center faq">FREQUENTLY ASKED QUESTIONS</h1><br>
-                        <div class="row height d-flex justify-content-center align-items-center">
+                    <div class="row height d-flex justify-content-center align-items-center">
                         <div class="col-md-8">
                             <div class="search">
-                            <i class="bi bi-search"></i>
-                            <input type="text" class="form-control" id="faqsearch-text" placeholder="Search a question" style="border-radius: 14px;">
-                            <button class="btn" id="faqsearch" style="background-color: #00C2D6;border-radius: 14px;">Search</button>
-                            </div>  
+                                <i class="bi bi-search"></i>
+                                <input type="text" class="form-control" id="faqsearch-text" placeholder="Search a question" style="border-radius: 14px;">
+                                <button class="btn" id="faqsearch" style="background-color: #00C2D6;border-radius: 14px;">Search</button>
+                            </div>
                         </div>
-                        </div><br>
+                    </div><br>
                     <h3 class="text-center">How can we help?</h3>
-                    <h4 class="systems" >SYSTEMS</h4>
+                    <h4 class="systems">SYSTEMS</h4>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -175,12 +176,12 @@
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                Tech-ployment is a Job Adveretising platform that
-                                offers job vacancies around the country. This platform
-                                encourages people/job seekers to find job in an easy
-                                and affordable environment and strives to empower
-                                employers by making them connect to their future
-                                employees easily.
+                                    Tech-ployment is a Job Adveretising platform that
+                                    offers job vacancies around the country. This platform
+                                    encourages people/job seekers to find job in an easy
+                                    and affordable environment and strives to empower
+                                    employers by making them connect to their future
+                                    employees easily.
                                 </p>
                             </div>
                         </div>
@@ -194,12 +195,12 @@
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                Tech-Ployment helps businesses and employers
-                                around the country to locate the people who seeks job
-                                find the right one that they think they are best suitable
-                                for. With the help of industry digital technology and
-                                data-driven approach, this made the platform
-                                achievable and possible.
+                                    Tech-Ployment helps businesses and employers
+                                    around the country to locate the people who seeks job
+                                    find the right one that they think they are best suitable
+                                    for. With the help of industry digital technology and
+                                    data-driven approach, this made the platform
+                                    achievable and possible.
                                 </p>
                             </div>
                         </div>
@@ -207,18 +208,18 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="heading3">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                Is searching for a job online the best job search method? 
+                                Is searching for a job online the best job search method?
                             </button>
                         </h2>
                         <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                Because the world has progressed and anybody you
-                                could need to interact with is available online, the
-                                internet has become a key tool in today's employment
-                                market. Yes, looking for a job online is an effective job
-                                search approach when used in conjunction with other
-                                methods.
+                                    Because the world has progressed and anybody you
+                                    could need to interact with is available online, the
+                                    internet has become a key tool in today's employment
+                                    market. Yes, looking for a job online is an effective job
+                                    search approach when used in conjunction with other
+                                    methods.
                                 </p>
                             </div>
                         </div>
@@ -232,9 +233,9 @@
                         <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                Yes, company/employers offers hundreds of remote
-                                jobs across the country. You can find jobs suitable for
-                                you here in the Philippines.
+                                    Yes, company/employers offers hundreds of remote
+                                    jobs across the country. You can find jobs suitable for
+                                    you here in the Philippines.
                                 </p>
                             </div>
                         </div>
@@ -245,16 +246,16 @@
                                 How do I search jobs in TechPloyment?
                             </button>
                         </h2>
-                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordion">
-                                <div class="accordion-body">
+                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordion">
+                            <div class="accordion-body">
                                 <p>
-                                Here is a simple way to find and search jobs in TechPloyement:
-                                -In search bar/engine - type a job title and company
-                                you want to work with
-                                -You can also type the location on which you would
-                                like to get a job in.
-                                -Click on the search button to see job offering that
-                                matches what you searched.
+                                    Here is a simple way to find and search jobs in TechPloyement:
+                                    -In search bar/engine - type a job title and company
+                                    you want to work with
+                                    -You can also type the location on which you would
+                                    like to get a job in.
+                                    -Click on the search button to see job offering that
+                                    matches what you searched.
                                 </p>
                             </div>
                         </div>
@@ -268,7 +269,7 @@
                         <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                Yes, it is 100% free to users such as employers and jobseekers.
+                                    Yes, it is 100% free to users such as employers and jobseekers.
                                 </p>
                             </div>
                         </div>
@@ -283,9 +284,9 @@
                         <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                Unfortunately, no. But, we are open to suggestion and
-                                very eager to upgrade the system based on the review
-                                of our users.
+                                    Unfortunately, no. But, we are open to suggestion and
+                                    very eager to upgrade the system based on the review
+                                    of our users.
                                 </p>
                             </div>
                         </div>
@@ -300,13 +301,13 @@
                         <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                Here’s some way to improve your job search results:
-                                -Writing precise and accurate job you want to find
-                                -Ensuring that your spelling is correct and there are no
-                                typographical error
-                                -Avoid using abbreviations (e.g. Curriculum Vitae
-                                instead of CV)
-                                -Apply jobs only in your area of expertise
+                                    Here’s some way to improve your job search results:
+                                    -Writing precise and accurate job you want to find
+                                    -Ensuring that your spelling is correct and there are no
+                                    typographical error
+                                    -Avoid using abbreviations (e.g. Curriculum Vitae
+                                    instead of CV)
+                                    -Apply jobs only in your area of expertise
                                 </p>
                             </div>
                         </div>
@@ -321,8 +322,8 @@
                         <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                No, as we have mentioned in previous FAQ, applying
-                                job here in Tech-Ployment is 100% free.
+                                    No, as we have mentioned in previous FAQ, applying
+                                    job here in Tech-Ployment is 100% free.
                                 </p>
                             </div>
                         </div>
@@ -332,15 +333,15 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
                                 Is it possible to apply jobs without
                                 getting registered in TechPloyment?
-                                
+
                             </button>
                         </h2>
                         <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                Unfortunately we need you to register in able to keep
-                                tracks on your documents and for employers to
-                                process it easily
+                                    Unfortunately we need you to register in able to keep
+                                    tracks on your documents and for employers to
+                                    process it easily
                                 </p>
                             </div>
                         </div>
@@ -355,9 +356,9 @@
                         <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                Yes, Tech-Ployment offers hundreds of jobs across the
-                                country and there is no problem applying multiple jobs
-                                at the same time.
+                                    Yes, Tech-Ployment offers hundreds of jobs across the
+                                    country and there is no problem applying multiple jobs
+                                    at the same time.
                                 </p>
                             </div>
                         </div>
@@ -371,11 +372,11 @@
                         <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                No, there is no limit on how many jobs you can apply
-                                to but it is in the best of interest of the employers to
-                                know what you are capable of and so applying of the
-                                job suited to your skills is the best way to go.
-                                
+                                    No, there is no limit on how many jobs you can apply
+                                    to but it is in the best of interest of the employers to
+                                    know what you are capable of and so applying of the
+                                    job suited to your skills is the best way to go.
+
                                 </p>
                             </div>
                         </div>
@@ -385,15 +386,15 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
                                 Does Tech-Ployment have job
                                 alerts?
-                                
+
                             </button>
                         </h2>
                         <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                Yes, one of the main feature that Tech-Ployment
-                                offers is that it has job alerts.
-                                
+                                    Yes, one of the main feature that Tech-Ployment
+                                    offers is that it has job alerts.
+
                                 </p>
                             </div>
                         </div>
@@ -407,7 +408,7 @@
                         <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                Job alerts notify the users about job vacancies or openings depending on your field of interest
+                                    Job alerts notify the users about job vacancies or openings depending on your field of interest
                                 </p>
                             </div>
                         </div>
@@ -415,20 +416,20 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="heading15">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
-                                What are the benefits of job alerts? How can I receive it? 
+                                What are the benefits of job alerts? How can I receive it?
                             </button>
                         </h2>
                         <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                The biggest advantage of job alerts is that most
-                                relevant jobs based on your said expertise that are
-                                vacant or opened will be delivered right into your
-                                inbox. Which basically informs you about the job
-                                openings as soon as they are posted. You can receive
-                                it by registering and by the time you have your own
-                                account, you can choose to whether receive job alerts
-                                or not
+                                    The biggest advantage of job alerts is that most
+                                    relevant jobs based on your said expertise that are
+                                    vacant or opened will be delivered right into your
+                                    inbox. Which basically informs you about the job
+                                    openings as soon as they are posted. You can receive
+                                    it by registering and by the time you have your own
+                                    account, you can choose to whether receive job alerts
+                                    or not
                                 </p>
                             </div>
                         </div>
@@ -443,17 +444,17 @@
                         <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                -Based on our recruitment knowledge and experience
-                                hosting a job board, we can tell you that the greatest
-                                time to look for work is when there aren't many people
-                                looking. Because many businesses are restructuring,
-                                growing, and so on, there are more job openings in
-                                January. At this time of year, there is usually a lot of
-                                competition for open positions.
-                                -During the holidays, the greatest time to look for work
-                                is. Holidays, such as Christmas, are ideal times to look
-                                for work because many individuals are relaxed and
-                                eager to start looking when the new year begins.
+                                    -Based on our recruitment knowledge and experience
+                                    hosting a job board, we can tell you that the greatest
+                                    time to look for work is when there aren't many people
+                                    looking. Because many businesses are restructuring,
+                                    growing, and so on, there are more job openings in
+                                    January. At this time of year, there is usually a lot of
+                                    competition for open positions.
+                                    -During the holidays, the greatest time to look for work
+                                    is. Holidays, such as Christmas, are ideal times to look
+                                    for work because many individuals are relaxed and
+                                    eager to start looking when the new year begins.
                                 </p>
                             </div>
                         </div>
@@ -464,16 +465,16 @@
                                 Can I access the Tech-Ployment
                                 website in tablet or phone? (not
                                 quite sure yet)
-                                
+
                             </button>
                         </h2>
                         <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="heading17" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                Yes, Tech-Ployment is a responsive website and can be
-                                accessed with other devices as long as it has internet
-                                connection
-                                
+                                    Yes, Tech-Ployment is a responsive website and can be
+                                    accessed with other devices as long as it has internet
+                                    connection
+
                                 </p>
                             </div>
                         </div>
@@ -488,14 +489,14 @@
                         <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="heading18" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                You may contact us in ‘contact us page’ and we will
-                                answer your questions as soon as possible (Link of
-                                contact us page here!)
+                                    You may contact us in ‘contact us page’ and we will
+                                    answer your questions as soon as possible (Link of
+                                    contact us page here!)
                                 </p>
                             </div>
                         </div>
                     </div><br>
-                    <h4 class="fw-bold" >APPLICATION PROCESS</h4>
+                    <h4 class="fw-bold">APPLICATION PROCESS</h4>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="heading19">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
@@ -519,7 +520,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
                                 Can I get a job with no work
                                 experience?
-                                
+
                             </button>
                         </h2>
                         <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="heading20" data-bs-parent="#accordion">
@@ -529,7 +530,7 @@
                                     experience because they can do tasks quickly and
                                     efficiently. Even if you have no prior work experience,
                                     you can still find work.
-                                    
+
                                 </p>
                             </div>
                         </div>
@@ -550,7 +551,7 @@
                                     years of experience and you have two years of
                                     experience with the required skills, you are eligible to
                                     apply.
-                                    
+
                                 </p>
                             </div>
                         </div>
@@ -614,7 +615,7 @@
                                     job in person. Many businesses conduct their hiring
                                     processes online since it allows them to streamline the
                                     process and reduce paperwork.
-                                    
+
                                 </p>
                             </div>
                         </div>
@@ -629,9 +630,9 @@
                         <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="heading26" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                You may contact us in ‘contact us page’ and we will
-                                answer your questions as soon as possible (Link of
-                                contact us page here!)
+                                    You may contact us in ‘contact us page’ and we will
+                                    answer your questions as soon as possible (Link of
+                                    contact us page here!)
                                 </p>
                             </div>
                         </div>
@@ -710,7 +711,7 @@
                         <h2 class="accordion-header" id="heading31">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse31" aria-expanded="false" aria-controls="collapse31">
                                 When should I stop searching for a
-                                job after many disappointments? 
+                                job after many disappointments?
                             </button>
                         </h2>
                         <div id="collapse31" class="accordion-collapse collapse" aria-labelledby="heading31" data-bs-parent="#accordion">
@@ -737,9 +738,9 @@
                         <div id="collapse32" class="accordion-collapse collapse" aria-labelledby="heading32" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                You may contact us in ‘contact us page’ and we will
-                                answer your questions as soon as possible (Link of
-                                contact us page here!)
+                                    You may contact us in ‘contact us page’ and we will
+                                    answer your questions as soon as possible (Link of
+                                    contact us page here!)
                                 </p>
                             </div>
                         </div>
@@ -779,9 +780,9 @@
                         <div id="collapse34" class="accordion-collapse collapse" aria-labelledby="heading34" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                You may contact us in ‘contact us page’ and we will
-                                answer your questions as soon as possible (Link of
-                                contact us page here!)
+                                    You may contact us in ‘contact us page’ and we will
+                                    answer your questions as soon as possible (Link of
+                                    contact us page here!)
                                 </p>
                             </div>
                         </div>
@@ -790,7 +791,7 @@
                         <h2 class="accordion-header" id="heading35">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse35" aria-expanded="false" aria-controls="collapse35">
                                 Must I follow the company I want
-                                to work for on social media? 
+                                to work for on social media?
                             </button>
                         </h2>
                         <div id="collapse35" class="accordion-collapse collapse" aria-labelledby="heading35" data-bs-parent="#accordion">
@@ -811,7 +812,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse36" aria-expanded="false" aria-controls="collapse36">
                                 Should I use a different CV for each
                                 job application?
-                                
+
                             </button>
                         </h2>
                         <div id="collapse36" class="accordion-collapse collapse" aria-labelledby="heading36" data-bs-parent="#accordion">
@@ -837,9 +838,9 @@
                         <div id="collapse37" class="accordion-collapse collapse" aria-labelledby="heading37" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                You may contact us in ‘contact us page’ and we will
-                                answer your questions as soon as possible (Link of
-                                contact us page here!)
+                                    You may contact us in ‘contact us page’ and we will
+                                    answer your questions as soon as possible (Link of
+                                    contact us page here!)
                                 </p>
                             </div>
                         </div>
@@ -899,9 +900,9 @@
                         <div id="collapse40" class="accordion-collapse collapse" aria-labelledby="heading40" data-bs-parent="#accordion">
                             <div class="accordion-body">
                                 <p>
-                                You may contact us in ‘contact us page’ and we will
-                                answer your questions as soon as possible (Link of
-                                contact us page here!)
+                                    You may contact us in ‘contact us page’ and we will
+                                    answer your questions as soon as possible (Link of
+                                    contact us page here!)
                                 </p>
                             </div>
                         </div>
@@ -911,7 +912,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse41" aria-expanded="false" aria-controls="collapse41">
                                 How can I track my Job
                                 applications?
-                                
+
                             </button>
                         </h2>
                         <div id="collapse41" class="accordion-collapse collapse" aria-labelledby="heading41" data-bs-parent="#accordion">
@@ -1059,7 +1060,7 @@
                             </div>
                         </div>
                     </div><br>
-                    <h4 class="fw-bold" >INTERVIEW</h4>
+                    <h4 class="fw-bold">INTERVIEW</h4>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="heading49">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse49" aria-expanded="false" aria-controls="collapse49">
@@ -1085,7 +1086,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse50" aria-expanded="false" aria-controls="collapse50">
                                 Should I follow up after an
                                 interview?
-                                
+
                             </button>
                         </h2>
                         <div id="collapse50" class="accordion-collapse collapse" aria-labelledby="heading50" data-bs-parent="#accordion">
@@ -1099,7 +1100,7 @@
                                     but don't bombard your potential employer with mails
                                     and phone calls. Sending daily texts and calling the
                                     recruiter can irritate the recruiter.
-                                    
+
                                 </p>
                             </div>
                         </div>
@@ -1235,7 +1236,7 @@
                                     willing to fill the post during your interview.
                                     -When you ask this question, you'll have an idea of
                                     when you'll hear back from the interviewer.
-                                    
+
                                 </p>
                             </div>
                         </div>
@@ -1254,12 +1255,12 @@
                                     preparing as soon as you receive an invitation to
                                     impress your prospective employer, rather than waiting
                                     until the day of the interview.
-                                    
+
                                 </p>
                             </div>
                         </div>
                     </div><br>
-                    <h4 class="fw-bold" >GENERAL QUESTIONS</h4>
+                    <h4 class="fw-bold">GENERAL QUESTIONS</h4>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="heading57">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse57" aria-expanded="false" aria-controls="collapse57">
@@ -1303,7 +1304,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse59" aria-expanded="false" aria-controls="collapse59">
                                 How can I earn a good salary in my
                                 first job?
-                                
+
                             </button>
                         </h2>
                         <div id="collapse59" class="accordion-collapse collapse" aria-labelledby="heading59" data-bs-parent="#accordion">
@@ -1318,7 +1319,7 @@
                                     your first job. If you want to work for one of these
                                     companies, you may follow them on social media to be
                                     notified when a position becomes available.
-                                    
+
                                 </p>
                             </div>
                         </div>
@@ -1326,89 +1327,89 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="heading60">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse60" aria-expanded="false" aria-controls="collapse60">
-                            What skills do I need to get a 6-
-                            figure job?
-                        </button>
-                    </h2>
-                    <div id="collapse60" class="accordion-collapse collapse" aria-labelledby="heading60" data-bs-parent="#accordion">
-                        <div class="accordion-body">
-                            <p>
-                                Your ability is a key determining element in obtaining a
-                                high-paying job. There are numerous in-demand
-                                abilities that might help you earn well. Acquiring a skill
-                                does not always imply good compensation; your value
-                                in a given function is determined by your proficiency.
-                            </p>
+                                What skills do I need to get a 6-
+                                figure job?
+                            </button>
+                        </h2>
+                        <div id="collapse60" class="accordion-collapse collapse" aria-labelledby="heading60" data-bs-parent="#accordion">
+                            <div class="accordion-body">
+                                <p>
+                                    Your ability is a key determining element in obtaining a
+                                    high-paying job. There are numerous in-demand
+                                    abilities that might help you earn well. Acquiring a skill
+                                    does not always imply good compensation; your value
+                                    in a given function is determined by your proficiency.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </div><br>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="heading61">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse61" aria-expanded="false" aria-controls="collapse61">
-                            What skill are employers looking
-                            for in job seekers?
-                        </button>
-                    </h2>
-                    <div id="collapse61" class="accordion-collapse collapse" aria-labelledby="heading61" data-bs-parent="#accordion">
-                        <div class="accordion-body">
-                            <p>
-                                Many people think of hard talents when we discuss
-                                abilities. Employers like to hire people with specific
-                                hard talents, which is why they post job openings. Many
-                                eligible people apply for a job after it is advertised.
-                            </p>
+                    </div><br>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading61">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse61" aria-expanded="false" aria-controls="collapse61">
+                                What skill are employers looking
+                                for in job seekers?
+                            </button>
+                        </h2>
+                        <div id="collapse61" class="accordion-collapse collapse" aria-labelledby="heading61" data-bs-parent="#accordion">
+                            <div class="accordion-body">
+                                <p>
+                                    Many people think of hard talents when we discuss
+                                    abilities. Employers like to hire people with specific
+                                    hard talents, which is why they post job openings. Many
+                                    eligible people apply for a job after it is advertised.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </div><br>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="heading62">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse62" aria-expanded="false" aria-controls="collapse62">
-                            What do employers want from job
-                            seekers?
-                            
-                        </button>
-                    </h2>
-                    <div id="collapse62" class="accordion-collapse collapse" aria-labelledby="heading62" data-bs-parent="#accordion">
-                        <div class="accordion-body">
-                            <p>
-                                What an employer looks for in job candidates differs
-                                depending on the type of work the job seeker seeks and
-                                who the employer deems an ideal prospect. Aside from
-                                the work requirements, there are a few characteristics
-                                that employers look for in job applicants.
-                            </p>
+                    </div><br>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading62">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse62" aria-expanded="false" aria-controls="collapse62">
+                                What do employers want from job
+                                seekers?
+
+                            </button>
+                        </h2>
+                        <div id="collapse62" class="accordion-collapse collapse" aria-labelledby="heading62" data-bs-parent="#accordion">
+                            <div class="accordion-body">
+                                <p>
+                                    What an employer looks for in job candidates differs
+                                    depending on the type of work the job seeker seeks and
+                                    who the employer deems an ideal prospect. Aside from
+                                    the work requirements, there are a few characteristics
+                                    that employers look for in job applicants.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </div><br>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="heading63">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse63" aria-expanded="false" aria-controls="collapse63">
-                            Can I get a job by sending a cold email to employers?
-                        </button>
-                    </h2>
-                    <div id="collapse63" class="accordion-collapse collapse" aria-labelledby="heading63" data-bs-parent="#accordion">
-                        <div class="accordion-body">
-                            <p>
-                                Yes, you can acquire a job by sending employers cold
-                                emails. Even though many people believe that sending
-                                cold emails to the wrong person is a dangerous job
-                                search approach, you can still obtain good employment
-                                prospects by doing so (HR manager, CEO, etc.). While
-                                some businesses frown upon job seekers sending cold
-                                emails, others view it as a sign of interest and readiness
-                                to work.
-                            </p>
+                    </div><br>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading63">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse63" aria-expanded="false" aria-controls="collapse63">
+                                Can I get a job by sending a cold email to employers?
+                            </button>
+                        </h2>
+                        <div id="collapse63" class="accordion-collapse collapse" aria-labelledby="heading63" data-bs-parent="#accordion">
+                            <div class="accordion-body">
+                                <p>
+                                    Yes, you can acquire a job by sending employers cold
+                                    emails. Even though many people believe that sending
+                                    cold emails to the wrong person is a dangerous job
+                                    search approach, you can still obtain good employment
+                                    prospects by doing so (HR manager, CEO, etc.). While
+                                    some businesses frown upon job seekers sending cold
+                                    emails, others view it as a sign of interest and readiness
+                                    to work.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </div><br><br><br>
-            </div>
+                    </div><br><br><br>
+                </div>
         </section>--
-    </div>        
+    </div>
 
     <footer class="page-footer shadow-sm"><br>
         <div class="container-fluid text-start text-md-left mt-5">
             <div class="row">
-				<div class="col-md-2 mx-auto mb-4">
+                <div class="col-md-2 mx-auto mb-4">
                     <h6 class="text-uppercase ">JOB SEEKER</h6>
                     <ul class="list-unstyled">
                         <li class="my-0"><a href="jobseekersignup.php" class="text-dark" style="text-decoration: none;">Register</a></li>
@@ -1430,7 +1431,7 @@
                     <h6 class="text-uppercase ">OTHER INFORMATIONS</h6>
                     <ul class="list-unstyled">
                         <li class="my-0"></i> <a href="#faq" class="text-dark" style="text-decoration: none;">FAQ</a></li>
-                        <li class="my-0"></i> <a href="#aboutus" class="text-dark" style="text-decoration: none;">About us</a></li>               
+                        <li class="my-0"></i> <a href="#aboutus" class="text-dark" style="text-decoration: none;">About us</a></li>
                         <li class="my-0"></i><a href="privacypolicy.php" class="text-dark" style="text-decoration: none;">Privacy Policy</a></li>
                         <li class="my-0"></i> <a href="termsofuse.php" class="text-dark" style="text-decoration: none;">Terms of use</a></li>
                         <li class="my-0"></i> <a href="termsandcondition.php" class="text-dark" style="text-decoration: none;">Terms and conditions</a></li>
@@ -1449,11 +1450,12 @@
     </footer>
 
     <div class="container-fluid d-flex bg-white text-center pt-3">
-        <h5 > Copyrignt © TechPloyment 2022. All Rights Reserved.</h5>
+        <h5> Copyrignt © TechPloyment 2022. All Rights Reserved.</h5>
         <h5 style="margin-left: 1000px;">Developed by MCC Interns 2022, Job Portal</h5>
         <br>
     </div>
     <script src="js/contactus.js"></script>
     <script src="js/faqsearch.js"></script>
 </body>
+
 </html>

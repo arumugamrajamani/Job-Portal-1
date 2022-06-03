@@ -1,3 +1,13 @@
+function openNav() {
+    document.getElementById("mySidebar").style.left = "0";
+    document.getElementById("main").style.marginLeft = "390px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.left = "-100%";
+    document.getElementById("main").style.marginLeft= "230px";
+}
+
 $(document).ready(function() {
 
     // Call this function to reload the table data at first time
@@ -16,13 +26,13 @@ $(document).ready(function() {
             }
         })
     }
+
     // Function for searching of profile picture src and displaying to modal
     $('#body-h').on('click', '.view-pp', function(){
         let src = $(this).find('img').attr('src')
         $('#view-pp').attr('src', src)
     });
 
-    
     function GetSearchValue(){
         var search = $('#search').val();
         load_data(search);
@@ -55,7 +65,7 @@ $(document).ready(function() {
                 jobseekerId: jobseekerId
             },
             success: function(data){
-                $('#deleteJobseeker').modal('hide');
+                $('#modal-delete').modal('hide');
                 toastr.success('', 'Successfully Deleted!');
                 GetSearchValue();
             }
@@ -91,8 +101,6 @@ $(document).ready(function() {
         let jobseekerId = $(this).val();
         let jobseekerName = $('#e-jobseekername').val();
         let jobseekerNumber = $('#e-contactnumber').val();
-        let jobseekerEmail = $('#e-emailaddress').val();
-
 
         $.ajax({
             url: "php/jobseeker-management.inc.php",
@@ -102,8 +110,6 @@ $(document).ready(function() {
                 jobseekerId: jobseekerId,
                 jobseekerName: jobseekerName,
                 jobseekerNumber: jobseekerNumber,
-                jobseekerEmail: jobseekerEmail
-
             },
             success: function(){
                 $('#modal-editdetails').modal('hide');

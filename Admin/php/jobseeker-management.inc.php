@@ -46,29 +46,29 @@
             $number = $row['mobile_number'];
             $date = dateTimeConvertion($row['date_created']);
             //storing the data into $output.
-            $output .=  "
-            <tr style='height: 6rem; border: none; box-shadow: none;'>
-                <td class='view-pp'><img src='{$profilePicture}' alt='' style='width: 60px; cursor: pointer;' data-bs-toggle='modal' data-bs-target='#profile-picture'></td>
-                <td>{$fullName}</td>            
-                <td>{$number}</td>            
-                <td>{$email}</td>            
-                <td>{$date}</td>  
-                <td>
-                <button  class='btn-success fetch-details' style='width: 40px; border: 0;' type='button' id='btn-info' data-id='{$jobseekerId}' data-bs-toggle='modal' data-bs-target='#modal-editdetails'><i class='fa-solid fa-pen-to-square'></i></button>                                  
-                <button class='btn btn-danger delete-Btn' type='button' id='btn-info' data-id='{$jobseekerId}' data-bs-toggle='modal' data-bs-target='#deleteJobseeker'><i class='bi bi-trash3'></i></button></td>
-                </td>
-            </tr>";
+            $output .=  "<tr class='tr'>
+                            <td class='view-pp'><img src='{$profilePicture}' class='image' alt='' data-bs-toggle='modal' data-bs-target='#profile'></td>
+                            <td>{$fullName}</td>
+                            <td>{$number}</td>
+                            <td>{$email}</td>
+                            <td>{$date}</td>
+                            <td>              
+                                <button class='edit btn-success fetch-details' type='button' id='btn-info' data-id='{$jobseekerId}' data-bs-toggle='modal' data-bs-target='#modal-editdetails' title='Edit Details'><i class='fa-solid fa-pen-to-square'></i></button>                                  
+                                <button class='btn btn-danger delete-Btn' type='button' id='btn-info'  data-id='{$jobseekerId}' data-bs-toggle='modal' data-bs-target='#modal-delete' title='Delete'><i class='bi bi-trash3'></i></button>
+                            </td>
+                        </tr>";
         }
+
         // Return this output variable to the ajax call
         echo $output;
     }
 
     // when user delete a jobseeker
     if(isset($_POST['deleteJobseeker'])){
-        // Create query delete code here
-        //deleting the jobseeker in the database
-        $jobseekerId = $_POST['jobseekerId'];        
+        $jobseekerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);   
+        // deleting the jobseeker in the database
         mysqli_query($conn,"DELETE FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
+        // Return nothing to the ajax call
     }
 
     // When user click edit button return the selected employer information
@@ -92,24 +92,14 @@
         echo json_encode($response);
     }
 
-        // When user click save details button in edit modal
-        if(isset($_POST['saveDetails'])){
-            // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
-            $jobseekerId = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerId']));
-            $jobseekerName = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerName']));
-            $jobseekerNumber = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerNumber']));
-            $jobseekerEmail = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerEmail']));
-
-    
-            // Create query to update the jobseeker information
-            $updateQuery = mysqli_query($conn, "UPDATE jobseeker SET fullname = '$jobseekerName', mobile_number = '$jobseekerNumber', email = '$jobseekerEmail' WHERE jobseeker_id = '$jobseekerId'");
-    
-            if($updateQuery) {
-                echo "success";
-            } else {
-                echo "failed";
-            }
-        }
-
-
+    // When user click save details button in edit modal
+    if(isset($_POST['saveDetails'])){
+        // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
+        $jobseekerId = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerId']));
+        $jobseekerName = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerName']));
+        $jobseekerNumber = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerNumber']));
+        // Create query to update the jobseeker information
+        mysqli_query($conn, "UPDATE jobseeker SET fullname = '$jobseekerName', mobile_number = '$jobseekerNumber' WHERE jobseeker_id = '$jobseekerId'");
+        // Return nothing to the ajax call
+    }
 ?>

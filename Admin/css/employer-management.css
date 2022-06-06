@@ -130,8 +130,8 @@ body {
     border: 0;
 }
 
-.entries {
-    margin-top: 210px;
+.page-section {
+    margin-top: 50px;
 }
 
 .pagination {
@@ -409,4 +409,9 @@ td {
 .me-3 {
     width: 30px;
     height: 30px;
+}
+
+/* Added by MJ */
+.page-item {
+    cursor: pointer;
 }

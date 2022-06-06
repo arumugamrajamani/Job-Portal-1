@@ -45,15 +45,40 @@
 
     // For loading of the employer management information
     if(isset($_POST['loadData'])){
-        // Variable for holding the result of the query
-        $output = "";
+
+        // Variables to store the data
+        $page = 0;
+        // Set the item limit per page
+        $pageLimit = 2;
+        // Variable for holding the loop result of the query
+        $tableData = "";
+
+        // Check if the page number is set
+        if(isset($_POST['page'])){
+            // Set the page number
+            $page = $_POST['page'];
+        // Check if search is set
+        } elseif(isset($_POST['search'])){
+            // Set the page number to 1
+            $page = 1;
+        } else {
+            // Set the page number to 1
+            $page = 1;
+        }
+
+        // Calculate the starting row
+        $start = ($page - 1) * $pageLimit;
+
         // Check if search is present
         if(isset($_POST['search'])){
             $search = $_POST['search'];
-            $statement = "SELECT * FROM employer WHERE company_name LIKE '%$search%' OR employer_name LIKE '%$search%' OR employer_position LIKE '%$search%' OR email LIKE '%$search%'";
+            $statement = "SELECT * FROM employer WHERE company_name LIKE '%$search%' OR employer_name LIKE '%$search%' OR employer_position LIKE '%$search%' OR email LIKE '%$search%' LIMIT $start, $pageLimit";
+            $paginationStatement = "SELECT * FROM employer WHERE company_name LIKE '%$search%' OR employer_name LIKE '%$search%' OR employer_position LIKE '%$search%' OR email LIKE '%$search%'";
         } else {
-            $statement = "SELECT * FROM employer";
+            $statement = "SELECT * FROM employer LIMIT $start, $pageLimit";
+            $paginationStatement = "SELECT * FROM employer";
         }
+
         // Get all employer information from the database
         $EmployerInfoQuery = mysqli_query($conn, $statement);
         while($row = mysqli_fetch_assoc($EmployerInfoQuery)){
@@ -68,7 +93,7 @@
             $permitOriginalName = $row['permit_original_name'];
             $status = $row['is_verified'];
             // Append the employer information to the output variable
-            $output .= "<tr class='tr'>
+            $tableData .= "<tr class='tr'>
                         <td class='view-logo'><img src='{$companyLogo}' alt='' class='img-logo' data-bs-toggle='modal' data-bs-target='#companylogo'></td>
                         <td>{$companyName}</td>
                         <td>{$employerName}</td>
@@ -84,11 +109,52 @@
                     </tr>";            
         }
 
-        // Return this output variable to the ajax call
-        echo $output;
-    } 
+        
+        // Query to get the total number of employers
+        $GetRecordsQuery = mysqli_query($conn, $paginationStatement);
+        // Query to get the total number of employers
+        $totalRecords = mysqli_num_rows($GetRecordsQuery);
+        // Calculate the total number of employers
+        $totalPages = ceil($totalRecords / $pageLimit);
+        $pagination = "";
 
-    
+        // check if the page number is greater than 1
+        if($page > 1){
+            // Set the previous page
+            $previous = $page - 1;
+            $pagination .=  "<li class='page-item' data-page='{$previous}'>
+                                <a class='page-link bg-info text-dark'>Previous</a>
+                            </li>";
+        }
+
+        // Loop through the pages
+        for($i = 1; $i <= $totalPages; $i++){
+            $active = '';
+            if($page == $i){
+                $active = 'active';
+            }
+            $pagination .= "<li class='page-item {$active}' data-page='{$i}'>
+                                <a class='page-link text-dark'>{$i}</a>
+                            </li>";
+        }
+
+        // Check if there are more than 1 page
+        if($page < $totalPages){
+            // Set the next page
+            $next = $page + 1;
+            $pagination .=  "<li class='page-item' data-page='{$next}'>
+                                <a class='page-link bg-info text-dark'>Next</a>
+                            </li>";
+        }
+
+        // Stored and return the displays for employer management page
+        $response = array(
+            'tableData' => $tableData,
+            'pagination' => $pagination
+        );
+        // Return this output variable to the ajax call
+        echo json_encode($response);
+    } 
 
     // When user click more details button
     if(isset($_POST['moreDetails'])){

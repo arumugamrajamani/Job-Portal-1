@@ -8,32 +8,42 @@ function closeNav() {
     document.getElementById("main").style.marginLeft= "230px";
 }
 
-
 $(document).ready(function() {
     // Call this function to reload the table data at first time
     load_data();
     // Function for loading of table data
-    function load_data(search){
+    function load_data(search, page){
         $.ajax({
             url: "php/employer-management.inc.php",
             type: "POST",
             data: {
                 loadData: true,
-                search: search
+                search: search,
+                page: page
             },
+            dataType: "JSON",
             success: function(data){
-                $('#body-h').html(data);
+                $('#body-h').html(data.tableData);
+                $('#pagination').html(data.pagination)
             }
         })
     }
 
+    // Function for getting the current value in search box
     function GetSearchValue(){
         var search = $('#search').val();
-        load_data(search);
+        return search;
+    }
+
+    // Function for getting the current page number
+    function getCurrentPage(){
+        var page = $('#pagination').find('.active').attr('data-page');
+        return page;
     }
 
     // Function for searching of company logo src and displaying to modal
     $('#body-h').on('click', '.view-logo', function(){
+        var logo = $(this).data('logo');
         let src = $(this).find('img').attr('src')
         $('#view-logo').attr('src', src)
     })
@@ -46,6 +56,12 @@ $(document).ready(function() {
         } else {
             load_data();
         }
+    });
+
+    // Trigger this when user click on the pagination 
+    $('#pagination').on('click', '.page-item', function(){
+        let page = $(this).attr('data-page');
+        load_data(GetSearchValue(), page);
     });
 
     // Trigger this when user click more details button
@@ -93,7 +109,7 @@ $(document).ready(function() {
             success: function(){
                 $('#modal-delete').modal('hide');
                 toastr.success('', 'Successfully Deleted!');
-                GetSearchValue();
+                load_data(GetSearchValue(), getCurrentPage());
             }
         })
     })
@@ -168,7 +184,7 @@ $(document).ready(function() {
             success: function(){
                 $('#modal-editdetails').modal('hide');
                 toastr.success('', 'Successfully Updated!');
-                GetSearchValue();
+                load_data(GetSearchValue(), getCurrentPage());
             }
         })
     })

@@ -76,16 +76,16 @@
                 </div>
             </section>
         </div>
-        <nav aria-label="Page navigation example">
+        <nav aria-label="Page navigation" class="page-section">
             <div class="entries">
-                </span>Show 1 to 3 of 3 entries</span>
+                <span>Show 1 to 3 of 3 entries</span>
             </div>
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link bg-info text-dark" href="#">Previous</a></li>
+            <ul class="pagination" id="pagination">
+                <!-- <li class="page-item"><a class="page-link bg-info text-dark" href="#">Previous</a></li>
                 <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
                 <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
                 <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-                <li class="page-item"><a class="page-link bg-info text-dark" href="#">Next</a></li>
+                <li class="page-item"><a class="page-link bg-info text-dark" href="#">Next</a></li> -->
             </ul>
         </nav> 
     </div>
@@ -179,7 +179,7 @@
                                 <div class="row mb-3 mt-0 ms-4">
                                     <label for="companydescription" class="col-sm-3 fw-bold ">Company Description:</label>
                                     <div class="col-sm-8">
-                                        <p id="companyrdescription"></p>
+                                        <p id="companydescription"></p>
                                     </div> 
                                 </div>
                                 <div class="row mb-3 mt-0 ms-4">

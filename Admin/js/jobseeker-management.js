@@ -13,30 +13,39 @@ $(document).ready(function() {
     // Call this function to reload the table data at first time
     load_data();
     // Function for loading of table data
-    function load_data(search){
+    function load_data(search ,page){
         $.ajax({
             url: "php/jobseeker-management.inc.php",
             type: "POST",
             data: {
                 loadData: true,
-                search: search
+                search: search,
+                page: page
             },
             success: function(data){
                 $('#body-h').html(data);
+                $('#pagination').html(data.pagination);
             }
         })
     }
 
+    function GetSearchValue(){
+        var search = $('#search').val();
+        return search;
+    }
+
+    // Function for getting the current page number
+    function getCurrentPage(){
+        var page = $('#pagination').find('.active').attr('data-page');
+        return page;
+    }
+
+    
     // Function for searching of profile picture src and displaying to modal
     $('#body-h').on('click', '.view-pp', function(){
         let src = $(this).find('img').attr('src')
         $('#view-pp').attr('src', src)
     });
-
-    function GetSearchValue(){
-        var search = $('#search').val();
-        load_data(search);
-    }
 
     // Trigger this when user started to search in the search bar
     $('#search').keyup(function () {
@@ -46,6 +55,13 @@ $(document).ready(function() {
         } else {
             load_data();
         }
+    });
+
+    
+    // Trigger this when user click on the pagination 
+    $('#pagination').on('click', '.page-item', function(){
+        let page = $(this).attr('data-page');
+        load_data(GetSearchValue(), page);
     });
 
     // Trigger this when user click delete button and pass the data-id value on selected button to yes button in delete modal
@@ -67,7 +83,7 @@ $(document).ready(function() {
             success: function(data){
                 $('#modal-delete').modal('hide');
                 toastr.success('', 'Successfully Deleted!');
-                GetSearchValue();
+                load_data(GetSearchValue(), getCurrentPage());
             }
         })
     });
@@ -96,7 +112,7 @@ $(document).ready(function() {
     });
 
        // Trigger this when user click the save details in edit modal
-       $('#save-edit').click(function(){
+    $('#save-edit').click(function(){
         // Get all the input values from the edit modal
         let jobseekerId = $(this).val();
         let jobseekerName = $('#e-jobseekername').val();
@@ -114,7 +130,7 @@ $(document).ready(function() {
             success: function(){
                 $('#modal-editdetails').modal('hide');
                 toastr.success('', 'Successfully Updated!');
-                GetSearchValue();
+                load_data(GetSearchValue(), getCurrentPage());
             }
         })
     })

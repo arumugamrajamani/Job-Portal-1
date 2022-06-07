@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,24 +18,27 @@
     <link rel="stylesheet" href="css/jobseeker-management.css">
     <title>Job seekers Management</title>
 </head>
+
 <body>
     <div class="color-overlay">
         <nav class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow-sm">
             <a href="#" class="navbar-brand ms-5">
-            <img src="image/flogo.png" alt="Job Portal Logo" width="80" height="60"></a>
+                <img src="image/flogo.png" alt="Job Portal Logo" width="80" height="60"></a>
             <h6 class="position-relative">Job Seekers Management</h6>
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                 <ul class="navbar-nav ms-auto  text-center">
                     <li class="nav-item dropdown me-5">
                         <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-circle"></i></a>
-                    <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown" >
-                        <li><a class="dropdown-item  fs-5 text-white" href="admin-profile.php"><i class="bi bi-person-circle"></i> My Profile</a></li>
-                        <li><hr class="dropdown-divider bg-white"></li>
-                        <li><a class="dropdown-item fs-5 text-white" href="php/logout.php">Sign Out</a></li>
-                    </ul>
+                        <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item  fs-5 text-white" href="admin-profile.php"><i class="bi bi-person-circle"></i> My Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider bg-white">
+                            </li>
+                            <li><a class="dropdown-item fs-5 text-white" href="php/logout.php">Sign Out</a></li>
+                        </ul>
                 </ul>
             </div>
-        </nav>         
+        </nav>
     </div>
     <br>
     <button class="openbtn" title="Open Sidebar" onclick="openNav()"><i id="list-i" class="bi bi-list fa-2x"></i></button>
@@ -50,7 +54,7 @@
     </div>
     <br><br><br>
     <div class="container-responsive p-md-5 mt-4 bg-white" id="main">
-        <div class="d-flex">      
+        <div class="d-flex">
             <input class="form-control icon i-search" id="search" placeholder="Search a jobseeker" aria-label="Search">
             <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
         </div><br>
@@ -75,19 +79,19 @@
                     </div>
                 </div>
             </section>
-        </div> 
+        </div>
         <nav aria-label="Page navigation example">
             <div class="entries">
                 </span>Show 1 to 3 of 3 entries</span>
             </div>
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link bg-info text-dark" href="#">Previous</a></li>
+            <ul class="pagination" id="pagination">
+                <!-- <li class="page-item"><a class="page-link bg-info text-dark" href="#">Previous</a></li>
                 <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
                 <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
                 <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-                <li class="page-item"><a class="page-link bg-info text-dark" href="#">Next</a></li>
+                <li class="page-item"><a class="page-link bg-info text-dark" href="#">Next</a></li> -->
             </ul>
-        </nav> 
+        </nav>
 
     </div>
 
@@ -149,7 +153,7 @@
                                     <input type="email" class="form-control disabled" id="e-emailaddress" disabled>
                                 </div>
                             </div>
-                        </form> 
+                        </form>
                     </div><br>
                     <div class="modal-footer">
                         <button type="button" id="save-edit" class="btn btn-success">Save</button>
@@ -157,8 +161,9 @@
                     </div>
                 </div>
             </div>
-        </div>  
-    </div> 
-    <script src="js/jobseeker-management.js"></script>         
+        </div>
+    </div>
+    <script src="js/jobseeker-management.js"></script>
 </body>
+
 </html>

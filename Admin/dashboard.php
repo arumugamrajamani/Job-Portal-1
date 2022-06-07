@@ -9,10 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- jQuery cdn link below -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="../css/preloader.css">
     <title>dashboard</title>
 </head>
 <body>
+    <?php include_once'../include/preloader-display.php';?>
     <div class="color-overlay">
         <nav class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow-sm">
             <a href="#" class="navbar-brand ms-5">
@@ -51,10 +55,10 @@
                             <h2><i class="bi bi-person-fill "></i> REGISTERED <br> EMPLOYERS</h2>
                         </div>
                         <?php 
-                          include "../php/db-connection.php";
-                          $query = mysqli_query($GLOBALS['conn'],"SELECT * FROM employer");
-                          $row = mysqli_num_rows($query);
-                          echo '<p>'.$row.'</p>';
+                            include "../php/db-connection.php";
+                            $query = mysqli_query($GLOBALS['conn'],"SELECT * FROM employer");
+                            $row = mysqli_num_rows($query);
+                            echo '<p>'.$row.'</p>';
                         ?>
                     </div>
                 </div>
@@ -64,10 +68,10 @@
                             <h2><i class="bi bi-briefcase-fill"></i> REGISTERED <br> JOB SEEKERS</h2>
                         </div>
                         <?php 
-                          include "../php/db-connection.php";
-                          $query = mysqli_query($GLOBALS['conn'],"SELECT * FROM jobseeker");
-                          $row = mysqli_num_rows($query);
-                          echo '<p>'.$row.'</p>';
+                            include "../php/db-connection.php";
+                            $query = mysqli_query($GLOBALS['conn'],"SELECT * FROM jobseeker");
+                            $row = mysqli_num_rows($query);
+                            echo '<p>'.$row.'</p>';
                         ?>
                     </div>
                 </div>
@@ -93,5 +97,6 @@
         </div>
     </section>
     <script src="js/dashboard.js"></script>
+    <script src="../js/preloader.js"></script>
 </body>
 </html>

@@ -17,8 +17,10 @@
     <!-- Sweet alert cdn link below -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="css/companyregister.css">
+    <link rel="stylesheet" href="css/preloader.css"> <!-- External CSS file for preloader -->
 </head>
 <body>
+    <?php include_once'include/preloader-display.php'; // To display the html for preloader ?>
     <div class="color-overlay">
         <div class="container-fluid">
             <nav id="navbar-example2" class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow " >

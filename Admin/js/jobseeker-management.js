@@ -22,9 +22,11 @@ $(document).ready(function() {
                 search: search,
                 page: page
             },
+            dataType: "JSON",
             success: function(data){
-                $('#body-h').html(data);
+                $('#body-h').html(data.tableData);
                 $('#pagination').html(data.pagination);
+                $('#entries').html(data.entries);
             }
         })
     }

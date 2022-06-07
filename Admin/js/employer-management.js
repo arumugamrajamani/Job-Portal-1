@@ -25,6 +25,7 @@ $(document).ready(function() {
             success: function(data){
                 $('#body-h').html(data.tableData);
                 $('#pagination').html(data.pagination)
+                $('#entries').html(data.entries)
             }
         })
     }

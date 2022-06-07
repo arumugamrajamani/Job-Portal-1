@@ -16,7 +16,7 @@ This project was given to us by our employer from the company Melham Constructio
 -Janver Miranda<br>
 -Abraham B. Trayco<br>
 -Amir U. Monte <br>
--Daniela Torres<br> (Offboarded)
+-Daniela Torres (Offboarded)<br>
 <br>
 <br>
 **Front End Developer**<br>

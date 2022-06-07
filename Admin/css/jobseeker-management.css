@@ -127,13 +127,13 @@ body {
   background-color: #00c2d6;
 }
 
-.entries {
-  margin-top: 200px;
-}
-
 .pagination {
   margin-left: 500px;
   margin-top: -35px;
+}
+
+.page-section {
+  margin-top: 50px;
 }
 
 .delete {
@@ -379,4 +379,9 @@ td {
 .me-3 {
   width: 30px;
   height: 30px;
+}
+
+/* Added by MJ */
+.page-item {
+  cursor: pointer;
 }

@@ -152,10 +152,16 @@ if (isset($_POST['loadData'])) {
                             </li>";
     }
 
+    // For entries display
+    $entries_start = $start + 1;
+    $entries_end = $start + $pageLimit;
+    $entries = "<span>Show <b>{$entries_start}</b> to <b>{$entries_end}</b> of {$totalRecords} entries</span>";
+
     // Stored and return the displays for employer management page
     $response = array(
         'tableData' => $tableData,
-        'pagination' => $pagination
+        'pagination' => $pagination,
+        'entries' => $entries
     );
     // Return this output variable to the ajax call
     echo json_encode($response);

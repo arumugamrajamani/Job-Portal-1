@@ -24,7 +24,8 @@ $(document).ready(function() {
             dataType: "JSON",
             success: function(data){
                 $('#body-h').html(data.tableData);
-                $('#pagination').html(data.pagination);
+                $('#pagination').html(data.pagination)
+                $('#entries').html(data.entries)
             }
         })
     }

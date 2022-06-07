@@ -77,8 +77,8 @@
             </section>
         </div>
         <nav aria-label="Page navigation" class="page-section">
-            <div class="entries">
-                <span>Show 1 to 3 of 3 entries</span>
+            <div class="entries" id="entries">
+                <!-- <span>Show 1 to 3 of 3 entries</span> -->
             </div>
             <ul class="pagination" id="pagination">
                 <!-- <li class="page-item"><a class="page-link bg-info text-dark" href="#">Previous</a></li>

@@ -14,7 +14,9 @@ This project was given to us by our employer from the company Melham Constructio
 
 **Web Designer**<br>
 -Janver Miranda<br>
--Daniela Torres<br>
+-Abraham B. Trayco<br>
+-Amir U. Monte <br>
+-Daniela Torres<br> (Offboarded)
 <br>
 <br>
 **Front End Developer**<br>
@@ -26,6 +28,8 @@ This project was given to us by our employer from the company Melham Constructio
 -Justine Rome M. Guillermo<br>
 -Marc John B. Castillo<br>
 -Ralph Eriez I. Ronquillo<br>
+-Phillip Czar A. Abrero<br>
+-Kier John A. Manubay<br>
 <br>
 <br>
 **Maintaintance**<br>

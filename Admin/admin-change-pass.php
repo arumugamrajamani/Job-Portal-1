@@ -9,6 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/admin-change-pass.css">
+    <!-- jQuery cdn link below -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Admin Profile</title>
 </head>
 <body>
@@ -59,7 +61,7 @@
                             <i class='eye bi bi-eye icon'></i>
                         </span>
                         <label class="current-pass fw-bold mt-3">Current Password:</label>
-                        <input type="password" class="current-new-confirm"><br><br>
+                        <input type="password" id="currentpassword" class="current-new-confirm"><br><br>
                     </div>
                     <div class="new-confirm d-flex mt-4">
                         <span class="icon1" onclick="showHide1()">
@@ -67,7 +69,7 @@
                             <i class='eye bi bi-eye icon1'></i>
                         </span>
                         <label class="new-password fw-bold mt-3">New Password:</label>
-                            <input type="password"class="current-new-confirm ms-4"><br><br>
+                            <input type="password"id="newpassword"class="current-new-confirm ms-4"><br><br>
                     </div>
                     <div class="new-confirm d-flex mt-4">
                         <span class="icon2" onclick="showHide2()">
@@ -75,7 +77,7 @@
                             <i class='eye bi bi-eye icon2'></i>
                         </span>
                         <label class="confirm-password fw-bold mt-3">Confirm Password:</label>
-                            <input type="password" class="current-new-confirm">
+                            <input type="password" id="confirmpassword" class="current-new-confirm">
                     </div>
                     <div class="block">
                         <div>
@@ -96,7 +98,7 @@
                     <h5 class="modal-title ms-2" id="exampleModalLabel">Are you sure you want to change your password?</h5>
                 </div>
                 <div class="delete modal-body">
-                    <button type="button" class="yes-no btn btn-success">Yes</button>
+                    <button type="button" id="confirm" class="yes-no btn btn-success">Yes</button>
                     <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
                 </div>
             </div>
@@ -143,5 +145,6 @@
         document.getElementById("main").style.marginLeft= "250px";
         }
     </script>
+    <script src="js/changepassword.js"></script>
 </body>
 </html>

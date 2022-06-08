@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<?php session_start() ?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,25 +18,28 @@
     <link rel="stylesheet" href="../css/preloader.css">
     <title>dashboard</title>
 </head>
+
 <body>
-    <?php include_once'../include/preloader-display.php';?>
+    <?php include_once '../include/preloader-display.php'; ?>
     <div class="color-overlay">
         <nav class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow-sm">
             <a href="#" class="navbar-brand ms-5">
-            <img src="image/flogo.png" alt="Job Portal Logo" width="80" height="60"></a>
+                <img src="image/flogo.png" alt="Job Portal Logo" width="80" height="60"></a>
             <h6 class="position-relative">Admin Dashboard</h6>
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                 <ul class="navbar-nav ms-auto  text-center">
                     <li class="nav-item dropdown me-5">
                         <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-circle"></i></a>
-                    <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown" >
-                        <li><a class="dropdown-item  fs-5 text-white" href="admin-profile.php"><i class="bi bi-person-circle"></i> My Profile</a></li>
-                        <li><hr class="dropdown-divider bg-white"></li>
-                        <li><a class="dropdown-item fs-5 text-white" href="php/logout.php">Sign Out</a></li>
-                    </ul>
+                        <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item  fs-5 text-white" href="admin-profile.php"><i class="bi bi-person-circle"></i> My Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider bg-white">
+                            </li>
+                            <li><a class="dropdown-item fs-5 text-white" href="php/logout.php">Sign Out</a></li>
+                        </ul>
                 </ul>
             </div>
-        </nav>         
+        </nav>
     </div>
     <button class="openbtn" title="Open Sidebar" onclick="openNav()"><i id="list-i" class="bi bi-list fa-2x"></i></button>
     <div class="sidebar shadow-lg" id="mySidebar" class="sidebar">
@@ -54,11 +60,11 @@
                         <div class="registered-employers text-center">
                             <h2><i class="bi bi-person-fill "></i> REGISTERED <br> EMPLOYERS</h2>
                         </div>
-                        <?php 
-                            include "../php/db-connection.php";
-                            $query = mysqli_query($GLOBALS['conn'],"SELECT * FROM employer");
-                            $row = mysqli_num_rows($query);
-                            echo '<p>'.$row.'</p>';
+                        <?php
+                        include "../php/db-connection.php";
+                        $query = mysqli_query($GLOBALS['conn'], "SELECT * FROM employer");
+                        $row = mysqli_num_rows($query);
+                        echo '<p>' . $row . '</p>';
                         ?>
                     </div>
                 </div>
@@ -67,11 +73,11 @@
                         <div class="registered-jobseekers text-center">
                             <h2><i class="bi bi-briefcase-fill"></i> REGISTERED <br> JOB SEEKERS</h2>
                         </div>
-                        <?php 
-                            include "../php/db-connection.php";
-                            $query = mysqli_query($GLOBALS['conn'],"SELECT * FROM jobseeker");
-                            $row = mysqli_num_rows($query);
-                            echo '<p>'.$row.'</p>';
+                        <?php
+                        include "../php/db-connection.php";
+                        $query = mysqli_query($GLOBALS['conn'], "SELECT * FROM jobseeker");
+                        $row = mysqli_num_rows($query);
+                        echo '<p>' . $row . '</p>';
                         ?>
                     </div>
                 </div>
@@ -99,4 +105,5 @@
     <script src="js/dashboard.js"></script>
     <script src="../js/preloader.js"></script>
 </body>
+
 </html>

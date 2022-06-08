@@ -2,28 +2,34 @@ body {
   background: #00c2d6;
   font-family: sans-serif;
 }
+
 .search-box {
   width: 500px;
   border-style: outset;
 }
+
 .btn-outline {
   background-color: #00c2d6;
 }
+
 .navbar-light {
   background-color: #ffffff;
   margin: 0%;
 }
+
 .navbar-expand-lg {
   height: 70px;
   width: 100%;
   margin-left: 5px;
 }
+
 .btn-outline-secondary {
   background-color: #00c2d6;
   color: white;
   border: #00c2d6;
   border-style: outset;
 }
+
 .account-drop {
   text-align: center;
   position: relative;
@@ -31,13 +37,16 @@ body {
   background-color: #372732;
   width: 50px;
 }
+
 .nav-item .dropdown-item {
   position: relative;
   width: 150px;
 }
+
 .nav-item .dropdown-item:hover {
   background-color: #8b8383;
 }
+
 #menu {
   font-family: "Inter";
   font-style: normal;
@@ -47,6 +56,7 @@ body {
   text-align: center;
   color: #372732;
 }
+
 #title-sub {
   font-family: "Inter";
   font-style: normal;
@@ -55,6 +65,7 @@ body {
   line-height: 24px;
   color: #372732;
 }
+
 #btn-info {
   font-family: "Inter";
   font-style: normal;
@@ -66,6 +77,7 @@ body {
   height: 35px;
   color: white;
 }
+
 .search {
   background-color: #00c2d6;
   font-weight: 500;
@@ -74,51 +86,65 @@ body {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
 #list-icon {
   margin-left: 280px;
 }
+
 .i-search {
   border-radius: 0%;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   width: 300px;
 }
+
 .thead {
   background: #68f0ff;
-  text-align:center;
+  text-align: center;
 }
+
 .tbody {
   text-align: center;
   line-height: 30px;
 }
+
 .tr {
   height: 6rem;
   border: none;
   box-shadow: none;
 }
+
 .btn-success {
   width: 40px;
   border: 0;
-}.save{
+}
+
+.save {
   width: 120px;
 }
-.entries {
-  margin-top: 200px;
+
+.page-section {
+  margin-top: 50px;
 }
+
 .pagination {
   margin-left: 500px;
   margin-top: -35px;
 }
+
 .delete {
   margin-left: 170px;
 }
+
 .yes-no {
   width: 70px;
 }
-.highlight{
+
+.highlight {
   background-color: #00c2d6;
 }
-.btn-add{
+
+.btn-add {
   border: 0;
   width: 110px;
   height: 40px;
@@ -126,9 +152,11 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
-.btn-add:hover{
+
+.btn-add:hover {
   background-color: #68F0FF;
 }
+
 .sidebar {
   margin: 0;
   padding-top: 55px;
@@ -142,6 +170,7 @@ body {
   font-size: 17px;
   line-height: 25px;
 }
+
 #btn {
   font-family: "Inter";
   font-style: normal;
@@ -150,6 +179,7 @@ body {
   line-height: 27px;
   text-align: center;
 }
+
 #button {
   font-family: "Inter";
   font-style: normal;
@@ -180,11 +210,13 @@ div.content {
   padding: 1px 16px;
   height: 1000px;
 }
+
 .container-responsive {
   width: 1450px;
   height: 100%;
   margin-left: 390px;
 }
+
 .position-relative {
   font-size: 22px;
   color: #372732;
@@ -193,17 +225,20 @@ div.content {
   font-weight: 800;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .navbar-expand-lg {
   height: 70px;
   width: 100%;
 }
+
 td {
   height: 80px;
   width: 160px;
   text-align: center;
   vertical-align: middle;
 }
-.edit-detail{
+
+.edit-detail {
   background-color: #fdf6ec;
 }
 
@@ -213,9 +248,11 @@ td {
     height: auto;
     position: relative;
   }
+
   .sidebar a {
     float: left;
   }
+
   div.content {
     margin-left: 0;
   }
@@ -227,36 +264,43 @@ td {
     float: none;
   }
 }
+
 @media screen and (max-width: 700px) {
   #list-icon {
     font-size: 50px;
     width: 100%;
     margin-left: 600px !important;
   }
+
   .position-relative {
     width: 100%;
     margin-left: 170px;
     margin-top: -70px;
   }
+
   .container-responsive {
     width: 100%;
     margin-left: -10px !important;
   }
+
   .table-responsive {
     height: auto;
     width: 100%;
   }
+
   .entries {
     width: 100%;
     margin-top: 90px !important;
     margin-left: 20px !important;
   }
+
   .pagination {
     font-size: -30px;
     width: 100%;
     margin-left: 220px !important;
   }
 }
+
 @media screen and (max-width: 550px) {
   #list-icon {
     font-size: 50px;
@@ -264,6 +308,7 @@ td {
     margin-left: 400px !important;
   }
 }
+
 @media screen and (max-width: 455px) {
   #list-icon {
     font-size: 50px;
@@ -271,9 +316,11 @@ td {
     margin-left: 200px !important;
   }
 }
-.bi-person-circle{
+
+.bi-person-circle {
   font-size: 30px;
 }
+
 .sidebar {
   height: 100%;
   width: 340;
@@ -303,7 +350,9 @@ td {
   font-size: 36px;
   margin-left: 270px;
   margin-bottom: 35px;
-}.sidebar .closebtn:hover{
+}
+
+.sidebar .closebtn:hover {
   background-color: transparent !important;
 }
 
@@ -326,8 +375,14 @@ td {
   transition: margin-left .5s;
   padding: 16px;
 }
-.me-3{
+
+.me-3 {
   width: 30px;
   height: 30px;
 }
 
+
+/* Added by MJ */
+.page-item {
+  cursor: pointer;
+}

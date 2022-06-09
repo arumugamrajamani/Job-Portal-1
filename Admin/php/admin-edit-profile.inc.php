@@ -3,6 +3,32 @@
     include '../../php/db-connection.php';
     session_start();
 
+    //  Function for Sanitizing all input data 
+    function sanitize_input($data){
+        $data = trim($data);
+        $data = stripcslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    // Function for validating if input is valid fullname
+    function isValidFullname($fullname){
+        if(preg_match("/^[a-zA-Z .]*$/", $fullname)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // Function for validating if inout is valid number
+    function isValidNumber($number){
+        if(preg_match("/^[0-9]*$/", $number)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
      // For generating random string for image name
     function generateRandomString(){
         $rand1 = rand(1111,9999);   //  generate random number in $var1 variable
@@ -58,6 +84,7 @@
         echo json_encode($response);
     }
 
+    // When the user upload a new profile picture
     if(isset($_POST['changeprofile'])){
         //  Array containing valid image extension
         $allowed_image_extension = array("png", "jpeg", "jpg"); 
@@ -84,5 +111,49 @@
                 $response = array('status' => 'error', 'message' => "Problem while uploading.");
             }
         }
+        ///
         echo json_encode($response);
     }
+
+    // When user click on the save button
+    if(isset($_POST['saveNow'])){
+        // Validation for fullname
+        if(empty($_POST['fullname'])) {
+            $fullnameRR = array('status' => 'error');
+        } else if(!isValidFullname($_POST['fullname'])) {
+            $fullnameRR = array('status' => 'error');
+        } else {
+            $fullnameRR = array('status' => 'success');
+            $fullname = sanitize_input($_POST['fullname']);
+        }
+
+        // Validation for mobilenumber
+        if(empty($_POST['contactnumber'])) {
+            $contactnumberRR = array('status' => 'error');
+        } elseif(!isValidNumber($_POST['contactnumber'])) {
+            $contactnumberRR = array('status' => 'error');
+        } else {
+            $contactnumberRR = array('status' => 'success');
+            $contactnumber = sanitize_input($_POST['contactnumber']);
+        }
+
+        // Check if all the validation is successful
+        if($fullnameRR['status'] == 'success' && $contactnumberRR['status'] == 'success') {
+            // Escape all the inputs to prevent SQL injection
+            $fullname = mysqli_real_escape_string($conn, $fullname);
+            $contactnumber = mysqli_real_escape_string($conn, $contactnumber);
+            // Create query to update the admin's details
+            $updateAdminDetailsQuery = mysqli_query($conn, "UPDATE admin SET fullname = '$fullname', mobile_number = '$contactnumber' WHERE admin_id = '{$_SESSION['user_id']}'");
+            if($updateAdminDetailsQuery){
+                $response = array('status' => 'success', 'message' => "Updated Successfully.");
+            } else {
+                $response = array('status' => 'error', 'message' => "Problem while updating.");
+            }
+            // $response = array('status' => 'success', 'message' => "Successfully updated.");
+        } else {
+            $response = array('status' => 'error', 'message' => "Please fill up all the fields.");
+        }
+        // return this as a json object and exit
+        echo json_encode($response);
+    }
+?>

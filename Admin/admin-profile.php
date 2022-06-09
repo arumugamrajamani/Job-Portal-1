@@ -69,7 +69,7 @@
                             <input type="file" id="profilePic" class="file form-control" name="filename">
                         </div>
                         <div class="row mb-3 mt-4 ms-5 fw-bold">
-                            <label for="name" class="col-sm-3 ">Name:</label>
+                            <label for="fullname" class="col-sm-3 ">Name:</label>
                             <div class="col-sm-7">
                                 <input type="text" id="fullname" class="form-control">
                             </div>
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <button class="save-change" type="submit">SAVE CHANGES</button>
+                            <button class="save-change" id="save-now" type="submit">SAVE CHANGES</button>
                         </div>
                     </div>
                 </div>

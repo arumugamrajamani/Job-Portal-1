@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    fetchData();
 
     //fetch the admin's data from the database
     function fetchData(){
@@ -7,15 +8,38 @@ $(document).ready(function(){
             type: 'POST',
             data: {
                 fetchData: true
-            },dataType: "JSON",
+            },
+            dataType: "JSON",
             success: function(data){
                 // insert the data into the input fields
-                $('#full-name').val(data.fullName);
+                $('#fullname').val(data.fullName);
                 $('#email').val(data.email);
-                $('#number').val(data.number);
-                $('#profile-pic').attr('src', data.profilePic); 
+                $('#contactnumber').val(data.number);
+                $('#profile-pic-view').attr('src', data.profilePic); 
             }
         });
     }
-    fetchData();
+
+    $(document).on('change', '#profilePic', function(){
+        // get the file name
+        let profilePic = $("#profilePic").prop('files')[0];
+        let form_data = new FormData();
+        form_data.append("profilePic", profilePic);
+        form_data.append("changeprofile", true);
+        $.ajax({
+            url: "php/admin-edit-profile.inc.php",
+            type: "POST",
+            contentType: false,
+            processData: false,
+            cache: false,
+            data: form_data,
+            dataType: 'JSON',
+            success: function(data){
+                if(data.status == 'error'){
+                    toastr.error('', data.message);   
+                }
+            }
+        })
+    })
+    
 });

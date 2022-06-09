@@ -1,88 +1,20 @@
 $(document).ready(function(){
-
-    // Trigger this when admin started to type in currentpassword input and validate it
-    $('#currentpassword').on('keyup', function() {
-        let password = $('#currentpassword').val();
-        if(password.length == 0) {
-            $('#currentpassword').removeClass().addClass('form-control border-danger');
-            $('#currentpassword-errorMsg').text("CurrentPassword is required.");
-        } else if(password.length < 8 || password.length > 30) {
-            $('#currentpassword').removeClass().addClass('form-control border-danger');
-            $('#currentpassword-errorMsg').text("CurrentPassword must be between 8 and 30 characters.");
-        } 
-        else {
-            $('#currentpassword').removeClass().addClass('form-control border-success');
-            $('#currentpassword-errorMsg').text(null);
-        }
-    })
-
-    // Trigger this when admin started to type in password input and validate it
-    $('#password').on('keyup', function() {
-        let password = $('#password').val();
-        if(password.length == 0) {
-            $('#password').removeClass().addClass('form-control border-danger');
-            $('#password-errorMsg').text("Password is required.");
-        } else if(password.length < 8 || password.length > 30) {
-            $('#password').removeClass().addClass('form-control border-danger');
-            $('#password-errorMsg').text("Password must be between 8 and 30 characters.");
-        } 
-        else {
-            $('#password').removeClass().addClass('form-control border-success');
-            $('#password-errorMsg').text(null);
-        }
-    })
-    
-    // Trigger this when admin started to type in confirm password input and validate it
-    $('#repassword').on('keyup', function() {
-        let password = $('#password').val();
-        let repassword = $('#repassword').val();
-        if(repassword.length == 0){
-            $('#repassword').removeClass().addClass('form-control border-danger');
-            $('#repassword-errorMsg').text("Confirm password is required.");
-        } else if(password != repassword) {
-            $('#repassword').removeClass().addClass('form-control border-danger');
-            $('#repassword-errorMsg').text("Password does not match.");
-        } else {
-            $('#repassword').removeClass().addClass('form-control border-success');
-            $('#repassword-errorMsg').text(null);
-        }
-    })
-
-    //when form is submittd
-    $("form").submit(function(event){
-        event.preventDefault();
-        let password = $('#password').val()
-        let repassword = $('#repassword').val()
-
+    $('#confirm').click(function(){
+        let currentpassword = $('#currentpassword').val();
+        let newpassword = $('#newpassword').val();
+        let confirmpassword = $('#confirmpassword').val();
         $.ajax({
             url: "php/changepassword.inc.php",
             method: "POST",
             data: {
-                submit: true,
-                password: password,
-                repassword: repassword
+                confirm: true,
+                currentpassword: currentpassword,
+                newpassword: newpassword,
+                confirmpassword: confirmpassword
             },
-            dataType: 'json',
+            // dataType: 'json',
             success: function(data){
-                if (data.status == "success"){
-                    $("#myModal").modal("show");
-                }else{
-                    if(data.passwordRR.status == 'error') {
-                        $('#password').removeClass().addClass('form-control border-danger');
-                        $('#password-errorMsg').text(data.passwordRR.message);
-                    } else {
-                        $('#password').removeClass().addClass('form-control border-success');
-                        $('#password-errorMsg').text(null);
-                    }
-                    // if there is an error in confirm password, display error message
-                    if(data.confirmpasswordRR.status == 'error') {
-                        $('#repassword').removeClass().addClass('form-control border-danger');
-                        $('#repassword-errorMsg').text(data.confirmpasswordRR.message);
-                    } else {
-                        $('#confirmpassword').removeClass().addClass('form-control border-success');
-                        $('#repassword-errorMsg').text(null);
-                    }
-                }
+                alert(data);    
             }
         })
     })

@@ -3,7 +3,7 @@
 include '../../php/db-connection.php';
 session_start();
 if (isset($_POST['confirm'])) {
-    $currentpassword = $_POST['currentpassword'];
+    $currentpassword = password_hash($_POST['currentpassword'], PASSWORD_DEFAULT);
     $newpassword = $_POST['newpassword'];
     $confirmpassword = $_POST['confirmpassword'];
     $adminId = $_SESSION['user_id'];
@@ -26,15 +26,15 @@ if (isset($_POST['confirm'])) {
     } else {
         $confirmpasswordRR = array('status' => 'success');
     }
+    //compare current password to the password from database
     if ($oldpw != $currentpassword) {
         $currentpasswordRR = array('status' => 'error', 'message' => 'Current password does not match.');
     } else {
-        $confirmpasswordRR = array('status' => 'success');
+        $currentpasswordRR = array('status' => 'success');
     }
     // Check if all the validation are successful or not
     if ($newpasswordRR['status'] == 'success' && $confirmpasswordRR['status'] == 'success' && $currentpasswordRR['status'] == 'success') {
         $newpwHash = password_hash($newpassword, PASSWORD_DEFAULT);
-        $oldpwHash = password_hash($newpassword, PASSWORD_DEFAULT);
         // Return this as status success response
         $response = array('status' => 'success');
     } else {

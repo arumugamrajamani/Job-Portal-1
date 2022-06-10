@@ -31,6 +31,17 @@ $(document).ready(function() {
         })
     }
 
+    function isCategoryExist($jobcategory) {
+        $jobcategory = mysqli_real_escape_string($GLOBALS['conn'], $jobcategory);
+        $CheckCategoryQuery = mysqli_query($GLOBALS['conn'], "SELECT * FROM category WHERE job_title = '$jobcategory'");
+        if(mysqli_num_rows($CheckCategoryQuery) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    } 
+
+
     // Function for getting the current value in search box
     function GetSearchValue(){
         var search = $('#search').val();
@@ -43,10 +54,48 @@ $(document).ready(function() {
         return page;
     }
 
+     // Function to used to check if name is valid string, return boolean result(true or false)
+    function isValidCategory(category) {
+        var regex = new RegExp(/^[a-zA-Z0-9 .]+$/);
+        return regex.test(category);
+    }
+
     // Function for clearing input value, border color and error message
     function clearFields() {
-        $('#modal-add')[0].reset();
+        // Clear the fields
+        $('input').val(null);
+         // Clear the error borders
+        $('.form-control').removeClass().addClass('form-control');
     }
+
+    // Trigger this when user started to type in edit modal of Job Category input and validate it
+    $('#e-jobcategory').on('keyup', function() {
+        let jobcategory = $('#e-jobcategory').val();
+        if(jobcategory.length == 0) {
+            $('#e-jobcategory').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#e-jobcategory').popover({ placement: 'right', content: 'Job Category is required.'}).popover('show');
+        } else if(!isValidCategory(jobcategory)) {
+            $('#e-jobcategory').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#e-jobcategory').popover({ placement: 'right', content: 'Only characters and numbers are allowed.' }).popover('show');
+        } else {
+            $('#e-jobcategory').removeClass().addClass('form-control border-success').popover('dispose');
+        }
+    })
+
+    // Trigger this when user started to type in add modal of Job Category input and validate it
+    $('#a-jobcategory').on('keyup', function() {
+        let jobcategory = $('#a-jobcategory').val();
+        if(jobcategory.length == 0) {
+            $('#a-jobcategory').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#a-jobcategory').popover({ placement: 'right', content: 'Job Category is required.'}).popover('show');
+        } else if(!isValidCategory(jobcategory)) {
+            $('#a-jobcategory').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#a-jobcategory').popover({ placement: 'right', content: 'Only characters and numbers are allowed.' }).popover('show');
+        } else {
+            $('#a-jobcategory').removeClass().addClass('form-control border-success').popover('dispose');
+        }
+    })
+
 
     // Trigger this when user click on the pagination 
     $('#pagination').on('click', '.page-item', function(){
@@ -147,10 +196,20 @@ $(document).ready(function() {
                 categoryId: categoryId,
                 jobcategory: jobcategory
             },
-            success: function() {
-                $('#modal-editdetails').modal('hide');
-                toastr.success('', 'Successfully Updated!');
-                load_data(GetSearchValue(), getCurrentPage());
+            dataType: 'json',
+            success: function (data) {
+                if(data.status == 'success') {
+                    $('#modal-editdetails').modal('hide');
+                    toastr.success('', 'Successfully Updated!');
+                    load_data(GetSearchValue(), getCurrentPage());
+                } else {
+                    if(data.jobcategoryRR.status == 'error'){
+                        $('#e-jobcategory').removeClass().addClass('form-control border-danger');
+                        $('#e-jobcategory').popover({ placement: 'right', content: data.jobcategoryRR.message}).popover(show);
+                    } else {
+                        $('#e-jobcategory').removeClass().addClass('form-control border-success');
+                    }
+                }
             }
         })  
     })
@@ -165,10 +224,21 @@ $(document).ready(function() {
                     addCategory: true,
                     jobcategory: jobcategory
                 },
-                success: function () {
+                dataType: 'json',
+                success: function (data) {
+                    if(data.status == 'success') {
+                        clearFields();
                         $('#modal-add').modal('hide');
                         toastr.success('', 'Successfully Added!');
                         load_data(GetSearchValue(), getCurrentPage());
+                    } else {
+                        if(data.jobcategoryRR.status == 'error'){
+                            $('#a-jobcategory').removeClass().addClass('form-control border-danger');
+                            $('#a-jobcategory').popover({ placement: 'right', content: data.jobcategoryRR.message}).popover(show);
+                        } else {
+                            $('#a-jobcategory').removeClass().addClass('form-control border-success');
+                        }
+                    }
                 }
             })
     })

@@ -15,14 +15,27 @@
         return date('M d, Y, h:i A', strtotime($date)); 
     }
 
+    // Function for checking if Job Category is existing in the database, return boolean true or false
+    function isCategoryExist($jobcategory) {
+        $jobcategory = mysqli_real_escape_string($GLOBALS['conn'], $jobcategory);
+        $CheckCategoryQuery = mysqli_query($GLOBALS['conn'], "SELECT * FROM category WHERE job_title = '$jobcategory'");
+        if(mysqli_num_rows($CheckCategoryQuery) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    } 
+
     // Function for validating if input is valid 
-    function isValidCategory($jobcategory){
-        if(preg_match("/^[a-zA-Z0-9 .]+$/", $jobcategory)){
+    function isValidCategory($category){
+        if(preg_match("/^[a-zA-Z0-9 .]+$/", $category)){
             return true;
         } else {
             return false;
         }
     }
+
+
 
     if (isset($_POST['loadData'])) {
     // Variables to store the data
@@ -148,18 +161,55 @@
 
     // When user click save details button in edit modal
     if(isset($_POST['saveDetails'])){
-        // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
-        $categoryId = mysqli_real_escape_string($conn, sanitize_input($_POST['categoryId']));
-        $jobcategory = mysqli_real_escape_string($conn, sanitize_input($_POST['jobcategory']));
-        // Create query to update the jobseeker information
-        mysqli_query($conn, "UPDATE category SET job_title = '$jobcategory' WHERE category_id = '$categoryId'");
-        // Return nothing to the ajax call
+
+        // Validation for Job Category
+        if(empty($_POST['jobcategory'])) {
+            $jobcategoryRR = array('status' => 'error', 'message' => 'Job Category is required.');
+        } else if(!isValidCategory($_POST['jobcategory'])) {
+            $jobcategoryRR = array('status' => 'error', 'message' => 'Only characters and numbers are allowed.');
+        } else {
+            $jobcategoryRR = array('status' => 'success');
+        }
+
+        if($jobcategoryRR['status'] == 'success') {
+            // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
+            $categoryId = mysqli_real_escape_string($conn, sanitize_input($_POST['categoryId']));
+            $jobcategory = mysqli_real_escape_string($conn, sanitize_input($_POST['jobcategory']));
+            // Create query to update the jobseeker information
+            mysqli_query($conn, "UPDATE category SET job_title = '$jobcategory' WHERE category_id = '$categoryId'");
+
+            // Return this as status success response
+            $response = array('status' => 'success');
+        } else {
+            $response = array('status' => 'error','jobcategoryRR' => $jobcategoryRR );
+        }
+        // Return the response
+        echo json_encode($response);
     }
 
     // When user click add button modal
     if(isset($_POST['addCategory'])){
-        $jobcategory = mysqli_real_escape_string($conn, sanitize_input($_POST['jobcategory']));
-        // Create query to Insert the Job Category
-        mysqli_query($conn, "INSERT INTO category (job_title, date_created) VALUES ('$jobcategory' , NOW())");
+        // Validation for Job Category
+        if(empty($_POST['jobcategory'])) {
+            $jobcategoryRR = array('status' => 'error', 'message' => 'Job Category is required.');
+        } else if(!isValidCategory($_POST['jobcategory'])) {
+            $jobcategoryRR = array('status' => 'error', 'message' => 'Only characters and numbers are allowed.');
+        } else {
+            $jobcategoryRR = array('status' => 'success');
+            $jobcategory = sanitize_input($_POST['jobcategory']);
+        }
+
+        if($jobcategoryRR['status'] == 'success') {
+           
+                $jobcategory = mysqli_real_escape_string($conn, $_POST['jobcategory']);
+                // Create query to Insert the Job Category
+                mysqli_query($conn, "INSERT INTO category (job_title, date_created) VALUES ('$jobcategory' , NOW())");
+                // Return this as status success response
+            $response = array('status' => 'success');
+        } else {
+            $response = array('status' => 'error','jobcategoryRR' => $jobcategoryRR );
+        }
+        // Return the response
+        echo json_encode($response);
     }
 ?>

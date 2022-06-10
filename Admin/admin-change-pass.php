@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,27 +12,32 @@
     <link rel="stylesheet" href="css/admin-change-pass.css">
     <!-- jQuery cdn link below -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Sweet alert cdn link below -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Admin Profile</title>
 </head>
+
 <body>
     <div class="color-overlay">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow-sm">
                 <a href="#" class="navbar-brand ms-5">
-                <img src="image/flogo.png" alt="Job Portal Logo" width="80" height="60"></a>
+                    <img src="image/flogo.png" alt="Job Portal Logo" width="80" height="60"></a>
                 <h6 class="position-relative">Admin Profile</h6>
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav ms-auto  text-center">
                         <li class="nav-item dropdown me-5">
                             <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-circle"></i></a>
-                        <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown" >
-                            <li><a class="dropdown-item  fs-5 text-white" href="admin-profile.php"><i class="bi bi-person-circle"></i> My Profile</a></li>
-                            <li><hr class="dropdown-divider bg-white"></li>
-                            <li><a class="dropdown-item fs-5 text-white" href="php/logout.php">Sign Out</a></li>
-                        </ul>
+                            <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item  fs-5 text-white" href="admin-profile.php"><i class="bi bi-person-circle"></i> My Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-white">
+                                </li>
+                                <li><a class="dropdown-item fs-5 text-white" href="php/logout.php">Sign Out</a></li>
+                            </ul>
                     </ul>
                 </div>
-            </nav>         
+            </nav>
         </div>
     </div><br>
     <button class="openbtn" title="Open Sidebar" onclick="openNav()"><i id="list-i" class="bi bi-list fa-2x"></i></button>
@@ -69,7 +75,7 @@
                             <i class='eye bi bi-eye icon1'></i>
                         </span>
                         <label class="new-password fw-bold mt-3">New Password:</label>
-                            <input type="password"id="newpassword"class="current-new-confirm ms-4"><br><br>
+                        <input type="password" id="newpassword" class="current-new-confirm ms-4"><br><br>
                     </div>
                     <div class="new-confirm d-flex mt-4">
                         <span class="icon2" onclick="showHide2()">
@@ -77,12 +83,9 @@
                             <i class='eye bi bi-eye icon2'></i>
                         </span>
                         <label class="confirm-password fw-bold mt-3">Confirm Password:</label>
-                            <input type="password" id="confirmpassword" class="current-new-confirm">
+                        <input type="password" id="confirmpassword" class="current-new-confirm">
                     </div>
                     <div class="block">
-                        <div>
-                            <label class="ms-5 text-danger"> Password must be atleast 8 characters</label>
-                        </div>
                         <div>
                             <button type="button" class="save mt-4 fw-bold" title="Save password" data-bs-toggle="modal" data-bs-target="#modal-save">Save</button>
                         </div>
@@ -105,46 +108,51 @@
         </div>
     </div>
     <script>
-        function showHide(){
-        let icon = document.querySelector(".icon"),
-            input= document.getElementById("currentpassword");
-            if (input.type === "password"){
-            input.type = "text";
-            }else{
-            input.type = "password";
-            }
-            icon.classList.toggle('is-active'); 
-        }function showHide1(){
-        let icon = document.querySelector(".icon1"),
-            input= document.getElementById("newpassword");
-            if (input.type === "password"){
-            input.type = "text";
-            }else{
-            input.type = "password";
+        function showHide() {
+            let icon = document.querySelector(".icon"),
+                input = document.getElementById("currentpassword");
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
             }
             icon.classList.toggle('is-active');
-        }function showHide2(){
-        let icon = document.querySelector(".icon2"),
-            input= document.getElementById("confirmpassword");
-            if (input.type === "password"){
-            input.type = "text";
-            }else{
-            input.type = "password";
+        }
+
+        function showHide1() {
+            let icon = document.querySelector(".icon1"),
+                input = document.getElementById("newpassword");
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
             }
             icon.classList.toggle('is-active');
-        } 
-    </script>   
+        }
+
+        function showHide2() {
+            let icon = document.querySelector(".icon2"),
+                input = document.getElementById("confirmpassword");
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+            icon.classList.toggle('is-active');
+        }
+    </script>
     <script>
         function openNav() {
-        document.getElementById("mySidebar").style.left = "0";
-        document.getElementById("main").style.marginLeft = "380px";
+            document.getElementById("mySidebar").style.left = "0";
+            document.getElementById("main").style.marginLeft = "380px";
         }
-        
+
         function closeNav() {
-        document.getElementById("mySidebar").style.left = "-100%";
-        document.getElementById("main").style.marginLeft= "250px";
+            document.getElementById("mySidebar").style.left = "-100%";
+            document.getElementById("main").style.marginLeft = "250px";
         }
     </script>
     <script src="js/changepassword.js"></script>
 </body>
+
 </html>

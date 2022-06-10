@@ -12,9 +12,9 @@ $(document).ready(function(){
                 newpassword: newpassword,
                 confirmpassword: confirmpassword
             },
-            // dataType: 'json',
+            dataType: 'json',
             success: function(data){
-                alert(data);    
+                alert(data);
             }
         })
     })

@@ -41,6 +41,10 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "250px";
 }
 
+function clearInputsFields() {
+    $('input').val('');
+}
+
 $(document).ready(function(){
     // Trigger this when admin started to type in current password input and validate it
     $('#currentpassword').on('keyup', function() {
@@ -98,6 +102,7 @@ $(document).ready(function(){
             dataType: 'JSON',
             success: function(data){
                 if(data.status == "success"){
+                    $('#modal-save').modal('hide');
                     swal({
                         title: "Change Password Success!",
                         text: "Please login again.",
@@ -107,7 +112,8 @@ $(document).ready(function(){
                     .then(function() {
                         window.location = "php/logout.php";
                     });
-                    $('#modal-save').modal('hide');
+                    // Call this function to clear all inputs
+                    clearInputsFields();
                 } else {
                     $('#modal-save').modal('hide');
                     // if there is an error in current password, display error message

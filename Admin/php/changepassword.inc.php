@@ -53,8 +53,10 @@
 
         // Check if all the validation are successful or not
         if($currentpasswordRR['status'] == 'success' && $newpasswordRR['status'] == 'success' && $confirmpasswordRR['status'] == 'success') {
-            // Do the insersion to the database here inside the if statement -- remove this after you saw sir philip
+            // Convert the password to hash
             $newHashPassword = password_hash($newpassword, PASSWORD_DEFAULT);
+            // Update the password in the database
+            mysqli_query($conn, "UPDATE admin SET password = '$newHashPassword' WHERE admin_id = {$_SESSION['user_id']}");
             // Return this as status success response
             $response = array('status' => 'success');
         } else {

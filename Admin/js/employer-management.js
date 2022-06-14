@@ -62,7 +62,7 @@ $(document).ready(function () {
     // Function for clearing input value, border color and error message
     function resetFields() {
         $('.form-control').removeClass('border-danger');
-        $('.form-control').addClass('border-success');
+        $('.form-control').removeClass('border-success');
     }
 
     // Function for searching of company logo src and displaying to modal

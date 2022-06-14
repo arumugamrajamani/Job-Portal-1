@@ -2,28 +2,34 @@ body {
   background: #00c2d6;
   font-family: sans-serif;
 }
+
 .search-box {
   width: 500px;
   border-style: outset;
 }
+
 .btn-outline {
   background-color: #00c2d6;
 }
+
 .navbar-light {
   background-color: #ffffff;
   margin: 0%;
 }
+
 .navbar-expand-lg {
   height: 70px;
   width: 100%;
   margin-left: 5px;
 }
+
 .btn-outline-secondary {
   background-color: #00c2d6;
   color: white;
   border: #00c2d6;
   border-style: outset;
 }
+
 .account-drop {
   text-align: center;
   position: relative;
@@ -31,22 +37,26 @@ body {
   background-color: #372732;
   width: 50px;
 }
+
 .nav-item .dropdown-item {
   position: relative;
   width: 150px;
 }
+
 .nav-item .dropdown-item:hover {
   background-color: #8b8383;
 }
-.position-relative{
+
+.position-relative {
   font-size: 22px;
-  color: #372732; 
-  margin-left: 700px; 
+  color: #372732;
+  margin-left: 700px;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 800;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 #menu {
   font-family: "Inter";
   font-style: normal;
@@ -56,6 +66,7 @@ body {
   text-align: center;
   color: #372732;
 }
+
 #title-sub {
   font-family: "Inter";
   font-style: normal;
@@ -64,6 +75,7 @@ body {
   line-height: 24px;
   color: #372732;
 }
+
 #btn-info {
   font-family: "Inter";
   font-style: normal;
@@ -75,6 +87,7 @@ body {
   height: 35px;
   color: white;
 }
+
 .search {
   background-color: #00c2d6;
   font-weight: 500;
@@ -83,15 +96,18 @@ body {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
 #list-icon {
   margin-left: 280px;
 }
+
 .background-white {
   width: 1450px;
   height: 800px;
   margin-left: 380px;
   background: #fdf6ec;
 }
+
 .edit-change {
   width: 230px;
   height: 260px;
@@ -100,38 +116,46 @@ body {
   margin-left: 100px;
   margin-top: 150px;
 }
+
 .edit-profile {
   background: #00c2d6;
   border: 0;
   border-radius: 13px;
 }
+
 .change-password {
   background: #00c2d6;
   border: 0;
   border-radius: 13px;
 }
+
 .change-your-password {
   background-color: #00c2d6;
   width: 70%;
   margin-left: 90px;
   margin-top: 100px;
 }
+
 .back-white {
   width: 735px;
   height: 400px;
   margin-left: 90px;
 }
+
 .current-password {
   margin-left: 55px;
   padding-top: 70px;
 }
+
 .eye {
   font-size: 2rem;
   cursor: pointer;
 }
+
 .current-pass {
   margin-right: 50px;
 }
+
 .current-new-confirm {
   background-color: #ececec;
   border-radius: 10px;
@@ -139,16 +163,20 @@ body {
   font-weight: 700;
   width: 450px;
 }
+
 .new-confirm {
   margin-left: 55px;
   padding-top: 2px;
 }
+
 .new-password {
   margin-right: 50px;
 }
+
 .confirm-password {
   margin-right: 45px;
 }
+
 .save {
   background-color: #00c2d6;
   border: 0;
@@ -157,15 +185,19 @@ body {
   height: 45px;
   font-size: 25px;
 }
+
 .delete {
   margin-left: 170px;
 }
+
 .yes-no {
   width: 70px;
 }
-.bi-person-circle{
+
+.bi-person-circle {
   font-size: 30px;
 }
+
 .sidebar {
   margin: 0;
   padding-top: 55px;
@@ -180,6 +212,7 @@ body {
   font-size: 17px;
   line-height: 25px;
 }
+
 #btn {
   font-family: "Inter";
   font-style: normal;
@@ -210,14 +243,17 @@ div.content {
   padding: 1px 16px;
   height: 1000px;
 }
+
 .icon {
   position: absolute;
   margin-left: 300px;
 }
+
 .icon1 {
   position: absolute;
   margin-left: 300px;
 }
+
 .icon2 {
   position: absolute;
   margin-left: 300px;
@@ -226,34 +262,43 @@ div.content {
 .icon .bi-eye {
   display: none;
 }
+
 .icon.is-active .bi-eye {
   display: flex;
   margin-top: 10px;
 }
+
 .icon.is-active .bi-eye-slash {
   display: none;
 }
+
 .icon1 .bi-eye {
   display: none;
 }
+
 .icon1.is-active .bi-eye {
   display: flex;
   margin-top: 10px;
 }
+
 .icon1.is-active .bi-eye-slash {
   display: none;
 }
+
 .icon2 .bi-eye {
   display: none;
 }
+
 .icon2.is-active .bi-eye {
   display: flex;
   margin-top: 10px;
 }
+
 .icon2.is-active .bi-eye-slash {
   display: none;
 }
-.highlight{
+
+.highlight {
   background-color: #00c2d6;
 }
 
@@ -263,14 +308,17 @@ div.content {
     width: 100%;
     margin-left: 600px !important;
   }
+
   .sidebar {
     width: 100%;
     height: auto;
     position: relative;
   }
+
   .sidebar a {
     float: left;
   }
+
   div.content {
     margin-left: 0;
   }
@@ -282,6 +330,7 @@ div.content {
     float: none;
   }
 }
+
 .sidebar {
   height: 100%;
   width: 340;
@@ -311,7 +360,9 @@ div.content {
   font-size: 36px;
   margin-left: 270px;
   margin-bottom: 35px;
-}.sidebar .closebtn:hover{
+}
+
+.sidebar .closebtn:hover {
   background-color: transparent !important;
 }
 
@@ -334,7 +385,8 @@ div.content {
   transition: margin-left .5s;
   padding: 16px;
 }
-.me-3{
+
+.me-3 {
   width: 30px;
   height: 30px;
 }

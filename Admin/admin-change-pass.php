@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -107,51 +106,6 @@
             </div>
         </div>
     </div>
-    <script>
-        function showHide() {
-            let icon = document.querySelector(".icon"),
-                input = document.getElementById("currentpassword");
-            if (input.type === "password") {
-                input.type = "text";
-            } else {
-                input.type = "password";
-            }
-            icon.classList.toggle('is-active');
-        }
-
-        function showHide1() {
-            let icon = document.querySelector(".icon1"),
-                input = document.getElementById("newpassword");
-            if (input.type === "password") {
-                input.type = "text";
-            } else {
-                input.type = "password";
-            }
-            icon.classList.toggle('is-active');
-        }
-
-        function showHide2() {
-            let icon = document.querySelector(".icon2"),
-                input = document.getElementById("confirmpassword");
-            if (input.type === "password") {
-                input.type = "text";
-            } else {
-                input.type = "password";
-            }
-            icon.classList.toggle('is-active');
-        }
-    </script>
-    <script>
-        function openNav() {
-            document.getElementById("mySidebar").style.left = "0";
-            document.getElementById("main").style.marginLeft = "380px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidebar").style.left = "-100%";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
-    </script>
     <script src="js/changepassword.js"></script>
 </body>
 

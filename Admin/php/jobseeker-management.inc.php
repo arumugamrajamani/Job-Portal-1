@@ -48,6 +48,25 @@ function unlinkFiles($jobseekerDP)
     unlink("../../storage/" . $jobseekerDP);
 }
 
+// Function for validating if input is valid fullname
+function isValidFullname($fullname){
+    if(preg_match("/^[a-zA-Z .]*$/", $fullname)){
+            return true;
+    } else {
+        return false;
+    }
+}
+
+// Function for validating if inout is valid number
+function isValidNumber($number){
+    if(preg_match("/^[0-9]*$/", $number)){
+            return true;
+    } else {
+            return false;
+    }
+}
+
+
 if (isset($_POST['loadData'])) {
     // Variables to store the data
     $page = 0;
@@ -191,13 +210,45 @@ if (isset($_POST['fetchDetails'])) {
     echo json_encode($response);
 }
 
-// When user click save details button in edit modal
-if (isset($_POST['saveDetails'])) {
-    // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
-    $jobseekerId = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerId']));
-    $jobseekerName = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerName']));
-    $jobseekerNumber = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerNumber']));
-    // Create query to update the jobseeker information
-    mysqli_query($conn, "UPDATE jobseeker SET fullname = '$jobseekerName', mobile_number = '$jobseekerNumber' WHERE jobseeker_id = '$jobseekerId'");
-    // Return nothing to the ajax call
-}
+    // When user click save details button in edit modal
+    if (isset($_POST['saveDetails'])) {
+
+        // Validation for Fullname
+        if(empty($_POST['jobseekerName'])) {
+            $fullnameRR = array('status' => 'error', 'message' => 'Fullname is required.');
+        } else if(!isValidFullname($_POST['fullname'])) {
+            $fullnameRR = array('status' => 'error', 'message' => 'Only characters are allowed.');
+        } else {
+            $fullnameRR = array('status' => 'success');
+           
+        }
+
+        // Validation for mobilenumber
+        if(empty($_POST['jobseekerNumber'])) {
+            $mobilenumberRR = array('status' => 'error', 'message' => 'Mobile number is required.');
+        } elseif(!isValidNumber($_POST['mobilenumber'])) {
+            $mobilenumberRR = array('status' => 'error', 'message' => 'Mobile number must be numeric.');
+        } else {
+            $mobilenumberRR = array('status' => 'success');
+            
+        }
+
+        // Check if all the validation are successful or not
+        if($fullnameRR['status'] == 'success' && $mobilenumberRR['status'] == 'success' ) {
+            // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
+            $jobseekerId = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerId']));
+            $jobseekerName = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerName']));
+            $jobseekerNumber = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerNumber']));
+            // Create query to update the jobseeker information
+            mysqli_query($conn, "UPDATE jobseeker SET fullname = '$jobseekerName', mobile_number = '$jobseekerNumber' WHERE jobseeker_id = '$jobseekerId'");
+
+            // Return this as status success response
+            $response = array('status' => 'success');
+        } else {
+            $response = array('status' => 'error','fullnameRR' => $fullnameRR, 'mobilenumberRR' => $mobilenumberRR );
+        }
+
+        // Return the response
+        echo json_encode($response);
+    }
+?>

@@ -42,7 +42,47 @@ $(document).ready(function() {
         return page;
     }
 
-    
+    // Function to used to check if name is valid string, return boolean result(true or false)
+    function isValidName(name) {
+        var regex = new RegExp(/^[a-zA-Z .]+$/);
+        return regex.test(name);
+    }
+
+    // Function to be used to check if mobile number is valid, return boolean result(true or false)
+    function isNumber(mobile){ 
+        var regex = new RegExp(/^[0-9-+]+$/);   
+        return regex.test(mobile); 
+    } 
+
+
+    // Trigger this when user started to type in fullname input and validate it
+    $('#e-jobseekername').on('keyup', function() {
+        let fullname = $('#e-jobseekername').val();
+        if(fullname.length == 0) {
+            $('#e-jobseekername').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#e-jobseekername').popover({ placement: 'right', content: 'Fullname is required.'}).popover('show');
+        } else if(!isValidName(fullname)) {
+            $('#e-jobseekername').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#e-jobseekername').popover({ placement: 'right', content: 'Only characters are allowed.' }).popover('show');
+        } else {
+            $('#e-jobseekername').removeClass().addClass('form-control border-success').popover('dispose');
+        }
+    })    
+
+    // Trigger this when user started to type in mobile number input and validate it
+    $('#e-contactnumber').on('keyup', function() {
+        let mobilenumber = $('#e-contactnumber').val();
+        if(mobilenumber.length == 0) {
+            $('#e-contactnumber').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#e-contactnumber').popover({ placement: 'right', content: 'Mobile number is required.'}).popover('show');
+        } else if(isNumber(mobilenumber) == false) {
+            $('#e-contactnumber').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#e-contactnumber').popover({ placement: 'right', content: 'Mobile number must be numeric.'}).popover('show');
+        } else {
+            $('#e-contactnumber').removeClass().addClass('form-control border-success').popover('dispose');
+        }
+    })
+
     // Function for searching of profile picture src and displaying to modal
     $('#body-h').on('click', '.view-pp', function(){
         let src = $(this).find('img').attr('src')
@@ -129,10 +169,29 @@ $(document).ready(function() {
                 jobseekerName: jobseekerName,
                 jobseekerNumber: jobseekerNumber,
             },
-            success: function(){
-                $('#modal-editdetails').modal('hide');
-                toastr.success('', 'Successfully Updated!');
-                load_data(GetSearchValue(), getCurrentPage());
+            dataType: 'json',
+            success: function (data) {
+                if(data.status == 'success') {
+                    $('#modal-editdetails').modal('hide');
+                    toastr.success('', 'Successfully Updated!');
+                    load_data(GetSearchValue(), getCurrentPage());
+                } else {
+                    // if there is an error in fullname, display error message
+                    if(data.fullnameRR.status == 'error'){
+                        $('#e-jobseekername').removeClass().addClass('form-control border-danger');
+                        $('#e-jobseekername').popover({ placement: 'right', content: data.fullnameRR.message }).popover('show');
+                    } else {
+                        $('#e-jobseekername').removeClass().addClass('form-control border-success').popover('dispose');
+                    }
+
+                    // if there is an error in number, display error message
+                    if(data.mobilenumberRR.status == 'error') {
+                        $('#e-contactnumber').removeClass().addClass('form-control border-danger');
+                        $('#e-contactnumber').popover({ placement: 'right', content: data.mobilenumberRR.message }).popover('show');
+                    } else {
+                        $('#e-contactnumber').removeClass().addClass('form-control border-success').popover('dispose');
+                    }
+                }
             }
         })
     })

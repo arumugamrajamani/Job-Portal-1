@@ -47,6 +47,24 @@ function dateTimeConvertion($date)
 {
     return date('M d, Y, h:i A', strtotime($date));
 }
+// Function for validating if input is valid fullname
+function isValidFullname($fullname)
+{
+    if (preg_match("/^[a-zA-Z .]*$/", $fullname)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+// Function for validating if inout is valid number
+function isValidNumber($number)
+{
+    if (preg_match("/^[0-9]*$/", $number)) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 // For loading of the employer management information
 if (isset($_POST['loadData'])) {
@@ -124,9 +142,13 @@ if (isset($_POST['loadData'])) {
     $pagination = "";
 
     // check if the page number is greater than 1
-    if ($page > 1) {
+    if ($page >= 1) {
         // Set the previous page
         $previous = $page - 1;
+        $pagination .=  "<li class='page-item' data-page='{$previous}'>
+                                <a class='page-link bg-info text-dark'>Previous</a>
+                            </li>";
+    } else {
         $pagination .=  "<li class='page-item' data-page='{$previous}'>
                                 <a class='page-link bg-info text-dark'>Previous</a>
                             </li>";
@@ -144,11 +166,15 @@ if (isset($_POST['loadData'])) {
     }
 
     // Check if there are more than 1 page
-    if ($page < $totalPages) {
+    if ($page <= $totalPages) {
         // Set the next page
         $next = $page + 1;
         $pagination .=  "<li class='page-item' data-page='{$next}'>
                                 <a class='page-link bg-info text-dark'>Next</a>
+                            </li>";
+    } else {
+        $pagination .=  "<li class='page-item' data-page='{$next}'>
+                                <a class='page-link text-dark'>Next</a>
                             </li>";
     }
 
@@ -234,6 +260,7 @@ if (isset($_POST['fetchDetails'])) {
 
     // Create Assoc array to return to the ajax call
     $response = array(
+        'status' => "success",
         'employerName' => $employerName,
         'employerPosition' => $employerPosition,
         'companyName' => $companyName,
@@ -253,30 +280,180 @@ if (isset($_POST['fetchDetails'])) {
 
 // When user click save details button in edit modal
 if (isset($_POST['saveDetails'])) {
-    // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
-    $employerId = mysqli_real_escape_string($conn, sanitize_input($_POST['employerId']));
-    $employerName = mysqli_real_escape_string($conn, sanitize_input($_POST['employerName']));
-    $employerPosition = mysqli_real_escape_string($conn, sanitize_input($_POST['employerPosition']));
-    $companyName = mysqli_real_escape_string($conn, sanitize_input($_POST['companyName']));
-    $companyAddress = mysqli_real_escape_string($conn, sanitize_input($_POST['companyAddress']));
-    $CEOname = mysqli_real_escape_string($conn, sanitize_input($_POST['CEOname']));
-    $companySize = mysqli_real_escape_string($conn, sanitize_input($_POST['companySize']));
-    $companyRevenue = mysqli_real_escape_string($conn, sanitize_input($_POST['companyRevenue']));
-    $industry = mysqli_real_escape_string($conn, sanitize_input($_POST['industry']));
-    $companyNumber = mysqli_real_escape_string($conn, sanitize_input($_POST['companyNumber']));
-    $companyEmail = mysqli_real_escape_string($conn, sanitize_input($_POST['companyEmail']));
-    $companyDescription = mysqli_real_escape_string($conn, sanitize_input($_POST['companyDescription']));
-    $verificationStatus = mysqli_real_escape_string($conn, sanitize_input($_POST['verificationStatus']));
 
-    // Create query to update the employer information
-    $updateQuery = mysqli_query($conn, "UPDATE employer SET employer_name = '$employerName', employer_position = '$employerPosition', 
-            company_name = '$companyName', company_address = '$companyAddress', company_ceo = '$CEOname', company_size = '$companySize', 
-            company_revenue = '$companyRevenue', industry = '$industry', contact_number = '$companyNumber', company_email = '$companyEmail', 
-            company_description = '$companyDescription', is_verified = '$verificationStatus' WHERE employer_id = '$employerId'");
-
-    if ($updateQuery) {
-        echo "success";
+    // <--------------------------------------- VALIDATIONS ------------------------------------------------------->
+    // Validation for employee name
+    if (empty($_POST['employerName'])) {
+        $employerNameRR = array('status' => 'error', 'message' => 'Employer Fullname is required.');
+    } elseif (!isValidFullname($_POST['employerName'])) {
+        $employerNameRR = array('status' => 'error', 'message' => 'Only characters are allowed.');
     } else {
-        echo "failed";
+        $employerNameRR = array('status' => 'success');
+        $employerName = sanitize_input($_POST['employerName']);
     }
+
+    // Validation for employer position
+    if (empty($_POST['employerPosition'])) {
+        $employerPositionRR = array('status' => 'error', 'message' => 'Employer Position is required.');
+    } else {
+        $employerPositionRR = array('status' => 'success');
+        $employerPosition = sanitize_input($_POST['employerPosition']);
+    }
+
+    // Validation for company name
+    if (empty($_POST['companyName'])) {
+        $companyNameRR = array('status' => 'error', 'message' => 'Company Name is required.');
+    } else {
+        $companyNameRR = array('status' => 'success');
+        $companyName = sanitize_input($_POST['companyName']);
+    }
+
+    // Validation for company address
+    if (empty($_POST['companyAddress'])) {
+        $companyAddressRR = array('status' => 'error', 'message' => 'Company Address is required.');
+    } else {
+        $companyAddressRR = array('status' => 'success');
+        $companyAddress = sanitize_input($_POST['companyAddress']);
+    }
+
+    // Validation for company address
+    if (empty($_POST['CEOname'])) {
+        $companyCEORR = array('status' => 'error', 'message' => 'Company CEO name is required.');
+    } elseif (!isValidFullname($_POST['CEOname'])) {
+        $companyCEORR = array('status' => 'error', 'message' => 'Only characters are allowed.');
+    } else {
+        $companyCEORR = array('status' => 'success');
+        $companyCEO = sanitize_input($_POST['CEOname']);
+    }
+
+    // Validation for company size
+    if (empty($_POST['companySize'])) {
+        $companySizeRR = array('status' => 'error', 'message' => 'Company Size is required.');
+    } elseif (!isValidNumber($_POST['companySize'])) {
+        $companySizeRR = array('status' => 'error', 'message' => 'Only numbers are allowed.');
+    } else {
+        $companySizeRR = array('status' => 'success');
+        $companySize = sanitize_input($_POST['companySize']);
+    }
+
+    // Validation for company revenue
+    if (empty($_POST['companyRevenue'])) {
+        $companyRevenueRR = array('status' => 'error', 'message' => 'Company Revenue is required.');
+    } elseif (!isValidNumber($_POST['companyRevenue'])) {
+        $companyRevenueRR = array('status' => 'error', 'message' => 'Only numbers are allowed.');
+    } else {
+        $companyRevenueRR = array('status' => 'success');
+        $companyRevenue = sanitize_input($_POST['companyRevenue']);
+    }
+
+    // Validation for industry
+    if (empty($_POST['industry'])) {
+        $industryRR = array('status' => 'error', 'message' => 'Industry is required.');
+    } else {
+        $industryRR = array('status' => 'success');
+        $industry = sanitize_input($_POST['industry']);
+    }
+
+    // Validation for contact number
+    if (empty($_POST['companyNumber'])) {
+        $contactNumberRR = array('status' => 'error', 'message' => 'Contact Number is required.');
+    } elseif (!preg_match('/^[0-9]*$/', $_POST['companyNumber'])) {
+        $contactNumberRR = array('status' => 'error', 'message' => 'Only numbers are allowed.');
+    } else {
+        $contactNumberRR = array('status' => 'success');
+        $contactNumber = sanitize_input($_POST['companyNumber']);
+    }
+
+    // Validation for company email 
+    if (empty($_POST['companyEmail'])) {
+        $companyEmailRR = array('status' => 'error', 'message' => 'Company Email is required.');
+    } elseif (!filter_var($_POST['companyEmail'], FILTER_VALIDATE_EMAIL)) {
+        $companyEmailRR = array('status' => 'error', 'message' => 'Email is invalid.');
+    } else {
+        $companyEmailRR = array('status' => 'success');
+        $companyEmail = sanitize_input($_POST['companyEmail']);
+    }
+
+    // Validation for company description
+    if (empty($_POST['companyDescription'])) {
+        $companyDescriptionRR = array('status' => 'error', 'message' => 'Company Description is required.');
+    } elseif (strlen($_POST['companyDescription']) < 50) {
+        $companyDescriptionRR = array('status' => 'error', 'message' => 'Atleast 50 characters are required.');
+    } else {
+        $companyDescriptionRR = array('status' => 'success');
+        $companyDescription = sanitize_input($_POST['companyDescription']);
+    }
+
+    // Validation for industry
+    // used to protect db  users that will inspect element the value="0"or"1"
+    if ($_POST['verificationStatus'] == "0" || $_POST['verificationStatus'] == "1") {
+        $verificationStatusRR = array('status' => 'success');
+    } else {
+        $verificationStatusRR = array('status' => 'error', 'message' => 'Invalid Verification Status');
+    }
+
+    // <---------------------------------------END OF VALIDATIONS ------------------------------------------------------->
+
+    if (
+        $employerNameRR['status'] == 'success' && $employerPositionRR['status'] == 'success' && $companyNameRR['status'] == 'success'
+        && $companyNameRR['status'] == 'success' && $companyAddressRR['status'] == 'success' && $companyCEORR['status'] == 'success'
+        && $companySizeRR['status'] == 'success' && $companyRevenueRR['status'] == 'success' && $industryRR['status'] == 'success'
+        && $contactNumberRR['status'] == 'success' && $companyEmailRR['status'] == 'success' && $companyDescriptionRR['status'] == 'success'
+        && $verificationStatusRR['status'] == 'success'
+    ) {
+
+        // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
+        $employerId = mysqli_real_escape_string($conn, sanitize_input($_POST['employerId']));
+        $employerName = mysqli_real_escape_string($conn, $employerName);
+        $employerPosition = mysqli_real_escape_string($conn, $employerPosition);
+        $companyName = mysqli_real_escape_string($conn, $companyName);
+        $companyAddress = mysqli_real_escape_string($conn, $companyAddress);
+        $companyCEO = mysqli_real_escape_string($conn, $companyCEO);
+        $companySize = mysqli_real_escape_string($conn, $companySize);
+        $companyRevenue = mysqli_real_escape_string($conn, $companyRevenue);
+        $industry = mysqli_real_escape_string($conn, $industry);
+        $companyNumber = mysqli_real_escape_string($conn, $contactNumber);
+        $companyEmail = mysqli_real_escape_string($conn, $companyEmail);
+        $companyDescription = mysqli_real_escape_string($conn, $companyDescription);
+        $verificationStatus = mysqli_real_escape_string($conn, sanitize_input($_POST['verificationStatus']));
+
+
+        // Create query to update the employer information
+        mysqli_query($conn, "UPDATE employer SET
+                    employer_name = '$employerName', 
+                    employer_position = '$employerPosition', 
+                    company_name = '$companyName', 
+                    company_address = '$companyAddress', 
+                    company_ceo = '$companyCEO', 
+                    company_size = '$companySize', 
+                    company_revenue = '$companyRevenue', 
+                    industry = '$industry', 
+                    contact_number = '$companyNumber', 
+                    company_email = '$companyEmail', 
+                    company_description = '$companyDescription', 
+                    is_verified = '$verificationStatus' 
+                    WHERE employer_id = '$employerId'");
+
+        $response = array('status' => 'success');
+    } else {
+        // Return error status
+        $response = array(
+            'status' => 'error',
+            'employerNameRR' => $employerNameRR,
+            'employerPositionRR' => $employerPositionRR,
+            'companyNameRR' => $companyNameRR,
+            'companyAddressRR' => $companyAddressRR,
+            'companyCEORR' => $companyCEORR,
+            'companySizeRR' => $companySizeRR,
+            'companyRevenueRR' => $companyRevenueRR,
+            'industryRR' => $industryRR,
+            'companyDescriptionRR' => $companyDescriptionRR,
+            'contactNumberRR' => $contactNumberRR,
+            'companyEmailRR' => $companyEmailRR,
+            'verificationStatusRR' => $verificationStatusRR
+        );
+    }
+
+    // Return the JSON response
+    echo json_encode($response);
 }

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,47 +18,50 @@
     <link rel="stylesheet" href="css/employer-management.css">
     <title>Employer Management</title>
 </head>
+
 <body>
     <div class="color-overlay">
         <nav class="navbar navbar-expand-lg  h6 navbar-light fixed-top mx-0 shadow-sm">
             <a href="#" class="navbar-brand ms-5">
-            <img src="image/flogo.png" alt="Job Portal Logo" width="80" height="60"></a>
+                <img src="image/flogo.png" alt="Job Portal Logo" width="80" height="60"></a>
             <h6 class="position-relative">Employers Management</h6>
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                 <ul class="navbar-nav ms-auto  text-center">
                     <li class="nav-item dropdown me-5">
                         <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-circle"></i></a>
-                    <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown" >
-                        <li><a class="dropdown-item  fs-5 text-white" href="adminprofile.php"><i class="bi bi-person-circle"></i> My Profile</a></li>
-                        <li><hr class="dropdown-divider bg-white"></li>
-                        <li><a class="dropdown-item fs-5 text-white" href="php/logout.php">Sign Out</a></li>
-                    </ul>
+                        <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item  fs-5 text-white" href="adminprofile.php"><i class="bi bi-person-circle"></i> My Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider bg-white">
+                            </li>
+                            <li><a class="dropdown-item fs-5 text-white" href="php/logout.php">Sign Out</a></li>
+                        </ul>
                 </ul>
             </div>
-        </nav>         
+        </nav>
     </div>
     <br><br>
     <button class="openbtn" title="Open Sidebar" onclick="openNav()"><i id="list-i" class="bi bi-list fa-2x"></i></button>
     <div class="sidebar shadow-lg" id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn text-dark" title="Close Sidebar" onclick="closeNav()">×</a>
         <a href="dashboard.php"><img class="me-3" src="image/dashboard.png"> Dashboard</a><br>
-        <a href="employer-management.php" class="highlight"><img class="me-3"  src="image/employers.png"> Employers Management</a><br>
-        <a href="jobseeker-management.php"><img class="me-3"  src="image/jobseeker.png"> Job Seeker Management</a><br>
-        <a href="jobpost-management.php"><img class="me-3"  src="image/jobpost.png"> Job Post Management</a><br>
-        <a href="jobcategories-management.php"><img class="me-3"  src="image/jobcategory.png"> Job Categories Management</a><br>
-        <a href="admin-profile.php"><img class="me-3"  src="image/profilesetting.png"> Profile Setting</a><br>
-        <a href="recycle-bin-employer.php"><img class="me-3"  src="image/recycle-bin.png"> Recycle Bin</a><br>
+        <a href="employer-management.php" class="highlight"><img class="me-3" src="image/employers.png"> Employers Management</a><br>
+        <a href="jobseeker-management.php"><img class="me-3" src="image/jobseeker.png"> Job Seeker Management</a><br>
+        <a href="jobpost-management.php"><img class="me-3" src="image/jobpost.png"> Job Post Management</a><br>
+        <a href="jobcategories-management.php"><img class="me-3" src="image/jobcategory.png"> Job Categories Management</a><br>
+        <a href="admin-profile.php"><img class="me-3" src="image/profilesetting.png"> Profile Setting</a><br>
+        <a href="recycle-bin-employer.php"><img class="me-3" src="image/recycle-bin.png"> Recycle Bin</a><br>
     </div>
     <br><br>
     <div class="container-responsive p-md-5 mt-4 bg-white" id="main">
-        <div class="d-flex">      
+        <div class="d-flex">
             <input class="form-control icon i-search" id="search" placeholder="Search an employer" aria-label="Search">
             <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
         </div>
         <div class="table col-auto ">
             <section class="type p-1">
-                <div class="table-responsive pt-4" id="no-more-tables" >
-                    <table class="table basic-table table-headers table table-hover" >
+                <div class="table-responsive pt-4" id="no-more-tables">
+                    <table class="table basic-table table-headers table table-hover">
                         <thead class="thead text-dark text-center">
                             <tr>
                                 <th>Company Logo</th>
@@ -66,7 +70,7 @@
                                 <th>Employer Position</th>
                                 <th>Email address</th>
                                 <th>DTI Business Permit</th>
-                                <th>Status</th>      
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -87,7 +91,7 @@
                 <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
                 <li class="page-item"><a class="page-link bg-info text-dark" href="#">Next</a></li> -->
             </ul>
-        </nav> 
+        </nav>
     </div>
 
     <!--Company logo modal-->
@@ -114,9 +118,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="delete modal-body">
-                    <button type="button"  id="yes-delete" class="yes-no btn btn-success">Yes</button>
+                    <button type="button" id="yes-delete" class="yes-no btn btn-success">Yes</button>
                     <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
-                </div> 
+                </div>
             </div>
         </div>
     </div>
@@ -129,68 +133,68 @@
                     <h5 class="modal-title ms-5" id="exampleModalLabel"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                    <div class="modal-body">
-                        <div class="container con1">
-                            <form class="container">
-                                <h2 class="text-black text-center mt-0 fw-bold">MORE DETAILS</h2>
-                                <hr>
-                                <div class="row mb-3 mt-0 ms-4 fw-bold">
-                                    <label for="companyaddress" class="col-sm-3 ">Company Address:</label>
-                                    <div class="col-sm-8">
-                                        <h5 id="companyaddress"></h5>
-                                    </div>
+                <div class="modal-body">
+                    <div class="container con1">
+                        <form class="container">
+                            <h2 class="text-black text-center mt-0 fw-bold">MORE DETAILS</h2>
+                            <hr>
+                            <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                <label for="companyaddress" class="col-sm-3 ">Company Address:</label>
+                                <div class="col-sm-8">
+                                    <h5 id="companyaddress"></h5>
                                 </div>
-                                <div class="row mb-3 mt-0 ms-4 fw-bold">
-                                    <label for="companyceoname" class="col-sm-3 ">Company CEO Name:</label>
-                                    <div class="col-sm-8">
-                                        <h5 id="companyceoname"></h5>
-                                    </div>
+                            </div>
+                            <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                <label for="companyceoname" class="col-sm-3 ">Company CEO Name:</label>
+                                <div class="col-sm-8">
+                                    <h5 id="companyceoname"></h5>
                                 </div>
-                                <div class="row mb-3 mt-0 ms-4 fw-bold">
-                                    <label for="companysize" class="col-sm-3 ">Company Size:</label>
-                                    <div class="col-sm-8">
-                                        <h5 id="companysize"></h5>
-                                    </div>
+                            </div>
+                            <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                <label for="companysize" class="col-sm-3 ">Company Size:</label>
+                                <div class="col-sm-8">
+                                    <h5 id="companysize"></h5>
                                 </div>
-                                <div class="row mb-3 mt-0 ms-4 fw-bold">
-                                    <label for="companyrevenue" class="col-sm-3 ">Company Revenue:</label>
-                                    <div class="col-sm-8">
-                                        <h5 id="companyrevenue"></h5>
-                                    </div> 
+                            </div>
+                            <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                <label for="companyrevenue" class="col-sm-3 ">Company Revenue:</label>
+                                <div class="col-sm-8">
+                                    <h5 id="companyrevenue"></h5>
                                 </div>
-                                <div class="row mb-3 mt-0 ms-4 fw-bold">
-                                    <label for="industry" class="col-sm-3 ">Industry:</label>
-                                    <div class="col-sm-8">
-                                        <h5 id="industry"></h5>
-                                    </div> 
+                            </div>
+                            <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                <label for="industry" class="col-sm-3 ">Industry:</label>
+                                <div class="col-sm-8">
+                                    <h5 id="industry"></h5>
                                 </div>
-                                <div class="row mb-3 mt-0 ms-4 fw-bold">
-                                    <label for="companynumber" class="col-sm-3 ">Company Number:</label>
-                                    <div class="col-sm-8">
-                                        <h5 id="companynumber"></h5>
-                                    </div> 
+                            </div>
+                            <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                <label for="companynumber" class="col-sm-3 ">Company Number:</label>
+                                <div class="col-sm-8">
+                                    <h5 id="companynumber"></h5>
                                 </div>
-                                <div class="row mb-3 mt-0 ms-4 fw-bold">
-                                    <label for="companyemail" class="col-sm-3 ">Company Email:</label>
-                                    <div class="col-sm-8">
-                                        <h5 id="companyemail"></h5>
-                                    </div> 
+                            </div>
+                            <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                <label for="companyemail" class="col-sm-3 ">Company Email:</label>
+                                <div class="col-sm-8">
+                                    <h5 id="companyemail"></h5>
                                 </div>
-                                <div class="row mb-3 mt-0 ms-4">
-                                    <label for="companydescription" class="col-sm-3 fw-bold ">Company Description:</label>
-                                    <div class="col-sm-8">
-                                        <p id="companydescription"></p>
-                                    </div> 
+                            </div>
+                            <div class="row mb-3 mt-0 ms-4">
+                                <label for="companydescription" class="col-sm-3 fw-bold ">Company Description:</label>
+                                <div class="col-sm-8">
+                                    <p id="companydescription"></p>
                                 </div>
-                                <div class="row mb-3 mt-0 ms-4">
-                                    <label for="datecreated" class="col-sm-3 fw-bold">Date/Time Created:</label>
-                                    <div class="col-sm-8">
-                                        <h5 id="datecreated"></h5>
-                                    </div> 
+                            </div>
+                            <div class="row mb-3 mt-0 ms-4">
+                                <label for="datecreated" class="col-sm-3 fw-bold">Date/Time Created:</label>
+                                <div class="col-sm-8">
+                                    <h5 id="datecreated"></h5>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
+                </div>
                 <div class="modal-footer">
                     <button type="button" class="close btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
@@ -225,7 +229,7 @@
                                 </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
-                                <label for="e-companyaddress"" class="col-sm-3 ">Company Address:</label>
+                                <label for="e-companyaddress" class="col-sm-3 ">Company Address:</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="e-companyaddress">
                                 </div>
@@ -246,31 +250,31 @@
                                 <label for="e-companyrevenue" class="col-sm-3 ">Company Revenue:</label>
                                 <div class="col-sm-8">
                                     <input type="number" class="form-control" id="e-companyrevenue">
-                                </div> 
+                                </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="e-industry" class="col-sm-3 ">Industry:</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="e-industry">
-                                </div> 
+                                </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="e-companynumber" class="col-sm-3 ">Company Number:</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="e-companynumber">
-                                </div> 
+                                </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="e-companyemail" class="col-sm-3 ">Company Email:</label>
                                 <div class="col-sm-8">
                                     <input type="email" class="form-control" id="e-companyemail">
-                                </div> 
+                                </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4">
                                 <label for="e-companydescription" class="col-sm-3 fw-bold ">Company Description:</label>
                                 <div class="col-sm-8">
                                     <textarea class="form-control" placeholder="Description Here" id="e-companydescription" rows="5"></textarea>
-                                </div> 
+                                </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4">
                                 <label for="verify" class="col-sm-3 fw-bold">Verification Status:</label>
@@ -294,4 +298,5 @@
 
     <script src="js/employer-management.js"></script>
 </body>
+
 </html>

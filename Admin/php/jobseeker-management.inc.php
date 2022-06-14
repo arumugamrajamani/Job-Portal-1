@@ -224,17 +224,16 @@ if (isset($_POST['fetchDetails'])) {
         // Validation for Fullname
         if(empty($_POST['jobseekerName'])) {
             $fullnameRR = array('status' => 'error', 'message' => 'Fullname is required.');
-        } else if(!isValidFullname($_POST['fullname'])) {
+        } else if(!isValidFullname($_POST['jobseekerName'])) {
             $fullnameRR = array('status' => 'error', 'message' => 'Only characters are allowed.');
         } else {
             $fullnameRR = array('status' => 'success');
-           
         }
 
         // Validation for mobilenumber
         if(empty($_POST['jobseekerNumber'])) {
             $mobilenumberRR = array('status' => 'error', 'message' => 'Mobile number is required.');
-        } elseif(!isValidNumber($_POST['mobilenumber'])) {
+        } elseif(!isValidNumber($_POST['jobseekerNumber'])) {
             $mobilenumberRR = array('status' => 'error', 'message' => 'Mobile number must be numeric.');
         } else {
             $mobilenumberRR = array('status' => 'success');

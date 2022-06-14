@@ -115,9 +115,13 @@ if (isset($_POST['loadData'])) {
     $pagination = "";
 
     // check if the page number is greater than 1
-    if ($page > 1) {
+    if ($page >= 1) {
         // Set the previous page
         $previous = $page - 1;
+        $pagination .=  "<li class='page-item' data-page='{$previous}'>
+                                <a class='page-link bg-info text-dark'>Previous</a>
+                            </li>";
+    } else {
         $pagination .=  "<li class='page-item' data-page='{$previous}'>
                                 <a class='page-link bg-info text-dark'>Previous</a>
                             </li>";
@@ -135,12 +139,16 @@ if (isset($_POST['loadData'])) {
     }
 
     // Check if there are more than 1 page
-    if ($page < $totalPages) {
+    if ($page <= $totalPages) {
         // Set the next page
         $next = $page + 1;
         $pagination .=  "<li class='page-item' data-page='{$next}'>
                                     <a class='page-link bg-info text-dark'>Next</a>
                                 </li>";
+    } else {
+        $pagination .=  "<li class='page-item' data-page='{$next}'>
+                                <a class='page-link bg-info text-dark'>Next</a>
+                            </li>";
     }
 
     // For entries display

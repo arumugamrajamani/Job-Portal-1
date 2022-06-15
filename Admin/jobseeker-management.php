@@ -190,6 +190,7 @@
         </div>
     </div>
     <script src="js/jobseeker-management.js"></script>
+    <script src="../js/preloader.js"></script>
 </body>
 
 </html>

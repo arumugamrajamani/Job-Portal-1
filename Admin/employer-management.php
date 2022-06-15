@@ -323,6 +323,7 @@
     </div>
 
     <script src="js/employer-management.js"></script>
+    <script src="../js/preloader.js"></script>
 </body>
 
 </html>

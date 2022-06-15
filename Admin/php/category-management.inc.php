@@ -1,43 +1,47 @@
 <?php
-    //includes db connection from 2 folders back
-    include '../../php/db-connection.php';
+//includes db connection from 2 folders back
+include '../../php/db-connection.php';
 
-    //  Function for Sanitizing all input data 
-    function sanitize_input($data){
-        $data = trim($data);
-        $data = stripcslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
+//  Function for Sanitizing all input data 
+function sanitize_input($data)
+{
+    $data = trim($data);
+    $data = stripcslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+// Convert old date time into textual format
+function dateTimeConvertion($date)
+{
+    return date('M d, Y, h:i A', strtotime($date));
+}
+
+// Function for checking if Job Category is existing in the database, return boolean true or false
+function isCategoryExist($jobcategory)
+{
+    $jobcategory = mysqli_real_escape_string($GLOBALS['conn'], $jobcategory);
+    $CheckCategoryQuery = mysqli_query($GLOBALS['conn'], "SELECT * FROM category WHERE job_title = '$jobcategory'");
+    if (mysqli_num_rows($CheckCategoryQuery) > 0) {
+        return true;
+    } else {
+        return false;
     }
+}
 
-    // Convert old date time into textual format
-    function dateTimeConvertion($date){ 
-        return date('M d, Y, h:i A', strtotime($date)); 
+// Function for validating if input is valid 
+function isValidCategory($category)
+{
+    if (preg_match("/^[a-zA-Z0-9 .]+$/", $category)) {
+        return true;
+    } else {
+        return false;
     }
-
-    // Function for checking if Job Category is existing in the database, return boolean true or false
-    function isCategoryExist($jobcategory) {
-        $jobcategory = mysqli_real_escape_string($GLOBALS['conn'], $jobcategory);
-        $CheckCategoryQuery = mysqli_query($GLOBALS['conn'], "SELECT * FROM category WHERE job_title = '$jobcategory'");
-        if(mysqli_num_rows($CheckCategoryQuery) > 0) {
-            return true;
-        } else {
-            return false;
-        }
-    } 
-
-    // Function for validating if input is valid 
-    function isValidCategory($category){
-        if(preg_match("/^[a-zA-Z0-9 .]+$/", $category)){
-            return true;
-        } else {
-            return false;
-        }
-    }
+}
 
 
 
-    if (isset($_POST['loadData'])) {
+if (isset($_POST['loadData'])) {
     // Variables to store the data
     $page = 0;
     // Set the item limit per page
@@ -97,12 +101,16 @@
     $pagination = "";
 
     // check if the page number is greater than 1
-    if ($page > 1) {
+    if ($page >= 1) {
         // Set the previous page
         $previous = $page - 1;
         $pagination .=  "<li class='page-item' data-page='{$previous}'>
                                 <a class='page-link bg-info text-dark'>Previous</a>
                             </li>";
+    } else {
+        $pagination .=  "<li class='page-item' data-page='{$previous}'>
+                            <a class='page-link bg-info text-dark'>Previous</a>
+                        </li>";
     }
 
     // Loop through the pages
@@ -117,12 +125,16 @@
     }
 
     // Check if there are more than 1 page
-    if ($page < $totalPages) {
+    if ($page <= $totalPages) {
         // Set the next page
         $next = $page + 1;
         $pagination .=  "<li class='page-item' data-page='{$next}'>
                                     <a class='page-link bg-info text-dark'>Next</a>
                                 </li>";
+    } else {
+        $pagination .=  "<li class='page-item' data-page='{$next}'>
+                                <a class='page-link bg-info text-dark'>Next</a>
+                            </li>";
     }
 
     // For entries display
@@ -141,75 +153,74 @@
     echo json_encode($response);
 }
 
-    // when user delete a jobseeker
-    if (isset($_POST['deleteCategory'])) {
+// when user delete a jobseeker
+if (isset($_POST['deleteCategory'])) {
     $categoryId = mysqli_real_escape_string($conn, $_POST['categoryId']);
     // deleting the jobseeker in the database
     mysqli_query($conn, "DELETE FROM category WHERE category_id = '$categoryId'");
     // Return nothing to the ajax call
-    }
-    
-    // When user click edit button return the selected employer information
-    if(isset($_POST['fetchDetails'])){
-        $categoryId = mysqli_real_escape_string($conn, $_POST['categoryId']);
-        // Create query to get the employer information
-        $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM category WHERE category_id = '$categoryId'");
-        $row = mysqli_fetch_assoc($fetchDetailsQuery);
-        // Get the employer information needed to edit modal
-        echo $jobcategory = $row['job_title'];
-    }
+}
 
-    // When user click save details button in edit modal
-    if(isset($_POST['saveDetails'])){
+// When user click edit button return the selected employer information
+if (isset($_POST['fetchDetails'])) {
+    $categoryId = mysqli_real_escape_string($conn, $_POST['categoryId']);
+    // Create query to get the employer information
+    $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM category WHERE category_id = '$categoryId'");
+    $row = mysqli_fetch_assoc($fetchDetailsQuery);
+    // Get the employer information needed to edit modal
+    echo $jobcategory = $row['job_title'];
+}
 
-        // Validation for Job Category
-        if(empty($_POST['jobcategory'])) {
-            $jobcategoryRR = array('status' => 'error', 'message' => 'Job Category is required.');
-        } else if(!isValidCategory($_POST['jobcategory'])) {
-            $jobcategoryRR = array('status' => 'error', 'message' => 'Only characters and numbers are allowed.');
-        } else {
-            $jobcategoryRR = array('status' => 'success');
-        }
+// When user click save details button in edit modal
+if (isset($_POST['saveDetails'])) {
 
-        if($jobcategoryRR['status'] == 'success') {
-            // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
-            $categoryId = mysqli_real_escape_string($conn, sanitize_input($_POST['categoryId']));
-            $jobcategory = mysqli_real_escape_string($conn, sanitize_input($_POST['jobcategory']));
-            // Create query to update the jobseeker information
-            mysqli_query($conn, "UPDATE category SET job_title = '$jobcategory' WHERE category_id = '$categoryId'");
-
-            // Return this as status success response
-            $response = array('status' => 'success');
-        } else {
-            $response = array('status' => 'error','jobcategoryRR' => $jobcategoryRR );
-        }
-        // Return the response
-        echo json_encode($response);
+    // Validation for Job Category
+    if (empty($_POST['jobcategory'])) {
+        $jobcategoryRR = array('status' => 'error', 'message' => 'Job Category is required.');
+    } else if (!isValidCategory($_POST['jobcategory'])) {
+        $jobcategoryRR = array('status' => 'error', 'message' => 'Only characters and numbers are allowed.');
+    } else {
+        $jobcategoryRR = array('status' => 'success');
     }
 
-    // When user click add button modal
-    if(isset($_POST['addCategory'])){
-        // Validation for Job Category
-        if(empty($_POST['jobcategory'])) {
-            $jobcategoryRR = array('status' => 'error', 'message' => 'Job Category is required.');
-        } else if(!isValidCategory($_POST['jobcategory'])) {
-            $jobcategoryRR = array('status' => 'error', 'message' => 'Only characters and numbers are allowed.');
-        } else {
-            $jobcategoryRR = array('status' => 'success');
-            $jobcategory = sanitize_input($_POST['jobcategory']);
-        }
+    if ($jobcategoryRR['status'] == 'success') {
+        // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
+        $categoryId = mysqli_real_escape_string($conn, sanitize_input($_POST['categoryId']));
+        $jobcategory = mysqli_real_escape_string($conn, sanitize_input($_POST['jobcategory']));
+        // Create query to update the jobseeker information
+        mysqli_query($conn, "UPDATE category SET job_title = '$jobcategory' WHERE category_id = '$categoryId'");
 
-        if($jobcategoryRR['status'] == 'success') {
-           
-                $jobcategory = mysqli_real_escape_string($conn, $_POST['jobcategory']);
-                // Create query to Insert the Job Category
-                mysqli_query($conn, "INSERT INTO category (job_title, date_created) VALUES ('$jobcategory' , NOW())");
-                // Return this as status success response
-            $response = array('status' => 'success');
-        } else {
-            $response = array('status' => 'error','jobcategoryRR' => $jobcategoryRR );
-        }
-        // Return the response
-        echo json_encode($response);
+        // Return this as status success response
+        $response = array('status' => 'success');
+    } else {
+        $response = array('status' => 'error', 'jobcategoryRR' => $jobcategoryRR);
     }
-?>
+    // Return the response
+    echo json_encode($response);
+}
+
+// When user click add button modal
+if (isset($_POST['addCategory'])) {
+    // Validation for Job Category
+    if (empty($_POST['jobcategory'])) {
+        $jobcategoryRR = array('status' => 'error', 'message' => 'Job Category is required.');
+    } else if (!isValidCategory($_POST['jobcategory'])) {
+        $jobcategoryRR = array('status' => 'error', 'message' => 'Only characters and numbers are allowed.');
+    } else {
+        $jobcategoryRR = array('status' => 'success');
+        $jobcategory = sanitize_input($_POST['jobcategory']);
+    }
+
+    if ($jobcategoryRR['status'] == 'success') {
+
+        $jobcategory = mysqli_real_escape_string($conn, $_POST['jobcategory']);
+        // Create query to Insert the Job Category
+        mysqli_query($conn, "INSERT INTO category (job_title, date_created) VALUES ('$jobcategory' , NOW())");
+        // Return this as status success response
+        $response = array('status' => 'success');
+    } else {
+        $response = array('status' => 'error', 'jobcategoryRR' => $jobcategoryRR);
+    }
+    // Return the response
+    echo json_encode($response);
+}

@@ -1,352 +1,430 @@
 body {
-    background: #00c2d6;
-    font-family: sans-serif;
+  background: #00c2d6;
+  font-family: sans-serif;
 }
-
 .search-box {
-    width: 500px;
-    border-style: outset;
+  width: 500px;
+  border-style: outset;
 }
-
 .btn-outline {
-    background-color: #00c2d6;
+  background-color: #00c2d6;
 }
-
 .navbar-light {
-    background-color: #ffffff;
-    margin: 0%;
+  background-color: #ffffff;
+  margin: 0%;
 }
-
 .navbar-expand-lg {
-    height: 70px;
-    width: 100%;
-    margin-left: 5px;
+  height: 70px;
+  width: 100%;
+  margin-left: 5px;
 }
-
 .btn-outline-secondary {
-    background-color: #00c2d6;
-    color: white;
-    border: #00c2d6;
-    border-style: outset;
+  background-color: #00c2d6;
+  color: white;
+  border: #00c2d6;
+  border-style: outset;
 }
-
-.account-drop {
-    text-align: center;
-    position: relative;
-    background-color: #372732;
-    width: 50px;
+.dropdown-menu {
+  background: #372732;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 200px;
+  border-radius: 10px;
+  margin-right: 15px;
 }
-
-.nav-item .dropdown-item {
-    position: relative;
-    width: 150px;
+.dropdown-menu a {
+  color: white;
 }
-
-.nav-item .dropdown-item:hover {
-    background-color: #8b8383;
+.dropdown-menu:after {
+  content: " ";
+  position: absolute;
+  right: 10px;
+  top: -12px;
+  border-top: none;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  border-bottom: 12px solid #372732;
 }
-
+.dropdown-menu li img {
+  width: 30px;
+  height: 30px;
+}
+.dropdown-menu li i {
+  font-size: 20px;
+  margin-right: 20px;
+}
+.dropdown-menu li .fa-user-pen {
+  margin-right: 15px;
+}
+.dropdown-item:hover {
+  background-color: #50677b;
+  color: white;
+}
+hr {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+}
+.btn-dropdown {
+  border: 0;
+  background-color: transparent;
+}
+.fa-caret-down {
+  font-size: 25px;
+}
+.pfp {
+  width: 50px;
+  height: 50px;
+}
 #menu {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 25px;
-    text-align: center;
-    color: #372732;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+  color: #372732;
 }
-
 #title-sub {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    color: #372732;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #372732;
 }
-
 #btn-info {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 15px;
-    text-align: center;
-    border-radius: 25px;
-    height: 35px;
-    color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 25px;
+  height: 35px;
+  color: white;
 }
-
 #list-icon {
-    margin-left: 280px;
+  margin-left: 280px;
 }
-
 .employers-jobseekers {
-    height: 350px;
-    margin-left: 200px;
+  height: 350px;
+  margin-left: 200px;
 }
-
 .bi-person-circle {
-    font-size: 30px;
+  font-size: 30px;
 }
-
 #space1 {
-    background: #fdf6ec;
-    width: 30px;
+  background: #fdf6ec;
+  width: 30px;
 }
-
 .registered-employers {
-    background: #68f0ff;
-    margin-left: -12px;
-    margin-right: -12px;
-    padding: 5px;
-    border-radius: 24px 24px 0px 0px;
+  background: #68f0ff;
+  margin-left: -12px;
+  margin-right: -12px;
+  padding: 5px;
+  border-radius: 24px 24px 0px 0px;
 }
-
 #registered-employer {
-    border-radius: 24px;
-    background: #ececec;
+  border-radius: 24px;
+  background: #ececec;
 }
-
 .registered-jobseekers {
-    background: #68f0ff;
-    margin-left: -12px;
-    margin-right: -12px;
-    padding: 5px;
-    border-radius: 24px 24px 0px 0px;
+  background: #68f0ff;
+  margin-left: -12px;
+  margin-right: -12px;
+  padding: 5px;
+  border-radius: 24px 24px 0px 0px;
 }
-
 #registered-jobseekers {
-    border-radius: 24px;
-    background: #ececec;
+  border-radius: 24px;
+  background: #ececec;
 }
-
 .numberofjob {
-    background: #68f0ff;
-    margin-left: -12px;
-    margin-right: -12px;
-    padding: 5px;
-    border-radius: 24px 24px 0px 0px;
+  background: #68f0ff;
+  margin-left: -12px;
+  margin-right: -12px;
+  padding: 5px;
+  border-radius: 24px 24px 0px 0px;
 }
-
 #numberofjobs {
-    border-radius: 24px;
-    background: #ececec;
+  border-radius: 24px;
+  background: #ececec;
 }
-
 #numberofjob-active {
-    height: 350px;
-    margin-left: 200px;
+  height: 350px;
+  margin-left: 200px;
 }
-
 .active-inactive {
-    background: #68f0ff;
-    margin-left: -12px;
-    margin-right: -12px;
-    padding: 5px;
-    border-radius: 24px 24px 0px 0px;
+  background: #68f0ff;
+  margin-left: -12px;
+  margin-right: -12px;
+  padding: 5px;
+  border-radius: 24px 24px 0px 0px;
 }
-
 #myChart {
-    width: 100%;
-    max-width: 600px;
+  width: 100%;
+  max-width: 600px;
 }
-
 #myChart1 {
-    width: 100%;
-    max-width: 600px;
+  width: 100%;
+  max-width: 600px;
 }
-
 #space2 {
-    background: #fdf6ec;
-    width: 30px;
+  background: #fdf6ec;
+  width: 30px;
 }
-
 #active-inactive {
-    border-radius: 24px;
-    background: #ececec;
+  border-radius: 24px;
+  background: #ececec;
 }
-
 .sidebar {
-    margin: 0;
-    padding-top: 55px;
-    width: 340px;
-    background-color: white;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 25px;
+  margin: 0;
+  padding-top: 55px;
+  width: 340px;
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 25px;
 }
-
 .sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
 }
-
 .sidebar a.active {
-    color: white;
+  color: white;
 }
-
 .sidebar a:hover:not(.active) {
-    background-color: #00c2d6;
-    color: black;
+  background-color: #00c2d6;
+  color: black;
 }
-
 div.content {
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
 }
-
 .container-responsive {
-    margin-top: 100px;
-    width: 1450px;
-    margin-left: 380px;
-    height: 820px;
-    padding-top: 50px;
+  margin-top: 100px;
+  width: 1450px;
+  margin-left: 380px;
+  height: 820px;
+  padding-top: 50px;
 }
-
 .position-relative {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
-    color: #372732;
-    margin-left: 700px;
-    font-weight: 800;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: #372732;
+  margin-left: 700px;
+  font-weight: 800;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
 .navbar-expand-lg {
-    height: 70px;
+  height: 70px;
+  width: 100%;
+}
+@media screen and (max-width: 700px) {
+  .sidebar {
     width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+  .chart-section {
+    width: 100%;
+    display: flex;
+  }
 }
-
-@media screen and (max-width: 700px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-    .sidebar a {
-        float: left;
-    }
-
-    div.content {
-        margin-left: 0;
-    }
-
-    .chart-section {
-        width: 100%;
-        display: flex;
-    }
-}
-
 @media screen and (max-width: 400px) {
-    .sidebar a {
-        text-align: center;
-        float: none;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .position-relative {
-        width: 100%;
-        margin-left: 170px;
-        margin-top: -70px;
-    }
-
-    .container-responsive {
-        width: 100%;
-        height: auto;
-        margin-left: -5px !important;
-    }
-}
-
-p {
-    margin-top: 100px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 70px;
+  .sidebar a {
     text-align: center;
-    background: white;
+    float: none;
+  }
 }
-
+@media screen and (max-width: 700px) {
+  .position-relative {
+    width: 100%;
+    margin-left: 170px;
+    margin-top: -70px;
+  }
+  .container-responsive {
+    width: 100%;
+    height: auto;
+    margin-left: -5px !important;
+  }
+}
+p {
+  margin-top: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 70px;
+  text-align: center;
+  background: white;
+}
 h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 25px;
-    color: black;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 25px;
+  color: black;
 }
-
 .highlight {
-    background-color: #00c2d6;
+  background-color: #00c2d6;
 }
-
 .sidebar {
-    height: 100%;
-    width: 340;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #ffffff;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 72px;
+  height: 100%;
+  width: 340;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 72px;
 }
 
 .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    display: block;
-    transition: 0.3s;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
 }
 
 .sidebar a:hover {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 .sidebar .closebtn {
-
-    font-size: 36px;
-    margin-left: 270px;
-    margin-bottom: 35px;
+  font-size: 36px;
+  margin-left: 270px;
+  margin-bottom: 35px;
 }
-
 .sidebar .closebtn:hover {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .openbtn {
-    position: absolute;
-    top: 70px;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #00c2d6;
-    color: black;
-    padding: 5px 20px;
-    border: none;
+  position: absolute;
+  top: 70px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #00c2d6;
+  color: black;
+  padding: 5px 20px;
+  border: none;
 }
 
 .openbtn:hover {
-    background-color: #91effa;
+  background-color: #91effa;
 }
 
 #main {
-    transition: margin-left .5s;
-    padding: 16px;
+  transition: margin-left 0.5s;
+  padding: 16px;
 }
-
 .me-3 {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
+}
+.sidebar .menu .item .sub-menu a {
+  padding-left: 100px;
+}
+.sidebar .menu .item a .dropdown {
+  position: absolute;
+  right: 0;
+  margin-right: 25px;
+  margin-top: 5px;
+  transition: 0.1s ease;
+}
+.sub-menu {
+  display: none;
+}
+.rotate {
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+  .chart-section {
+    width: 100%;
+    display: flex;
+  }
+}
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .container-responsive {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  #list-icon {
+    font-size: 50px;
+    width: 100%;
+    margin-left: 600px !important;
+  }
+  .position-relative {
+    width: 100%;
+    margin-left: 170px;
+    margin-top: -70px;
+  }
+  .container-responsive {
+    width: 100%;
+    height: 150vh;
+    overflow: hidden;
+    margin-left: 0;
+  }
+  .employers-jobseekers {
+    height: 350px;
+    width: 100%;
+    display: grid;
+    margin-bottom: 200px;
+    margin-left: 0;
+    place-items: center;
+  }
+
+  #numberofjob-active {
+    width: 100%;
+    display: grid;
+    margin-left: 0;
+    place-items: center;
+  }
+
+  .col-sm-5 {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #list-icon {
+    font-size: 50px;
+    width: 100%;
+    margin-left: 400px !important;
+  }
 }

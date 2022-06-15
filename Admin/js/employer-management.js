@@ -1,3 +1,6 @@
+
+//--------------------------------Navbar functions --------------------------------------------------------
+
 function openNav() {
     document.getElementById("mySidebar").style.left = "0";
     document.getElementById("main").style.marginLeft = "390px";
@@ -8,7 +11,16 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "230px";
 }
 
+//--------------------------------End of Navbar functions --------------------------------------------------------
+
+
 $(document).ready(function () {
+
+    //toggle sub-menu
+    $('.sub-btn').click(function () {
+        $(this).next('.sub-menu').slideToggle();
+        $(this).find('.dropdown').toggleClass('rotate');
+    });
     // Call this function to reload the table data at first time
     load_data();
     // Function for loading of table data

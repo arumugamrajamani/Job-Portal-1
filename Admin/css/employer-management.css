@@ -1,413 +1,479 @@
 body {
-    background: #00c2d6;
-    font-family: sans-serif;
+  background: #00c2d6;
+  font-family: sans-serif;
 }
 
 .search-box {
-    width: 500px;
-    border-style: outset;
+  width: 500px;
+  border-style: outset;
 }
 
 .btn-outline {
-    background-color: #00c2d6;
+  background-color: #00c2d6;
 }
 
 .navbar-light {
-    background-color: #ffffff;
-    margin: 0%;
+  background-color: #ffffff;
+  margin: 0%;
 }
 
 .navbar-expand-lg {
-    height: 70px;
-    width: 100%;
-    margin-left: 5px;
+  height: 70px;
+  width: 100%;
+  margin-left: 5px;
 }
 
 .btn-outline-secondary {
-    background-color: #00c2d6;
-    color: white;
-    border: #00c2d6;
-    border-style: outset;
+  background-color: #00c2d6;
+  color: white;
+  border: #00c2d6;
+  border-style: outset;
 }
 
 .account-drop {
-    text-align: center;
-    position: relative;
+  text-align: center;
+  position: relative;
 
-    background-color: #372732;
-    width: 50px;
+  background-color: #372732;
+  width: 50px;
 }
 
 .nav-item .dropdown-item {
-    position: relative;
-    width: 150px;
+  position: relative;
+  width: 150px;
 }
 
 .nav-item .dropdown-item:hover {
-    background-color: #8b8383;
+  background-color: #8b8383;
 }
 
 #menu {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 25px;
-    text-align: center;
-    color: #372732;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+  color: #372732;
 }
 
 #title-sub {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    color: #372732;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #372732;
 }
 
 #btn-info {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 15px;
-    text-align: center;
-    border-radius: 25px;
-    height: 35px;
-    color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 25px;
+  height: 35px;
+  color: white;
 }
 
 #list-icon {
-    margin-left: 280px;
+  margin-left: 280px;
 }
 
 .img-logo {
-    width: 60px;
-    cursor: pointer;
+  width: 60px;
+  cursor: pointer;
 }
 
 .con1 {
-    width: 700px;
-    height: 700px;
-    background-color: #FDF6EC;
+  width: 700px;
+  height: 700px;
+  background-color: #fdf6ec;
 }
 
 .i-search {
-    border-radius: 0%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    width: 300px;
+  border-radius: 0%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 300px;
 }
 
 .thead {
-    background: #68f0ff;
-    text-align: center;
+  background: #68f0ff;
+  text-align: center;
 }
 
 #body-h {
-    text-align: center;
-    line-height: 30px;
-    border: 0;
+  text-align: center;
+  line-height: 30px;
+  border: 0;
 }
 
 .tr {
-    height: 6rem;
-    border: none;
-    box-shadow: none;
-    width: 6rem;
-    border: 0;
+  height: 6rem;
+  border: none;
+  box-shadow: none;
+  width: 6rem;
+  border: 0;
 }
 
 .btn-primary {
-    width: 40px;
-    border: 0;
+  width: 40px;
+  border: 0;
 }
 
 .btn-success {
-    width: 40px;
-    border: 0;
+  width: 40px;
+  border: 0;
 }
 
 .page-section {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .pagination {
-    margin-left: 500px;
-    margin-top: -35px;
+  margin-left: 500px;
+  margin-top: -35px;
 }
 
 .company-logo {
-    margin-left: 110px;
+  margin-left: 110px;
 }
 
 .image {
-    width: 250px;
+  width: 250px;
 }
 
 .delete {
-    margin-left: 170px;
+  margin-left: 170px;
 }
 
 .yes-no {
-    width: 70px;
+  width: 70px;
 }
 
 .close {
-    width: 70px;
+  width: 70px;
 }
 
 .company-details {
-    background-color: #fdf6ec;
+  background-color: #fdf6ec;
 }
 
 .save-close {
-    width: 70px;
+  width: 70px;
 }
 
 .save {
-    width: 120px;
+  width: 120px;
 }
 
 #company-description {
-    width: 100%;
+  width: 100%;
 }
 
 .highlight {
-    background-color: #00c2d6;
+  background-color: #00c2d6;
 }
 
 .sidebar {
-    margin: 0;
-    padding-top: 55px;
-    width: 340px;
-    background-color: white;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 25px;
+  margin: 0;
+  padding-top: 55px;
+  width: 340px;
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 25px;
 }
 
 #btn {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 27px;
-    text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  text-align: center;
 }
 
 #button {
-    position: relative;
-    width: 70px;
-    height: 40px;
-    border: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 30px;
-    text-align: center;
-    border-radius: 25px;
+  position: relative;
+  width: 70px;
+  height: 40px;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 25px;
 }
 
 .bi-person-circle {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .search {
-    background-color: #00c2d6;
-    font-weight: 500;
-    width: 50px;
-    border-radius: 0%;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+  background-color: #00c2d6;
+  font-weight: 500;
+  width: 50px;
+  border-radius: 0%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
 }
 
 .sidebar a.active {
-    color: white;
+  color: white;
 }
 
 .sidebar a:hover:not(.active) {
-    background-color: #00c2d6;
-    color: black;
+  background-color: #00c2d6;
+  color: black;
 }
 
 div.content {
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
 }
 
 .container-responsive {
-    width: 1450px;
-    height: 100%;
-    margin-left: 390px;
+  width: 1450px;
+  height: 100%;
+  margin-left: 390px;
 }
 
 .position-relative {
-    font-size: 22px;
-    color: #372732;
-    margin-left: 700px;
-    font-weight: 800;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 22px;
+  color: #372732;
+  margin-left: 700px;
+  font-weight: 800;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .navbar-expand-lg {
-    height: 70px;
-    width: 100%;
+  height: 70px;
+  width: 100%;
 }
 
 td {
-    height: 80px;
-    width: 160px;
-    text-align: center;
-    vertical-align: middle;
+  height: 80px;
+  width: 160px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 700px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
 
-    .sidebar a {
-        float: left;
-    }
+  .sidebar a {
+    float: left;
+  }
 
-    div.content {
-        margin-left: 0;
-    }
+  div.content {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 400px) {
-    .sidebar a {
-        text-align: center;
-        float: none;
-    }
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
 }
 
 @media screen and (max-width: 700px) {
-    #list-icon {
-        font-size: 50px;
-        width: 100%;
-        margin-left: 600px !important;
-    }
+  #list-icon {
+    font-size: 50px;
+    width: 100%;
+    margin-left: 600px !important;
+  }
 
-    .position-relative {
-        width: 100%;
-        margin-left: 170px;
-        margin-top: -70px;
-    }
+  .position-relative {
+    width: 100%;
+    margin-left: 170px;
+    margin-top: -70px;
+  }
 
-    .container-responsive {
-        width: 100%;
-        height: auto;
-        margin-left: 0px;
-    }
+  .container-responsive {
+    width: 100%;
+    height: auto;
+    margin-left: 0px;
+  }
 
-    .table-responsive {
-        height: auto;
-        width: 100%;
-    }
+  .table-responsive {
+    height: auto;
+    width: 100%;
+  }
 
-    .entries {
-        width: 100%;
-        margin-top: 90px !important;
-        margin-left: 20px !important;
-    }
+  .entries {
+    width: 100%;
+    margin-top: 90px !important;
+    margin-left: 20px !important;
+  }
 
-    .pagination {
-        font-size: -70px !important;
-        width: 100%;
-        margin-left: 220px !important;
-    }
+  .pagination {
+    font-size: -70px !important;
+    width: 100%;
+    margin-left: 220px !important;
+  }
 }
 
 @media screen and (max-width: 550px) {
-    #list-icon {
-        font-size: 50px;
-        width: 100%;
-        margin-left: 400px !important;
-    }
+  #list-icon {
+    font-size: 50px;
+    width: 100%;
+    margin-left: 400px !important;
+  }
 }
 
 @media screen and (max-width: 455px) {
-    #list-icon {
-        font-size: 50px;
-        width: 100%;
-        margin-left: 200px !important;
-    }
+  #list-icon {
+    font-size: 50px;
+    width: 100%;
+    margin-left: 200px !important;
+  }
 }
 
 .sidebar {
-    height: 100%;
-    width: 340;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #ffffff;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 72px;
+  height: 100%;
+  width: 340;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 72px;
 }
 
 .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    display: block;
-    transition: 0.3s;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
 }
 
 .sidebar a:hover {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 .sidebar .closebtn {
-
-    font-size: 36px;
-    margin-left: 270px;
-    margin-bottom: 35px;
+  font-size: 36px;
+  margin-left: 270px;
+  margin-bottom: 35px;
 }
 
 .sidebar .closebtn:hover {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .openbtn {
-    position: absolute;
-    top: 70px;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #00c2d6;
-    color: black;
-    padding: 5px 20px;
-    border: none;
+  position: absolute;
+  top: 70px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #00c2d6;
+  color: black;
+  padding: 5px 20px;
+  border: none;
 }
 
 .openbtn:hover {
-    background-color: #91effa;
+  background-color: #91effa;
 }
 
 #main {
-    transition: margin-left .5s;
-    padding: 16px;
+  transition: margin-left 0.5s;
+  padding: 16px;
 }
 
 .me-3 {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 /* Added by MJ */
 .page-item {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  background: #372732;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 200px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+.dropdown-menu a {
+  color: white;
+}
+.dropdown-menu:after {
+  content: " ";
+  position: absolute;
+  right: 10px;
+  top: -12px;
+  border-top: none;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  border-bottom: 12px solid #372732;
+}
+.dropdown-menu li img {
+  width: 30px;
+  height: 30px;
+}
+.dropdown-menu li i {
+  font-size: 20px;
+  margin-right: 20px;
+}
+.dropdown-menu li .fa-user-pen {
+  margin-right: 15px;
+}
+.dropdown-item:hover {
+  background-color: #50677b;
+  color: white;
+}
+hr {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+}
+.btn-dropdown {
+  border: 0;
+  background-color: transparent;
+}
+.fa-caret-down {
+  font-size: 25px;
+}
+.pfp {
+  width: 50px;
+  height: 50px;
+}
+.sidebar .menu .item .sub-menu a {
+  padding-left: 100px;
+}
+.sidebar .menu .item a .dropdown {
+  position: absolute;
+  right: 0;
+  margin-right: 25px;
+  margin-top: 5px;
+  transition: 0.1s ease;
+}
+.sub-menu {
+  display: none;
+}
+.rotate {
+  transform: rotate(90deg);
 }

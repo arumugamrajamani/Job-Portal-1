@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,43 +16,72 @@
     <!-- Toast CDN for design of toastr -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="css/jobcategories-management.css">
+    <link rel="stylesheet" href="../css/preloader.css">
     <title>Job Categories Management</title>
 </head>
+
 <body>
+    <?php include_once '../include/preloader-display.php'; ?>
     <div class="color-overlay">
         <nav class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow-sm">
             <a href="#" class="navbar-brand ms-5">
-            <img src="image/flogo.png" alt="Job Portal Logo" width="80" height="60"></a>
+                <img src="image/flogo.png" alt="Job Portal Logo" width="80" height="60"></a>
             <h6 class="position-relative">Job Categories Management</h6>
-            <div class="collapse navbar-collapse" id="toggleMobileMenu">
-                <ul class="navbar-nav ms-auto  text-center">
-                    <li class="nav-item dropdown me-5">
-                        <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-circle"></i></a>
-                    <ul class="dropdown-menu account-drop dropdown-menu-end" aria-labelledby="navbarDropdown" >
-                        <li><a class="dropdown-item  fs-5 text-white" href="admin-profile.php"><i class="bi bi-person-circle"></i> My Profile</a></li>
-                        <li><hr class="dropdown-divider bg-white"></li>
-                        <li><a class="dropdown-item fs-5 text-white" href="php/logout.php">Sign Out</a></li>
-                    </ul>
+            <div class="dropdown ms-auto d-flex">
+                <h6 class="mt-2 fw-bold"><img src="image/profile.png" alt="" class="pfp"> Mark John Castillo</h6>
+                <button class="btn-dropdown ms-2 me-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="admin-profile.html"><img src="image/profile.png" alt="" class="me-2"> My Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="edit-profile.html"><i class="fa-solid fa-user-pen"></i>Edit Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="admin-change-pass.html"> <i class="fa-solid fa-key "></i>Change Password</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a></li>
                 </ul>
             </div>
-        </nav>         
+        </nav>
     </div>
     <br>
     <button class="openbtn" title="Open Sidebar" onclick="openNav()"><i id="list-i" class="bi bi-list fa-2x"></i></button>
     <div class="sidebar shadow-lg" id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn text-dark" title="Close Sidebar" onclick="closeNav()">×</a>
-        <a href="dashboard.php"><img class="me-3" src="image/dashboard.png"> Dashboard</a><br>
-        <a href="employer-management.php"><img class="me-3" src="image/employers.png"> Employers Management</a><br>
-        <a href="jobseeker-management.php"><img class="me-3" src="image/jobseeker.png"> Job Seeker Management</a><br>
-        <a href="jobpost-management.php"><img class="me-3" src="image/jobpost.png"> Job Post Management</a><br>
-        <a href="jobcategories-management.php" class="highlight"><img class="me-3" src="image/jobcategory.png"> Job Categories Management</a><br>
-        <a href="admin-profile.php"><img class="me-3" src="image/profilesetting.png"> Profile Setting</a><br>
-        <a href="recycle-bin-employer.php"><img class="me-3" src="image/recycle-bin.png"> Recycle Bin</a><br>
+        <div class="menu">
+            <div class="item"><a href="javascript:void(0)" class="closebtn text-dark" title="Close Sidebar" onclick="closeNav()">×</a></div>
+            <div class="item"><a href="dashboard.html"><img class="me-3" src="image/dashboard.png"> Dashboard</a><br></div>
+            <div class="item"><a href="employer-management.html"><img class="me-3" src="image/employers.png"> Employers Management</a><br></div>
+            <div class="item"><a href="jobseeker-management.html"><img class="me-3" src="image/jobseeker.png"> Job Seeker Management</a><br></div>
+            <div class="item"><a href="jobpost-management.html"><img class="me-3" src="image/jobpost.png"> Job Post Management</a><br></div>
+            <div class="item"><a href="jobcategories-management.html" class="highlight"><img class="me-3" src="image/jobcategory.png"> Job Categories Management</a><br></div>
+            <div class="item">
+                <a class="sub-btn"><img class="me-3" src="image/profilesetting.png">Setting <i class="fa fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="system-settings.html" class="sub-item">System Settings</a>
+                    <a href="aboutus-settings.html" class="sub-item">About Us Settings</a>
+                    <a href="faq-settings.html" class="sub-item">Faq Settings</a>
+                </div>
+            </div><br>
+            <div class="item">
+                <a class="sub-btn"><img class="me-3" src="image/recycle-bin.png"> Recycle Bin <i class="fa fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="recycle-bin-employer.html" class="sub-item">Employers Management</a>
+                    <a href="recycle-bin-jobseeker.html" class="sub-item">Job Seeker Management</a>
+                    <a href="recycle-bin-jobpost.html" class="sub-item">Job Post Management</a>
+                </div>
+            </div>
+        </div>
     </div>
     <br><br><br>
     <div class="container-responsive p-md-5 mt-4 bg-white" id="main">
-        <div class="d-flex justify-content-between">   
-            <div class="d-flex">   
+        <div class="d-flex justify-content-between">
+            <div class="d-flex">
                 <input class="form-control icon i-search" id="search" placeholder="Search a job category" aria-label="Search">
                 <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
             </div>
@@ -72,13 +102,13 @@
                                 </tr>
                             </thead>
                             <tbody class="tbody bg-light text-dark" id="body-h">
-                               
+
                             </tbody>
                         </table>
                     </div>
                 </div>
             </section>
-        </div>  
+        </div>
         <nav aria-label="Page navigation" class="page-section">
             <div class="entries" id="entries">
                 <!-- <span>Show 1 to 3 of 3 entries</span> -->
@@ -90,7 +120,7 @@
                 <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
                 <li class="page-item"><a class="page-link bg-info text-dark" href="#">Next</a></li> -->
             </ul>
-        </nav> 
+        </nav>
     </div>
     <!-- Delete button modal -->
     <div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -123,7 +153,7 @@
                                     <input type="text" class="form-control" id="e-jobcategory">
                                 </div>
                             </div>
-                        </form> 
+                        </form>
                     </div><br>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-success save" id="save-edit">Save Details</button>
@@ -131,7 +161,7 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
 
     <!--Add modal-->
@@ -149,7 +179,7 @@
                                     <input type="text" class="form-control" id="a-jobcategory">
                                 </div>
                             </div>
-                        </form> 
+                        </form>
                     </div><br>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-success save" id="add-category">ADD</button>
@@ -157,8 +187,9 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
-<script src="js/category-management.js"></script>
+    <script src="js/category-management.js"></script>
 </body>
+
 </html>

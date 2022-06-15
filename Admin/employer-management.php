@@ -28,12 +28,12 @@
                 <img src="image/flogo.png" alt="Job Portal Logo" width="80" height="60"></a>
             <h6 class="position-relative">Employers Management</h6>
             <div class="dropdown ms-auto d-flex">
-                <h6 class="mt-2 fw-bold"><img src="image/profile.png" alt="" class="pfp"> Mark John Castillo</h6>
+                <h6 class="mt-2 fw-bold" id="adminFullName"></h6>
                 <button class="btn-dropdown ms-2 me-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-caret-down"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="admin-profile.php"><img src="image/profile.png" alt="" class="me-2"> My Profile</a></li>
+                    <li><a class="dropdown-item" href="admin-profile.php"><img id="mainDpDrop" src="image/profile.png" alt="" class="me-2"> My Profile</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
@@ -323,6 +323,7 @@
     </div>
 
     <script src="js/employer-management.js"></script>
+    <script src="js/navbar.js"></script>
     <script src="../js/preloader.js"></script>
 </body>
 

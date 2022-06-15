@@ -58,6 +58,7 @@ $(document).ready(function () {
         $(this).next('.sub-menu').slideToggle();
         $(this).find('.dropdown').toggleClass('rotate');
     });
+
 });
 
 

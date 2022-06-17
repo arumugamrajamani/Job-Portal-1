@@ -144,14 +144,6 @@ hr {
   font-size: 17px;
   line-height: 25px;
 }
-label {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-}
-text {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-}
 #btn {
   font-family: "Inter";
   font-style: normal;
@@ -184,26 +176,25 @@ text {
   border: 0;
   border-radius: 13px;
 }
-.container {
-  width: 900px;
-  height: 600px;
-  margin-top: 50px;
+.container-fluid {
+  margin-left: 370px;
+  padding: 0%;
+  width: 79%;
+  height: 100%;
+  margin-top: 10px;
   border-radius: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .image {
   width: 170px;
-  height: 170px;
+  height: 150px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 120px;
 }
-.profile-picture {
-  margin-left: 60px;
-}
+
 .file {
-  margin-left: 62px;
   border-radius: 10px;
-  width: 450px;
+  width: 100%;
   background: #ececec;
 }
 input[type="file"]::file-selector-button {
@@ -213,17 +204,16 @@ input[type="file"]::file-selector-button {
 .form-control {
   background: #ececec;
   border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .save-change {
   background: #00c2d6;
   border-radius: 15px;
   border: 0;
-  width: 200px;
+  width: 217px;
   height: 47px;
-  font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
   font-weight: 700;
-  color: black;
 }
 .save-change:hover {
   background-color: #50677b;
@@ -261,10 +251,9 @@ div.content {
   margin-left: 390px;
   background: #fdf6ec;
 }
-.position-relative {
+.header-text {
   font-size: 22px;
   color: #372732;
-  margin-left: 700px;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -273,49 +262,16 @@ div.content {
   height: 70px;
   width: 100%;
 }
-
-@media screen and (max-width: 700px) {
-  #list-icon {
-    font-size: 50px;
-    width: 100%;
-    margin-left: 600px !important;
-  }
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {
-    float: left;
-  }
-  div.content {
-    margin-left: 0;
-  }
+label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 15px;
 }
-
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
+.sub-display {
+  display: block;
 }
-@media screen and (max-width: 700px) {
-  .navbar-expand-lg {
-    width: 100%;
-  }
-  .position-relative {
-    width: 100%;
-    margin-left: 170px;
-    margin-top: -70px;
-  }
-  .container-responsive {
-    height: auto;
-    width: 100%;
-    margin-left: -100px !important;
-  }
-  .edit-section {
-    width: 100%;
-  }
+.highlight {
+  background-color: #00c2d6;
 }
 .sidebar {
   height: 100%;
@@ -355,7 +311,7 @@ div.content {
   top: 70px;
   font-size: 20px;
   cursor: pointer;
-  background-color: #00c2d6;
+  background-color: transparent;
   color: black;
   padding: 5px 20px;
   border: none;
@@ -367,11 +323,99 @@ div.content {
 
 #main {
   transition: margin-left 0.5s;
-  padding: 16px;
 }
 .me-3 {
   width: 30px;
   height: 30px;
+}
+.div1 {
+  background-color: #50677b;
+  margin-right: 150px;
+  width: 100%;
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  border-radius: 20px 20px 0 0;
+  color: white;
+  font-size: 24px;
+  line-height: 50px;
+}
+@media screen and (max-width: 1280px) {
+  .container-fluid {
+    margin-left: 80px !important;
+    width: 90%;
+  }
+  .sidebar {
+    margin-top: 50px;
+    width: 230px;
+    left: -100%;
+  }
+  .closebtn {
+    position: absolute;
+    right: 0;
+    margin-top: -50px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .admin-name {
+    display: none;
+  }
+  .closebtn {
+    position: absolute;
+    right: 0;
+    margin-top: -50px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .sidebar {
+    width: 230px;
+    left: -100%;
+    padding-top: 80px;
+    height: 100%;
+    position: fixed;
+  }
+  .openbtn:active .sidebar {
+    left: 0%;
+  }
+  .openbtn:after .container-fluid {
+    margin-left: 500px;
+  }
+  .justify-content-center {
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .navbar-expand-lg {
+    width: 100%;
+  }
+  .position-relative {
+    width: 100%;
+    margin-left: 170px;
+    margin-top: -70px;
+  }
+  .container-responsive {
+    height: auto;
+    width: 100%;
+    margin-left: -100px !important;
+  }
+  .edit-section {
+    width: 100%;
+  }
+  .container-fluid {
+    right: left;
+    margin: 40px !important;
+    margin-top: 70px;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    float: none;
+  }
+  .container-fluid {
+    margin: 20px !important;
+    margin-top: 40px !important;
+  }
 }
 #mainDpDrop {
   border-radius: 120px;

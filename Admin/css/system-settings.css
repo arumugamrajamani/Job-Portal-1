@@ -466,3 +466,6 @@ div.content {
     margin-top: 40px !important;
   }
 }
+#mainDpDrop {
+  border-radius: 120px;
+}

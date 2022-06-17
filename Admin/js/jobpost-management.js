@@ -9,9 +9,5 @@ function closeNav() {
 }
 
 $(document).ready(function () {
-    //toggle sub-menu
-    $('.sub-btn').click(function () {
-        $(this).next('.sub-menu').slideToggle();
-        $(this).find('.dropdown').toggleClass('rotate');
-    });
+
 });

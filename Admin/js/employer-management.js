@@ -16,11 +16,7 @@ function closeNav() {
 
 $(document).ready(function () {
 
-    //toggle sub-menu
-    $('.sub-btn').click(function () {
-        $(this).next('.sub-menu').slideToggle();
-        $(this).find('.dropdown').toggleClass('rotate');
-    });
+
     // Call this function to reload the table data at first time
     load_data();
     // Function for loading of table data

@@ -51,25 +51,25 @@
     <div class="sidebar shadow-lg" id="mySidebar" class="sidebar">
         <div class="menu">
             <div class="item"><a href="javascript:void(0)" class="closebtn text-dark" title="Close Sidebar" onclick="closeNav()">×</a></div>
-            <div class="item"><a href="dashboard.html"><img class="me-3" src="image/dashboard.png"> Dashboard</a><br></div>
-            <div class="item"><a href="employer-management.html"><img class="me-3" src="image/employers.png"> Employers Management</a><br></div>
-            <div class="item"><a href="jobseeker-management.html"><img class="me-3" src="image/jobseeker.png"> Job Seeker Management</a><br></div>
-            <div class="item"><a href="jobpost-management.html"><img class="me-3" src="image/jobpost.png"> Job Post Management</a><br></div>
-            <div class="item"><a href="jobcategories-management.html"><img class="me-3" src="image/jobcategory.png"> Job Categories Management</a><br></div>
+            <div class="item"><a href="dashboard.php"><img class="me-3" src="image/dashboard.png"> Dashboard</a><br></div>
+            <div class="item"><a href="employer-management.php"><img class="me-3" src="image/employers.png"> Employers Management</a><br></div>
+            <div class="item"><a href="jobseeker-management.php"><img class="me-3" src="image/jobseeker.png"> Job Seeker Management</a><br></div>
+            <div class="item"><a href="jobpost-management.php"><img class="me-3" src="image/jobpost.png"> Job Post Management</a><br></div>
+            <div class="item"><a href="jobcategories-management.php"><img class="me-3" src="image/jobcategory.png"> Job Categories Management</a><br></div>
             <div class="item">
                 <a class="sub-btn highlight"><img class="me-3" src="image/profilesetting.png">Setting <i class="fa fa-angle-right dropdown"></i></a>
                 <div class="sub-menu sub-display">
-                    <a href="system-settings.html" class="sub-item">System Settings</a>
-                    <a href="aboutus-settings.html" class="sub-item highlight">About Us Settings</a>
-                    <a href="faq-settings.html" class="sub-item">Faq Settings</a>
+                    <a href="system-settings.php" class="sub-item">System Settings</a>
+                    <a href="aboutus-settings.php" class="sub-item highlight">About Us Settings</a>
+                    <a href="faq-settings.php" class="sub-item">Faq Settings</a>
                 </div>
             </div><br>
             <div class="item">
                 <a class="sub-btn"><img class="me-3" src="image/recycle-bin.png"> Recycle Bin <i class="fa fa-angle-right dropdown"></i></a>
                 <div class="sub-menu">
-                    <a href="recycle-bin-employer.html" class="sub-item">Employers Management</a>
-                    <a href="recycle-bin-jobseeker.html" class="sub-item">Job Seeker Management</a>
-                    <a href="recycle-bin-jobpost.html" class="sub-item">Job Post Management</a>
+                    <a href="recycle-bin-employer.php" class="sub-item">Employers Management</a>
+                    <a href="recycle-bin-jobseeker.php" class="sub-item">Job Seeker Management</a>
+                    <a href="recycle-bin-jobpost.php" class="sub-item">Job Post Management</a>
                 </div>
             </div>
         </div>

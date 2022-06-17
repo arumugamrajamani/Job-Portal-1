@@ -147,7 +147,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="profile modal-body">
-                    <img src="" id="view-pp" alt="">
+                    <img src="" class="img-logo" id="view-pp" alt="">
                 </div>
             </div>
         </div>

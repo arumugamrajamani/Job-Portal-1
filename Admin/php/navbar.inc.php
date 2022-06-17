@@ -35,6 +35,8 @@ if (isset($_POST['fetchData'])) {
     $adminEmail = $row['email'];
     $adminNumber = $row['mobile_number'];
     $profilePicture = getProfilePicLoc($row['profile_pic']);
+
+    //assigns alll the admin's data into session.
     $_SESSION['adminName'] = $adminName;
     $_SESSION['adminEmail'] = $adminEmail;
     $_SESSION['adminNumber'] = $adminNumber;

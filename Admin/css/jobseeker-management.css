@@ -117,6 +117,9 @@ body {
   width: 60px;
   cursor: pointer;
 }
+.img-logo {
+  width: 250px;
+}
 
 .edit {
   width: 40px;

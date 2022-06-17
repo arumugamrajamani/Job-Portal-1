@@ -76,7 +76,6 @@
 </div><br><br><br>
 <div class="background-white container-responsive p-md-5 mt-4" id="main">
     <div class="d-flex">
-
         <div class="container block align-items-center text-center">
             <h4 class="change-your-password p-3 shadow-sm fw-bold">Change Your Password</h4>
             <div class="back-white bg-white mt-3">

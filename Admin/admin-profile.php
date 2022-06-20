@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/admin-profile.css">
     <link rel="stylesheet" href="../css/preloader.css">
+    <!-- jQuery cdn link below -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Toast CDN for functionality of toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Toast CDN for design of toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../css/preloader.css">
     <title>Admin Profile</title>
 </head>
 
@@ -75,24 +82,24 @@
     </div>
     <br><br><br>
     <div class="container bg-white shadow block ms-auto" id="main">
-        <div class="d-flex justify-content-center"><img src="image/melhamlogo.png" alt="melham logo" class="image mt-5"></div>
+        <div class="d-flex justify-content-center"><img id="profilepic" src="" alt="melham logo" class="image mt-5"></div>
         <div class="row mb-3 mt-5 fw-bold d-flex">
             <div class="row mb-3 mt-4 justify-content-center fw-bold ">
                 <label for="name" class="col-sm-3 ">Name:</label>
                 <div class="col-sm-3">
-                    <text id="name">Melham Construction 2</text>
+                    <text id="name"></text>
                 </div>
             </div>
             <div class="row mb-3 mt-0 justify-content-center fw-bold">
                 <label for="email" class="col-sm-3 ">Email:</label>
                 <div class="col-sm-3">
-                    <text id="email">Techploymentph@gmail.com</text>
+                    <text id="email"></text>
                 </div>
             </div>
             <div class="row mb-3 mt-0 justify-content-center fw-bold">
                 <label for="contactnumber" class="col-sm-3 ">Contact Number:</label>
                 <div class="col-sm-3">
-                    <text id="contactnumber">0912-352-6806</text>
+                    <text id="contactnumber"></text>
                 </div>
             </div>
             <div class="text-center justify-content-center mt-5">
@@ -118,6 +125,7 @@
 
     <script src="js/navbar.js"></script>
     <script src="../js/preloader.js"></script>
+    <script src="js/adminprofile.js"></script>
 </body>
 
 </html>

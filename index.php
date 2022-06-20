@@ -118,8 +118,8 @@
                 <form class="container con1 shadow" novalidate style="margin-left: 400px;">
                     <br>
                     <div class="col-sm-12 text-start row mb-3">
-                        <h1 class="text-center">CONTACT US</h1>
-                        <P class="text-center">Got a question? We'd love to hear from you. Send us <br> message and we'll respond as soon as possible</P>
+                        <h1 class="text-center contactus">CONTACT US</h1>
+                        <P class="text-center">Got a question? We'd love to hear from you. Send us message and we'll respond as soon as possible</P>
                     </div>
                     <div class="row mb-3 mt-3 ms-4">
                         <div class="col-sm-11">
@@ -165,7 +165,7 @@
                             </div>
                         </div>
                     </div><br>
-                    <h3 class="text-center">How can we help?</h3>
+                    <h4 class="text-center">How can we help?</h4>
                     <h4 class="systems">SYSTEMS</h4>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">

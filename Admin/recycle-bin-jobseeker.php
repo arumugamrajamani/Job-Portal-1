@@ -58,7 +58,7 @@
         <div class="sidebar shadow-lg" id="mySidebar" class="sidebar">
             <div class="menu">
                 <div class="item"><a href="javascript:void(0)" class="closebtn text-dark" title="Close Sidebar" onclick="closeNav()">×</a></div>
-                <div class="item"><a href="dashboard1"><img class="me-3" src="image/dashboard.png"> Dashboard</a><br></div>
+                <div class="item"><a href="dashboard.php"><img class="me-3" src="image/dashboard.png"> Dashboard</a><br></div>
                 <div class="item"><a href="employer-management.php"><img class="me-3" src="image/employers.png"> Employers Management</a><br></div>
                 <div class="item"><a href="jobseeker-management.php"><img class="me-3" src="image/jobseeker.png"> Job Seeker Management</a><br></div>
                 <div class="item"><a href="jobpost-management.php"><img class="me-3" src="image/jobpost.png"> Job Post Management</a><br></div>

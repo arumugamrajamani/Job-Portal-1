@@ -21,14 +21,17 @@ This project was given to us by our employer from the company Melham Constructio
 <br>
 <br>
 **Front End Developer**<br>
--Arnold Dela Cruz<br>
--Adrian T. Palaganas<br>
+- Arnold Dela Cruz<br>
+- Fernando Parungao<br>
+- Adrian T. Palaganas(Offboarded)<br>
 <br>
 <br>
 **Back End Developer**<br>
 -Justine Rome M. Guillermo<br>
--Phillip Czar A. Abrero<br>
+-Mark Frederick B. Obrero<br>
+- Roi P. Guiao <br>
 -Marc John B. Castillo(Offboarded)<br>
+-Phillip Czar A. Abrero(Offboarded)<br>
 -Ralph Eriez I. Ronquillo(Offboarded)<br>
 -Kier John A. Manubay(Offboarded)<br>
 <br>

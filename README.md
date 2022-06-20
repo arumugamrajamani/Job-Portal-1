@@ -14,10 +14,10 @@ This project was given to us by our employer from the company Melham Constructio
 -Bryan D. Ubalde(Offboarded)<br>
 
 **Web Designer**<br>
--Janver Miranda<br>
--Abraham B. Trayco<br>
 -Amir U. Monte <br>
 -Daniela Torres (Offboarded)<br>
+-Janver Miranda(Offboarded)<br>
+-Abraham B. Trayco(Offboarded)<br>
 <br>
 <br>
 **Front End Developer**<br>

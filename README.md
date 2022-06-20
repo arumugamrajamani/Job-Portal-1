@@ -10,7 +10,8 @@ This project was given to us by our employer from the company Melham Constructio
 -Kimberly Ann Flores 
 
 **Co Leader**<br>
--Bryan D. Ubalde<br>
+-Angelo Kenneth Arrojo<br>
+-Bryan D. Ubalde(Offboarded)<br>
 
 **Web Designer**<br>
 -Janver Miranda<br>
@@ -20,16 +21,19 @@ This project was given to us by our employer from the company Melham Constructio
 <br>
 <br>
 **Front End Developer**<br>
--Arnold Dela Cruz<br>
--Adrian T. Palaganas<br>
+- Arnold Dela Cruz<br>
+- Fernando Parungao<br>
+- Adrian T. Palaganas(Offboarded)<br>
 <br>
 <br>
 **Back End Developer**<br>
 -Justine Rome M. Guillermo<br>
--Marc John B. Castillo<br>
--Ralph Eriez I. Ronquillo<br>
--Phillip Czar A. Abrero<br>
--Kier John A. Manubay<br>
+-Mark Frederick B. Obrero<br>
+- Roi P. Guiao <br>
+-Marc John B. Castillo(Offboarded)<br>
+-Phillip Czar A. Abrero(Offboarded)<br>
+-Ralph Eriez I. Ronquillo(Offboarded)<br>
+-Kier John A. Manubay(Offboarded)<br>
 <br>
 <br>
 **Maintaintance**<br>

@@ -63,10 +63,10 @@
             <div class="item"><a href="jobpost-management.php"><img class="me-3" src="image/jobpost.png"> Job Post Management</a><br></div>
             <div class="item"><a href="jobcategories-management.php"><img class="me-3" src="image/jobcategory.png"> Job Categories Management</a><br></div>
             <div class="item">
-                <a class="sub-btn highlight"><img class="me-3 " src="image/profilesetting.png">Setting <i class="fa fa-angle-right dropdown"></i></a>
-                <div class="sub-menu">
+                <a class="sub-btn highlight"><img class="me-3" src="image/profilesetting.png">Setting <i class="fa fa-angle-right dropdown"></i></a>
+                <div class="sub-menu sub-display">
                     <a href="system-settings.php" class="sub-item highlight">System Settings</a>
-                    <a href="aboutus-settings.php" class="sub-item">About Us Settings</a>
+                    <a href="aboutus-settings.php" class="sub-item ">About Us Settings</a>
                     <a href="faq-settings.php" class="sub-item">Faq Settings</a>
                 </div>
             </div><br>

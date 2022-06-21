@@ -23,7 +23,7 @@ $(document).ready(function () {
             if (matches) {
                 // Loop through the matches
                 $(this).html(content.replace(searchExp, function (match) {
-                    return "<mark>" + match + "</mark>";
+                    return "<mark class='highlight'>" + match + "</mark>";
                 }));
             }
         })

@@ -1,6 +1,5 @@
 body {
   position: relative;
-
 }
 .container {
   margin-top: 50px;
@@ -24,7 +23,6 @@ body {
   font-size: 20px;
   height: 100px;
   width: 100%;
-
 }
 .dropdown-item {
   font-family: "Montserrat", sans-serif;
@@ -65,7 +63,7 @@ body {
   box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
     7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
 }
-.navbar{
+.navbar {
   padding: 0% !important;
   margin: 0% !important;
 }
@@ -94,9 +92,8 @@ body {
 }
 .img-con {
   width: 100%;
-  
 }
-.container-fluid{
+.container-fluid {
   margin: 0%;
   padding: 0%;
 }
@@ -164,7 +161,7 @@ p {
   font-weight: 800;
   font-size: 45px;
 }
-#aboutus{
+#aboutus {
   padding-top: 150px;
 }
 h3 {
@@ -265,208 +262,205 @@ h3 {
 .dev-footer {
   margin-left: 1000px;
 }
-.flogo{
+.flogo {
   margin: 10px;
-  width: 110px; 
+  width: 110px;
   height: 90px;
 }
-.search-input{
+.search-input {
   border-radius: 14px;
 }
-@media screen and (max-width: 1280px){
-  .flogo{
-    margin: 0px ;
+@media screen and (max-width: 1280px) {
+  .flogo {
+    margin: 0px;
     margin-left: 10px;
-    width: 100px; 
+    width: 100px;
     height: 80px;
   }
-  .bg2-home{
+  .bg2-home {
     width: 500px;
     height: 400px;
   }
-  .tag2{
+  .tag2 {
     font-size: 25px;
   }
-  .search{
+  .search {
     width: 100%;
   }
-  .tag1{
+  .tag1 {
     font-size: 58px;
-  }.para{
-    margin: 0% !important;
-    width: 100%;
-  }.para2{
+  }
+  .para {
     margin: 0% !important;
     width: 100%;
   }
-  
+  .para2 {
+    margin: 0% !important;
+    width: 100%;
+  }
 }
-@media screen and (max-width: 1140px){
-  
-  .con1{
+@media screen and (max-width: 1140px) {
+  .con1 {
     width: 60%;
     height: 100%;
   }
-  #concern{
+  #concern {
     width: 100%;
   }
-  .div3{
+  .div3 {
     display: none !important;
   }
-  .send-message{
+  .send-message {
     width: 50% !important;
     margin-bottom: 20px;
   }
-  
-  
 }
-@media screen and (max-width: 990px){
-  .bg2-home{
+@media screen and (max-width: 990px) {
+  .bg2-home {
     width: 300px;
     height: 250px;
   }
-  .tag1{
+  .tag1 {
     font-size: 36px;
   }
-  
 }
-@media screen and (max-width: 768px){
-  .bg2-home{
+@media screen and (max-width: 768px) {
+  .bg2-home {
     width: 300px;
     height: 250px;
     margin-right: 10px;
   }
-  .tag2{
+  .tag2 {
     font-size: 15px;
   }
-  .con-home{
+  .con-home {
     max-width: 100% !important;
     margin: 10px;
   }
-  .tag1{
+  .tag1 {
     font-size: 37px;
     margin-left: 0% !important;
     margin-bottom: 20px !important;
   }
-  .search button{
+  .search button {
     width: 70px;
   }
-  .masthead{
+  .masthead {
     min-height: 40vh !important;
   }
-  .con1{
+  .con1 {
     width: 80%;
     margin: 0% !important;
   }
-  .div2{
+  .div2 {
     margin-right: 0% !important;
   }
 }
 @media screen and (max-width: 570px) {
-  .search{
+  .search {
     position: absolute;
     width: 90%;
   }
-  .search-input{
+  .search-input {
     height: 50px !important;
   }
-  .con-home{
+  .con-home {
     max-width: 100% !important;
     margin: 0px;
   }
-  .btn-search2{
+  .btn-search2 {
     height: 40px !important;
   }
-  .browse{
+  .browse {
     position: absolute;
     margin-left: 135px;
     margin-top: 50px;
   }
-  .tag1{
+  .tag1 {
     font-size: 26px;
     margin-left: 0% !important;
     margin-top: 20px !important;
   }
-  .tag2{
+  .tag2 {
     font-size: 13px;
   }
-  .bg2-home{
+  .bg2-home {
     width: 200px;
     height: 150px;
   }
-  .nav-link{
+  .nav-link {
     margin-left: 170px !important;
     text-align: center !important;
     width: 150px !important;
   }
-  .dropdown{
+  .dropdown {
     width: 100% !important;
   }
-  .dropdown-menu{
+  .dropdown-menu {
     width: 100% !important;
   }
-  .bi-search1{
+  .bi-search1 {
     display: none;
   }
-  
-  
 }
-@media screen and (max-width: 380px){
-  .browse{
+@media screen and (max-width: 380px) {
+  .browse {
     margin-left: 95px;
-    top:620px;
+    top: 620px;
   }
-  .bg2-home{
+  .bg2-home {
     position: absolute;
     left: 0px;
     top: 350px;
     width: 280px;
     height: 200px;
   }
-  .masthead{
+  .masthead {
     min-height: 100vh !important;
   }
-  .search{
-    top:600px;
+  .search {
+    top: 600px;
     margin-right: 30px !important;
     height: 40px !important;
   }
-  .search-input{
+  .search-input {
     height: 40px !important;
   }
-  .con1{
+  .con1 {
     width: 95%;
     margin: 0% !important;
   }
-  .div2{
+  .div2 {
     margin-right: 0% !important;
   }
-  .con-text{
+  .con-text {
     width: 95%;
     margin: 10px;
   }
-  .tag3{
+  .tag3 {
     margin: 0% !important;
   }
-  .contact-us{
+  .contact-us {
     text-align: start !important;
   }
-  .con-img{
+  .con-img {
     margin: 0% !important;
-    justify-content: left !important; 
+    justify-content: left !important;
   }
-  .nav-link{
+  .nav-link {
     margin-left: 120px !important;
     text-align: center !important;
     width: 150px !important;
   }
-  .dropdown{
+  .dropdown {
     width: 100% !important;
   }
-  .dropdown-menu{
+  .dropdown-menu {
     width: 100% !important;
   }
-  
 }
 
 /*/Colors  #EDBEA4 #FDF6EC #00C2D6 #FDF6EC #FFFFFF/*/
+mark {
+  background-color: #9ff5ff;
+}

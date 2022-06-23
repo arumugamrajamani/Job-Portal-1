@@ -32,6 +32,16 @@ $(document).ready(function () {
         })
     }
 
+    // Trigger this when user started to search in the search bar
+    $('#search').keyup(function () {
+        let search = $(this).val();
+        if (search != '') {
+            load_data(search);
+        } else {
+            load_data();
+        }
+    });
+
     function GetSearchValue() {
         var search = $('#search').val();
         return search;

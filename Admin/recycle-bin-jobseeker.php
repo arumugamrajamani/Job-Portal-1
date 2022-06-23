@@ -85,7 +85,7 @@
         <div class="container-responsive p-md-5 mt-4 bg-white" id="main">
             <div class="d-flex justify-content-end">
                 <div class="d-flex">
-                    <input class="form-control icon" type="search" placeholder="Search an employer" aria-label="Search">
+                    <input id="search" class="form-control icon" type="search" placeholder="Search an employer" aria-label="Search">
                     <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
                 </div>
             </div><br>
@@ -104,133 +104,23 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody class="tbody bg-light text-dark">
-                                    <tr class="tr">
-                                        <td data-title="profile picture"><img src="image/male.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#profile"></td>
-                                        <td data-title="job seeker name">Bryan D. Ubalde</td>
-                                        <td data-title="contact number">09*********</td>
-                                        <td data-title="email address">bryanubalde01@gmail.com</td>
-                                        <td data-title="date applied">April 19, 2022</td>
-                                        <td data-title="action">
-                                            <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                            <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr class="tr">
-                                        <td data-title="profile picture"><img src="image/female.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#profile"></td>
-                                        <td data-title="job seeker name">Kimberly ann S. Flores</td>
-                                        <td data-title="contact number">09*********</td>
-                                        <td data-title="email address">kimberlyannflores32@gmail.com</td>
-                                        <td data-title="date applied">May 05, 2022</td>
-                                        <td data-title="action">
-                                            <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                            <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr class="tr">
-                                        <td data-title="profile picture"><img src="image/female.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#profile"></td>
-                                        <td data-title="job seeker name">Daniela Torres</td>
-                                        <td data-title="contact number">09*********</td>
-                                        <td data-title="email address">danielatorres24@gmail.com</td>
-                                        <td data-title="date applied">May 13, 2022</td>
-                                        <td data-title="action">
-                                            <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                            <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr class="tr">
-                                        <td data-title="profile picture"><img src="image/female.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#profile"></td>
-                                        <td data-title="job seeker name">Daniela Torres</td>
-                                        <td data-title="contact number">09*********</td>
-                                        <td data-title="email address">danielatorres24@gmail.com</td>
-                                        <td data-title="date applied">May 13, 2022</td>
-                                        <td data-title="action">
-                                            <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                            <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr class="tr">
-                                        <td data-title="profile picture"><img src="image/female.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#profile"></td>
-                                        <td data-title="job seeker name">Daniela Torres</td>
-                                        <td data-title="contact number">09*********</td>
-                                        <td data-title="email address">danielatorres24@gmail.com</td>
-                                        <td data-title="date applied">May 13, 2022</td>
-                                        <td data-title="action">
-                                            <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                            <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr class="tr">
-                                        <td data-title="profile picture"><img src="image/female.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#profile"></td>
-                                        <td data-title="job seeker name">Daniela Torres</td>
-                                        <td data-title="contact number">09*********</td>
-                                        <td data-title="email address">danielatorres24@gmail.com</td>
-                                        <td data-title="date applied">May 13, 2022</td>
-                                        <td data-title="action">
-                                            <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                            <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr class="tr">
-                                        <td data-title="profile picture"><img src="image/female.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#profile"></td>
-                                        <td data-title="job seeker name">Daniela Torres</td>
-                                        <td data-title="contact number">09*********</td>
-                                        <td data-title="email address">danielatorres24@gmail.com</td>
-                                        <td data-title="date applied">May 13, 2022</td>
-                                        <td data-title="action">
-                                            <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                            <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr class="tr">
-                                        <td data-title="profile picture"><img src="image/female.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#profile"></td>
-                                        <td data-title="job seeker name">Daniela Torres</td>
-                                        <td data-title="contact number">09*********</td>
-                                        <td data-title="email address">danielatorres24@gmail.com</td>
-                                        <td data-title="date applied">May 13, 2022</td>
-                                        <td data-title="action">
-                                            <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                            <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr class="tr">
-                                        <td data-title="profile picture"><img src="image/female.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#profile"></td>
-                                        <td data-title="job seeker name">Daniela Torres</td>
-                                        <td data-title="contact number">09*********</td>
-                                        <td data-title="email address">danielatorres24@gmail.com</td>
-                                        <td data-title="date applied">May 13, 2022</td>
-                                        <td data-title="action">
-                                            <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                            <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr class="tr">
-                                        <td data-title="profile picture"><img src="image/female.png" alt="" style="width: 60px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#profile"></td>
-                                        <td data-title="job seeker name">Daniela Torres</td>
-                                        <td data-title="contact number">09*********</td>
-                                        <td data-title="email address">danielatorres24@gmail.com</td>
-                                        <td data-title="date applied">May 13, 2022</td>
-                                        <td data-title="action">
-                                            <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                            <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                        </td>
-                                    </tr>
+                                <tbody class="tbody bg-light text-dark" id="body-h">
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </section>
             </div>
-            <nav aria-label="Page navigation example">
-                <div class="entries">
-                    </span>Show 1 to 3 of 3 entries</span>
+            <nav aria-label="Page navigation example" class="page-section">
+                <div class="entries" id="entries">
+                    <!-- </span>Show 1 to 3 of 3 entries</span> -->
                 </div>
-                <ul class="pagination">
-                    <li class="page-item"><a class="page-link bg-info text-dark" href="#">Previous</a></li>
+                <ul class="pagination" id="pagination">
+                    <!-- <li class="page-item"><a class="page-link bg-info text-dark" href="#">Previous</a></li>
                     <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
                     <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
                     <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link bg-info text-dark" href="#">Next</a></li>
+                    <li class="page-item"><a class="page-link bg-info text-dark" href="#">Next</a></li> -->
                 </ul>
             </nav>
         </div>
@@ -264,6 +154,7 @@
 
         <script src="js/navbar.js"></script>
         <script src="../js/preloader.js"></script>
+        <script src="js/jobseeker-recyclebin.js"></script>
     </body>
 
 </html>

@@ -40,14 +40,6 @@ function dateTimeConvertion($date)
     return date('M d, Y, h:i A', strtotime($date));
 }
 
-// Function for unlinking the files
-function unlinkFiles($jobseekerDP)
-{
-    if ($jobseekerDP == NULL) return;
-    // Unlink the files
-    unlink("../../storage/" . $jobseekerDP);
-}
-
 // Function for validating if input is valid fullname
 function isValidFullname($fullname){
     if(preg_match("/^[a-zA-Z .]*$/", $fullname)){
@@ -190,12 +182,26 @@ if (isset($_POST['loadData'])) {
 if (isset($_POST['deleteJobseeker'])) {
     $jobseekerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
     $jobseekerDP = getFiles($jobseekerId)['profile_picture'];
-    // deleting the jobseeker in the database
+    //deleting the jobseeker and moving it to recycle bin
+    $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
+    $row = mysqli_fetch_assoc($fetchDeletedQuery);
+    $jobseeker_id = $row['jobseeker_id'];
+    $fullname = $row['fullname'];
+    $mobile_number = $row['mobile_number'];
+    $profile_picture = $row['profile_picture'];
+    $resume = $row['resume'];
+    $otp_code = $row['otp_code'];
+    $email = $row['email'];
+    $password = $row['password'];
+    $date_created = $row['date_created'];
+
+    mysqli_query($conn, "INSERT INTO jobseeker_recyclebin (jobseeker_id, fullname, mobile_number, profile_picture, resume, otp_code, email, password, date_created)
+                        VALUES ('$jobseeker_id', '$fullname', '$mobile_number', '$profile_picture', '$resume', '$otp_code', '$email', '$password', '$date_created')");
+
     mysqli_query($conn, "DELETE FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
-    // Return nothing to the ajax call
-    // Unlink the display pic of the jopbseeker (aka delet in ../../storage)
-    unlinkFiles($jobseekerDP);
+    
 }
+
 
 // When user click edit button return the selected employer information
 if (isset($_POST['fetchDetails'])) {
@@ -208,7 +214,7 @@ if (isset($_POST['fetchDetails'])) {
     $jobseekerNumber = $row['mobile_number'];
     $jobseekerEmail = $row['email'];
 
-    // Create Assoc array to return to the ajax call
+    // Create Assoc array to return to the ajax call    
     $response = array(
         'jobseekerName' => $jobseekerName,
         'jobseekerNumber' => $jobseekerNumber,

@@ -80,34 +80,29 @@
             <br><br>
             <div class="para ms-5 shadow-sm pb-2 mt-0" style="width: 95%;">
                 <h3 class="text-center p-2" style="height:50px;color: #372732;background-color: #00C2D6;">Meet Our Team</h3><br>
-                <p class="text-center fs-5" style="color: #372732;"> We are Melham Construction Corporation interns who want to create a
-                    website for available jobs online. The traditional method of applying for jobs <br> has been
-                    innovated, and on this page we offer a minimalist, clean, and simple to use website for both
-                    job seekers and employers. Tech-Ployment is a <br> combination of technology and employment in
-                    which employability is now empowered by our modern technology.</p>
+                <p id="meetourteam" class="text-center fs-5" style="color: #372732; margin-right: 10%; margin-left: 10%;"></p>
             </div><br><br>
             <div class="para ms-5 shadow-sm " style="width: 95%;">
                 <h3 class="text-center pt-2" style="height:50px; color: #372732;background-color: #00C2D6;">Vision</h3><br>
-                <p class="text-center fs-5" style="color: #372732;"> To establish a career portal that can help both job seekers and employees in a healthy community.</p>
+                <p id="vision" class="text-center fs-5" style="color: #372732;  margin-right: 10%; margin-left: 10%;"> </p>
                 <br><br>
             </div><br><br>
             <div class="para ms-5 shadow-sm " style="width: 95%;">
                 <h3 class="text-center p-2" style="height:50px;color: #372732;background-color: #00C2D6;">Mission</h3><br>
-                <p class="text-center fs-5" style="color: #372732;"> To assist seekers and employers achieve their employment objectives. With creativity and skill, the ageny collaborates with community partners to adapt to changing needs and posibilities.</p>
+                <p id="mission" class="text-center fs-5" style="color: #372732;  margin-right: 10%; margin-left: 10%;"></p>
                 <br><br>
             </div><br><br>
             <div class="para ms-5 shadow-sm " style="width: 95%;">
                 <h3 class="text-center p-2" style="height:50px;color: #372732;background-color: #00C2D6;">Goal</h3><br>
-                <p class="text-center fs-5" style="color: #372732;"> This initiative aims to provide job seekers with a simple and effective job site. This aim to create an environment in which finding a job online is more time efficient and convenient than looking for one in person.</p>
+                <p id="goal" class="text-center fs-5" style="color: #372732;  margin-right: 10%; margin-left: 10%;"></p>
                 <br><br>
             </div>
             <br><br>
             <div class="para2 ms-5 shadow-sm" style="width: 95%;">
                 <div class="fs-5 ms-6 text-center">
-                    <h3 class="p-2" style="height:50px;color: #372732;background-color: #00C2D6;">Our Services</h3>
-                    <p>We serve individuals by connecting employers with workers who are looking for jobs. We want to instill confidence in everyone's outsourcing experience.</p><br>
-                    <h3 class="" style="color: #372732;">Why we do it</h3>
-                    <p>Because it has an impact on people's lives.</p><br>
+                    <h3 class="p-2" style="height:50px;color: #372732;background-color: #00C2D6;">Our Services</h3><br>
+                    <p id="services" class="text-center fs-5" style="color: #372732;  margin-right: 10%; margin-left: 10%;"></p>
+                    <br><br>
                 </div>
             </div>
             <br><br><br><br><br><br><br>
@@ -1456,6 +1451,8 @@
     </div>
     <script src="js/contactus.js"></script>
     <script src="js/faqsearch.js"></script>
+
+    <script src="Admin/js/aboutus-settings.js"></script>
 </body>
 
 </html>

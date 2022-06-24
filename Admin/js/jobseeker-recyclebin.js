@@ -28,11 +28,49 @@ $(document).ready(function(){
             load_data();
         }
     });
+
+
+
     // Trigger this when user click on the pagination 
-    $('#pagination').on('click', '.page-item', function () {
+    $('#pagination').on('click', '.page-item', function () {        
         let page = $(this).attr('data-page');
         load_data(GetSearchValue(), page);
     });
+
+   
+   // Trigger this when user click delete button and pass the data-id value on selected button to yes button in delete modal
+   $('#body-h').on('click', '.delete-Btn', function () {
+    let jobseekerId = $(this).attr('data-id');
+    $('#del-yes').val(jobseekerId);
+    });
+
+
+    // Trigger this when user click delete button and pass the data-id value on selected button to yes button in delete modal
+    $('#body-h').on('click', '.delete-Btn', function () {
+        let jobseekerId = $(this).attr('data-id');
+        $('#del-yes').val(jobseekerId);
+    });
+
+    // Trigger this when user click yes on delete modal
+    $('#del-yes').click(function () {
+        let jobseekerId = $(this).val();
+        $.ajax({
+            url: "php/recycle-bin-jobseeker.inc.php",
+            type: "POST",
+            data: {
+                deleteJobseeker: true,
+                jobseekerId: jobseekerId
+            },
+            success: function (data) {
+                $('#modal-delete').modal('hide');
+                toastr.success('', 'Successfully Deleted!');
+                load_data(GetSearchValue(), getCurrentPage());
+            }
+        })
+    });
+
+
+
     function GetSearchValue() {
         var search = $('#search').val();
         return search;

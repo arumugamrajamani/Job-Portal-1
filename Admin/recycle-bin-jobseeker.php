@@ -132,9 +132,9 @@
                         <h5 class="modal-title ms-5" id="exampleModalLabel">Are you sure you want to delete this?</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body" style="margin-left: 170px;">
-                        <button type="button" class="btn btn-success" title="Restore" style="width: 70px;">Yes</button>
-                        <button type="button" class="btn btn-danger" title="Delete" style="width: 70px;" data-bs-dismiss="modal">No</button>
+                    <div class="delete modal-body" style="margin-left: 170px;">
+                    <button type="button" id="yes-delete" class="yes-no btn btn-success">Yes</button>
+                    <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
                     </div>
                 </div>
             </div>

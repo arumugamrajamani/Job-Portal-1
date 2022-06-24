@@ -2,6 +2,27 @@
 //includes db connection from 2 folders back
 include '../../php/db-connection.php';
 
+//  Function for Sanitizing all input data 
+function sanitize_input($data)
+{
+    $data = trim($data);
+    $data = stripcslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+// Function for getting the jobseeker profile picture
+function getFiles($jobseekerId)
+{
+    $GetFileQuery = mysqli_query($GLOBALS['conn'], "SELECT profile_picture FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
+    $row = mysqli_fetch_assoc($GetFileQuery);
+    // Create assoc array
+    $files = array(
+        'profile_picture' => $row['profile_picture']
+    );
+    // Return assoc array
+    return $files;
+}
 
 //check if profile pic is not null && if file exists  then returns a string value of the profile picture location
 function getProfilePicLoc($profilePic)
@@ -13,11 +34,28 @@ function getProfilePicLoc($profilePic)
     }
 }
 
-
 // Convert old date time into textual format
 function dateTimeConvertion($date)
 {
     return date('M d, Y, h:i A', strtotime($date));
+}
+
+// Function for validating if input is valid fullname
+function isValidFullname($fullname){
+    if(preg_match("/^[a-zA-Z .]*$/", $fullname)){
+            return true;
+    } else {
+        return false;
+    }
+}
+
+// Function for validating if inout is valid number
+function isValidNumber($number){
+    if(preg_match("/^[0-9]*$/", $number)){
+            return true;
+    } else {
+            return false;
+    }
 }
 
 
@@ -48,8 +86,8 @@ if (isset($_POST['loadData'])) {
     // Check if search is present
     if (isset($_POST['search'])) {
         $search = $_POST['search'];
-        $statement = "SELECT * FROM jobseeker_recylebin WHERE fullname LIKE '%$search%' OR mobile_number LIKE '%$search%' OR email LIKE '%$search%' LIMIT $start, $pageLimit";
-        $paginationStatement = "SELECT * FROM jobseeker_reycyclebin WHERE fullname LIKE '%$search%' OR mobile_number LIKE '%$search%' OR email LIKE '%$search%'";
+        $statement = "SELECT * FROM jobseeker_recyclebin WHERE fullname LIKE '%$search%' OR mobile_number LIKE '%$search%' OR email LIKE '%$search%' LIMIT $start, $pageLimit";
+        $paginationStatement = "SELECT * FROM jobseeker_recyclebin WHERE fullname LIKE '%$search%' OR mobile_number LIKE '%$search%' OR email LIKE '%$search%'";
     } else {
         $statement = "SELECT * FROM jobseeker_recyclebin LIMIT $start, $pageLimit";
         $paginationStatement = "SELECT * FROM jobseeker_recyclebin";
@@ -140,7 +178,30 @@ if (isset($_POST['loadData'])) {
     echo json_encode($response);
 }
 
+// when user delete a jobseeker
+if (isset($_POST['deleteJobseeker'])) {
+    $jobseekerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
+    $jobseekerDP = getFiles($jobseekerId)['profile_picture'];
+    // deleting the jobseeker in the database
+    mysqli_query($conn, "DELETE FROM jobseeker_recyclebin WHERE jobseeker_id = '$jobseekerId'");
+    $row = mysqli_fetch_assoc($fetchDeletedQuery);
+    $jobseeker_id = $row['jobseeker_id'];
+    $fullname = $row['fullname'];
+    $mobile_number = $row['mobile_number'];
+    $profile_picture = $row['profile_picture'];
+    $resume = $row['resume'];
+    $otp_code = $row['otp_code'];
+    $email = $row['email'];
+    $password = $row['password'];
+    $date_created = $row['date_created'];
 
+    mysqli_query($conn, "DELETE INTO jobseeker_recyclebin (jobseeker_id, fullname, mobile_number, profile_picture, resume, otp_code, email, password, date_created)
+                        VALUES ('$jobseeker_id', '$fullname', '$mobile_number', '$profile_picture', '$resume', '$otp_code', '$email', '$password', '$date_created')");
+    mysqli_query($conn, "DELETE FROM jobseeker_recylebin WHERE jobseeker_id = '$jobseekerId'");
+    // Return nothing to the ajax call
+    // Unlink the display pic of the jopbseeker (aka delet in ../../storage)
+    
+}
 
 
 

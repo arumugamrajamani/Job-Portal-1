@@ -109,8 +109,7 @@ $(document).ready(function () {
                 jobseekerId: jobseekerId
             },
             success: function (data) {
-                $('#modal-delete').modal('hide');
-                toastr.success('', 'Successfully Deleted!');
+                $('#exampleModal').modal('hide');
                 load_data(GetSearchValue(), getCurrentPage());
             }
         })

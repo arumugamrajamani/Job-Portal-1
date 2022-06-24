@@ -186,29 +186,28 @@ if (isset($_POST['deleteJobseeker'])) {
     $jobseekerDP = getFiles($jobseekerId)['profile_picture'];
     // deleting the jobseeker in the database
     mysqli_query($conn, "DELETE FROM jobseeker_recyclebin WHERE jobseeker_id = '$jobseekerId'");
-
-    // when user restore a jobseeker
-    if (isset($_POST['restoreJobseeker'])) {
-        $jobseekerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
-        $jobseekerDP = getFiles($jobseekerId)['profile_picture'];
-        //deleting the jobseeker and moving it to recycle bin
-        $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM jobseeker_recyclebin WHERE jobseeker_id = '$jobseekerId'");
-        $row = mysqli_fetch_assoc($fetchDeletedQuery);
-        $jobseeker_id = $row['jobseeker_id'];
-        $fullname = $row['fullname'];
-        $mobile_number = $row['mobile_number'];
-        $profile_picture = $row['profile_picture'];
-        $resume = $row['resume'];
-        $otp_code = $row['otp_code'];
-        $email = $row['email'];
-        $password = $row['password'];
-        $date_created = $row['date_created'];
-    
-        mysqli_query($conn, "INSERT INTO jobseeker (jobseeker_id, fullname, mobile_number, profile_picture, resume, otp_code, email, password, date_created)
-                            VALUES ('$jobseeker_id', '$fullname', '$mobile_number', '$profile_picture', '$resume', '$otp_code', '$email', '$password', '$date_created')");
-    
-        mysqli_query($conn, "DELETE FROM jobseeker_recyclebin WHERE jobseeker_id = '$jobseekerId'");
-    
 }
 
+
+// when user restore a jobseeker
+if (isset($_POST['restoreJobseeker'])) {
+    $jobseekerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
+    $jobseekerDP = getFiles($jobseekerId)['profile_picture'];
+    //deleting the jobseeker and moving it to recycle bin
+    $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM jobseeker_recyclebin WHERE jobseeker_id = '$jobseekerId'");
+    $row = mysqli_fetch_assoc($fetchDeletedQuery);
+    $jobseeker_id = $row['jobseeker_id'];
+    $fullname = $row['fullname'];
+    $mobile_number = $row['mobile_number'];
+    $profile_picture = $row['profile_picture'];
+    $resume = $row['resume'];
+    $otp_code = $row['otp_code'];
+    $email = $row['email'];
+    $password = $row['password'];
+    $date_created = $row['date_created'];
+
+    mysqli_query($conn, "INSERT INTO jobseeker (jobseeker_id, fullname, mobile_number, profile_picture, resume, otp_code, email, password, date_created)
+                            VALUES ('$jobseeker_id', '$fullname', '$mobile_number', '$profile_picture', '$resume', '$otp_code', '$email', '$password', '$date_created')");
+
+    mysqli_query($conn, "DELETE FROM jobseeker_recyclebin WHERE jobseeker_id = '$jobseekerId'");
 }

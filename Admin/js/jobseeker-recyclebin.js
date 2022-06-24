@@ -122,6 +122,19 @@ $(document).ready(function () {
     $('#body-h').on('click', '.restore-Btn', function () {
         let jobseekerId = $(this).attr('data-id');
 
+        $.ajax({
+            url: "php/recycle-bin-jobseeker.inc.php",
+            type: "POST",
+            data: {
+                restoreJobseeker: true,
+                jobseekerId: jobseekerId
+            },
+            success: function (data) {
+                $('#modal-restore').modal('restore');
+                toastr.success('', 'Successfully Restored');
+                load_data(GetSearchValue(), getCurrentPage());
+            }
+        })
 
     });
 

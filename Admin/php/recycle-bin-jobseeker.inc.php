@@ -41,20 +41,22 @@ function dateTimeConvertion($date)
 }
 
 // Function for validating if input is valid fullname
-function isValidFullname($fullname){
-    if(preg_match("/^[a-zA-Z .]*$/", $fullname)){
-            return true;
+function isValidFullname($fullname)
+{
+    if (preg_match("/^[a-zA-Z .]*$/", $fullname)) {
+        return true;
     } else {
         return false;
     }
 }
 
 // Function for validating if inout is valid number
-function isValidNumber($number){
-    if(preg_match("/^[0-9]*$/", $number)){
-            return true;
+function isValidNumber($number)
+{
+    if (preg_match("/^[0-9]*$/", $number)) {
+        return true;
     } else {
-            return false;
+        return false;
     }
 }
 
@@ -111,8 +113,8 @@ if (isset($_POST['loadData'])) {
                             <td>{$email}</td>
                             <td>{$date}</td>
                             <td>              
-                            <button class='btn text-white btn-success' title='Restore' type='button' id='btn-info'><i class='fa-solid fa-clock-rotate-left'></i></button>
-                            <button class='btn btn-danger' title='Delete' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#exampleModal'><i class='bi bi-trash3'></i></button>
+                            <button data-id='{$jobseekerId}' class='btn text-white btn-success restore-Btn' title='Restore' type='button' id='btn-info'><i class='fa-solid fa-clock-rotate-left'></i></button>
+                            <button data-id='{$jobseekerId}' class='btn btn-danger delete-Btn' title='Delete' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#exampleModal'><i class='bi bi-trash3'></i></button>
                             </td>
                         </tr>";
     }
@@ -184,28 +186,4 @@ if (isset($_POST['deleteJobseeker'])) {
     $jobseekerDP = getFiles($jobseekerId)['profile_picture'];
     // deleting the jobseeker in the database
     mysqli_query($conn, "DELETE FROM jobseeker_recyclebin WHERE jobseeker_id = '$jobseekerId'");
-    $row = mysqli_fetch_assoc($fetchDeletedQuery);
-    $jobseeker_id = $row['jobseeker_id'];
-    $fullname = $row['fullname'];
-    $mobile_number = $row['mobile_number'];
-    $profile_picture = $row['profile_picture'];
-    $resume = $row['resume'];
-    $otp_code = $row['otp_code'];
-    $email = $row['email'];
-    $password = $row['password'];
-    $date_created = $row['date_created'];
-
-    mysqli_query($conn, "DELETE INTO jobseeker_recyclebin (jobseeker_id, fullname, mobile_number, profile_picture, resume, otp_code, email, password, date_created)
-                        VALUES ('$jobseeker_id', '$fullname', '$mobile_number', '$profile_picture', '$resume', '$otp_code', '$email', '$password', '$date_created')");
-    mysqli_query($conn, "DELETE FROM jobseeker_recylebin WHERE jobseeker_id = '$jobseekerId'");
-    // Return nothing to the ajax call
-    // Unlink the display pic of the jopbseeker (aka delet in ../../storage)
-    
 }
-
-
-
-
-
-
-?>

@@ -133,8 +133,8 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="delete modal-body" style="margin-left: 170px;">
-                    <button type="button" id="yes-delete" class="yes-no btn btn-success">Yes</button>
-                    <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
+                        <button type="button" id="del-yes" class="yes-no btn btn-success">Yes</button>
+                        <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
                     </div>
                 </div>
             </div>

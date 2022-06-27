@@ -86,7 +86,7 @@
             <h3 class="div1">SYSTEM SETTINGS</h3>
         </div>
         <div class="d-flex justify-content-center">
-            <img src="image/flogo.png" alt="melham logo" class="image">
+            <img src="" class="image" id="logo">
         </div>
         <div class="row mb-3 mt-5 fw-bold justify-content-center">
             <label for="name" class="profile-picture col-sm-2">System Picture:</label>
@@ -97,31 +97,31 @@
         <div class="row mb-3 mt-4  fw-bold justify-content-center">
             <label for="name" class="col-sm-2 ">System Name:</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="name" placeholder="Techployment">
+                <input type="text" class="form-control" id="name" placeholder="System Name">
             </div>
         </div>
         <div class="row mb-3 mt-0 fw-bold justify-content-center">
             <label for="tagline" class="col-sm-2 ">System Tagline:</label>
             <div class="col-sm-8">
-                <textarea type="text" class="form-control" id="tagline" rows="3">Employment powered by technology.</textarea>
+                <textarea type="text" class="form-control" id="tagline" rows="3" placeholder="System Tagline"></textarea>
             </div>
         </div>
         <div class="row mb-3 mt-0 fw-bold justify-content-center">
             <label for="contactnumber" class="col-sm-2 ">Contact Number:</label>
             <div class="col-sm-8">
-                <input type="number" class="form-control" id="contactnumber" placeholder="09898232323">
+                <input type="number" class="form-control" id="contactnumber" placeholder="Contact Number">
             </div>
         </div>
         <div class="row mb-3 mt-0 fw-bold justify-content-center">
             <label for="email" class="col-sm-2 ">Email:</label>
             <div class="col-sm-8">
-                <input type="email" class="form-control" id="email" placeholder="Techploymentph@gmail.com">
+                <input type="email" class="form-control" id="email" placeholder="Email@email.com">
             </div>
         </div>
         <div class="row mb-3 mt-0 fw-bold justify-content-center">
             <label for="description" class="col-sm-2 ">System Description:</label>
             <div class="col-sm-8">
-                <textarea type="text" class="form-control" id="description" rows="4">Are you sick of standing in endless line? Today, technology gives you an advantage in the job market by allowing you to apply with a single click and from the comfort of your home. Now is the time to apply! Use Tech-Ployment and get your first online job! </textarea>
+                <textarea type="text" class="form-control" id="description" rows="4" placeholder="System Description"></textarea>
             </div>
         </div>
         <div class="text-center">
@@ -156,6 +156,7 @@
     </script>
     <script src="js/navbar.js"></script>
     <script src="../js/preloader.js"></script>
+    <script src="js/system-settings.js"></script>
 </body>
 
 </html>

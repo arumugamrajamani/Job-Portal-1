@@ -13,7 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/jobpost-management.css">
     <link rel="stylesheet" href="../css/preloader.css">
-    <title>Job Post Management</title>
+    <title>Job Post Management | Admin</title>
 </head>
 
 <body>

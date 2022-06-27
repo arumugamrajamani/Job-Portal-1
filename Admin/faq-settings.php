@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/faq-settings.css">
     <link rel="stylesheet" href="../css/preloader.css">
-    <title>FAQ</title>
+    <title>FAQ | Settings</title>
 </head>
 
 <body>

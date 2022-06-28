@@ -4,7 +4,7 @@ include 'db-connection.php';
 session_start();
 
 
-// When the page is loaded the js will call for this then this will get the admin's data from the DB
+// When the page is loaded the js will call for this then this will get the  data from the DB
 if (isset($_POST['fetchData'])) {
     // Create query to get the employer information
     $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM system_settings WHERE id = '1'");

@@ -125,7 +125,7 @@
             </div>
         </div>
         <div class="text-center">
-            <button class="save-change" type="submit">SAVE CHANGES</button>
+            <button class="save-change" id="save-now" type="submit">SAVE CHANGES</button>
         </div><br>
     </div>
     </div>

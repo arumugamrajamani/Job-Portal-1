@@ -1,7 +1,11 @@
 $(document).ready(function () {
 
 
-
+    // Set option for toaster function
+    toastr.options = {
+        "preventDuplicates": true,
+        "timeOut": 2000,
+    };
 
     //--------------------------------------- Functions --------------------------------------------------------->
     // Function to clear border color

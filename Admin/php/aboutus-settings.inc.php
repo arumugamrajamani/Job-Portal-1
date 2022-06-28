@@ -96,7 +96,7 @@ if (isset($_POST['saveNow'])) {
         $services = mysqli_real_escape_string($conn, $services);
 
         // Create query to update the admin's details
-        $updateAdminDetailsQuery = mysqli_query($conn, "UPDATE about_us SET 
+        $query = mysqli_query($conn, "UPDATE about_us SET 
         meet_our_team = '$meetourteam', 
         vision = '$vision',
         mission = '$mission',
@@ -105,7 +105,7 @@ if (isset($_POST['saveNow'])) {
          WHERE id = '1'");
 
 
-        if ($updateAdminDetailsQuery) {
+        if ($query) {
             $response = array('status' => 'success', 'message' => "Updated Successfully.");
         } else {
             $response = array('status' => 'error', 'message' => "Problem while updating.");

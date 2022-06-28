@@ -1435,10 +1435,18 @@
 
                 <div class="col-md-2 mx-auto mb-4 text-center">
                     <h6 class="text-uppercase ">CONTACT US</h6>
-                    <div class="list-unstyled d-flex">
-                        <img class="my-0" src="image/gmail.png" alt="logo" href="#" style="width: 50px; height: 25px">
-                        <span id="eemail" class="list-unstyled d-flex">
-                        </span>
+                    <div class="d-flex">
+                        <ul class="list-unstyled">
+                            <li class="d-flex">
+                                <img class="my-0" src="image/gmail.png" alt="logo" href="#" style="width: 50px; height: 25px">
+                                <span id="eemail" class="list-unstyled d-flex">
+                                </span>
+                            </li>
+                            <li class="d-flex">
+                                <span id="contactnumber"></span>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
             </div>

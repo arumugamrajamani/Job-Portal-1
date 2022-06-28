@@ -59,6 +59,7 @@ function generateRandomString()
 }
 
 
+
 // When the page is loaded the js will call for this then this will get the admin's data from the DB
 if (isset($_POST['fetchData'])) {
     // Create query to get the employer information
@@ -166,5 +167,36 @@ if (isset($_POST['saveNow'])) {
         $response = array('status' => 'error', 'message' => "Please fill up all the fields.");
     }
     // return this as a json object and exit
+    echo json_encode($response);
+}
+
+
+
+// When the user upload a new profile picture
+if (isset($_POST['changeprofile'])) {
+    //  Array containing valid image extension
+    $allowed_image_extension = array("png", "jpeg", "jpg");
+    //  Get profile picture file extension
+    $file_extension = pathinfo($_FILES["profilePic"]["name"], PATHINFO_EXTENSION);
+
+    // Validate uploaded image
+    if (($_FILES["profilePic"]["size"] > 5000000)) {
+        $response = array('status' => 'error', 'message' => "Image size exceeds 5MB.");
+    } elseif (!in_array($file_extension, $allowed_image_extension)) {
+        $response = array('status' => 'error', 'message' => "Upload valid images. Only PNG, JPG, JPEG are allowed.");
+    } else {
+        $filename = generateRandomString() . "." . $file_extension;
+        $query_update_profile = mysqli_query($conn, "UPDATE system_settings SET system_picture = '$filename' WHERE id = '1'");
+        // Check if query success
+        if ($query_update_profile) {
+            $target_directory = "../image/";
+            $path =  $target_directory . $filename;
+            move_uploaded_file($_FILES["profilePic"]["tmp_name"], $path);
+            $response = array('status' => 'success');
+        } else {
+            $response = array('status' => 'error', 'message' => "Problem while uploading.");
+        }
+    }
+    ///
     echo json_encode($response);
 }

@@ -56,4 +56,28 @@ $(document).ready(function () {
     })
 
 
+    // Trigger this when there is changes in upload profile input
+    $(document).on('change', '#myFile', function () {
+        // get the file name
+        let profilePic = $("#myFile").prop('files')[0];
+        let form_data = new FormData();
+        form_data.append("profilePic", profilePic);
+        form_data.append("changeprofile", true);
+        $.ajax({
+            url: 'php/system-settings.inc.php',
+            type: "POST",
+            contentType: false,
+            processData: false,
+            cache: false,
+            data: form_data,
+            dataType: 'JSON',
+            success: function (data) {
+                if (data.status == 'error') {
+                    toastr.error('', data.message);
+                }
+            }
+        })
+    })
+
+
 })

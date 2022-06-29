@@ -109,14 +109,8 @@ $(document).ready(function () {
                 jobseekerId: jobseekerId
             },
             success: function (data) {
-<<<<<<< HEAD
-                $('#modal-delete').modal('hide');
-                
-                load_data(GetSearchValue(), getCurrentPage());
-=======
                 $('#exampleModal').modal('hide');
                 load_data(GetSearchValue());
->>>>>>> d6747c80c800aca4d968ea951a7b4f432bda435d
             }
         })
     });

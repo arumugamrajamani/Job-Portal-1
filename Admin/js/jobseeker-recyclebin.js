@@ -110,7 +110,7 @@ $(document).ready(function () {
             },
             success: function (data) {
                 $('#exampleModal').modal('hide');
-                load_data(GetSearchValue(), getCurrentPage());
+                load_data(GetSearchValue());
             }
         })
     });
@@ -131,7 +131,7 @@ $(document).ready(function () {
             success: function (data) {
                 $('#modal-restore').modal('restore');
                 toastr.success('', 'Successfully Restored');
-                load_data(GetSearchValue(), getCurrentPage());
+                load_data(GetSearchValue());
             }
         })
 

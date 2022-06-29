@@ -82,7 +82,7 @@
     <br><br><br>
     <div class="container-responsive p-md-5 mt-4 bg-white" id="main">
         <div class="d-flex justify-content-end">
-            <input class="form-control icon" type="search" placeholder="Search an employer" aria-label="Search">
+            <input id= "search" class="form-control icon" type="search" placeholder="Search an employer" aria-label="Search">
             <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
         </div><br>
         <div class="col-auto">

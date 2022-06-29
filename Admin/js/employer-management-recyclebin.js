@@ -19,7 +19,20 @@ $(document).ready(function () {
             }
         })
     }
-    // Trigger this when user started to type in the search bar
+      
+    // Function for getting the current value in search box
+    function GetSearchValue() {
+        var search = $('#search').val();
+        return search;
+    }
+    
+    // Function for getting the current page number
+    function getCurrentPage() {
+        var page = $('#pagination').find('.active').attr('data-page');
+        return page;
+    }
+    
+    // Trigger this when user started to search in the search bar
     $('#search').keyup(function () {
         let search = $(this).val();
         if (search != '') {
@@ -28,6 +41,7 @@ $(document).ready(function () {
             load_data();
         }
     });
+
 
     // Trigger this when user click on the pagination 
     $('#pagination').on('click', '.page-item', function () {

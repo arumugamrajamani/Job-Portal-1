@@ -3,6 +3,25 @@
 include '../../php/db-connection.php';
 session_start();
 
+
+// Function for getting the profile picture name
+function getProfilePicture()
+{
+    $GetProfilePicQuery = mysqli_query($GLOBALS['conn'], "SELECT system_picture FROM system_settings WHERE id = '1'");
+    $row = mysqli_fetch_assoc($GetProfilePicQuery);
+    $profilePic = $row['profile_pic'];
+    return $profilePic;
+}
+
+// Function for unlinking old profile pic to insert the new one
+function unlinkOldProfilePic()
+{
+    $oldProfilePic = getProfilePicture();
+    if ($oldProfilePic != NULL && file_exists("../../image/" . $oldProfilePic)) {
+        unlink("../../image/" . $oldProfilePic);
+    }
+}
+
 //  Function for Sanitizing all input data 
 function sanitizeInput($data)
 {
@@ -185,11 +204,13 @@ if (isset($_POST['changeprofile'])) {
     } elseif (!in_array($file_extension, $allowed_image_extension)) {
         $response = array('status' => 'error', 'message' => "Upload valid images. Only PNG, JPG, JPEG are allowed.");
     } else {
+        // Call this function to remove the old profile pic in the file system
+        unlinkOldProfilePic();
         $filename = generateRandomString() . "." . $file_extension;
         $query_update_profile = mysqli_query($conn, "UPDATE system_settings SET system_picture = '$filename' WHERE id = '1'");
         // Check if query success
         if ($query_update_profile) {
-            $target_directory = "../image/";
+            $target_directory = "../../image/";
             $path =  $target_directory . $filename;
             move_uploaded_file($_FILES["profilePic"]["tmp_name"], $path);
             $response = array('status' => 'success');

@@ -16,7 +16,7 @@ $(document).ready(function () {
             },
             dataType: "JSON",
             success: function (data) {
-                $('#logo').attr('src', "image/" + data.systemPicture);
+                $('#logo').attr('src', "../image/" + data.systemPicture);
                 $('#name').val(data.systemName);
                 $('#tagline').val(data.systemTagline);
                 $('#contactnumber').val(data.conatactNumber);

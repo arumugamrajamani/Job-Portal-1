@@ -182,6 +182,7 @@ if (isset($_POST['loadData'])) {
 if (isset($_POST['deleteJobseeker'])) {
     $jobseekerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
     $jobseekerDP = getFiles($jobseekerId)['profile_picture'];
+    
     //deleting the jobseeker and moving it to recycle bin
     $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
     $row = mysqli_fetch_assoc($fetchDeletedQuery);

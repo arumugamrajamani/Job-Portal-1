@@ -105,10 +105,11 @@ if (isset($_POST['loadData'])) {
         $email = $row['email'];
         $number = $row['mobile_number'];
         $date = dateTimeConvertion($row['date_created']);
+        
         //storing the data into $output.
         $tableData .=  "<tr class='tr'>
                             <td class='view-pp'><img src='{$profilePicture}' class='image' alt='' data-bs-toggle='modal' data-bs-target='#profile'></td>
-                            <td>{$fullName}</td>
+                            <td>$fullName</td>
                             <td>{$number}</td>
                             <td>{$email}</td>
                             <td>{$date}</td>
@@ -184,6 +185,7 @@ if (isset($_POST['loadData'])) {
 if (isset($_POST['deleteJobseeker'])) {
     $jobseekerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
     $jobseekerDP = getFiles($jobseekerId)['profile_picture'];
+    
     // deleting the jobseeker in the database
     mysqli_query($conn, "DELETE FROM jobseeker_recyclebin WHERE jobseeker_id = '$jobseekerId'");
 }
@@ -193,6 +195,7 @@ if (isset($_POST['deleteJobseeker'])) {
 if (isset($_POST['restoreJobseeker'])) {
     $jobseekerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
     $jobseekerDP = getFiles($jobseekerId)['profile_picture'];
+    
     //deleting the jobseeker and moving it to recycle bin
     $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM jobseeker_recyclebin WHERE jobseeker_id = '$jobseekerId'");
     $row = mysqli_fetch_assoc($fetchDeletedQuery);

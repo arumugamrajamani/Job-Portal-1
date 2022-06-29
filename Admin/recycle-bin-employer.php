@@ -102,153 +102,22 @@
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody class="tbody bg-light text-dark" id="body-h">
-                                <tr class="tr">
-                                    <td data-title="companylogo"><b><img src="image/comlogo.png" class="image" alt="" data-bs-toggle="modal" data-bs-target="#companylogo"></b></td>
-                                    <td data-title="companyname"> Factset</td>
-                                    <td data-title="employername">Monkey D. Luffy</td>
-                                    <td data-title="employerposition">Pirate King</td>
-                                    <td data-title="emailaddress">monkeydluffy@gmail.com</td>
-                                    <td data-title="dtibusinesspermit"><i class="fa-solid fa-file-lines me-1"></i><a href="#">Dtibusinesspermit.pdf</a></td>
-                                    <td data-title="status">Verified</td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" type="button" id="btn-info" title="Restore"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" title="Restore" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="companylogo"><b><img src="image/smlogo.png" class="image" alt="" data-bs-toggle="modal" data-bs-target="#companylogo"></b></td>
-                                    <td data-title="companyname">SM Prime</td>
-                                    <td data-title="employername">Roronoa Zoro</td>
-                                    <td data-title="employerposition">Swordsman</td>
-                                    <td data-title="emailaddress">roronoazoro@gmail.com</td>
-                                    <td data-title="dtibusinesspermit"><i class="fa-solid fa-file-lines me-1"></i><a href="#">Dtibusinesspermit.pdf</a></td>
-                                    <td data-title="status">Verified</td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" type="button" id="btn-info" title="Restore"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" title="Restore" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="companylogo"><b><img src="image/roblogo.png" class="image" alt="" data-bs-toggle="modal" data-bs-target="#companylogo"></b></td>
-                                    <td data-title="companyname">Robinson</td>
-                                    <td data-title="employername">Nico Robin</td>
-                                    <td data-title="employerposition">Archeologist</td>
-                                    <td data-title="emailaddress">nicorobin@gmail.com</td>
-                                    <td data-title="dtibusinesspermit"><i class="fa-solid fa-file-lines me-1"></i><a href="#">Dtibusinesspermit.pdf</a></td>
-                                    <td data-title="status">Verified</td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" type="button" id="btn-info" title="Restore"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" title="Restore" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="companylogo"><b><img src="image/roblogo.png" class="image" alt="" data-bs-toggle="modal" data-bs-target="#companylogo"></b></td>
-                                    <td data-title="companyname">Robinson</td>
-                                    <td data-title="employername">Nico Robin</td>
-                                    <td data-title="employerposition">Archeologist</td>
-                                    <td data-title="emailaddress">nicorobin@gmail.com</td>
-                                    <td data-title="dtibusinesspermit"><i class="fa-solid fa-file-lines me-1"></i><a href="#">Dtibusinesspermit.pdf</a></td>
-                                    <td data-title="status">Verified</td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" type="button" id="btn-info" title="Restore"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" title="Restore" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="companylogo"><b><img src="image/roblogo.png" class="image" alt="" data-bs-toggle="modal" data-bs-target="#companylogo"></b></td>
-                                    <td data-title="companyname">Robinson</td>
-                                    <td data-title="employername">Nico Robin</td>
-                                    <td data-title="employerposition">Archeologist</td>
-                                    <td data-title="emailaddress">nicorobin@gmail.com</td>
-                                    <td data-title="dtibusinesspermit"><i class="fa-solid fa-file-lines me-1"></i><a href="#">Dtibusinesspermit.pdf</a></td>
-                                    <td data-title="status">Verified</td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" type="button" id="btn-info" title="Restore"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" title="Restore" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="companylogo"><b><img src="image/roblogo.png" class="image" alt="" data-bs-toggle="modal" data-bs-target="#companylogo"></b></td>
-                                    <td data-title="companyname">Robinson</td>
-                                    <td data-title="employername">Nico Robin</td>
-                                    <td data-title="employerposition">Archeologist</td>
-                                    <td data-title="emailaddress">nicorobin@gmail.com</td>
-                                    <td data-title="dtibusinesspermit"><i class="fa-solid fa-file-lines me-1"></i><a href="#">Dtibusinesspermit.pdf</a></td>
-                                    <td data-title="status">Verified</td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" type="button" id="btn-info" title="Restore"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" title="Restore" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="companylogo"><b><img src="image/roblogo.png" class="image" alt="" data-bs-toggle="modal" data-bs-target="#companylogo"></b></td>
-                                    <td data-title="companyname">Robinson</td>
-                                    <td data-title="employername">Nico Robin</td>
-                                    <td data-title="employerposition">Archeologist</td>
-                                    <td data-title="emailaddress">nicorobin@gmail.com</td>
-                                    <td data-title="dtibusinesspermit"><i class="fa-solid fa-file-lines me-1"></i><a href="#">Dtibusinesspermit.pdf</a></td>
-                                    <td data-title="status">Verified</td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" type="button" id="btn-info" title="Restore"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" title="Restore" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="companylogo"><b><img src="image/roblogo.png" class="image" alt="" data-bs-toggle="modal" data-bs-target="#companylogo"></b></td>
-                                    <td data-title="companyname">Robinson</td>
-                                    <td data-title="employername">Nico Robin</td>
-                                    <td data-title="employerposition">Archeologist</td>
-                                    <td data-title="emailaddress">nicorobin@gmail.com</td>
-                                    <td data-title="dtibusinesspermit"><i class="fa-solid fa-file-lines me-1"></i><a href="#">Dtibusinesspermit.pdf</a></td>
-                                    <td data-title="status">Verified</td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" type="button" id="btn-info" title="Restore"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" title="Restore" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="companylogo"><b><img src="image/roblogo.png" class="image" alt="" data-bs-toggle="modal" data-bs-target="#companylogo"></b></td>
-                                    <td data-title="companyname">Robinson</td>
-                                    <td data-title="employername">Nico Robin</td>
-                                    <td data-title="employerposition">Archeologist</td>
-                                    <td data-title="emailaddress">nicorobin@gmail.com</td>
-                                    <td data-title="dtibusinesspermit"><i class="fa-solid fa-file-lines me-1"></i><a href="#">Dtibusinesspermit.pdf</a></td>
-                                    <td data-title="status">Verified</td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" type="button" id="btn-info" title="Restore"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" title="Restore" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="companylogo"><b><img src="image/roblogo.png" class="image" alt="" data-bs-toggle="modal" data-bs-target="#companylogo"></b></td>
-                                    <td data-title="companyname">Robinson</td>
-                                    <td data-title="employername">Nico Robin</td>
-                                    <td data-title="employerposition">Archeologist</td>
-                                    <td data-title="emailaddress">nicorobin@gmail.com</td>
-                                    <td data-title="dtibusinesspermit"><i class="fa-solid fa-file-lines me-1"></i><a href="#">Dtibusinesspermit.pdf</a></td>
-                                    <td data-title="status">Verified</td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" type="button" id="btn-info" title="Restore"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" title="Restore" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            <tbody class="tbody bg-light text-dark" id="body-h"></tbody>
                         </table>
                     </div>
                 </div>
             </section>
         </div>
-        <nav aria-label="Page navigation example">
-            <div class="entries">
-                </span>Show 1 to 3 of 3 entries</span>
+        <nav aria-label="Page navigation example" class="page-section">
+            <div class="entries" id="entries">
+                <!-- </span>Show 1 to 3 of 3 entries</span> -->
             </div>
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link bg-info text-dark" href="#">Previous</a></li>
+            <ul class="pagination" id="pagination">
+                <!-- <li class="page-item"><a class="page-link bg-info text-dark" href="#">Previous</a></li>
                 <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
                 <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
                 <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-                <li class="page-item"><a class="page-link bg-info text-dark" href="#">Next</a></li>
+                <li class="page-item"><a class="page-link bg-info text-dark" href="#">Next</a></li> -->
             </ul>
         </nav>
     </div>
@@ -275,7 +144,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="delete modal-body">
-                    <button type="button" class="yes-no btn btn-success">Yes</button>
+                    <button type="button" id="del-yes" class="yes-no btn btn-success">Yes</button>
                     <button type="button" class="yes-no btn btn-danger" title="Delete" data-bs-dismiss="modal">No</button>
                 </div>
             </div>
@@ -297,6 +166,8 @@
 
     <script src="js/navbar.js"></script>
     <script src="../js/preloader.js"></script>
+
+    <script src="js/employer-management-recyclebin.js"></script>
 </body>
 
 </html>

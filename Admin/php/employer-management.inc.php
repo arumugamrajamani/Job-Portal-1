@@ -231,10 +231,39 @@ if (isset($_POST['deleteEmployer'])) {
     $employerId = mysqli_real_escape_string($conn, $_POST['employerId']);
     $companyLogoName = getFiles($employerId)['company_logo_name'];
     $permitName = getFiles($employerId)['permit_new_name'];
-    // Unlink the files
-    unlinkFiles($companyLogoName, $permitName);
+
+    $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM employer WHERE employer_id = '$employerId'");
+    $row = mysqli_fetch_assoc($fetchDeletedQuery);
+
+    $employer_id = $row['employer_id'];
+    $employer_name = $row['employer_name'];
+    $employer_position = $row['employer_position'];
+    $company_name = $row['company_name'];
+    $company_address = $row['company_address'];
+    $company_ceo = $row['company_ceo'];
+    $company_size = $row['company_size'];
+    $company_revenue = $row['company_revenue'];
+    $industry = $row['industry'];
+    $company_description = $row['company_description'];
+    $contact_number = $row['contact_number'];
+    $company_email = $row['company_email'];
+    $company_logo_name = $row['company_logo_name'];
+    $permit_new_name = $row['permit_new_name'];
+    $permit_original_name = $row['permit_original_name'];
+    $email = $row['email'];
+    $password = $row['password'];
+    $otp_code = $row['otp_code'];
+    $is_verified = $row['is_verified'];
+    $date_created = $row['date_created'];
+
+
+
+    mysqli_query($conn, "INSERT INTO employer_recycle (employer_id, employer_name, employer_position, company_name, company_address, company_ceo, company_size, company_revenue, industry, company_description, contact_number, company_email, company_logo_name, permit_new_name, permit_original_name, email, password, otp_code, is_verified, date_created)
+                        VALUES ('$employer_id', '$employer_name', '$employer_position', '$company_name', '$company_address', ' $company_ceo', '$company_size', '$company_revenue', '$industry', '$company_description','$contact_number', '$company_email', '$company_logo_name', '$permit_new_name', '$permit_original_name', '$email', '$password', '$otp_code', '$is_verified', '$date_created')");
+    
     // Create query to delete the employer
     mysqli_query($conn, "DELETE FROM employer WHERE employer_id = '$employerId'");
+   
     // Return nothing
 }
 

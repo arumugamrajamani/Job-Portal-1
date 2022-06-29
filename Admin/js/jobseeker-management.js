@@ -136,7 +136,7 @@ $(document).ready(function () {
             success: function (data) {
                 $('#modal-delete').modal('hide');
                 toastr.success('', 'Successfully Deleted!');
-                load_data(GetSearchValue(), getCurrentPage());
+                load_data(GetSearchValue());
             }
         })
     });

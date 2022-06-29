@@ -214,3 +214,5 @@ if (isset($_POST['restoreJobseeker'])) {
 
     mysqli_query($conn, "DELETE FROM jobseeker_recyclebin WHERE jobseeker_id = '$jobseekerId'");
 }
+
+?>

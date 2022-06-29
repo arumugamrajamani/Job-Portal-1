@@ -64,7 +64,7 @@ $(document).ready(function () {
             success: function (data) {
                 $('#modal-delete').modal('hide');
                 toastr.success('', 'Successfully Deleted!');
-                load_data(GetSearchValue(), getCurrentPage());
+                load_data(GetSearchValue());
             }
         })
     });
@@ -109,9 +109,14 @@ $(document).ready(function () {
                 jobseekerId: jobseekerId
             },
             success: function (data) {
+<<<<<<< HEAD
                 $('#modal-delete').modal('hide');
                 
                 load_data(GetSearchValue(), getCurrentPage());
+=======
+                $('#exampleModal').modal('hide');
+                load_data(GetSearchValue());
+>>>>>>> d6747c80c800aca4d968ea951a7b4f432bda435d
             }
         })
     });
@@ -132,7 +137,7 @@ $(document).ready(function () {
             success: function (data) {
                 $('#modal-restore').modal('restore');
                 toastr.success('', 'Successfully Restored');
-                load_data(GetSearchValue(), getCurrentPage());
+                load_data(GetSearchValue());
             }
         })
 

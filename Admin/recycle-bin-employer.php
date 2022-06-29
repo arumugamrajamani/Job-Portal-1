@@ -19,7 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="../css/preloader.css">
     <link rel="stylesheet" href="css/recycle-bin-employer.css">
-    <title>Recycle Bin Employer</title>
+    <title>Recycle Bin | Employer</title>
 </head>
 
 <body>

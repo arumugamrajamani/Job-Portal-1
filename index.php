@@ -26,7 +26,7 @@
         <div class="container-fluid">
             <nav id="navbar-example2" class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow ">
                 <a href="#" class="navbar-brand ms-3">
-                    <img src="image/flogo.png" alt="Job Portal Logo" width="120" height="95"></a>
+                    <img src="image/flogo.png" id="logo" alt="Job Portal Logo" width="120" height="95"></a>
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav ms-auto text-center fw-bold">
                         <nav class="navbar navbar-light">
@@ -51,10 +51,10 @@
     <div data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <section class="masthead" id="home">
             <br><br><br>
-            <h1 class="mt-5 ms-4 pt-5 text-center tag1">Employment powered by Technology. </h1>
+            <h1 class="mt-5 ms-4 pt-5 text-center tag1" id="tagline"></h1>
             <div class="container d-flex">
                 <div>
-                    <p class="mt-0 tag2 fw-bold" style="text-align: justify;text-justify: inter-word;font-size: 29px;">Are you sick of standing in endless lines? Today, technology gives you an advantage in the job market by allowing you to apply with a single click and from the comfort of your home. Now is the time to apply! Use <strong class="tech"> Tech-Ployment </strong>and get your first online job!</p>
+                    <p class="mt-0 tag2 fw-bold" id="description" style="text-align: justify;text-justify: inter-word;font-size: 29px;"></p>
                     <br>
                     <div class="row height d-flex justify-content-center align-items-center">
                         <div class="col-md-12">
@@ -1435,10 +1435,19 @@
 
                 <div class="col-md-2 mx-auto mb-4 text-center">
                     <h6 class="text-uppercase ">CONTACT US</h6>
-                    <ul class="list-unstyled d-flex">
-                        <img class="my-0" src="image/gmail.png" alt="logo" href="#" style="width: 50px; height: 25px">
-                        concerns.techploymentph@gmail.com
-                    </ul>
+                    <div class="d-flex">
+                        <ul class="list-unstyled">
+                            <li class="d-flex">
+                                <img class="my-0" src="image/gmail.png" alt="logo" href="#" style="width: 50px; height: 25px">
+                                <span id="eemail" class="list-unstyled d-flex">
+                                </span>
+                            </li>
+                            <li class="d-flex">
+                                <span id="contactnumber"></span>
+                            </li>
+                        </ul>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -1451,7 +1460,7 @@
     </div>
     <script src="js/contactus.js"></script>
     <script src="js/faqsearch.js"></script>
-
+    <script src="js/system-info.js"></script>
     <script src="Admin/js/aboutus-settings.js"></script>
 </body>
 

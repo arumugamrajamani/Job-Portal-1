@@ -1,63 +1,77 @@
-body{
-    background: #FDF6EC;
-    font-family: sans-serif;
-    background-size: cover;
-    background-repeat: no-repeat;
-   
-}.masthead{
-    background-size: cover;
-    width: 100%;
-    height: auto;
-    min-height: 120vh;
-    
-}.search-box{
-   
-    width: 500px;
-    border-style:outset;
-}.btn-outline{
-    background-color: #00C2D6;
-    
-}.navbar-light{
-    background-color: #FFFFFF;
-    
-}.navbar-expand-lg{
-    width:100%;
-   
-    
-}.btn-outline-secondary{
-    background-color: #00C2D6;
-    color: white;
-    border: #00C2D6;
-    border-style:outset;  
+body {
+  background: #fdf6ec;
+  font-family: sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.navbar-nav{
-    position:relative;
-    left:-100px;
-
-}.container{
-    margin-top: 50px;
-    min-height: 120vh;
-    background-color: white;
-}.page-footer{
-    background-color: #FFFFFF;
-
+.masthead {
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  min-height: 120vh;
 }
-p{
-	margin-left: 40px;
-	margin-right: 50px;
-    font-family: 'Inter';
-    font-weight: 100px;
-    font-size: 18px;
-    line-height: 21.78px;
-	text-align: justify;
+.search-box {
+  width: 500px;
+  border-style: outset;
 }
-Strong{
-    top: 30px;
-	margin-left:40px;
-    font-family: 'Inter';
-    font-weight: 700px;
-    font-size: 18px;
-    line-height: 21.78px;
-    text-align: justify;
+.btn-outline {
+  background-color: #00c2d6;
 }
-
+.navbar-light {
+  background-color: #ffffff;
+}
+.navbar-expand-lg {
+  width: 100%;
+}
+.btn-outline-secondary {
+  background-color: #00c2d6;
+  color: white;
+  border: #00c2d6;
+  border-style: outset;
+}
+.navbar-nav {
+  position: relative;
+  left: -100px;
+}
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 755;
+}
+.container {
+  margin-top: 50px;
+  min-height: 120vh;
+  background-color: white;
+}
+.page-footer {
+  background-color: #00c2d6;
+}
+p {
+  margin-left: 40px;
+  margin-right: 50px;
+  font-family: "Inter";
+  font-weight: 100px;
+  font-size: 18px;
+  line-height: 21.78px;
+  text-align: justify;
+}
+Strong {
+  top: 30px;
+  margin-left: 40px;
+  font-family: "Inter";
+  font-weight: 700px;
+  font-size: 18px;
+  line-height: 21.78px;
+  text-align: justify;
+}
+h3 {
+  font-size: 30px;
+  margin-left: 10px;
+}
+.privacy {
+  margin-bottom: 20px;
+  color: #00c2d6;
+}
+.img-gmail {
+  width: 50px;
+  height: 25px;
+}

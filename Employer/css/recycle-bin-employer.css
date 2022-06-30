@@ -1,0 +1,207 @@
+body {
+  background: #00c2d6;
+  font-family: sans-serif;
+}
+.search-box {
+  width: 500px;
+  border-style: outset;
+}
+.btn-outline {
+  background-color: #00c2d6;
+}
+.navbar-light {
+  background-color: #ffffff;
+}
+.navbar-expand-lg {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+}
+.btn-outline-secondary {
+  background-color: #00c2d6;
+  color: white;
+  border: #00c2d6;
+  border-style: outset;
+}
+.navbar-nav {
+  position: relative;
+  left: -15px;
+}
+.d-flex {
+  position: relative;
+  left: 20px;
+}
+.nav-link {
+  border-radius: 10px;
+  width: 150px;
+}
+.message {
+  text-align: center;
+  background-color: #00c2d6;
+}
+.account {
+  text-align: center;
+  text-indent: -15px;
+  width: 250px;
+}
+.about {
+  text-indent: 20px;
+}
+.account-drop {
+  text-align: center;
+  background-color: #372732;
+  width: 250px;
+}
+.nav-item .dropdown-item:hover {
+  background-color: #8b8383;
+}
+.search {
+  background-color: #00c2d6;
+  font-weight: 500;
+  width: 50px;
+  border-radius: 0%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.search:hover {
+  color: #554350 !important;
+}
+.image {
+  position: relative;
+  left: -10px;
+}
+.icon {
+  width: 350px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+.menudrop {
+  background-color: #8b8383;
+}
+.container input {
+  background: #ececec;
+}
+.button1 {
+  outline: none;
+  border: none;
+  background: #00c2d6;
+  border-radius: 20px;
+  cursor: pointer;
+  color: black;
+}
+.btn1 {
+  width: 220px;
+  height: 50px;
+  background-color: #00c2d6;
+  line-height: 19px;
+  border: 0;
+  border-radius: 13px;
+}
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.container-md {
+  border-radius: 15px;
+  margin-right: 180px;
+  width: 1250px;
+  height: 800px;
+}
+.con1 {
+  width: 315px;
+  height: 800px;
+  margin-left: 75px;
+  border-radius: 15px;
+}
+.bi-caret-right-fill {
+  position: absolute;
+  left: 88px;
+}
+.btn-trash {
+  background-color: #00c2d6;
+  border-radius: 40px;
+  border: 0;
+  height: 70px;
+  width: 70px;
+  margin-left: 1050px;
+  margin-top: 50px;
+}
+.btn-plus {
+  background-color: #00c2d6;
+  border-radius: 40px;
+  border: 0;
+  height: 70px;
+  width: 70px;
+  margin-left: 10px;
+  margin-top: 50px;
+}
+.form-check-input {
+  background-color: #00c2d6;
+  width: 30px;
+  height: 30px;
+}
+.form-check-input:checked {
+  background-color: #00c2d6 !important;
+  color: black !important;
+  border: 0;
+  width: 30px;
+  height: 30px;
+}
+.form-check-input .checkmark:after {
+  color: black !important;
+}
+.sec1 {
+  background-color: #ececec;
+  margin-left: 18px;
+  margin-top: 20px;
+  width: 1150px;
+  height: 100px;
+}
+.sec0 {
+  background: rgba(0, 194, 214, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 20px;
+  width: 1250px;
+  height: 60px;
+}
+.p1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.btn-restore {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  background-color: #00c2d6;
+  border: 0;
+  border-radius: 15px;
+  margin-left: 910px;
+  width: 100px;
+  height: 50px;
+}
+.btn-delete {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  background-color: #00c2d6;
+  border: 0;
+  border-radius: 15px;
+  width: 150px;
+  height: 50px;
+}
+.form-control{
+  border-radius: 0%; 
+  border-top-left-radius: 10px; 
+  border-bottom-left-radius: 10px;
+}
+.form1{
+  margin-left: 790px;
+}
+.scroll{
+  overflow-y:scroll; 
+  height:500px;
+  overflow-x: hidden;
+}

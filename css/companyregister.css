@@ -1,160 +1,146 @@
 .masthead {
-    background-size: cover;
-    min-height: 100vh;
-    background-color: #00c2d6;
+  background-size: cover;
+  min-height: 100vh;
+  background-color: #00c2d6;
 }
-
 .navbar-light {
-    background-color: #ffffff;
-    margin: 0%;
+  background-color: #ffffff;
+  margin: 0%;
 }
-
 .navbar-expand-lg {
-    font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    height: 100px;
-    width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  height: 100px;
+  width: 100%;
 }
-
 .dropdown-item {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 550;
-    font-size: 20px;
-    width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 550;
+  font-size: 20px;
+  width: 100%;
 }
-
 .dropdown:hover .dropdown-menu {
-    display: block;
+  display: block;
 }
-
 .dropdown-menu {
-    width: 80px;
+  width: 80px;
 }
-
 .dropdown-menu:hover {
-    display: block;
+  display: block;
 }
-
 .navbar .nav-link:hover {
-    background-color: #00c2d6;
-    border-radius: 15px;
+  background-color: #00c2d6;
+  border-radius: 15px;
 }
-
 .dropdown-menu .dropdown-item:hover {
-    background-color: #00c2d6;
-    border-radius: 10px;
+  background-color: #00c2d6;
+  border-radius: 10px;
 }
-
 .nav-link {
-    color: black !important;
+  color: black !important;
 }
-
 .nav-link.active {
-    color: black !important;
-    background-color: #00c2d6;
-    border-radius: 10px;
+  color: black !important;
+  background-color: #00c2d6;
+  border-radius: 10px;
 }
-
 .dropdown:hover {
-    background-color: #00c2d6;
-    border-radius: 10px;
+  background-color: #00c2d6;
+  border-radius: 10px;
 }
-
 .para {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
-
 .para2 {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
-
 .position {
-    margin-left: 400px;
+  margin-left: 400px;
 }
-
 .page-footer {
-    background-color: #00c2d6;
+  background-color: #00c2d6;
 }
-
 h1 {
-    position: absolute;
-    width: 954px;
-    height: 74px;
-    left: -0px;
-    top: -73px;
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-    font-weight: 700px;
-    font-size: 25px;
-    line-height: 70px;
-    color: #ffffff;
-    background: #00c2d6;
+  position: absolute;
+  width: 954px;
+  height: 74px;
+  left: -0px;
+  top: -73px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700px;
+  font-size: 30px;
+  line-height: 70px;
+  color: #ffffff;
+  background: #00c2d6;
+  border-radius: 20px 20px 0 0;
 }
-
 h2 {
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 30px;
-    text-align: center;
-    color: #372732;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #372732;
 }
-
 .container {
-    position: relative;
-    width: 954px;
-    height: 1500px;
-    left: 5px;
-    top: 110px;
-    background: #ffffff;
+  position: relative;
+  width: 954px;
+  height: 1500px;
+  border-radius: 0 0 20px 20px;
+  left: 5px;
+  top: 110px;
+  background: #ffffff;
 }
-
 .container input {
-    width: 586px;
-    height: 39px;
-    left: 477px;
-    top: 686px;
+  width: 586px;
+  height: 39px;
+  left: 477px;
+  top: 686px;
 }
-
+.con1 {
+  width: 1060px;
+  height: 1650px;
+  border-radius: 20px;
+  background-color: #fdf6ec;
+}
 #exampleFormControlTextarea1 {
-    width: 586px;
-    height: 174px;
-    left: 477px;
-    top: 686px;
+  width: 586px;
+  height: 174px;
+  left: 477px;
+  top: 686px;
 }
-
 #SAVE-NOW {
-    position: relative;
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 20px;
-    width: 350px;
-    height: 60px;
-    border-radius: 10px;
-    line-height: 30px;
-    border: 0;
-    background-color: #00c2d6;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  width: 350px;
+  height: 60px;
+  border-radius: 10px;
+  line-height: 30px;
+  border: 0;
+  color: black;
+  background-color: #00c2d6;
 }
-
+#SAVE-NOW:hover{
+  background-color: #50677B;
+  color: white;
+}
 hr {
-    border: 1px solid black;
+  border: 1px solid black;
 }
-
 input[type="file"]::file-selector-button {
-    background-color: #00c2d6;
-    color: black;
+  background-color: #00c2d6;
+  color: black;
 }
-
+.item1 {
+  background-color: #00c2d6;
+}
 .form-control {
-    background-color: #ececec;
-    border-radius: 10px;
-    margin-bottom: 7px;
-}
-
-/* Fixed the problem on popover overlapping the header */
-.popover {
-    position: fixed;
-    z-index: 1;
+  background-color: #ececec;
+  border: 0;
+  border-radius: 10px;
 }

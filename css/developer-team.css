@@ -1,0 +1,447 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-size: border-box;
+  font-family: sans-serif;
+}
+body {
+  background: #182531;
+}
+.btn-outline {
+  background-color: #00c2d6;
+}
+.navbar-light {
+  background: #182531;
+  margin: 0%;
+}
+.navbar-expand-lg {
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  height: 100px;
+  width: 100%;
+}
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 755;
+}
+.dropdown-item {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 550;
+  font-size: 20px;
+  width: 100%;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  width: 80px;
+}
+.dropdown-menu:hover {
+  display: block;
+}
+.navbar .nav-link:hover {
+  background-color: #00c2d6;
+  border-radius: 10px;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: #00c2d6;
+  border-radius: 10px;
+}
+.nav-link {
+  color: #00D7E2!important;
+}
+.nav-link.active {
+  color: black !important;
+  background-color: #00c2d6;
+  border-radius: 10px;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+}
+.dropdown:hover {
+  background-color: #00c2d6;
+  border-radius: 10px;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+}
+.btn-outline-secondary {
+  background-color: #00c2d6;
+  color: white;
+  border: #00c2d6;
+  border-style: outset;
+}
+.dropdown-menu a:hover:not(.active) {
+  background-color: #00c2d6;
+  color: black;
+}
+.btn-outline-secondary {
+  background-color: #00c2d6;
+  color: white;
+  border: #00c2d6;
+  border-style: outset;
+}
+.dropdown-menu a:hover:not(.active) {
+  background-color: #00c2d6;
+  color: black;
+}
+h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  height: 105px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 50px;
+  text-align: center;
+  background: #334553;
+  border: 5px solid #00D7E2;
+  border-radius: 15px;
+  color: #00D7E2;
+}
+.container-responsive {
+  background: #1B2A35;
+  width: 80%;
+  min-height: 150vh;
+  border-radius: 15px;
+  margin-left: 200px;
+  border: 0%;
+}
+.design {
+  display: block;
+  width: 100%;
+  margin-left: 400px;
+  max-width: 50%;
+  margin-top: 40px;
+}
+button {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  background: #00c2d6;
+  border-radius: 15px;
+  margin-left: 240px;
+  width: 180px;
+  height: 50px;
+  border: 0;
+}
+#card1 {
+  background: #1B2A35;
+  margin-top: 70px;
+  padding-top: 30px;
+  margin-left: 620px;
+  border-color: #00D7E2;
+}
+h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+  color: #00D7E2;
+}
+.grid {
+  display: grid;
+  padding: 16px;
+  grid-gap: 10px;
+  margin-top: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: -50px;
+}
+.card {
+  background: #1B2A35;
+  width: 18rem;
+  padding-top: 30px;
+  margin-left: 70px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 5px solid #00D7E2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+h3 {
+  font-size: 30px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  color: #00c2d6;
+}
+.card-body{
+  background: #00c2d6;
+  height: 100%;
+  width: 90%;
+  margin-left: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+h5 {
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+p {
+  text-align: center;
+}
+.image {
+  width: 40%;
+  margin-left: 85px;
+  border-radius: 50%;
+  border: 5px solid #00c2d6;
+  margin-bottom: 20px;
+}
+.page-footer {
+  background-color: #00c2d6;
+}
+.contact-me {
+  width: 50px;
+  height: 25px;
+}
+@media screen and (max-width:1618px){
+  .design{
+    margin-left: 350px !important;
+  }
+  button{
+    width: 15%;
+    height: 50px;
+    margin-left: 175px;
+    margin-top: 5px;
+    font-size: 15px;
+  }
+  #card1{
+    width: 15rem;
+    margin-left: 505px;
+  }
+  .card{
+    width: 15rem;
+    margin-left: 65px;
+  }
+  .image{
+    margin-left: 75px !important;
+  }
+  .contact-me{
+    margin-left: -40px;
+  }
+}
+@media screen and (max-width:1520px){
+  .design{
+    margin-left: 320px !important;
+  }
+  button{
+    width: 15%;
+    height: 50px;
+    margin-left: 165px;
+    margin-top: 5px;
+    font-size: 15px;
+  }
+  #card1{
+    width: 15rem;
+    margin-left: 490px;
+  }
+  .card{
+    width: 15rem;
+    margin-left: 110px;
+  }
+.grid{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+}
+@media screen and (max-width:1280px){
+  .container-responsive{
+    margin-left: 125px;
+  }
+  .design{
+    margin-left: 280px !important;
+  }
+  button{
+    width: 12%;
+    height: 45px;
+    margin-left: 165px;
+    margin-top: 5px;
+    font-size: 15px;
+  }
+  .card-body{
+    margin-left: 12px;
+  }
+  #card1{
+    width: 15rem;
+    margin-left: 405px;
+  }
+  .card{
+    width: 15rem;
+    margin-left: 80px;
+  }
+  .contact-me{
+    margin-left: -75px;
+  }
+  ul img{
+    margin: 0%;
+    padding: 0%;;
+  }
+}
+@media screen and (max-width:1182px){
+  .container-responsive{
+    margin-left: 140px;
+  }
+  .design{
+    margin-left: 260px !important;
+  }
+  button{
+    width: 12%;
+    height: 45px;
+    margin-left: 150px;
+    margin-top: 5px;
+    font-size: 15px;
+  }
+  #card1{
+    width: 15rem;
+    margin-left: 357px;
+  }
+  .card{
+    width: 15rem;
+    margin-left: 62px;
+  }
+  .contact-me{
+    margin-left: -100px;
+  }
+}
+@media screen and (max-width:1115px){
+  .container-responsive{
+    margin-left: 130px;
+  }
+  .design{
+    margin-left: 240px !important;
+  }
+  button{
+    width: 12%;
+    height: 45px;
+    margin-left: 138px;
+    margin-top: 5px;
+    font-size: 15px;
+  }
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
+  #card1{
+    width: 15rem;
+    margin-left: 325px;
+  }
+  .card{
+    width: 15rem;
+    margin-left: 130px;
+  }
+  .contact-us{
+    margin-left: -80px;
+  }
+  .contact-me{
+    margin-left: -110px;
+  }
+}
+@media screen and (max-width:900px){
+  .container-responsive{
+    margin-left: 110px;
+  }
+  .design{
+    margin-left: 190px !important;
+  }
+  button{
+    width: 13%;
+    height: 40px;
+    margin-left: 110px;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
+  #card1{
+    width: 15rem;
+    margin-left: 245px;
+  }
+  .card{
+    width: 15rem;
+    margin-left: 87px;
+  }
+  .contact-us{
+    margin-top: 120px;
+    margin-left: -90px;
+  }
+  .contact-me{
+    margin-left: -160px;
+  }
+}
+@media screen and (max-width:768px){
+  .container-responsive{
+    margin-left: 80px;
+  }
+  .design{
+    margin-left: 155px !important;
+  }
+  button{
+    width: 13%;
+    height: 40px;
+    margin-left: 90px;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .grid{
+    grid-template-columns: 1fr;
+  }
+  #card1{
+    width: 15rem;
+    margin-left: 187px;
+  }
+  .card{
+    width: 15rem;
+    margin-left: 220px;
+  }
+  .contact-us{
+    margin-top: 120px;
+    margin-left: -90px;
+  }
+  .contact-me{
+    margin-left: -180px;
+  }
+}
+@media screen and (max-width:375px){
+  h1{
+    font-size: 20px;
+  }
+  .container-responsive{
+    margin-left: 40px;
+  }
+  .design{
+    margin-left: 80px !important;
+  }
+  button{
+    width: 15%;
+    height: 30px;
+    margin-left: 40px;
+    margin-top: 5px;
+    font-size: 7px;
+    border-radius: 10px;
+  }
+  .image{
+    margin-left: 64px !important;
+  }
+  .grid{
+    grid-template-columns: 1fr;
+  }
+  #card1{
+    width: 13rem;
+    margin-left: 45px;
+  }
+  .card{
+    width: 13rem;
+    margin-left: 80px;
+  }
+  .contact-us{
+    margin-top: -20px;
+    margin-left: -200px;
+  }
+  .contact-me{
+    margin-left: -25px;
+  }
+}
+

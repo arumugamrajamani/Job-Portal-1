@@ -1,123 +1,263 @@
 .masthead {
-    background-size: cover;
-    min-height: 110vh;
-    background-color: #00C2D6;
+  background-size: cover;
+  min-height: 110vh;
+  width: 100%;
+  background-color: #00c2d6;
 }
 .btn-outline {
-    background-color: #00C2D6;
-    
+  background-color: #00c2d6;
 }
 .navbar-light {
-    background-color: #FFFFFF;
-    margin:0%;
+  background-color: #ffffff;
 }
 .navbar-expand-lg {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    height:100px;
-    width:100%;    
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  height: 100px;
+  width: 100%;
 }
 .dropdown-item {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 550;
-    font-size: 20px;
-    width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 550;
+  font-size: 20px;
+  width: 100%;
 }
 .dropdown:hover .dropdown-menu {
-    display: block;
+  display: block;
 }
 .dropdown-menu {
-    width: 80px;  
-} 
+  width: 80px;
+}
 .dropdown-menu:hover {
-    display: block;
-} 
+  display: block;
+}
 .navbar .nav-link:hover {
-    background-color: #00C2D6;
-    border-radius: 15px;
-} 
+  background-color: #00c2d6;
+  border-radius: 15px;
+}
 .dropdown-menu .dropdown-item:hover {
-    background-color: #00C2D6;
-    border-radius: 10px;
-} 
+  background-color: #00c2d6;
+  border-radius: 10px;
+}
 .nav-link {
-    color: black !important;  
-} 
+  color: black !important;
+}
 .nav-link.active {
-    color: black !important;
-    background-color: #00C2D6;
-    border-radius: 10px;
+  color: black !important;
+  background-color: #00c2d6;
+  border-radius: 10px;
 }
 .dropdown:hover {
-    background-color: #00C2D6;
-    border-radius: 10px;
+  background-color: #00c2d6;
+  border-radius: 10px;
 }
 .para {
-    background-color: #EDBEA4;
+  background-color: #edbea4;
 }
 .para2 {
-    background-color: #EDBEA4;
-    
+  background-color: #edbea4;
 }
 .position {
-    margin-left: 400px;
+  margin-left: 400px;
 }
 h1 {
-    position: absolute;
-    width: 954px;
-    height: 74px;
-    left: -0px;
-    top: -73px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 700px;
-    font-size: 25px;
-    line-height: 70px;
-    color: #FFFFFF;
-    background: #00C2D6;
+  position: absolute;
+  width: 954px;
+  height: 50px;
+  left: -0px;
+  top: -45px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700px;
+  font-size: 15px;
+  line-height: 50px;
+  color: #ffffff;
+  background: #00d7e2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 20px 0 0;
 }
 h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 30px;
-    text-align: center;
-    color: #372732;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+  color: #372732;
+}
+.needs-validation {
+  margin-top: -50px;
 }
 .container {
-    position: relative;
-    margin-left: 0px;
-    width: 900px;
-    height: 520px;
-    left: 59px;
-    top: 70px;
-    background: #FFFFFF;
+  position: relative;
+  margin-left: 0px;
+  width: 550px;
+  height: 550px;
+  left: 59px;
+  top: 200px;
+  background: #ffffff;
+  border-radius: 0 0 20px 20px;
 }
 .container input {
-    width: 586px;
-    height: 39px;
-    left: 477px;
-    top: 686px;
+  width: 400px;
+  height: 39px;
+  left: 477px;
+  top: 686px;
 }
 #exampleFormControlTextarea1 {
-    width: 586px;
-    height: 174px;
-    left: 477px;
-    top: 686px;
+  width: 586px;
+  height: 174px;
+  left: 477px;
+  top: 686px;
 }
 #SAVE-NOW {
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 30px;
-    color: #FFFFFF;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: black;
+  background: #00d7e2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 0;
+  width: 160px;
+  height: 45px;
+  border-radius: 14px;
+}
+#SAVE-NOW:hover {
+  background-color: #50677b;
+  color: white;
+}
+.online-reg {
+  margin-left: 950px;
+  margin-top: -350px;
+  width: 700;
+  height: 600;
 }
 hr {
-    border:1px solid black;
-} 
-input {
-    margin-bottom: 11px; 
+  border: 1px solid black;
+}
+.error {
+  border: 1px solid red;
+}
+.div2 {
+  background-color: #00c2d6;
+}
+.form-control {
+  background: #ececec;
+}
+.item2 {
+  background-color: #00c2d6;
+}
+@media screen and (max-width: 1547px) {
+  .container {
+    margin-left: -80px;
+  }
+  .online {
+    margin-left: -230px;
+    margin-top: -100px;
+    width: 600px !important;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .online {
+    margin-left: -380px;
+    margin-top: -100px;
+    width: 600px !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .logo {
+    margin-top: -10px;
+  }
+  .navbar-expand-lg {
+    width: 769px;
+  }
+  .online {
+    width: 200px !important;
+    margin-top: 150px;
+    margin-left: -420px;
+  }
+  .masthead {
+    width: 88%;
+  }
+}
+@media screen and (max-width: 786px) {
+  .logo {
+    margin-top: -10px;
+  }
+  .navbar-expand-lg {
+    width: 769px;
+  }
+  .container {
+    margin-left: 5px;
+  }
+  .online {
+    width: 150px !important;
+    margin-top: -250px;
+    margin-left: -400px;
+  }
+  .masthead {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .logo {
+    margin-top: -10px;
+  }
+  .container {
+    margin-left: 5px;
+  }
+  .online {
+    width: 150px !important;
+    margin-top: -250px;
+    margin-left: -400px;
+  }
+  .masthead {
+    width: 780px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .logo {
+    margin-top: -10px;
+  }
+  .navbar-expand-lg {
+    width: 550px;
+  }
+  .container {
+    margin-left: -95px;
+    height: 700px;
+  }
+  .online {
+    width: 150px !important;
+    margin-top: -550px;
+    margin-left: -580px;
+  }
+  .masthead {
+    width: 575px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .masthead {
+    min-height: 140vh;
+    width: 370px;
+  }
+  .navbar-expand-lg {
+    width: 350px;
+  }
+  .container {
+    margin-left: -85px;
+    margin-top: -60px;
+    width: 325px;
+    height: 700px;
+  }
+  .online {
+    width: 110px !important;
+    margin-top: -550px;
+    margin-left: -750px;
+  }
+  .container input {
+    width: 250px;
+  }
 }

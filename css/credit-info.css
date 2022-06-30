@@ -1,0 +1,347 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-size: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: #fdf6ec;
+}
+.btn-outline {
+    background-color: #00c2d6;
+  }
+  .navbar-light {
+    background-color: #ffffff;
+    margin: 0%;
+  }
+  .navbar-expand-lg {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    height: 100px;
+    width: 100%;
+  }
+  h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 755;
+  }
+  .dropdown-item {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 550;
+    font-size: 20px;
+    width: 100%;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .dropdown-menu {
+    width: 80px;
+  }
+  .dropdown-menu:hover {
+    display: block;
+  }
+  .navbar .nav-link:hover {
+    background-color: #00c2d6;
+    border-radius: 10px;
+  }
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #00c2d6;
+    border-radius: 10px;
+  }
+  .nav-link {
+    color: black !important;
+  }
+  .nav-link.active {
+    color: black !important;
+    background-color: #00c2d6;
+    border-radius: 10px;
+    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+      7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  }
+  .dropdown:hover {
+    background-color: #00c2d6;
+    border-radius: 10px;
+    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+      7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  }
+  .btn-outline-secondary {
+    background-color: #00c2d6;
+    color: white;
+    border: #00c2d6;
+    border-style: outset;
+  }
+  .dropdown-menu a:hover:not(.active) {
+    background-color: #00c2d6;
+    color: black;
+  }
+  .btn-outline-secondary {
+    background-color: #00c2d6;
+    color: white;
+    border: #00c2d6;
+    border-style: outset;
+  }
+  .dropdown-menu a:hover:not(.active) {
+    background-color: #00c2d6;
+    color: black;
+  }
+  h1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    height: 70px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 65px;
+    text-align: center;
+    background: #00c2d6;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .container-responsive {
+    background: white;
+    width: 70%;
+    min-height: 150vh;
+    border-radius: 15px;
+    margin-left: 270px;
+  }
+  .design {
+    display: block;
+    width: 100%;
+    margin-left: 350px;
+    max-width: 50%;
+    margin-top: 40px;
+  }
+  button {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    background: #00c2d6;
+    border-radius: 15px;
+    margin-left: 180px;
+    width: 200px;
+    height: 60px;
+    border: 0;
+  }
+  .grid {
+    display: grid;
+    padding: 16px;
+    grid-gap:10px;
+    margin-top: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .col {
+    width: 23rem;
+    background-color: white;
+    margin-left: 30px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  h2 {
+    text-align: center;
+    background: #00c2d6;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  h5 {
+    padding: 30px;
+  }
+  p {
+    background: #ececec;
+    overflow: scroll;
+    padding: 30px;
+    margin: 10px;
+  }
+  .page-footer {
+    background-color: #00c2d6;
+  }
+  h3 {
+    font-size: 30px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: #00c2d6;
+  }
+  .flat4{
+    margin-left: 150px;
+    width: 20%;
+  }
+  #flat2{
+    width: 34%;
+  }
+  #flat3{
+    width: 23%;
+  }
+  #flat5{
+    width: 23%;
+  }
+  .contact-me{
+    width: 50px; 
+    height: 25px;
+    
+  }
+  #head{
+    line-height: 60px;
+  }
+@media screen and (max-width: 1669px){
+  .container-responsive{
+    margin-left: 240px;
+  }
+  .design{
+    margin-left: 300px !important;
+  }
+  button{
+    margin-left: 150px;
+    width: 180px;
+    height: 50px;
+  }
+  .col{
+    width: 19rem;
+  }
+  .flat4{
+    margin-left: 120px;
+    width: 20%;
+  }
+}
+@media screen and (max-width: 1500px){
+  .design{
+    margin-left: 270px !important;
+  }
+  button{
+    margin-left: 140px;
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+  }
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
+  .col{
+    margin-left: 100px !important;
+  }
+  .contact-me{
+    margin-left: -50px;
+  }
+}
+  @media screen and (max-width: 1400px){
+    .design{
+      margin-left: 250px !important;
+    }
+    button{
+      margin-left: 150px;
+      height: 35px;
+      width: 120px;
+      font-size: 15px;
+    }
+    .col{
+      margin-left: 80px !important;
+    }
+    .contact-me{
+      margin-left: -90px;
+    }
+  }
+  @media screen and (max-width: 1200px){
+    .design{
+      margin-left: 220px !important;
+    }
+    button{
+      margin-left: 115px;
+      height: 35px;
+      width: 120px;
+      font-size: 15px;
+    }
+    .col{
+      margin-left: 45px !important;
+    }
+    .contact-me{
+      margin-left: -90px;
+    }
+  }
+@media screen and (max-width: 1100px){
+  button{
+    margin-left: 85px;
+    height: 35px;
+    width: 120px;
+    font-size: 15px;
+  }
+  .col{
+    margin-left: 45px !important;
+    width: 15rem;
+  }
+  .flat4{
+    margin-left: 95px;
+  }
+  .contact-me{
+    margin-left: -125px;
+  }
+}
+@media screen and (max-width: 900px){
+  .container-responsive{
+    margin-left: 130px;
+  }
+  .design{
+    margin-left: 160px !important;
+  }
+  button{
+    margin-left: 62px;
+    height: 35px;
+    width: 120px;
+    font-size: 15px;
+  }
+  .grid{
+    grid-template-columns: 1fr;
+  }
+  .col{
+    margin-left: 100px !important;
+    width: 25rem;
+  }
+  .flat4{
+    margin-left: 160px;
+  }
+  .contact-me{
+    margin-left: -150px;
+  }
+  .contact-us{
+    margin-left: -40px;
+    margin-top: 130px;
+  }
+}
+@media screen and (max-width: 750px){
+  .container-responsive{
+    margin-left: 110px;
+    width: 500px;
+  }
+  .design{
+    margin-left: 130px !important;
+  } 
+  button{
+    margin-left: 32px;
+    height: 35px;
+    width: 120px;
+    font-size: 15px;
+  }
+  .col{
+    margin-left: 33px !important;
+    width: 25rem;
+  }
+  .contact-us{
+    margin-left: -550px !important;
+    margin-top: -20px;
+  }
+  .contact-me{
+    margin-left: -20px;
+  }
+}
+@media screen and (max-width: 550px){
+  .container-responsive{
+    margin-left: 17px;
+  }
+  .contact-us{
+    margin-left: -350px !important;
+    margin-top: -20px;
+  }
+}

@@ -82,7 +82,7 @@ $(document).ready(function () {
         $('#view-pp').attr('src', src)
     });
 
-   //<-------------------------------Delete Functions------------------------------------------
+    //<-------------------------------Delete Functions------------------------------------------
 
     // Trigger this when user click delete button and pass the data-id value on selected button to yes button in delete modal
     $('#body-h').on('click', '.delete-Btn', function () {

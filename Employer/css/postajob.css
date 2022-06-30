@@ -1,0 +1,141 @@
+* body {
+  background: #00c2d6;
+  font-family: sans-serif;
+}
+.d-flex {
+  position: relative;
+  left: 20px;
+}
+.nav-link {
+  border-radius: 10px;
+  width: 150px;
+  font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 17px;
+}
+.message {
+  text-align: center;
+}
+.about {
+  background-color: #00C2D6;
+  text-align: center;
+}
+.account {
+  text-align: center;
+
+  width: 250px;
+}
+.account-drop {
+  background-color: #372732;
+  width: 250px;
+}
+.search {
+  background-color: #00c2d6;
+  font-weight: 500;
+  width: 50px;
+  border-radius: 0%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.search:hover {
+  color: #554350 !important;
+}
+.menudrop {
+  background-color: #8b8383;
+}
+.image {
+  position: relative;
+  left: -10px;
+}
+.icon {
+  width: 350px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+.logout {
+  background-color: #00c2d6;
+  position: relative;
+  left: 70px;
+  border-radius: 10px;
+  width: 100px;
+}
+.nav-link:hover {
+  color: #554350 !important;
+}
+.dropdown-item:hover {
+  background-color: #554350 !important;
+}
+#container {
+  background-color: #ffffff;
+  height: 100%;
+  width: 80%;
+  padding-bottom: 20px;
+  color: #372732;
+  border-radius: 20px;
+}
+#main-form {
+  background-color: #ffffff;
+  padding: 30px 0 30px 0;
+  border-radius: 20px;
+}
+h2 {
+  background: #00c2d6;
+  margin-top: -30px;
+}
+#submit {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: center;
+  color: #372732;
+  background: #00c2d6;
+  border-radius: 20px;
+  color: black;
+}
+#submit:hover{
+  background-color: #50677B ;
+  color: white;
+}
+.i-search{
+  border-radius: 0%; 
+  border-top-left-radius: 10px; 
+  border-bottom-left-radius: 10px;
+}
+.con1{
+  width: 1100px;
+  border-radius: 20px;
+}
+input[type=text]{
+  border-radius: 22px; background: #ECECEC;
+}
+.form-select{
+  background: #ECECEC; 
+  border-radius: 22px;
+}
+.text1{
+  background: #ECECEC; 
+  border-radius: 10px;
+}
+.col-auto{
+  width: inherit;
+}
+.btn1{
+  border-radius: 10px; 
+  width: 250px; 
+  height: 45px;
+}
+.jobdes{
+  border-radius: 12px;
+}
+h2{
+  font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+label{
+  font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+/*/Colors  #EDBEA4 #FDF6EC #00C2D6 #FDF6EC #FFFFFF/*/

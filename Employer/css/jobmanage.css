@@ -1,0 +1,367 @@
+* body {
+  background: #ECECEC;
+  background-image: url("/image/sad.png");
+  font-family: sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.search-box {
+  width: 500px;
+  border-style: outset;
+}
+.btn-outline {
+  background-color: #00c2d6;
+}
+.navbar-light {
+  background: #00D7E2;
+}
+.navbar-expand-lg {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+}
+.btn-outline-secondary {
+  background-color: #00c2d6;
+  color: white;
+  border: #00c2d6;
+  border-style: outset;
+}
+.d-flex {
+  position: relative;
+  left: 20px;
+}
+.message {
+  text-align: center;
+}
+.account {
+  text-align: center;
+  text-indent: -15px;
+  width: 250px;
+}
+.icon1{
+  color: black !important;
+}
+.logout {
+  background-color: #00c2d6;
+  position: relative;
+  left: 45px;
+  border-radius: 10px;
+  width: 100px;
+}
+.about {
+  text-indent: 20px;
+}
+.account-drop {
+  text-align: center;
+  background: #ECECEC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 250px;
+}
+.nav-item .dropdown-item:hover {
+  background-color: #8b8383;
+}
+.menudrop {
+  background-color: #8b8383;
+}
+.search1 {
+  background: #00D7E2;
+  font-weight: 500;
+  width: 50px;
+  border-radius: 0%;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.search:hover {
+  color: #554350 !important;
+}
+.image {
+  position: relative;
+  left: -10px;
+}
+.icon {
+  width: 350px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+.input-group{
+  margin-left: 900px;
+  margin-top: -30px;
+}
+.btn3 {
+  background: #00D7E2;
+  width: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0%;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#form1{
+  width: 300px;
+}
+/* #container {
+  background-color: #fff;
+  height: 100%;
+  padding-bottom: 20px;
+  color: #372732;
+  border-radius: 20px;
+} */
+
+p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 0rem;
+  line-height: 22px;
+  padding-bottom: 10px;
+}
+.column {
+  position: relative;
+  width: 57px;
+  height: 40px;
+  left: 230px;
+  top: -135px;
+  background: #fdf6ec;
+}
+#mg-align {
+  border-collapse: separate;
+  border-spacing: 0 40px;
+}
+#title-sub {
+  background: rgba(0, 215, 226, 0.5);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.bg-color-header {
+    background: #00D7E2;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 20px 20px 0px 0px;
+}
+#body-h {
+  height: 40px;
+}
+h1 {
+  position: relative;
+  border: 0;
+  margin-left: 40px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  text-align: center;
+}
+#main-form{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+#button {
+  background: #00D7E2;
+  border: 2px solid #00D7E2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  top: -30px;
+  border: 0;
+  margin-right: 50px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 15px;
+} 
+.btn{
+  background: #00D7E2;
+border: 2px solid #00D7E2;
+border-radius: 10px;
+}
+.btn1 {
+  height: 50px;
+  width: 160px;
+}
+.form-control {
+  border-radius: 0%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.column {
+  width: 57px;
+  margin-top: 70px;
+}
+p {
+  margin-top: -100px;
+}
+table{
+  border-radius: 20px;
+}
+tbody {
+  background: #ECECEC;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 8rem;
+  border: none;
+  box-shadow: none;
+  line-height: 100px;
+}
+.btn {
+  border-radius: 10px;
+}
+.btn1 {
+  width: 70px;
+  height: 40px;
+}
+.modal-body {
+  margin-left: 170px;
+}
+.col-auto {
+  width: inherit;
+}
+.bt:hover{
+  background-color: rgba(132, 234, 246, 0.5);
+}
+.pagination{
+  margin-left: 500px;
+  margin-top: -20px;
+}
+.entries{
+  margin-left: -1000px;
+  margin-top: 40px;
+}
+.next{
+  background: #00D7E2;
+  border: 2px solid #00D7E2;
+  border-radius: 10px;
+}
+.num{
+  background: #ECECEC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+@media screen and (max-width:1280px) {
+  .input-group{
+    margin-left: 700px;
+  }
+  .pagination {
+    margin-left: 370px;
+  }
+}
+@media screen and (max-width:992px){
+  .icon {
+    width: 200px;
+  }
+.search1 {
+  width: 38px;
+  }
+  .input-group{
+    margin-left: 550px;
+  }
+  .pagination {
+    margin-left: 290px;
+  }
+  .entries{
+    margin-left: -700px;
+    }
+}
+@media screen and (max-width:768px) {
+  .input-group{
+    margin-left: 300px;
+  }
+  .pagination {
+    margin-left: 370px;
+  }
+  .search1 {
+    margin-right: 30px;
+  }
+.pagination {
+  margin-left: 180px;
+  }
+.entries{
+  margin-left: -480px;
+  }
+#button {
+  top: -10px;
+  margin-right: 10px;
+  }
+.ms-auto {
+  margin-left: 500px !important;
+  }
+.about {
+  margin-left: 70px;
+  }
+.message {
+  margin-left: 40px;
+  }
+.navbar-nav .dropdown-menu {
+  padding-left: 20px;
+  }
+  .logout {
+    width: 110px;
+  }
+}
+@media screen and (max-width:576px){
+  .input-group{
+    margin-top: 20px;
+    margin-left: 80px;
+  }
+  .column{
+    margin-top: 30px;
+  }
+  p{
+    margin-top: -50px;
+  }
+  .ms-auto {
+   margin-left: 350px !important;
+  }
+  .navbar-nav .dropdown-menu {
+    margin-left: -50px;
+  }
+  .pagination {
+    margin-left: 250px;
+    }
+  .entries{
+    margin-left: -300px;
+    }
+}
+@media screen and (max-width:375px) {
+  .icon {
+    width: 260px;
+}
+#form1 {
+  width: 250px;
+}
+.input-group{
+  margin-left: 25px;
+  padding-top: 30px;
+}
+.column{
+  margin-top: 40px;
+}
+p {
+  margin-top: -70px;
+}
+#button {
+  top: -10px;
+  margin-right: -150px;
+  font-size: 13px;
+  width: 110px;
+  height: 40px;
+}
+.pagination {
+  margin-left: 245px;
+  }
+.entries{
+  margin-left: -130px;
+  }
+  .ms-auto {
+    margin-left: 140px !important;
+}
+.account-drop {
+  margin-left: -40px;
+}
+}

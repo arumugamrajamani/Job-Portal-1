@@ -1,0 +1,349 @@
+* body {
+  background: #ececec;
+  background-image: url("/image/sad.png");
+  font-family: sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.search-box {
+  width: 500px;
+  border-style: outset;
+}
+.btn-outline {
+  background-color: #00c2d6;
+}
+.navbar-light {
+  background: #00d7e2;
+  border-bottom: 1px solid #00d7e2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.navbar-expand-lg {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+}
+.d-flex {
+  position: relative;
+  left: 20px;
+}
+.message {
+  text-align: center;
+}
+.account {
+  text-align: center;
+  text-indent: -15px;
+
+  width: 250px;
+}
+.about {
+  text-indent: 20px;
+}
+.account-drop {
+  text-align: center;
+  background: #ECECEC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 250px;
+}
+.nav-item .dropdown-item:hover {
+  background-color: #8b8383;
+}
+.search {
+  background: #00d7e2;
+  border-radius: 0px 9px 9px 0px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+  width: 50px;
+  border-radius: 0%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.search:hover {
+  color: #554350 !important;
+}
+.image {
+  position: relative;
+  left: -10px;
+}
+.bi-person-fill::before {
+  margin-left: 30px;
+}
+.icon {
+  width: 350px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.icon1 {
+  width: 350px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  margin-left: 1150px;
+  margin-top: -40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.search1 {
+  background: #00d7e2;
+  border-radius: 0px 9px 9px 0px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 50px;
+  border-radius: 0%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: 1500px;
+  margin-top: -82px;
+}
+#container {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 100%;
+  padding-bottom: 20px;
+  color: #372732;
+  border-radius: 20px;
+}
+#main-form {
+  background: #ffffff;
+  padding: 30px 0 30px 0;
+}
+.menudrop {
+  background-color: #8b8383;
+}
+#btn-info {
+  margin-top: 0px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #372732;
+  background: #00D7E2;
+  border: 2px solid #00D7E2;
+  border-radius: 10px;
+}
+#btn-info:hover {
+  background-color: #50677b;
+  color: white;
+  border: 0;
+}
+#title-sub {
+  background: rgba(0, 215, 226, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#body-h{
+  background: #ECECEC;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.form-control {
+  border-radius: 0%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+h2 {
+  padding: 15px;
+  background: #00d7e2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 20px 0px 0px;
+}
+.col-auto {
+  width: inherit;
+}
+tr {
+  height: 6rem;
+  border: none;
+  box-shadow: none;
+  line-height: 70px;
+}
+.modal-body {
+  margin-left: 170px;
+}
+.btn1 {
+  width: 70px;
+}
+.entries {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+.pagination {
+  margin-left: 690px;
+  margin-top: -20px;
+}
+.num{
+  background: #ECECEC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.next{
+  background: #00D7E2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+@media screen and (max-width: 1400px){
+  .icon1 {
+    width: 300px;
+    margin-left: 700px;
+  }
+  .search1 {
+    width: 40px;
+    margin-left: 1000px;
+    margin-top: -82px;
+  }
+  .pagination {
+    margin-left: 400px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .icon1 {
+    width: 300px;
+    margin-left: 590px;
+  }
+  .search1 {
+    width: 40px;
+    margin-left: 890px;
+    margin-top: -82px;
+  }
+  .pagination {
+    margin-left: 360px;
+  }
+}
+@media screen and (max-width: 1200px){
+  .icon1 {
+    width: 300px;
+    margin-left: 520px;
+    margin-top: 0px;
+  }
+  .search1 {
+    width: 40px;
+    margin-left: 820px;
+    margin-top: -82px;
+  }
+  .pagination {
+    margin-left: 320px;
+  }
+}
+@media screen and (max-width: 992px){
+  .icon {
+    width: 240px;
+  }
+  .icon1 {
+    margin-left: 320px;
+}
+.search1 {
+  margin-left: 620px;
+  margin-top: -79px;
+}
+.entries {
+  margin-left: 10px;
+}
+.pagination {
+  margin-left: 220px;
+}
+}
+@media screen and (max-width: 768px) {
+  .ms-auto {
+    margin-left: 550px !important;
+  }
+  .about {
+    margin-left: 40px;
+  }
+  .account-drop {
+    margin-left: -50px;
+  }
+  .form1 {
+    margin-left: -100px;
+  }
+  .logo {
+    margin-left: -150px;
+  }
+  .search {
+    width: 40px;
+    margin-right: 20px;
+  }
+  .icon1 {
+    width: 250px;
+    margin-left: 140px;
+    margin-top: -35px;
+  }
+  .search1 {
+    margin-left: 390px;
+    margin-top: -76px;
+  }
+  .entries {
+    margin-left: 0px;
+    font-size: 12px;
+  }
+  .pagination {
+    margin-left: 255px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 576px){
+  .ms-auto {
+    margin-left: 360px !important;
+}
+  .icon1 {
+    width: 300px;
+    margin-left: 5px;
+    margin-top: -5px;
+}
+.search1 {
+  margin-left: 305px;
+  margin-top: -73px;
+}
+.entries {
+  margin-left: 110px;
+  font-size: 12px;
+}
+.pagination {
+  margin-left: 70px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+}
+@media screen and (max-width: 375px) {
+  .ms-auto {
+    margin-left: 150px !important;
+  }
+  #container {
+    width: 300px;
+    margin-left: 40px;
+  }
+  .icon {
+    width: 320px;
+    margin-left: 75px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  .icon1 {
+    width: 220px;
+    margin-left: 5px;
+    margin-top: -2px;
+    height: 30px;
+  }
+  .search1 {
+    width: 30px;
+    margin-left: 225px;
+    margin-top: -54px;
+    height: 30px;
+  }
+  .bi-search::before {
+    margin-left: -5px;
+  }
+  .entries {
+    margin-left: 90px;
+    font-size: 10px;
+  }
+  .pagination {
+    margin-left: 255px;
+    font-size: 12px;
+  }
+  .pagination {
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 10px;
+  }
+}

@@ -9,7 +9,7 @@ function getProfilePicture()
 {
     $GetProfilePicQuery = mysqli_query($GLOBALS['conn'], "SELECT system_picture FROM system_settings WHERE id = '1'");
     $row = mysqli_fetch_assoc($GetProfilePicQuery);
-    $profilePic = $row['profile_pic'];
+    $profilePic = $row['system_picture'];
     return $profilePic;
 }
 

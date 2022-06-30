@@ -26,7 +26,7 @@
         <div class="container-fluid">
             <nav id="navbar-example2" class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow ">
                 <a href="#" class="navbar-brand ms-3">
-                    <img src="image/flogo.png" id="logo" alt="Job Portal Logo" width="120" height="95"></a>
+                    <img src="image/flogo.png" id="logo" alt="Job Portal Logo" width="120"></a>
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav ms-auto text-center fw-bold">
                         <nav class="navbar navbar-light">

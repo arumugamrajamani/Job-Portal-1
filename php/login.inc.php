@@ -114,7 +114,7 @@
                     // Add employer to response variable
                     $response = "employer";
                 } else {
-                    $response = "Incorrect email or password.";
+                    $response = "Incorrect email or password";
                 }
             } else {
                 // Function for checking in admin table
@@ -129,8 +129,6 @@
                     } else {
                         $response = "Incorrect email or password.";
                     }
-                } else {
-                    $response = "Incorrect email or password.";
                 }
             }
         }

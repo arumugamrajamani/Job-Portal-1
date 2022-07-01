@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="en">
-<head>
-    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--Font-->
@@ -41,7 +39,7 @@
                         <li><a class="dropdown-item text-light" href="jobmanage.php">JOB MANAGEMENT</a></li>
                         <li><a class="dropdown-item text-light" href="manage-applicant-resume.php">MANAGE RESUME</a></li>
                         <li><a class="dropdown-item text-light" href="manage-account-profile.php">MANAGE ACCOUNT PROFILE</a></li>
-                        <li><a class="dropdown-item logout text-light" href="#">LOGOUT</a></li>
+                        <li><a class="dropdown-item logout text-light" href="logout.php">LOGOUT</a></li>
                     </ul>
                 </ul>
             </div>

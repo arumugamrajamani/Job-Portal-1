@@ -50,7 +50,7 @@
               <li><a class="dropdown-item text-light" href="jobapplication.php">JOB APPLICATIONS</a></li>
               <li><a class="dropdown-item text-light" href="bookmark-job.php">BOOKMARKED JOBS</a></li>
               <li><a class="dropdown-item text-light" href="manage-account-1.php">ACCOUNT SETTINGS</a></li>
-              <li><a class="dropdown-item logout text-light" href="#">LOGOUT</a></li>
+              <li><a class="dropdown-item logout text-light" href="logout.php">LOGOUT</a></li>
             </ul>
         </ul>
       </div>

@@ -1,0 +1,682 @@
+body {
+    background: #00c2d6;
+}
+
+.search-box {
+    width: 500px;
+    border-style: outset;
+}
+
+.btn-outline {
+    background-color: #00c2d6;
+}
+
+.navbar-light {
+    background-color: #ffffff;
+}
+
+.navbar-expand-lg {
+    width: 100%;
+}
+
+.btn-outline-secondary {
+    background-color: #00c2d6;
+    color: white;
+    border: #00c2d6;
+    border-style: outset;
+}
+
+.navbar-nav {
+    position: relative;
+    left: -15px;
+}
+
+.d-flex {
+    position: relative;
+    left: 20px;
+}
+
+.nav-link {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 17px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.message {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    background-color: #00c2d6;
+}
+
+.account {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    text-align: center;
+    text-indent: -15px;
+    width: 250px;
+}
+
+.about {
+    text-indent: 20px;
+}
+
+.account-drop {
+    text-align: center;
+    background-color: #372732;
+    width: 250px;
+}
+
+.nav-item .dropdown-item:hover {
+    background-color: #8b8383;
+}
+
+.search {
+    background-color: #00c2d6;
+    font-weight: 500;
+    width: 50px;
+    border-radius: 0%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.search:hover {
+    color: #554350 !important;
+}
+
+.image {
+    position: relative;
+    left: -10px;
+}
+
+.icon {
+    width: 350px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+.menudrop {
+    background-color: #8b8383;
+}
+
+.container input {
+    background: #ececec;
+}
+
+.button1 {
+    outline: none;
+    border: none;
+    background: #00c2d6;
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+.btn1 {
+    width: 220px;
+    height: 50px;
+    background-color: #00c2d6;
+    line-height: 19px;
+    border: 0;
+    border-radius: 13px;
+}
+
+h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+h5 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.container-md {
+    border-radius: 15px;
+    width: 1250px;
+    height: 700px;
+}
+
+.con1 {
+    width: 315px;
+    height: 700px;
+    margin-right: 20px;
+    margin-left: 75px;
+    border-radius: 15px;
+}
+
+.bi-caret-right-fill {
+    position: absolute;
+    left: -20px;
+}
+
+.btn-trash {
+    background-color: #00c2d6;
+    border-radius: 40px;
+    border: 0;
+    height: 70px;
+    width: 70px;
+    margin-left: 1050px;
+    margin-top: 50px;
+}
+
+.btn-plus {
+    background-color: #00c2d6;
+    border-radius: 40px;
+    border: 0;
+    height: 70px;
+    width: 70px;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+.form-check-input {
+    background-color: #00c2d6;
+    width: 30px;
+    height: 30px;
+}
+
+.form-check-input:checked {
+    background-color: #00c2d6 !important;
+    color: black !important;
+    border: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.form-check-input .checkmark:after {
+    color: black !important;
+}
+
+.sec1 {
+    background-color: #ececec;
+    margin-left: 18px;
+    margin-top: 20px;
+    width: 1150px;
+    height: 100px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.form-control {
+    border-radius: 0%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.scroll {
+    overflow-y: scroll;
+    height: 500px;
+    overflow-x: hidden;
+}
+
+.bg-2 {
+    margin-left: 770px;
+}
+
+.form-check {
+    cursor: pointer;
+}
+.bi-person-fill::before {
+    content: "\f4da";
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 1600px) {
+
+    .sec1{
+        width: 800px;
+    }
+    .con1{
+        margin-left: 2px;
+    }
+    .con2{
+        width: 800px !important;
+    }
+    .forms{
+        margin-left: 450px !important;
+        width: 300px;
+    }
+    #theButton{
+        margin-left: 600px !important;
+    }
+    .mes{
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+
+    .sec1{
+        width: 800px;
+    }
+    .con1{
+        margin-left: 2px;
+    }
+    .con2{
+        width: 800px !important;
+    }
+    .forms{
+        margin-left: 450px !important;
+        width: 300px;
+    }
+    #theButton{
+        margin-left: 600px !important;
+    }
+    .mes{
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    .sec1{
+        width: 800px;
+    }
+    .con1{
+        margin-left: 2px;
+    }
+    .con2{
+        width: 800px !important;
+    }
+    .forms{
+        margin-left: 450px !important;
+        width: 300px;
+    }
+    #theButton{
+        margin-left: 600px !important;
+    }
+    .mes{
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .sec1{
+        width: 800px;
+    }
+    .con1{
+        margin-left: 2px;
+    }
+    .con2{
+        margin-left: 10px !important;
+        width: 550px !important;
+    }
+    .forms{
+        margin-left: 250px !important;
+        width: 250px;
+    }
+    #theButton{
+        margin-left: 300px !important;
+    }
+    .mes{
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .sec1{
+        width: 800px;
+    }
+    .con1{
+        margin-left: -50px !important;
+        width: 250px;
+
+    }
+    .btn1{
+        width: 180px !important;
+    }
+    h6{
+        font-size: 10px !important;
+    }
+    .con2{
+        width: 550px !important;
+        margin-left: 5px !important;
+    }
+    .forms{
+        margin-left: 180px !important;
+        width: 100px;
+    }
+    #theButton{
+        margin-left: 200px !important;
+        font-size: 10px;
+    }
+    #plus{
+        font-size: 10px;
+    }
+    .navbar-nav {
+        left: 700px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+
+    .sec1{
+        width: 800px;
+    }
+    .con1{
+        margin-left: -50px !important;
+        width: 250px;
+
+    }
+    .btn1{
+        width: 180px !important;
+    }
+    h6{
+        font-size: 10px !important;
+    }
+    .con2{
+        width: 580px !important;
+        margin-left: 5px !important;
+    }
+    .forms{
+        margin-left: 300px !important;
+        width: 100px;
+    }
+    #theButton{
+        margin-left: 320px !important;
+        font-size: 10px;
+    }
+    #plus{
+        font-size: 10px;
+    }
+    .navbar-nav {
+        left: 600px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .sec1{
+        width: 800px;
+    }
+    .con1{
+        margin-left: -50px !important;
+        width: 250px;
+
+    }
+    .btn1{
+        width: 180px !important;
+    }
+    h6{
+        font-size: 10px !important;
+    }
+    .con2{
+        width: 450px !important;
+        margin-left: 5px !important;
+    }
+    .forms{
+        margin-left: 180px !important;
+        width: 100px;
+    }
+    #theButton{
+        margin-left: 200px !important;
+        font-size: 10px;
+    }
+    #plus{
+        font-size: 10px;
+    }
+    .navbar-nav {
+        left: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .sec1{
+        width: 800px;
+    }
+    .con1{
+        margin-left: -50px !important;
+        width: 250px;
+
+    }
+    .btn1{
+        width: 180px !important;
+    }
+    h6{
+        font-size: 10px !important;
+    }
+    .con2{
+        width: 450px !important;
+        margin-left: 5px !important;
+    }
+    .forms{
+        margin-left: 180px !important;
+        width: 100px;
+    }
+    #theButton{
+        margin-left: 200px !important;
+        font-size: 10px;
+    }
+    #plus{
+        font-size: 10px;
+    }
+    #submits{
+        margin-left: 10px !important;
+    }
+    .navbar-nav {
+        left: 500px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .sec1{
+        width: 800px;
+    }
+    .con1{
+        margin-left: 50px !important;
+        width: 400px !important;
+        height: 350px;
+
+    }
+    .btn1{
+        width: 230px !important;
+    }
+    h6{
+        font-size: 10px !important;
+    }
+    .con2{
+        width: 630px !important;
+        margin-top: 370px !important;
+        margin-right: 30px!important;
+        margin-left: -500px !important;
+    }
+    .forms{
+        margin-left: 350px !important;
+        width: 80px;
+    }
+    #theButton{
+        margin-left: 350px !important;
+        font-size: 10px;
+    }
+    #plus{
+        font-size: 10px;
+    }
+    .icon{
+        width: 300px;
+    }
+    #submits{
+        margin-left: 40px !important;
+    }
+    .navbar-nav {
+        left: 370px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .sec1{
+        width: 800px;
+    }
+    .con1{
+        margin-left: 50px !important;
+        width: 350px !important;
+        height: 350px;
+
+    }
+    .btn1{
+        width: 200px !important;
+    }
+    h6{
+        font-size: 10px !important;
+    }
+    .con2{
+        width: 500px !important;
+        margin-top: 370px !important;
+        margin-right: 30px!important;
+        margin-left: -470px !important;
+    }
+    .forms{
+        margin-left: 200px !important;
+        width: 80px;
+    }
+    #theButton{
+        margin-left: 220px !important;
+        font-size: 10px;
+    }
+    #plus{
+        font-size: 10px;
+    }
+    .icon{
+        width: 200px;
+    }
+    #submits{
+        margin-left: 40px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .sec1{
+        width: 800px;
+    }
+    .con1{
+        margin-left: -50px !important;
+        width: 350px !important;
+        height: 350px;
+
+    }
+    .btn1{
+        width: 200px !important;
+    }
+    h6{
+        font-size: 10px !important;
+    }
+    .con2{
+        width: 350px !important;
+        margin-top: 370px !important;
+        margin-right: 30px!important;
+        margin-left: -300px !important;
+    }
+    .forms{
+        margin-left: 80px !important;
+        width: 80px;
+    }
+    #theButton{
+        margin-left: 150px !important;
+        font-size: 10px;
+    }
+    #plus{
+        font-size: 10px;
+    }
+    .icon{
+        width: 200px;
+    }
+    #submits{
+        margin-left: 10px !important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .sec1{
+        width: 800px;
+    }
+    .con1{
+        margin-left: -50px !important;
+        width: 350px !important;
+        height: 350px;
+
+    }
+    .btn1{
+        width: 200px !important;
+    }
+    h6{
+        font-size: 10px !important;
+    }
+    .con2{
+        width: 350px !important;
+        margin-top: 370px !important;
+        margin-right: 30px!important;
+        margin-left: -300px !important;
+    }
+    .forms{
+        margin-left: 80px !important;
+        width: 80px;
+    }
+    #theButton{
+        margin-left: 150px !important;
+        font-size: 10px;
+    }
+    #plus{
+        font-size: 10px;
+    }
+    .icon{
+        width: 200px;
+    }
+    .navbar-nav {
+        left: 100px;
+    }
+}
+
+
+@media screen and (max-width: 300px) {
+
+    .sec1{
+        width: 800px;
+    }
+    .con1{
+        margin-left: -50px !important;
+        width: 400px !important;
+        height: 350px;
+
+    }
+    .btn1{
+        width: 150px !important;
+    }
+    h6{
+        font-size: 10px !important;
+    }
+    .con2{
+        width: 350px !important;
+        margin-top: 370px !important;
+        margin-right: 30px!important;
+        margin-left: -300px !important;
+    }
+    .forms{
+        margin-left: 80px !important;
+        width: 80px;
+    }
+    #theButton{
+        margin-left: 150px !important;
+        font-size: 10px;
+    }
+    #plus{
+        font-size: 10px;
+    }
+    .icon{
+        width: 200px;
+    }
+}

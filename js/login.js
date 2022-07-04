@@ -13,15 +13,16 @@ $(document).ready(function(){
                 password: password,
                 login: true
             },
-            success: function(data){
+            success: function(data) {
                 // Check the value of data
                 if(data == "jobseeker"){
                     alert("Succesfully login as Jobseeker");
+                    window.location.href = 'Jobseeker/applicant-profile.php';
                 } else if(data == "employer") {
-                    alert("Succesfully login as Employer");
+                    window.location.href = 'Employer/company-profile.php';
                 } else if(data == "admin") {
                     window.location.href = 'Admin/dashboard.php';
-                } else {
+                }else{
                     toastr.error(data, "Login Failed!" , {
                         timeOut: 3000,
                         preventDuplicates: true

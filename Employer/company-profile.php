@@ -2,6 +2,7 @@
 <html lang="en">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/e5ed048aee.js" crossorigin="anonymous"></script>
     <!--Font-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +13,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/company-profile.css">
+    <!-- jQuery cdn link below -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Toast CDN for functionality of toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Company Profile</title>
 </head>
 <body>
+    <?php include_once '../include/preloader-display.php'; ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="container-fluid"> 
             <a class="navbar-brand me-1" href="#"></a>
@@ -49,16 +55,19 @@
     <div class="container bg-white my-4"> <br>
         <div class="banner mx-5">
             <div class="div1 text-end">
-                <i class="bi bi-pencil-square"></i>
+                <button id="edit-profile-btn" class="btn">
+                    <i class="fa fa-pen-to-square"></i>
+                </button>
             </div>
             <div class="d-flex">
-                <i class="bi bi-person-circle mx-5 fa-5x"></i>
-                <div class="block info text-center">
-                    <h4 class="fw-bold">Juan Dela Cruz</h4>
-                    <h5>HR at TechCompany</h5>
-                    <h5><i class="bi bi-geo-alt"></i>Manila, Philippines</h5>
+                <img class="company_logo mx-5 fa-5x" src="" id="company_logo_name"></img>
+                <div class="block info">
+                    <h4 class="fw-bold" id="employer_name"></h4>
+                    <h5 id="employer_position"></h5>
+                    <h5 id="company_address"></h5>
                 </div>
-            </div><br>
+            </div>
+            <br>
                 <div class="block position-relative div2">
                     <div class="position-absolute bottom-0 end-0 ">
                         <button class="my-5 mx-3 shadow btn1 fw-bold" type="button">Send Message</button>
@@ -71,17 +80,18 @@
         <div class="row">
             <div class="column">
                 <div class="mt-2 mx-5 text-center company1">
-                    <h4 class="pt-3">Company Name</h4>
+                    <h4 class="pt-3" id="company_name"></h4>
                 </div>
             </div>
             <div class="column">
-                <div class="mt-2 mx-5 text-center company2">
-                    <label class="pt-3 p-5 text-start">Contact#:09********* <br>Email Address:employee@gmail.com</label>
+                <div class="mt-2 p-2 mx-5 company2 row">
+                    <label class="pt-3 column" id="contact_number"></label>
+                    <label class="pt-3 column" id="email"></label>
                 </div>
             </div>
             <div class="column">
                 <div class=" mx-5 company3">
-                    <label class="pt-3 p-4">Company description</label>
+                    <label class="pt-3 p-4" id="company_description"></label>
                 </div>
             </div>
         </div>
@@ -103,6 +113,6 @@
             </div>
         </section><br>
     </div>
-
+    <script src="js/company-profile.js"></script>
 </body>
 </html>

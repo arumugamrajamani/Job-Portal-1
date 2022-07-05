@@ -81,19 +81,19 @@
   min-height: 30vh;
 }
 .company2 {
-  height: 90px;
+  height: 70px;
   background-color: #ececec;
   border-radius: 15px;
   background: rgba(0, 194, 214, 0.5);
 }
 .company1 {
   background-color: #ececec;
-  height: 60px;
+  min-height: 60px;
   border-radius: 15px;
 }
 .company3 {
   background-color: #ececec;
-  height: 160px;
+  min-height: 10px;
   border-radius: 23px;
 }
 hr {
@@ -145,7 +145,7 @@ hr {
   margin-top: 50px;
 }
 .div2 {
-  margin-top: -20px;
+  margin-top: -130px;
 }
 .form-control {
   border-radius: 0%;
@@ -243,4 +243,14 @@ hr {
   .column {
     width: 100%;
   }
+}
+.company_logo{
+  width: 11rem;
+  height: 11rem;
+  border-radius: 120px;
+  object-fit: cover;
+}
+
+.fa-pen-to-square{
+  font-size: 40px;
 }

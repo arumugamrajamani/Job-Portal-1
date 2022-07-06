@@ -30,7 +30,7 @@ if (isset($_POST['fetchData'])) {
     // Create query to get the employer information
     $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM employer WHERE employer_id = '$employerId'");
     $row = mysqli_fetch_assoc($fetchDetailsQuery);
-    // Get the employer information needed to edit modal
+    // Get the employer information needed
     $employerName = $row['employer_name'];
     $employerEmail = $row['email'];
     $employerNumber = $row['contact_number'];

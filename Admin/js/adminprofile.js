@@ -3,7 +3,7 @@ $(document).ready(function () {
     fetchData();
     function fetchData() {
         $.ajax({
-            url: 'php/admin-profile.inc.php',
+            url: 'Employer/company-profile.inc.php',
             type: 'POST',
             data: {
                 fetchData: true

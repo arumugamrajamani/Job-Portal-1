@@ -74,6 +74,9 @@ $(document).ready(function () {
             success: function (data) {
                 if (data.status == 'error') {
                     toastr.error('', data.message);
+                } else {
+                    toastr.success('', 'Successfully Changed!');
+                    fetchData();
                 }
             }
         })

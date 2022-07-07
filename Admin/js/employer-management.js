@@ -114,10 +114,10 @@ $(document).ready(function () {
                 $('#e-companysize').text(data.companySize);
                 $('#e-companyrevenue').text(data.companyRevenue)
                 $('#e-industry').text(data.industry);
-                $('#companynumber').text(data.contactNumber);
+                $('#e-companynumber').text(data.contactNumber);
                 $('#e-companyemail').text(data.companyEmail);
                 $('#e-companydescription').html(data.companyDescription)
-                $('#datecreated').text(data.dateCreated);
+                $('#e-datecreated').text(data.dateCreated);
             }
         })
     })

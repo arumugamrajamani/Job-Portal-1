@@ -422,3 +422,6 @@ hr {
 #mainDpDrop {
   border-radius: 120px;
 }
+.page-item {
+  cursor: pointer;
+}

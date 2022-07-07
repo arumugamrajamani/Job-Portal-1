@@ -106,7 +106,7 @@
                     <td>What is Tech-Ployment?</td>
                     <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae accusantium voluptatum delectus reprehenderit blanditiis ipsa corporis fuga recusandae. Totam, cumque!</td>
                     <td>
-                        <button type="submit" title="Edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button type="submit" title="Edit" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>
                         <button type="submit" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></button>
                     </td>
                 </tr>
@@ -114,7 +114,7 @@
                     <td>What does Tech-Ployment do?</td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, perspiciatis qui corporis neque nobis quidem necessitatibus quas nulla impedit voluptatum.</td>
                     <td>
-                        <button type="submit" title="Edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button type="submit" title="Edit" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>
                         <button type="submit" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></button>
                     </td>
                 </tr>
@@ -141,7 +141,7 @@
                     <td>What is Tech-Ployment?</td>
                     <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae accusantium voluptatum delectus reprehenderit blanditiis ipsa corporis fuga recusandae. Totam, cumque!</td>
                     <td>
-                        <button type="submit" title="Edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button type="submit" title="Edit" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>
                         <button type="submit" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></button>
                     </td>
                 </tr>
@@ -149,7 +149,7 @@
                     <td>What does Tech-Ployment do?</td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, perspiciatis qui corporis neque nobis quidem necessitatibus quas nulla impedit voluptatum.</td>
                     <td>
-                        <button type="submit" title="Edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button type="submit" title="Edit" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>
                         <button type="submit" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></button>
                     </td>
                 </tr>
@@ -176,7 +176,7 @@
                     <td>What is Tech-Ployment?</td>
                     <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae accusantium voluptatum delectus reprehenderit blanditiis ipsa corporis fuga recusandae. Totam, cumque!</td>
                     <td>
-                        <button type="submit" title="Edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button type="submit" title="Edit" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>
                         <button type="submit" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></button>
                     </td>
                 </tr>
@@ -184,7 +184,7 @@
                     <td>What does Tech-Ployment do?</td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, perspiciatis qui corporis neque nobis quidem necessitatibus quas nulla impedit voluptatum.</td>
                     <td>
-                        <button type="submit" title="Edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button type="submit" title="Edit" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>
                         <button type="submit" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></button>
                     </td>
                 </tr>
@@ -211,7 +211,7 @@
                     <td>What is Tech-Ployment?</td>
                     <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae accusantium voluptatum delectus reprehenderit blanditiis ipsa corporis fuga recusandae. Totam, cumque!</td>
                     <td>
-                        <button type="submit" title="Edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button type="submit" title="Edit" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>
                         <button type="submit" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></button>
                     </td>
                 </tr>
@@ -219,7 +219,7 @@
                     <td>What does Tech-Ployment do?</td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, perspiciatis qui corporis neque nobis quidem necessitatibus quas nulla impedit voluptatum.</td>
                     <td>
-                        <button type="submit" title="Edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button type="submit" title="Edit" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>
                         <button type="submit" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></button>
                     </td>
                 </tr>
@@ -247,10 +247,48 @@
                 <div class="modal-body edit-detail">
                     <div class="container">
                         <form class="container"><br>
-                            <h2 class="text-black text-center mt-2 fw-bold">Add a FAQ</h2>
+                            <h2 class="text-black text-center mt-2 fw-bold">ADD FAQ</h2>
                             <hr>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
-                                <label for="jobcategory" class="col-sm-3 ">Systems</label>
+                                <label for="jobcategory" class="col-sm-3 ">Question</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="jobcategory">
+                                </div>
+                            </div>
+                            <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                <label for="jobcategory" class="col-sm-3 ">Answer</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="jobcategory">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div><br>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success save">ADD</button>
+                        <button type="button" class="close btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade" id="modal-editdetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body edit-detail">
+                    <div class="container">
+                        <form class="container"><br>
+                            <h2 class="text-black text-center mt-2 fw-bold">EDIT DETAILS</h2>
+                            <hr>
+                            <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                <label for="Faq Setting" class="col-sm-3 ">Question</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="jobcategory">
+                                </div>
+                            </div>
+                            <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                <label for="Faq Setting" class="col-sm-3 ">Answer</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="jobcategory">
                                 </div>
@@ -258,7 +296,7 @@
                         </form>
                     </div><br>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-success save">ADD</button>
+                        <button type="button" class="btn btn-success save">Save Details</button>
                         <button type="button" class="close btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>

@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    //triggers the function whenever the form is submitted
     $("form.ajax-form" ).submit(function(event) {
         //prevents the page to load 
         event.preventDefault();
@@ -12,9 +11,19 @@ $(document).ready(function() {
             data[name] = value;
         });
         $.ajax({
-            url : url, type: type, data : data, success: function(response){
-                //logs what in the postajo.inc.php
-                console.log(response);
+            url : url, type: type, data : data, dataType:'json', success: function(response){
+               if (response.status == "success"){
+                 // Create sweet alert to display successfull message and return to company-profile page
+                swal({
+                    title: "Message alert",
+                    icon: "success",
+                    button: "Okay",
+                })
+                .then(function() {
+                    console.log(data);
+                   // window.location = "company-profile.php";
+                });
+                }
             }
         });
       });

@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/postajob.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Post a job</title>
 </head>
 <body>
@@ -52,8 +53,8 @@
     </nav>
         <br>
     <div class="container bg-white con1"><br>
+    <form id="main-form" class="ajax-form" action="php/postajob.inc.php" method="POST">
         <div class="container p-md-5 mt-4 shadow" id="container" >
-            <form id="main-form">
                 <div  class=" col-auto text-center">
                     <h2>POST YOUR JOB HERE</h2>
                 </div>
@@ -61,29 +62,29 @@
                     <div class="row-md-6 mt-4 text-center">
                         <div class="form-group text-uppercase fw-bold text-center">
                             <label for="first">Company</label>
-                            <input type="text" class="form-control" placeholder="Company Name" id="companyname">
+                            <input type="text" name="companyName" class="form-control" placeholder="Company Name" id="companyname">
                         </div>
                     </div>
                     <div class="col-md-6 mt-3">
                         <div class="form-group text-uppercase fw-bold text-center">
                             <label for="first">job title</label>
-                            <input type="text" class="form-control" placeholder="Who do you need ?" id="first">
+                            <input type="text" name="jobTitle" class="form-control" placeholder="Who do you need ?" id="first">
                         </div>
                     </div>
                     <!--  col-md-6   -->
                     <div class="col-md-6 text-center mt-3">
                         <label class=" text-uppercase fw-bold " for="Type">Type of employment</label>
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <select class="form-select" name="employment" id="floatingSelect" aria-label="Floating label select example">
                             <option class="form-floating" aria-posinset="Any" selected>Any</option>
-                            <option value="1">Full Time</option>
-                            <option value="2">Partime</option>
-                            <option value="3">Freelance</option>
+                            <option value="fullTime">Full Time</option>
+                            <option value="partTime">Partime</option>
+                            <option value="freelance">Freelance</option>
                         </select>
                     </div>
                     <div class="col-md-6 mt-3">
                         <div class="form-group text-uppercase fw-bold text-center">
                             <label for="first">JOB CATEGORY</label>
-                            <input type="text" class="form-control" placeholder="Job Category" id="jobcategory">
+                            <input type="text" name="jobCategory" class="form-control" placeholder="Job Category" id="jobcategory">
                         </div>
                     </div>
                     <!--  col-md-6   -->
@@ -93,7 +94,7 @@
                         <div class="form-group">
                             <div class="mb-3 text-center mt-5">
                                 <label for="exampleFormControlTextarea1" class="text-uppercase fw-bold jobdes">Job Description</label>
-                                <textarea class="form-control text-center text1" id="exampleFormControlTextarea1" rows="3" placeholder="Describe the job to be done"></textarea>
+                                <textarea class="form-control text-center text1" name="jobDescription" id="exampleFormControlTextarea1" rows="3" placeholder="Describe the job to be done"></textarea>
                             </div>
                         </div>          
                     </div>
@@ -103,30 +104,30 @@
                     <div class="col-md-6">     
                         <div class="form-group text-uppercase fw-bold text-center">
                             <label for="salarywage">Salary/Wage</label>
-                            <input type="salarywage" class="form-control text1" id="salarywage" placeholder="Indicate Currency">
+                            <input type="salarywage" name="salaryWage" class="form-control text1" id="salarywage" placeholder="Indicate Currency">
                         </div>
                     </div>
                     <!--  col-md-6   -->    
                     <div class="col-md-6">
                         <div class="form-group text-uppercase fw-bold text-center">
                             <label for="email">Employers Email</label>
-                            <input type="url" class="form-control text1" id="url" placeholder="Email">
+                            <input type="email" name="employerEmail" class="form-control text1" id="url" placeholder="Email">
                         </div>     
                     </div>
                     <!--  col-md-6   -->
                 </div>
-            </form>
+            
         </div>
         <div class="container p-md-5 mt-4 text-center shadow" id="container">
-            <form id="main-form">
+            
                 <div  class="col-auto text-center">
                     <h2>JOB SKILL REQUIREMENTS</h2>
                 </div>
                 <br><br>
                 <div class="row w-75 m-lg-auto">
                     <div class="col-md-6">            
-                    <select  class="form-select" aria-label="Default select example">
-                        <option selected>Primary Skill</option>
+                    <select  class="form-select" name="primarySkill" aria-label="Default select example" id="primarySkill">
+                        <option selected disabled>Primary Skill</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -134,20 +135,20 @@
                     </div>
                     <!--  col-md-6   -->
                     <div class="col-md-6">
-                    <select  class="form-select" aria-label="Default select example">
-                        <option selected>Secondary Skill</option>
+                    <select  class="form-select" name="secondarySkill" aria-label="Default select example" id="secondarySkill">
+                        <option selected disabled>Secondary Skill</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
                     </select>
                     </div>
                 </div>
-            </form>
-        </div>  
-        <div class="col text-center">
-            <button class="btn mt-4 btn1" id="submit">SUBMIT</button>
+                <div class="col text-center">
+                    <button type="submit" class="btn mt-4 btn1" id="submit">SUBMIT</button>
+                </div>
+            </div>  
         </div><br>
-    </div><br>
-    
+    </form>
+    <script src="js/postajob.js"></script>
 </body>
 </html>

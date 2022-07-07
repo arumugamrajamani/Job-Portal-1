@@ -3,7 +3,7 @@ $(document).ready(function () {
     fetchData();
     function fetchData() {
         $.ajax({
-            url: 'php/admin-profile.inc.php',
+            url: 'php/applicant-profile.inc.php',
             type: 'POST',
             data: {
                 fetchData: true
@@ -11,10 +11,10 @@ $(document).ready(function () {
             dataType: "JSON",
             success: function (data) {
                 //assign got value to the html ids
-                $('#profilepic').attr('src', data.profilePic);
-                $('#name').html(data.fullName);
-                $('#email').html(data.email);
-                $('#contactnumber').html(data.number);
+                $('#profile_picture').attr('src', data.profile_picture);
+                $('#fullname').html(data.fullname);
+                $('#mobile_number').html("Number: "+data.mobile_number);
+                $('#email').html("Email: "+data.email);
             }
         });
     }

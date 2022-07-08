@@ -14,6 +14,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="css/applicant-profile.css">
+  <!-- jQuery cdn link below -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <!-- Toast CDN for functionality of toastr -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <title>Applicant Profile</title>
 </head>
 
@@ -73,16 +78,18 @@
         <div>
           <h3 class="fw-bold p-5 ms-3">BANNER</h3>
         </div>
-        <i class="bi bi-person-circle fa-5x"></i>
+        <img class="profile_pic fa-5x"src="" id="profile_picture"></img>
       </section>
       <div class="name text-center">
-        <h3 class="fw-bold mt-2">JUAN DELA CRUZ</h3>
+        <h3 class="fw-bold mt-2" id="fullname"></h3>
         <label class="fs-4">Web developer</label>
       </div>
       <strong><label class="mt-2 loc"><i class="bi bi-geo-alt"></i>Manila, Philippines</label></strong>
       <div class="column">
         <div class="mt-2 mx-5 text-center company-n">
-          <label class="pt-3 p-5 text-start">Contact#:0900000000000 <br>Email Address:jobseekers@gmail.com</label>
+        <label class="" id="mobile_number"></label>
+        <br>
+        <label class="" id="email"></label>
         </div>
       </div>
       <hr class="hr1">
@@ -193,6 +200,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+
+    <script src="js/applicant-profile.js"></script>
 </body>
 
 </html>

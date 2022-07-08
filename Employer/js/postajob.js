@@ -99,16 +99,16 @@ $(document).ready(function() {
                if (response.status == "success"){
                  // Create sweet alert to display successfull message and return to company-profile page
                 swal({
-                    title: "Message alert",
+                    title: "Job Posted",
                     icon: "success",
                     button: "Okay",
                 })
                 .then(function() {
                     console.log(response);
-                   // window.location = "company-profile.php";
+                   window.location = "company-profile.php";
                 });
                 }
-                else{
+                else if (response.status == 'error'){
                     console.log(response);
                 }
             }

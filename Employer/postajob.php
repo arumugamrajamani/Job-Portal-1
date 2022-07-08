@@ -105,7 +105,7 @@
                     <div class="col-md-6">     
                         <div class="form-group text-uppercase fw-bold text-center">
                             <label for="salarywage">Salary/Wage</label>
-                            <input type="salarywage" name="salaryWage" class="form-control text1" id="salarywage" placeholder="Indicate Currency">
+                            <input type="salarywage" name="salaryWage" class="form-control text1" id="salarywage" placeholder="eg. PHP 0,000">
                         </div>
                     </div>
                     <!--  col-md-6   -->    
@@ -145,7 +145,7 @@
                     </div>
                 </div>
                 <div class="col text-center">
-                    <button type="submit" class="btn mt-4 btn1" id="submit">SUBMIT</button>
+                    <button type="submit" name="submit" class="btn mt-4 btn1" id="submit">SUBMIT</button>
                 </div>
             </div>  
         </div><br>

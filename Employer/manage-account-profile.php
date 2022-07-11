@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/manage-account-profile.css">
+     <!-- jQuery cdn link below -->
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Toast CDN for functionality of toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
@@ -43,7 +47,7 @@
                             <li><a class="dropdown-item text-start" href="bookmark-job.php"><img src="image/job-management.png" alt="" class="l1"> Job Management</a></li>
 							<li><a class="dropdown-item text-start" href="jobapplication.php"><img src="image/job-applicant-black.png" alt="" class="l1"> Job Applications</a></li>
 							<li><a class="dropdown-item text-start" href="resume.php"><img src="image/manage resume.png" alt="" class="l1"> Manage Resume</a></li>
-							<li><a class="dropdown-item logout text-start" href="#"><img src="image/logout-black.png" alt="" class="l1"> LOGOUT</a></li>
+							<li><a class="dropdown-item logout text-start" href="../logout.php"><img src="image/logout-black.png" alt="" class="l1"> LOGOUT</a></li>
 						</ul>
 				</ul>
 			</div>
@@ -58,13 +62,13 @@
             <div class="row mb-3 mt-3 ms-4">
                 <label for="employerfullname" class="col-sm-2 col-form-label" id="l1">Employer Full Name</label>
                 <div class="col-sm-9 ms-5 c1">
-                    <input type="text" class="form-control" id="employerfullname">
+                    <input type="text" class="form-control" id="employer_name">
                 </div>
             </div>
             <div class="row mb-3 ms-4">
                 <label for="employerposition" class="col-sm-2 col-form-label" id="l2">Employer Position</label>
                 <div class="col-sm-9 ms-5 c1">
-                    <input type="text" class="form-control" id="employerposition">
+                    <input type="text" class="form-control" id="employer_position">
                 </div>
             </div>
             <h2 class="text-black text-center mt-5">COMPANY DETAILS</h2>
@@ -72,31 +76,31 @@
             <div class="row mb-3 mt-3 ms-4">
                 <label for="companyname" class="col-sm-2 col-form-label" id="l3">Company Name</label>
                 <div class="col-sm-9 ms-5 c1">
-                    <input type="text" class="form-control" id="companyname">
+                    <input type="text" class="form-control" id="company_name">
                 </div>
             </div>
             <div class="row mb-3 ms-4">
                 <label for="companyaddress" class="col-sm-2 col-form-label" id="l4">Company Address</label>
                 <div class="col-sm-9 ms-5 c1">
-                    <input type="text" class="form-control" id="companyaddress">
+                    <input type="text" class="form-control" id="company_address">
                 </div>
             </div>
             <div class="row mb-3 ms-4">
                 <label for="companyceoname" class="col-sm-2 col-form-label" id="l5">Company CEO Name</label>
                 <div class="col-sm-9 ms-5 c1">
-                    <input type="text" class="form-control" id="companyceoname">
+                    <input type="text" class="form-control" id="company_ceo">
                 </div>
             </div>
             <div class="row mb-3 ms-4">
                 <label for="companysize" class="col-sm-2 col-form-label" id="l6">Company Size</label>
                 <div class="col-sm-9 ms-5 c1">
-                    <input type="text" class="form-control" id="companysize">
+                    <input type="text" class="form-control" id="company_size">
                 </div>
             </div>
             <div class="row mb-3 ms-4">
                 <label for="companyrevenue" class="col-sm-2 col-form-label" id="l7">Company Revenue</label>
                 <div class="col-sm-9 ms-5 c1">
-                    <input type="text" class="form-control" id="companyrevenue">
+                    <input type="text" class="form-control" id="company_revenue">
                 </div>
             </div>
             <div class="row mb-3 ms-4">
@@ -108,19 +112,19 @@
             <div class="row mb-3 ms-4">
                 <label for="companydescription" class="col-sm-2 col-form-label" id="l9">Company Description</label>
                 <div class="col-sm-9 ms-5 c1">
-                    <textarea class="form-control descrip" placeholder="Description Here" id="companydescription" rows="5"></textarea>
+                    <textarea class="form-control descrip" placeholder="Description Here" id="company_description" rows="5"></textarea>
                 </div>
             </div>
             <div class="row mb-3 ms-4">
                 <label for="contactnumber" class="col-sm-2 col-form-label" id="l10">Contact Number</label>
                 <div class="col-sm-9 ms-5 c1">
-                    <input type="number" class="form-control" id="contactnumber">
+                    <input type="number" class="form-control" id="contact_number">
                 </div>
             </div>
             <div class="row mb-3 ms-4">
                 <label for="companyemail" class="col-sm-2 col-form-label" id="l11">Company Email</label>
                 <div class="col-sm-9 ms-5 c1">
-                    <input type="email" class="form-control" id="companyemail">
+                    <input type="email" class="form-control" id="email">
                 </div>
             </div>
             <div class="row mb-3 ms-4">
@@ -146,5 +150,7 @@
             </div>
         </form>
         <br><br><br><br><br>
+
+        <script src="js/manage-account-profile.js"></script>
 </body>
 </html>

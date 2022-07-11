@@ -249,6 +249,7 @@ strong {
     width: 500px;
     border-radius: 15px;
     background: rgba(0, 194, 214, 0.5);
+    text-align:right;
 }
 
 .column {

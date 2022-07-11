@@ -105,11 +105,46 @@ $(document).ready(function() {
                 })
                 .then(function() {
                     console.log(response);
-                   window.location = "company-profile.php";
+                    window.location = "company-profile.php";
                 });
                 }
                 else if (response.status == 'error'){
-                    console.log(response);
+                    if(response.companyName.status == 'error') {
+                        $('#companyname').removeClass().addClass('form-control border-danger');
+                        $('#companyname').popover({ placement: 'right', content: response.companyName.message }).popover('show');
+                    } else {
+                        $('#companyname').removeClass().addClass('form-control border-success').popover('dispose');
+                    }
+                    if(response.jobTitle.status == 'error') {
+                        $('#first').removeClass().addClass('form-control border-danger');
+                        $('#first').popover({ placement: 'right', content: response.jobTitle.message }).popover('show');
+                    } else {
+                        $('#first').removeClass().addClass('form-control border-success').popover('dispose');
+                    }
+                    if(response.jobCategory.status == 'error') {
+                        $('#jobcategory').removeClass().addClass('form-control border-danger');
+                        $('#jobcategory').popover({ placement: 'right', content: response.jobCategory.message }).popover('show');
+                    } else {
+                        $('#jobcategory').removeClass().addClass('form-control border-success').popover('dispose');
+                    }
+                    if(response.employerEmail.status == 'error') {
+                        $('#url').removeClass().addClass('form-control border-danger');
+                        $('#url').popover({ placement: 'right', content: response.employerEmail.message }).popover('show');
+                    } else {
+                        $('#url').removeClass().addClass('form-control border-success').popover('dispose');
+                    }
+                    if(response.jobDescription.status == 'error') {
+                        $('#exampleFormControlTextarea1').removeClass().addClass('form-control border-danger');
+                        $('#exampleFormControlTextarea1').popover({ placement: 'right', content: response.jobDescription.message }).popover('show');
+                    } else {
+                        $('#exampleFormControlTextarea1').removeClass().addClass('form-control border-success').popover('dispose');
+                    }
+                    if(response.salaryWage.status == 'error') {
+                        $('#salarywage').removeClass().addClass('form-control border-danger');
+                        $('#salarywage').popover({ placement: 'right', content: response.salaryWage.message }).popover('show');
+                    } else {
+                        $('#salarywage').removeClass().addClass('form-control border-success').popover('dispose');
+                    }
                 }
             }
         });

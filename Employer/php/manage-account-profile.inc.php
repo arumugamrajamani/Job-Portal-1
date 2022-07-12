@@ -37,7 +37,7 @@ if (isset($_POST['fetchData'])) {
     $employerPosition = $row['employer_position'];
     $employerAddress = $row['company_address'];
     $companyName = $row['company_name'];
-    $companydDescription = $row['company_description'];
+    $companyDescription = $row['company_description'];
     $logoPic = getCompanyLogoLoc($row['company_logo_name']);
     $companyCeoName = $row['company_ceo'];
     $companySize = $row['company_size'];
@@ -54,7 +54,7 @@ if (isset($_POST['fetchData'])) {
         'employer_position' => $employerPosition,
         'employerAddress'   => $employerAddress,
         'companyName'       => $companyName,
-        'companyDescription'=> $companydDescription,
+        'companyDescription'=> $companyDescription,
         'companyCeoName'    => $companyCeoName,
         'companySize'   => $companySize,
         'companyRevenue' => $companyRevenue,

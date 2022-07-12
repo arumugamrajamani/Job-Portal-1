@@ -40,7 +40,7 @@
 						<a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 						<img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
 						<ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item text-start name" href="applicant-profile.php"><img src="image/profile.png" alt="" class="l1"> Full Name</a></li>
+							<li><a class="dropdown-item text-start name" href="company-profile.php"><img src="image/profile.png" alt="" class="l1"> Full Name</a></li>
 							<li><hr class="dropdown-divider bg-white"></li>
 							<li><a class="dropdown-item text-start Eprofile" href="manage-account-profile.php"><img src="image/edit-profile-black.png" alt="" class="l1"> Edit Profile</a></li>
 							<li><a class="dropdown-item text-start" href="manage-account-2.php"><img src="image/change-pass-black.png" alt="" class="l1"> Change Password</a></li>
@@ -132,14 +132,14 @@
                 <div class="col-sm-9 ms-5 c1">
                     <input type="file" class="form-control" id="companyLogo"><br>
                     <div class="div1">
-                    <img src="image/smlogo.png" class="smlogo" alt="SM" width="200px" height="100px">
+                    <img class="company_logo" src="" id="company_logo_name" alt="logo" width="200px" height="100px">
                     </div>
                 </div>
             </div>
             <div class="row mb-3 ms-4">
-                <label for="dtipermit" class="col-sm-2 col-form-label" id="l13">DTI Business Registration & Permit</label>
+                <label for="permitOriginalName" class="col-sm-2 col-form-label" id="l13">DTI Business Registration & Permit</label>
                 <div class="col-sm-9 ms-5 c1">
-                    <input type="file" class="form-control" id="dtipermit"><br>
+                    <input type="file" class="form-control" id="permit_original_name"><br>
                     <div class="input-container">
                         <i class="fa fa-file-text icons1"></i><input class="input-field" type="text" placeholder="old_file_here.pdf" name="email"><i class="fa fa-download icons"></i>
                     </div>

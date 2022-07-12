@@ -42,14 +42,14 @@
                     <a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
                     <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-dark text-start" href="applicant-profile.php"><img class="ms-3" src="image/profile.png" alt=""> Full Name</a></li>
+                        <li><a class="dropdown-item text-dark text-start" href="company-profile.php"><img class="ms-3" src="image/profile.png" alt=""> Full Name</a></li>
                         <li><hr class="dropdown-divider bg-white"></li>
                         <li><a class="dropdown-item text-dark text-start" href="manage-account-1.php"><img class="ms-3" src="image/edit-profile-black.png" alt=""> Edit Profile</a></li>
                         <li><a class="dropdown-item text-dark text-start" href="manage-account-2.php"><img class="ms-3" src="image/change-pass-black.png" alt=""> Change Password</a></li>
                         <li><a class="dropdown-item text-dark text-start" href="bookmark-job.php"><img class="ms-3" src="image/job-management.png" alt=""> Job Management</a></li>
                         <li><a class="dropdown-item text-dark text-start" href="jobapplication.php"><img class="ms-3" src="image/job-applicant-black.png" alt=""> Job Applications</a></li>
                         <li><a class="dropdown-item text-dark text-start" href="resume.php"><img class="ms-3" src="image/manage resume.png" alt=""> Manage Resume</a></li>
-                        <li><a class="dropdown-item logout text-dark text-start" href="#"><img class="ms-3" src="image/logout-black.png" alt=""> LOGOUT</a></li>
+                        <li><a class="dropdown-item logout text-dark text-start" href="../logout.php"><img class="ms-3" src="image/logout-black.png" alt=""> LOGOUT</a></li>
                     </ul>
                 </ul>
             </div>

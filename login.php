@@ -70,7 +70,8 @@
 						<div><br>
 							<button class="btn btn1 bt me-5 mb-2 fs-7 fw-bold text-dark" type="submit" style="border-radius: 20px; border: 0;">LOGIN</button>
 							<br><br>
-							<a id="alogin" href="forgot-password.html" style="color: #00C2D6;">Forgot your password?</a><br>
+							<a id="alogin" href="forgot-password.php" style="color: #00C2D6;">Forgot your password?</a><br>
+							<a id="alogin" href=""style="color: #00C2D6;">Create Account</a>
 						</div>
 					</form>	
 				</div>

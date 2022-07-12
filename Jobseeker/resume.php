@@ -44,7 +44,7 @@
 						<li><a class="dropdown-item text-light text-start" href="jobapplication.php"><img src="image/job application.png" alt=""> Job Applications</a></li>
 						<li><a class="dropdown-item text-light text-start" href="bookmark-job.php"><img src="image/bookmark.png" alt=""> Bookmarked jobs</a></li>
 						<li><a class="dropdown-item text-light text-start" href="resume.php"><img src="image/manage resume.png" alt=""> Manage Resume</a></li>
-						<li><a class="dropdown-item logout text-light text-start" href="#"><img src="image/sign out.png" alt=""> LOGOUT</a></li>
+						<li><a class="dropdown-item logout text-light text-start" href="../logout.php"><img src="image/sign out.png" alt=""> LOGOUT</a></li>
 					</ul>
 				</ul>
 			</div>

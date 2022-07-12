@@ -50,7 +50,7 @@
             <li><a class="dropdown-item text-start" href="bookmark-job.php"><img src="image/job-management.png" alt=""> Job Management</a></li>
             <li><a class="dropdown-item text-start" href="jobapplication.php"><img src="image/job-applicant-black.png" alt=""> Job Applications</a></li>
             <li><a class="dropdown-item text-start" href="resume.php"><img src="image/manage resume.png" alt=""> Manage Resume</a></li>
-            <li><a class="dropdown-item logout text-start" href="#"><img src="image/logout-black.png" alt=""> LOGOUT</a></li>
+            <li><a class="dropdown-item logout text-start" href="../logout.php"><img src="image/logout-black.png" alt=""> LOGOUT</a></li>
             </ul>
         </ul>
             </div>

@@ -106,6 +106,22 @@
             <div class="div4">
                 <h5 class="pt-4 fw-bold">RECENT JOB POST</h5>
             </div>
+            <div class="table-responsive" id="no-more-tables">
+                <table class="table basic-table table-headers table table-hover">
+                    <thead class="thead text-dark text-center" id="title-sub">
+                        <tr>
+                            <th>Company Name</th>
+                            <th>Job Title</th>
+                            <th>Employent Type</th>
+                            <th>Job Category</th>
+                            <th>Job Description</th>
+                            <th>Salary</th>
+                            <th>Employer Email</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody bg-light text-dark" id="body-h"></tbody>
+                </table>
+            </div>
         </section>
         <section class="sec2 mx-5 text-center shadow-sm mt-5">
             <div class="div4">

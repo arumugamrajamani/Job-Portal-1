@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <!-- jQuery cdn link below -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/jobpost-management.css">
-    <link rel="stylesheet" href="../css/preloader.css">
+    <!-- <link rel="stylesheet" href="../css/preloader.css"> -->
     <title>Job Post Management | Admin</title>
 </head>
 
@@ -29,7 +30,7 @@
                     <i class="fa-solid fa-caret-down"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="admin-profile.php"><img id="mainDpDrop" src="image/profile.png" alt="" class="me-2"> My Profile</a></li>
+                    <li><a class="dropdown-item" href="admin-profile.php"> My Profile</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
@@ -95,28 +96,7 @@
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody class="tbody bg-light text-dark">
-                                <tr class="tr">
-                                    <td data-title="Employer"><b><i class="bi bi-person-circle"></i> Full Name</b></td>
-                                    <td data-title="Company"><b>Company</b></td>
-                                    <td data-title="Job Category"><b>Web Development</b></td>
-                                    <td data-title="Date Applied"><b>05/02/2022</b></td>
-                                    <td data-title="Action">
-                                        <button class="btn-success" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#modal-editdetails" title="Edit Details"><i class="fa-solid fa-pen-to-square"></i></button>
-                                        <button class="btn btn-danger" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Delete"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="Employer"><b><i class="bi bi-person-circle"></i> Full Name</b></td>
-                                    <td data-title="Company"><b>Company</b></td>
-                                    <td data-title="Job Category"><b>Virtual Assistant</b></td>
-                                    <td data-title="Date Applied"><b>04/04/2022</b></td>
-                                    <td data-title="Action">
-                                        <button class="btn-success" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#modal-editdetails" title="Edit Details"><i class="fa-solid fa-pen-to-square"></i></button>
-                                        <button class="btn btn-danger" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Delete"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            <tbody class="tbody bg-light text-dark" id="body-h"></tbody>
                         </table>
                     </div>
                 </div>
@@ -185,10 +165,9 @@
             </div>
         </div>
     </div>
-
     <script src="js/jobpost-management.js"></script>
     <script src="js/navbar.js"></script>
-    <script src="../js/preloader.js"></script>
+    <!-- <script src="../js/preloader.js"></script> -->
 </body>
 
 </html>

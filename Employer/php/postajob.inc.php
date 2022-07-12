@@ -53,14 +53,14 @@
             $companyName = mysqli_real_escape_string($conn, $companyName);
             $jobTitle = mysqli_real_escape_string($conn, $jobTitle);
             $employment = mysqli_real_escape_string($conn, $employment);
-            $jobCatergory = mysqli_real_escape_string($conn, $jobCatergory);
+            $jobCategory = mysqli_real_escape_string($conn, $jobCategory);
             $jobDescription = mysqli_real_escape_string($conn, $jobDescription);
             $salaryWage = mysqli_real_escape_string($conn, $salaryWage);
             $employerEmail = mysqli_real_escape_string($conn, $employerEmail);
             $primarySkill = mysqli_real_escape_string($conn, $primarySkill);
             $secondarySkill = mysqli_real_escape_string($conn, $secondarySkill);
             $uid = mysqli_real_escape_string($conn, $_SESSION['user_id']);
-            mysqli_query($conn,"INSERT INTO `jobpost`(`company_name`, `job_title`, `employment_type`, `job_category`, `job_description`, `salary`, `employer_email`, `primary_skill`, `secondary_skill`, `postedby_uid`, `date_posted`) VALUES ('$companyName', '$jobTitle', '$employment', '$jobCatergory', '$jobDescription', '$salaryWage', '$employerEmail','$primarySkill', '$secondarySkill','$uid',NOW())");
+            mysqli_query($conn,"INSERT INTO `jobpost`(`company_name`, `job_title`, `employment_type`, `job_category`, `job_description`, `salary`, `employer_email`, `primary_skill`, `secondary_skill`, `postedby_uid`, `date_posted`) VALUES ('$companyName', '$jobTitle', '$employment', '$jobCategory', '$jobDescription', '$salaryWage', '$employerEmail','$primarySkill', '$secondarySkill','$uid',NOW())");
 
             $response = array('status' => 'success');
         }
@@ -69,6 +69,31 @@
 
         }
          echo json_encode($response);
+    }
+    else {
+        $uid = ($_SESSION['user_id']);
+        $getPosts = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `postedby_uid` = '$uid'");
+        while($row = mysqli_fetch_assoc($getPosts)){
+            $companyName = $row['company_name'];
+            $jobTitle = $row['job_title'];
+            $employment = $row['employment_type'];
+            $jobCategory = $row['job_category'];
+            $jobDescription = $row['job_description'];
+            $salaryWage = $row['salary'];
+            $employerEmail = $row['employer_email'];
+            $primarySkill = $row['primary_skill'];
+            $secondarySkill = $row['secondary_skill'];
+            $tableData =  "<tr class='tr'>
+                             <td>{$companyName}</td>
+                             <td>{$jobTitle}</td>
+                             <td>{$employment}</td>
+                             <td>{$jobCategory}</td>
+                             <td>{$jobDescription}</td>
+                             <td>{$salaryWage}</td>
+                             <td>{$employerEmail}</td>";
+            $response = array('tableData' => $tableData);
+        }
+    echo json_encode($response);
     }
 
 ?>

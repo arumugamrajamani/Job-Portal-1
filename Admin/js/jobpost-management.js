@@ -9,5 +9,15 @@ function closeNav() {
 }
 
 $(document).ready(function () {
-
+    $.ajax({
+        url: 'php/job-management.inc.php',
+        type: 'POST',
+        data: {
+            fetchData: true
+        },
+        dataType: 'JSON',
+        success: function (response) {
+            $('#body-h').html(response.tableData);
+        }
+    });
 });

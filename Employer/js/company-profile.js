@@ -1,6 +1,17 @@
 $(document).ready(function () {
 
     fetchData();
+    $.ajax({
+            url: 'php/postajob.inc.php',
+            type: 'POST',
+            data: {
+                fetchData: true
+            },
+            dataType: "JSON",
+            success: function (response) {
+            $('#body-h').html(response.tableData);
+        }
+        });
     function fetchData() {
         $.ajax({
             url: 'php/company-profile.inc.php',

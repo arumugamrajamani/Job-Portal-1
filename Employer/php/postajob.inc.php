@@ -70,5 +70,30 @@
         }
          echo json_encode($response);
     }
+    else {
+        $uid = ($_SESSION['user_id']);
+        $getPosts = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `postedby_uid` = '$uid'");
+        while($row = mysqli_fetch_assoc($getPosts)){
+            $companyName = $row['company_name'];
+            $jobTitle = $row['job_title'];
+            $employment = $row['employment_type'];
+            $jobCategory = $row['job_category'];
+            $jobDescription = $row['job_description'];
+            $salaryWage = $row['salary'];
+            $employerEmail = $row['employer_email'];
+            $primarySkill = $row['primary_skill'];
+            $secondarySkill = $row['secondary_skill'];
+            $tableData =  "<tr class='tr'>
+                             <td>{$companyName}</td>
+                             <td>{$jobTitle}</td>
+                             <td>{$employment}</td>
+                             <td>{$jobCategory}</td>
+                             <td>{$jobDescription}</td>
+                             <td>{$salaryWage}</td>
+                             <td>{$employerEmail}</td>";
+            $response = array('tableData' => $tableData);
+        }
+    echo json_encode($response);
+    }
 
 ?>

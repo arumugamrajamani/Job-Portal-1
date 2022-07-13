@@ -47,7 +47,7 @@
               <li><a class="dropdown-item text-light text-start" href="jobapplication.php"><img src="image/job application.png" alt=""> Job Applications</a></li>
               <li><a class="dropdown-item text-light text-start" href="bookmark-job.php"><img src="image/bookmark.png" alt=""> Bookmarked jobs</a></li>
               <li><a class="dropdown-item text-light text-start" href="resume.php"><img src="image/manage resume.png" alt=""> Manage Resume</a></li>
-              <li><a class="dropdown-item logout text-light text-start" href="#"><img src="image/sign out.png" alt=""> LOGOUT</a></li>
+              <li><a class="dropdown-item logout text-light text-start" href=""><img src="image/sign out.png" alt=""> LOGOUT</a></li>
             </ul>
         </ul>
       </div>
@@ -72,7 +72,8 @@
             </span>
             <label class="fw-bold mt-3 box">New Password:</label>
             <input type="password" id="newpassword" class="Bcolor">
-            <br><br>
+            <label class="characters text-danger"> Password must be atleast 8 characters</label>
+        
           </div>
           <div class=" mt-3 boxs1">
             <span class="icon2" onclick="showHide2()">
@@ -88,35 +89,7 @@
         </div>
       </div>
   </div> 
-    <script>
-      function showHide() {
-        let icon = document.querySelector(".icon"),
-          input = document.getElementById("currentpassword");
-        if (input.type === "password") {
-          input.type = "text";
-        } else {
-          input.type = "password";
-        }
-        icon.classList.toggle('is-active');
-      } function showHide1() {
-        let icon = document.querySelector(".icon1"),
-          input = document.getElementById("newpassword");
-        if (input.type === "password") {
-        } else {
-          input.type = "password";
-        }
-        icon.classList.toggle('is-active');
-      } function showHide2() {
-        let icon = document.querySelector(".icon2"),
-          input = document.getElementById("confirmpassword");
-        if (input.type === "password") {
-          input.type = "text";
-        } else {
-          input.type = "password";
-        }
-        icon.classList.toggle('is-active');
-      }
-    </script>
+      <script src="js/manage-account-2.js"></script>
 </body>
 
 </html>

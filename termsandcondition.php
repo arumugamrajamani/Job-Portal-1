@@ -1,34 +1,37 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,455;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@300&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/termsandcondition.css">
     <title>Term of Condition</title>
-  </head>
+</head>
 <body>
     <div class="color-overlay">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow-sm">
-                    <a href="#" class="navbar-brand ms-5">
-                    <img src="image/flogo.png" alt="Job Portal Logo" width="80" height="60"></a>
-                    <h3 class="position-relative" style="font-size: 30px; margin-left: 10px;"><b style="margin-bottom: 20px; color:#00c2d6;">Terms and Conditions</b></h3>
+                <a href="index.php" class="navbar-brand ms-5">
+                <img src="image/flogo.png" alt="Job Portal Logo" width="80" height="60"></a>
+                <h3 class="position-relative"><b>Terms and Conditions</b></h3>
             </nav>         
         </div>
     </div>
-      <br>
-      <br><br>
-  
+    <br><br><br>
+
     <div class="container"><br>
         <div class="masthead" style="background-image: url('./image/bg-footer.png');">
-		      <p>Please read these terms and conditions carefully before using Our Service.<br>
+            <p>Please read these terms and conditions carefully before using Our Service.<br>
                 Interpretation and Definitions<br>
                 Interpretation<br>
                 The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in the singular or in the plural.<br>
@@ -50,74 +53,58 @@
                 Acknowledgment<br>
                 These are the Terms and Conditions that govern your use of this Service as well as the <br>
                 agreement between you and the Company. These Terms and Conditions outline all users' rights<br>
-                and responsibilities when using the Service.</p>
+                and responsibilities when using the Service.
+            </p>
         </div>
     </div><br><br>
-      <footer class="page-footer"><br>
-        <div class="container-fluid text-center text-md-left mt-5">
+
+    <footer class="page-footer shadow"><br>
+        <div class="container-fluid text-start text-md-left mt-5 px-5">
             <div class="row">
-				<div class="col-md-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">JOB SEEKER</h6>
-                    <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 50px; height: 2px">
+				<div class="col-md-2 col-lg-2 mx-auto mb-4">
+                    <h6 class="text-uppercase">JOB SEEKER</h6>
                     <ul class="list-unstyled">
-                        <li class="my-0"><a href="#">Register</a></li>
-                        <li class="my-0"><a href="#">Job Search</a></li>
-                        <li class="my-0"><a href="#">How it works</a></li>
+                        <li class="my-0"><a href="#" class="text-dark" >Register</a></li>
+                        <li class="my-0"><a href="#" class="text-dark" >Job Search</a></li>
+                        <li class="my-0"><a href="howitworks-jobseeker.php" class="text-dark" >How it works</a></li>
                     </ul>
                 </div>
-
-                <div class="col-md-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">EMPLOYER</h6>
-                    <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px">
-
+                <div class="col-md-2 col-lg-2 mx-auto mb-4">
+                    <h6 class="text-uppercase">EMPLOYER</h6> 
                     <ul class="list-unstyled">
-                        <li class="my-0"><a href="#">Register</a></li>
-                        <li class="my-0"><a href="#">Post a job</a></li>
-                        <li class="my-0"><a href="#">How it works</a></li>
-
+                        <li class="my-0"><a href="#" class="text-dark" >Register</a></li>
+                        <li class="my-0"><a href="#" class="text-dark" >Post a job</a></li>
+                        <li class="my-0"><a href="howitworks-employ.php" class="text-dark" >How it works</a></li>
                     </ul>
                 </div>
-
-                <div class="col-md-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">AVAILABLE JOBS</h6>
-                    <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height: 2px">
+                <div class="col-md-2 col-lg-2 mx-auto mb-4">
+                    <h6 class="text-uppercase">OTHER INFORMATIONS</h6>
                     <ul class="list-unstyled">
-                        <li class="my-0"><a>Graphic Design</a></li>
-                        <li class="my-0"><a>Programmers</a></li>
-                        <li class="my-0"><a>Blogging VAs</a></li>
-                        <li class="my-0"> <a>Webmaster VAs</a></li>
-                        <li class="my-0"> <a>Wordpress expert</a></li>
+                        <li class="my-0"></i> <a href="#aboutus" class="text-dark" >About us</a></li>
+                        <li class="my-0"></i> <a href="#faq" class="text-dark" >FAQ</a></li>
+                        <li class="my-0"></i> <a href="termsandcondition.php" class="text-dark" >Terms and conditions</a></li>
+                        <li class="my-0"></i><a href="privacypolicy.php" class="text-dark" >Privacy Policy</a></li>
+                        <li class="my-0"></i> <a href="termsofuse.php" class="text-dark" >Terms of use</a></li>
                     </ul>
                 </div>
-
-                <div class="col-md-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">OTHER INFORMATIONS</h6>
-                    <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; height: 2px">
+                <div class="col-md-2 col-lg-2 g-0 mx-auto mb-4">
+                    <h6 class="text-uppercase">Credits</h6>
                     <ul class="list-unstyled">
-                        <li class="my-0"></i> <a href="#">About us</a></li>
-                        <li class="my-0"></i> <a href="faq.html">FAQ</a></li>
-                        <li class="my-0"></i> <a href="contactus.html">Contact us</a></li>
-                        <li class="my-0"></i><a href="#">Privacy Policy</a></li>
-                        <li class="my-0"></i> <a href="#">Terms of use</a></li>
+                        <li class="my-0"><a href="#" class="text-dark">Developer</a></li>
+                        <li class="my-0"><a href="credit-iconscout.php" class="text-dark">Iconscout</a></li>
+                        <li class="my-0"><a href="credit-flaticon.php" class="text-dark">Flaticon</a></li>
+                        <li class="my-0"><a href="credit-otherinfo.php" class="text-dark">Web icons</a></li>
                     </ul>
                 </div>
-                <div class="col-md-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">CONTACT US</h6>
-                    <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px">
-                    <ul class="list-unstyled">
-                        <img class="my-0" src="image/twitter.png" alt="logo" href="#" style="width: 50px; height: 50px">
-                        <img class="my-0" src="image/facebook.png" alt="logo" href="#" style="width: 50px; height: 50px">
-                        <img class="my-0" src="image/insta.png" alt="logo" href="#" style="width: 50px; height: 50px">
+                <div class="col-md-2 col-lg-2 mx-auto mb-4 text-center">
+                    <h6 class="text-uppercase">CONTACT US</h6>
+                    <ul class="list-unstyled d-flex">
+                        <img class="my-0" src="image/gmail.png" alt="logo" href="#" style="width: 50px; height: 25px">
+                        concerns.techploymentph@gmail.com
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-    <div class="container-fluid bg-white text-center">
-       
-        <h5 class="mt-5 ms-2"> Copyrignt © TechPloyment 2022. All Rights Reserved.</h5>
-        <br>
-    </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

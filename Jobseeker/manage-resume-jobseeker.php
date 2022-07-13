@@ -49,7 +49,7 @@
                         <li><a class="dropdown-item text-dark text-start" href="bookmark-job.php"><img class="ms-3" src="image/job-management.png" alt=""> Job Management</a></li>
                         <li><a class="dropdown-item text-dark text-start" href="jobapplication.php"><img class="ms-3" src="image/job-applicant-black.png" alt=""> Job Applications</a></li>
                         <li><a class="dropdown-item text-dark text-start" href="resume.php"><img class="ms-3" src="image/manage resume.png" alt=""> Manage Resume</a></li>
-                        <li><a class="dropdown-item logout text-dark text-start" href="#"><img class="ms-3" src="image/logout-black.png" alt=""> LOGOUT</a></li>
+                        <li><a class="dropdown-item logout text-dark text-start" href="../logout.php"><img class="ms-3" src="image/logout-black.png" alt=""> LOGOUT</a></li>
                     </ul>
                 </ul>
             </div>

@@ -9,6 +9,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/manage-account-2.css">
+    <!-- jQuery cdn link below -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Sweet alert cdn link below -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <title>Manage account 2</title>
 </head>
 
@@ -84,11 +88,24 @@
             <input type="password" id="confirmpassword" class="Bcolor">
           </div>
           <label class="characters text-danger"> Password must be atleast 8 characters</label><br><br><br>
-          <button type="button" class="fw-bold btn3">Save</button>
+          <button type="button" class=" save fw-bold btn3" title="Save password" data-bs-toggle="modal" data-bs-target="#modal-save">Save</button>
           <button type="button" class="fw-bold btn3">Cancel</button>
         </div>
       </div>
   </div> 
+  <div class="modal fade" id="modal-save" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title ms-2" id="exampleModalLabel">Are you sure you want to change your password?</h5>
+            </div>
+            <div class="delete modal-body">
+                <button type="button" id="confirm" class="yes-no btn btn-success">Yes</button>
+                <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
       <script src="js/manage-account-2.js"></script>
 </body>
 

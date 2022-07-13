@@ -110,7 +110,7 @@ $(document).ready(function(){
                         button: "Okay",
                     })
                     .then(function() {
-                        window.location = "php/logout.php";
+                        window.location = "../logout.php";
                     });
                     // Call this function to clear all inputs
                     clearInputsFields();

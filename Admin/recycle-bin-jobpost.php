@@ -99,112 +99,11 @@
                                     <th>Employer</th>
                                     <th>Company</th>
                                     <th>Job Category</th>
-                                    <th>Date Applied</th>
+                                    <th>Date Posted</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody class="tbody bg-light text-dark" id="body-h">
-                                <tr class="tr">
-                                    <td data-title="Employer"><b><i class="bi bi-person-circle"></i> Full Name</b></td>
-                                    <td data-title="Company"><b>Company</b></td>
-                                    <td data-title="Job Category"><b>Web Development</b></td>
-                                    <td data-title="Date Applied"><b>05/02/2022</b></td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="Employer"><b><i class="bi bi-person-circle"></i> Full Name</b></td>
-                                    <td data-title="Company"><b>Company</b></td>
-                                    <td data-title="Job Category"><b>Virtual Assistant</b></td>
-                                    <td data-title="Date Applied"><b>04/04/2022</b></td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="Employer"><b><i class="bi bi-person-circle"></i> Full Name</b></td>
-                                    <td data-title="Company"><b>Company</b></td>
-                                    <td data-title="Job Category"><b>Customer Support</b></td>
-                                    <td data-title="Date Applied"><b>05/17/2022</b></td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="Employer"><b><i class="bi bi-person-circle"></i> Full Name</b></td>
-                                    <td data-title="Company"><b>Company</b></td>
-                                    <td data-title="Job Category"><b>Customer Support</b></td>
-                                    <td data-title="Date Applied"><b>05/17/2022</b></td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="Employer"><b><i class="bi bi-person-circle"></i> Full Name</b></td>
-                                    <td data-title="Company"><b>Company</b></td>
-                                    <td data-title="Job Category"><b>Customer Support</b></td>
-                                    <td data-title="Date Applied"><b>05/17/2022</b></td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="Employer"><b><i class="bi bi-person-circle"></i> Full Name</b></td>
-                                    <td data-title="Company"><b>Company</b></td>
-                                    <td data-title="Job Category"><b>Customer Support</b></td>
-                                    <td data-title="Date Applied"><b>05/17/2022</b></td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="Employer"><b><i class="bi bi-person-circle"></i> Full Name</b></td>
-                                    <td data-title="Company"><b>Company</b></td>
-                                    <td data-title="Job Category"><b>Customer Support</b></td>
-                                    <td data-title="Date Applied"><b>05/17/2022</b></td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="Employer"><b><i class="bi bi-person-circle"></i> Full Name</b></td>
-                                    <td data-title="Company"><b>Company</b></td>
-                                    <td data-title="Job Category"><b>Customer Support</b></td>
-                                    <td data-title="Date Applied"><b>05/17/2022</b></td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="Employer"><b><i class="bi bi-person-circle"></i> Full Name</b></td>
-                                    <td data-title="Company"><b>Company</b></td>
-                                    <td data-title="Job Category"><b>Customer Support</b></td>
-                                    <td data-title="Date Applied"><b>05/17/2022</b></td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td data-title="Employer"><b><i class="bi bi-person-circle"></i> Full Name</b></td>
-                                    <td data-title="Company"><b>Company</b></td>
-                                    <td data-title="Job Category"><b>Customer Support</b></td>
-                                    <td data-title="Date Applied"><b>05/17/2022</b></td>
-                                    <td data-title="Action">
-                                        <button class="btn text-white btn-success" title="Restore" type="button" id="btn-info"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                                        <button class="btn btn-danger" title="Delete" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            <tbody class="tbody bg-light text-dark" id="body-h"></tbody>
                         </table>
                     </div>
                 </div>
@@ -237,18 +136,7 @@
             </div>
         </div>
     </div>
-
-    <script>
-        function openNav() {
-            document.getElementById("mySidebar").style.left = "0";
-            document.getElementById("main").style.marginLeft = "390px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidebar").style.left = "-100%";
-            document.getElementById("main").style.marginLeft = "230px";
-        }
-    </script>
+    <script src="js/jobpost-recyclebin.js"></script>
     <script src="js/navbar.js"></script>
     <script src="../js/preloader.js"></script>
 </body>

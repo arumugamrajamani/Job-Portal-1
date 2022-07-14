@@ -28,10 +28,14 @@ $(document).ready(function () {
             $('#pagination').html(response.pagination);
             $('#entries').html(response.entries);
         }
-    });
-    
-    
+        });
     }
+
+    // Trigger this when user click on the pagination 
+    $('#pagination').on('click', '.page-item', function () {
+        let page = $(this).attr('data-page');
+        load_data(GetSearchValue(), page);
+    });
     
     $('#body-h').on('click', '.delete-Btn', function () {
         let postId = $(this).attr('data-id');

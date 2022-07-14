@@ -8,9 +8,14 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "230px";
 }
 function GetSearchValue() {
-        var search = $('#search').val();
+     var search = $('#search').val();
         return search;
-    }
+}
+// Function for getting the current page number
+function getCurrentPage() {
+    var page = $('#pagination').find('.active').attr('data-page');
+    return page;
+}
 $(document).ready(function () {
     load_data();
     function load_data(search, page){

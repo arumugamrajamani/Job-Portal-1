@@ -23,8 +23,8 @@
                         <td>{$jobCategory}</td>
                         <td>{$date}</td>
                         <td>
-                            <button class='btn-success' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails' title='Edit Details'><i class='fa-solid fa-pen-to-square'></i></button>
-                            <button class='btn btn-danger' type='button' id='btn-info' data-id='{$postId}' data-bs-toggle='modal' data-bs-target='#modal-delete' title='Delete'><i class='bi bi-trash3'></i></button>
+                            <button data-id='{$postId}' class='btn text-white btn-success restore-Btn' title='Restore' type='button' id='btn-info'><i class='fa-solid fa-clock-rotate-left'></i></button>
+                            <button class='btn btn-danger delete-Btn' type='button' id='btn-info' data-id='{$postId}' data-bs-toggle='modal' data-bs-target='#modal-delete' title='Delete'><i class='bi bi-trash3'></i></button>
                         </td>";
                     }
                     $response = array('tableData' => $tableData);

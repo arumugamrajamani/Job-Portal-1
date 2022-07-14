@@ -170,5 +170,4 @@ VALUES(
 )");
 
     mysqli_query($conn, "DELETE FROM `jobpost` WHERE `post_iud` = '$postId'");
-    echo ($postId);
 }

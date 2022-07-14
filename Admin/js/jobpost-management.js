@@ -38,7 +38,6 @@ $(document).ready(function () {
     });
     
     $('#body-h').on('click','.delete-Btn', function () {
-        alert($(this).attr('data-id'));
         let postId = $(this).attr('data-id');
         $('#del-yes').val(postId);
     });
@@ -54,7 +53,6 @@ $(document).ready(function () {
                 postId: postId
             },
             success: function (response) {
-                alert(response);
                 $('#modal-delete').modal('hide');
                 toastr.success('', 'Successfully Deleted!');
                 load_data();

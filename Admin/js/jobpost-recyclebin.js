@@ -65,4 +65,25 @@ $(document).ready(function () {
             }
         });
     });
+
+    //----------------------------restore---------------------------
+
+    $('#body-h').on('click', '.restore-Btn', function () {
+        let postId = $(this).attr('data-id');
+
+        $.ajax({
+            url: "php/recycle-bin-job-management.inc.php",
+            type: "POST",
+            data: {
+                restoreJobPost: true,
+                postId: postId
+            },
+            success: function (data) {
+                $('#modal-restore').modal('restore');
+                toastr.success('', 'Successfully Restored');
+                load_data(GetSearchValue());
+            }
+        })
+
+    });
 });

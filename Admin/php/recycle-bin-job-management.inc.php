@@ -123,13 +123,7 @@
             'entries' => $entries);
     echo json_encode($response);
     }
-    
-  /* AYAN NA SIR YUNG MGA NAMES NUNG TABLE SIR
-    $postId = mysqli_real_escape_string($conn, $_POST['postId']);
-    deleting the jobpost and moving it to recycle bin
-    $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM `jobpost_recycler` WHERE `post_iud` = '$postId'");
-    $row = mysqli_fetch_assoc($fetchDeletedQuery);
-    $companyName = $row['company_name'];
+
     $jobTitle = $row['job_title'];
     $employment = $row['employment_type'];
     $jobCategory = $row['job_category'];
@@ -140,35 +134,11 @@
     $secondarySkill = $row['secondary_skill'];
     $postedby = $row['postedby_uid'];
     $date = dateTimeConvertion($row['date_posted']);
-        
-    mysqli_query($conn, "INSERT INTO `jobpost_recycler`(
-    `company_name`,
-    `job_title`,
-    `employment_type`,
-    `job_category`,
-    `job_description`,
-    `salary`,
-    `employer_email`,
-    `primary_skill`,
-    `secondary_skill`,
-    `postedby_uid`,
-    `date_posted`
-)
-VALUES(
-    '$companyName',
-    '$jobTitle',
-    '$employment',
-    '$jobCategory',
-    '$jobDescription',
-    '$salary',
-    '$employerEmail',
-    '$primarySkill',
-    '$secondarySkill',
-    '$postedby',
-    '$date'
-)");*/
 
-if (isset($_POST['deleteJobPost'])) {
-    $postId = mysqli_real_escape_string($conn, $_POST['postId']);
-    mysqli_query($conn, "DELETE FROM `jobpost_recycler` WHERE `post_iud` = '$postId'");
+    mysqli_query($conn, "INSERT INTO jobpost (post_iud, company_name, job_title, employment_type, job_category, job_description, salary, employer_email, primary_skill, secondary_skill, postedby_uid, date_posted)
+                            VALUES ('$postId', '$companyName', '$jobTitle', '$employment', '$jobCategory', '$jobDescription', '$salary', '$employerEmail', '$primarySkill', '$secondarySkill', '$postedby', '$date')");
+    
+    mysqli_query($conn, "DELETE FROM jobpost_recycler WHERE post_iud = '$postId'");
 }
+  
+ ?>

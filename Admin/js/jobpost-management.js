@@ -12,17 +12,27 @@ function GetSearchValue() {
         return search;
     }
 $(document).ready(function () {
-    $.ajax({
+    load_data();
+    function load_data(search, page){
+        $.ajax({
         url: 'php/job-management.inc.php',
         type: 'POST',
         data: {
-            fetchData: true
+            fetchData: true,
+            search: search,
+            page: page
         },
         dataType: 'JSON',
         success: function (response) {
             $('#body-h').html(response.tableData);
+            $('#pagination').html(response.pagination);
+            $('#entries').html(response.entries);
         }
     });
+    
+    
+    }
+    
     $('#body-h').on('click', '.delete-Btn', function () {
         let postId = $(this).attr('data-id');
         $('#del-yes').val(postId);
@@ -41,7 +51,7 @@ $(document).ready(function () {
             success: function (data) {
                 $('#modal-delete').modal('hide');
                 toastr.success('', 'Successfully Deleted!');
-                load_data(GetSearchValue());
+                load_data();
             }
         });
     });

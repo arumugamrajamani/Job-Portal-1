@@ -8,22 +8,41 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "230px";
 }
 function GetSearchValue() {
-        var search = $('#search').val();
+     var search = $('#search').val();
         return search;
-    }
+}
+// Function for getting the current page number
+function getCurrentPage() {
+    var page = $('#pagination').find('.active').attr('data-page');
+    return page;
+}
 $(document).ready(function () {
-    $.ajax({
+    load_data();
+    function load_data(search, page){
+        $.ajax({
         url: 'php/job-management.inc.php',
         type: 'POST',
         data: {
-            fetchData: true
+            fetchData: true,
+            search: search,
+            page: page
         },
         dataType: 'JSON',
         success: function (response) {
             $('#body-h').html(response.tableData);
+            $('#pagination').html(response.pagination);
+            $('#entries').html(response.entries);
         }
+        });
+    }
+
+    // Trigger this when user click on the pagination 
+    $('#pagination').on('click', '.page-item', function () {
+        let page = $(this).attr('data-page');
+        load_data(GetSearchValue(), page);
     });
-    $('#body-h').on('click', '.delete-Btn', function () {
+    
+    $('#body-h').on('click','.delete-Btn', function () {
         let postId = $(this).attr('data-id');
         $('#del-yes').val(postId);
     });
@@ -35,13 +54,13 @@ $(document).ready(function () {
             url: "php/job-management.inc.php",
             type: "POST",
             data: {
-                deleteJobseeker: true,
-                post: postId
+                deleteJobPost: true,
+                postId: postId
             },
-            success: function (data) {
+            success: function (response) {
                 $('#modal-delete').modal('hide');
                 toastr.success('', 'Successfully Deleted!');
-                load_data(GetSearchValue());
+                load_data();
             }
         });
     });

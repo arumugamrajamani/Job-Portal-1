@@ -92,8 +92,8 @@ $(document).ready(function () {
 
     // Function for searching of profile picture src and displaying to modal
     $('#body-h').on('click', '.view-pp', function () {
-        let src = $(this).find('img').attr('src')
-        $('#view-pp').attr('src', src)
+        let src = $(this).find('img').attr('src');
+        $('#view-pp').attr('src', src);
     });
 
     //<-------------------------------Delete Functions------------------------------------------
@@ -119,7 +119,7 @@ $(document).ready(function () {
                 toastr.success('', 'Successfully Deleted!');
                 load_data(GetSearchValue(), getCurrentPage());
             }
-        })
+        });
     });
 });
 

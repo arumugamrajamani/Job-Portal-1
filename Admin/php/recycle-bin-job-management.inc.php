@@ -126,7 +126,7 @@
     
   /* AYAN NA SIR YUNG MGA NAMES NUNG TABLE SIR
     $postId = mysqli_real_escape_string($conn, $_POST['postId']);
-    //deleting the jobpost and moving it to recycle bin
+    deleting the jobpost and moving it to recycle bin
     $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM `jobpost_recycler` WHERE `post_iud` = '$postId'");
     $row = mysqli_fetch_assoc($fetchDeletedQuery);
     $companyName = $row['company_name'];

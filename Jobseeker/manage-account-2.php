@@ -76,7 +76,6 @@
             </span>
             <label class="fw-bold mt-3 box">New Password:</label>
             <input type="password" id="newpassword" class="Bcolor">
-            <label class="characters text-danger"> Password must be atleast 8 characters</label>
         
           </div>
           <div class=" mt-3 boxs1">
@@ -87,7 +86,7 @@
             <label class="fw-bold mt-3 box1">Confirm Password:</label>
             <input type="password" id="confirmpassword" class="Bcolor">
           </div>
-          <label class="characters text-danger"> Password must be atleast 8 characters</label><br><br><br>
+          <label class="characters text-danger"></label><br><br><br>
           <button type="button" class=" save fw-bold btn3" title="Save password" data-bs-toggle="modal" data-bs-target="#modal-save">Save</button>
           <button type="button" class="fw-bold btn3">Cancel</button>
         </div>

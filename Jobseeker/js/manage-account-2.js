@@ -81,17 +81,17 @@ $(document).ready(function(){
         }
     })
 
-    // Trigger this when jobseeker click yes button to change password modal
+    // Trigger this when user click yes button to change password modal
     $('#confirm').click(function(event){
         event.preventDefault();
-        // jobseeker password details
+        // user password details
         let currentpassword = $('#currentpassword').val();
         let newpassword = $('#newpassword').val();
         let confirmpassword = $('#confirmpassword').val();
         
         // Create ajax request
         $.ajax({
-            url: "php/manage-account-2.inc.php",
+            url: "php/changepassword.inc.php",
             method: "POST",
             data: {
                 confirm: true,
@@ -110,7 +110,7 @@ $(document).ready(function(){
                         button: "Okay",
                     })
                     .then(function() {
-                        window.location = "../logout.php";
+                        window.location = "php/logout.php";
                     });
                     // Call this function to clear all inputs
                     clearInputsFields();

@@ -35,8 +35,8 @@
         // Check if search is present
         if (isset($_POST['search'])) {
             $search = $_POST['search'];
-            $statement = "SELECT * FROM jobseeker WHERE company_name LIKE '%$search%' OR employer_email LIKE '%$search%' LIMIT $start, $pageLimit";
-            $paginationStatement = "SELECT * FROM jobseeker WHERE company_name LIKE '%$search%' OR employer_email LIKE '%$search%'";
+            $statement = "SELECT * FROM jobpost WHERE company_name LIKE '%$search%' OR employer_email LIKE '%$search%' LIMIT $start, $pageLimit";
+            $paginationStatement = "SELECT * FROM jobpost WHERE company_name LIKE '%$search%' OR employer_email LIKE '%$search%'";
         }
         else {
             $statement = "SELECT * FROM jobpost LIMIT $start, $pageLimit";
@@ -60,7 +60,7 @@
                             <td>{$date}</td>
                             <td>
                                 <button class='btn-success' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails' title='Edit Details'><i class='fa-solid fa-pen-to-square'></i></button>
-                                <button class='btn btn-danger' type='button' id='btn-info' data-id='{$postId}' data-bs-toggle='modal' data-bs-target='#modal-delete' title='Delete'><i class='bi bi-trash3'></i></button>
+                                <button class='btn btn-danger delete-Btn' type='button' id='btn-info' data-id ='{$postId}' data-bs-toggle='modal' data-bs-target='#modal-delete' title='Delete'><i class='bi bi-trash3'></i></button>
                         </td>";
         }
         // Query to get the total number of employers
@@ -124,8 +124,10 @@
     echo json_encode($response);
     }
     
-    if (isset($_POST['deleteJobseeker'])) {
-    //deleting the jobseeker and moving it to recycle bin
+    if (isset($_POST['deleteJobPost'])) {
+    $postId = mysqli_real_escape_string($conn, $_POST['postId']);
+    
+    //deleting the jobpost and moving it to recycle bin
     $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_iud` = '$postId'");
     $row = mysqli_fetch_assoc($fetchDeletedQuery);
     $companyName = $row['company_name'];
@@ -168,5 +170,5 @@ VALUES(
 )");
 
     mysqli_query($conn, "DELETE FROM `jobpost` WHERE `post_iud` = '$postId'");
-    
+    echo ($postId);
 }

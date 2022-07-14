@@ -37,7 +37,8 @@ $(document).ready(function () {
         load_data(GetSearchValue(), page);
     });
     
-    $('#body-h').on('click', '.delete-Btn', function () {
+    $('#body-h').on('click','.delete-Btn', function () {
+        alert($(this).attr('data-id'));
         let postId = $(this).attr('data-id');
         $('#del-yes').val(postId);
     });
@@ -49,10 +50,11 @@ $(document).ready(function () {
             url: "php/job-management.inc.php",
             type: "POST",
             data: {
-                deleteJobseeker: true,
-                post: postId
+                deleteJobPost: true,
+                postId: postId
             },
-            success: function (data) {
+            success: function (response) {
+                alert(response);
                 $('#modal-delete').modal('hide');
                 toastr.success('', 'Successfully Deleted!');
                 load_data();

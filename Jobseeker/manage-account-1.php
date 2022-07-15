@@ -9,6 +9,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/manage-account-1.css">
+   <!-- jQuery cdn link below -->
+   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Toast CDN for functionality of toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Manage account</title>
 </head>
 
@@ -58,7 +62,7 @@
           <div class="mb-3 mt-5 ms-4 row">
             <label for="name" class="col-sm-3 col-form-label box">Name</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control Bcolor" id="name">
+              <input type="text" class="form-control Bcolor" id="fullname">
             </div>
           </div>
           <div class="mb-3 mt-4  ms-4 row">
@@ -76,19 +80,13 @@
           <div class="mb-3 mt-4 ms-4 row">
             <label for="email address" class="col-sm-3 col-form-label box1">Email Address</label>
             <div class="col-sm-8">
-              <input type="email" class="form-control Bcolor" id="email-address">
+              <input type="email" class="form-control Bcolor" id="email">
             </div>
           </div>
           <div class="mb-3 mt-4 ms-4 row">
             <label for="contact number" class="col-sm-3 col-form-label box1">Contact Number</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control Bcolor" id="contact-number">
-            </div>
-          </div>
-          <div class="mb-3 mt-4 ms-4 row">
-            <label for="inputPassword" class="col-sm-3 col-form-label box">Password</label>
-            <div class="col-sm-8">
-              <input type="password" class="form-control Bcolor" id="inputPassword">
+              <input type="number" class="form-control Bcolor" id="mobile_number">
             </div>
           </div>
           <div class="text-center text-dark mt-5">
@@ -99,6 +97,7 @@
       </div>
     </div>
   </div>
+  <script src="js/manage-account-1.js"></script>
 </body>
 
 </html>

@@ -36,12 +36,12 @@ $(document).ready(function () {
         });
     }
     
-    $('#search').on('keyup', function () {
+    // Trigger this when user started to type in the search bar
+    $('#search').keyup(function () {
         let search = $(this).val();
         if (search != '') {
             load_data(search);
-        }
-        else {
+        } else {
             load_data();
         }
     });

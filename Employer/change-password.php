@@ -8,12 +8,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="css/manage-account-2.css">
+  <link rel="stylesheet" href="css/change-password.css">
     <!-- jQuery cdn link below -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- Sweet alert cdn link below -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <title>Manage account 2</title>
+  <title>Change password</title>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item me-0">
-            <a class="nav-link text-dark message active" aria-current="page" href="message-jobseekers.php">MESSAGE</a>
+            <a class="nav-link text-dark message active" aria-current="page" href="message-employer.php">MESSAGE</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark about active text-center" href="searchjob.php">JOB BOARD</a>
@@ -46,12 +46,12 @@
               <li>
                 <hr class="dropdown-divider bg-white">
               </li>
-              <li><a class="dropdown-item text-light text-start" href="manage-account-1.php"><img src="image/edit-profile.png" alt=""> Edit Profile</a></li>
-              <li><a class="dropdown-item text-light text-start" href="manage-account-2.php"><img src="image/change pass.png" alt=""> Change Password</a></li>
-              <li><a class="dropdown-item text-light text-start" href="jobapplication.php"><img src="image/job application.png" alt=""> Job Applications</a></li>
-              <li><a class="dropdown-item text-light text-start" href="bookmark-job.php"><img src="image/bookmark.png" alt=""> Bookmarked jobs</a></li>
-              <li><a class="dropdown-item text-light text-start" href="resume.php"><img src="image/manage resume.png" alt=""> Manage Resume</a></li>
-              <li><a class="dropdown-item logout text-light text-start" href="../logout.php"><img src="image/sign out.png" alt=""> LOGOUT</a></li>
+              <li><a class="dropdown-item text-light menudrop" href="company-profile.php">MY ACCOUNT</a></li>
+                        <li><hr class="dropdown-divider bg-white"></li>
+                        <li><a class="dropdown-item text-light" href="jobmanage.php">JOB MANAGEMENT</a></li>
+                        <li><a class="dropdown-item text-light" href="manage-applicant-resume.php">MANAGE RESUME</a></li>
+                        <li><a class="dropdown-item text-light" href="manage-account-profile.php">MANAGE ACCOUNT PROFILE</a></li>
+                        <li><a class="dropdown-item logout text-light" href="../logout.php">LOGOUT</a></li>
             </ul>
         </ul>
       </div>
@@ -105,7 +105,7 @@
         </div>
     </div>
 </div>
-      <script src="js/manage-account-2.js"></script>
+      <script src="js/change-password.js"></script>
 </body>
 
 </html>

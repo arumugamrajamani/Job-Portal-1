@@ -83,7 +83,7 @@
     <div class="container-responsive p-md-5 mt-4 bg-white" id="main">
         <div class="d-flex justify-content-end">
             <div class="d-flex">
-                <input class="form-control icon" type="search" placeholder="Search an employer" aria-label="Search">
+                <input class="form-control icon" type="search" id="search" placeholder="Search a jobpost" aria-label="Search">
                 <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
             </div>
         </div><br>

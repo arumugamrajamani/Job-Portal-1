@@ -46,7 +46,7 @@ function clearInputsFields() {
 }
 
 $(document).ready(function(){
-    // Trigger this when jobseeker started to type in current password input and validate it
+    // Trigger this when employer started to type in current password input and validate it
     $('#currentpassword').on('keyup', function() {
         let currentpassword = $('#currentpassword').val();
         if(currentpassword.length == 0) {
@@ -56,7 +56,7 @@ $(document).ready(function(){
         }
     })
 
-    // Trigger this when jobseeker started to type in new password input and validate it
+    // Trigger this when employer started to type in new password input and validate it
     $('#newpassword').on('keyup', function() {
         let newpassword = $('#newpassword').val();
         if(newpassword.length == 0) {
@@ -91,7 +91,7 @@ $(document).ready(function(){
         
         // Create ajax request
         $.ajax({
-            url: "php/manage-account-2.inc.php",
+            url: "php/change-password.inc.php",
             method: "POST",
             data: {
                 confirm: true,

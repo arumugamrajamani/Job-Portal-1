@@ -17,6 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="css/jobpost-management.css">
     <!-- <link rel="stylesheet" href="../css/preloader.css"> -->
+    
     <title>Job Post Management | Admin</title>
 </head>
 
@@ -82,7 +83,7 @@
     <br><br><br>
     <div class="container-responsive p-md-5 mt-4 bg-white" id="main">
         <div class="d-flex">
-            <input class="form-control icon i-search" type="search" placeholder="Search a job post" aria-label="Search">
+            <input class="form-control icon i-search" id="search" type="search" placeholder="Search a jobpost" aria-label="Search">
             <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
         </div><br>
         <div class="col-auto">

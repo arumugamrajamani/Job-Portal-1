@@ -9,7 +9,7 @@ function closeNav() {
 }
 function GetSearchValue() {
      var search = $('#search').val();
-        return search;
+     return search;
 }
 // Function for getting the current page number
 function getCurrentPage() {
@@ -35,6 +35,16 @@ $(document).ready(function () {
         }
         });
     }
+    
+    $('#search').on('keyup', function () {
+        let search = $(this).val();
+        if (search != '') {
+            load_data(search);
+        }
+        else {
+            load_data();
+        }
+    });
 
     // Trigger this when user click on the pagination 
     $('#pagination').on('click', '.page-item', function () {

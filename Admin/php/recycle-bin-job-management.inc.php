@@ -123,7 +123,23 @@
             'entries' => $entries);
     echo json_encode($response);
     }
-
+    
+  // when user deleted in jobpost recycler
+if (isset($_POST['deleteJobPost'])) {
+    $postId = mysqli_real_escape_string($conn, $_POST['postId']);
+    mysqli_query($conn, "DELETE FROM `jobpost_recycler` WHERE post_iud = '$postId'");
+}
+  
+  
+  // when user restore a job
+if (isset($_POST['restoreJobPost'])) {
+    $postId = mysqli_real_escape_string($conn, $_POST['postId']);
+    
+    //restoring the deleted job
+    $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM `jobpost_recycler` WHERE post_iud = '$postId'");
+    $row = mysqli_fetch_assoc($fetchDeletedQuery);
+    $postId = $row['post_iud'];
+    $companyName = $row['company_name'];
     $jobTitle = $row['job_title'];
     $employment = $row['employment_type'];
     $jobCategory = $row['job_category'];

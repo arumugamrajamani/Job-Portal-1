@@ -43,7 +43,7 @@
 							<li><a class="dropdown-item text-start name" href="company-profile.php"><img src="image/profile.png" alt="" class="l1"> Full Name</a></li>
 							<li><hr class="dropdown-divider bg-white"></li>
 							<li><a class="dropdown-item text-start Eprofile" href="manage-account-profile.php"><img src="image/edit-profile-black.png" alt="" class="l1"> Edit Profile</a></li>
-							<li><a class="dropdown-item text-start" href="manage-account-2.php"><img src="image/change-pass-black.png" alt="" class="l1"> Change Password</a></li>
+							<li><a class="dropdown-item text-start" href="change-password.php"><img src="image/change-pass-black.png" alt="" class="l1"> Change Password</a></li>
                             <li><a class="dropdown-item text-start" href="bookmark-job.php"><img src="image/job-management.png" alt="" class="l1"> Job Management</a></li>
 							<li><a class="dropdown-item text-start" href="jobapplication.php"><img src="image/job-applicant-black.png" alt="" class="l1"> Job Applications</a></li>
 							<li><a class="dropdown-item text-start" href="resume.php"><img src="image/manage resume.png" alt="" class="l1"> Manage Resume</a></li>

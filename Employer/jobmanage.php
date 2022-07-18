@@ -47,7 +47,7 @@
 						<li><a class="dropdown-item text-dark text-start" href="change-password.php"><img src="image/change-pass-black.png" alt=""> Change Password</a></li>
                         <li><a class="dropdown-item text-dark text-start" href="#"><img src="image/job-management.png" alt=""> Job Management</a></li>
 						<li><a class="dropdown-item text-dark text-start" href="jobapplication.php"><img src="image/job-applicant-black.png" alt=""> Job Applications</a></li>
-						<li><a class="dropdown-item text-dark text-start" href="resume.php"><img src="image/manage resume.png" alt=""> Manage Resume</a></li>
+						<li><a class="dropdown-item text-dark text-start" href="manage-applicant-resume.php"><img src="image/manage resume.png" alt=""> Manage Resume</a></li>
 						<li><a class="dropdown-item logout text-dark text-start" href="../logout.php"><img src="image/logout-black.png" alt=""> LOGOUT</a></li>
 					</ul>
                 </ul>

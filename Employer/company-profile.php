@@ -71,7 +71,7 @@
             <br>
                 <div class="block position-relative div2">
                     <div class="position-absolute bottom-0 end-0 ">
-                        <button class="my-5 mx-3 shadow btn1 fw-bold" type="button">Send Message</button>
+                        <button class="my-5 mx-3 shadow btn1 fw-bold" type="button" onclick="location.href='message-new.php'">Send Message</button> 
                     </div>
                     <div class="position-absolute bottom-0 end-0">
                         <button class=" mx-3 shadow btn2 text-dark fw-bold" type="button">Follow</button>

@@ -8,9 +8,25 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "-170px";
 }
 
+ $.ajax({
+            url: "php/dashboard.inc.php",
+            type: "GET",
+            dataType: "JSON",
+            success: function (data) {
+                //var data = JSON.parse(response);
+                new Array(webDev = []);
+                webDev.push(data.virtual);
+                webDev.push(data.web);
+                webDev.push(data.graphic);
+                webDev.push(data.projMnmt);
+                webDev.push(data.count);
+                webDev.push(data.low);
+                $('#test').html(webDev);
+//alert(webDev);
+
 // Code for the dashboard charts
-var xValues = ["Virtual Assistant", "Web Development", "Graphic and Multimedia", "Project Management",];
-var yValues = [500, 400, 300, 200, 100];
+var xValues = ["Virtual Assistant", "Web Development", "Graphic and Multimedia", "Project Management"];
+//var yValues = [30, 20, 27, 13, 0,40];
 var barColors = ["#50677B", "#372732", "#000000", " #EDBEA4",];
 
 new Chart("myChart", {
@@ -19,7 +35,7 @@ new Chart("myChart", {
         labels: xValues,
         datasets: [{
             backgroundColor: barColors,
-            data: yValues
+            data: webDev
         }]
     },
     options: {
@@ -30,6 +46,8 @@ new Chart("myChart", {
         }
     }
 });
+            }
+        });
 
 
 var xValues = ["ACTIVE", "INACTIVE",];

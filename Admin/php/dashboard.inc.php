@@ -1,5 +1,7 @@
 <?php
 include '../../php/db-connection.php';
+
+if (isset($_POST['getCategory'])) {
 $data = array();
 $i = 1;
 $webDev = 0;
@@ -30,3 +32,4 @@ for ($o = 1; $o <= $count; $o++) {
 $response = array('web' => $webDev, 'virtual' => $virtualAsst, 'graphic' =>$graphic, 'projMnmt' => $projMnmt, 'count' => $count, 'low' => 0);
     
 echo json_encode($response);
+}

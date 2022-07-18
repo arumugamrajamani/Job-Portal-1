@@ -10,7 +10,10 @@ function closeNav() {
 
  $.ajax({
             url: "php/dashboard.inc.php",
-            type: "GET",
+            type: "POST",
+            data:{
+                getCategory: true
+            },
             dataType: "JSON",
             success: function (data) {
                 //var data = JSON.parse(response);

@@ -131,5 +131,4 @@
     <script src="js/navbar.js"></script>
     <script src="../js/preloader.js"></script>
 </body>
-
 </html>

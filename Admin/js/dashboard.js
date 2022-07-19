@@ -93,9 +93,5 @@ $.ajax({
     }
 });
 $(document).ready(function () {
-
-
+    
 });
-
-
-

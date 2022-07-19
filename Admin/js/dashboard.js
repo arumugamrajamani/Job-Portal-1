@@ -16,6 +16,7 @@ function closeNav() {
         },
         dataType: "JSON",
         success: function (data) {
+            //array to store the values needed for the chart
             new Array(values = []);
             values.push(data.virtual);
             values.push(data.web);
@@ -23,10 +24,12 @@ function closeNav() {
             values.push(data.projMnmt);
             values.push(data.count);
             values.push(data.low);
-
-             // Code for the dashboard charts
+            // code for the job categories chart
+            //labels of the chart
             var xValues = ["Virtual Assistant", "Web Development", "Graphic and Multimedia", "Project Management"];
+            //colors
             var barColors = ["#50677B", "#372732", "#000000", " #EDBEA4",];
+            //chart config
             new Chart("myChart", {
             type: "bar",
             data: {
@@ -57,14 +60,18 @@ $.ajax({
     },
     dataType: "JSON",
     success: function (data) {
+        //array to store the values needed for the chart
         new Array(val = []);
         val.push(data.active);
         val.push(data.inactive);
         val.push(data.count);
         val.push(data.low);
+        // code for the active and inactive job chart
+        //labels of the chart
         var xValues = ["ACTIVE", "INACTIVE",];
-        //var yValues = [500, 400, 300, 200, 100];
+        //colors
         var barColors = ["#50677B", "#372732",];
+        //chart config
         new Chart("myChart1", {
             type: "bar",
             data: {

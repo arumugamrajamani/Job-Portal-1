@@ -1,6 +1,5 @@
 <?php
 include '../../php/db-connection.php';
-
 if (isset($_POST['getCategory'])) {
     $data = array();
     $i = 1;
@@ -15,23 +14,22 @@ if (isset($_POST['getCategory'])) {
         $data[$i] = $row['job_category'];
         $i++;
     }
-for ($o = 1; $o <= $count; $o++) {
-    if ($data[$o] == 'Web Development') {
-        $webDev++;
-    } 
-    elseif ($data[$o] == 'Project Management'){
-        $projMnmt++;
+    for ($o = 1; $o <= $count; $o++) {
+        if ($data[$o] == 'Web Development') {
+            $webDev++;
+        } 
+        elseif ($data[$o] == 'Project Management'){
+            $projMnmt++;
+        }
+        elseif ($data[$o] == 'Virtual Assistant'){
+            $virtualAsst++;
+        }
+        elseif ($data[$o] == 'Graphic and Multimedia'){
+            $graphic++;
+        }
     }
-    elseif ($data[$o] == 'Virtual Assistant'){
-        $virtualAsst++;
-    }
-    elseif ($data[$o] == 'Graphic and Multimedia'){
-        $graphic++;
-    }
-}
-$response = array('web' => $webDev, 'virtual' => $virtualAsst, 'graphic' =>$graphic, 'projMnmt' => $projMnmt, 'count' => $count, 'low' => 0);
-    
-echo json_encode($response);
+    $response = array('web' => $webDev, 'virtual' => $virtualAsst, 'graphic' =>$graphic, 'projMnmt' => $projMnmt, 'count' => $count, 'low' => 0);
+    echo json_encode($response);
 }
 
 if (isset($_POST['getJobs'])) {

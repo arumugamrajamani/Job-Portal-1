@@ -1,4 +1,5 @@
 <?php
+//go 2 folders back to establish a connection on the database
 include '../../php/db-connection.php';
 
 //sql query for job categories graph

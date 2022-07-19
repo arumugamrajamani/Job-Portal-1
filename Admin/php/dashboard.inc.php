@@ -33,3 +33,15 @@ $response = array('web' => $webDev, 'virtual' => $virtualAsst, 'graphic' =>$grap
     
 echo json_encode($response);
 }
+
+if (isset($_POST['getJobs'])) {
+    $activeStmt = "SELECT * FROM jobpost";
+    $result = mysqli_query($conn, $activeStmt);
+    $active = mysqli_num_rows($result);
+    $inactiveStmt = "SELECT * FROM jobpost_recycler";
+    $res = mysqli_query($conn, $inactiveStmt);
+    $inactive = mysqli_num_rows($res);
+    $count = $active + $inactive;
+    $response = array('active' => $active, 'inactive' => $inactive, 'count' => $count, 'low' => 0);
+    echo json_encode($response);
+}

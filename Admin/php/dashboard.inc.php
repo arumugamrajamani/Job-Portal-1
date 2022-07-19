@@ -1,5 +1,6 @@
 <?php
 include '../../php/db-connection.php';
+
 if (isset($_POST['getCategory'])) {
     $data = array();
     $i = 1;

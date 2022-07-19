@@ -29,7 +29,7 @@ function closeNav() {
             var xValues = ["Virtual Assistant", "Web Development", "Graphic and Multimedia", "Project Management"];
             //colors
             var barColors = ["#50677B", "#372732", "#000000", " #EDBEA4",];
-            //chart config
+            //chart configuration
             new Chart("myChart", {
             type: "bar",
             data: {
@@ -71,7 +71,7 @@ $.ajax({
         var xValues = ["ACTIVE", "INACTIVE",];
         //colors
         var barColors = ["#50677B", "#372732",];
-        //chart config
+        //chart configuration
         new Chart("myChart1", {
             type: "bar",
             data: {

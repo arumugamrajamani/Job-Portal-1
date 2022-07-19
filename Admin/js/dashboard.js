@@ -49,25 +49,40 @@ function closeNav() {
     }
  });
 
-
-var xValues = ["ACTIVE", "INACTIVE",];
-var yValues = [500, 400, 300, 200, 100];
-var barColors = ["#50677B", "#372732",];
-
-new Chart("myChart1", {
-    type: "bar",
-    data: {
-        labels: xValues,
-        datasets: [{
-            backgroundColor: barColors,
-            data: yValues
-        }]
+$.ajax({
+    url: "php/dashboard.inc.php",
+    type: "POST",
+    data:{
+        getJobs: true
     },
-    options: {
-        legend: { display: false },
-        title: {
-            display: true,
-        }
+    dataType: "JSON",
+    success: function (data) {
+        new Array(val = []);
+        val.push(data.active);
+        val.push(data.inactive);
+        val.push(data.count);
+        val.push(data.low);
+        var xValues = ["ACTIVE", "INACTIVE",];
+        //var yValues = [500, 400, 300, 200, 100];
+        var barColors = ["#50677B", "#372732",];
+        new Chart("myChart1", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                backgroundColor: barColors,
+                data: val
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                }
+            }
+        });
     }
 });
 $(document).ready(function () {

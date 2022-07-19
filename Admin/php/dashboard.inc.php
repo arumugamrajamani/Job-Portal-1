@@ -2,12 +2,12 @@
 include '../../php/db-connection.php';
 
 if (isset($_POST['getCategory'])) {
-$data = array();
-$i = 1;
-$webDev = 0;
-$projMnmt = 0;
-$graphic = 0;
-$virtualAsst = 0;
+    $data = array();
+    $i = 1;
+    $webDev = 0;
+    $projMnmt = 0;
+    $graphic = 0;
+    $virtualAsst = 0;
     $stmt = "SELECT * FROM jobpost";
     $result = mysqli_query($conn, $stmt);
     $count = mysqli_num_rows($result);

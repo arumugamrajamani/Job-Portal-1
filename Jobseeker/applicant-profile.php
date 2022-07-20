@@ -55,6 +55,7 @@
               <li><a class="dropdown-item text-light" href="jobapplication.php">JOB APPLICATIONS</a></li>
               <li><a class="dropdown-item text-light" href="bookmark-job.php">BOOKMARKED JOBS</a></li>
               <li><a class="dropdown-item text-light" href="manage-account-1.php">ACCOUNT SETTINGS</a></li>
+              <li><a class="dropdown-item text-light" href="../Resume-Builder/resume-builder1.php">RESUME BUILDER</a></li>
               <li><a class="dropdown-item logout text-light" href="../logout.php">LOGOUT</a></li>
             </ul>
         </ul>
@@ -72,7 +73,7 @@
             <i class="bi bi-save2 fs-3"></i>
           </div>
           <div class="edit text-center m-1 ">
-            <i class="bi bi-pencil-square fs-3 "></i>
+            <i id="editProfile" class="bi bi-pencil-square fs-3 "></i>
           </div>
         </div>
         <div>

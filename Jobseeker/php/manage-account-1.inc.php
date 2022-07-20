@@ -13,13 +13,24 @@ if (isset($_POST['fetchData'])) {
     $jobseekerName = $row['fullname'];
     $jobseekerEmail = $row['email'];
     $jobseekerNumber = $row['mobile_number'];
-
+    
     // Create Assoc array to return to the ajax call
     $response = array(
         'fullname' => $jobseekerName,
         'email' => $jobseekerEmail,
         'mobile_number' => $jobseekerNumber,
-   
+        
     );
     echo json_encode($response);
+}
+if (isset($_POST['updateData'])){
+    $jobseekerId = $_SESSION['user_id'];
+    $fullname = $_POST['fullname'];
+    $birthday = $_POST['birthday'];
+    $address = $_POST['address'];
+    $email = $_POST['email'];
+    $mobileNumber = $_POST['mobileNumber'];
+    $fetchDetailsQuery = mysqli_query($conn, "UPDATE `jobseeker` SET `fullname`='$fullname',`mobile_number`='$mobileNumber',`email`='$email' WHERE jobseeker_id = $jobseekerId");
+    //$row = mysqli_fetch_assoc($fetchDetailsQuery);
+    echo json_encode($_POST);
 }

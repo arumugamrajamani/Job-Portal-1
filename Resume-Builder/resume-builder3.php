@@ -26,7 +26,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item1 me-0">
-                <a class="nav-link text-dark message active fw-bold" aria-current="page" href="message-jobseekers.php">MESSAGE</a>
+                <a class="nav-link text-dark message active fw-bold" aria-current="page" href="../Jobseeker/message-jobseekers.php">MESSAGE</a>
               </li>
               <li class="nav-item1 fw-bold">
                 <a class="nav-link text-dark about active" href="searchjob.php">POST A JOB</a>
@@ -36,13 +36,13 @@
                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <img class="image" src="image/Copy_of_Parungao_Fernando.png" alt="Profile" width="55" height="55"> Fernando Parungao</a>
                 <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item text-light" href="applicant-profile.php">FULL NAME</a></li>
+                  <li><a class="dropdown-item text-light" href="../Jobseeker/applicant-profile.php">FULL NAME</a></li>
                   <li>
                     <hr class="dropdown-divider bg-white">
                   </li>
-                  <li><a class="dropdown-item text-light" href="jobapplication.php">JOB APPLICATIONS</a></li>
-                  <li><a class="dropdown-item text-light" href="bookmark-job.php">BOOKMARKED JOBS</a></li>
-                  <li><a class="dropdown-item text-light" href="manage-account-1.php">ACCOUNT SETTINGS</a></li>
+                  <li><a class="dropdown-item text-light" href="../Jobseeker/jobapplication.php">JOB APPLICATIONS</a></li>
+                  <li><a class="dropdown-item text-light" href="../Jobseeker/bookmark-job.php">BOOKMARKED JOBS</a></li>
+                  <li><a class="dropdown-item text-light" href="../Jobseeker/manage-account-1.php">ACCOUNT SETTINGS</a></li>
                   <li><a class="dropdown-item logout text-light" href="../logout.php">LOGOUT</a></li>
                 </ul>
             </ul>

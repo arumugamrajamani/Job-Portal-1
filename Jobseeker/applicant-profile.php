@@ -72,7 +72,7 @@
             <i class="bi bi-save2 fs-3"></i>
           </div>
           <div class="edit text-center m-1 ">
-            <i class="bi bi-pencil-square fs-3 "></i>
+            <i id="editProfile" class="bi bi-pencil-square fs-3 "></i>
           </div>
         </div>
         <div>

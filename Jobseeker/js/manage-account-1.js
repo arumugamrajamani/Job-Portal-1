@@ -1,6 +1,9 @@
 $(document).ready(function () {
 
     fetchData();
+    $('#cancel').click(function(){
+        window.location = 'applicant-profile.php';
+    })
     function fetchData() {
         $.ajax({
             url: 'php/manage-account-1.inc.php',

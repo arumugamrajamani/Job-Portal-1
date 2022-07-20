@@ -24,18 +24,56 @@ $(document).ready(function () {
             },
             dataType: "JSON",
             success: function (data) {
-                console.log(data);
-                swal({
-                    title: "Profile Updated Successfully",
-                    icon: "success",
-                    button: "Okay",
-                })
-                .then(function() {
-                    window.location = "applicant-profile.php";
-                });
+                if (data.status == 'success') {
+                    swal({
+                        title: "Profile Updated Successfully",
+                        icon: "success",
+                        button: "Okay",
+                    })
+                    .then(function() {
+                            window.location = "applicant-profile.php";
+                    });
+                }
+                else if (data.status == 'error'){
+                    if(data.fullname.status == 'error') {
+                        $('#fullname').removeClass().addClass('form-control border-danger');
+                        $('#fullname').popover({ placement: 'right', content: data.fullname.message }).popover('show');
+                    } 
+                    else {
+                        $('#fullname').removeClass().addClass('form-control border-success').popover('dispose');
+                    }
+                    if(data.birthday.status == 'error') {
+                        $('#birthday').removeClass().addClass('form-control border-danger');
+                        $('#birthday').popover({ placement: 'right', content: data.birthday.message }).popover('show');
+                    } 
+                    else {
+                        $('#birthday').removeClass().addClass('form-control border-success').popover('dispose');
+                    }
+                    if(data.address.status == 'error') {
+                        $('#address').removeClass().addClass('form-control border-danger');
+                        $('#address').popover({ placement: 'right', content: data.address.message }).popover('show');
+                    } 
+                    else {
+                        $('#address').removeClass().addClass('form-control border-success').popover('dispose');
+                    }
+                    if(data.email.status == 'error') {
+                        $('#email').removeClass().addClass('form-control border-danger');
+                        $('#email').popover({ placement: 'right', content: data.email.message }).popover('show');
+                    } 
+                    else {
+                        $('#email').removeClass().addClass('form-control border-success').popover('dispose');
+                    }if(data.mobile.status == 'error') {
+                        $('#mobile_number').removeClass().addClass('form-control border-danger');
+                        $('#mobile_number').popover({ placement: 'right', content: data.mobile.message }).popover('show');
+                    } 
+                    else {
+                        $('#mobile_number').removeClass().addClass('form-control border-success').popover('dispose');
+                    }
+                }
             }
         });
     });
+
     function fetchData() {
         $.ajax({
             url: 'php/manage-account-1.inc.php',

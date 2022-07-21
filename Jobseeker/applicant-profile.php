@@ -55,8 +55,11 @@
               <li><a class="dropdown-item text-light" href="jobapplication.php">JOB APPLICATIONS</a></li>
               <li><a class="dropdown-item text-light" href="bookmark-job.php">BOOKMARKED JOBS</a></li>
               <li><a class="dropdown-item text-light" href="manage-account-1.php">ACCOUNT SETTINGS</a></li>
+<<<<<<< HEAD
               <li><a class="dropdown-item text-light" href="../Resume-Builder/resume-builder1.php">RESUME BUILDER</a></li>
               <li><a class="dropdown-item text-light" href="manage-account-2.php">CHANGE PASSWORD</a></li>
+=======
+>>>>>>> ea98edec6965b977c911c234b257afc708766b1b
               <li><a class="dropdown-item logout text-light" href="../logout.php">LOGOUT</a></li>
             </ul>
         </ul>

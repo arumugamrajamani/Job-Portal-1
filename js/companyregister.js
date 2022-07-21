@@ -282,6 +282,7 @@ $(document).ready(function () {
                 // Checking if the data is success or not
                 if (data.status == "success") {
                     clearFields();
+                    alert(employerName);
                     // Create sweet alert to display error messages and return to index page
                     swal({
                         title: "Account Succesfully Created!",

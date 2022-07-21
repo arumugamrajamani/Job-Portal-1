@@ -55,8 +55,10 @@
 
     <div class="container bg-white my-4"> <br>
         <div class="banner mx-5">
-            <div class="btn-group">
-            <button class="fa fa-pen-to-square" type="button" onclick="location.href='manage-account-profile.php'"></button>
+            <div class="div1 text-end">
+                <button id="edit-profile-btn" class="btn">
+                    <i class="fa fa-pen-to-square"></i>
+                </button>
             </div>
             <div class="d-flex">
                 <img class="company_logo mx-5 fa-5x" src="" id="company_logo_name"></img>

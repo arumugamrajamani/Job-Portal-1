@@ -21,7 +21,7 @@ if (isset($_POST['getData'])) {
     $row = mysqli_fetch_assoc($fetchDetailsQuery);
     // Get the employer information needed to edit modal
     $profilePic = GetProfilePicLoc($row['profile_picture']);
-    $fullName = $row['fullname'];
+    $fullName = strtoupper($row['fullname']);
     $email = $row['email'];
     $number = $row['mobile_number'];
 

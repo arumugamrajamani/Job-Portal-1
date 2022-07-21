@@ -24,13 +24,15 @@ if (isset($_POST['fetchData'])) {
     $fullName = $row['fullname'];
     $email = $row['email'];
     $number = $row['mobile_number'];
+    $name = strtoupper($fullName);
 
     // Create Assoc array to return to the ajax call
     $response = array(
         'profile_picture' => $profilePic,
         'fullname' => $fullName,
         'email' => $email,
-        'mobile_number' => $number
+        'mobile_number' => $number,
+        'upperName' => $name
 
         
     );

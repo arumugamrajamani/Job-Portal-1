@@ -48,7 +48,7 @@
               role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
             <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item text-light menubar" href="applicant-profile.php">MY PROFILE</a></li>
+              <li><a id = "upperName" class="dropdown-item text-light menubar" href="applicant-profile.php"></a></li>
               <li>
                 <hr class="dropdown-divider bg-white">
               </li>

@@ -14,37 +14,36 @@ $(document).ready(function(){
             $('#password').removeClass().addClass('form-control border-success');
             $('#password-errorMsg').text(null);
         }
-    })
+    });
     
     // Trigger this when user started to type in confirm password input and validate it
-    $('#repassword').on('keyup', function() {
+    $('#password1').on('keyup', function() {
         let password = $('#password').val();
-        let repassword = $('#repassword').val();
-        if(repassword.length == 0){
-            $('#repassword').removeClass().addClass('form-control border-danger');
-            $('#repassword-errorMsg').text("Confirm password is required.");
-        } else if(password != repassword) {
-            $('#repassword').removeClass().addClass('form-control border-danger');
-            $('#repassword-errorMsg').text("Password does not match.");
+        let password1 = $('#password1').val();
+        if(password1.length == 0){
+            $('#password1').removeClass().addClass('form-control border-danger');
+            $('#password1-errorMsg').text("Confirm password is required.");
+        } else if(password != password1) {
+            $('#password1').removeClass().addClass('form-control border-danger');
+            $('#password1-errorMsg').text("Password does not match.");
         } else {
-            $('#repassword').removeClass().addClass('form-control border-success');
-            $('#repassword-errorMsg').text(null);
+            $('#password1').removeClass().addClass('form-control border-success');
+            $('#password1-errorMsg').text(null);
         }
-    })
+    });
 
     //when form is submittd
-    $("form").submit(function(event){
-        event.preventDefault();
+    $("#resetpass").click(function(event){
+        //event.preventDefault();
         let password = $('#password').val()
-        let repassword = $('#repassword').val()
-
+        let password1 = $('#password1').val()
         $.ajax({
             url: "php/resetpassword.inc.php",
             method: "POST",
             data: {
                 submit: true,
                 password: password,
-                repassword: repassword
+                password1: password1
             },
             dataType: 'json',
             success: function(data){
@@ -60,14 +59,14 @@ $(document).ready(function(){
                     }
                     // if there is an error in confirm password, display error message
                     if(data.confirmpasswordRR.status == 'error') {
-                        $('#repassword').removeClass().addClass('form-control border-danger');
-                        $('#repassword-errorMsg').text(data.confirmpasswordRR.message);
+                        $('#password1').removeClass().addClass('form-control border-danger');
+                        $('#password1-errorMsg').text(data.confirmpasswordRR.message);
                     } else {
                         $('#confirmpassword').removeClass().addClass('form-control border-success');
-                        $('#repassword-errorMsg').text(null);
+                        $('#password1-errorMsg').text(null);
                     }
                 }
             }
         })
-    })
+    });
 })

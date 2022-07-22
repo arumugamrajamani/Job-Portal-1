@@ -11,7 +11,7 @@ $(document).ready(function(){
     // Trigger this when user started to type in email input and validate it
     $('#email').on('keyup', function() {
         let email = $('#email').val();
-        console.log(email)
+        //console.log(email)
         if (email.length == 0) {
             $('#email').removeClass().addClass('form-control border-danger');
             $('#email-errorMsg').text("Email is required.");
@@ -25,13 +25,13 @@ $(document).ready(function(){
     })
 
     //when form is submittd
-    $("form").submit(function(event){
+    $("#reset").click(function(event){
         toastr.info('Please wait.', 'Wait for the server to process.');
-        event.preventDefault();
+        //event.preventDefault();
         let email = $('#email').val()
-        let submit = $('#submit').val()
+        let submit = $('#reset').val()
         //disanable the button for anti spam
-        $("#submit").attr("disabled", true);
+        $("#reset").attr("disabled", true);
         $.ajax({
             url: "php/forgotpassword.inc.php",
             method: "POST",
@@ -44,14 +44,14 @@ $(document).ready(function(){
                 if (data.status == "success"){
                     window.location.href = "otp-verification.php"
                     //re enable the button
-                    $("#submit").attr("disabled", false);
+                    $("#reset").attr("disabled", false);
                 }else{
                     $('#email').removeClass().addClass('form-control border-danger');
-                    $('#email-errorMsg').text("Email is not in our records.");
+                    $('#email-invalid').text("Email is not in our records.");
                     
                     toastr.warning("We can't find you", 'Email is not in our records.');
                     //re enable the button
-                    $("#submit").attr("disabled", false);
+                    $("#reset").attr("disabled", false);
                 }
             }
         })

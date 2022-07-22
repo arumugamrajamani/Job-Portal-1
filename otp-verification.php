@@ -13,6 +13,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/otp-verification.css">
+    <!-- jQuery cdn link below -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Toast CDN for functionality of toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Toast CDN for design of toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <div class="color-overlay">
@@ -50,14 +56,13 @@
 					<label class="error text-danger"> OTP code is incorrect</label>
 					<label class=" d-flex my-2"></i>Enter the code that was sent in your email to reset your password</label>
                 </div>
-				<a href="reset-password.php">
-                    <button class="btn btn1 fs-7 m-3 pt-2 px-5" id="submit" type="button">Submit</button>
-				</a>	
-				<a href="forgot-password.php">
-					<button class="btn btn1 fs-7 m-3 px-4" id="re-enter" type="button">Re-Enter Email</button>
-				</a>
+                    <button class="btn btn1 fs-7 m-3 pt-2 px-5" id="submit" type="button">Submit</button>	
+				    <a href="forgot-password.php">
+					    <button class="btn btn1 fs-7 m-3 px-4" id="re-enter" type="button">Re-Enter Email</button>
+				    </a>
             </section>
         </div>
     </div>
+    <script src="js/otpverification.js"></script>
 </body>
 </html>

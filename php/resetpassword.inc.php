@@ -6,7 +6,7 @@
         // Get the data from the form
         $email = $_SESSION['OTPemail'];
         $password = $_POST['password'];
-        $confirmpassword = $_POST['repassword'];
+        $confirmpassword = $_POST['password1'];
         
         // Validation for password
         if(empty($password)) {

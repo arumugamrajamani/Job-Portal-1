@@ -67,10 +67,6 @@
             </section>
         </div>
     </div>
-<<<<<<< HEAD
-    <script src="js/forgotpassword.js"></script>
-=======
     <script src="js/otpverification.js"></script>
->>>>>>> 9fae1d69d7a92c8ea66658277b5bd8a14221f6c2
 </body>
 </html>

@@ -36,8 +36,8 @@
         // Validation for new password
         if(empty($newpassword)) {
             $newpasswordRR = array('status' => 'error', 'message' => 'New Password is required.');
-        } elseif (strlen($newpassword) < 8 || strlen($newpassword) > 30) {
-            $newpasswordRR = array('status' => 'error', 'message' => 'New Password must be between 8 and 30 characters.');
+        } elseif(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,30}$/', $newpassword)) {
+            $newpasswordRR = array('status' => 'error', 'message' => 'New Password must contain a combination of one uppercase letter, numbers, and special characters.');
         } else {
             $newpasswordRR = array('status' => 'success');
         }

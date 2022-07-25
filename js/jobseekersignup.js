@@ -167,6 +167,12 @@ $(document).ready(function(){
     $('form').submit(function(event) {
         event.preventDefault();
         let fullname = $('#fullname').val();
+        let address = $('#address').val();
+        let birthday = $('#birthday').val();
+        let experience = $('#experience').val();
+        let salary = $('#salary').val();
+        let attainment = $('#attainment').val();
+        let hours = $('#hours').val();
         let mobilenumber = $('#mobilenumber').val();
         let email = $('#email').val();
         let password = $('#password').val();
@@ -181,7 +187,13 @@ $(document).ready(function(){
                 mobilenumber: mobilenumber,
                 email: email,
                 password: password,
-                confirmpassword: confirmpassword
+                confirmpassword: confirmpassword,
+                address: address,
+                birthday: birthday,
+                salary: salary,
+                experience: experience,
+                attainment: attainment,
+                hours: hours
             },
             dataType: 'json',
             success: function(data) {

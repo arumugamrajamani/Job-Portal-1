@@ -93,7 +93,7 @@
                 <div class="row mb-3 ms-4">
                     <label for="password" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-sm-9">
-                        <input type="password" required="" class="form-control border border-success" id="password">
+                        <input type="password" required="" class="form-control" id="password">
                         <div class="invalid-feedback"> Please enter your password</div>
                     </div>
                 </div>

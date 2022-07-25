@@ -92,7 +92,7 @@ h2 {
   position: relative;
   margin-left: 0px;
   width: 550px;
-  height: 550px;
+  height: 1100px;
   left: 59px;
   top: 200px;
   background: #ffffff;
@@ -201,6 +201,14 @@ hr {
   .masthead {
     width: 100%;
   }
+  .navbar-toggler {
+    position: relative;
+    right: 20px;
+  }
+  .online {
+    position: relative;
+    bottom: 160px;
+  }
 }
 @media screen and (max-width: 700px) {
   .logo {
@@ -250,7 +258,7 @@ hr {
     margin-left: -85px;
     margin-top: -60px;
     width: 325px;
-    height: 700px;
+    height: 920px;
   }
   .online {
     width: 110px !important;
@@ -259,5 +267,9 @@ hr {
   }
   .container input {
     width: 250px;
+  }
+  .online {
+    position: relative;
+    bottom: 230px;
   }
 }

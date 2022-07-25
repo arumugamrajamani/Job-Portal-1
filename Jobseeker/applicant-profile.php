@@ -151,29 +151,29 @@
         <div class="col-md-2 mx-auto mb-4">
           <h6 class="text-uppercase font-weight-bold">JOB SEEKER</h6>
           <ul class="list-unstyled">
-            <li class="my-0"><a href="#" class="text-dark">Register</a></li>
-            <li class="my-0"><a href="#" class="text-dark">Job Search</a></li>
-            <li class="my-0"><a href="#" class="text-dark">How it works</a></li>
+            <li class="my-0"><a href="../jobseekersignup.php" class="text-dark">Register</a></li>
+            <li class="my-0"><a href="searchjob.php" class="text-dark">Job Search</a></li>
+            <li class="my-0"><a href="../howitworks-jobseeker.php" class="text-dark">How it works</a></li>
           </ul>
         </div>
 
         <div class="col-md-2 mx-auto mb-4">
           <h6 class="text-uppercase font-weight-bold">EMPLOYER</h6>
           <ul class="list-unstyled">
-            <li class="my-0"><a href="#" class="text-dark">Register</a></li>
-            <li class="my-0"><a href="#" class="text-dark">Post a job</a></li>
-            <li class="my-0"><a href="#" class="text-dark">How it works</a></li>
+            <li class="my-0"><a href="../companyregister.php" class="text-dark">Register</a></li>
+            <li class="my-0"><a href="postajob.php" class="text-dark">Post a job</a></li>
+            <li class="my-0"><a href="../howitworks-employ.php" class="text-dark">How it works</a></li>
           </ul>
         </div>
 
         <div class="col-md-2 mx-auto mb-4">
           <h6 class="text-uppercase font-weight-bold">OTHER INFORMATIONS</h6>
           <ul class="list-unstyled">
-            <li class="my-0"></i> <a href="#aboutus" class="text-dark">About us</a></li>
-            <li class="my-0"></i> <a href="#faq" class="text-dark">FAQ</a></li>
-            <li class="my-0"></i> <a href="termsandcondition.php" class="text-dark">Terms and conditions</a></li>
-            <li class="my-0"></i><a href="privacypolicy.php" class="text-dark">Privacy Policy</a></li>
-            <li class="my-0"></i> <a href="termsofuse.php" class="text-dark">Terms of use</a></li>
+            <li class="my-0"></i> <a href="../index.php#aboutus" class="text-dark">About us</a></li>
+            <li class="my-0"></i> <a href="../index.php#faq" class="text-dark">FAQ</a></li>
+            <li class="my-0"></i> <a href="../termsandcondition.php" class="text-dark">Terms and conditions</a></li>
+            <li class="my-0"></i><a href="../privacypolicy.php" class="text-dark">Privacy Policy</a></li>
+            <li class="my-0"></i> <a href="../termsofuse.php" class="text-dark">Terms of use</a></li>
           </ul>
         </div>
         <div class="col-md-2 mx-auto mb-4 text-center">

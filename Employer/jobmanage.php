@@ -148,7 +148,7 @@
                             </ul>
                         </nav> 
                         <div class="text-end">
-                            <button class="bt mt-1 text-dark" type="button" id="button">ADD JOB POST</button>
+                            <button class="bt mt-1 text-dark"  type="button" id="button" onclick="location.href='postajob.php'">ADD JOB POST</button>
                         </div>
                     </div>
                 </section>

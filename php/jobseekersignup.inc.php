@@ -123,10 +123,15 @@
             $mobilenumber = mysqli_real_escape_string($conn, $mobilenumber);
             $email = mysqli_real_escape_string($conn, $email);
             $hashpassword = mysqli_real_escape_string($conn, password_hash($password, PASSWORD_DEFAULT));
-
+            $address = mysqli_real_escape_string($conn, $_POST['address']);
+            $experience = mysqli_real_escape_string($conn, $_POST['experience']);
+            $salary = mysqli_real_escape_string($conn, $_POST['salary']);
+            $hours = mysqli_real_escape_string($conn, $_POST['hours']);
+            $attainment = mysqli_real_escape_string($conn, $_POST['attainment']);
+            $birthday = mysqli_real_escape_string($conn, $_POST['birthday']);
             // Insert the data into the jobseeker table
-            mysqli_query($conn, "INSERT INTO jobseeker (fullname, mobile_number, email, password, date_created) 
-                    VALUES ('$fullname', '$mobilenumber', '$email', '$hashpassword', now())");
+            mysqli_query($conn, "INSERT INTO jobseeker (fullname, mobile_number, email, password, date_created, address, birthday, experience, salary, attainment, hours) 
+                    VALUES ('$fullname', '$mobilenumber', '$email', '$hashpassword', now(), '$address', '$birthday', '$experience', '$salary', '$attainment', '$hours')");
 
             // Return this as status success response
             $response = array('status' => 'success');          

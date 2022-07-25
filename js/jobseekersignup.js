@@ -52,6 +52,72 @@ $(document).ready(function(){
             $('#mobilenumber').removeClass().addClass('form-control border-success').popover('dispose');
         }
     })
+    
+     // Trigger this when user started to type in companyaddress input and validate it
+    $('#address').on('keyup', function () {
+        let address = $('#address').val();
+        if (address.length == 0) {
+            $('#address').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#address').popover({ placement: 'right', content: 'Address is required.' }).popover('show');
+        } else {
+            $('#address').removeClass().addClass('form-control border-success').popover('dispose');
+        }
+    })
+    
+     // Trigger this when user started to type in companyaddress input and validate it
+    $('#birthday').on('keyup', function () {
+        let address = $('#birthday').val();
+        if (address.length == 0) {
+            $('#birthday').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#birthday').popover({ placement: 'right', content: 'Birthday is required.' }).popover('show');
+        } else {
+            $('#birthday').removeClass().addClass('form-control border-success').popover('dispose');
+        }
+    })
+    
+     // Trigger this when user started to type in companyaddress input and validate it
+    $('#experience').on('keyup', function () {
+        let address = $('#experience').val();
+        if (address.length == 0) {
+            $('#experience').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#experience').popover({ placement: 'right', content: 'Experience is required.' }).popover('show');
+        } else {
+            $('#experience').removeClass().addClass('form-control border-success').popover('dispose');
+        }
+    })
+    
+     // Trigger this when user started to type in companyaddress input and validate it
+    $('#salary').on('keyup', function () {
+        let address = $('#salary').val();
+        if (address.length == 0) {
+            $('#salary').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#salary').popover({ placement: 'right', content: 'Salary is required.' }).popover('show');
+        } else {
+            $('#salary').removeClass().addClass('form-control border-success').popover('dispose');
+        }
+    })
+    
+     // Trigger this when user started to type in companyaddress input and validate it
+    $('#attainment').on('keyup', function () {
+        let address = $('#attainment').val();
+        if (address.length == 0) {
+            $('#attainment').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#attainment').popover({ placement: 'right', content: 'H.E. Attainment is required.' }).popover('show');
+        } else {
+            $('#attainment').removeClass().addClass('form-control border-success').popover('dispose');
+        }
+    })
+    
+     // Trigger this when user started to type in companyaddress input and validate it
+    $('#hours').on('keyup', function () {
+        let address = $('#hours').val();
+        if (address.length == 0) {
+            $('#hours').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#hours').popover({ placement: 'right', content: 'Available Hours is required.' }).popover('show');
+        } else {
+            $('#hours').removeClass().addClass('form-control border-success').popover('dispose');
+        }
+    })
 
     // Trigger this when user started to type in email input and validate it
     $('#email').on('keyup', function() {

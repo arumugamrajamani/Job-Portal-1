@@ -60,25 +60,40 @@
                     <h1 class="text-dark fw-bold">JOB SEEKER REGISTRATION FORM</h1>
                 </div>
                 <h2 class="text-black text-center mt-4">ACCOUNT INFORMATION</h2>
-                <hr>
-                <div class="row mb-3 mt-3 ms-4">
+                 <div class="row mb-3 mt-3 ms-4">
+
                     <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
+
                     <div class="col-sm-9">
-                        <input type="text" class="form-control-label" id="fullname">               
+                        <input type="text" class="form-control error" id="fullname">               
                         <div class="text-danger"> Please enter full name</div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
-                    <label for="email" class="col-sm-2 col-form-label-label">Email</label>
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-9">
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control error" id="email">
                         <div class="text-danger"> Please enter your email address</div>
+                    </div>
+                </div>
+                <div class="row mb-3 mt-3 ms-4">
+                    <label for="fullname" class="col-sm-2 col-form-label">Address</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control error" id="address">               
+                        <div class="text-danger"> Please enter full address</div>
+                    </div>
+                </div>
+                <div class="row mb-3 mt-3 ms-4">
+                    <label for="fullname" class="col-sm-2 col-form-label">Birthday</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control error" id="birthday">               
+                        <div class="text-danger"> Please enter your birthday</div>
                     </div>
                 </div>
                 <div class="row mb-3 ms-4">
                     <label for="password" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-sm-9">
-                        <input type="password" required="" class="form-control border border-success" id="password">
+                        <input type="password" required="" class="form-control" id="password">
                         <div class="invalid-feedback"> Please enter your password</div>
                     </div>
                 </div>
@@ -94,6 +109,34 @@
                     <div class="col-sm-9">
                         <input type="number" required="" class="form-control" id="mobilenumber">
                         <div class="invalid-feedback"> Please enter your mobile number</div>
+                    </div>
+                </div>
+                <div class="row mb-3 mt-3 ms-4">
+                    <label for="fullname" class="col-sm-2 col-form-label">Experience</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control error" id="experience">               
+                        <div class="text-danger"> Type in your experience</div>
+                    </div>
+                </div>
+                <div class="row mb-3 ms-4">
+                    <label for="mobilenumber" class="col-sm-2 col-form-label">Expected Salary</label>
+                    <div class="col-sm-9">
+                        <input type="number" required="" class="form-control" id="salary">
+                        <div class="invalid-feedback"> Please enter your desire amount salary</div>
+                    </div>
+                </div>
+                <div class="row mb-3 mt-3 ms-4">
+                    <label for="fullname" class="col-sm-2 col-form-label">H.E. Attainment</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control error" id="attainment">               
+                        <div class="text-danger"> Type in your educational background</div>
+                    </div>
+                </div>
+                <div class="row mb-3 ms-4">
+                    <label for="mobilenumber" class="col-sm-2 col-form-label">Available Hours</label>
+                    <div class="col-sm-9">
+                        <input type="number" required="" class="form-control" id="hours">
+                        <div class="invalid-feedback"> Please enter your desire amount in hours</div>
                     </div>
                 </div>
                 <br>

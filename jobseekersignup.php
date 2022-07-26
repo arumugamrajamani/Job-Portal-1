@@ -60,6 +60,20 @@
                     <h1 class="text-dark fw-bold">JOB SEEKER REGISTRATION FORM</h1>
                 </div>
                 <h2 class="text-black text-center mt-4">ACCOUNT INFORMATION</h2>
+				<div class="row mb-3 mt-3 ms-4">
+                    <label for="Profile" class="profile-picture col-sm-2">Profile Picture:</label>
+                    <div class="col-sm-7">
+                        <input type="file" id="profilePic" class="file form-control" name="Profile">
+                        <div class="text-danger"> Please attach a file</div>
+                    </div>
+                </div>
+				<div class="row mb-3 mt-3 ms-4">
+                    <label for="Resume" class="profile-picture col-sm-2">Resume:</label>
+                    <div class="col-sm-7">
+                        <input type="file" id="resume" class="file form-control" name="Resume">
+                        <div class="text-danger"> Please attach a file</div>
+                    </div>
+                </div>
                  <div class="row mb-3 mt-3 ms-4">
 
                     <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>

@@ -177,26 +177,34 @@ $(document).ready(function(){
         let email = $('#email').val();
         let password = $('#password').val();
         let confirmpassword = $('#confirmpassword').val();
+		let profilePic = $('#profilePic').prop('files')[0];
+        let resume = $('#resume').prop('files')[0];
+		
+		let formData = new FormData();
+        formData.append('submit', true);
+		formData.append('fullname', fullname);
+		formData.append('mobilenumber', mobilenumber);
+		formData.append('email', email);
+		formData.append('password', password);
+		formData.append('confirmpassword', confirmpassword);
+		formData.append('address', address);
+		formData.append('birthday', birthday);
+		formData.append('salary', salary);
+		formData.append('experience', experience);
+		formData.append('attainment', attainment);
+		formData.append('hours', hours);
+		formData.append('profilePic', profilePic);
+		formData.append('resume', resume);
         
         $.ajax({
             url: 'php/jobseekersignup.inc.php',
             type: 'POST',
-            data: {
-                submit: true,
-                fullname: fullname,
-                mobilenumber: mobilenumber,
-                email: email,
-                password: password,
-                confirmpassword: confirmpassword,
-                address: address,
-                birthday: birthday,
-                salary: salary,
-                experience: experience,
-                attainment: attainment,
-                hours: hours
-            },
-            dataType: 'json',
+            data: formData,
+			contentType: false,
+            processData: false,
+            dataType: 'JSON',
             success: function(data) {
+				console.log(data);
                 if(data.status == 'success') {
                     // Function to clear all the fields including the error messages and error borders
                     clearFields();

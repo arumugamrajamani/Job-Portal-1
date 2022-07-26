@@ -204,7 +204,7 @@ $(document).ready(function(){
             processData: false,
             dataType: 'JSON',
             success: function(data) {
-				console.log(formData);
+				console.log(data);
                 if(data.status == 'success') {
                     // Function to clear all the fields including the error messages and error borders
                     clearFields();

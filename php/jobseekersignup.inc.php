@@ -52,6 +52,13 @@
             return false;
         }
     }
+	// Function for storing files into storage folder
+	function InsertIntoStorage($tmp_name, $filename)
+	{
+		//$target_directory = "../storage/";
+		$path =  "../storage/" . $filename;
+		move_uploaded_file($tmp_name, $path);
+	}
 
     // Function for validating if input is valid fullname
     function isValidFullname($fullname){
@@ -79,24 +86,24 @@
 		
 		if (!isset($_FILES["profilePic"])) {
         $profilePicrr = array('status' => 'error', 'message' => 'company logo is required.');
-    } elseif (!in_array(pathinfo($_FILES["profilePic"]["name"], pathinfo_extension), $allowed_logo_extension)) {
+    } elseif (!in_array(pathinfo($_FILES["profilePic"]["name"], PATHINFO_EXTENSION), $allowed_logo_extension)) {
         $profilePicrr = array('status' => 'error', 'message' => 'only png, jpg, jpeg are allowed.');
     } elseif (($_FILES["profilePic"]["size"] > 15000000)) {
         $profilePicrr = array('status' => 'error', 'message' => 'must be less than 15mb.');
     } else {
         $profilePicrr = array('status' => 'success');
-        $profilePicExtension = pathinfo($_FILES["profilePic"]["name"], pathinfo_extension);
+        $profilePicExtension = pathinfo($_FILES["profilePic"]["name"], PATHINFO_EXTENSION);
     }
 
     if (!isset($_FILES["resume"])) {
         $resumerr = array('status' => 'error', 'message' => 'dti resume is required.');
-    } elseif (!in_array(pathinfo($_FILES["resume"]["name"], pathinfo_extension), $allowed_resume_extension)) {
+    } elseif (!in_array(pathinfo($_FILES["resume"]["name"], PATHINFO_EXTENSION), $allowed_resume_extension)) {
         $resumerr = array('status' => 'error', 'message' => 'only pdf are allowed.');
     } elseif (($_FILES["resume"]["size"] > 5000000)) {
         $resumerr = array('status' => 'error', 'message' => 'must be less than 5mb.');
     } else {
         $resumerr = array('status' => 'success');
-        $resumeExtension = pathinfo($_FILES["resume"]["name"], pathinfo_extension);
+        $resumeExtension = pathinfo($_FILES["resume"]["name"], PATHINFO_EXTENSION);
     }
         // Validation for fullname
         if(empty($_POST['fullname'])) {
@@ -169,6 +176,8 @@
             mysqli_query($conn, "INSERT INTO jobseeker (fullname, mobile_number, profile_picture, resume, email, password, date_created, address, birthday, experience, salary, attainment, hours) 
                     VALUES ('$fullname', '$mobilenumber', '$profilePicNewName', '$resumeNewName', '$email', '$hashpassword', now(), '$address', '$birthday', '$experience', '$salary', '$attainment', '$hours')");
 
+			InsertIntoStorage($_FILES["profilePic"]["tmp_name"], $profilePicNewName);
+			InsertIntoStorage($_FILES["resume"]["tmp_name"], $resumeNewName);
             // Return this as status success response
             $response = array('status' => 'success');          
         } else {

@@ -12,6 +12,12 @@ $(document).ready(function () {
             $('#body-h').html(response.tableData);
         }
         });
+
+        fetchData();
+    $('#editProfile').click(function(){
+        window.location = 'manage-account-profile.php';
+    });
+
     function fetchData() {
         $.ajax({
             url: 'php/company-profile.inc.php',

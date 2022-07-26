@@ -55,9 +55,9 @@
 
     <div class="container bg-white my-4"> <br>
         <div class="banner mx-5">
-            <div class="div1 text-end">
+            <div class="btn div1 text-end">
                 <button id="edit-profile-btn" class="btn">
-                    <i class="fa fa-pen-to-square"></i>
+                <i id="editProfile" class="fa fa-pen-to-square"></i>
                 </button>
             </div>
             <div class="d-flex">

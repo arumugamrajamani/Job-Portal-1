@@ -46,7 +46,10 @@
           <li class="nav-item account dropdown active">
             <a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown"
               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ 
+	
               <img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
+			 
             <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
               <li><a id = "upperName" class="dropdown-item text-light menubar" href="applicant-profile.php"></a></li>
               <li>
@@ -63,6 +66,14 @@
       </div>
     </div>
   </nav><br>
+  
+  
+  <style>
+                .prof{
+					margin-top: 6%;
+                    margin-left: 30%;
+                }
+</style>
 
   <div class="container shadow">
     <div class="masthead" style="background-image: url('./image/bg3.png');">
@@ -80,7 +91,11 @@
         <div>
           <h3 class="fw-bold p-5 ms-3"></h3>
         </div>
+		
+		 <div class="prof">
         <img class="profile_pic fa-5x"src="" id="profile_picture"></img>
+		</div>
+		
       </section>
       <div class="name text-center">
         <h3 class="fw-bold mt-2" id="fullname"></h3>

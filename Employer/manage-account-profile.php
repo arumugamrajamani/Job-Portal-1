@@ -146,7 +146,7 @@
                 </div>
             </div><br>
             <div class="text-center">
-                <button type="submit" class="submits" id="SAVE-NOW">UPDATE DETAILS</button>
+                <button type="submit" class="submits" id="save-now">UPDATE DETAILS</button>
             </div>
         </form>
         <br><br><br><br><br>

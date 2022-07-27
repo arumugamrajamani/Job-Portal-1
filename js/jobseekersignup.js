@@ -253,6 +253,54 @@ $(document).ready(function(){
                     } else {
                         $('#confirmpassword').removeClass().addClass('form-control border-success');
                     }
+                    if(data.resumerr.status == 'error') {
+                        $('#resume').removeClass().addClass('form-control border-danger');
+                        $('#resume').popover({ placement: 'right', content: data.resumerr.message }).popover('show');
+                    } else {
+                        $('#resume').removeClass().addClass('form-control border-success');
+                    }                   
+                    if(data.profilePicrr.status == 'error') {
+                        $('#profilePic').removeClass().addClass('form-control border-danger');
+                        $('#profilePic').popover({ placement: 'right', content: data.profilePicrr.message }).popover('show');
+                    } else {
+                        $('#profilePic').removeClass().addClass('form-control border-success');
+                    }
+                    if(data.attainmentRR.status == 'error') {
+                        $('#attainment').removeClass().addClass('form-control border-danger');
+                        $('#attainment').popover({ placement: 'right', content: data.attainmentRR.message }).popover('show');
+                    } else {
+                        $('#attainment').removeClass().addClass('form-control border-success');
+                    }
+                    if(data.birthdayRR.status == 'error') {
+                        $('#birthday').removeClass().addClass('form-control border-danger');
+                        $('#birthday').popover({ placement: 'right', content: data.birthdayRR.message }).popover('show');
+                    } else {
+                        $('#birthday').removeClass().addClass('form-control border-success');
+                    }
+                    if(data.salaryRR.status == 'error') {
+                        $('#salary').removeClass().addClass('form-control border-danger');
+                        $('#salary').popover({ placement: 'right', content: data.salaryRR.message }).popover('show');
+                    } else {
+                        $('#salary').removeClass().addClass('form-control border-success');
+                    }
+                    if(data.experienceRR.status == 'error') {
+                        $('#experience').removeClass().addClass('form-control border-danger');
+                        $('#experience').popover({ placement: 'right', content: data.experienceRR.message }).popover('show');
+                    } else {
+                        $('#experience').removeClass().addClass('form-control border-success');
+                    }
+                    if(data.hoursRR.status == 'error') {
+                        $('#hours').removeClass().addClass('form-control border-danger');
+                        $('#hours').popover({ placement: 'right', content: data.hoursRR.message }).popover('show');
+                    } else {
+                        $('#hours').removeClass().addClass('form-control border-success');
+                    }
+                    if(data.addressRR.status == 'error') {
+                        $('#address').removeClass().addClass('form-control border-danger');
+                        $('#address').popover({ placement: 'right', content: data.addressRR.message }).popover('show');
+                    } else {
+                        $('#address').removeClass().addClass('form-control border-success');
+                    }
                 }   
             }
         })

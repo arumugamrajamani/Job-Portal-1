@@ -23,7 +23,7 @@ $(document).ready(function () {
                 $('#company_size').val(data.companySize);
                 $('#company_revenue').val(data.companyRevenue);
                 $('#industry').val(data.industry);
-                $('#permit_original_name').val(data.permitOriginalName);
+                $('#permit_original').attr('placeholder', data.permit_original_name);
             }
         });
     }

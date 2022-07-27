@@ -141,7 +141,7 @@
                 <div class="col-sm-9 ms-5 c1">
                     <input type="file" class="form-control" id="permit_original_name"><br>
                     <div class="input-container">
-                        <i class="fa fa-file-text icons1"></i><input class="input-field" type="text" placeholder="old_file_here.pdf" name="email"><i class="fa fa-download icons"></i>
+                        <i class="fa fa-file-text icons1"></i><input id="permit_original" class="input-field" type="text" placeholder="" name="email"><i class="fa fa-download icons"></i>
                     </div>
                 </div>
             </div><br>

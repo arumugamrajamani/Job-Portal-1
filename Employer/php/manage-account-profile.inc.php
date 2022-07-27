@@ -11,6 +11,23 @@ session_start();
     return $data;
 }
 
+// For generating random string
+function generateRandomString()
+{
+    $rand1 = rand(1111, 9999);   //  generate random number in $var1 variable
+    $rand2 = rand(1111, 9999);   //  generate random number in $var2 variable
+    $rand3 = $rand1 . $rand2;   //  concatenate $var1 and $var2 in $var3
+    return $idImageName = md5($rand3);  //  convert $var3 using md5 function and generate 32 characters hex number
+}
+
+// Function for storing files into storage folder
+function InsertIntoStorage($tmp_name, $filename)
+{
+    //$target_directory = "../storage/";
+    $path =  "../../storage/" . $filename;
+    move_uploaded_file($tmp_name, $path);
+}
+
 // Function for validating if input is valid fullname
 function isValidFullname($fullname){
     if(preg_match("/^[a-zA-Z .]*$/", $fullname)){
@@ -44,7 +61,7 @@ function getCompanyLogoLoc($companyLogo)
     if ($companyLogo != NULL && file_exists("../../storage/" . $companyLogo)) {
         return "../storage/" . $companyLogo;
     } else {
-        return "../storage/noProfilePic.png";
+        return "../storage/nocompany_logo_new.png";
     }
 }
 
@@ -207,6 +224,32 @@ if (isset($_POST['fetchData'])) {
             $contact_number = sanitize_input($_POST['contact_number']);
         }
 
+        // Create array for checking of valid extension for Permit
+    $allowed_permit_new_name_extension = array("pdf");
+    // Create array for checking of valid extension for logo
+    $allowed_logo_extension = array("png", "jpg", "jpeg");
+		
+		if (!isset($_FILES["company_logo_new"])) {
+        $company_logo_newrr = array('status' => 'error', 'message' => 'Profile Picture is required.');
+    } elseif (!in_array(pathinfo($_FILES["company_logo_new"]["name"], PATHINFO_EXTENSION), $allowed_logo_extension)) {
+        $company_logo_newrr = array('status' => 'error', 'message' => 'Only png, jpg, jpeg are allowed.');
+    } elseif ($_FILES["company_logo_new"]["size"] > 15000000) {
+        $company_logo_newrr = array('status' => 'error', 'message' => 'Must be less than 15mb.');
+    } else {
+        $company_logo_newrr = array('status' => 'success');
+        $company_logo_newExtension = pathinfo($_FILES["company_logo_new"]["name"], PATHINFO_EXTENSION);
+    }
+
+    if (!isset($_FILES["permit_new_name"])) {
+        $permit_new_namerr = array('status' => 'error', 'message' => 'permit_new_name is required.');
+    } elseif (!in_array(pathinfo($_FILES["permit_new_name"]["name"], PATHINFO_EXTENSION), $allowed_permit_new_name_extension)) {
+        $permit_new_namerr = array('status' => 'error', 'message' => 'Only pdf are allowed.');
+    } elseif ($_FILES["permit_new_name"]["size"] > 5000000) {
+        $permit_new_namerr = array('status' => 'error', 'message' => 'Must be less than 5mb.');
+    } else {
+        $permit_new_namerr = array('status' => 'success');
+        $permit_new_nameExtension = pathinfo($_FILES["permit_new_name"]["name"], PATHINFO_EXTENSION);
+    }
 
 
     
@@ -223,13 +266,19 @@ if (isset($_POST['fetchData'])) {
             $industry = mysqli_real_escape_string($conn, $industry);
             $company_description = mysqli_real_escape_string($conn, $company_description);
             $contact_number = mysqli_real_escape_string($conn, $contact_number);
+            $company_logo_new = generateRandomString() . '.' . $company_logo_newExtension;
+			$permit_new_name = generateRandomString() . '.' . $permit_new_nameExtension;
+            $permit_original_name = $_FILES["permit_new_name"]["name"];
             // Create query to update the admin's details
             $updateEmployerDetailsQuery = mysqli_query($conn, "UPDATE employer SET employer_name = '$employer_name', employer_position = '$employer_position',
             company_name = '$company_name', company_address = '$company_address', company_ceo = '$company_ceo', company_size = '$company_size', 
-            company_revenue = '$company_revenue', industry = '$industry', company_description = '$company_description', contact_number = '$contact_number'
+            company_revenue = '$company_revenue', industry = '$industry', company_description = '$company_description', contact_number = '$contact_number',
+            company_logo_name = '$company_logo_new', permit_new_name = '$permit_new_name', permit_original_name = '$permit_original_name'
              WHERE employer_id = '{$_SESSION['user_id']}'");
+             InsertIntoStorage($_FILES["company_logo_new"]["tmp_name"], $company_logo_new);
+             InsertIntoStorage($_FILES["permit_new_name"]["tmp_name"], $permit_new_name);
              if($updateEmployerDetailsQuery){
-                $response = array('status' => 'success', 'message' => "Updated Successfully.");
+                $response = array('status' => 'success', 'message' => "Updated Successfully.",'dd' => $permit_new_name, 'd' => $company_logo_new );
                 } else {
                 $response = array('status' => 'error', 'message' => "Problem while updating.");
                 }

@@ -194,7 +194,8 @@ $(document).ready(function () {
 
 
     // Trigger this when user click save now 
-    $(document).on('click', '#save-now', function () {
+    $(document).on('click', '#save-now', function (event) {
+        event.preventDefault();
         let employer_name = $('#employer_name').val();
         let employer_position = $('#employer_position').val();
         let company_name = $('#company_name').val();
@@ -205,28 +206,35 @@ $(document).ready(function () {
         let industry = $('#industry').val();
         let company_description = $('#company_description').val();
         let contact_number = $('#contact_number').val();
+        let company_logo_new = $('#companyLogo').prop('files')[0];
+        let permit_new_name = $('#permit_original_name').prop('files')[0];
+        let form_data = new FormData();
+        form_data.append('employer_name', employer_name);
+        form_data.append('employer_position', employer_position);
+        form_data.append('company_name', company_name);
+        form_data.append('company_address',  company_address);
+        form_data.append('company_ceo', company_ceo);
+        form_data.append('company_size', company_size);
+        form_data.append('company_revenue', company_revenue);
+        form_data.append('industry',  industry);
+        form_data.append('company_description',  company_description);
+        form_data.append('contact_number', contact_number);
+        form_data.append('permit_new_name', permit_new_name);
+        form_data.append('company_logo_new', company_logo_new);
+        form_data.append('saveNow', true);
         $.ajax({
             url: 'php/manage-account-profile.inc.php',
             type: 'POST',
-            data: {
-                employer_name: employer_name,
-                employer_position: employer_position,
-                company_name: company_name,
-                company_address: company_address,
-                company_ceo: company_ceo,
-                company_size: company_size,
-                company_revenue: company_revenue,
-                industry: industry,
-                company_description: company_description,
-                contact_number: contact_number,
-                saveNow: true
-            },
+            data: form_data, 
+            contentType: false, 
+            processData: false,
             dataType: 'JSON',
             success: function (data) {
+                console.log(data);
                 if (data.status == "success") {
                     toastr.success('', data.message);
                     // Call this function to clear border color
-                    clearBorderColor();
+                    //clearBorderColor();
                 } else {
                     toastr.error('', data.message);
                 }

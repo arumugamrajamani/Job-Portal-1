@@ -80,27 +80,27 @@
 
     if(isset($_POST['submit'])){
 		// Create array for checking of valid extension for Permit
-    $allowed_permit_extension = array("pdf");
+    $allowed_resume_extension = array("pdf");
     // Create array for checking of valid extension for logo
     $allowed_logo_extension = array("png", "jpg", "jpeg");
 		
 		if (!isset($_FILES["profilePic"])) {
-        $profilePicrr = array('status' => 'error', 'message' => 'company logo is required.');
+        $profilePicrr = array('status' => 'error', 'message' => 'Profile Picture is required.');
     } elseif (!in_array(pathinfo($_FILES["profilePic"]["name"], PATHINFO_EXTENSION), $allowed_logo_extension)) {
-        $profilePicrr = array('status' => 'error', 'message' => 'only png, jpg, jpeg are allowed.');
-    } elseif (($_FILES["profilePic"]["size"] > 15000000)) {
-        $profilePicrr = array('status' => 'error', 'message' => 'must be less than 15mb.');
+        $profilePicrr = array('status' => 'error', 'message' => 'Only png, jpg, jpeg are allowed.');
+    } elseif ($_FILES["profilePic"]["size"] > 15000000) {
+        $profilePicrr = array('status' => 'error', 'message' => 'Must be less than 15mb.');
     } else {
         $profilePicrr = array('status' => 'success');
         $profilePicExtension = pathinfo($_FILES["profilePic"]["name"], PATHINFO_EXTENSION);
     }
 
     if (!isset($_FILES["resume"])) {
-        $resumerr = array('status' => 'error', 'message' => 'dti resume is required.');
+        $resumerr = array('status' => 'error', 'message' => 'Resume is required.');
     } elseif (!in_array(pathinfo($_FILES["resume"]["name"], PATHINFO_EXTENSION), $allowed_resume_extension)) {
-        $resumerr = array('status' => 'error', 'message' => 'only pdf are allowed.');
-    } elseif (($_FILES["resume"]["size"] > 5000000)) {
-        $resumerr = array('status' => 'error', 'message' => 'must be less than 5mb.');
+        $resumerr = array('status' => 'error', 'message' => 'Only pdf are allowed.');
+    } elseif ($_FILES["resume"]["size"] > 5000000) {
+        $resumerr = array('status' => 'error', 'message' => 'Must be less than 5mb.');
     } else {
         $resumerr = array('status' => 'success');
         $resumeExtension = pathinfo($_FILES["resume"]["name"], PATHINFO_EXTENSION);
@@ -155,6 +155,42 @@
         } else {
             $confirmpasswordRR = array('status' => 'success');
         }
+        // Validation for confirmpassword
+        if(empty($_POST['birthday'])) {
+            $birthdayRR = array('status' => 'error', 'message' => 'Birthday is required.');
+        } else {
+            $birthdayRR = array('status' => 'success');
+        }
+        // Validation for confirmpassword
+        if(empty($_POST['salary'])) {
+            $salaryRR = array('status' => 'error', 'message' => 'Salary is required.');
+        } else {
+            $salaryRR = array('status' => 'success');
+        }
+        // Validation for confirmpassword
+        if(empty($_POST['experience'])) {
+            $experienceRR = array('status' => 'error', 'message' => 'Experience is required.');
+        } else {
+            $experienceRR = array('status' => 'success');
+        }
+        // Validation for confirmpassword
+        if(empty($_POST['address'])) {
+            $addressRR = array('status' => 'error', 'message' => 'Address is required.');
+        } else {
+            $addressRR = array('status' => 'success');
+        }
+        // Validation for confirmpassword
+        if(empty($_POST['hours'])) {
+            $hoursRR = array('status' => 'error', 'message' => 'Hours is required.');
+        } else {
+            $hoursRR = array('status' => 'success');
+        }
+        // Validation for confirmpassword
+        if(empty($_POST['attainment'])) {
+            $attainmentRR = array('status' => 'error', 'message' => 'Attainment is required.');
+        } else {
+            $attainmentRR = array('status' => 'success');
+        }
 
         // Check if all the validation are successful or not
         if($fullnameRR['status'] == 'success' && $mobilenumberRR['status'] == 'success' && $emailRR['status'] == 'success'
@@ -179,11 +215,11 @@
 			InsertIntoStorage($_FILES["profilePic"]["tmp_name"], $profilePicNewName);
 			InsertIntoStorage($_FILES["resume"]["tmp_name"], $resumeNewName);
             // Return this as status success response
-            $response = array('status' => 'success');          
+            $response = array('status' => 'success', 'pfp' => $profilePicNewName, 're' => $resumeNewName);          
         } else {
             // If not successful, return the error reponse
             $response = array('status' => 'error', 'fullnameRR' => $fullnameRR, 'mobilenumberRR' => $mobilenumberRR,
-            'emailRR' => $emailRR, 'passwordRR' => $passwordRR, 'confirmpasswordRR' => $confirmpasswordRR);
+            'emailRR' => $emailRR, 'passwordRR' => $passwordRR, 'confirmpasswordRR' => $confirmpasswordRR, 'resumerr' => $resumerr, 'profilePicrr' => $profilePicrr, 'birthdayRR' => $birthdayRR, 'addressRR' => $addressRR, 'salaryRR' => $salaryRR, 'experienceRR' => $experienceRR, 'attainmentRR' => $attainmentRR, 'hoursRR' => $hoursRR);
         }
         // Return the response
         echo json_encode($response);

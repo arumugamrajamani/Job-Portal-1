@@ -29,6 +29,14 @@ function isValidAddress($company_address){
     }
 }
 
+// Function for validating if inout is valid number
+function isValidNumber($number){
+    if(preg_match("/^[0-9]*$/", $number)){
+        return true;
+    } else {
+        return false;
+    }
+}
 
 // check if profile pic is not null && if file exists  then returns a string value of the profile picture location
 function getCompanyLogoLoc($companyLogo)
@@ -149,10 +157,59 @@ if (isset($_POST['fetchData'])) {
             $company_ceo = sanitize_input($_POST['company_ceo']);
         }
 
+        // Validation for company size
+        if(empty($_POST['company_size'])) {
+            $company_sizeRR = array('status' => 'error');
+        } elseif(!isValidNumber($_POST['company_size'])) {
+            $company_sizeRR = array('status' => 'error');
+        } else {
+            $company_sizeRR = array('status' => 'success');
+            $company_size = sanitize_input($_POST['company_size']);
+        }
+
+        // Validation for company revenue
+        if(empty($_POST['company_revenue'])) {
+            $company_revenueRR = array('status' => 'error');
+        } elseif(!isValidNumber($_POST['company_revenue'])) {
+            $company_revenueRR = array('status' => 'error');
+        } else {
+            $company_revenueRR = array('status' => 'success');
+            $company_revenue = sanitize_input($_POST['company_revenue']);
+        }
+
+        // Validation for industry
+        if(empty($_POST['industry'])) {
+            $industryRR = array('status' => 'error');
+        } elseif(!IsValidFullname($_POST['industry'])) {
+            $industryRR = array('status' => 'error');
+        } else {
+            $industryRR = array('status' => 'success');
+            $industry = sanitize_input($_POST['industry']);
+        }
+
+        // Validation for company description
+        if(empty($_POST['company_description'])) {
+            $company_descriptionRR = array('status' => 'error');
+        } elseif(!isValidAddress($_POST['company_description'])) {
+            $company_descriptionRR = array('status' => 'error');
+        } else {
+            $company_descriptionRR = array('status' => 'success');
+            $company_description = sanitize_input($_POST['company_description']);
+        }
+
+        // Validation for contact number
+        if(empty($_POST['contact_number'])) {
+            $contact_numberRR = array('status' => 'error');
+        } elseif(!isValidNumber($_POST['contact_number'])) {
+            $contact_numberRR = array('status' => 'error');
+        } else {
+            $contact_numberRR = array('status' => 'success');
+            $contact_number = sanitize_input($_POST['contact_number']);
+        }
 
 
 
-
+    
         // Check if all the validation is successful
         if($employer_nameRR['status'] == 'success' && $employer_positionRR['status'] == 'success')  {
             // Escape all the inputs to prevent SQL injection
@@ -161,9 +218,16 @@ if (isset($_POST['fetchData'])) {
             $company_name = mysqli_real_escape_string($conn, $company_name);
             $company_address = mysqli_real_escape_string($conn, $company_address);
             $company_ceo = mysqli_real_escape_string($conn, $company_ceo);
+            $company_size = mysqli_real_escape_string($conn, $company_size);
+            $company_revenue = mysqli_real_escape_string($conn, $company_revenue);
+            $industry = mysqli_real_escape_string($conn, $industry);
+            $company_description = mysqli_real_escape_string($conn, $company_description);
+            $contact_number = mysqli_real_escape_string($conn, $contact_number);
             // Create query to update the admin's details
             $updateEmployerDetailsQuery = mysqli_query($conn, "UPDATE employer SET employer_name = '$employer_name', employer_position = '$employer_position',
-            company_name = '$company_name', company_address = '$company_address', company_ceo = '$company_ceo' WHERE employer_id = '{$_SESSION['user_id']}'");
+            company_name = '$company_name', company_address = '$company_address', company_ceo = '$company_ceo', company_size = '$company_size', 
+            company_revenue = '$company_revenue', industry = '$industry', company_description = '$company_description', contact_number = '$contact_number'
+             WHERE employer_id = '{$_SESSION['user_id']}'");
              if($updateEmployerDetailsQuery){
                 $response = array('status' => 'success', 'message' => "Updated Successfully.");
                 } else {

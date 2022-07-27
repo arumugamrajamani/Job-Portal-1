@@ -66,15 +66,6 @@
       </div>
     </div>
   </nav><br>
-  
-  
-  <style>
-                .prof{
-					margin-top: 6%;
-                    margin-left: 30%;
-                }
-</style>
-
   <div class="container shadow">
     <div class="masthead" style="background-image: url('./image/bg3.png');">
       <br>
@@ -92,9 +83,8 @@
           <h3 class="fw-bold p-5 ms-3"></h3>
         </div>
 		
-		 <div class="prof">
+		 
         <img class="profile_pic fa-5x"src="" id="profile_picture"></img>
-		</div>
 		
       </section>
       <div class="name text-center">

@@ -13,6 +13,12 @@
         <!--Bootstrap-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"crossorigin="anonymous">
+        <!-- JQuery CDN below -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <!-- Toast CDN for functionality of toastr -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Toast CDN for design of toastr -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link rel="stylesheet" href="css/index.css">
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar-example2">
@@ -122,22 +128,24 @@
                     </div>      
                     <div class="row mb-3 mt-3 con-text d-flex justify-content-center">              
                         <div class="col-sm-11">                   
-                            <input type="text" class="form-control error" id="fullname" placeholder="FULL NAME">               
-                            <div class="text-danger"> Please enter your full name</div>
+                            <input type="text" class="form-control" id="fullname" placeholder="FULL NAME" style="background:#ECECEC;">               
+                            <div class="text-danger" id="fullname-errorMsg"></div>
                         </div>
                     </div>
                     <div class="row mb-3 con-text d-flex justify-content-center">      
                         <div class="col-sm-11">
-                            <input type="email" class="form-control border border-success" id="email" placeholder="EMAIL ADDRESS">
+                            <input type="email" class="form-control" id="email" placeholder="EMAIL ADDRESS" style="background:#ECECEC;">
+                            <div class="text-danger" id="email-errorMsg"></div>
                         </div>
                     </div>
                     <div class="row mb-3 con-text d-flex justify-content-center">
                         <div class="col-sm-11">
                             <textarea id="concern" name="concern" rows="7" cols="66" placeholder="CONCERN"></textarea>
+                            <div class="text-danger" id="concern-errorMsg"></div>
                         </div>
                     </div>
                     <div class="text-center ">
-                        <button type="submit" class="btn-info text-dark send-message" id="submit">SEND MESSAGE</button>
+                        <button type="submit" class="btn-info text-dark" id="submit">SEND MESSAGE</button>
                     </div>
                 </form>
                 <div class="d-block ms-5 div3">
@@ -1476,5 +1484,9 @@
     })
     </script>
     
+    <script src="js/contactus.js"></script>
+    <script src="js/faqsearch.js"></script>
+    <script src="js/system-info.js"></script>
+    <script src="Admin/js/aboutus-settings.js"></script>
 </body>
 </html>

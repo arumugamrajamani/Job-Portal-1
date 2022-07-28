@@ -125,13 +125,6 @@
                         <div class="invalid-feedback"> Please enter your mobile number</div>
                     </div>
                 </div>
-                <div class="row mb-3 mt-3 ms-4">
-                    <label for="fullname" class="col-sm-2 col-form-label">Experience</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control error" id="experience">               
-                        <div class="text-danger"> Type in your experience</div>
-                    </div>
-                </div>
                 <div class="row mb-3 ms-4">
                     <label for="mobilenumber" class="col-sm-2 col-form-label">Expected Salary</label>
                     <div class="col-sm-9">
@@ -151,6 +144,44 @@
                     <div class="col-sm-9">
                         <input type="number" required="" class="form-control" id="hours">
                         <div class="invalid-feedback"> Please enter your desire amount in hours</div>
+                    </div>
+                </div>
+                <div class="row mb-3 mt-3 ms-4">
+
+                    <label for="experience" class="col-sm-2 col-form-label">Experience:</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="experience" name="experience" rows="4" cols="60"></textarea>              
+                    </div>
+                </div>
+                <div class="row mb-3 ms-4">
+                    <div class="headlang">
+                        <p>Programming Language:</p>
+                    </div>
+                    <div class="selection-lang">
+                        <label class="HTML" for="HTML">HTML</label>
+                        <div class="col-sm-9">
+                            <input type="checkbox"  name="HTML" value="1" id="HTML">
+                        </div>
+                        <label class="JavaScript" for="JavaScript">JavaScript</label>
+                        <div class="col-sm-9">
+                            <input type="checkbox"  name="JavaScript" value="2" id="JavaScript">
+                        </div>
+                        <label class="Python" for="Python">Python</label>
+                        <div class="col-sm-9">
+                            <input type="checkbox"  name="Python" value="3" id="Python">
+                        </div>
+                        <label class="Csharp" for="Csharp">C#</label>
+                        <div class="col-sm-9">
+                            <input type="checkbox"  name="Csharp" value="4" id="Csharp">
+                        </div>
+                        <label class="Cplus" for="Cplus">C++</label>
+                        <div class="col-sm-9">
+                            <input type="checkbox"  name="Cplus" value="5" id="Cplus">
+                        </div>
+                        <label class="PHP" for="PHP">PHP</label>
+                        <div class="col-sm-9">
+                            <input type="checkbox"  name="PHP" value="6" id="PHP">
+                        </div>
                     </div>
                 </div>
                 <br>

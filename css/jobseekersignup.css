@@ -1,5 +1,7 @@
 .masthead {
+
   background-size: cover;
+
   min-height: 110vh;
   width: 100%;
   background-color: #00c2d6;
@@ -92,7 +94,7 @@ h2 {
   position: relative;
   margin-left: 0px;
   width: 550px;
-  height: 1100px;
+  height: 1600px;
   left: 59px;
   top: 200px;
   background: #ffffff;
@@ -150,6 +152,31 @@ hr {
 .item2 {
   background-color: #00c2d6;
 }
+#HTML {
+  width: 20px;
+  height: 20px;
+}
+#JavaScript {
+  width: 20px;
+  height: 20px;
+}
+#Python {
+  width: 20px;
+  height: 20px;
+}
+#Csharp {
+  width: 20px;
+  height: 20px;
+}
+#Cplus {
+  width: 20px;
+  height: 20px;
+}
+#PHP {
+  width: 20px;
+  height: 20px;
+}
+
 @media screen and (max-width: 1547px) {
   .container {
     margin-left: -80px;
@@ -192,6 +219,7 @@ hr {
   }
   .container {
     margin-left: 5px;
+    height: 1600px;
   }
   .online {
     width: 150px !important;
@@ -200,6 +228,7 @@ hr {
   }
   .masthead {
     width: 100%;
+    min-height: 180vh;
   }
   .navbar-toggler {
     position: relative;
@@ -207,7 +236,7 @@ hr {
   }
   .online {
     position: relative;
-    bottom: 160px;
+    bottom: 1060px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -248,7 +277,7 @@ hr {
 }
 @media screen and (max-width: 375px) {
   .masthead {
-    min-height: 140vh;
+    min-height: 270vh;
     width: 370px;
   }
   .navbar-expand-lg {
@@ -258,7 +287,7 @@ hr {
     margin-left: -85px;
     margin-top: -60px;
     width: 325px;
-    height: 920px;
+    height: 1900px;
   }
   .online {
     width: 110px !important;
@@ -270,6 +299,9 @@ hr {
   }
   .online {
     position: relative;
-    bottom: 230px;
+    bottom: 1200px;
+  }
+  #experience {
+    width: 250px;
   }
 }

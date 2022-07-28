@@ -15,10 +15,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/manage-account-profile.css">
-     <!-- jQuery cdn link below -->
-     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- jQuery cdn link below -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- Toast CDN for functionality of toastr -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Toast CDN for design of toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
@@ -34,8 +36,8 @@
 			</form>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-					<li class="nav-item me-0"><a class="nav-link text-dark message active menubar mes" aria-current="page" href="message-jobseekers.php">MESSAGE</a></li>
-					<li class="nav-item"><a class="nav-link text-dark about active" href="searchjob.php">JOB BOARD</a></li>
+					<li class="nav-item me-0"><a class="nav-link text-dark message active menubar mes" aria-current="page" href="message-employer.php">MESSAGE</a></li>
+					<li class="nav-item"><a class="nav-link text-dark about active" href="postajob.php">POST A JOB</a></li>
 					<li class="nav-item account dropdown active">
 						<a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 						<img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
@@ -141,7 +143,7 @@
                 <div class="col-sm-9 ms-5 c1">
                     <input type="file" class="form-control" id="permit_original_name"><br>
                     <div class="input-container">
-                        <i class="fa fa-file-text icons1"></i><input class="input-field" type="text" placeholder="old_file_here.pdf" name="email"><i class="fa fa-download icons"></i>
+                        <i class="fa fa-file-text icons1"></i><input id="permit_original" class="input-field" type="text" placeholder="" name="email"><i class="fa fa-download icons"></i>
                     </div>
                 </div>
             </div><br>

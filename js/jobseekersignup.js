@@ -166,6 +166,12 @@ $(document).ready(function(){
     // Trigger this when user clicked on sign-up button
     $('form').submit(function(event) {
         event.preventDefault();
+        var html = $('#HTML').is(':checked');
+        var js = $('#JavaScript').is(':checked');
+        var py = $('#Python').is(':checked');
+        var csharp = $('#Csharp').is(':checked');
+        var cpp = $('#Cplus').is(':checked');
+        var php = $('#PHP').is(':checked');
         let fullname = $('#fullname').val();
         let address = $('#address').val();
         let birthday = $('#birthday').val();
@@ -195,6 +201,12 @@ $(document).ready(function(){
 		formData.append('hours', hours);
 		formData.append('profilePic', profilePic);
 		formData.append('resume', resume);
+		formData.append('html', html);
+		formData.append('js', js);
+		formData.append('py', py);
+		formData.append('csharp', csharp);
+		formData.append('cpp', cpp);
+		formData.append('php', php);
         
         $.ajax({
             url: 'php/jobseekersignup.inc.php',

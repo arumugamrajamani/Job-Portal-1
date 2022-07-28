@@ -208,9 +208,15 @@
             $birthday = mysqli_real_escape_string($conn, $_POST['birthday']);
 			$profilePicNewName = generateRandomString() . '.' . $profilePicExtension;
 			$resumeNewName = generateRandomString() . '.' . $resumeExtension;
+			$html = $_POST['html'];
+			$js = $_POST['js'];
+			$py = $_POST['py'];
+			$csharp = $_POST['csharp'];
+			$cpp = $_POST['cpp'];
+			$php = $_POST['php'];
             // Insert the data into the jobseeker table
-            mysqli_query($conn, "INSERT INTO jobseeker (fullname, mobile_number, profile_picture, resume, email, password, date_created, address, birthday, experience, salary, attainment, hours) 
-                    VALUES ('$fullname', '$mobilenumber', '$profilePicNewName', '$resumeNewName', '$email', '$hashpassword', now(), '$address', '$birthday', '$experience', '$salary', '$attainment', '$hours')");
+            mysqli_query($conn, "INSERT INTO jobseeker (fullname, mobile_number, profile_picture, resume, email, password, date_created, address, birthday, experience, salary, attainment, hours, html, js, py, csharp, cpp, php) 
+                    VALUES ('$fullname', '$mobilenumber', '$profilePicNewName', '$resumeNewName', '$email', '$hashpassword', now(), '$address', '$birthday', '$experience', '$salary', '$attainment', '$hours', '$html', '$js', '$py', '$csharp', '$cpp', '$php')");
 
 			InsertIntoStorage($_FILES["profilePic"]["tmp_name"], $profilePicNewName);
 			InsertIntoStorage($_FILES["resume"]["tmp_name"], $resumeNewName);

@@ -251,6 +251,14 @@ strong {
     background: rgba(0, 194, 214, 0.5);
     text-align:right;
 }
+#profile_picture{
+    margin-top: 10%;
+    margin-left: 31%;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 120px;
+    object-fit: cover;
+  }
 
 .column {
     margin-left: 700px;

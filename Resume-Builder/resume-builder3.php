@@ -29,7 +29,7 @@
                 <a class="nav-link text-dark message active fw-bold" aria-current="page" href="../Jobseeker/message-jobseekers.php">MESSAGE</a>
               </li>
               <li class="nav-item1 fw-bold">
-                <a class="nav-link text-dark about active" href="searchjob.php">POST A JOB</a>
+                <a class="nav-link text-dark about active" href="../Jobseeker/searchjob.php">JOB POST</a>
               </li>
               <li class="nav-item account dropdown active">
                 <a class="nav-link text-dark fw-bold dropdown-toggle account active" href="#" id="navbarDropdown"
@@ -40,9 +40,11 @@
                   <li>
                     <hr class="dropdown-divider bg-white">
                   </li>
-                  <li><a class="dropdown-item text-light" href="../Jobseeker/jobapplication.php">JOB APPLICATIONS</a></li>
-                  <li><a class="dropdown-item text-light" href="../Jobseeker/bookmark-job.php">BOOKMARKED JOBS</a></li>
                   <li><a class="dropdown-item text-light" href="../Jobseeker/manage-account-1.php">ACCOUNT SETTINGS</a></li>
+                  <li><a class="dropdown-item text-light" href="../Jobseeker/jobapplication.php">JOB APPLICATIONS</a></li>
+                  <li><a class="dropdown-item logout text-light" href="../Jobseeker/manage-account-2.php">CHANGE PASSWORD</a></li>
+                  <li><a class="dropdown-item text-light" href="../Jobseeker/bookmark-job.php">BOOKMARKED JOBS</a></li>
+                  <li><a class="dropdown-item text-light" href="../Jobseeker/manage-resume-jobseeker.php">MANAGE RESUME</a></li>
                   <li><a class="dropdown-item logout text-light" href="../logout.php">LOGOUT</a></li>
                 </ul>
             </ul>

@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-1" id="nav0">
         <div class="container-fluid" id="inner" style="display: flex; justify-content: space-between;">
           <div style="margin-left: 10px;">
-          <img class="img" src="/Resume-Builder/image/Dark_Theme_Logo.png" alt="Job Portal Logo"id="logo" style="max-width: 95px; max-height: auto;"></a>
+          <img class="img" src="image/Dark_Theme_Logo.png" alt="Job Portal Logo"id="logo" style="max-width: 95px; max-height: auto;"></a>
           </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border-color: transparent;">
@@ -25,31 +25,31 @@
           </button>
           <form class="d-flex searchbar" id="sea">
             <input class="form-control icon" type="search" placeholder="Search for a job title" aria-label="Search">
-            <button class="btn text-dark fw-bold search" type="submit"><img src="/Resume-Builder/image/bx-search.png" alt="Search" width="24" class="bts"></button>
+            <button class="btn text-dark fw-bold search" type="submit"><img src="image/bx-search.png" alt="Search" width="24" class="bts"></button>
           </form>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item1 me-0">
-                <a class="nav-link text-dark message active fw-bold" aria-current="page" href="message-jobseekers.php">MESSAGE</a>
+                <a class="nav-link text-dark message active fw-bold" aria-current="page" href="../Jobseeker/message-jobseekers.php">MESSAGE</a>
               </li>
               <li class="nav-item1 fw-bold">
-                <a class="nav-link text-dark about active" href="searchjob.php">POST A JOB</a>
+                <a class="nav-link text-dark about active" href="../Jobseeker/searchjob.php">JOB POST</a>
               </li>
               <li class="nav-item account dropdown active">
                 <a class="nav-link text-dark fw-bold dropdown-toggle account active" href="#" id="navbarDropdown"
                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img class="image" src="/Resume-Builder/image/Copy_of_Parungao_Fernando.png" alt="Profile" width="55" height="55"> Fernando Parungao</a>
+                  <img class="image" src="image/Copy_of_Parungao_Fernando.png" alt="Profile" width="55" height="55"> Fernando Parungao</a>
                 <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item text-light" href="applicant-profile.php"><img class="ic" src="/Resume-Builder/image/Copy_of_Parungao_Fernando.png" alt="" width="35px">FULL NAME</a></li>
+                  <li><a class="dropdown-item text-light" href="../Jobseeker/applicant-profile.php"><img class="ic" src="/Resume-Builder/image/Copy_of_Parungao_Fernando.png" alt="" width="35px">FULL NAME</a></li>
                   <li>
                     <hr class="dropdown-divider bg-white">
                   </li>
-                  <li><a class="dropdown-item text-light" href="/Jobseeker/manage-account-1.php"><img class="ic" src="/Resume-Builder/image/Vector.png" alt="">ACCOUNT SETTINGS</a></li>
-                  <li><a class="dropdown-item text-light" href="/Jobseeker/jobapplication.php"><img class="ic" src="/Resume-Builder/image/resume 1.png" alt="">JOB APPLICATIONS</a></li>
-                  <li><a class="dropdown-item logout text-light" href="/reset-password.php"><img class="ic" src="/Resume-Builder/image/Vector key.png" alt="">CHANGE PASSWORD</a></li>
-                  <li><a class="dropdown-item text-light" href="/Jobseeker/bookmark-job.php"><img class="ic" src="/Resume-Builder/image/icons8-bookmark-30.png" alt="">BOOKMARKED JOBS</a></li>
-                  <li><a class="dropdown-item text-light" href="/Jobseeker/manage-resume-jobseeker.php"><img class="ic" src="/Jobseeker/image/manage resume.png" alt="">MANAGE RESUME</a></li>
-                  <li><a class="dropdown-item logout text-light" href="/login.php"><img class="ic" src="/Resume-Builder/image/Vectorlogout dark theme.png" alt="">LOGOUT</a></li>
+                  <li><a class="dropdown-item text-light" href="../Jobseeker/manage-account-1.php">ACCOUNT SETTINGS</a></li>
+                  <li><a class="dropdown-item text-light" href="../Jobseeker/jobapplication.php">JOB APPLICATIONS</a></li>
+                  <li><a class="dropdown-item logout text-light" href="../Jobseeker/manage-account-2.php">CHANGE PASSWORD</a></li>
+                  <li><a class="dropdown-item text-light" href="../Jobseeker/bookmark-job.php">BOOKMARKED JOBS</a></li>
+                  <li><a class="dropdown-item text-light" href="../Jobseeker/manage-resume-jobseeker.php">MANAGE RESUME</a></li>
+                  <li><a class="dropdown-item logout text-light" href="../logout.php">LOGOUT</a></li>
                 </ul>
             </ul>
           </div>

@@ -24,6 +24,8 @@ if (isset($_POST['fetchData'])) {
     $fullName = $row['fullname'];
     $email = $row['email'];
     $number = $row['mobile_number'];
+    $address = $row['address'];
+    $experience = $row['experience'];
     $name = strtoupper($fullName);
 
     // Create Assoc array to return to the ajax call
@@ -32,7 +34,9 @@ if (isset($_POST['fetchData'])) {
         'fullname' => $fullName,
         'email' => $email,
         'mobile_number' => $number,
-        'upperName' => $name
+        'upperName' => $name,
+        'address' => $address,
+        'experience' => $experience
 
         
     );

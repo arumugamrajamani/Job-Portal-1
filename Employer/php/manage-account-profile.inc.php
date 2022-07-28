@@ -230,7 +230,7 @@ if (isset($_POST['fetchData'])) {
     $allowed_logo_extension = array("png", "jpg", "jpeg");
 		
 		if (!isset($_FILES["company_logo_new"])) {
-        $company_logo_newrr = array('status' => 'error', 'message' => 'Profile Picture is required.');
+        $company_logo_newrr = array('status' => 'error', 'message' => 'Company Logo is required.');
     } elseif (!in_array(pathinfo($_FILES["company_logo_new"]["name"], PATHINFO_EXTENSION), $allowed_logo_extension)) {
         $company_logo_newrr = array('status' => 'error', 'message' => 'Only png, jpg, jpeg are allowed.');
     } elseif ($_FILES["company_logo_new"]["size"] > 15000000) {
@@ -241,7 +241,7 @@ if (isset($_POST['fetchData'])) {
     }
 
     if (!isset($_FILES["permit_new_name"])) {
-        $permit_new_namerr = array('status' => 'error', 'message' => 'permit_new_name is required.');
+        $permit_new_namerr = array('status' => 'error', 'message' => 'Permit is required.');
     } elseif (!in_array(pathinfo($_FILES["permit_new_name"]["name"], PATHINFO_EXTENSION), $allowed_permit_new_name_extension)) {
         $permit_new_namerr = array('status' => 'error', 'message' => 'Only pdf are allowed.');
     } elseif ($_FILES["permit_new_name"]["size"] > 5000000) {
@@ -254,7 +254,7 @@ if (isset($_POST['fetchData'])) {
 
     
         // Check if all the validation is successful
-        if($employer_nameRR['status'] == 'success' && $employer_positionRR['status'] == 'success')  {
+        if($employer_nameRR['status'] == 'success' && $employer_positionRR['status'] == 'success' && $permit_new_namerr['status'] == 'success' && $company_logo_newrr['status'] == 'success')  {
             // Escape all the inputs to prevent SQL injection
             $employer_name = mysqli_real_escape_string($conn, $employer_name);
             $employer_position = mysqli_real_escape_string($conn, $employer_position);
@@ -284,7 +284,7 @@ if (isset($_POST['fetchData'])) {
                 }
             // $response = array('status' => 'success', 'message' => "Successfully updated.");
         } else {
-            $response = array('status' => 'error', 'message' => "Please fill up all the fields.");
+            $response = array('status' => 'error', 'message' => "Please fill up all the fields.", 'permitRR' => $permit_new_namerr, 'companyRR' => $company_logo_newrr);
         }
         // return this as a json object and exit
         echo json_encode($response);

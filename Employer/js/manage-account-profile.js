@@ -230,13 +230,30 @@ $(document).ready(function () {
             processData: false,
             dataType: 'JSON',
             success: function (data) {
-                console.log(data);
+                //console.log(data);
                 if (data.status == "success") {
-                    toastr.success('', data.message);
+                    swal({
+                        title: "Update Account Succesfull!",
+                        icon: "success",
+                        button: "Okay",
+                    })
+                    .then(function() {
+                        window.location = "company-profile.php";
+                    });
                     // Call this function to clear border color
                     //clearBorderColor();
                 } else {
-                    toastr.error('', data.message);
+                    if(data.permitRR.status == 'error') {
+                        $('#permit_original_name').popover({ placement: 'right', content: data.permitRR.message}).popover('show');
+                    } else {
+                        $('permit_original_name').popover('dispose');
+                    }
+                    if(data.companyRR.status == 'error') {
+                        $('#companyLogo').popover({ placement: 'right', content: data.companyRR.message}).popover('show');
+                    } else {
+                        $('companyLogo').popover('dispose');
+                    }
+                    //toastr.error('', data.message);
                 }
             }
         })

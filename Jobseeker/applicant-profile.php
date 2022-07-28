@@ -91,7 +91,7 @@
         <h3 class="fw-bold mt-2" id="fullname"></h3>
         <label class="fs-4">Web developer</label>
       </div>
-      <strong><label class="mt-2 loc"><i class="bi bi-geo-alt"></i>Manila, Philippines</label></strong>
+      <strong><label id="address" class="mt-2 loc"></label></strong>
       <div class="column">
         <div class="mt-2 mx-5 text-center company-n">
         <label class="" id="mobile_number"></label>
@@ -107,8 +107,9 @@
         </div>
 
         <div class="con1 ms-5 p-2">
-          <p class="pt-5">Hello! This is Juan Dela Cruz and I am a Senior Web Developer for five years. I have projects
-            from different firms creating new website for different purposes. </p>
+          <p id="experience" class="pt-5"></p>
+          <!--Hello! This is Juan Dela Cruz and I am a Senior Web Developer for five years. I have projects
+            from different firms creating new website for different purposes.-->
         </div>
 
       </section>

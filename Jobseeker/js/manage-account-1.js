@@ -87,6 +87,8 @@ $(document).ready(function () {
                 $('#fullname').val(data.fullname);
                 $('#email').val(data.email);
                 $('#mobile_number').val(data.mobile_number);
+                $('#birthday').val(data.birthday);
+                $('#address').val(data.address);
             }
         });
     }

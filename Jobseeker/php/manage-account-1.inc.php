@@ -31,12 +31,16 @@ if (isset($_POST['fetchData'])) {
     $jobseekerName = $row['fullname'];
     $jobseekerEmail = $row['email'];
     $jobseekerNumber = $row['mobile_number'];
+    $jobseekerBirthday = $row['birthday'];
+    $jobseekerAddress = $row['address'];
     
     // Create Assoc array to return to the ajax call
     $response = array(
         'fullname' => $jobseekerName,
         'email' => $jobseekerEmail,
         'mobile_number' => $jobseekerNumber,
+        'address' => $jobseekerAddress,
+        'birthday' => $jobseekerBirthday
         
     );
     echo json_encode($response);
@@ -101,7 +105,7 @@ if (isset($_POST['updateData'])){
         $address = mysqli_real_escape_string($conn, $_POST['address']);
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $mobileNumber = mysqli_real_escape_string($conn, $_POST['mobileNumber']);
-        $fetchDetailsQuery = mysqli_query($conn, "UPDATE `jobseeker` SET `fullname`='$fullname',`mobile_number`='$mobileNumber',`email`='$email' WHERE jobseeker_id = $jobseekerId");
+        $fetchDetailsQuery = mysqli_query($conn, "UPDATE `jobseeker` SET `fullname`='$fullname',`mobile_number`='$mobileNumber',`email`='$email',`birthday`='$birthday',`address`='$address' WHERE jobseeker_id = $jobseekerId");
         $response = array('status' => 'success');
     }
     echo json_encode($response);

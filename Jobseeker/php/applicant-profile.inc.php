@@ -26,6 +26,51 @@ if (isset($_POST['fetchData'])) {
     $number = $row['mobile_number'];
     $address = $row['address'];
     $experience = $row['experience'];
+    $salary = $row['salary'];
+    $attainment = $row['attainment'];
+    $hours = $row['hours'];
+    $html = $row['html'];
+    $py = $row['py'];
+    $js = $row['js'];
+    $csharp = $row['csharp'];
+    $cpp = $row['cpp'];
+    $php = $row['php'];
+    if ($html == "true" ) {
+        $html = "HTML";
+    }
+    else{
+        $html = NULL;
+    }
+    if ($py == "true" ) {
+        $py = "Python";
+    }
+    else{
+        $py = NULL;
+    }
+    if ($js == "true" ) {
+        $js = "JavaScript";
+    }
+    else{
+        $js = NULL;
+    }
+    if ($csharp == "true" ) {
+        $csharp = "C#";
+    }
+    else{
+        $csharp = NULL;
+    }
+    if ($cpp == "true" ) {
+        $cpp = "C++";
+    }
+    else{
+        $cpp = NULL;
+    }
+    if ($php == "true" ) {
+        $php = "PHP";
+    }
+    else{
+        $php = NULL;
+    }
     $name = strtoupper($fullName);
 
     // Create Assoc array to return to the ajax call
@@ -36,9 +81,16 @@ if (isset($_POST['fetchData'])) {
         'mobile_number' => $number,
         'upperName' => $name,
         'address' => $address,
-        'experience' => $experience
-
-        
+        'experience' => $experience,
+        'salary' => $salary,
+        'attainment' => $attainment,
+        'hours' => $hours,
+        'html' => $html,
+        'py' => $py,
+        'js' => $js,
+        'csharp' => $csharp,
+        'cpp' => $cpp,
+        'php' => $php      
     );
     echo json_encode($response);
 }

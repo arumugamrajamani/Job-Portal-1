@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/Resume-Builder/css/resume-builder5.css">
+    <link rel="stylesheet" href="css/resume-builder5.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,700;1,400;1,600&display=swap" rel="stylesheet">
@@ -59,12 +59,14 @@
         <div class="cont" style="background-color: #182531; width: 420px; height: 100%; padding: 10px;">
           <div class="cont1" style="margin-top: 6rem;">
             <nav class="sidebar">
-              <a href="/Resume-Builder/resume-builder1.php" class="sidebar--links">Resume Template 1</a>
-              <a href="/Resume-Builder/resume-builder2.php" class="sidebar--links">Resume Template 2</a>
-              <a href="/Resume-Builder/resume-builder3.php" class="sidebar--links">Resume Template 3</a>
-              <a href="/Resume-Builder/resume-builder4.php" class="sidebar--links">Resume Template 4</a>
-              <a href="/Resume-Builder/resume-builder5.php" class="sidebar--links">Resume Template 5</a>
-              <a href="/Resume-Builder/seemore.php" class="sidebar--links1">Show more resume builder...</a>
+            <a href="resume-builder1.php" class="sidebar--links">Resume Template 1</a>
+              <a href="resume-builder2.php" class="sidebar--links">Resume Template 2</a>
+              <a href="resume-builder3.php" class="sidebar--links">Resume Template 3</a>
+              <a href="resume-builder4.php" class="sidebar--links">Resume Template 4</a>
+              <a href="resume-builder5.php" class="sidebar--links">Resume Template 5</a>
+              <a href="resume-builder6.php" class="sidebar--links">Resume Template 6</a>
+              <a href="resume-builder7.php" class="sidebar--links">Resume Template 7</a>
+              <a href="seemore.php" class="sidebar--links1">Show more resume builder...</a>
             </nav>
           </div>
         </div>

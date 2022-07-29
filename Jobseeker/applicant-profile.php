@@ -118,27 +118,32 @@
       <div class="d-flex justify-content-center mt-5">
         <div class="me-5 bg1 text-center">
           <h4 class="fw-bold bg2 p-2">Salary Expectation</h4>
-          <p class="p-4"> ₱100,000</p>
+          <p id="salary" class="p-4"></p>
         </div>
         <div class="me-5 ms-3 bg0 text-center">
           <h4 class="fw-bold bg2 p-2">Highest Educational Attainment </h4>
-          <p class="p-4">Bachelor of Science in Information Technology (2013)</p>
+          <p id="attainment" class="p-4"></p>
         </div>
         <div class="ms-3 bg1 text-center">
           <h4 class="fw-bold bg2 p-2">Available Hours</h4>
-          <p class="p-4">20 Hours/Week</p>
+          <p id="hours" class="p-4"></p>
         </div>
       </div>
       <h3 class="text-center mt-5 fw-bold">SKILLS SUMMARY</h3>
       <div class="d-flex justify-content-center mt-3">
-        <div class="bg3 ">
-          <h5 class="mx-5 mt-1 fw-bold">CSS</h5>
+        <div id="html" class="bg3">
         </div>
-        <div class="bg3 ms-5">
-          <h5 class="mx-5 mt-1 fw-bold">HTML</h5>
+        <div id="py" class="bg3">
         </div>
-        <div class="bg3 ms-5">
-          <h5 class="mx-4 mt-1 fw-bold">Javascript</h5>
+        <div id="js" class="bg3">
+        </div>
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+        <div id="csharp" class="bg3">
+        </div>
+        <div id="cpp" class="bg3">
+        </div>
+        <div id="php" class="bg3">
         </div>
       </div><br>
       <hr class="hr1">

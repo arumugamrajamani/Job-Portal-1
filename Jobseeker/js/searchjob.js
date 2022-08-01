@@ -38,9 +38,9 @@ $(document).ready(function () {
        dataType: 'JSON',
        success: function (response) {
         console.log(response);
-           $('#body-h').html(response.tableData);
-           $('#pagination').html(response.pagination);
-           $('#entries').html(response.entries);
+        // $('#pagination').html(response.pagination);
+        // $('#entries').html(response.entries);
+        $('#body-h').html(response.tableData);
        }
        });
    }

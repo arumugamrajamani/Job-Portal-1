@@ -111,9 +111,9 @@
             $secondarySkill = $row['secondary_skill'];
             $tableData .=  "<tr>
                                 <td  data-title='Job Title'>{$jobTitle}</td>
-                                <td data-title='Number applicant'>ano ba lalagay dito?</td>
-                                <td data-title='status'>active</td>
-                                <td data-title='drive'>ano rito?</td>
+                                <td data-title='Number applicant'>Sample</td>
+                                <td data-title='status'>Active</td>
+                                <td data-title='drive'>sample.com</td>
                                 <td data-title='action'>
                                 <button  class='btn' type='button' id='btn-info' >Edit</button>
                                 <button class='btn' type='button' id='btn-info'  data-bs-toggle='modal' data-bs-target='#exampleModal'>Delete</button>
@@ -134,9 +134,9 @@
                                 $secondarySkill = $row1['secondary_skill'];
                                 $tableData .=  "<tr>
                                                     <td  data-title='Job Title'>{$jobTitle}</td>
-                                                    <td data-title='Number applicant'>di ko alam lalagay dito</td>
-                                                    <td data-title='status'>inactive</td>
-                                                    <td data-title='drive'>eto rin</td>
+                                                    <td data-title='Number applicant'>Sample</td>
+                                                    <td data-title='status'>Inactive</td>
+                                                    <td data-title='drive'>sample.com</td>
                                                     <td data-title='action'>
                                                     <button  class='btn' type='button' id='btn-info' >Edit</button>
                                                     <button class='btn' type='button' id='btn-info'  data-bs-toggle='modal' data-bs-target='#exampleModal'>Delete</button>

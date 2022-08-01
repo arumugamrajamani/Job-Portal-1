@@ -227,7 +227,8 @@
             
             <div class="container1 div2">
                 <h3 class="fw-bold">SEARCH RESULTS</h3>
-                <div class="bg-white shadow-sm d-flex div3"><br>
+                <div id="body-h"></div>
+                <!-- <div class="bg-white shadow-sm d-flex div3"><br>
                     <img src="image/comlogo.png" alt="company logo" class="ms-3 mt-4 logo">
                     <div class="block mt-2">
                         <div class="d-flex">
@@ -276,19 +277,22 @@
                             <i class="bi bi-currency-dollar ms-3 fw-bold"> Salary Undisclosed</i>
                         </div><br>
                         <p class="ms-4">- A Software Developer who transforms passion into a beautiful and robust web platform. Software Developement develops web apps for SM...</p>
+                    </div> -->
+                <!-- </div> -->
+                <!-- <nav aria-label="Page navigation example">
+                    <div class="entries" id="entries">
+                        </span>Show 1 to 3 of 3 entries</span>
                     </div>
-                </div>
-                <nav aria-label="Page navigation example">
                     <ul class="pagination" id="pagination">
-                    <!-- <li class="page-item num1"><a class="page-link page1" href="#">1</a></li>
+                    <li class="page-item num1"><a class="page-link page1" href="#">1</a></li>
                     <li class="page-item"><a class="page-link" href="#">2</a></li>
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                     <li class="page-item"><a class="page-link" href="#">4</a></li>
                     <li class="page-item"><a class="page-link" href="#">5</a></li>
                     <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Last</a></li> -->
+                    <li class="page-item"><a class="page-link" href="#">Last</a></li>
                     </ul>
-                </nav>
+                </nav> -->
             </div>
     </div>
 </div>

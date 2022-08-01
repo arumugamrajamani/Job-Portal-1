@@ -6,7 +6,7 @@ $(document).ready(function () {
             url: 'php/postajob.inc.php',
             type: 'POST',
             data: {
-                //fetchData: true
+                fetchData: true
             },
             dataType: "JSON",
             success: function (data) {
@@ -23,4 +23,42 @@ $(document).ready(function () {
             }
         });
     }
+
+    $('.delete-Btn').click(function () {
+        let postId = $(this).attr('data-id');
+        $('#del-yes').val(postId);
+    });
+
+    // Trigger this when user click yes on delete modal
+    $('#del-yes').click(function () {
+
+        let postId = $('.delete-Btn').attr('data-id');
+        $.ajax({
+            url: "php/postajob.inc.php",
+            type: "POST",
+            data: {
+                deleteJobPost: true,
+                postId: postId
+            },
+            success: function (response) {
+                $('#exampleModal').modal('hide');
+                console.log(postId);
+                toastr.success('', 'Successfully Deleted!');
+                fetchData();
+            }
+        });
+    });
+
+
+
+
+
+
+
+
+
+    
 });
+
+
+

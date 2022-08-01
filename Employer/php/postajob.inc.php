@@ -2,6 +2,10 @@
     session_start();
     // Include the database connection file and establish a connection
     include '../../php/db-connection.php';
+
+    function dateTimeConvertion($date){
+        return date('M d, Y, h:i A', strtotime($date));
+    }
     if(isset($_POST['submit'])){
         if(empty($_POST['companyName'])) {
             $companyNameInfo = array('status' => 'error', 'message' => 'Company name is required.');
@@ -95,11 +99,14 @@
         }
     echo json_encode($response);
     }
-    else {
+    
+    
+    else if (isset($_POST['fetchData'])){
         $tableData = "";
         $uid = ($_SESSION['user_id']);
         $getPosts = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `postedby_uid` = '$uid'");
         while($row = mysqli_fetch_assoc($getPosts)){
+            $id = $row['post_iud'];
             $companyName = $row['company_name'];
             $jobTitle = $row['job_title'];
             $employment = $row['employment_type'];
@@ -116,13 +123,13 @@
                                 <td data-title='drive'>sample.com</td>
                                 <td data-title='action'>
                                 <button  class='btn' type='button' id='btn-info' >Edit</button>
-                                <button class='btn' type='button' id='btn-info'  data-bs-toggle='modal' data-bs-target='#exampleModal'>Delete</button>
+                                <button class='btn delete-Btn' data-id='{$id}' type='button' id='btn-info'  data-bs-toggle='modal' data-bs-target='#exampleModal'>Delete</button>
                                 </td>
                                 </tr>";
                             }
                             $getDeletedPosts = mysqli_query($conn, "SELECT * FROM `jobpost_recycler` WHERE `postedby_uid` = '$uid'");
                             while($row1 = mysqli_fetch_assoc($getDeletedPosts)){
-                                // $id = $row1['post_iud'];
+                                $id = $row1['post_iud'];
                                 $companyName = $row1['company_name'];
                                 $jobTitle = $row1['job_title'];
                                 $employment = $row1['employment_type'];
@@ -138,13 +145,35 @@
                                                     <td data-title='status'>Inactive</td>
                                                     <td data-title='drive'>sample.com</td>
                                                     <td data-title='action'>
-                                                    <button  class='btn' type='button' id='btn-info' >Edit</button>
-                                                    <button class='btn' type='button' id='btn-info'  data-bs-toggle='modal' data-bs-target='#exampleModal'>Delete</button>
+                                                    <button  class='btn' type='button' id='btn-info'>Edit</button>
                                                     </td>
                                                 </tr>";
                             }
             $response = array('tableData' => $tableData);
     echo json_encode($response);
     }
-
+    else {
+        $postId = mysqli_real_escape_string($conn, $_POST['postId']);
+        //$postId = 56;
+        //deleting the jobpost and moving it to recycle bin
+        $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_iud` = '$postId'");
+        $row = mysqli_fetch_assoc($fetchDeletedQuery);
+        $companyName = $row['company_name'];
+        $jobTitle = $row['job_title'];
+        $employment = $row['employment_type'];
+        $jobCategory = $row['job_category'];
+        $jobDescription = $row['job_description'];
+        $salary = $row['salary'];
+        $employerEmail = $row['employer_email'];
+        $primarySkill = $row['primary_skill'];
+        $secondarySkill = $row['secondary_skill'];
+        $postedby = $row['postedby_uid'];
+        $date = dateTimeConvertion($row['date_posted']);
+            
+        mysqli_query($conn, "INSERT INTO `jobpost_recycler`(`company_name`,`job_title`,`employment_type`,`job_category`,`job_description`,`salary`,`employer_email`,`primary_skill`,`secondary_skill`,`postedby_uid`,`date_posted`
+    ) VALUES('$companyName', '$jobTitle', '$employment', '$jobCategory', '$jobDescription', '$salary', '$employerEmail', '$primarySkill', '$secondarySkill', '$postedby', '$date'
+    )");
+    
+        mysqli_query($conn, "DELETE FROM `jobpost` WHERE `post_iud` = '$postId'");
+    }
 ?>

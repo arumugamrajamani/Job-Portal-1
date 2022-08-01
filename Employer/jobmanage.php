@@ -13,8 +13,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/jobmanage.css">
-     <!-- jQuery cdn link below -->
-     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- jQuery cdn link below -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Toast CDN for functionality of toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Toast CDN for design of toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Company Profile</title>
 </head>
 <body>
@@ -90,50 +94,6 @@
                                 </tr>
                             </thead>
                             <tbody class="bg-light text-dark " id="body-h" >
-                                <!-- <tr>
-                                    <td  data-title="Job Title">Web developer</td>
-                                    <td data-title="Number applicant">10</td>
-                                    <td data-title="status">sample</td>
-                                    <td data-title="drive">sample.com</td>
-                                    <td data-title="action">
-                                    <button  class="btn" type="button" id="btn-info" >Edit</button>
-                                    <button class="btn" type="button" id="btn-info"  data-bs-toggle="modal" data-bs-target="#exampleModal">Delete</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody class="bg-light text-dark mt-5 " id="body-h">
-                                <tr>
-                                    <td data-title="Job Title">Virtual Assistant</td>
-                                    <td data-title="Last Name">5</td>
-                                    <td data-title="Age">sample</td>
-                                    <td data-title="State">sample.com</td>
-                                    <td data-title="Email"> <span><button class="btn" type="button" id="btn-info" >Edit</button>
-                                    <button class="btn" type="button" id="btn-info"  data-bs-toggle="modal" data-bs-target="#exampleModal">Delete</button></span></td>
-                                </tr>
-                                <tr>
-                                    <td  data-title="Job Title">Web developer</td>
-                                    <td data-title="Number applicant">10</td>
-                                    <td data-title="status">sample</td>
-                                    <td data-title="drive">sample.com</td>
-                                    <td data-title="Email"><button class="btn" type="button" id="btn-info" >Edit</button>
-                                    <button class="btn" type="button" id="btn-info"  data-bs-toggle="modal" data-bs-target="#exampleModal">Delete</button></td>
-                                </tr>
-                                <tr>
-                                    <td  data-title="Job Title">Web developer</td>
-                                    <td data-title="Number applicant">10</td>
-                                    <td data-title="status">sample</td>
-                                    <td data-title="drive">sample.com</td>
-                                    <td data-title="Email"><button class="btn" type="button" id="btn-info" >Edit</button>
-                                    <button class="btn" type="button" id="btn-info"  data-bs-toggle="modal" data-bs-target="#exampleModal">Delete</button></td>
-                                </tr>
-                                <tr>
-                                    <td  data-title="Job Title">Web developer</td>
-                                    <td data-title="Number applicant">10</td>
-                                    <td data-title="status">sample</td>
-                                    <td data-title="drive">sample.com</td>
-                                    <td data-title="Email" ><button class="btn" type="button" id="btn-info" >Edit</button>
-                                    <button class="btn" type="button" id="btn-info"  data-bs-toggle="modal" data-bs-target="#exampleModal">Delete</button></td>
-                                </tr> -->
                             </tbody>
                         </table>
                        
@@ -157,7 +117,7 @@
             </div>  
         </form>
     </div>
-
+    <!-- Delete button modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -166,7 +126,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <button type="button" class="btn btn-success btn1">Yes</button>
+                    <button type="button" id="del-yes" class="btn btn-success btn1">Yes</button>
                     <button type="button" class="btn btn-danger btn1" data-bs-dismiss="modal">No</button>
                 </div>
             </div>

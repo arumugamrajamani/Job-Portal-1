@@ -23,11 +23,11 @@
             $date = dateTimeConvertion($row['date_posted']);
             $tableData .=  "<div class='bg-white shadow-sm d-flex div3'><br>
             <img src='image/comlogo.png' alt='company logo' class='ms-3 mt-4 logo'>
-            <div class='block mt-2' style='max-width: 800px;'>
+            <div class='block mt-2' style='max-width: 800px; min-width: 800px;'>
                 <div class='d-flex'>
                     <h5 class='mt-3 fw-bold ms-4 job'>{$jobTitle}</h5>
                     <button class='mt-2 p-2 px-3 text-dark btn1' data-bs-toggle='modal' data-bs-target='#qr-code'style='position: absolute; right: 150px;' type='button'>Company QR Code</button>
-                    <button class='mt-2 p-2 px-3 text-dark btn1' id='details'value='{$postId}' style='position: absolute; right: 10px;' type='button'>View Details</button>
+                    <button class='mt-2 p-2 px-3 text-dark btn1' id='details' value='{$postId}' style='position: absolute; right: 10px;' type='button'>View Details</button>
                 </div>
                 <h6 class='ms-4 fw-bold'>{$companyName}</h6>
                 <div class='ms-4'>

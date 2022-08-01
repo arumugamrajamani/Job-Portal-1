@@ -141,12 +141,12 @@
                             <div class="entries">
                                 </span>Show 1 to 3 of 3 entries</span>
                             </div>
-                            <ul class="pagination">
-                                <li class="page-item1"><a class="page-link next text-dark" href="#">Previous</a></li>
+                            <ul class="pagination" id="pagination">
+                             <!--   <li class="page-item1"><a class="page-link next text-dark" href="#">Previous</a></li>
                                 <li class="page-item"><a class="page-link num text-dark" href="#">1</a></li>
                                 <li class="page-item"><a class="page-link num text-dark" href="#">2</a></li>
                                 <li class="page-item"><a class="page-link num text-dark" href="#">3</a></li>
-                                <li class="page-item1"><a class="page-link next text-dark" href="#">Next</a></li>
+                                <li class="page-item1"><a class="page-link next text-dark" href="#">Next</a></li>-->
                             </ul>
                         </nav> 
                         <div class="text-end">

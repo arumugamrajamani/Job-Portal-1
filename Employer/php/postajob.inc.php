@@ -70,7 +70,7 @@
         }
          echo json_encode($response);
     }
-    else {
+    else if (isset($_POST['fetchTableData'])) {
         $uid = ($_SESSION['user_id']);
         $getPosts = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `postedby_uid` = '$uid'");
         while($row = mysqli_fetch_assoc($getPosts)){
@@ -93,6 +93,57 @@
                              <td>{$employerEmail}</td>";
             $response = array('tableData' => $tableData);
         }
+    echo json_encode($response);
+    }
+    else {
+        $tableData = "";
+        $uid = ($_SESSION['user_id']);
+        $getPosts = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `postedby_uid` = '$uid'");
+        while($row = mysqli_fetch_assoc($getPosts)){
+            $companyName = $row['company_name'];
+            $jobTitle = $row['job_title'];
+            $employment = $row['employment_type'];
+            $jobCategory = $row['job_category'];
+            $jobDescription = $row['job_description'];
+            $salaryWage = $row['salary'];
+            $employerEmail = $row['employer_email'];
+            $primarySkill = $row['primary_skill'];
+            $secondarySkill = $row['secondary_skill'];
+            $tableData .=  "<tr>
+                                <td  data-title='Job Title'>{$jobTitle}</td>
+                                <td data-title='Number applicant'>ano ba lalagay dito?</td>
+                                <td data-title='status'>active</td>
+                                <td data-title='drive'>ano rito?</td>
+                                <td data-title='action'>
+                                <button  class='btn' type='button' id='btn-info' >Edit</button>
+                                <button class='btn' type='button' id='btn-info'  data-bs-toggle='modal' data-bs-target='#exampleModal'>Delete</button>
+                                </td>
+                                </tr>";
+                            }
+                            $getDeletedPosts = mysqli_query($conn, "SELECT * FROM `jobpost_recycler` WHERE `postedby_uid` = '$uid'");
+                            while($row1 = mysqli_fetch_assoc($getDeletedPosts)){
+                                // $id = $row1['post_iud'];
+                                $companyName = $row1['company_name'];
+                                $jobTitle = $row1['job_title'];
+                                $employment = $row1['employment_type'];
+                                $jobCategory = $row1['job_category'];
+                                $jobDescription = $row1['job_description'];
+                                $salaryWage = $row1['salary'];
+                                $employerEmail = $row1['employer_email'];
+                                $primarySkill = $row1['primary_skill'];
+                                $secondarySkill = $row1['secondary_skill'];
+                                $tableData .=  "<tr>
+                                                    <td  data-title='Job Title'>{$jobTitle}</td>
+                                                    <td data-title='Number applicant'>di ko alam lalagay dito</td>
+                                                    <td data-title='status'>inactive</td>
+                                                    <td data-title='drive'>eto rin</td>
+                                                    <td data-title='action'>
+                                                    <button  class='btn' type='button' id='btn-info' >Edit</button>
+                                                    <button class='btn' type='button' id='btn-info'  data-bs-toggle='modal' data-bs-target='#exampleModal'>Delete</button>
+                                                    </td>
+                                                </tr>";
+                            }
+            $response = array('tableData' => $tableData);
     echo json_encode($response);
     }
 

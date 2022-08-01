@@ -125,7 +125,7 @@ p {
   height: 40px;
   left: 230px;
   top: -135px;
-  background: #fdf6ec;
+  /* background: #fdf6ec; */
 }
 #mg-align {
   border-collapse: separate;

@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/jobmanage.css">
+     <!-- jQuery cdn link below -->
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Company Profile</title>
 </head>
 <body>
@@ -60,7 +62,7 @@
             <div class="col-auto text-center">
                 <section class="type p-1"> 
                     <div class="bg-color-header"> 
-                        <h1 class="text-start">Job Post </h1> 
+                        <h1 class="text-start">Job Post</h1> 
                         <div class="input-group">
                             <div class="form-outline">
                               <input type="search" id="form1" placeholder="Search for a job title" class="form-control" />
@@ -70,9 +72,9 @@
                             </button>
                           </div>
                         <div class="column">
-                            <div class="card"> 
+                            <!-- <div class="card"> 
                                 <h3>0</h3>
-                            </div>
+                            </div> -->
                         </div>
                         <p>The job posting will stay available for as long  as <br> you have  an active  account or until you  delete it.</p>
                     </div>
@@ -88,7 +90,7 @@
                                 </tr>
                             </thead>
                             <tbody class="bg-light text-dark " id="body-h" >
-                                <tr>
+                                <!-- <tr>
                                     <td  data-title="Job Title">Web developer</td>
                                     <td data-title="Number applicant">10</td>
                                     <td data-title="status">sample</td>
@@ -131,7 +133,7 @@
                                     <td data-title="drive">sample.com</td>
                                     <td data-title="Email" ><button class="btn" type="button" id="btn-info" >Edit</button>
                                     <button class="btn" type="button" id="btn-info"  data-bs-toggle="modal" data-bs-target="#exampleModal">Delete</button></td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                        
@@ -171,4 +173,5 @@
         </div>
     </div>
 </body>
+<script src="js/jobmanage.js"></script>
 </html>

@@ -5,7 +5,7 @@ $(document).ready(function () {
             url: 'php/postajob.inc.php',
             type: 'POST',
             data: {
-                fetchData: true
+                fetchTableData: true
             },
             dataType: "JSON",
             success: function (response) {

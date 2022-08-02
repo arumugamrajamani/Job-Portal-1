@@ -54,6 +54,3 @@
 
         echo json_encode($response);
     }
-    else {
-        header("../insidejob.php?postid={$_POST['postId']}");
-    }

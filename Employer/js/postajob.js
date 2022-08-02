@@ -11,6 +11,36 @@ $(document).ready(function() {
         var regex = /[A-Z]{1,3}\s\d{1,3}(,\d{3})*(.\d+)?$/;
         return regex.test(value);
     }
+     // Function for getting the current page number
+     function getCurrentPage() {
+        var page = $('#pagination').find('.active').attr('data-page');
+        return page;
+    }
+     // Trigger this when user click on the pagination 
+     $('#pagination').on('click', '.page-item', function () {
+        let page = $(this).attr('data-page');
+        load_data(GetSearchValue(), page);
+    });
+     // Function for loading of table data
+     function load_data(search, page) {
+        $.ajax({
+            url: "../Employer/php/postajob.inc.php",
+            type: "POST",
+            data: {
+                loadData: true,
+                search: search,
+                page: page
+            },
+            dataType: "JSON",
+            success: function (data) {
+                $('#body-h').html(data.tableData);
+                $('#pagination').html(data.pagination);
+                $('#entries').html(data.entries);
+            }
+        })
+    }
+    
+    
     $('#companyname').on('keyup', function() {
         let fullname = $('#companyname').val();
         if(fullname.length == 0) {

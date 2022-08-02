@@ -1431,7 +1431,7 @@
                     <h6 class="text-uppercase ">EMPLOYER</h6>
                     <ul class="list-unstyled">
                         <li class="my-0"><a href="companyregister.php" class="text-dark">Register</a></li>
-                        <li class="my-0"><a href="postajob.php" class="text-dark">Post a job</a></li>
+                        <li class="my-0"><a href="../Job-Portal/Employer/postajob.php" class="text-dark">Post a job</a></li>
                         <li class="my-0"><a href="howitworks-employ.php" class="text-dark">How it works</a></li>
 
                     </ul>

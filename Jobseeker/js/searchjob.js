@@ -15,10 +15,6 @@ function closeNav() {
 //         $(this).find('.dropdown').toggleClass('rotate');
 //     });
 // });
-function getVal(){
-//    let postId = $('#detail').attr('data-id');
-//    console.log(postId);
-}
 $(document).ready(function () {
    load_data();
    function load_data(search, page){

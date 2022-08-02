@@ -15,6 +15,10 @@ function closeNav() {
 //         $(this).find('.dropdown').toggleClass('rotate');
 //     });
 // });
+function getVal(){
+//    let postId = $('#detail').attr('data-id');
+//    console.log(postId);
+}
 $(document).ready(function () {
    load_data();
    function load_data(search, page){
@@ -35,4 +39,24 @@ $(document).ready(function () {
        }
        });
    }
+    $('#body-h').on('click', '#detail', function () {
+       let postId = $(this).attr('data-id');
+       $('#del-yes').val(postId);
+   });
+    $('#del-yes').click(function () {
+        let postId = $(this).val();
+       console.log(postId);
+       $.ajax({
+       url: 'php/searchjob.inc.php',
+       type: 'POST',
+       data: {
+           details: true,
+           postId: postId
+       },
+       success: function (response) {
+        alert ('nagana');
+        window.location = 'insidejob.php?id='+postId;
+       }
+       });
+    });
 });

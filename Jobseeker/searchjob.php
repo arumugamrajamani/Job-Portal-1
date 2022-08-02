@@ -16,6 +16,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+      <script>eruda.init();</script>
 <link rel="stylesheet" href="css/searchjob.css">
 <title>Search Job</title>
 </head>
@@ -228,13 +230,13 @@
             <div class="container1 div2">
                 <h3 class="fw-bold">SEARCH RESULTS</h3>
                 <div id="body-h"></div>
-                <!-- <div class="bg-white shadow-sm d-flex div3"><br>
+                <!--<div class="bg-white shadow-sm d-flex div3"><br>
                     <img src="image/comlogo.png" alt="company logo" class="ms-3 mt-4 logo">
                     <div class="block mt-2">
                         <div class="d-flex">
                             <h5 class="mt-3 fw-bold ms-4 job">Software Engineer Team Lead - 3PEF And Economics</h5>
                             <button class="mt-2 p-2 px-3 text-dark btn1" data-bs-toggle="modal" data-bs-target="#qr-code" type="button">Company QR Code</button>
-                            <button class="mt-2 p-2 px-3 text-dark btn1" id="btn1" onclick="location.href='insidejob.php'" type="button">View Details</button>
+                            <button class="mt-2 p-2 px-3 text-dark btn1" id="details1" type="button">View Details</button>
                         </div>
                         <h6 class="ms-4 fw-bold">FactSet Philippines, Inc.</h6>
                         <div class="ms-4">
@@ -296,7 +298,20 @@
             </div>
     </div>
 </div>
-<script src="js/searchjob.js"></script>    
+    <div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title ms-5" id="exampleModalLabel">View Details?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="delete modal-body">
+                    <button type="button" id="del-yes" class="yes-no btn btn-success">Yes</button>
+                    <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
 <div class="modal fade" id="qr-code" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
     <div class="modal-dialog">
@@ -314,4 +329,5 @@
 </div>
 
 </body>
+<script src="js/searchjob.js"></script>    
 </html>

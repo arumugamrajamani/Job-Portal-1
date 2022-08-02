@@ -6,6 +6,13 @@
     function dateTimeConvertion($date){
         return date('M d, Y, h:i A', strtotime($date));
     }
+    function  getProfilePicLoc($profilePic){
+        if ($profilePic != NULL && file_exists("../../storage/" . $profilePic)) {
+            return "../storage/" . $profilePic;
+        } else {
+            return "image/comlogo.png";
+        }
+    }
     if (isset($_POST['fetchData'])) {
         $tableData = "";
         $getPosts = mysqli_query($conn, "SELECT * FROM `jobpost`");
@@ -15,14 +22,15 @@
             $getEmployerName = mysqli_query($conn, "SELECT * FROM `employer` WHERE `employer_id` = '$uid'");
             while($name = mysqli_fetch_assoc($getEmployerName)){
             $companyAddress = $name['company_address'];
-            $companyName = $name['company_name'];}
+            $companyName = $name['company_name'];
+            $companyLogo = getProfilePicLoc($name['company_logo_name']);}
             $jobCategory = $row['job_category'];
             $jobTitle = $row['job_title'];
             $salary = $row['salary'];
             $description = $row['job_description'];
             $date = dateTimeConvertion($row['date_posted']);
             $tableData .=  "<div class='bg-white shadow-sm d-flex div3'><br>
-            <img src='image/comlogo.png' alt='company logo' class='ms-3 mt-4 logo'>
+            <img src='{$companyLogo}' alt='company logo' class='ms-3 mt-4 logo'>
             <div class='block mt-2' style='max-width: 800px; min-width: 800px;'>
                 <div class='d-flex'>
                     <h5 class='mt-3 fw-bold ms-4 job'>{$jobTitle}</h5>

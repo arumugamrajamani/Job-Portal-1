@@ -40,9 +40,9 @@
           <li class="nav-item account dropdown active">
             <a class="nav-link text-darkdropdown-toggle account active" href="#" id="navbarDropdown"
               role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
+              <img id="profile_picture" class="image" src="" alt="Profile" width="50" height="30"> ACCOUNT</a>
             <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item text-light text-start" href="applicant-profile.php"><i class="bi bi-person-fill"></i> Full Name</a></li>
+              <li><a id="fullname" class="dropdown-item text-light text-start" href="applicant-profile.php"><i class="bi bi-person-fill"></i> Full Name</a></li>
               <li>
                 <hr class="dropdown-divider bg-white">
               </li>

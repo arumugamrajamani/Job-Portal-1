@@ -30,7 +30,7 @@
             $description = $row['job_description'];
             $date = dateTimeConvertion($row['date_posted']);
             $tableData .=  "<div class='bg-white shadow-sm d-flex div3'><br>
-            <img src='{$companyLogo}' alt='company logo' class='ms-3 mt-4 logo'>
+            <img src='{$companyLogo}' alt='company logo' class='ms-3 mt-4 logo' id='logo' style='border-radius: 120px; object-fit: cover; height: 73px;'>
             <div class='block mt-2' style='max-width: 800px; min-width: 800px;'>
                 <div class='d-flex'>
                     <h5 class='mt-3 fw-bold ms-4 job'>{$jobTitle}</h5>

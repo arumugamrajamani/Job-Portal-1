@@ -4,6 +4,19 @@
     // Include the database connection file and establish a connection
     include '../../php/db-connection.php';
 
+    // check if profile pic is not null && if file exists  then returns a string value of the profile picture location
+    function  getProfilePicLoc($profilePic)
+    {
+        if ($profilePic != NULL && file_exists("../../storage/" . $profilePic)) {
+            return "../storage/" . $profilePic;
+        } else {
+            return "../storage/noProfilePic.png";
+        }
+    }
+
+
+        
+
     // Check if jobseeker password matches the one in the database
     function isJobseekerPasswordMatch($currentpassword) {
         $getDBpassword = mysqli_query($GLOBALS['conn'], "SELECT password FROM jobseeker WHERE jobseeker_id = {$_SESSION['user_id']}");

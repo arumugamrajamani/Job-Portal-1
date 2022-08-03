@@ -206,7 +206,7 @@
                 <div class="col-md-2 col-lg-2 g-0 mx-auto mb-4">
                     <h6 class="text-uppercase">Credits</h6>
                     <ul class="list-unstyled">
-                        <li class="my-0"><a href="#" class="text-dark">Developer</a></li>
+                        <li class="my-0"><a href="developer-team.php" class="text-dark">Developer</a></li>
                         <li class="my-0"><a href="credit-iconscout.php" class="text-dark">Iconscout</a></li>
                         <li class="my-0"><a href="credit-flaticon.php" class="text-dark">Flaticon</a></li>
                         <li class="my-0"><a href="credit-otherinfo.php" class="text-dark">Web icons</a></li>

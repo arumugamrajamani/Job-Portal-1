@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="css/InsideJob.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3" id="nav0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-0" id="nav0">
         <div class="container-fluid" id="inner">
           <a class="navbar-brand me-1" href="#"></a>
           <img class="img" src="image/Techployment (7) 1.png" alt="Job Portal Logo" width="95" height="90" id="logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <img src="image/selection.png" alt="" width="40px" height="50px" id="Selection">
+            <img src="/Landing-Page/image/selection.png" alt="" width="40px" height="50px" id="Selection">
           </button>
           <form class="d-flex searchbar" id="sea">
             <input class="form-control icon" type="search" placeholder="Search for a job title" aria-label="Search">
@@ -29,26 +29,36 @@
                 <a class="nav-link text-light message active fw-bold" aria-current="page" href="message-jobseekers.php">MESSAGE</a>
               </li>
               <li class="nav-item1 fw-bold">
-                <a class="nav-link text-light about active" href="searchjob.php">JOB BOARD</a>
+                <a class="nav-link text-light about active" href="jobcategories.php">JOB BOARD</a>
               </li>
               <li class="nav-item account dropdown active">
                 <a class="nav-link text-light fw-bold dropdown-toggle account active" href="#" id="navbarDropdown"
                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <img class="image" src="image/sircastillo.png" alt="Profile" width="55" height="55"> Mark John Castillo</a>
                 <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item text-light" href="applicant-profile.php"><img src="image/sircastillo.png" alt="" width="35" height="35"> MY PROFILE</a></li>
+                  <li><a class="dropdown-item text-light" href="applicant-profile.php"><img src="image/sircastillo.png" alt="" width="35" height="35"> My Profile</a></li>
                   <li>
                     <hr class="dropdown-divider bg-white">
                   </li>
-                  <li><a class="dropdown-item text-light" href="jobapplication.php"><img src="image/job-management.png" alt=""> JOB APPLICATIONS</a></li>
-                  <li><a class="dropdown-item text-light" href="bookmark-job.php"><img src="image/bookmark.png" alt=""> BOOKMARKED JOBS</a></li>
-                  <li><a class="dropdown-item text-light" href="manage-account-1.php"><img src="image/edit-profile.png" alt=""> ACCOUNT SETTINGS</a></li>
-                  <li><a class="dropdown-item logout text-light" href="#"><img src="image/sign out.png" alt=""> LOGOUT</a></li>
+                  <li><a class="dropdown-item text-light" href="manage-account-1.php">Edit Profile</a></li>
+                  <li><a class="dropdown-item text-light" href="change-pass.php">Change Password</a></li>
+                  <li><a class="dropdown-item text-light" href="jobapplication.php">Job Applications</a></li>
+                  <li><a class="dropdown-item text-light" href="bookmark-job.php">Bookmark Jobs</a></li>
+                  <li><a class="dropdown-item text-light" href="manage-resume-jobseeker.php">Manage Resume</a></li>
+                  <li><a class="dropdown-item logout text-light" href="../login.php">LOGOUT</a></li>
                 </ul>
             </div>
         </div>
     </div>
     </nav>
+    <div class="swits">
+    <div class = 'toggle-switch'>
+      <label class="lab">
+        <input class="dar" type = 'checkbox' onclick="toggleImage()">
+        <span id="icon2" class = 'slider'></span>
+      </label>
+    </div>
+    </div>
     <div class="container shadow-lg" id="content">
       <div class="container-fluid" id="ITS">
         <div class="support">
@@ -99,7 +109,14 @@
         <div class="salary1">
           <h4><b>PHP 40,000 - PHP 68,000 a month</b></h4>
           <p>You must qualified to this position</p>
-          <p><img class="button" href="apply-now.php" src="image/button login.png" alt="" style="margin-top: 5px;"><a href="bookmark-job.php"><img class="button1" src="image/Vector.png" alt="" style="padding: 1px;"></a></h3><div class="button-app"><a class="nav-link text-light about active" href="searchjob.php">APPLY NOW</a></div>
+          <div class="butt">
+            <div class="logapp">
+              <a class="appnow" href="" style="text-decoration: none;">APPLY NOW</a>
+            </div>
+            <div class="markb">
+              <a href="/Jobseeker/bookmark-job.html"><img id="bmark" src="/Landing-Page/image/Vector.png" alt=""></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -114,5 +131,36 @@
         </div>
       </div>
     </div>    
+    <script>
+      var icon2 = document.getElementById("icon2")
+  
+      icon2.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+      }
+      
+      function toggleImage(){
+        imgsrc= document.getElementById("logo").src;
+        if (imgsrc.indexOf("image/light-logo.png") !=-1){
+          document.getElementById("logo").src = "image/Techployment (7) 1.png";
+        }
+        else{
+          document.getElementById("logo").src = "image/light-logo.png";
+        }
+        imgsrc= document.getElementById("bmark").src;
+        if (imgsrc.indexOf("/Landing-Page/image/Vector.png") !=-1){
+          document.getElementById("bmark").src = "/Landing-Page/image/Vectorlight.png";
+        }
+        else{
+          document.getElementById("bmark").src = "/Landing-Page/image/Vector.png";
+        }
+        imgsrc= document.getElementById("Selection").src;
+        if (imgsrc.indexOf("/Landing-Page/image/selection.png") !=-1){
+          document.getElementById("Selection").src = "/Landing-Page/image/icons8-menu-60.png";
+        }
+        else{
+          document.getElementById("Selection").src = "/Landing-Page/image/selection.png";
+        }
+      }
+    </script>
 </body>
 </html>

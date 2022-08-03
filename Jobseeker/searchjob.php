@@ -228,13 +228,13 @@
             <div class="container1 div2">
                 <h3 class="fw-bold">SEARCH RESULTS</h3>
                 <div id="body-h"></div>
-                <!--<div class="bg-white shadow-sm d-flex div3"><br>
+                <!-- <div class="bg-white shadow-sm d-flex div3"><br>
                     <img src="image/comlogo.png" alt="company logo" class="ms-3 mt-4 logo">
                     <div class="block mt-2">
                         <div class="d-flex">
                             <h5 class="mt-3 fw-bold ms-4 job">Software Engineer Team Lead - 3PEF And Economics</h5>
                             <button class="mt-2 p-2 px-3 text-dark btn1" data-bs-toggle="modal" data-bs-target="#qr-code" type="button">Company QR Code</button>
-                            <button class="mt-2 p-2 px-3 text-dark btn1" id="details1" type="button">View Details</button>
+                            <button class="mt-2 p-2 px-3 text-dark btn1" id="btn1" onclick="location.href='insidejob.php'" type="button">View Details</button>
                         </div>
                         <h6 class="ms-4 fw-bold">FactSet Philippines, Inc.</h6>
                         <div class="ms-4">
@@ -296,7 +296,7 @@
             </div>
     </div>
 </div>
-    <div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -310,6 +310,7 @@
             </div>
         </div>
     </div>
+<script src="js/searchjob.js"></script>    
 <div class="modal fade" id="qr-code" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
     <div class="modal-dialog">
@@ -327,5 +328,4 @@
 </div>
 
 </body>
-<script src="js/searchjob.js"></script>    
 </html>

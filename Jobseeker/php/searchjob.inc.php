@@ -21,7 +21,6 @@
             $postId = $row['post_iud'];
             $getEmployerName = mysqli_query($conn, "SELECT * FROM `employer` WHERE `employer_id` = '$uid'");
             while($name = mysqli_fetch_assoc($getEmployerName)){
-            $count = $count + 1;
             $companyAddress = $name['company_address'];
             $companyName = $name['company_name'];
             $companyLogo = getProfilePicLoc($name['company_logo_name']);}
@@ -36,7 +35,7 @@
                 <div class='d-flex'>
                     <h5 class='mt-3 fw-bold ms-4 job'>{$jobTitle}</h5>
                     <button class='mt-2 p-2 px-3 text-dark btn1' data-bs-toggle='modal' data-bs-target='#qr-code'style='position: absolute; right: 150px;' type='button'>Company QR Code</button>
-                    <button class='mt-2 p-2 px-3 text-dark btn1' id='detail' onclick='getVal()' data-id='{$postId}' data-bs-toggle='modal' data-bs-target='#modal-delete' style='position: absolute; right: 10px;' type='button'>View Details</button>
+                    <button class='mt-2 p-2 px-3 text-dark btn1' id='detail' data-id='{$postId}' data-bs-toggle='modal' data-bs-target='#modal-delete' style='position: absolute; right: 10px;' type='button'>View Details</button>
                 </div>
                 <h6 class='ms-4 fw-bold'>{$companyName}</h6>
                 <div class='ms-4'>

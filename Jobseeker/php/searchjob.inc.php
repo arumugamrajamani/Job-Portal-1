@@ -53,3 +53,7 @@
 
         echo json_encode($response);
     }
+
+    else {
+        $_SESSION['postId'] = $_POST["postId"];
+    }

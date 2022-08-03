@@ -7,6 +7,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <!-- jQuery cdn link below -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <title>Inside the Job</title>
     <link rel="stylesheet" href="css/InsideJob.css">
 </head>
@@ -52,25 +54,22 @@
     <div class="container shadow-lg" id="content">
       <div class="container-fluid" id="ITS">
         <div class="support">
-          <h4><b>IT Technical Support</h4></b>
-          <p>VINKAND Solution LLC<br>
-            Manila</p>
+          <h4><b id="jobTitle"></h4></b>
+          <p id="companyName"></p>
+          <p id="address"></p>
         </div>
       </div>
       <div class="container-fluid" id="sal">
-        <div class="salary">
-          <h4><b>PHP 40,000 - PHP 68,000 a month</h4></b>
+        <div>
+          <h4><b id="salaryy"></b></h4>
           <h5>JOB TYPE</h5>
-        <p>• Full-Time<br>
-        • Part-Time</p>
+          <p id="employment"></p>
         </div>  
       </div>
       <div class="container-fluid" id="job">
         <div class="job desc">
           <h5><b>JOB DESCRIPTION</b> (Includes skill requirements/text type)</h5>
-          <p><u>Technical Support<br><br>
-          Are you ready to take the next bold step in your career?<br><br>
-          It takes a special person to excel with a global leader in Medical Services for the Maritime Industry. VINKAND is looking for talented, independent and accountable professionals to join uts growing team.</u></p>
+          <p><u id="description"></u></p>
         </div>
       </div>
       <div class="container-fluid" id="hire">
@@ -83,14 +82,15 @@
         <div class="activity">
           <h4><b>JOB ACTIVITY</b></h4>
           <p>Employer reviewed job/date</p>
-          <h6><b>Posted day ago</b></h6>
+          <h5>Date Posted</h5>
+          <h6><b id="datePosted"></b></h6>
         </div>
       </div>
     </div>
     <div class="container shadow-lg" id="content1">
       <div class="container-fluid" id="app">
         <div class="apply now">
-          <h4><b>IT Technical Support</h4></b>
+          <!-- <h4><b>IT Technical Support</h4></b>
           <p>VINKAND Solution LLC<br>
           Manila</p>
         </div>
@@ -98,9 +98,9 @@
       <div class="container-fluid" id="sal1">
         <div class="salary1">
           <h4><b>PHP 40,000 - PHP 68,000 a month</b></h4>
-          <p>You must qualified to this position</p>
+          <p>You must qualified to this position</p> -->
           <p><img class="button" href="apply-now.php" src="image/button login.png" alt="" style="margin-top: 5px;"><a href="bookmark-job.php"><img class="button1" src="image/Vector.png" alt="" style="padding: 1px;"></a></h3><div class="button-app"><a class="nav-link text-light about active" href="searchjob.php">APPLY NOW</a></div>
-        </div>
+         </div>
       </div>
     </div>
     <div class="container shadow-lg" id="content2">
@@ -115,4 +115,5 @@
       </div>
     </div>    
 </body>
+<script src="js/insidejob.js"></script>
 </html>

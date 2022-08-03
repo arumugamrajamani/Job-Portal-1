@@ -52,7 +52,7 @@ $(document).ready(function () {
         },
         success: function (response) {
         //alert ('nagana');
-        window.location = 'insidejob.php?id='+postId;
+        window.location = 'insidejob.php';
         }
         });
     });

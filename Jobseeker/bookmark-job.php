@@ -15,6 +15,8 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/bookmark-job.css">
+   <!-- jQuery cdn link below -->
+   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <title>Bookmark</title>
 </head>
 
@@ -70,13 +72,13 @@
               <table class="table basic-table table-headers table table-hover">
                 <thead class="text-dark text-center" id="title-sub">
                   <tr>
-                    <th>Job Tittle</th>
+                    <th>Job Title</th>
                     <th>Job Description</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody class="bg-light text-dark text-center" id="body-h">
-                  <tr class="tr1">
+                  <!-- <tr class="tr1">
                     <td data-title="Job Tittle">Administrative Assistant</td>
                     <td data-title="Job Description" class="descript">Lorem ipsum dolor sit amet consectetur
                       adipisicing elit. Velit accusamus harum cupiditate quisquam quae dolorem non voluptatem minus.
@@ -112,7 +114,7 @@
                       <button class="btn btn-dark btn-sm rounded-circle" type="button" data-toggle="tooltip"
                         data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
                     </td>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
             </div>
@@ -125,5 +127,5 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 </body>
-
+<script src= "js/bookmark-job.js"></script>
 </html>

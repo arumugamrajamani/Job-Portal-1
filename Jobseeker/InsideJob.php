@@ -19,11 +19,11 @@
           <img class="img" src="image/Techployment (7) 1.png" alt="Job Portal Logo" width="95" height="90" id="logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <img src="/Landing-Page/image/selection.png" alt="" width="40px" height="50px" id="Selection">
+            <img src="image/selection.png" alt="" width="40px" height="50px" id="Selection">
           </button>
           <form class="d-flex searchbar" id="sea">
             <input class="form-control icon" type="search" placeholder="Search for a job title" aria-label="Search">
-            <button class="btn text-light fw-bold search" type="submit"><img src="image/bx-search-alt-2 2.png" alt="Search" width="24" class="bts"></button>
+            <button class="btn text-light fw-bold search" type="submit"><img src="image/bx-search.png" alt="Search" width="24" class="bts"></button>
           </form>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -38,7 +38,7 @@
                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <img class="image" src="image/sircastillo.png" alt="Profile" width="55" height="55"> Mark John Castillo</a>
                 <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item text-light" href="applicant-profile.php"><img src="image/sircastillo.png" alt="" width="35" height="35"> My Profile</a></li>
+                  <li><a class="dropdown-item text-light" href="applicant-sircastillo.php"><img src="image/sircastillo.png" alt="" width="35" height="35"> My Profile</a></li>
                   <li>
                     <hr class="dropdown-divider bg-white">
                   </li>
@@ -114,7 +114,7 @@
               <a class="appnow" href="" style="text-decoration: none;">APPLY NOW</a>
             </div>
             <div class="markb">
-              <a href="/Jobseeker/bookmark-job.html"><img id="bmark" src="/Landing-Page/image/Vector.png" alt=""></a>
+              <a href="bookmark-job.php"><img id="bmark" src="image/Vector.png" alt=""></a>
             </div>
           </div>
         </div>
@@ -147,18 +147,18 @@
           document.getElementById("logo").src = "image/light-logo.png";
         }
         imgsrc= document.getElementById("bmark").src;
-        if (imgsrc.indexOf("/Landing-Page/image/Vector.png") !=-1){
-          document.getElementById("bmark").src = "/Landing-Page/image/Vectorlight.png";
+        if (imgsrc.indexOf("image/Vector.png") !=-1){
+          document.getElementById("bmark").src = "image/Vectorlight.png";
         }
         else{
-          document.getElementById("bmark").src = "/Landing-Page/image/Vector.png";
+          document.getElementById("bmark").src = "image/Vector.png";
         }
         imgsrc= document.getElementById("Selection").src;
-        if (imgsrc.indexOf("/Landing-Page/image/selection.png") !=-1){
-          document.getElementById("Selection").src = "/Landing-Page/image/icons8-menu-60.png";
+        if (imgsrc.indexOf("image/selection.png") !=-1){
+          document.getElementById("Selection").src = "image/icons8-menu-60.png";
         }
         else{
-          document.getElementById("Selection").src = "/Landing-Page/image/selection.png";
+          document.getElementById("Selection").src = "image/selection.png";
         }
       }
     </script>

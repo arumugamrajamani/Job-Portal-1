@@ -1440,8 +1440,8 @@
                     <h6 class="text-uppercase ">OTHER INFORMATIONS</h6>
                     
                     <ul class="list-unstyled">
-                        <li class="my-0"></i> <a href="#faq" class="text-dark">FAQ</a></li>
-                        <li class="my-0"></i> <a href="#aboutus" class="text-dark">About us</a></li>               
+                        <li class="my-0"></i> <a href="index.php#aboutus" class="text-dark">FAQ</a></li>
+                        <li class="my-0"></i> <a href="index.php#faq" class="text-dark">About us</a></li>               
                         <li class="my-0"></i><a href="privacypolicy.php" class="text-dark">Privacy Policy</a></li>
                         <li class="my-0"></i> <a href="termsofuse.php" class="text-dark">Terms of use</a></li>
                         <li class="my-0"></i> <a href="termsandcondition.php" class="text-dark">Terms and conditions</a></li>

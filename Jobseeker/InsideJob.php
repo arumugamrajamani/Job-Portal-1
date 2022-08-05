@@ -114,7 +114,7 @@
               <a class="appnow" href="" style="text-decoration: none;">APPLY NOW</a>
             </div>
             <div class="markb">
-              <a href="bookmark-job.php"><img id="bmark" src="image/Vector.png" alt=""></a>
+              <a><img id="bmark" onclick="update()" src="image/Vector.png" alt=""></a>
             </div>
           </div>
         </div>

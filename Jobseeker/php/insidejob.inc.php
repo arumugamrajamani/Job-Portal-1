@@ -39,11 +39,14 @@ else if(isset($_POST['delete'])) {
      $uid = mysqli_real_escape_string($conn, $_POST['postId']);
      $updatePosts = mysqli_query($conn, "UPDATE `jobpost` SET `bookmark`='false' WHERE `post_iud` = '$uid'");
 }
-else{
-    $tableData = "";
+else if(isset($_POST['update'])) {
     $id = ($_SESSION['user_id']);
     $uid = ($_SESSION['postId']);
     $updatePosts = mysqli_query($conn, "UPDATE `jobpost` SET `bookmark`='$id' WHERE `post_iud` = '$uid'");
+}
+else{
+    $tableData = "";
+    $id = ($_SESSION['user_id']);
     $getPosts = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `bookmark` = '$id'");
     while($row = mysqli_fetch_assoc($getPosts)){
         $postId = $row['post_iud'];

@@ -33,7 +33,11 @@ $(document).ready(function () {
             success: function (response) {
                 $('#modal-delete').modal('hide');
                 console.log(response);
-                //toastr.success('', 'Successfully Deleted!');
+                toastr.options = {
+                    positionClass : "toast-top-center"
+                }
+                toastr.success('', 'Successfully Deleted!');
+                load_data();
             }
             });
         });

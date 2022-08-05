@@ -1,3 +1,17 @@
+function update(){
+    $.ajax({
+        url: 'php/insidejob.inc.php',
+        type: 'POST',
+        data: {
+            update: true,
+        },
+        //dataType: 'JSON',
+        success: function (response) {
+            console.log(response);
+            window.location = 'bookmark-job.php';
+        }
+    });
+}
 $(document).ready(function () {
 load_data();
    function load_data(){

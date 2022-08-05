@@ -35,23 +35,31 @@ if (isset($_POST['getData'])) {
     $data = array('date' => $date, 'employment' => $employment, 'jobCategory' => $jobCategory, 'jobTitle' => $jobTitle, 'companyAddress' => $companyAddress, 'companyName' => $companyName, 'salary' => $salary, 'description' => $description);
     echo json_encode($data);
 }
-else{
+else if(isset($_POST['delete'])) {
+     $uid = mysqli_real_escape_string($conn, $_POST['postId']);
+     $updatePosts = mysqli_query($conn, "UPDATE `jobpost` SET `bookmark`='false' WHERE `post_iud` = '$uid'");
+}
+else if(isset($_POST['update'])) {
     $id = ($_SESSION['user_id']);
     $uid = ($_SESSION['postId']);
     $updatePosts = mysqli_query($conn, "UPDATE `jobpost` SET `bookmark`='$id' WHERE `post_iud` = '$uid'");
+}
+else{
+    $tableData = "";
+    $id = ($_SESSION['user_id']);
     $getPosts = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `bookmark` = '$id'");
-    $row = mysqli_fetch_assoc($getPosts);
-    $jobTitle = $row['job_title'];
-    $description = $row['job_description'];
-    $tableData = "<tr class='tr1'>
-    <td data-title='Job Title'>{$jobTitle}</td>
-    <td data-title='Job Description' class='descript'>{$description}</td>
-    <td data-title='Action' class='action'><button class='btn btn-info shadow' type='button'
-        id='btn-info'>APPLY</button>
-      <button class='btn btn-dark btn-sm rounded-circle' type='button' data-toggle='tooltip'
-        data-placement='top' title='Delete'><i class='fa fa-trash'></i></button>
-    </td>
-  </tr>";
+    while($row = mysqli_fetch_assoc($getPosts)){
+        $postId = $row['post_iud'];
+        $jobTitle = $row['job_title'];
+        $description = $row['job_description'];
+        $tableData .= "<tr class='tr1'>
+        <td data-title='Job Title'>{$jobTitle}</td>
+        <td data-title='Job Description' class='descript'>{$description}</td>
+        <td data-title='Action' class='action'><button class='btn btn-info shadow' type='button' id='btn-info'>APPLY</button>
+        <button id='delete' class='btn btn-dark btn-sm rounded-circle' type='button' data-bs-toggle='modal' data-bs-target='#modal-delete' data-id='{$postId}' data-placement='top' title='Delete'><i class='fa fa-trash'></i></button>
+        </td>
+        </tr>";
+    }
   $data = array('tableData' => $tableData);
   echo json_encode($data);
 }

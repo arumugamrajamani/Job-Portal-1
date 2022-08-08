@@ -40,7 +40,7 @@
           <li class="nav-item account dropdown active">
             <a class="nav-link text-darkdropdown-toggle account active" href="#" id="navbarDropdown"
               role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
+              <img id="pfp" class="image" style="border-radius: 100px; object-fit: cover;" src="" alt="Profile" width="30" height="30"> ACCOUNT</a>
             <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
               </li>
               <li><a class="dropdown-item text-light menudrop" href="company-profile.php">MY ACCOUNT</a></li>
@@ -103,6 +103,7 @@
     </div>
 </div>
       <script src="js/change-password.js"></script>
+      <script src="js/pfp.js"></script>
 </body>
 
 </html>

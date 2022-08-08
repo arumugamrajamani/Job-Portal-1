@@ -19,6 +19,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/message-sent.css">
 	<script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+	<!-- jQuery cdn link below -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 	<title>Message Sent</title>
 </head>
@@ -44,9 +46,9 @@
 					</li>             
 					<li class="nav-item account dropdown active">
 					<a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-					<img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
-					<ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item text-light" href="company-profile.php">FULL NAME</a></li>
+					<img id="pfp" class="image" style="border-radius: 100px; object-fit: cover;" src="" alt="Profile" width="30" height="30"> ACCOUNT</a>
+                    <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
+						<li><a id="name" class="dropdown-item text-light" href="company-profile.php"></a></li>
 						<li><hr class="dropdown-divider bg-white"></li>
 						<li><a class="dropdown-item text-light" href="jobmanage.php">JOB MANAGEMENT</a></li>
 						<li><a class="dropdown-item text-light" href="manage-applicant-resume.php">MANAGE RESUME</a></li>
@@ -220,5 +222,6 @@
 			checkbox.classList.toggle("show");
 			}
 	</script>
+	<script src="js/pfp.js"></script>
 </body>
 </html>

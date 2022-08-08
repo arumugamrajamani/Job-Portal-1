@@ -40,7 +40,7 @@
                     <a class="nav-link text-dark  dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img id="pfp" class="image" style="border-radius: 100px; object-fit: cover;" src="" alt="Profile" width="30" height="30"> ACCOUNT</a>
                     <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                        <li><a id="compname" class="dropdown-item text-light menudrop" href="company-profile.php"></a></li>
+                        <li><a id="compname" class="dropdown-item text-light" href="company-profile.php"></a></li>
                         <li><hr class="dropdown-divider bg-white"></li>
                         <li><a class="dropdown-item text-light" href="jobmanage.php">JOB MANAGEMENT</a></li>
                         <li><a class="dropdown-item text-light" href="manage-applicant-resume.php">MANAGE RESUME</a></li>

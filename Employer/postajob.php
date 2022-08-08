@@ -39,9 +39,9 @@
                     </li>             
                     <li class="nav-item account dropdown active">
                     <a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
+                    <img id="pfp" class="image" style="border-radius: 100px; object-fit: cover;" src="" alt="Profile" width="30" height="30"> ACCOUNT</a>
                     <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-light" href="company-profile.php">FULL NAME</a></li>
+						<li><a id="name" class="dropdown-item text-light" href="company-profile.php"></a></li>
                         <li><hr class="dropdown-divider bg-white"></li>
                         <li><a class="dropdown-item text-light" href="jobmanage.php">JOB MANAGEMENT</a></li>
                         <li><a class="dropdown-item text-light" href="manage-applicant-resume.php">MANAGE RESUME</a></li>
@@ -151,5 +151,6 @@
         </div><br>
     </form>
     <script src="js/postajob.js"></script>
+    <script src="js/pfp.js"></script>
 </body>
 </html>

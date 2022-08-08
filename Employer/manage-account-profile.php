@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMPLOYER SIGN UP</title>
+    <title>EMPLOYER EDIT</title>
     <!--Font-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,9 +42,9 @@
 					<li class="nav-item"><a class="nav-link text-dark about active" href="postajob.php">POST A JOB</a></li>
 					<li class="nav-item account dropdown active">
 						<a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						<img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
-						<ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item text-start name" href="company-profile.php"><img src="image/profile.png" alt="" class="l1"> Full Name</a></li>
+						<img id="pfp" class="image" style="border-radius: 100px; object-fit: cover;" src="" alt="Profile" width="30" height="30"> ACCOUNT</a>
+                    <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
+						<li><a id="name" class="dropdown-item text-dark text-start" href="company-profile.php"><img alt=""></a></li>
 							<li><hr class="dropdown-divider bg-white"></li>
 							<li><a class="dropdown-item text-start Eprofile" href="manage-account-profile.php"><img src="image/edit-profile-black.png" alt="" class="l1"> Edit Profile</a></li>
 							<li><a class="dropdown-item text-start" href="change-password.php"><img src="image/change-pass-black.png" alt="" class="l1"> Change Password</a></li>
@@ -156,5 +156,6 @@
         <br><br><br><br><br>
 
         <script src="js/manage-account-profile.js"></script>
+        <script src="js/pfp.js"></script>
 </body>
 </html>

@@ -76,7 +76,7 @@
                 <thead class="text-dark text-center" id="title-sub">
                   <tr>
                     <th>Employer</th>
-                    <th>Job Tittle</th>
+                    <th>Job Title</th>
                     <th>Job Description</th>
                     <th>Date Applied</th>
                     <th>Status</th>

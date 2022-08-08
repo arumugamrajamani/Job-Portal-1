@@ -47,7 +47,7 @@
           <li class="nav-item account dropdown active">
             <a class="nav-link text-dark  dropdown-toggle account active" href="#" id="navbarDropdown"
               role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img id="profile_picture" class="image" src="" alt="Profile" width="50" height="30"> ACCOUNT</a>
+              <img id="profile_picture" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
               <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
                 <li><a id="fullname" class="dropdown-item text-light text-start" href="applicant-profile.php"><i class="bi bi-person-fill"></i></a></li>
                 <li>
@@ -76,7 +76,7 @@
                 <thead class="text-dark text-center" id="title-sub">
                   <tr>
                     <th>Employer</th>
-                    <th>Job Tittle</th>
+                    <th>Job Title</th>
                     <th>Job Description</th>
                     <th>Date Applied</th>
                     <th>Status</th>
@@ -84,7 +84,7 @@
                   </tr>
                 </thead>
                 <tbody class="bg-light text-dark text-center" id="body-h">
-                  <tr class="tr1">
+                  <!-- <tr class="tr1">
                     <td data-title="Employer" class="employ"><i class="fa-solid fa-circle-user profile"></i>Full Name
                     </td>
                     <td data-title="Job Tittle">Administrative Assistant</td>
@@ -141,7 +141,7 @@
                     <td data-title="Job Description">For Reference</td>
                     <td data-title="Action"><button class="btn btn-info" type="button" id="btn-info"
                         data-bs-toggle="modal" data-bs-target="#exampleModal">Withdraw Application</button></td>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
             </div>

@@ -38,12 +38,12 @@
                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <img class="image" src="image/sircastillo.png" alt="Profile" width="55" height="55"> Mark John Castillo</a>
                 <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item text-light" href="applicant-sircastillo.php"><img src="image/sircastillo.png" alt="" width="35" height="35"> My Profile</a></li>
+                  <li><a class="dropdown-item text-light" href="applicant-profile.php"><img src="image/sircastillo.png" alt="" width="35" height="35"> My Profile</a></li>
                   <li>
                     <hr class="dropdown-divider bg-white">
                   </li>
                   <li><a class="dropdown-item text-light" href="manage-account-1.php">Edit Profile</a></li>
-                  <li><a class="dropdown-item text-light" href="change-pass.php">Change Password</a></li>
+                  <li><a class="dropdown-item text-light" href="manage-account-2.php">Change Password</a></li>
                   <li><a class="dropdown-item text-light" href="jobapplication.php">Job Applications</a></li>
                   <li><a class="dropdown-item text-light" href="bookmark-job.php">Bookmark Jobs</a></li>
                   <li><a class="dropdown-item text-light" href="manage-resume-jobseeker.php">Manage Resume</a></li>

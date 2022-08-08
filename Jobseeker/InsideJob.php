@@ -111,7 +111,7 @@
           <p>You must qualified to this position</p>
           <div class="butt">
             <div class="logapp">
-              <a class="appnow" href="" style="text-decoration: none;">APPLY NOW</a>
+              <a class="appnow" onclick="apply()" style="text-decoration: none;">APPLY NOW</a>
             </div>
             <div class="markb">
               <a><img id="bmark" onclick="update()" src="image/Vector.png" alt=""></a>

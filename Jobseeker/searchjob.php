@@ -321,7 +321,7 @@
         </div>
         <div id="dialog1" class="triangle_down"></div>
         <div class="qr modal-body">
-        <img class="qrcolor" src="image/Qr-Code.png" alt="">
+        <img class="qrcolor" src="image/qrcode.png" height="308" width="308" alt="">
         </div>
     </div>
     </div>

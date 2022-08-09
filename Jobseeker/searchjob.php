@@ -41,9 +41,9 @@
             <li class="nav-item fw-bold">
             <a class="nav-link text-dark about active" href="searchjob.php">JOB BOARD</a>
             </li>
-            <li class="nav-item account dropdown active"><a class="nav-link text-dark fw-bold dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
-            <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item text-start" href="applicant-profile.php"><img src="image/profile.png" alt=""> Full Name</a></li>
+            <li class="nav-item account dropdown active"><a class="nav-link text-dark fw-bold dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
+              <ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">
+                <li><a id="name" class="dropdown-item" href="applicant-profile.php"></a></li>
             <li>
                 <hr class="dropdown-divider bg-white">
             </li>
@@ -328,4 +328,5 @@
 </div>
 
 </body>
+<script src="js/pfp.js"></script>
 </html>

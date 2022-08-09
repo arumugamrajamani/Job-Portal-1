@@ -46,10 +46,7 @@
           <li class="nav-item account dropdown active">
             <a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown"
               role="button" data-bs-toggle="dropdown" aria-expanded="false">
- 
-	
-              <img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
-			 
+              <img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
             <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
               <li><a id = "upperName" class="dropdown-item text-light menubar" href="applicant-profile.php"></a></li>
               <li>
@@ -215,6 +212,7 @@
     crossorigin="anonymous"></script>
 
     <script src="js/applicant-profile.js"></script>
+    <script src="js/pfp.js"></script>
 </body>
 
 </html>

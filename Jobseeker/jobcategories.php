@@ -9,6 +9,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+  <!-- jQuery cdn link below -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/jobcategories.css">
   <title>Job Categories</title>
 </head>
@@ -31,9 +33,9 @@
           <li class="nav-item fw-bold"><a class="nav-link text-dark about text-center" href="searchjob.php" id="color">JOB BOARD</a></li>
           <li class="nav-item account dropdown ">
             <a class="nav-link text-dark fw-bold dropdown-toggle account" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
+              <img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
               <ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item text-start name" href="applicant-profile.php"><img src="image/profile.png" alt="" class="l1"> Full Name</a></li>
+                <li><a id="name" class="dropdown-item text-start name" href="applicant-profile.php"></a></li>
                 <li><hr class="dropdown-divider bg-white"></li>
                 <li><a class="dropdown-item text-start Eprofile" href="manage-account-profile.php"><img src="image/edit-profile-black.png" alt="" class="l1"> Edit Profile</a></li>
                 <li><a class="dropdown-item text-start" href="manage-account-2.php"><img src="image/change-pass-black.png" alt="" class="l1"> Change Password</a></li>
@@ -147,5 +149,6 @@
       x[slideIndex[no]-1].style.display = "block";  
     }
   </script>
+  <script src="js/pfp.js"></script>
 </body>
 </html>

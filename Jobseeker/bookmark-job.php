@@ -48,7 +48,7 @@
           <li class="nav-item account dropdown active">
             <a class="nav-link text-dark  dropdown-toggle account active" href="#" id="navbarDropdown"
               role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
+                <img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
               <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item text-light text-start" href="applicant-profile.php"><i class="bi bi-person-fill"></i> Full Name</a></li>
                 <li>
@@ -146,4 +146,5 @@
     crossorigin="anonymous"></script>
 </body>
 <script src= "js/bookmark-job.js"></script>
+<script src= "js/pfp.js"></script>
 </html>

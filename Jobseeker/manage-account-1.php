@@ -36,9 +36,9 @@
           <li class="nav-item"><a class="nav-link text-dark about active text-center" href="searchjob.php">JOB BOARD</a></li>
           <li class="nav-item account dropdown active">
             <a class="nav-link text-dark  dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
-            <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item text-light text-start" href="applicant-profile.php"><i class="bi bi-person-fill"></i> Full Name</a></li>
+            <img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
+              <ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">
+                <li><a id="name" class="dropdown-item text-light text-start name" href="applicant-profile.php"></a></li>
               <li><hr class="dropdown-divider bg-white"></li>
               <li><a class="dropdown-item text-light text-start" href="manage-account-1.php"><img src="image/edit-profile.png" alt=""> Edit Profile</a></li>
               <li><a class="dropdown-item text-light text-start" href="manage-account-2.php"><img src="image/change pass.png" alt=""> Change Password</a></li>
@@ -100,6 +100,7 @@
     </div>
   </div>
   <script src="js/manage-account-1.js"></script>
+  <script src="js/pfp.js"></script>
 </body>
 
 </html>

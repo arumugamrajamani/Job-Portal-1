@@ -15,6 +15,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <!-- jQuery cdn link below -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/manage-resume-jobseeker.css">
     <title>Manage Resume Jobseeker</title>
 </head>
@@ -40,9 +42,9 @@
                     </li>             
                     <li class="nav-item account dropdown active">
                     <a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
-                    <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-dark text-start" href="applicant-profile.php"><img class="ms-3" src="image/profile.png" alt=""> Full Name</a></li>
+                    <img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
+              <ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">
+                <li><a id="name" class="dropdown-item text-dark name" href="applicant-profile.php"></a></li>
                         <li><hr class="dropdown-divider bg-white"></li>
                         <li><a class="dropdown-item text-dark text-start" href="manage-account-1.php"><img class="ms-3" src="image/edit-profile-black.png" alt=""> Edit Profile</a></li>
                         <li><a class="dropdown-item text-dark text-start" href="manage-account-2.php"><img class="ms-3" src="image/change-pass-black.png" alt=""> Change Password</a></li>
@@ -128,4 +130,5 @@
         </div>
     </div>
 </body>
+<script src="js/pfp.js"></script>
 </html>

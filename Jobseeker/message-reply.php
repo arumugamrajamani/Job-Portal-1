@@ -22,6 +22,8 @@
 	<script src="https://kit.fontawesome.com/67c66657c7.js"></script>
 	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/message-reply.css">
+	<!-- jQuery cdn link below -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<title>Message-Reply</title>
 </head>
 <body>
@@ -42,9 +44,9 @@
 					<li class="nav-item"><a class="nav-link text-dark about active" href="searchjob.php">JOB BOARD</a></li>
 					<li class="nav-item account dropdown active">
 						<a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						<img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
-						<ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item text-light text-start name" href="applicant-profile.php"><i class="bi bi-person-fill"></i> Full Name</a></li>
+						<img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
+              <ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">
+                <li><a id="name" class="dropdown-item text-light text-start name" href="applicant-profile.php"></a></li>
 							<li><hr class="dropdown-divider bg-white"></li>
 							<li><a class="dropdown-item text-light text-start" href="manage-account-1.php"><img src="image/edit-profile.png" alt=""> Edit Profile</a></li>
 							<li><a class="dropdown-item text-light text-start" href="manage-account-2.php"><img src="image/change pass.png" alt=""> Change Password</a></li>
@@ -164,6 +166,7 @@
 				checkbox.classList.toggle("show");
 			}
 		</script>
+		<script src="js/pfp.js"></script>
 </body>
 
 </html>

@@ -36,9 +36,9 @@
               <li class="nav-item account dropdown active">
                 <a class="nav-link text-light fw-bold dropdown-toggle account active" href="#" id="navbarDropdown"
                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img class="image" src="image/sircastillo.png" alt="Profile" width="55" height="55"> Mark John Castillo</a>
+                    <img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
                 <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item text-light" href="applicant-profile.php"><img src="image/sircastillo.png" alt="" width="35" height="35"> My Profile</a></li>
+                  <li><a id="name" class="dropdown-item text-light" href="applicant-profile.php"></a></li>
                   <li>
                     <hr class="dropdown-divider bg-white">
                   </li>
@@ -163,5 +163,6 @@
       }
     </script>
     <script src="js/insidejob.js"></script>
+    <script src="js/pfp.js"></script>
 </body>
 </html>

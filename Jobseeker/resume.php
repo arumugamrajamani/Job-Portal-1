@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
 	<meta charset="UTF-8">
@@ -17,8 +17,8 @@
 	<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
 		<div class="container-fluid">
 			<a class="navbar-brand me-1" href="#"></a>
-			<img src="image/flogo.png" alt="Job Portal Logo" width="100" height="70"></a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+			<img src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70" id="logo"></a>
+			<button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse"
 				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -35,44 +35,102 @@
 					<li class="nav-item fw-bold">
 						<a class="nav-link text-dark about active" href="searchjob.php">JOB BOARD</a>
 					</li>
-					<li class="nav-item account dropdown active"><a class="nav-link text-dark fw-bold dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
-              <ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">
-                <li><a id="name" class="dropdown-item text-light text-start name" href="applicant-profile.php"></a></li>
+					<li class="nav-item account dropdown active"><a class="nav-link text-dark fw-bold dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
+					<ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
+						<li><a class="dropdown-item text-light text-start" href="/Employer/company-profile.html"> Full Name</a></li>
 						<li>
-							<hr class="dropdown-divider bg-white">
+							<hr class="dropdown-divider bg-black">
 						</li>
-						<li><a class="dropdown-item text-light text-start" href="manage-account-1.php"><img src="image/edit-profile.png" alt=""> Edit Profile</a></li>
-						<li><a class="dropdown-item text-light text-start" href="manage-account-2.php"><img src="image/change pass.png" alt=""> Change Password</a></li>
-						<li><a class="dropdown-item text-light text-start" href="jobapplication.php"><img src="image/job application.png" alt=""> Job Applications</a></li>
-						<li><a class="dropdown-item text-light text-start" href="bookmark-job.php"><img src="image/bookmark.png" alt=""> Bookmarked jobs</a></li>
-						<li><a class="dropdown-item text-light text-start" href="resume.php"><img src="image/manage resume.png" alt=""> Manage Resume</a></li>
-						<li><a class="dropdown-item logout text-light text-start" href="../logout.php"><img src="image/sign out.png" alt=""> LOGOUT</a></li>
+						<li><a class="dropdown-item text-light text-start" href="manage-account-1.php"> Edit Profile</a></li>
+						<li><a class="dropdown-item text-light text-start" href="manage-account-2.php"> Change Password</a></li>
+						<li><a class="dropdown-item text-light text-start" href="jobapplication.php"> Job Applications</a></li>
+						<li><a class="dropdown-item text-light text-start" href="bookmark-job.php"> Bookmarked jobs</a></li>
+						<li><a class="dropdown-item text-light text-start" href="resume.php"> Manage Resume</a></li>
+						<li><a class="dropdown-item logout text-light text-start" href="../logout.php"> LOGOUT</a></li>
 					</ul>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<div class="masthead" style="background-image: url('./image/fbg1.png');">
+	<div class="masthead">
 		<div class="position-absolute">
 			<img src="image/workplace 1.png" alt="" class="img1">
 			<img src="image/work-place 1.png" alt="" class="img2">
-		</div><br><br><br>
-		<div class="container">
+			
+			<div class="container">
 			<div class="bg-white text-center pt-4 shadow contain">
 				<h3 class="fw-bold">MANAGE YOUR RESUME</h3>
-				<input class="mt-5 inputs" type="text" placeholder="Full Name*">
-				<div class="text-start ms-5 fw-bold">Full Name</div>
-				<input class="mt-3 inputs" type="text" placeholder="Email Address*">
-				<div class="text-start ms-5 fw-bold">Email Address</div>
-				<input class="mt-3 inputs" type="text" placeholder="GDrive Link*">
-				<div class="text-start ms-5 fw-bold">Resume Link</div>
+				<div class="row mb-3 mt-3 ms-4">
+                    <label for="fullname" class="col-sm-2 col-form-label">Full Name:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control error" id="fullname">               
+                        <div class="text-danger"> Please enter full name</div>
+                    </div>
+                </div>
+				<div class="row mb-3 ms-4">
+                    <label for="email" class="col-sm-2 col-form-label">Email:</label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control error" id="email">
+                        <div class="text-danger"> Please enter your email address</div>
+                    </div>
+                </div>
+				<div class="row mb-3 mt-3 ms-4">
+                    <label for="address" class="col-sm-2 col-form-label">Gdrive Link:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control error" id="address">               
+                        <div class="text-danger"> Please enter the link of your file</div>
+                    </div>
+                </div>
+				<ul>
+					<li>
+						<a class="resume-temp"href="../Resume-Builder/resume-builder1.php">Resume Builder Templates</a>
+					</li>
+				</ul>
 				<div class="mt-5">
 					<button type="button" class="btn1">Preview</button>
 					<button type="button" class="btn1">Submit</button>
 				</div>
 			</div>
 		</div>
+		</div>
+		<br><br><br>
+		
+		<div class="toggle-switch">
+			<label class="lab">
+			  <input class="dar" type="checkbox" name="theme" onclick="toggleImage()">
+			  <span id="icon2" class ="slider"></span>
+			</label>
+		  </div>
 	</div>
+	<script>
+		function toggleImage() {
+		imgsrc = document.getElementById("logo").src;
+		if (imgsrc.indexOf("image/light-logo.png") !=-1){
+		  document.getElementById("logo").src = "image/Techployment (7) 1.png";
+		}
+		else{
+		  document.getElementById("logo").src = "image/light-logo.png";
+		}
+	  }
+	  </script>
+	  <script>
+		var checkbox = document.querySelector('input[name=theme');
+	
+		checkbox.addEventListener('change', function(){
+			if(this.checked){
+				trans()
+				document.documentElement.setAttribute('data-theme','dark')
+			}else{
+				trans()
+				document.documentElement.setAttribute('data-theme','light')
+			}
+		});
+		let trans = () => {
+			document.documentElement.classList.add('transition');
+			window.setTimeout(() => {
+				document.documentElement.classList.remove('transition')
+			}, 1000)
+		}
+	</script>
 </body>
-<script src="js/pfp.js"></script>
 </html>

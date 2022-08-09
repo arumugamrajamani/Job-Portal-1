@@ -18,6 +18,10 @@
     <!-- jQuery cdn link below -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/manage-applicant-resume.css">
+     <!-- Toast CDN for functionality of toastr -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Toast CDN for design of toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Manage Applicant Resume</title>
 </head>
 <body>
@@ -74,27 +78,31 @@
                             <table class="table basic-table table-headers table table-hover">
                                 <thead class="text-dark text-center" id="title-sub">
                                     <tr>
-                                        <th>Application Name</th>
-                                        <th>View Resume</th>
+                                        <th>Applicant Name</th>
+                                        <th>Resume</th>
+                                        <th>Job Applied</th>
                                         <th>Date Applied</th>
+                                        <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-dark" id="body-h" >
-                                    <tr>
-                                        <td  data-title="Application Name"><b>Application's Full name</b></td>                                  
-                                        <td data-title="View Resumek"><i class="fa-brands fa-google-drive"></i><b>Gdrive link</b></td>
+                                    <!-- <tr>
+                                        <td  data-title="Applicant Name"><b>Applicant's Full name</b></td>  
+                                        <td  data-title="Resume"><b>Resume</b></td>                                
+                                        <td data-title="Job Applied"><b>Job Applied</b></td>
                                         <td data-title="Date Applied"><b>5/04/2022</b></td>
-                                        <td data-title="Action"><button  class="btn btn-info" type="button" id="btn-info">Bookmark</button>
+                                        <td  data-title="Status"><b>Status</b></td>
+                                        <td data-title="Action"><button  class="btn btn-info" type="button" id="btn-info">Accept</button>
                                         <button class="btn btn-info" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Reject</button></td>
-                                    </tr>
-                                    <tr>
+                                    </tr> -->
+                                    <!-- <tr>
                                         <td  data-title="Application Name"><b>Application's Full name</b></td>
                                         <td data-title="View Resume"><i class="fa-brands fa-google-drive"></i><b>Gdrive link</b></td>
                                         <td data-title="Date Applied"><b>5/04/2022</b></td>
                                         <td data-title="Action"><button  class="btn btn-info" type="button" id="btn-info">Bookmark</button>
                                         <button class="btn btn-info" type="button" id="btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Reject</button></td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>  
                             </table>
                         </div>
@@ -129,6 +137,28 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h5 class="modal-title ms-3" id="exampleModal1Label">uidhaiosdushasduashsajkd</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="status">Choose a status:</label>
+                    <select name="status" id="status">
+                        <option value="Pending">Pending</option>
+                        <option value="Received">Received</option>
+                        <option value="Viewed">Viewed</option>
+                        <option value="Accepted">Accepted</option>
+                    </select><br>
+                    <button id="del-yes" type="button" class="btn btn-success btn1">Yes</button>
+                    <button type="button" class="btn btn-danger btn1" data-bs-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="js/pfp.js"></script>
+<script src="js/manage-applicant-resume.js"></script>
 </html>

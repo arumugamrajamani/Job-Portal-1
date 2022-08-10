@@ -36,7 +36,10 @@ if (isset($_POST['getData'])) {
     );
     echo json_encode($response);
 }
-
+else if (isset($_POST['delete'])) {
+    $Id = $_POST['postId'];
+    $fetchDetailsQuery = mysqli_query($conn, "DELETE FROM `applied_jobs` WHERE post_iud = '$Id'");
+}
 // When the page is loaded the js will call for this then this will get the admin's data from the DB
 else {
     $jobseekerId = $_SESSION['user_id'];
@@ -55,6 +58,7 @@ else {
         $desc = $row['job_description'];
         $date = $row['date_applied'];
         $status = $row['status'];
+        $Id = $row['post_iud'];
         $tableData .= "<tr class='tr1'>
         <td data-title='Employer' class='employ'><img src='{$profilePic}' width='20' height='20' style='border-radius: 100px; object-fit: cover;'></img> {$employerName}
         </td>
@@ -62,7 +66,8 @@ else {
         <td data-title='Job Description'>{$desc}</td>
         <td data-title='Date Applied'>{$date}</td>
         <td data-title='Status'>{$status}</td>
-        <td data-title='Action'><button class='btn btn-info' type='button' id='btn-info'
+        <td data-title='Action'>
+            <button class='btn btn-info delete-btn' type='button' data-id='{$Id}' id='btn-info'
             data-bs-toggle='modal' data-bs-target='#exampleModal'>Withdraw Application</button></td>
       </tr>";
     }

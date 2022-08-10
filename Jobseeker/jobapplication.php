@@ -20,6 +20,10 @@
       crossorigin="anonymous"></script>
       <!-- jQuery cdn link below -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+   <!-- Toast CDN for functionality of toastr -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Toast CDN for design of toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <title>Job application</title>
 </head>
 
@@ -157,8 +161,8 @@
         <div class="modal-body mt-3">
           <h5 class="modal-title text-center">Are you sure you want to withdraw your job application?</h5>
         </div>
-        <div class="modal-body" id="modal1">
-          <button type="button" class="btn btn-danger px-4">Yes</button>
+        <div class="modal-body" id="modal">
+          <button id="del-yes" type="button" class="btn btn-danger px-4">Yes</button>
           <button type="button" class="btn btn-secondary px-3 " data-bs-dismiss="modal">Cancel</button>
         </div>
       </div>

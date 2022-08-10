@@ -33,10 +33,40 @@ $(document).ready(function (){
             },
             success: function (data) {
                 $('#exampleModal1').modal('hide');
+                toastr.options = {
+                    positionClass : "toast-top-center"
+                }
                 toastr.success('', 'Successfully Changed!');
                 load_data();
             }
         });
     });
+
+    $('#body-h').on('click', '.delete-btn', function () {
+        let postId = $(this).attr('data-id');
+        $('#del-yes1').val(postId);
+        });
+
+        $('#del-yes1').click(function () {
+            let postId = $(this).val();
+            console.log(postId);
+            $.ajax({
+            url: 'php/manage-applicant-resume.inc.php',
+            type: 'POST',
+            data: {
+                 delete: true,
+                 postId: postId
+            },
+            success: function (response) {
+                $('#exampleModal').modal('hide');
+                console.log(postId);
+                toastr.options = {
+                    positionClass : "toast-top-center"
+                }
+                toastr.success('', 'Successfully Deleted!');
+                load_data();
+            }
+            });
+        });
     
 });

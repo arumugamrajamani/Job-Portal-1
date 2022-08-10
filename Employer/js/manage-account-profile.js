@@ -207,6 +207,7 @@ $(document).ready(function () {
         let company_description = $('#company_description').val();
         let contact_number = $('#contact_number').val();
         let company_logo_new = $('#companyLogo').prop('files')[0];
+        let qr_code = $('#qrCode').prop('files')[0];
         let permit_new_name = $('#permit_original_name').prop('files')[0];
         let form_data = new FormData();
         form_data.append('employer_name', employer_name);
@@ -221,6 +222,7 @@ $(document).ready(function () {
         form_data.append('contact_number', contact_number);
         form_data.append('permit_new_name', permit_new_name);
         form_data.append('company_logo_new', company_logo_new);
+        form_data.append('qrCode', qr_code);
         form_data.append('saveNow', true);
         $.ajax({
             url: 'php/manage-account-profile.inc.php',

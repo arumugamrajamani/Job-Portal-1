@@ -4,6 +4,16 @@ include '../../php/db-connection.php';
 session_start();
 
 // check if profile pic is not null && if file exists  then returns a string value of the profile picture location
+function  getProfilePicLoc($profilePic)
+{
+    if ($profilePic != NULL && file_exists("../../storage/" . $profilePic)) {
+        return "../storage/" . $profilePic;
+    } else {
+        return "../storage/noProfilePic.png";
+    }
+}
+
+// check if profile pic is not null && if file exists  then returns a string value of the profile picture location
 function getCompanyLogoLoc($companyLogo)
 {
     if ($companyLogo != NULL && file_exists("../../storage/" . $companyLogo)) {
@@ -52,5 +62,37 @@ if (isset($_POST['fetchData'])) {
         'companyDescription'=> $companydDescription
         
     );
+    echo json_encode($response);
+}
+else  {
+    $employerId = ($_SESSION['user_id']);
+    $tableData = "";
+    // Create query to get the employer information
+    $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM jobseeker WHERE bookmarked = 'true'");
+    while($row1 = mysqli_fetch_assoc($fetchDetailsQuery)){
+        $fetch = mysqli_query($conn, "SELECT * FROM applied_jobs WHERE postedby_uid = '$employerId'");
+        while($row = mysqli_fetch_assoc($fetch)){
+            // Get the employer information needed to edit modal
+            $jobApplied = $row['job_title'];
+            $dataId = $row['post_iud'];
+            $date = $row['date_applied'];
+            $status = $row['status'];
+            $title = $row['job_title'];
+            $Id = $row['jobseeker_id'];
+        }
+        $resume = GetProfilePicLoc($row1['resume']);
+        $fullname= $row1['fullname'];
+        $tableData .= "<tr>
+        <td  data-title='Applicant Name'><b>{$fullname}</b></td>  
+        <td  data-title='Resume'><b><a href='{$resume}' target='_blank'>View Resume</a></b></td>                                
+        <td data-title='Job Applied'><b>{$jobApplied}</b></td>
+        <td data-title='Date Applied'><b>{$date}</b></td>
+        <td  data-title='Status'><b>{$status}</b></td>
+    </tr>";
+    }
+    // Create Assoc array to return to the ajax call
+        $response = array(
+            'tableData' => $tableData
+        );
     echo json_encode($response);
 }

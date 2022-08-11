@@ -101,6 +101,20 @@
             <div class="div3">
                 <h5 class="pt-2 fw-bold">BOOKMARKED APPLICANTS</h5>
                 <label class="pb-2 fw-bold">(Visible to employer only)</label>
+                <div class="table-responsive" id="no-more-tables">
+                <table class="table basic-table table-headers table table-hover">
+                    <thead class="thead text-dark text-center" id="title-sub">
+                        <tr>
+                            <th>Applicant Name</th>
+                            <th>Resume</th>
+                            <th>Job Applied</th>
+                            <th>Date Applied</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody bg-light text-dark" id="bookmark"></tbody>
+                </table>
+            </div>
             </div>
         </section>
         <section class="sec2 mx-5 text-center shadow-sm mt-5">
@@ -124,11 +138,6 @@
                 </table>
             </div>
         </section>
-        <section class="sec2 mx-5 text-center shadow-sm mt-5">
-            <div class="div4">
-                <h5 class="pt-4 fw-bold">RECENT JOB POST</h5>
-            </div>
-        </section><br>
     </div>
     <script src="js/company-profile.js"></script>
 </body>

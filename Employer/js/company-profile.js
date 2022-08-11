@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     fetchData();
+    load_data();
     $.ajax({
             url: 'php/postajob.inc.php',
             type: 'POST',
@@ -17,6 +18,22 @@ $(document).ready(function () {
     $('#editProfile').click(function(){
         window.location = 'manage-account-profile.php';
     });
+    
+    function load_data(){
+        $.ajax({
+            url: 'php/company-profile.inc.php',
+            type: 'POST',
+            data: {
+                getData: true
+            },
+            dataType: "JSON",
+            success: function (data) {
+                console.log(data);
+                //assign got value to the html ids
+                $('#bookmark').html(data.tableData);
+            }
+        });
+    }
 
     function fetchData() {
         $.ajax({

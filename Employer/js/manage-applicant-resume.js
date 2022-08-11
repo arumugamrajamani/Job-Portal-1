@@ -1,3 +1,5 @@
+
+
 $(document).ready(function (){
     load_data();
     function load_data(){
@@ -38,6 +40,32 @@ $(document).ready(function (){
                 }
                 toastr.success('', 'Successfully Changed!');
                 load_data();
+            }
+        });
+    });
+
+    $('#body-h').on('click','.bookmark', function () {
+        let Id = $(this).attr('data-id');
+        $('#accept').val(Id);
+    });
+    $('#accept').click(function () {
+        let Num = $(this).val();
+        $.ajax({
+            url: 'php/manage-applicant-resume.inc.php',
+            type: 'POST',
+            data: {
+                bookmark: true,
+                Num: Num
+            },
+            //dataType: "JSON",
+            success: function (data) {
+                console.log(Num);
+                $('#exampleModal2').modal('hide');
+                toastr.options = {
+                    positionClass : "toast-top-center"
+                }
+                toastr.success('', 'Bookmarked!');
+                window.location='company-profile.php';
             }
         });
     });

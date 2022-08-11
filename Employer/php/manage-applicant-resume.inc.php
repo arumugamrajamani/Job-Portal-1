@@ -32,6 +32,7 @@ if (isset($_POST['getData'])) {
         $date = $row['date_applied'];
         $status = $row['status'];
         $title = $row['job_title'];
+        $Id = $row['jobseeker_id'];
         $tableData .= "<tr>
         <td  data-title='Applicant Name'><b>{$fullname}</b></td>  
         <td  data-title='Resume'><b><a href='{$resume}' target='_blank'>View Resume</a></b></td>                                
@@ -39,6 +40,7 @@ if (isset($_POST['getData'])) {
         <td data-title='Date Applied'><b>{$date}</b></td>
         <td  data-title='Status'><b>{$status}</b></td>
         <td data-title='Action'><button  class='btn btn-info edit' type='button' data-id='{$dataId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#exampleModal1'>Edit</button>
+        <button  class='btn btn-info bookmark' type='button' data-id='{$Id}' id='btn-info' data-bs-toggle='modal' data-bs-target='#exampleModal2' >Bookmark</button>
         <button class='btn btn-info delete-btn' type='button' data-id='{$dataId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#exampleModal'>Reject</button></td>
     </tr>";
     }
@@ -53,7 +55,10 @@ else if (isset($_POST['update'])) {
     $postId = $_POST['postId'];
     $fetchDetailsQuery = mysqli_query($conn, "UPDATE `applied_jobs` SET `status`='$status' WHERE `post_iud` = '$postId'");
 }
-
+else if (isset($_POST['bookmark'])) {
+     $jobseekerId = $_POST['Num'];
+     $fetchDetailsQuery = mysqli_query($conn, "UPDATE `jobseeker` SET `bookmarked`='true' WHERE `jobseeker_id` = '$jobseekerId'");
+}
 if (isset($_POST['delete'])) {
     $Id = $_POST['postId'];
     $fetchDetailsQuery = mysqli_query($conn, "DELETE FROM `applied_jobs` WHERE post_iud = '$Id'");

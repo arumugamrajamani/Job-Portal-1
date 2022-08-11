@@ -158,6 +158,20 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+                <div class="modal-header ">
+                    <h5 class="modal-title ms-3" id="exampleModal2Label">Are you sure you want to bookmark this applicant?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <button id="accept" type="button" class="btn btn-success btn1">Yes</button>
+                    <button type="button" class="btn btn-danger btn1" data-bs-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="js/pfp.js"></script>
 <script src="js/manage-applicant-resume.js"></script>

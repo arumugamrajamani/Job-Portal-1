@@ -88,7 +88,6 @@
 					</li>
 				</ul>
 				<div class="mt-5">
-					<button type="button" class="btn1">Preview</button>
 					<button type="button" class="btn1">Submit</button>
 				</div>
 			</div>
@@ -133,6 +132,6 @@
 			}, 1000)
 		}
 	</script>
-	<script src="js/pfp.js"> </script>
+	<script src="js/pfp.js">t</script>
 </body>
 </html>

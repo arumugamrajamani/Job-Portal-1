@@ -131,7 +131,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <button type="button" class="btn btn-success btn1">Yes</button>
+                    <button id="del-yes1" type="button" class="btn btn-success btn1">Yes</button>
                     <button type="button" class="btn btn-danger btn1" data-bs-dismiss="modal">No</button>
                 </div>
             </div>

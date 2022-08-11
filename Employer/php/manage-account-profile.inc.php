@@ -250,6 +250,17 @@ if (isset($_POST['fetchData'])) {
         $permit_new_namerr = array('status' => 'success');
         $permit_new_nameExtension = pathinfo($_FILES["permit_new_name"]["name"], PATHINFO_EXTENSION);
     }
+    
+    if (!isset($_FILES["qrCode"])) {
+        $qrCoderr = array('status' => 'error', 'message' => 'Company Logo is required.');
+    } elseif (!in_array(pathinfo($_FILES["qrCode"]["name"], PATHINFO_EXTENSION), $allowed_logo_extension)) {
+        $qrCoderr = array('status' => 'error', 'message' => 'Only png, jpg, jpeg are allowed.');
+    } elseif ($_FILES["qrCode"]["size"] > 15000000) {
+        $qrCoderr = array('status' => 'error', 'message' => 'Must be less than 15mb.');
+    } else {
+        $qrCoderr = array('status' => 'success');
+        $company_logo_newExtension = pathinfo($_FILES["qrCode"]["name"], PATHINFO_EXTENSION);
+    }
 
 
     
@@ -267,15 +278,17 @@ if (isset($_POST['fetchData'])) {
             $company_description = mysqli_real_escape_string($conn, $company_description);
             $contact_number = mysqli_real_escape_string($conn, $contact_number);
             $company_logo_new = generateRandomString() . '.' . $company_logo_newExtension;
+            $qr_code = generateRandomString() . '.' . $company_logo_newExtension;
 			$permit_new_name = generateRandomString() . '.' . $permit_new_nameExtension;
             $permit_original_name = $_FILES["permit_new_name"]["name"];
             // Create query to update the admin's details
             $updateEmployerDetailsQuery = mysqli_query($conn, "UPDATE employer SET employer_name = '$employer_name', employer_position = '$employer_position',
             company_name = '$company_name', company_address = '$company_address', company_ceo = '$company_ceo', company_size = '$company_size', 
             company_revenue = '$company_revenue', industry = '$industry', company_description = '$company_description', contact_number = '$contact_number',
-            company_logo_name = '$company_logo_new', permit_new_name = '$permit_new_name', permit_original_name = '$permit_original_name'
+            company_logo_name = '$company_logo_new', permit_new_name = '$permit_new_name', permit_original_name = '$permit_original_name', qr_code = '$qr_code'
              WHERE employer_id = '{$_SESSION['user_id']}'");
              InsertIntoStorage($_FILES["company_logo_new"]["tmp_name"], $company_logo_new);
+             InsertIntoStorage($_FILES["qrCode"]["tmp_name"], $qr_code);
              InsertIntoStorage($_FILES["permit_new_name"]["tmp_name"], $permit_new_name);
              if($updateEmployerDetailsQuery){
                 $response = array('status' => 'success', 'message' => "Updated Successfully.",'dd' => $permit_new_name, 'd' => $company_logo_new );

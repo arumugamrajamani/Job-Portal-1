@@ -319,9 +319,10 @@
         <h5 class="modal-title">Please scan this <b class="q-r" >QR CODE </b> for<br> more information about me.</h5>
         <a href="#" data-bs-dismiss="modal" aria-label="Close"><img src="image/close.png" class="close-button" alt="" srcset=""></a>
         </div>
+        <button id="data-val" hidden="hidden"></button>
         <div id="dialog1" class="triangle_down"></div>
         <div class="qr modal-body">
-        <img class="qrcolor" src="image/qrcode.png" height="308" width="308" alt="">
+        <img id="qrCode" class="qrcolor" src="" height="308" width="308" alt="">
         </div>
     </div>
     </div>

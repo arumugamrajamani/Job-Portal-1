@@ -12,6 +12,7 @@ function  getProfilePicLoc($profilePic)
     }
 }
 
+
 // When the page is loaded the js will call for this then this will get the admin's data from the DB
 if (isset($_POST['getData'])) {
     $employerId = $_SESSION['user_id'];
@@ -30,6 +31,7 @@ if (isset($_POST['getData'])) {
         $dataId = $row['post_iud'];
         $date = $row['date_applied'];
         $status = $row['status'];
+        $title = $row['job_title'];
         $tableData .= "<tr>
         <td  data-title='Applicant Name'><b>{$fullname}</b></td>  
         <td  data-title='Resume'><b><a href='{$resume}' target='_blank'>View Resume</a></b></td>                                
@@ -37,7 +39,7 @@ if (isset($_POST['getData'])) {
         <td data-title='Date Applied'><b>{$date}</b></td>
         <td  data-title='Status'><b>{$status}</b></td>
         <td data-title='Action'><button  class='btn btn-info edit' type='button' data-id='{$dataId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#exampleModal1'>Edit</button>
-        <button class='btn btn-info' type='button' data-id='{$dataId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#exampleModal'>Reject</button></td>
+        <button class='btn btn-info delete-btn' type='button' data-id='{$dataId}' id='btn-info' data-bs-toggle='modal' data-bs-target='#exampleModal'>Reject</button></td>
     </tr>";
     }
     // Create Assoc array to return to the ajax call
@@ -50,4 +52,9 @@ else if (isset($_POST['update'])) {
     $status = $_POST['status'];
     $postId = $_POST['postId'];
     $fetchDetailsQuery = mysqli_query($conn, "UPDATE `applied_jobs` SET `status`='$status' WHERE `post_iud` = '$postId'");
+}
+
+if (isset($_POST['delete'])) {
+    $Id = $_POST['postId'];
+    $fetchDetailsQuery = mysqli_query($conn, "DELETE FROM `applied_jobs` WHERE post_iud = '$Id'");
 }

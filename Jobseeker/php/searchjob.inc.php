@@ -13,6 +13,13 @@
             return "image/comlogo.png";
         }
     }
+    function  getQrLoc($qrCode){
+        if ($qrCode != NULL && file_exists("../../storage/" . $qrCode)) {
+            return "../storage/" . $qrCode;
+        } else {
+            return "image/qrcode.png";
+        }
+    }
     if (isset($_POST['fetchData'])) {
         $tableData = "";
         $getPosts = mysqli_query($conn, "SELECT * FROM `jobpost`");
@@ -27,6 +34,7 @@
             $jobCategory = $row['job_category'];
             $jobTitle = $row['job_title'];
             $salary = $row['salary'];
+            $postedby_uid = $row['postedby_uid'];
             $description = $row['job_description'];
             $date = dateTimeConvertion($row['date_posted']);
             $tableData .=  "<div class='bg-white shadow-sm d-flex div3'><br>
@@ -34,7 +42,7 @@
             <div class='block mt-2' style='max-width: 800px; min-width: 800px;'>
                 <div class='d-flex'>
                     <h5 class='mt-3 fw-bold ms-4 job'>{$jobTitle}</h5>
-                    <button class='mt-2 p-2 px-3 text-dark btn1' data-bs-toggle='modal' data-bs-target='#qr-code'style='position: absolute; right: 150px;' type='button'>Company QR Code</button>
+                    <button class='mt-2 p-2 px-3 text-dark btn1' data-bs-toggle='modal' id='qr' data-id='{$postedby_uid}' data-bs-target='#qr-code'style='position: absolute; right: 150px;' type='button'>Company QR Code</button>
                     <button class='mt-2 p-2 px-3 text-dark btn1' id='detail' data-id='{$postId}' data-bs-toggle='modal' data-bs-target='#modal-delete' style='position: absolute; right: 10px;' type='button'>View Details</button>
                 </div>
                 <h6 class='ms-4 fw-bold'>{$companyName}</h6>
@@ -48,12 +56,18 @@
         </div>";
         }
         $response = array(
-            //palitan loob
             'tableData' => $tableData,);
 
         echo json_encode($response);
     }
-
+    else if (isset($_POST['qr'])) {
+        $qr = $_POST['data'];
+        $getEmployerName = mysqli_query($conn, "SELECT * FROM `employer` WHERE `employer_id` = '$qr'");
+        $name = mysqli_fetch_assoc($getEmployerName);
+        $qrCode = getQrLoc($name['qr_code']);
+        $response = array('qr' => $qrCode,);
+        echo json_encode($response);
+    }   
     else {
         $_SESSION['postId'] = $_POST["postId"];
     }

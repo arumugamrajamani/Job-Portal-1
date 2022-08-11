@@ -56,4 +56,21 @@ $(document).ready(function () {
         }
         });
     });
+    $('#body-h').on('click', '#qr', function () {
+        let postId = $(this).attr('data-id');
+        $('#data-val').val(postId);
+        data = $('#data-val').val();
+        $.ajax({
+            url: 'php/searchjob.inc.php',
+            type: 'POST',
+            data: {
+                qr: true,
+                data: data
+            },
+            dataType: 'JSON',
+            success: function (response) {
+                $('#qrCode').attr('src', response.qr);
+            }
+            });
+        });
 });

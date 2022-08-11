@@ -76,10 +76,10 @@
                     </div>
                 </div>
 				<div class="row mb-3 mt-3 ms-4">
-                    <label for="address" class="col-sm-2 col-form-label">Gdrive Link:</label>
+				<label for="permitOriginalName" class="col-sm-2 col-form-label" id="l13">Resume</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control error" id="address">               
-                        <div class="text-danger"> Please enter the link of your file</div>
+					<input type="file" class="form-control" id="permit_original_name"><br>              
+                        <div class="text-danger"> Please upload your file</div>
                     </div>
                 </div>
 				<ul>

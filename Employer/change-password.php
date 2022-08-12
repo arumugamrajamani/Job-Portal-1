@@ -85,7 +85,7 @@
           </div>
           <label class="characters text-danger"></label><br><br><br>
           <button type="button" class=" save fw-bold btn3" title="Save password" data-bs-toggle="modal" data-bs-target="#modal-save">Save</button>
-          <button type="button" class="fw-bold btn3">Cancel</button>
+          <button type="button" onclick="window.location.href='company-profile.php'" class="fw-bold btn3">Cancel</button>
         </div>
       </div>
   </div> 

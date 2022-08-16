@@ -9,6 +9,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="css/resume.css">
+	<!-- Sweet alert cdn link below -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<!-- jQuery cdn link below -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
@@ -64,21 +66,21 @@
 				<div class="row mb-3 mt-3 ms-4">
                     <label for="fullname" class="col-sm-2 col-form-label">Full Name:</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control error" id="fullname">               
+                        <input type="text" class="form-control" id="hey" value="">               
                         <div class="text-danger"> Please enter full name</div>
                     </div>
                 </div>
 				<div class="row mb-3 ms-4">
                     <label for="email" class="col-sm-2 col-form-label">Email:</label>
                     <div class="col-sm-9">
-                        <input type="email" class="form-control error" id="email">
+                        <input type="email" class="form-control error" id="Email">
                         <div class="text-danger"> Please enter your email address</div>
                     </div>
                 </div>
 				<div class="row mb-3 mt-3 ms-4">
 				<label for="permitOriginalName" class="col-sm-2 col-form-label" id="l13">Resume</label>
                     <div class="col-sm-9">
-					<input type="file" class="form-control" id="permit_original_name"><br>              
+					<input type="file" class="form-control" id="Resume"><br>              
                         <div class="text-danger"> Please upload your file</div>
                     </div>
                 </div>
@@ -88,7 +90,7 @@
 					</li>
 				</ul>
 				<div class="mt-5">
-					<button type="button" class="btn1">Submit</button>
+					<button id="sub" type="button" class="btn1">Submit</button>
 				</div>
 			</div>
 		</div>
@@ -132,6 +134,7 @@
 			}, 1000)
 		}
 	</script>
-	<script src="js/pfp.js">t</script>
+	<script src="js/pfp.js"></script>
+	<script src="js/resume.js"></script>
 </body>
 </html>

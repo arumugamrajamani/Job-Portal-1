@@ -1,5 +1,30 @@
 $(document).ready(function () {
     load_data();
+    apply();
+    function apply(){
+        $('#body-h').on('click', '#apply', function () {
+            let postId = $(this).attr('data-id');
+            $('#apply-yes').val(postId);
+            });
+    
+        $('#apply-yes').click(function () {
+            let postId = $(this).val();
+            console.log(postId);
+            $.ajax({
+                url: 'php/bookmark-job.inc.php',
+                type: 'POST',
+                data: {
+                    apply: true,
+                    postId: postId
+                },
+                //dataType: 'JSON',
+                success: function (response) {
+                    console.log(response);
+                    window.location = 'jobapplication.php';
+                }
+            });
+        });
+    }
        function load_data(){
             $.ajax({
                 url: 'php/insidejob.inc.php',

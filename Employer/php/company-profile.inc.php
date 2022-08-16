@@ -67,28 +67,31 @@ if (isset($_POST['fetchData'])) {
 else  {
     $employerId = ($_SESSION['user_id']);
     $tableData = "";
+    //$j = 0;
     // Create query to get the employer information
     $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM jobseeker WHERE bookmarked = 'true'");
     while($row1 = mysqli_fetch_assoc($fetchDetailsQuery)){
-        $fetch = mysqli_query($conn, "SELECT * FROM applied_jobs WHERE postedby_uid = '$employerId'");
-        while($row = mysqli_fetch_assoc($fetch)){
+        //$i = 0;
+        //$j++;
+        $Id = $row1['jobseeker_id'];
+        $fetch = mysqli_query($conn, "SELECT * FROM applied_jobs WHERE jobseeker_id = '$Id' AND postedby_uid = '$employerId'");
+        $resume = GetProfilePicLoc($row1['resume']);
+        $fullname= $row1['fullname'];
+        $row = mysqli_fetch_assoc($fetch);
+            //$i++;
             // Get the employer information needed to edit modal
             $jobApplied = $row['job_title'];
             $dataId = $row['post_iud'];
             $date = $row['date_applied'];
             $status = $row['status'];
-            $title = $row['job_title'];
             $Id = $row['jobseeker_id'];
-        }
-        $resume = GetProfilePicLoc($row1['resume']);
-        $fullname= $row1['fullname'];
-        $tableData .= "<tr>
-        <td  data-title='Applicant Name'><b>{$fullname}</b></td>  
-        <td  data-title='Resume'><b><a href='{$resume}' target='_blank'>View Resume</a></b></td>                                
-        <td data-title='Job Applied'><b>{$jobApplied}</b></td>
-        <td data-title='Date Applied'><b>{$date}</b></td>
-        <td  data-title='Status'><b>{$status}</b></td>
-    </tr>";
+            $tableData .= "<tr>
+            <td  data-title='Applicant Name'><b>{$fullname}</b></td>  
+            <td  data-title='Resume'><b><a href='{$resume}' target='_blank'>View Resume</a></b></td>                                
+            <td data-title='Job Applied'><b>{$jobApplied}</b></td>
+            <td data-title='Date Applied'><b>{$date}</b></td>
+            <td  data-title='Status'><b>{$status}</b></td>
+            </tr>";
     }
     // Create Assoc array to return to the ajax call
         $response = array(

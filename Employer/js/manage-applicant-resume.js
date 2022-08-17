@@ -70,6 +70,33 @@ $(document).ready(function (){
         });
     });
 
+    $('#body-h').on('click','.remove', function () {
+        let Id = $(this).attr('data-id');
+        $('#accept1').val(Id);
+    });
+    $('#accept1').click(function () {
+        let Num = $(this).val();
+        console.log(Num);
+        $.ajax({
+            url: 'php/manage-applicant-resume.inc.php',
+            type: 'POST',
+            data: {
+                remove: true,
+                Num: Num
+            },
+            //dataType: "JSON",
+            success: function (data) {
+                console.log(data);
+                $('#exampleModal3').modal('hide');
+                toastr.options = {
+                    positionClass : "toast-top-center"
+                }
+                toastr.success('', 'Bookmark Removed!');
+                window.location='company-profile.php';
+            }
+        });
+    });
+
     $('#body-h').on('click', '.delete-btn', function () {
         let postId = $(this).attr('data-id');
         $('#del-yes1').val(postId);

@@ -26,9 +26,9 @@
         <div class="container-fluid">
             <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light fixed-top shadow " >
                     <a href="#" class="navbar-brand">
-                    <img src="image/flogo.png" alt="Job Portal Logo" class="flogo"></a>
+                    <img src="image/light-logo.png" alt="Job Portal Logo" class="flogo" id="logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span><img src="/Landing-Page/image/icons8-menu-60.png" alt="" id="men" width="40px" height="50px"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="toggleMobileMenu">
                         <ul class="navbar-nav ms-auto text-center fw-bold">
@@ -54,10 +54,18 @@
     </div>
 
     <div data-bs-offset="0" class="scrollspy-example" tabindex="0">
-        
+
+    <div class="swits">
+            <div class = 'toggle-switch'>
+            <label class="lab">
+            <input class="dar" type = 'checkbox' onclick="toggleImage()">
+            <span id="icon2" class = 'slider'></span>
+            </label>
+            </div>
+            </div>
         <section class="masthead" id="home">
             <br><br><br>
-            <h1 class="mt-5 ms-4 pt-5 text-center tag1">Employment powered by Technology. </h1>
+            <h1 class="mt-0 ms-4 pt-5 text-center tag1">Employment powered by Technology. </h1>
             <div class="container d-flex con-home">
                 <div>
                     <p class="mt-0 tag2 fw-bold">Are you sick of standing in endless lines? Today, technology gives you an advantage in the job market by allowing you to apply with a single click and from the comfort of your home.  Now is the time to apply! Use <strong class="tech"> Tech-Ployment  </strong>and get your first online job!</p>
@@ -76,7 +84,7 @@
                     </div>
                 </div>
                 <div>
-                    <img src="image/bg2-homepage.png" alt="background-2" class="ms-5 bg2-home" >
+                    <img src="image/job 12.png" alt="background-2" class="ms-5 bg2-home" >
                 </div>
 			</div>
             <br><br><br><br><br><br>
@@ -87,7 +95,7 @@
             <h4 class="text-center pt-4 aboutus">About Us</h4><br><br>
             <div class="para ms-5 shadow-sm pb-2 mt-0">
                 <h3 class="text-center p-2">Meet Our Team</h3><br>
-                    <p class="text-center fs-5"> We are Melham Construction Corporation interns who want to create a
+                    <p class="text-center fs-5 tix"> We are Melham Construction Corporation interns who want to create a
                         website for available jobs online. The traditional method of applying for jobs <br> has been
                         innovated, and on this page we offer a minimalist, clean, and simple to use website for both
                         job seekers and employers. Tech-Ployment is a <br> combination of technology and employment in
@@ -95,25 +103,25 @@
             </div><br><br>
             <div class="para ms-5 shadow-sm ">
                 <h3 class="text-center pt-2">Vision</h3><br>
-                <p class="text-center fs-5"> To establish a career portal that can help both job seekers and employees in a healthy community.</p>
+                <p class="text-center fs-5 tix"> To establish a career portal that can help both job seekers and employees in a healthy community.</p>
                 <br><br>     
             </div><br><br>
             <div class="para ms-5 shadow-sm ">
                 <h3 class="text-center p-2">Mission</h3><br>
-                <p class="text-center fs-5"> To assist seekers and employers achieve their employment objectives. With creativity and skill, the ageny collaborates with community partners to adapt to changing needs and posibilities.</p>
+                <p class="text-center fs-5 tix"> To assist seekers and employers achieve their employment objectives. With creativity and skill, the ageny collaborates with community partners to adapt to changing needs and posibilities.</p>
                 <br><br>          
             </div><br><br>
             <div class="para ms-5 shadow-sm ">
                 <h3 class="text-center p-2">Goal</h3><br>
-                <p class="text-center fs-5"> This initiative aims to provide job seekers with a simple and effective job site. This aim to create an environment in which finding a job online is more time efficient and convenient than looking for one in person.</p>
+                <p class="text-center fs-5 tix"> This initiative aims to provide job seekers with a simple and effective job site. This aim to create an environment in which finding a job online is more time efficient and convenient than looking for one in person.</p>
                 <br><br>       
             </div><br><br>
             <div class="para2 ms-5 shadow-sm">
                 <div class="fs-5 ms-6 text-center" >
                     <h3 class="p-2">Our Services</h3>
-                    <p>We serve individuals by connecting employers with workers who are looking for jobs. We want to instill confidence in everyone's outsourcing experience.</p><br>
+                    <p class="tix">We serve individuals by connecting employers with workers who are looking for jobs. We want to instill confidence in everyone's outsourcing experience.</p><br>
                     <h3 class="">Why we do it</h3>
-                    <p>Because it has an impact on people's lives.</p><br>
+                    <p class="tix">Because it has an impact on people's lives.</p><br>
                 </div>
             </div>
             <br><br><br><br><br>
@@ -1440,8 +1448,8 @@
                     <h6 class="text-uppercase ">OTHER INFORMATIONS</h6>
                     
                     <ul class="list-unstyled">
-                        <li class="my-0"></i> <a href="index.php#aboutus" class="text-dark">FAQ</a></li>
-                        <li class="my-0"></i> <a href="index.php#faq" class="text-dark">About us</a></li>               
+                        <li class="my-0"></i> <a href="index.php#faq" class="text-dark">FAQ</a></li>
+                        <li class="my-0"></i> <a href="index.php#aboutus" class="text-dark">About us</a></li>               
                         <li class="my-0"></i><a href="privacypolicy.php" class="text-dark">Privacy Policy</a></li>
                         <li class="my-0"></i> <a href="termsofuse.php" class="text-dark">Terms of use</a></li>
                         <li class="my-0"></i> <a href="termsandcondition.php" class="text-dark">Terms and conditions</a></li>
@@ -1482,6 +1490,31 @@
         var scrollSpy = new bootstrap.ScrollSpy(document.body, {
         target: '#navbar-example2'
     })
+    </script>
+
+<script>
+        var icon2 = document.getElementById("icon2")
+    
+        icon2.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        }
+        
+        function toggleImage(){
+        imgsrc= document.getElementById("logo").src;
+        if (imgsrc.indexOf("image/light-logo.png") !=-1){
+        document.getElementById("logo").src = "image/Techployment (7) 1.png";
+        }
+        else{
+        document.getElementById("logo").src = "image/light-logo.png";
+        }
+        imgsrc= document.getElementById("men").src;
+        if (imgsrc.indexOf("/Landing-Page/image/icons8-menu-60.png") !=-1){
+        document.getElementById("men").src = "/Landing-Page/image/selection.png";
+        }
+        else{
+        document.getElementById("men").src = "/Landing-Page/image/icons8-menu-60.png";
+        }
+        }
     </script>
     
     <script src="js/contactus.js"></script>

@@ -1,7 +1,5 @@
 $(document).ready(function () {
     load_data();
-    apply();
-    function apply(){
         $('#body-h').on('click', '#apply', function () {
             let postId = $(this).attr('data-id');
             $('#apply-yes').val(postId);
@@ -24,7 +22,7 @@ $(document).ready(function () {
                 }
             });
         });
-    }
+    
        function load_data(){
             $.ajax({
                 url: 'php/insidejob.inc.php',

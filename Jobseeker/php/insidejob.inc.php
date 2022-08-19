@@ -103,7 +103,7 @@ else{
         $tableData .= "<tr class='tr1'>
         <td data-title='Job Title'>{$jobTitle}</td>
         <td data-title='Job Description' class='descript'>{$description}</td>
-        <td data-title='Action' class='action'><button class='btn btn-info shadow' type='button' id='btn-info' data-id='{$postId}' data-bs-toggle='modal' data-bs-target='#modal-apply' id='apply'>APPLY</button>
+        <td data-title='Action' class='action'><button id = 'apply' class='btn btn-info shadow' type='button' id='btn-info' data-id='{$postId}' data-bs-toggle='modal' data-bs-target='#modal-apply'>APPLY</button>
         <button id='delete' class='btn btn-dark btn-sm rounded-circle' type='button' data-bs-toggle='modal' data-bs-target='#modal-delete' data-id='{$postId}' data-placement='top' title='Delete'><i class='fa fa-trash'></i></button>
         </td>
         </tr>";

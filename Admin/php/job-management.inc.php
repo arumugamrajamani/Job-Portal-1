@@ -59,7 +59,7 @@
                             <td>{$jobCategory}</td>
                             <td>{$date}</td>
                             <td>
-                                <button class='btn-success' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails' title='Edit Details'><i class='fa-solid fa-pen-to-square'></i></button>
+                                <button class='btn-success edit-Btn' type='button' id='btn-info' data-id='{$postId}' data-bs-toggle='modal' data-bs-target='#modal-editdetails' title='Edit Details'><i class='fa-solid fa-pen-to-square'></i></button>
                                 <button class='btn btn-danger delete-Btn' type='button' id='btn-info' data-id ='{$postId}' data-bs-toggle='modal' data-bs-target='#modal-delete' title='Delete'><i class='bi bi-trash3'></i></button>
                         </td>";
         }
@@ -120,6 +120,7 @@
         $response = array(
             'tableData' => $tableData,
             'pagination' => $pagination,
+            'name' => 'Cannot be changed',
             'entries' => $entries);
     echo json_encode($response);
     }
@@ -170,4 +171,10 @@ VALUES(
 )");
 
     mysqli_query($conn, "DELETE FROM `jobpost` WHERE `post_iud` = '$postId'");
+}
+else if (isset($_POST['edit'])) {
+    $postId = $_POST['postId'];
+    $company = $_POST['company'];
+    $jobcategory = $_POST['jobcategory'];
+    mysqli_query($conn, "UPDATE jobpost SET company_name = '$company', job_category = '$jobcategory' WHERE post_iud = '$postId'");
 }

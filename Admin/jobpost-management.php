@@ -15,9 +15,8 @@
     <!-- Toast CDN for design of toastr -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/employer-management.css">
+    <link rel="stylesheet" href="css/jobpost-management.css">
     <link rel="stylesheet" href="../css/preloader.css">
-    
     <title>Job Post Management | Admin</title>
 </head>
 
@@ -92,7 +91,7 @@
             <input class="form-control icon i-search" id="search" placeholder="Search a jobpost" aria-label="Search">
             <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
         </div><br>
-        <div class="col-auto">
+        <div class="table col-auto">
             <section class="type p-1">
                 <div class="bg-color-header text-center">
                     <div class="table-responsive" id="no-more-tables">
@@ -151,25 +150,25 @@
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="employername" class="col-sm-3 ">Employer Name</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="employername">
+                                    <input type="text" class="form-control" id="employername" disabled>
                                 </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="company" class="col-sm-3 ">Company</label>
                                 <div class="col-sm-8">
-                                    <input type="number" class="form-control" id="company">
+                                    <input type="text" class="form-control" id="company">
                                 </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="jobcategory" class="col-sm-3 ">Job Category</label>
                                 <div class="col-sm-8">
-                                    <input type="email" class="form-control" id="jobcategory">
+                                    <input type="text" class="form-control" id="jobcategory">
                                 </div>
                             </div>
                         </form>
                     </div><br>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-success save">Save Details</button>
+                        <button id="save" type="button" class="btn btn-success save" >Save Details</button>
                         <button type="button" class="close btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>

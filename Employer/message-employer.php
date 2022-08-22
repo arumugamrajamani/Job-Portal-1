@@ -22,13 +22,13 @@
 	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 	<!-- jQuery cdn link below -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-	<title>Message</title>
+	<title>Message Employer</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="container-fluid"> 
 			<a class="navbar-brand me-1" href="#"></a>
-			<img src="image/flogo.png" alt="Job Portal Logo" width="100" height="70"></a>
+			<img src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70" id="logo"></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -46,45 +46,47 @@
 					</li>             
 					<li class="nav-item account dropdown active">
 					<a class="nav-link text-dark  dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-					<img id="pfp" class="image" style="border-radius: 100px; object-fit: cover;" src="" alt="Profile" width="30" height="30"> ACCOUNT</a>
-                    <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-						<li><a id="name" class="dropdown-item text-light" href="company-profile.php"></a></li>
-						<li><hr class="dropdown-divider bg-white"></li>
-						<li><a class="dropdown-item text-light" href="jobmanage.php">JOB MANAGEMENT</a></li>
-						<li><a class="dropdown-item text-light" href="manage-applicant-resume.php">MANAGE RESUME</a></li>
-						<li><a class="dropdown-item text-light" href="manage-account-profile.php">MANAGE ACCOUNT PROFILE</a></li>
-						<li><a class="dropdown-item logout text-light" href="../logout.php">LOGOUT</a></li>
+					<img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
+            <ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">
+                <li><a id="name" class="dropdown-item text-start name" href="company-profile.php"></a></li>
+						<li><hr class="dropdown-divider bg-black"></li>
+						<li><a class="dropdown-item text-dark" href="manage-account-profile.php"> Edit Profile</a></li>
+						<li><a class="dropdown-item text-dark" href="change-pass.php"> Change Password</a></li>
+						<li><a class="dropdown-item text-dark" href="manage-applicant-resume.php"> Manage Resume</a></li>
+						<li><a class="dropdown-item text-dark" href="jobmanage.php"> Job Management</a></li>
+						<li><a class="dropdown-item text-dark" href="job-applicant.php">Job Applicants</a></li>
+						<li><a class="dropdown-item logout text-dark" href="login.php"> Log Out</a></li>
 					</ul>
 				</ul>
             </div>
         </div>
     </nav>
 	<div class="d-flex mt-5 ms-5">
-		<div class="container con1 bg-white shadow " >
+		<div class="container con1 bg-white shadow ">
 			<h5 class="text-center mt-3">MESSAGE</h5>
 			<div class="block">
 				<div class="d-flex">
 					<i class="bi bi-caret-right-fill fa-2x mt-4"></i>
-					<button class="mt-4 btn1 mb-4 ms-3" id="submit" > 
+					<button class="mt-4 btn1 mb-4 ms-3" id="submits">
 						<div class="d-flex">
-							<i class="bi bi-envelope fa-2x me-1"></i> 
-							<h6 class="mt-2 ps-1">JOB MESSAGES</h6>	
+							<i class="me-1"><img src="image/message.png" alt="" class="mes1" id="mes1"></i>
+							<h6 class="mt-2 ps-1 text-light">JOB MESSAGES</h6>
 						</div>
 					</button>
 				</div>
 				<div class="text-center">
-					<button class="btn1 mb-4" id="submit" onclick="location.href='message-sent.php'"> 
+					<button class="btn1 mb-4" id="submit" onclick="location.href='message-sent.php'">
 						<div class="d-flex">
 							<i class="bi bi-send-fill fa-2x me-1"></i>
-							<h6 class="mt-2 ps-2">SENT</h6>	
+							<h6 class="mt-2 ps-2">SENT</h6>
 						</div>
 					</button>
 				</div>
 				<div class="text-center">
-					<button class="btn1 mb-4" id="submit" onclick="location.href='recycle-bin-employer.php'" > 
+					<button class="btn1 mb-4" id="submit" onclick="location.href='recycle-bin-employer.php'">
 						<div class="d-flex">
 							<i class="bi bi-trash fa-2x me-1"></i>
-							<h6 class="mt-2 ps-2">RECYCLE BIN</h6>	
+							<h6 class="mt-2 ps-2">RECYCLE BIN</h6>
 						</div>
 					</button>
 				</div>
@@ -96,17 +98,33 @@
 						</div>
 					</button>
 				</div>
+				<div class="text-center">
+					<button class="btn1 mb-4" id="submits1" onclick="location.href='message-draft.php'">  
+						<div class="d-flex">
+							<i class="bi bi-file-earmark-medical fa-2x me-1"></i>
+							<h6 class="mt-2 ps-2">DRAFT</h6>	
+						</div>
+					</button>
+				</div>
+				<div class="text-center">
+					<button class="btn1 mb-4" id="submit" onclick="location.href='message-starred.php'"> 
+						<div class="d-flex">
+							<i class="bi bi-star-fill fa-2x me-1"></i>
+							<h6 class="mt-2 ps-2">FAVORITES</h6>	
+						</div>
+					</button>
+				</div>
 			</div>
 		</div>
 	
-		<div class="container-md bg-white shadow">
-			<form class="d-flex mt-4 mb-2 bg-2">      
+		<div class="container-md bg-white shadow con2">
+			<form class="d-flex mt-4 mb-2 bg-2 forms">
 				<input class="form-control icon" type="search" placeholder="Search for a message" aria-label="Search">
-				<button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
+				<button class="btns text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
 			</form>
 			<div id="" class="scroll">
 				<div class="form-check" onclick="location.href='message-reply.php'">
-					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup" >
+					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup">
 					<section class="sec1">
 						<div class="d-flex pt-3">
 							<div>
@@ -117,8 +135,11 @@
 						</div>
 					</section>
 				</div>
+				<div class="star-button">
+                    <input class="star" type="checkbox" title="Not starred">
+                </div>
 				<div class="form-check" onclick="location.href='message-reply.php'">
-					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup1" >
+					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup1">
 					<section class="sec1">
 						<div class="d-flex pt-3">
 							<div>
@@ -129,8 +150,11 @@
 						</div>
 					</section>
 				</div>
+				<div class="star-button">
+                    <input class="star" type="checkbox" title="Not starred">
+                </div>
 				<div class="form-check" onclick="location.href='message-reply.php'">
-					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup2" >
+					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup2">
 					<section class="sec1">
 						<div class="d-flex pt-3">
 							<div>
@@ -141,8 +165,11 @@
 						</div>
 					</section>
 				</div>
+				<div class="star-button">
+                    <input class="star" type="checkbox" title="Not starred">
+                </div>
 				<div class="form-check" onclick="location.href='message-reply.php'">
-					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup3" >
+					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup3">
 					<section class="sec1">
 						<div class="d-flex pt-3">
 							<div>
@@ -153,8 +180,11 @@
 						</div>
 					</section>
 				</div>
+				<div class="star-button">
+                    <input class="star" type="checkbox" title="Not starred">
+                </div>
 				<div class="form-check" onclick="location.href='message-reply.php'">
-					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup4" >
+					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup4">
 					<section class="sec1">
 						<div class="d-flex pt-3">
 							<div>
@@ -165,8 +195,11 @@
 						</div>
 					</section>
 				</div>
+				<div class="star-button">
+                    <input class="star" type="checkbox" title="Not starred">
+                </div>
 				<div class="form-check" onclick="location.href='message-reply.php'">
-					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup5" >
+					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup5">
 					<section class="sec1">
 						<div class="d-flex pt-3">
 							<div>
@@ -177,8 +210,11 @@
 						</div>
 					</section>
 				</div>
+				<div class="star-button">
+                    <input class="star" type="checkbox" title="Not starred">
+                </div>
 				<div class="form-check" onclick="location.href='message-reply.php'">
-					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup6" >
+					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup6">
 					<section class="sec1">
 						<div class="d-flex pt-3">
 							<div>
@@ -189,18 +225,27 @@
 						</div>
 					</section>
 				</div>
+				<div class="star-button">
+                    <input class="star" type="checkbox" title="Not starred">
+                </div>
 			</div>
-			<div class="d-flex"> 
-				<button  class="btn btn-trash shadow" id="theButton" onclick="clickMe()">
+			<div class="d-flex">
+				<button class="btn btn-trash shadow" id="theButton" onclick="clickMe()">
 					<i class="bi bi-trash-fill fa-2x px-1"></i>
 				</button>
-				<button type="button" class=" btn-plus shadow" onclick="location.href='message-new.php'">
+				<button type="button" class=" btn-plus shadow" id="plus" onclick="location.href='message-new.php'">
 					<i class="bi bi-plus fa-3x"></i>
 				</button>
-			</div> 
+			</div>
 		</div>
 	</div>
-	
+	<div class = 'toggle-switch'>
+		<label class="lab">
+		  <input class="dar" type = 'checkbox' onclick="toggleImage()">
+		  <span id="icon2" class = 'slider'></span>
+		</label>
+	</div>
+
 	<script>
 			function clickMe() {
 		var checkbox = document.getElementById("popup");
@@ -225,6 +270,27 @@
 		checkbox.classList.toggle("hide");
 		checkbox.classList.toggle("show");
 		}
+		var icon2 = document.getElementById("icon2");
+
+icon2.onclick = function() {
+	document.body.classList.toggle("dark-theme")
+}
+function toggleImage() {
+		imgsrc= document.getElementById("logo").src;
+        if (imgsrc.indexOf("image/light-logo.png") !=-1){
+          document.getElementById("logo").src = "image/Techployment (7) 1.png";
+        }
+        else{
+          document.getElementById("logo").src = "image/light-logo.png";
+        }
+		imgsrc= document.getElementById("mes1").src;
+        if (imgsrc.indexOf("image/message.png") !=-1){
+          document.getElementById("mes1").src = "image/vector1.png";
+        }
+        else{
+          document.getElementById("mes1").src = "image/message.png";
+        }
+    }
 	</script>
 	<script src="js/pfp.js"></script>
 </body>

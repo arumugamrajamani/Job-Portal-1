@@ -33,7 +33,7 @@
                     <i class="fa-solid fa-caret-down"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="admin-profile.php"> My Profile</a></li>
+                    <li><a class="dropdown-item" href="admin-profile.php"> <img id="mainDpDrop" src="image/profile.png" alt="" class="me-2"> My Profile</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>

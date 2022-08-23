@@ -95,11 +95,7 @@
             <h4 class="text-center pt-4 aboutus">About Us</h4><br><br>
             <div class="para ms-5 shadow-sm pb-2 mt-0">
                 <h3 class="text-center p-2">Meet Our Team</h3><br>
-                    <p class="text-center fs-5 tix"> We are Melham Construction Corporation interns who want to create a
-                        website for available jobs online. The traditional method of applying for jobs <br> has been
-                        innovated, and on this page we offer a minimalist, clean, and simple to use website for both
-                        job seekers and employers. Tech-Ployment is a <br> combination of technology and employment in
-                        which employability is now empowered by our modern technology.</p>            
+                    <p class="text-center fs-5 tix" id="meetourteam">      
             </div><br><br>
             <div class="para ms-5 shadow-sm ">
                 <h3 class="text-center pt-2">Vision</h3><br>

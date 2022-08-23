@@ -453,6 +453,7 @@ hr{
 .pfp{
   width: 50px;
   height: 50px;
+  border-radius: 120px;
 }
 .sidebar .menu .item .sub-menu a{
   padding-left: 100px;

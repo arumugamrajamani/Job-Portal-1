@@ -174,27 +174,7 @@ VALUES(
 }
 else if (isset($_POST['edit'])) {
     $postId = $_POST['postId'];
-    // $company = $_POST['company'];
-    // $jobcategory = $_POST['jobcategory'];
-    // Validation for company
-    if(empty($_POST['company'])) {
-        $companyRR = array('status' => 'error', 'message' => 'Company Name is required.');
-    } else {
-        $companyRR = array('status' => 'success');
-        $company = $_POST['company'];
-    }
-    // Validation for company
-    if(empty($_POST['jobcategory'])) {
-        $jobcategoryRR = array('status' => 'error', 'message' => 'Job Category is required.');
-    } else {
-        $jobcategoryRR = array('status' => 'success');
-        $jobcategory = $_POST['jobcategory'];
-    }
-    if($companyRR['status'] == 'success' && $jobcategoryRR['status'] == 'success') {
-        mysqli_query($conn, "UPDATE jobpost SET company_name = '$company', job_category = '$jobcategory' WHERE post_iud = '$postId'");
-        $response = array('status' => 'success');
-    } else {
-        $response = array('status' => 'error', 'companyRR' => $companyRR, 'jobcategoryRR' => $jobcategoryRR);
-    }
-    echo json_encode($response);
+    $company = $_POST['company'];
+    $jobcategory = $_POST['jobcategory'];
+    mysqli_query($conn, "UPDATE jobpost SET company_name = '$company', job_category = '$jobcategory' WHERE post_iud = '$postId'");
 }

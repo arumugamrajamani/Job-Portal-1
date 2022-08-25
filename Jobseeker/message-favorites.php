@@ -44,14 +44,14 @@
 						<a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 						<img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
 						<ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item text-light text-start name" href="/Employer/company-profile.php"> Full Name</a></li>
+							<li><a class="dropdown-item text-light text-start name" href="/Jobseeker/applicant-profile.php"> Full Name</a></li>
 							<li><hr class="dropdown-divider bg-white"></li>
 							<li><a class="dropdown-item text-light text-start" href="manage-account-1.php"> Edit Profile</a></li>
 							<li><a class="dropdown-item text-light text-start" href="manage-account-2.php"> Change Password</a></li>
 							<li><a class="dropdown-item text-light text-start" href="jobapplication.php"> Job Applications</a></li>
 							<li><a class="dropdown-item text-light text-start" href="bookmark-job.php"> Bookmarked jobs</a></li>
 							<li><a class="dropdown-item text-light text-start" href="resume.php"> Manage Resume</a></li>
-							<li><a class="dropdown-item logout text-light text-start" href="#"> LOGOUT</a></li>
+							<li><a class="dropdown-item logout text-light text-start" href="../logout.php"> LOGOUT</a></li>
 						</ul>
 				</ul>
 			</div>

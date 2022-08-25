@@ -62,7 +62,7 @@
 							<img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30">
 							ACCOUNT</a>
 						<ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item text-light" href="/Employer/company-profile.php">FULL NAME</a></li>
+							<li><a class="dropdown-item text-light" href="/Jobseeker/applicant-profile.php">FULL NAME</a></li>
 							<li>
 								<hr class="dropdown-divider bg-white">
 							</li>
@@ -71,7 +71,7 @@
 							<li><a class="dropdown-item text-light text-start" href="jobapplication.php"> Job Applications</a></li>
 							<li><a class="dropdown-item text-light text-start" href="bookmark-job.php"> Bookmarked jobs</a></li>
 							<li><a class="dropdown-item text-light text-start" href="resume.php"> Manage Resume</a></li>
-							<li><a class="dropdown-item logout text-light text-start" href="#"> LOGOUT</a></li>
+							<li><a class="dropdown-item logout text-light text-start" href="../logout.php"> LOGOUT</a></li>
 						</ul>
 				</ul>
 			</div>

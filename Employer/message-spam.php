@@ -97,6 +97,22 @@
 						</div>
 					</button>
 				</div>
+				<div class="text-center">
+					<button class="btn1 mb-4" id="submits1" onclick="location.href='message-draft.php'">  
+						<div class="d-flex">
+							<i class="bi bi-file-earmark-medical fa-2x me-1"></i>
+							<h6 class="mt-2 ps-2">DRAFT</h6>	
+						</div>
+					</button>
+				</div>
+				<div class="text-center">
+					<button class="btn1 mb-4" id="submit" onclick="location.href='message-starred.php'"> 
+						<div class="d-flex">
+							<i class="bi bi-star-fill fa-2x me-1"></i>
+							<h6 class="mt-2 ps-2">FAVORITES</h6>	
+						</div>
+					</button>
+				</div>
 			</div>
 		</div>
 	

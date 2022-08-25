@@ -131,7 +131,7 @@
                 </div>
             </div>
             <div class="row mb-3 ms-4">
-                <label for="companyLogo" class="col-sm-2 col-form-label" id="l12">Company Logo</label>
+                <label for="company_logo_name" class="col-sm-2 col-form-label" id="l12">Company Logo</label>
                 <div class="col-sm-9 ms-5 c1">
                     <input type="file" class="form-control" id="companyLogo"><br>
                     <div class="div1">
@@ -140,7 +140,7 @@
                 </div>
             </div>
             <div class="row mb-3 ms-4">
-                <label for="qrCode" class="col-sm-2 col-form-label" id="qrcode">QR Code</label>
+                <label for="qr_Code" class="col-sm-2 col-form-label" id="qrcode">QR Code</label>
                 <div class="col-sm-9 ms-5 c1">
                     <input type="file" class="form-control" id="qrCode">
                 </div>

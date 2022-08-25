@@ -30,14 +30,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item me-0 mes"><a class="nav-link text-dark message  fw-bold navs" aria-current="page" href="message-jobseekers.php">MESSAGE</a></li>
-          <li class="nav-item fw-bold"><a class="nav-link text-dark about text-center" href="searchjob.php" id="color">JOB BOARD</a></li>
+          <li class="nav-item fw-bold"><a class="nav-link text-dark about text-center" href="jobcategories.php" id="color">JOB BOARD</a></li>
           <li class="nav-item account dropdown ">
             <a class="nav-link text-dark fw-bold dropdown-toggle account" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
               <ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">
                 <li><a id="name" class="dropdown-item text-start name" href="applicant-profile.php"></a></li>
                 <li><hr class="dropdown-divider bg-white"></li>
-                <li><a class="dropdown-item text-start Eprofile" href="manage-account-profile.php"><img src="image/edit-profile-black.png" alt="" class="l1"> Edit Profile</a></li>
+                <li><a class="dropdown-item text-start Eprofile" href="manage-account-1.php"><img src="image/edit-profile-black.png" alt="" class="l1"> Edit Profile</a></li>
                 <li><a class="dropdown-item text-start" href="manage-account-2.php"><img src="image/change-pass-black.png" alt="" class="l1"> Change Password</a></li>
                 <li><a class="dropdown-item text-start" href="bookmark-job.php"><img src="image/job-management.png" alt="" class="l1"> Job Management</a></li>
                 <li><a class="dropdown-item text-start" href="jobapplication.php"><img src="image/job-applicant-black.png" alt="" class="l1"> Job Applications</a></li>

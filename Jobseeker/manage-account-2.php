@@ -35,7 +35,7 @@
             <a class="nav-link text-dark message active" aria-current="page" href="message-jobseekers.php">MESSAGE</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark about active text-center" href="searchjob.php">JOB BOARD</a>
+            <a class="nav-link text-dark about active text-center" href="jobcategories.php">JOB BOARD</a>
           </li>
           <li class="nav-item account dropdown active">
             <a class="nav-link text-darkdropdown-toggle account active" href="#" id="navbarDropdown"

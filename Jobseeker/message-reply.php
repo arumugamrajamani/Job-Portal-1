@@ -39,7 +39,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 					<li class="nav-item me-0"><a class="nav-link text-dark message active menubar mes" aria-current="page" href="message-jobseekers.php">MESSAGE</a></li>
-					<li class="nav-item"><a class="nav-link text-dark about active" href="/Jobseeker/jobcategories.php">JOB BOARD</a></li>
+					<li class="nav-item"><a class="nav-link text-dark about active" href="jobcategories.php">JOB BOARD</a></li>
 					<li class="nav-item account dropdown active">
 						<a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 						<img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>

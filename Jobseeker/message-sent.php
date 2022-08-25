@@ -53,7 +53,7 @@
 							href="message-jobseekers.php">MESSAGE</a>
 					</li>
 					<li class="nav-item fw-bold">
-						<a class="nav-link text-dark about active" href="/Jobseeker/jobcategories.php">JOB BOARD</a>
+						<a class="nav-link text-dark about active" href="jobcategories.php">JOB BOARD</a>
 					</li>
 					<li class="nav-item account dropdown active">
 						<a class="nav-link text-dark fw-bold dropdown-toggle account active" href="#"

@@ -1,4 +1,7 @@
 <?php
+// Errors Found:
+// - The search bar was not properly functioned.
+
 include '../../php/db-connection.php';
 
 //  Function for Sanitizing all input data 
@@ -72,7 +75,7 @@ if (isset($_POST['loadData'])) {
     // Variables to store the data
     $page = 0;
     // Set the item limit per page
-    $pageLimit = 2;
+    $pageLimit = 5;
     // Variable for holding the loop result of the query
     $tableData = "";
 
@@ -92,53 +95,58 @@ if (isset($_POST['loadData'])) {
     // Calculate the starting row
     $start = ($page - 1) * $pageLimit;
 
+
     // Check if search is present
     if (isset($_POST['search'])) {
         $search = $_POST['search'];
+
         $statement = "SELECT * FROM employer WHERE company_name LIKE '%$search%' OR employer_name LIKE '%$search%' OR employer_position LIKE '%$search%' OR email LIKE '%$search%' LIMIT $start, $pageLimit";
         $paginationStatement = "SELECT * FROM employer WHERE company_name LIKE '%$search%' OR employer_name LIKE '%$search%' OR employer_position LIKE '%$search%' OR email LIKE '%$search%'";
-    } else {
+    }
+
+    else {
         $statement = "SELECT * FROM employer LIMIT $start, $pageLimit";
         $paginationStatement = "SELECT * FROM employer";
     }
-
+    
     // Get all employer information from the database
-    $EmployerInfoQuery = mysqli_query($conn, $statement);
+    $EmployerInfoQuery = mysqli_query($conn, $statement);    
+
     while ($row = mysqli_fetch_assoc($EmployerInfoQuery)) {
         // Get the employer information needed to table
-        $employerId = $row['employer_id'];
-        $companyLogo = "../storage/" . $row['company_logo_name'];
-        $companyName = $row['company_name'];
-        $employerName = $row['employer_name'];
-        $employerPosition = $row['employer_position'];
-        $email = $row['email'];
-        $permitName = "../storage/" . $row['permit_new_name'];
-        $permitOriginalName = $row['permit_original_name'];
-        $status = $row['is_verified'];
-        // Append the employer information to the output variable
-        $tableData .= "<tr class='tr'>
-                        <td class='view-logo'><img src='{$companyLogo}' alt='' class='img-logo' data-bs-toggle='modal' data-bs-target='#companylogo'></td>
-                        <td>{$companyName}</td>
-                        <td>{$employerName}</td>
-                        <td>{$employerPosition}</td>
-                        <td>{$email}</td>
-                        <td><i class='fa-solid fa-file-lines me-1'></i><a href='{$permitName}' download='{$permitOriginalName}'>{$permitOriginalName}</a></td>
-                        <td>" . isVerified($status) . "</td> 
-                        <td>
-                            <button class='btn-primary more-details' data-id='{$employerId}'  type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-viewdetails' title='View Details'><i class='fa-solid fa-eye'></i></button>
-                            <button class='btn-success fetch-details'  data-id='{$employerId}' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails' title='Edit Details'><i class='fa fa-pen-to-square'></i></button>
-                            <button class='btn btn-danger delete-employer' data-id='{$employerId}' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-delete' title='Delete'><i class='bi bi-trash3'></i></button>
-                        </td>
-                    </tr>";
+            $employerId = $row['employer_id'];
+            $companyLogo = "../storage/" . $row['company_logo_name'];
+            $companyName = $row['company_name'];
+            $employerName = $row['employer_name'];
+            $employerPosition = $row['employer_position'];
+            $email = $row['email'];
+            $permitName = "../storage/" . $row['permit_new_name'];
+            $permitOriginalName = $row['permit_original_name'];
+            $status = $row['is_verified'];
+            // Append the employer information to the output variable
+            $tableData .= "<tr class='tr'>
+                            <td class='view-logo'><img src='{$companyLogo}' alt='' class='img-logo' data-bs-toggle='modal' data-bs-target='#companylogo'></td>
+                            <td>{$companyName}</td>
+                            <td>{$employerName}</td>
+                            <td>{$employerPosition}</td>
+                            <td>{$email}</td>
+                            <td><i class='fa-solid fa-file-lines me-1'></i><a href='{$permitName}' download='{$permitOriginalName}'>{$permitOriginalName}</a></td>
+                            <td>" . isVerified($status) . "</td> 
+                            <td>
+                                <button class='btn-primary more-details' data-id='{$employerId}'  type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-viewdetails' title='View Details'><i class='fa-solid fa-eye'></i></button>
+                                <button class='btn-success fetch-details'  data-id='{$employerId}' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-editdetails' title='Edit Details'><i class='fa fa-pen-to-square'></i></button>
+                                <button class='btn btn-danger delete-employer' data-id='{$employerId}' type='button' id='btn-info' data-bs-toggle='modal' data-bs-target='#modal-delete' title='Delete'><i class='bi bi-trash3'></i></button>
+                            </td>
+                        </tr>";
     }
-
 
     // Query to get the total number of employers
     $GetRecordsQuery = mysqli_query($conn, $paginationStatement);
     // Query to get the total number of employers
     $totalRecords = mysqli_num_rows($GetRecordsQuery);
-    // Calculate the total number of employers
-    $totalPages = ceil($totalRecords / $pageLimit);
+    // Calculate the total number of employers. Will pass to 1 if there are no employers
+    $totalPages = ($totalRecords == 0) ? 1 : ceil($totalRecords / $pageLimit);
+    
     $pagination = "";
 
     // check if the page number is greater than 1
@@ -180,14 +188,14 @@ if (isset($_POST['loadData'])) {
 
     // For entries display
     $entries_start = $start + 1;
-    $entries_end = $start + $pageLimit;
+    $entries_end = ceil($totalRecords / $pageLimit);
     $entries = "<span>Show <b>{$entries_start}</b> to <b>{$entries_end}</b> of {$totalRecords} entries</span>";
 
     // Stored and return the displays for employer management page
     $response = array(
         'tableData' => $tableData,
         'pagination' => $pagination,
-        'entries' => $entries
+        'entries' => $entries,
     );
     // Return this output variable to the ajax call
     echo json_encode($response);
@@ -255,8 +263,6 @@ if (isset($_POST['deleteEmployer'])) {
     $otp_code = $row['otp_code'];
     $is_verified = $row['is_verified'];
     $date_created = $row['date_created'];
-
-
 
     mysqli_query($conn, "INSERT INTO employer_recycle (employer_id, employer_name, employer_position, company_name, company_address, company_ceo, company_size, company_revenue, industry, company_description, contact_number, company_email, company_logo_name, permit_new_name, permit_original_name, email, password, otp_code, is_verified, date_created)
                         VALUES ('$employer_id', '$employer_name', '$employer_position', '$company_name', '$company_address', ' $company_ceo', '$company_size', '$company_revenue', '$industry', '$company_description','$contact_number', '$company_email', '$company_logo_name', '$permit_new_name', '$permit_original_name', '$email', '$password', '$otp_code', '$is_verified', '$date_created')");

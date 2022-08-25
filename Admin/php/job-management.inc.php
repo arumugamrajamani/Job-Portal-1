@@ -10,7 +10,7 @@
          // Variables to store the data
         $page = 0;
         // Set the item limit per page
-        $pageLimit = 2;
+        $pageLimit = 5;
         //Variable to hold the querryu result
         $tableData = "";
 
@@ -67,8 +67,8 @@
         $GetRecordsQuery = mysqli_query($conn, $paginationStatement);
         // Query to get the total number of employers
         $totalRecords = mysqli_num_rows($GetRecordsQuery);
-        // Calculate the total number of employers
-        $totalPages = ceil($totalRecords / $pageLimit);
+    // Calculate the total number of employers. Will pass to 1 if there are no employers
+    $totalPages = ($totalRecords == 0) ? 1 : ceil($totalRecords / $pageLimit);
         $pagination = "";
 
         // check if the page number is greater than 1
@@ -174,27 +174,7 @@ VALUES(
 }
 else if (isset($_POST['edit'])) {
     $postId = $_POST['postId'];
-    // $company = $_POST['company'];
-    // $jobcategory = $_POST['jobcategory'];
-    // Validation for company
-    if(empty($_POST['company'])) {
-        $companyRR = array('status' => 'error', 'message' => 'Company Name is required.');
-    } else {
-        $companyRR = array('status' => 'success');
-        $company = $_POST['company'];
-    }
-    // Validation for company
-    if(empty($_POST['jobcategory'])) {
-        $jobcategoryRR = array('status' => 'error', 'message' => 'Job Category is required.');
-    } else {
-        $jobcategoryRR = array('status' => 'success');
-        $jobcategory = $_POST['jobcategory'];
-    }
-    if($companyRR['status'] == 'success' && $jobcategoryRR['status'] == 'success') {
-        mysqli_query($conn, "UPDATE jobpost SET company_name = '$company', job_category = '$jobcategory' WHERE post_iud = '$postId'");
-        $response = array('status' => 'success');
-    } else {
-        $response = array('status' => 'error', 'companyRR' => $companyRR, 'jobcategoryRR' => $jobcategoryRR);
-    }
-    echo json_encode($response);
+    $company = $_POST['company'];
+    $jobcategory = $_POST['jobcategory'];
+    mysqli_query($conn, "UPDATE jobpost SET company_name = '$company', job_category = '$jobcategory' WHERE post_iud = '$postId'");
 }

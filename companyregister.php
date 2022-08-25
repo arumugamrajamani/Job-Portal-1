@@ -25,7 +25,7 @@
         <div class="container-fluid">
             <nav id="navbar-example2" class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow " >
                 <a href="#" class="navbar-brand ms-3">
-                <img src="image/flogo.png" alt="Job Portal Logo" width="120" height="95"></a>
+                <img src="image/light-logo.png" alt="Job Portal Logo" width="120" height="95" id="logo"></a>
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav ms-auto text-center fw-bold">
                         <nav class="navbar navbar-light">     
@@ -45,9 +45,17 @@
                 </div>
             </nav>         
         </div>
+        <div class="container con1">
+            <div class="swits">
+                <div class = 'toggle-switch'>
+                    <label class="lab">
+                      <input class="dar" type = 'checkbox' onclick="toggleImage()">
+                      <span id="icon2" class = 'slider'></span>
+                    </label>
+                  </div>
+                </div>
     </div><br>
     <div class="masthead">
-        <div class="container shadow" style="width:1060px;height: 1650px;background-color: #FDF6EC;">
             <form class="container shadow">
                 <div class="col-sm-9 text-start row mb-3">
                     <h1 class="text-dark fw-bold ps-5" style="font-size: 30px;">COMPANY REGISTRATION FORM</h1>
@@ -157,11 +165,35 @@
                 </div>
 
                 <div class="text-center text-light">
-                    <button type="submit" class="text-dark mt-5" id="SAVE-NOW">REGISTER NOW</button>
+                    <button type="submit" class="mt-5" id="SAVE-NOW">REGISTER NOW</button>
                 </div>
             </form>
         </div>
     <br><br><br><br><br><br>
+    <script>
+            var icon2 = document.getElementById("icon2")
+        
+            icon2.onclick = function(){
+              document.body.classList.toggle("dark-theme");
+            }
+            
+            function toggleImage(){
+              imgsrc= document.getElementById("logo").src;
+            if (imgsrc.indexOf("image/light-logo.png") !=-1){
+              document.getElementById("logo").src = "image/Techployment (7) 1.png";
+            }
+            else{
+              document.getElementById("logo").src = "image/light-logo.png";
+            }
+            imgsrc= document.getElementById("burger").src;
+            if (imgsrc.indexOf("/Landing-Page/image/icons8-menu-60.png") !=-1){
+              document.getElementById("burger").src = "/Landing-Page/image/selection.png";
+            }
+            else{
+              document.getElementById("burger").src = "/Landing-Page/image/icons8-menu-60.png";
+            }
+            }
+          </script>
     </div>    
     <script src="js/companyregister.js"></script>  
 </body>

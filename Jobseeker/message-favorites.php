@@ -1,5 +1,5 @@
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -21,7 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="css/message-jobseekers.css">
 	<script src="https://kit.fontawesome.com/67c66657c7.js"></script>
 	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-	<title>Message</title>
+	<title>Favorites</title>
 </head>
 
 <body>
@@ -62,8 +62,7 @@
 			<h5 class="text-center mt-3">MESSAGE</h5>
 			<div class="block">
 				<div class="d-flex">
-					<i class="bi bi-caret-right-fill fa-2x mt-4"></i>
-					<button class="mt-4 btn1 mb-4 ms-3 highlight" id="submits" onclick="location.href='message-jobseekers.php'">
+					<button class="mt-4 btn1 mb-4 ms-3" id="submits" onclick="location.href='message-jobseekers.php'">
 						<div class="d-flex">
 							<i class="bi bi-envelope fa-2x me-1"></i>
 							<h6 class="mt-2 ps-1">JOB MESSAGES</h6>
@@ -102,11 +101,12 @@
 						</div>
 					</button>
 				</div>
-				<div class="text-center">
-					<button class="btn1 mb-4" id="submit" onclick="location.href='message-favorites.php'">
-						<div class="d-flex">
+				<div class="d-flex">
+                    <i class="bi bi-caret-right-fill fa-2x"></i>
+                    <button class="ms-3 btn1 mb-4 highlight" id="submits" onclick="location.href='message-Favorites.php'">
+                        <div class="d-flex">
 							<i class="bi bi-star-fill fa-2x me-1"></i>
-							<h6 class="mt-2 ps-2 jsr">FAVORITES</h6>
+							<h6 class="mt-2 ps-2">FAVORITES</h6>
 						</div>
 					</button>
 				</div>
@@ -132,7 +132,7 @@
 					</section>
 				</div>
 				<div>
-					<input class="star" type="checkbox" title="Not starred">
+					<input class="star" type="checkbox" title="Starred">
 				</div>
 				<div class="form-check" onclick="location.href='message-reply.php'">
 					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup1">
@@ -147,7 +147,7 @@
 					</section>
 				</div>
 				<div>
-					<input class="star" type="checkbox" title="Not starred">
+					<input class="star" type="checkbox" title="Starred">
 				</div>
 				<div class="form-check" onclick="location.href='message-reply.php'">
 					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup2">
@@ -162,7 +162,7 @@
 					</section>
 				</div>
 				<div>
-					<input class="star" type="checkbox" title="Not starred">
+					<input class="star" type="checkbox" title="Starred">
 				</div>
 				<div class="form-check" onclick="location.href='message-reply.php'">
 					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup3">
@@ -177,7 +177,7 @@
 					</section>
 				</div>
 				<div>
-					<input class="star" type="checkbox" title="Not starred">
+					<input class="star" type="checkbox" title="Starred">
 				</div>
 				<div class="form-check" onclick="location.href='message-reply.php'">
 					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup4">
@@ -192,7 +192,7 @@
 					</section>
 				</div>
 				<div>
-					<input class="star" type="checkbox" title="Not starred">
+					<input class="star" type="checkbox" title="Starred">
 				</div>
 				<div class="form-check" onclick="location.href='message-reply.php'">
 					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup5">
@@ -207,7 +207,7 @@
 					</section>
 				</div>
 				<div>
-					<input class="star" type="checkbox" title="Not starred">
+					<input class="star" type="checkbox" title="Starred">
 				</div>
 				<div class="form-check" onclick="location.href='message-reply.php'">
 					<input class="form-check-input hide mt-4" type="checkbox" value="" name="popup" id="popup6">
@@ -222,15 +222,12 @@
 					</section>
 				</div>
 				<div>
-					<input class="star" type="checkbox" title="Not starred">
+					<input class="star" type="checkbox" title="Starred">
 				</div>
 			</div>
 			<div class="d-flex">
 				<button class="btn btn-trash shadow" id="theButton" onclick="clickMe()">
 					<i class="bi bi-trash-fill fa-2x px-1"></i>
-				</button>
-				<button type="button" class=" btn-plus shadow" id="plus" onclick="location.href='message-new.php'">
-					<i class="bi bi-plus fa-3x"></i>
 				</button>
 			</div>
 		</div>
@@ -282,7 +279,6 @@
         }
     }
 	</script>
-	<script src="js/pfp.js"></script>
 </body>
 
-</php>
+</html>

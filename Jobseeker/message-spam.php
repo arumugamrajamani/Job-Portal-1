@@ -26,10 +26,10 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/message-sent.css">
+	<link rel="stylesheet" type="text/css" href="css/message-spam.css">
 	<script src="https://kit.fontawesome.com/67c66657c7.js"></script>
 	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-	<title>Message Sent</title>
+	<title>Spam</title>
 </head>
 
 <body>
@@ -82,14 +82,13 @@
 				<div class="d-flex">
 					<button class="mt-4 btn1 mb-4 ms-3" id="submit" onclick="location.href='message-jobseekers.php'">
 						<div class="d-flex">
-							<i class="bi bi-envelope fa-2x me-1"></i>
+							<i class="bi bi-envelope fa-2x me-1" ></i>
 							<h6 class="mt-2 ps-1 jsr">JOB MESSAGES</h6>
 						</div>
 					</button>
 				</div>
 				<div class="text-center">
-					<i class="bi bi-caret-right-fill fa-2x "></i>
-					<button class="btn1 mb-4 highlight" id="sent" onclick="location.href='message-sent.php'">
+					<button class="btn1 mb-4" id="sent" onclick="location.href='message-sent.php'">
 						<div class="d-flex">
 							<i class="bi bi-send-fill fa-2x me-1"></i>
 							<h6 class="mt-2 ps-2 jsr">SENT</h6>
@@ -105,7 +104,8 @@
 					</button>
 				</div>
 				<div class="text-center">
-					<button class="btn1 mb-4" id="submit" onclick="location.href='message-spam.php'">
+					<i class="bi bi-caret-right-fill fa-2x "></i>
+					<button class="btn1 mb-4 highlight" id="submit" onclick="location.href='message-spam.php'">
 						<div class="d-flex">
 							<i class="bi bi-envelope-exclamation-fill fa-2x me-1"></i>
 							<h6 class="mt-2 ps-2 jsr">SPAM</h6>
@@ -142,9 +142,9 @@
 					<section class="sec1">
 						<div class="d-flex pt-3">
 							<div>
-								<img src="image/image 86.png" alt="" width="60px" height="60px">
+								<img src="image/Mendoza, Jello.jpg" class="profim"alt="" width="60px" height="60px">
 							</div>
-							<h6 class="ms-4 mt-3">Juan Dela Cruz</h6>
+							<h6 class="ms-4 mt-3">Jello R. Mendoza</h6>
 							<p class="mt-2 ms-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo,
 								consequuntur! Ad cum placeat temporibus, <br> officia minima voluptate beatae voluptates
 								veniam.</p>
@@ -156,9 +156,9 @@
 					<section class="sec1">
 						<div class="d-flex pt-3">
 							<div>
-								<img src="image/image 86.png" alt="" width="60px" height="60px">
+								<img src="image/Manalo, Edward.jpg" class="profim"alt="" width="60px" height="60px">
 							</div>
-							<h6 class="ms-4 mt-3">Juan Dela Cruz</h6>
+							<h6 class="ms-4 mt-3">Edward B. Manalo</h6>
 							<p class="mt-2 ms-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo,
 								consequuntur! Ad cum placeat temporibus, <br> officia minima voluptate beatae voluptates
 								veniam.</p>
@@ -170,9 +170,9 @@
 					<section class="sec1">
 						<div class="d-flex pt-3">
 							<div>
-								<img src="image/image 86.png" alt="" width="60px" height="60px">
+								<img src="image/Parungao.png" class="profim" alt="" width="60px" height="60px">
 							</div>
-							<h6 class="ms-4 mt-3">Juan Dela Cruz</h6>
+							<h6 class="ms-4 mt-3">Fernando Parungao</h6>
 							<p class="mt-2 ms-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo,
 								consequuntur! Ad cum placeat temporibus, <br> officia minima voluptate beatae voluptates
 								veniam.</p>
@@ -184,9 +184,9 @@
 					<section class="sec1">
 						<div class="d-flex pt-3">
 							<div>
-								<img src="image/image 86.png" alt="" width="60px" height="60px">
+								<img src="image/Borromeo, Ma. Cielo A 1.jpg" class="profim" alt="" width="60px" height="60px">
 							</div>
-							<h6 class="ms-4 mt-3">Juan Dela Cruz</h6>
+							<h6 class="ms-4 mt-3">Ma. Cielo A. Borromeo</h6>
 							<p class="mt-2 ms-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo,
 								consequuntur! Ad cum placeat temporibus, <br> officia minima voluptate beatae voluptates
 								veniam.</p>
@@ -198,9 +198,9 @@
 					<section class="sec1">
 						<div class="d-flex pt-3">
 							<div>
-								<img src="image/image 86.png" alt="" width="60px" height="60px">
+								<img src="image/Valenzuela_Kristelle_Asereht_DS.jpg" class="profim" alt="" width="60px" height="60px">
 							</div>
-							<h6 class="ms-4 mt-3">Juan Dela Cruz</h6>
+							<h6 class="ms-4 mt-3">Kristelle Asereht DS. Valenzuela</h6>
 							<p class="mt-2 ms-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo,
 								consequuntur! Ad cum placeat temporibus, <br> officia minima voluptate beatae voluptates
 								veniam.</p>
@@ -212,7 +212,7 @@
 					<section class="sec1">
 						<div class="d-flex pt-3">
 							<div>
-								<img src="image/image 86.png" alt="" width="60px" height="60px">
+								<img src="image/image 86.png" class="profim" alt="" width="60px" height="60px">
 							</div>
 							<h6 class="ms-4 mt-3">Juan Dela Cruz</h6>
 							<p class="mt-2 ms-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo,
@@ -226,7 +226,7 @@
 					<section class="sec1">
 						<div class="d-flex pt-3">
 							<div>
-								<img src="image/image 86.png" alt="" width="60px" height="60px">
+								<img src="image/image 86.png" class="profim" alt="" width="60px" height="60px">
 							</div>
 							<h6 class="ms-4 mt-3">Juan Dela Cruz</h6>
 							<p class="mt-2 ms-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo,
@@ -306,3 +306,4 @@
 	</script>
 </body>
 
+</html>

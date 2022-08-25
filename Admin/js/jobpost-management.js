@@ -16,9 +16,7 @@ function getCurrentPage() {
     var page = $('#pagination').find('.active').attr('data-page');
     return page;
 }
-function save(){
-    
- }
+
 $(document).ready(function () {
     load_data();
     function load_data(search, page){
@@ -40,6 +38,28 @@ $(document).ready(function () {
         });
     }
     
+    // Trigger this when user started to type in fullname input and validate it
+    $('#company').on('keyup', function() {
+        let fullname = $('#company').val();
+        if(fullname.length == 0) {
+            $('#company').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#company').popover({ placement: 'right', content: 'Company Name is required.'}).popover('show');
+        } else {
+            $('#company').removeClass().addClass('form-control border-success').popover('dispose');
+        }
+    })
+
+    // Trigger this when user started to type in fullname input and validate it
+    $('#jobcategory').on('keyup', function() {
+        let fullname = $('#jobcategory').val();
+        if(fullname.length == 0) {
+            $('#jobcategory').removeClass().addClass('form-control border-danger').popover('dispose');
+            $('#jobcategory').popover({ placement: 'right', content: 'Job Category is required.'}).popover('show');
+        } else {
+            $('#jobcategory').removeClass().addClass('form-control border-success').popover('dispose');
+        }
+    })
+
     // Trigger this when user started to type in the search bar
     $('#search').keyup(function () {
         let search = $(this).val();
@@ -96,12 +116,29 @@ $(document).ready(function () {
               jobcategory: jobcategory,
               postId: postId
           },
-          //dataType: 'JSON',
-          success: function (response) {
+          dataType: 'JSON',
+          success: function (data) {
+            if(data.status == 'success') {
               $('#modal-editdetails').modal('hide');
                 toastr.success('', 'Updated Successfully');
                 load_data();
+            } else {
+                // if there is an error in fullname, display error message
+                if(data.companyRR.status == 'error') {
+                    $('#company').removeClass().addClass('form-control border-danger');
+                    $('#company').popover({ placement: 'right', content: data.companyRR.message }).popover('show');
+                } else {
+                    $('#company').removeClass().addClass('form-control border-success').popover('dispose');
+                }
+                // if there is an error in number, display error message
+                if(data.jobcategoryRR.status == 'error') {
+                    $('#jobcategory').removeClass().addClass('form-control border-danger');
+                    $('#jobcategory').popover({ placement: 'right', content: data.jobcategoryRR.message }).popover('show');
+                } else {
+                    $('#jobcategory').removeClass().addClass('form-control border-success');
+                }
           }
-      });
+      }
+    });
     });
 });

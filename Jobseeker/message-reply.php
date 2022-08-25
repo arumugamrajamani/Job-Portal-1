@@ -22,15 +22,13 @@
 	<script src="https://kit.fontawesome.com/67c66657c7.js"></script>
 	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/message-reply.css">
-	<!-- jQuery cdn link below -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<title>Message-Reply</title>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
 		<div class="container-fluid">
 			<a class="navbar-brand me-1" href="#"></a>
-			<img src="image/flogo.png" alt="Job Portal Logo" width="100" height="70"></a>
+			<img src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70" id="logo"></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -41,19 +39,19 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 					<li class="nav-item me-0"><a class="nav-link text-dark message active menubar mes" aria-current="page" href="message-jobseekers.php">MESSAGE</a></li>
-					<li class="nav-item"><a class="nav-link text-dark about active" href="searchjob.php">JOB BOARD</a></li>
+					<li class="nav-item"><a class="nav-link text-dark about active" href="/Jobseeker/jobcategories.php">JOB BOARD</a></li>
 					<li class="nav-item account dropdown active">
 						<a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						<img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
-              <ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">
-                <li><a id="name" class="dropdown-item text-light text-start name" href="applicant-profile.php"></a></li>
-							<li><hr class="dropdown-divider bg-white"></li>
-							<li><a class="dropdown-item text-light text-start" href="manage-account-1.php"><img src="image/edit-profile.png" alt=""> Edit Profile</a></li>
-							<li><a class="dropdown-item text-light text-start" href="manage-account-2.php"><img src="image/change pass.png" alt=""> Change Password</a></li>
-							<li><a class="dropdown-item text-light text-start" href="jobapplication.php"><img src="image/job application.png" alt=""> Job Applications</a></li>
-							<li><a class="dropdown-item text-light text-start" href="bookmark-job.php"><img src="image/bookmark.png" alt=""> Bookmarked jobs</a></li>
-							<li><a class="dropdown-item text-light text-start" href="resume.php"><img src="image/manage resume.png" alt=""> Manage Resume</a></li>
-							<li><a class="dropdown-item logout text-light text-start" href="../logout.php"><img src="image/sign out.png" alt=""> LOGOUT</a></li>
+						<img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
+						<ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item text-light text-start name" href="/Employer/company-profile.php"> Full Name</a></li>
+							<li><hr class="dropdown-divider bg-black"></li>
+							<li><a class="dropdown-item text-light text-start" href="manage-account-1.php"> Edit Profile</a></li>
+							<li><a class="dropdown-item text-light text-start" href="manage-account-2.php"> Change Password</a></li>
+							<li><a class="dropdown-item text-light text-start" href="jobapplication.php"> Job Applications</a></li>
+							<li><a class="dropdown-item text-light text-start" href="bookmark-job.php"> Bookmarked jobs</a></li>
+							<li><a class="dropdown-item text-light text-start" href="resume.php"> Manage Resume</a></li>
+							<li><a class="dropdown-item logout text-light text-start" href="#"> LOGOUT</a></li>
 						</ul>
 				</ul>
 			</div>
@@ -65,10 +63,10 @@
 			<div class="block">
 				<div class="d-flex">
 					<i class="bi bi-caret-right-fill fa-2x mt-4"></i>
-					<button class="mt-4 btn1 mb-4 ms-3" id="submit">
+					<button class="mt-4 btn1 mb-4 ms-3 highlight" id="submit">
 						<div class="d-flex">
 							<i class="bi bi-envelope fa-2x me-1"></i>
-							<h6 class="mt-2 ps-1">JOB MESSAGES</h6>
+							<h6 class="mt-2 ps-2 job">JOB MESSAGES</h6>
 						</div>
 					</button>
 				</div>
@@ -85,6 +83,30 @@
 						<div class="d-flex">
 							<i class="bi bi-trash fa-2x me-1"></i>
 							<h6 class="mt-2 ps-2">RECYCLE BIN</h6>
+						</div>
+					</button>
+				</div>
+				<div class="text-center">
+					<button class="btn1 mb-4" id="submit" onclick="location.href='message-spam.php'">
+						<div class="d-flex">
+							<i class="bi bi-envelope-exclamation-fill fa-2x me-1"></i>
+							<h6 class="mt-2 ps-2 jsr">SPAM</h6>
+						</div>
+					</button>
+				</div>
+				<div class="text-center">
+					<button class="btn1 mb-4" id="submit" onclick="location.href='message-draft.php'">
+						<div class="d-flex">
+							<i class="bi bi-file-earmark-medical fa-2x me-1"></i>
+							<h6 class="mt-2 ps-2 jsr">DRAFT</h6>
+						</div>
+					</button>
+				</div>
+				<div class="text-center">
+					<button class="btn1 mb-4" id="submit" onclick="location.href='message-favorites.php'">
+						<div class="d-flex">
+							<i class="bi bi-star-fill fa-2x me-1"></i>
+							<h6 class="mt-2 ps-2 jsr">FAVORITES</h6>
 						</div>
 					</button>
 				</div>
@@ -140,6 +162,12 @@
 				</div>
 			</div>
 		</div>
+		<div class = 'toggle-switch'>
+			<label class="lab">
+			  <input class="dar" type = 'checkbox' onclick="toggleImage()">
+			  <span id="icon2" class = 'slider'></span>
+			</label>
+		</div>
 
 		<script>
 			function clickMe() {
@@ -165,8 +193,21 @@
 				checkbox.classList.toggle("hide");
 				checkbox.classList.toggle("show");
 			}
+			var icon2 = document.getElementById("icon2");
+
+        icon2.onclick = function() {
+            document.body.classList.toggle("dark-theme")
+        }
+        function toggleImage() {
+        imgsrc= document.getElementById("logo").src;
+        if (imgsrc.indexOf("image/light-logo.png") !=-1){
+          document.getElementById("logo").src = "image/Techployment (7) 1.png";
+        }
+        else{
+          document.getElementById("logo").src = "image/light-logo.png";
+        }
+    }
 		</script>
-		<script src="js/pfp.js"></script>
 </body>
 
 </html>

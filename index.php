@@ -26,7 +26,7 @@
         <div class="container-fluid">
             <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light fixed-top shadow " >
                     <a href="#" class="navbar-brand">
-                    <img src="image/light-logo.png" alt="Job Portal Logo" class="flogo" id="logo"></a>
+                    <img src="image/light-logo.png" alt="Job Portal Logo" class="flogo" id="logos"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
                         <span><img src="/Landing-Page/image/icons8-menu-60.png" alt="" id="men" width="40px" height="50px"></span>
                     </button>
@@ -99,23 +99,23 @@
             </div><br><br>
             <div class="para ms-5 shadow-sm ">
                 <h3 class="text-center pt-2">Vision</h3><br>
-                <p class="text-center fs-5 tix"> To establish a career portal that can help both job seekers and employees in a healthy community.</p>
+                <p class="text-center fs-5 tix" id="vision"> To establish a career portal that can help both job seekers and employees in a healthy community.</p>
                 <br><br>     
             </div><br><br>
             <div class="para ms-5 shadow-sm ">
                 <h3 class="text-center p-2">Mission</h3><br>
-                <p class="text-center fs-5 tix"> To assist seekers and employers achieve their employment objectives. With creativity and skill, the ageny collaborates with community partners to adapt to changing needs and posibilities.</p>
+                <p class="text-center fs-5 tix" id="mission"> To assist seekers and employers achieve their employment objectives. With creativity and skill, the ageny collaborates with community partners to adapt to changing needs and posibilities.</p>
                 <br><br>          
             </div><br><br>
             <div class="para ms-5 shadow-sm ">
                 <h3 class="text-center p-2">Goal</h3><br>
-                <p class="text-center fs-5 tix"> This initiative aims to provide job seekers with a simple and effective job site. This aim to create an environment in which finding a job online is more time efficient and convenient than looking for one in person.</p>
+                <p class="text-center fs-5 tix" id="goal"> This initiative aims to provide job seekers with a simple and effective job site. This aim to create an environment in which finding a job online is more time efficient and convenient than looking for one in person.</p>
                 <br><br>       
             </div><br><br>
             <div class="para2 ms-5 shadow-sm">
                 <div class="fs-5 ms-6 text-center" >
                     <h3 class="p-2">Our Services</h3>
-                    <p class="tix">We serve individuals by connecting employers with workers who are looking for jobs. We want to instill confidence in everyone's outsourcing experience.</p><br>
+                    <p class="tix"  id="services">We serve individuals by connecting employers with workers who are looking for jobs. We want to instill confidence in everyone's outsourcing experience.</p><br>
                     <h3 class="">Why we do it</h3>
                     <p class="tix">Because it has an impact on people's lives.</p><br>
                 </div>
@@ -1496,12 +1496,12 @@
         }
         
         function toggleImage(){
-        imgsrc= document.getElementById("logo").src;
+        imgsrc= document.getElementById("logos").src;
         if (imgsrc.indexOf("image/light-logo.png") !=-1){
-        document.getElementById("logo").src = "image/Techployment (7) 1.png";
+        document.getElementById("logos").src = "image/Techployment (7) 1.png";
         }
         else{
-        document.getElementById("logo").src = "image/light-logo.png";
+        document.getElementById("logos").src = "image/light-logo.png";
         }
         imgsrc= document.getElementById("men").src;
         if (imgsrc.indexOf("/Landing-Page/image/icons8-menu-60.png") !=-1){

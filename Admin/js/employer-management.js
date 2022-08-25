@@ -15,8 +15,6 @@ function closeNav() {
 
 
 $(document).ready(function () {
-
-
     // Call this function to reload the table data at first time
     load_data();
     // Function for loading of table data
@@ -32,8 +30,8 @@ $(document).ready(function () {
             dataType: "JSON",
             success: function (data) {
                 $('#body-h').html(data.tableData);
-                $('#pagination').html(data.pagination)
-                $('#entries').html(data.entries)
+                $('#pagination').html(data.pagination);
+                $('#entries').html(data.entries);
             }
         })
     }
@@ -177,9 +175,6 @@ $(document).ready(function () {
             }
         })
     })
-
-
-
 
     //--------------------------------Start of Edit Details validation --------------------------------------------------------
 

@@ -10,7 +10,7 @@
          // Variables to store the data
         $page = 0;
         // Set the item limit per page
-        $pageLimit = 2;
+        $pageLimit = 5;
         //Variable to hold the querryu result
         $tableData = "";
 
@@ -67,8 +67,8 @@
         $GetRecordsQuery = mysqli_query($conn, $paginationStatement);
         // Query to get the total number of employers
         $totalRecords = mysqli_num_rows($GetRecordsQuery);
-        // Calculate the total number of employers
-        $totalPages = ceil($totalRecords / $pageLimit);
+    // Calculate the total number of employers. Will pass to 1 if there are no employers
+    $totalPages = ($totalRecords == 0) ? 1 : ceil($totalRecords / $pageLimit);
         $pagination = "";
 
         // check if the page number is greater than 1

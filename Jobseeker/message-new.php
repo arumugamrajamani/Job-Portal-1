@@ -58,6 +58,9 @@
 					<li class="nav-item">
 						<a class="nav-link text-dark about active" href="jobcategories.php">JOB BOARD</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link text-dark about active text-center" href="searchjob.php">AVAILABLE JOBS</a>
+					</li>
 					<li class="nav-item account dropdown active">
 						<a class="nav-link text-dark dropdown-toggle account active" href="#"
 							id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

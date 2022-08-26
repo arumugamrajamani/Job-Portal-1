@@ -37,6 +37,9 @@
 					<li class="nav-item fw-bold">
 						<a class="nav-link text-dark about active" href="jobcategories.php">JOB BOARD</a>
 					</li>
+					<li class="nav-item fw-bold">
+            			<a class="nav-link text-dark about active text-center" href="searchjob.php">AVAILABLE JOBS</a>
+          			</li>
 					<li class="nav-item account dropdown active"><a class="nav-link text-dark fw-bold dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 					<img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
               <ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">

@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="container-fluid"> 
             <a class="navbar-brand me-1" href="#"></a>
-            <img src="image/flogo.png" alt="Job Portal Logo" width="100" height="70"></a>
+            <img src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70" id="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -62,7 +62,7 @@
             </div>
             <div class="d-flex">
                 <img class="company_logo mx-5 fa-5x" src="" id="company_logo_name"></img>
-                <div class="block info">
+                <div class="block info text-center">
                     <h4 class="fw-bold" id="employer_name"></h4>
                     <h5 id="employer_position"></h5>
                     <h5 id="company_address"></h5>
@@ -137,8 +137,31 @@
                     <tbody class="tbody bg-light text-dark" id="body-h"></tbody>
                 </table>
             </div>
-        </section>
+        </section><br>
     </div>
+    </div>
+    <div class = 'toggle-switch'>
+        <label class="lab">
+          <input class="dar" type = 'checkbox' onclick="toggleImage()">
+          <span id="icon2" class = 'slider'></span>
+        </label>
+    </div>
+    <script>
+        var icon2 = document.getElementById("icon2");
+
+icon2.onclick = function() {
+    document.body.classList.toggle("dark-theme")
+}
+function toggleImage() {
+        imgsrc= document.getElementById("logo").src;
+        if (imgsrc.indexOf("image/light-logo.png") !=-1){
+          document.getElementById("logo").src = "image/Techployment (7) 1.png";
+        }
+        else{
+          document.getElementById("logo").src = "image/light-logo.png";
+        }
+    }
+    </script>
     <script src="js/company-profile.js"></script>
 </body>
 </html>

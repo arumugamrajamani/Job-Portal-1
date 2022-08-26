@@ -1,5 +1,5 @@
 * body {
-  background-color: #00c2d6;
+  background-color: var(--page);
   background-image: url("/image/sad.png");
   font-family: sans-serif;
   background-size: cover;
@@ -13,13 +13,16 @@
   background-color: #00c2d6;
 }
 .navbar-light {
-  background-color: #ffffff;
+  background-color:var(--secondary) !important;
 }
 .navbar-expand-lg {
   width: 100%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 17px;
+}
+.nav-link {
+  color: var(--primary) !important;
 }
 .btn-outline-secondary {
   background-color: #00c2d6;
@@ -37,20 +40,42 @@
 }
 .account {
   text-align: center;
-  text-indent: -15px;
-  
+  font-weight: 500;
   width: 250px;
-}
-.about {
-  text-indent: 20px;
 }
 .account-drop {
   text-align: center;
   background-color: #372732;
-  width: 250px;
+  width: 200px;
+}
+.dropdown-item{
+  padding-left: 10px;
+  text-align: start !important;
+  color:black !important;
 }
 .nav-item .dropdown-item:hover {
-  background-color: #8b8383;
+  background-color: #00C2D6;
+  border-radius: 5px;
+}
+.navbar-light .navbar-toggler {
+  color: transparent;
+  border-color: transparent;
+  border: none;
+}
+.dropdown-menu{
+  position: absolute !important;
+  background-color:#ECECEC;
+  border-color: none;
+}
+.dropdown-menu.show{
+  line-height: 30px;
+  box-shadow: 1px 1px 5px;
+  border-radius: 15px;
+  border: none;
+  align-items: flex-start !important;
+}
+.ic{
+  margin-right: 10px;
 }
 .search {
   background-color: #00c2d6;
@@ -75,26 +100,31 @@
 .container {
   min-height: 150vh;
   border-radius: 20px;
+  background-color: var(--mast) !important;
 }
 .banner {
   background-color: #00c2d6;
   min-height: 30vh;
 }
 .company2 {
-  height: 70px;
+  height: 90px;
   background-color: #ececec;
   border-radius: 15px;
-  background: rgba(0, 194, 214, 0.5);
+  background: var(--another);
+  color: var(--text);
 }
 .company1 {
-  background-color: #ececec;
-  min-height: 60px;
+  background-color: var(--secondary);
+  color: var(--primary);
+  height: 60px;
   border-radius: 15px;
 }
 .company3 {
   background-color: #ececec;
-  min-height: 10px;
+  height: 160px;
   border-radius: 23px;
+  border: 2px solid var(--border);
+  
 }
 hr {
   border: 1px solid black;
@@ -115,7 +145,9 @@ hr {
   border-radius: 10px;
   position: relative;
   top: 140px;
-  border: 0;
+  border: 2px solid #00D7E2;
+  color: var(--primary);
+  background-color: var(--secondary);
 }
 .btn2 {
   height: 40px;
@@ -145,13 +177,95 @@ hr {
   margin-top: 50px;
 }
 .div2 {
-  margin-top: -130px;
+  margin-top: -20px;
 }
 .form-control {
   border-radius: 0%;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
+   /* Light and Dark Theme Toggle-Button */
+   :root {
+    --page:#ffffff;
+    --mast: #ececec;
+    --primary: black;
+    --secondary: #00D7E2;
+    --another: rgba(0, 194, 214, 0.5);
+    --border: white;
+    --text: black;
+    --text1: black;
+    --container:#ffffff;
+    --button:#334553;
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+  }
+  .dark-theme {
+    --page: #182531;
+    --mast: #334553;
+    --primary: #00D7E2;
+    --secondary: #1B2A35;
+    --another: #50677B;
+    --text: white;
+    --border: #00D7E2;
+  }
+  .toggle-switch {
+    right: 10px;
+    align-self: flex-end;
+    float: right;
+    height: 35px;
+    margin-top: 20px;
+    position: relative;
+    width: 75px;
+    bottom: 1520px;
+  }
+  
+  .lab{
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    background-color: var(--dark);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .dar {
+    position: absolute;
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: 0.3s;
+  }
+  
+  .dar:checked ~ .slider {
+    background-color: var(--light);
+  }
+  
+  .slider::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: inset 8px -8px 0px 0px var(--light);
+    background-color: var(--dark);
+    transition: 0.3s;
+  }
+  
+  .dar:checked ~ .slider::before {
+    transform: translateX(40px);
+    background-color: var(--dark);
+    box-shadow: none;
+  }
 @media (max-width: 700px) {
   .bi-pencil-square {
     font-size: 40px;
@@ -172,7 +286,12 @@ hr {
     top: 110px;
   }
 }
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 991px) {
+  #inner{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+  }
   .btn1 {
     position: relative;
     left: 50px;
@@ -181,6 +300,17 @@ hr {
     position: relative;
     left: 50px;
   }
+  .text-start{
+    width: 100%;
+    padding: 10px!important;
+  }
+  .navbar-nav{
+    align-items: center;
+    justify-content:space-evenly ;
+    display: flex;
+    flex-direction: row;
+  }
+
 }
 @media screen and (max-width: 768px) {
   .btn1 {
@@ -205,6 +335,18 @@ hr {
   }
   #banner {
     width: 100%;
+  }
+  .text-start{
+    font-size: 13px;
+  }
+  .company2{
+    width: 80%;
+  }
+  .pt-3{
+    font-size: 11px;
+  }
+  .p-4{
+    padding: 20px !important;
   }
 }
 #company-container {
@@ -244,14 +386,30 @@ hr {
     width: 100%;
   }
 }
+@media screen and (max-width: 375px) {
+  .navbar{
+    width: 100% !important;
+  }
+  #inner{
+    width: 100% !important;
+  }
+  .navbar-nav{
+    align-items: center;
+    justify-content: center;
+    width: 90% !important;
+  }
+  .nav-link{
+    text-align: center !important;
+    width: 90px !important;
+    font-size: 11px;
+  }
+  #navbarDropdown{
+    width: 90%;
+  }
+}
 .company_logo{
   width: 11rem;
   height: 11rem;
   border-radius: 120px;
   object-fit: cover;
-}
-
-.fa-pen-to-square{
-  font-size: 40px;
-  background-color: #00c2d6;
 }

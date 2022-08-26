@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="container-fluid"> 
 			<a class="navbar-brand me-1" href="#"></a>
-			<img src="image/flogo.png" alt="Job Portal Logo" width="100" height="70"></a>
+			<img src="image/flogo.png" alt="Job Portal Logo" width="100" height="70" id="logo"></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -72,11 +72,11 @@
 					</button>
 				</div>
 				<div class="text-center">
-					<i class="bi bi-caret-right-fill fa-2x "></i>
-					<button class="btn1 mb-4" id="submit" > 
+					<i class="bi bi-caret-right-fill fa-2x mt-4"></i>
+					<button class="mt-4 btn1 mb-4" id="submits" > 
 						<div class="d-flex">
-							<i class="bi bi-send-fill fa-2x me-1"></i>
-							<h6 class="mt-2 ps-2">SENT</h6>	
+						<i class="me-1"><img src="image/sent.png" alt="" class="mes1" id="mes1"></i>
+							<h6 class="mt-2 ps-1 text-light">SENT</h6>	
 						</div>
 					</button>
 				</div>
@@ -114,7 +114,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container-md bg-white shadow">
+		<div class="container-md bg-white shadow con2">
 			<form class="d-flex mt-4 mb-2 div1">      
 				<input  class="form-control icon" type="search" placeholder="Search for a message" aria-label="Search">
 				<button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
@@ -212,6 +212,12 @@
 			</div> 
 		</div>
 	</div>
+	<div class = 'toggle-switch'>
+		<label class="lab">
+		  <input class="dar" type = 'checkbox' onclick="toggleImage()">
+		  <span id="icon2" class = 'slider'></span>
+		</label>
+	</div>
 	
 	<script>
 		function clickMe() {
@@ -237,6 +243,28 @@
 			checkbox.classList.toggle("hide");
 			checkbox.classList.toggle("show");
 			}
+
+			var icon2 = document.getElementById("icon2");
+
+icon2.onclick = function() {
+	document.body.classList.toggle("dark-theme")
+}
+function toggleImage() {
+		imgsrc= document.getElementById("logo").src;
+        if (imgsrc.indexOf("image/flogo.png") !=-1){
+          document.getElementById("logo").src = "image/Techployment (7) 1.png";
+        }
+        else{
+          document.getElementById("logo").src = "image/flogo.png";
+        }
+		imgsrc= document.getElementById("mes1").src;
+        if (imgsrc.indexOf("image/sent.png") !=-1){
+          document.getElementById("mes1").src = "image/vector124.png";
+        }
+        else{
+          document.getElementById("mes1").src = "image/sent.png";
+        }
+    }
 	</script>
 	<script src="js/pfp.js"></script>
 </body>

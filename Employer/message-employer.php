@@ -51,11 +51,11 @@
                 <li><a id="name" class="dropdown-item text-start name" href="company-profile.php"></a></li>
 						<li><hr class="dropdown-divider bg-black"></li>
 						<li><a class="dropdown-item text-dark" href="manage-account-profile.php"> Edit Profile</a></li>
-						<li><a class="dropdown-item text-dark" href="change-pass.php"> Change Password</a></li>
+						<li><a class="dropdown-item text-dark" href="change-password.php"> Change Password</a></li>
 						<li><a class="dropdown-item text-dark" href="manage-applicant-resume.php"> Manage Resume</a></li>
 						<li><a class="dropdown-item text-dark" href="jobmanage.php"> Job Management</a></li>
 						<li><a class="dropdown-item text-dark" href="job-applicant.php">Job Applicants</a></li>
-						<li><a class="dropdown-item logout text-dark" href="login.php"> Log Out</a></li>
+						<li><a class="dropdown-item logout text-dark" href="../logout.php">Log Out</a></li>
 					</ul>
 				</ul>
             </div>

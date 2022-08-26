@@ -107,15 +107,15 @@ $(document).ready(function () {
             dataType: "JSON",
             success: function (data) {
                 // Display the info reponse from the server into the more details modal
-                $('#e-companyaddress').text(data.companyAddress);
-                $('#e-companyceoname').text(data.companyCEO);
-                $('#e-companysize').text(data.companySize);
-                $('#e-companyrevenue').text(data.companyRevenue)
-                $('#e-industry').text(data.industry);
-                $('#e-companynumber').text(data.contactNumber);
-                $('#e-companyemail').text(data.companyEmail);
-                $('#e-companydescription').html(data.companyDescription)
-                $('#e-datecreated').text(data.dateCreated);
+                $('#v-companyaddress').text(data.companyAddress);
+                $('#v-companyceoname').text(data.companyCEO);
+                $('#v-companysize').text(data.companySize);
+                $('#v-companyrevenue').text(data.companyRevenue)
+                $('#v-industry').text(data.industry);
+                $('#v-companynumber').text(data.contactNumber);
+                $('#v-companyemail').text(data.companyEmail);
+                $('#v-companydescription').html(data.companyDescription)
+                $('#v-datecreated').text(data.dateCreated);
             }
         })
     })
@@ -177,6 +177,8 @@ $(document).ready(function () {
     })
 
     //--------------------------------Start of Edit Details validation --------------------------------------------------------
+    
+    // NOTE: NOT WORKING...
 
     // Trigger this when user started to type in fullname input and validate it
     $('#e-employerfullname').on('keyup', function () {
@@ -325,11 +327,6 @@ $(document).ready(function () {
 
 
     //--------------------------------End of Edit Details validation --------------------------------------------------------
-
-
-
-
-
 
     // Trigger this when user click the save details in edit modal
     $('#save-edit').click(function () {

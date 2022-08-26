@@ -17,10 +17,10 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+  <nav class="navbar navbar-expand-lg navbar-light shadow">
     <div class="container-fluid">
       <a class="navbar-brand me-1" href="#"></a>
-      <img src="image/flogo.png" alt="Job Portal Logo" width="100" height="70"></a>
+      <img src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70"  id="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -32,23 +32,23 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item me-0">
-            <a class="nav-link text-dark message active" aria-current="page" href="message-employer.php">MESSAGE</a>
+            <a class="nav-link text-light message active" aria-current="page" href="message-employer.php">MESSAGE</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark about active text-center" href="searchjob.php">JOB BOARD</a>
+            <a class="nav-link text-light about active text-center" href="postajob.php">POST A JOB</a>
           </li>
           <li class="nav-item account dropdown active">
-            <a class="nav-link text-darkdropdown-toggle account active" href="#" id="navbarDropdown"
+            <a class="nav-link text-light dropdown-toggle account active" href="#" id="navbarDropdown"
               role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <img id="pfp" class="image" style="border-radius: 100px; object-fit: cover;" src="" alt="Profile" width="30" height="30"> ACCOUNT</a>
             <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
               </li>
-              <li><a class="dropdown-item text-light menudrop" href="company-profile.php">MY ACCOUNT</a></li>
-                        <li><hr class="dropdown-divider bg-white"></li>
-                        <li><a class="dropdown-item text-light" href="jobmanage.php">JOB MANAGEMENT</a></li>
-                        <li><a class="dropdown-item text-light" href="manage-applicant-resume.php">MANAGE RESUME</a></li>
-                        <li><a class="dropdown-item text-light" href="manage-account-profile.php">MANAGE ACCOUNT PROFILE</a></li>
-                        <li><a class="dropdown-item logout text-light" href="../logout.php">LOGOUT</a></li>
+              <li><a class="dropdown-item text-start" href="company-profile.php">MY ACCOUNT</a></li>
+                        <li><hr class="dropdown-divider bg-black"></li>
+                        <li><a class="dropdown-item text-start" href="jobmanage.php">JOB MANAGEMENT</a></li>
+                        <li><a class="dropdown-item text-start" href="manage-applicant-resume.php">MANAGE RESUME</a></li>
+                        <li><a class="dropdown-item text-start" href="manage-account-profile.php">EDIT PROFILE</a></li>
+                        <li><a class="dropdown-item logout text-start" href="../logout.php">LOGOUT</a></li>
             </ul>
         </ul>
       </div>
@@ -57,7 +57,7 @@
   <div class="container contain"><br>
       <div class="container block align-items-center text-center">
         <h4 class="p-3 shadow-sm fw-bold head">Change Your Password</h4>
-        <div class="bg-white mt-3 cons">
+        <div class="mt-3 cons">
           <div class=" space">
             <span class="icon" onclick="showHide()">
               <i class='bi bi-eye-slash icon' aria-hidden="true"></i>
@@ -102,6 +102,55 @@
         </div>
     </div>
 </div>
+<div class = 'toggle-switch'>
+    <label class="lab">
+      <input class="dar" type = 'checkbox' onclick="toggleImage()">
+      <span id="icon2" class = 'slider'></span>
+    </label>
+</div>
+<script>
+    function showHide() {
+    let icon = document.querySelector(".icon"),
+        input = document.getElementById("currentpassword");
+    if (input.type === "password") {
+        input.type = "text";
+    } else {
+        input.type = "password";
+    }
+    icon.classList.toggle('is-active');
+    } function showHide1() {
+    let icon = document.querySelector(".icon1"),
+        input = document.getElementById("newpassword");
+    if (input.type === "password") {
+    } else {
+        input.type = "password";
+    }
+    icon.classList.toggle('is-active');
+    } function showHide2() {
+    let icon = document.querySelector(".icon2"),
+        input = document.getElementById("confirmpassword");
+    if (input.type === "password") {
+        input.type = "text";
+    } else {
+        input.type = "password";
+    }
+    icon.classList.toggle('is-active');
+    }
+    var icon2 = document.getElementById("icon2");
+
+        icon2.onclick = function() {
+            document.body.classList.toggle("dark-theme")
+        }
+        function toggleImage() {
+        imgsrc= document.getElementById("logo").src;
+        if (imgsrc.indexOf("image/light-logo.png") !=-1){
+          document.getElementById("logo").src = "image/Techployment (7) 1.png";
+        }
+        else{
+          document.getElementById("logo").src = "image/light-logo.png";
+        }
+    }
+</script>
       <script src="js/change-password.js"></script>
       <script src="js/pfp.js"></script>
 </body>

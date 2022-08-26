@@ -35,11 +35,14 @@
         </button>
         <div class="collapse navbar-collapse" id="toggleMobileMenu"> 
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item me-0">
+            <li class="nav-item fw-bold">
             <a class="nav-link text-dark message active fw-bold" aria-current="page" href="message-jobseekers.php">MESSAGE</a>
             </li>
             <li class="nav-item fw-bold">
             <a class="nav-link text-dark about active" href="jobcategories.php">JOB BOARD</a>
+            </li>
+            <li class="nav-item fw-bold">
+            <a class="nav-link text-dark about text-center" href="searchjob.php" id="color">AVAILABLE JOBS</a></li>
             </li>
             <li class="nav-item account dropdown active"><a class="nav-link text-dark fw-bold dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
               <ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">

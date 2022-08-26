@@ -16,7 +16,10 @@
     <!-- Toast CDN for design of toastr -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="css/jobcategories-management.css">
-    <link rel="stylesheet" href="../css/preloader.css">
+    
+    <!-- Non-existing file (?) -->
+    <!-- <link rel="stylesheet" href="../css/preloader.css"> -->
+    
     <title>Job Categories Management | Admin</title>
 </head>
 
@@ -277,7 +280,7 @@
     </script>
     <script src="js/category-management.js"></script>
     <script src="js/navbar.js"></script>
-    <script src="../js/preloader.js"></script>
+    <!-- <script src="../js/preloader.js"></script> -->
 </body>
 
 </html>

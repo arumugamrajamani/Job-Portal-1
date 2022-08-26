@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE php>
 <php lang="en">
 

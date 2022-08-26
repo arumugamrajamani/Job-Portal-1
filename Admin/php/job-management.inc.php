@@ -177,4 +177,15 @@ else if (isset($_POST['edit'])) {
     $company = $_POST['company'];
     $jobcategory = $_POST['jobcategory'];
     mysqli_query($conn, "UPDATE jobpost SET company_name = '$company', job_category = '$jobcategory' WHERE post_iud = '$postId'");
+
+    // Has errors to be fixed soon
+    $response = array(
+        'company' => $company,
+        'jobcategory' => $jobCategory,
+        'postId' => $postId
+    );
+
+    echo json_encode($response);
 }
+
+?>

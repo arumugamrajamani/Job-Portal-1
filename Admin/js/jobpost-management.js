@@ -34,6 +34,9 @@ $(document).ready(function () {
             $('#body-h').html(response.tableData);
             $('#pagination').html(response.pagination);
             $('#entries').html(response.entries);
+        },
+        error: function(response) {
+            console.log(response);
         }
         });
     }
@@ -101,10 +104,11 @@ $(document).ready(function () {
     
     $('#body-h').on('click','.edit-Btn', function () {
         let postId = $(this).attr('data-id');
-        $('#save').val(postId);
+        $('#save-edit').val(postId);
     });
-    $('#save').click(function () {
-      postId = $('#save').val();
+
+    $('#save-edit').click(function () {
+      postId = $(this).val();
       company = $('#company').val();
       jobcategory = $('#jobcategory').val();
       $.ajax({
@@ -116,12 +120,13 @@ $(document).ready(function () {
               jobcategory: jobcategory,
               postId: postId
           },
-          dataType: 'JSON',
+          dataType: 'json',
           success: function (data) {
+            console.log(data);
             if(data.status == 'success') {
               $('#modal-editdetails').modal('hide');
                 toastr.success('', 'Updated Successfully');
-                load_data();
+                load_data(GetSearchValue(), getCurrentPage());
             } else {
                 // if there is an error in fullname, display error message
                 if(data.companyRR.status == 'error') {

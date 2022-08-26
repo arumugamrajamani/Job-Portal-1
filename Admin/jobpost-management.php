@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/jobpost-management.css">
-    <link rel="stylesheet" href="../css/preloader.css">
+    <!-- <link rel="stylesheet" href="../css/preloader.css"> -->
     <title>Job Post Management | Admin</title>
 </head>
 
@@ -168,7 +168,7 @@
                         </form>
                     </div><br>
                     <div class="modal-footer">
-                        <button id="save" type="button" class="btn btn-success save" >Save Details</button>
+                        <button id="save-edit" type="button" class="btn btn-success" >Save Details</button>
                         <button type="button" class="close btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>

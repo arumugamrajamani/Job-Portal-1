@@ -44,7 +44,7 @@
                         <li><hr class="dropdown-divider bg-white"></li>
                         <li><a class="dropdown-item text-light" href="jobmanage.php">JOB MANAGEMENT</a></li>
                         <li><a class="dropdown-item text-light" href="manage-applicant-resume.php">MANAGE RESUME</a></li>
-                        <li><a class="dropdown-item text-light" href="manage-account-profile.php">MANAGE ACCOUNT PROFILE</a></li>
+                        <li><a class="dropdown-item text-light" href="manage-account-profile.php">EDIT PROFILE</a></li>
                         <li><a class="dropdown-item text-light" href="change-password.php">CHANGE PASSWORD</a></li>
                         <li><a class="dropdown-item logout text-light" href="../logout.php">LOGOUT</a></li>
                     </ul>

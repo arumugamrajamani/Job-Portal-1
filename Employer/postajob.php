@@ -77,9 +77,9 @@
                         <label class=" text-uppercase fw-bold " for="Type">Type of employment</label>
                         <select class="form-select" name="employment" id="floatingSelect" aria-label="Floating label select example">
                             <option class="form-floating" aria-posinset="Any" selected>Any</option>
-                            <option value="Full-Time">Full Time</option>
-                            <option value="Part-Time">Partime</option>
-                            <option value="Freelance">Freelance</option>
+                            <option value="Full-Time">Full-Time</option>
+                            <option value="Part-Time">Part-Time</option>
+                            <option value="Freelancer">Freelancer</option>
                         </select>
                     </div>
                     <div class="col-md-6 mt-3">

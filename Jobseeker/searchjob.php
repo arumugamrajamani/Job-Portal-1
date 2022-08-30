@@ -21,49 +21,47 @@
 </head>
 
 <body>
-<div class="color-overlay">
-    <div class="container-fluid">
-        <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light fixed-top mx-0 shadow " >
-            <a href="#" class="navbar-brand ms-3">
-            <img src="image/light-logo.png" alt="Job Portal Logo" width="120" height="95"></a>
-<form class="search-first d-flex">
-    <input class="form-control1 icon1" type="search" placeholder="Search for a job title" aria-label="Search">
-    <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
-</form>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="toggleMobileMenu"> 
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item fw-bold">
-            <a class="nav-link text-dark message active fw-bold" aria-current="page" href="message-jobseekers.php">MESSAGE</a>
-            </li>
-            <li class="nav-item fw-bold">
-            <a class="nav-link text-dark about active" href="jobcategories.php">JOB BOARD</a>
-            </li>
-            <li class="nav-item fw-bold">
-            <a class="nav-link text-dark about text-center" href="searchjob.php" id="color">AVAILABLE JOBS</a></li>
-            </li>
-            <li class="nav-item account dropdown active"><a class="nav-link text-dark fw-bold dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
-              <ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">
-                <li><a id="name" class="dropdown-item" href="applicant-profile.php"></a></li>
-            <li>
-                <hr class="dropdown-divider bg-white">
-            </li>
-            <li><a class="dropdown-item text-start" href="manage-account-1.php"><img src="image/edit-profile-black.png" alt=""> Edit Profile</a></li>
-            <li><a class="dropdown-item text-start" href="manage-account-2.php"><img src="image/change-pass-black.png" alt=""> Change Password</a></li>
-            <li><a class="dropdown-item text-start" href="bookmark-job.php"><img src="image/job-management.png" alt=""> Job Management</a></li>
-            <li><a class="dropdown-item text-start" href="jobapplication.php"><img src="image/job-applicant-black.png" alt=""> Job Applications</a></li>
-            <li><a class="dropdown-item text-start" href="resume.php"><img src="image/manage resume.png" alt=""> Manage Resume</a></li>
-            <li><a class="dropdown-item logout text-start" href="../logout.php"><img src="image/logout-black.png" alt=""> LOGOUT</a></li>
+    <div class="color-overlay">
+        <div class="container-fluid">
+            <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light fixed-top mx-0 shadow " >
+                <a href="#" class="navbar-brand ms-3">
+                <img src="image/light-logo.png" alt="Job Portal Logo" width="120" height="95"></a>
+    <form class="search-first d-flex">
+        <input class="form-control1 icon1" type="search" placeholder="Search for a job title" aria-label="Search">
+        <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
+    </form>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="toggleMobileMenu"> 
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item fw-bold">
+                <a class="nav-link text-dark message active fw-bold" aria-current="page" href="message-jobseekers.php">MESSAGE</a>
+                </li>
+                <li class="nav-item fw-bold">
+                <a class="nav-link text-dark about active" href="jobcategories.php">JOB BOARD</a>
+                </li>
+                <li class="nav-item fw-bold">
+                <a class="nav-link text-dark about text-center" href="searchjob.php" id="color">AVAILABLE JOBS</a></li>
+                </li>
+                <li class="nav-item account dropdown active"><a class="nav-link text-dark fw-bold dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
+                <ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">
+                    <li><a id="name" class="dropdown-item" href="applicant-profile.php"></a></li>
+                <li>
+                    <hr class="dropdown-divider bg-white">
+                </li>
+                <li><a class="dropdown-item text-start" href="manage-account-1.php"><img src="image/edit-profile-black.png" alt=""> Edit Profile</a></li>
+                <li><a class="dropdown-item text-start" href="manage-account-2.php"><img src="image/change-pass-black.png" alt=""> Change Password</a></li>
+                <li><a class="dropdown-item text-start" href="bookmark-job.php"><img src="image/job-management.png" alt=""> Job Management</a></li>
+                <li><a class="dropdown-item text-start" href="jobapplication.php"><img src="image/job-applicant-black.png" alt=""> Job Applications</a></li>
+                <li><a class="dropdown-item text-start" href="resume.php"><img src="image/manage resume.png" alt=""> Manage Resume</a></li>
+                <li><a class="dropdown-item logout text-start" href="../logout.php"><img src="image/logout-black.png" alt=""> LOGOUT</a></li>
+                </ul>
             </ul>
-        </ul>
-            </div>
-        </nav>         
+                </div>
+            </nav>         
+        </div>
     </div>
-</div>
-
-
 
     <button class="openbtn" title="Open Sidebar" onclick="openNav()"><i id="list-i" class="bi bi-list fa-2x"></i></button>
     <div class="sidebar shadow-lg" id="mySidebar" class="sidebar">
@@ -80,19 +78,20 @@
                 </select>
                 <ul class="list-group mt-2 ps-4" >
                     <li class="list-group-item">
-                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                    FULL-TIME    
+                    
+                    <input class="form-check-input me-1 checkbox_emstatus" type="checkbox" id='cb_fullTime' value="Full-Time" aria-label="..." checked>
+                    <lable for="cb_fullTime">FULL-TIME</lable>
                     </li>
                     <li class="list-group-item" >
-                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                    PART-TIME
+                    <input class="form-check-input me-1 checkbox_emstatus" type="checkbox" id='cb_partTime' value="Part-Time" aria-label="..." checked>
+                    <label for="cb_partTime">PART-TIME</label>  
                     </li>
                     <li class="list-group-item" >
-                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                    FREELANCER
+                    <input class="form-check-input me-1 checkbox_emstatus" type="checkbox" id='cb_freeLancer' value="Freelancer" aria-label="..." checked>
+                    <label for="cb_freeLancer">FREELANCER</label>
                     </li>
                 </ul>
-                    <select class="form-select mt-2 ms-2" aria-label="Default select example">
+                    <!-- <select class="form-select mt-2 ms-2" aria-label="Default select example">
                         <option selected>Choose Location</option>
                     
                         <option disabled>Region 1: The Ilocos Region</option>
@@ -195,24 +194,24 @@
                         <option value="72">Maguindanao</option>
                         <option value="73">Sulu</option>
                         <option value="74">Tawi-Tawi</option>
-                    </select><br>
+                    </select><br> -->
                     <h5 class="fw-bold text-center mt-3">SALARY RANGES</h5>
                     <ul class="list-group mt-4 ps-4" >
                         <li class="list-group-item fw-bold " >
-                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                        ₱5,000 - 10,000   
+                            <input class="form-check-input me-1 checkbox_salary" type="checkbox" id="cb_wage5k" value='5000' aria-label="..." checked>
+                            <label for="cb_wage5k">₱5,000 - 10,000</label>
                         </li>
                         <li class="list-group-item fw-bold" >
-                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                        ₱10,000 - 15,000
+                            <input class="form-check-input me-1 checkbox_salary" type="checkbox" id="cb_wage10k" value='10000' aria-label="..." checked>
+                            <label for="cb_wage10k">₱10,000 - 15,000</label>
                         </li>
                         <li class="list-group-item fw-bold" >
-                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                        ₱15,000 - 20,000
+                            <input class="form-check-input me-1 checkbox_salary" type="checkbox" id="cb_wage15k" value='15000' aria-label="..." checked>
+                            <label for="cb_wage15k">₱15,000 - 20,000</label>
                         </li>
                         <li class="list-group-item fw-bold" >
-                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                            ₱20,000+
+                            <input class="form-check-input me-1 checkbox_salary" type="checkbox" id="cb_wage20k" value='20000' aria-label="..." checked>
+                            <label for="cb_wage20k">₱20,000+</label> 
                         </li>
                     </ul><br>
                     <span class="input-icons"><i class="bi bi-search ps-2 pt-1 ms-3" ></i>
@@ -226,94 +225,47 @@
                 </div>
             </div>
         </div>
-
-            
             <div class="container1 div2">
                 <h3 class="fw-bold">SEARCH RESULTS</h3>
-                <div id="body-h"></div>
-                <!-- <div class="bg-white shadow-sm d-flex div3"><br>
-                    <img src="image/comlogo.png" alt="company logo" class="ms-3 mt-4 logo">
-                    <div class="block mt-2">
-                        <div class="d-flex">
-                            <h5 class="mt-3 fw-bold ms-4 job">Software Engineer Team Lead - 3PEF And Economics</h5>
-                            <button class="mt-2 p-2 px-3 text-dark btn1" data-bs-toggle="modal" data-bs-target="#qr-code" type="button">Company QR Code</button>
-                            <button class="mt-2 p-2 px-3 text-dark btn1" id="btn1" onclick="location.href='insidejob.php'" type="button">View Details</button>
-                        </div>
-                        <h6 class="ms-4 fw-bold">FactSet Philippines, Inc.</h6>
-                        <div class="ms-4">
-                            <i class="bi bi-geo-alt-fill fw-bold"> Taguig City, NCR</i>
-                            <i class="bi bi-briefcase-fill ms-3 fw-bold"> Supervisor / Senior Associate (5 yrs and up experience)</i>
-                            <i class="bi bi-currency-dollar ms-3 fw-bold"> Salary Undisclosed</i>
-                        </div><br>
-                        <p class="ms-4">- A Software  Engineering Team Lead for FactSet’s Content Engineering Team reports to the Engineeering Manager <br>and coordinates with anshore...</p>
-                    </div>
+                <div id="body-h">
+                    <!-- Contents of Database will be displayed here -->
                 </div>
-                <div class="bg-white shadow-sm d-flex mt-4 div3"><br>
-                    <img src="image/smlogo.png" alt="company logo" class="ms-3 mt-4 logo">
-                    <div class="block mt-2">
-                        <div class="d-flex">
-                            <h5 class="mt-3 fw-bold ms-4 job">Senior Full-Stack Web Developer (Head Office, Pasay City)</h5>
-                            <button class="mt-2 p-2 px-3 text-dark btn2" data-bs-toggle="modal" data-bs-target="#qr-code" type="button">Company QR Code</button>
-                            <button class="mt-2 p-2 px-3 text-dark btn2" onclick="location.href='insidejob.php'" type="button">View Details</button>
-                        </div>
-                        <h6 class="ms-4 fw-bold">SM Prime Holdings, Inc.</h6>
-                        <div class="ms-4">
-                            <i class="bi bi-geo-alt-fill fw-bold"> Pasay City, NCR</i>
-                            <i class="bi bi-briefcase-fill ms-3 fw-bold"> Senior Manager / Manager</i>
-                            <i class="bi bi-currency-dollar ms-3 fw-bold"> Salary Undisclosed</i>
-                        </div><br>
-                        <p class="ms-4">- A Senior Web Software Engineer who transforms passion to efficient and robust web technology platform. Reports to: Product Development Lead...</p>
-                    </div>
-                </div>
-                <div class="bg-white shadow-sm d-flex mt-4 div3"><br>
-                    <img src="image/smlogo.png" alt="company logo" class="ms-3 mt-4 logo">
-                    <div class="block mt-2">
-                        <div class="d-flex">
-                            <h5 class="mt-3 fw-bold ms-4 job">Associate Software Developer For Digital Commerce <br> (Head Office, Pasay City)</h5>
-                            <button class="mt-2 p-2 px-3 text-dark btn3" type="button" data-bs-toggle="modal" data-bs-target="#qr-code">Company QR Code</button>
-                            <button class="mt-2 p-2 px-3 text-dark btn3" type="button" onclick="location.href='insidejob.php'">View Details</button>
-                        </div>
-                        <h6 class="ms-4 fw-bold">FactSet Philippines, Inc.</h6>
-                        <div class="ms-4">
-                            <i class="bi bi-geo-alt-fill fw-bold"> Taguig City, NCR</i>
-                            <i class="bi bi-briefcase-fill ms-3 fw-bold"> Junior Associate (1-4 yrs experience)</i>
-                            <i class="bi bi-currency-dollar ms-3 fw-bold"> Salary Undisclosed</i>
-                        </div><br>
-                        <p class="ms-4">- A Software Developer who transforms passion into a beautiful and robust web platform. Software Developement develops web apps for SM...</p>
-                    </div> -->
-                <!-- </div> -->
-                <!-- <nav aria-label="Page navigation example">
+
+                <nav aria-label="Page navigation example">
                     <div class="entries" id="entries">
                         </span>Show 1 to 3 of 3 entries</span>
                     </div>
                     <ul class="pagination" id="pagination">
-                    <li class="page-item num1"><a class="page-link page1" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Last</a></li>
+                        <li class="page-item num1"><a class="page-link page1" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Last</a></li>
                     </ul>
-                </nav> -->
-            </div>
-    </div>
-</div>
-<div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title ms-5" id="exampleModalLabel">View Details?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="delete modal-body">
-                    <button type="button" id="del-yes" class="yes-no btn btn-success">Yes</button>
-                    <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
-                </div>
+                </nav>
             </div>
         </div>
     </div>
+
+<div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title ms-5" id="exampleModalLabel">View Details?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="delete modal-body">
+                <button type="button" id="del-yes" class="yes-no btn btn-success">Yes</button>
+                <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="js/searchjob.js"></script>    
+
 <div class="modal fade" id="qr-code" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
     <div class="modal-dialog">
@@ -332,5 +284,5 @@
 </div>
 
 </body>
-<script src="js/pfp.js"></script>
+    <script src="js/pfp.js"></script>
 </html>

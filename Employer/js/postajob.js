@@ -106,7 +106,7 @@ $(document).ready(function() {
         if(fullname.length == 0) {
             $('#salarywage').removeClass().addClass('form-control border-danger').popover('dispose');
             $('#salarywage').popover({ placement: 'right', content: 'Amount is required.'}).popover('show');
-        } else if(!isCurrency(fullname)) {
+        } else if(isNaN(fullname)) {
             $('#salarywage').removeClass().addClass('form-control border-danger').popover('dispose');
             $('#salarywage').popover({ placement: 'right', content: 'Only characters are allowed.' }).popover('show');
         } else {

@@ -24,6 +24,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Manage Applicant Resume</title>
 </head>
+
+<!-- Navigation bar -->
 <body>
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container-fluid"> 
@@ -61,6 +63,7 @@
         </div>
     </nav>
     <br><br>
+    <!-- Manage Resume Table -->
     <div class="container-responsive p-md-5 mt-4" id="container">
         <form id="main-form">
             <div class=" col-auto text-center">
@@ -69,7 +72,7 @@
                        
                         <h2 class="text-start"><b>MANAGE APPLICATION'S RESUME</b>
                             <form class="d-flex mt-4 form2">
-                                <input class="form-control icon1" type="search" placeholder="Search for a message" aria-label="Search">
+                                <input class="form-control icon1" id="search" placeholder="Search for a message" aria-label="Search">
                                 <button class="btn text-dark fw-bold search1" type="submit"><i class="bi bi-search"></i></button>
                             </form>
                         </h2>
@@ -109,19 +112,21 @@
                 </section>
             </div>
             <nav aria-label="Page navigation example">
-                <div class="entries">
-                    </span>Show 1 to 3 of 3 entries</span>
+                <div class="entries" id= "entries">
+                    <!-- </span>Show 1 to 3 of 3 entries</span>  -->
                 </div>
-                <ul class="pagination">
-                    <li class="page-item"><a class="page-link next text-dark" href="#">Previous</a></li>
+                <ul class="pagination" id = 'pagination'>
+                     <!-- <li class="page-item"><a class="page-link next text-dark" href="#">Previous</a></li>
                     <li class="page-item"><a class="page-link num text-dark" href="#">1</a></li>
                     <li class="page-item"><a class="page-link num text-dark" href="#">2</a></li>
                     <li class="page-item"><a class="page-link num text-dark" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link next text-dark" href="#">Next</a></li>
+                    <li class="page-item"><a class="page-link next text-dark" href="#">Next</a></li>  -->
                 </ul>
             </nav>   
         </form>
     </div>
+
+    <!-- reject button -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -136,6 +141,8 @@
             </div>
         </div>
     </div>
+
+    <!-- edit button -->
     <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -157,6 +164,7 @@
             </div>
         </div>
     </div>
+    <!-- bookmark button -->
     <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
@@ -171,6 +179,7 @@
             </div>
         </div>
     </div>
+    <!-- remove button -->
     <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModal3Label" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">

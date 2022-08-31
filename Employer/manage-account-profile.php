@@ -143,6 +143,9 @@
                 <label for="qr_Code" class="col-sm-2 col-form-label" id="qrcode">QR Code</label>
                 <div class="col-sm-9 ms-5 c1">
                     <input type="file" class="form-control" id="qrCode">
+                    <div class="div1">
+                    <img class="qr" src="" id="qr_name" alt="logo" width="200px" height="100px">
+                    </div>
                 </div>
             </div>
             <div class="row mb-3 ms-4">
@@ -161,6 +164,6 @@
         <br><br><br><br><br>
 
         <script src="js/manage-account-profile.js"></script>
-        <script src="js/pfp.js"></script>
+        <script src="js/pfp.js"></script>   
 </body>
 </html>

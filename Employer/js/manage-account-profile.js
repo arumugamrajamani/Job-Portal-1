@@ -222,7 +222,7 @@ $(document).ready(function () {
         form_data.append('contact_number', contact_number);
         form_data.append('permit_new_name', permit_new_name);
         form_data.append('company_logo_new', company_logo_new);
-        form_data.append('qrCode', qr_code);
+        form_data.append('qr_code', qr_code);
         form_data.append('saveNow', true);
         $.ajax({
             url: 'php/manage-account-profile.inc.php',
@@ -255,11 +255,17 @@ $(document).ready(function () {
                     } else {
                         $('companyLogo').popover('dispose');
                     }
+                    if(data.qrRR.status == 'error') {
+                        $('#qrCode').popover({ placement: 'right', content: data.qrRR.message}).popover('show');
+                    } else {
+                        $('qrCode').popover('dispose');
+                    }
                     //toastr.error('', data.message);
                 }
             }
         })
     })
+
 
 
 

@@ -76,6 +76,7 @@ function getCompanyLogo()
 
 
 
+
 // When the page is loaded the js will call for this then this will get the admin's data from the DB
 if (isset($_POST['fetchData'])) {
     $employerId = $_SESSION['user_id'];
@@ -228,8 +229,9 @@ if (isset($_POST['fetchData'])) {
     $allowed_permit_new_name_extension = array("pdf");
     // Create array for checking of valid extension for logo
     $allowed_logo_extension = array("png", "jpg", "jpeg");
+    $allowed_qr_code_newextension = array("png", "jpg", "jpeg");
 		
-		if (!isset($_FILES["company_logo_new"])) {
+	if (!isset($_FILES["company_logo_new"])) {
         $company_logo_newrr = array('status' => 'error', 'message' => 'Company Logo is required.');
     } elseif (!in_array(pathinfo($_FILES["company_logo_new"]["name"], PATHINFO_EXTENSION), $allowed_logo_extension)) {
         $company_logo_newrr = array('status' => 'error', 'message' => 'Only png, jpg, jpeg are allowed.');
@@ -251,15 +253,15 @@ if (isset($_POST['fetchData'])) {
         $permit_new_nameExtension = pathinfo($_FILES["permit_new_name"]["name"], PATHINFO_EXTENSION);
     }
     
-    if (!isset($_FILES["qrCode"])) {
-        $qrCoderr = array('status' => 'error', 'message' => 'Company Logo is required.');
-    } elseif (!in_array(pathinfo($_FILES["qrCode"]["name"], PATHINFO_EXTENSION), $allowed_logo_extension)) {
-        $qrCoderr = array('status' => 'error', 'message' => 'Only png, jpg, jpeg are allowed.');
-    } elseif ($_FILES["qrCode"]["size"] > 15000000) {
-        $qrCoderr = array('status' => 'error', 'message' => 'Must be less than 15mb.');
+    if (!isset($_FILES["qr_code_new"])) {
+        $qr_code_newrr = array('status' => 'error', 'message' => 'QR Code is required.');
+    } elseif (!in_array(pathinfo($_FILES["qr_code_new"]["name"], PATHINFO_EXTENSION), $allowed_qr_code_newextension)) {
+        $qr_code_newrr = array('status' => 'error', 'message' => 'Only png, jpg, jpeg are allowed.');
+    } elseif ($_FILES["qr_code_new"]["size"] > 15000000) {
+        $qr_code_newrr = array('status' => 'error', 'message' => 'Must be less than 15mb.');
     } else {
-        $qrCoderr = array('status' => 'success');
-        $company_logo_newExtension = pathinfo($_FILES["qrCode"]["name"], PATHINFO_EXTENSION);
+        $qr_code_newrr = array('status' => 'success');
+        $qr_code_newExtension = pathinfo($_FILES["qr_code_new"]["name"], PATHINFO_EXTENSION);
     }
 
 
@@ -278,17 +280,17 @@ if (isset($_POST['fetchData'])) {
             $company_description = mysqli_real_escape_string($conn, $company_description);
             $contact_number = mysqli_real_escape_string($conn, $contact_number);
             $company_logo_new = generateRandomString() . '.' . $company_logo_newExtension;
-            $qr_code = generateRandomString() . '.' . $company_logo_newExtension;
+            $qr_code_new = generateRandomString() . '.' . $qr_code_newExtension;
 			$permit_new_name = generateRandomString() . '.' . $permit_new_nameExtension;
             $permit_original_name = $_FILES["permit_new_name"]["name"];
             // Create query to update the admin's details
             $updateEmployerDetailsQuery = mysqli_query($conn, "UPDATE employer SET employer_name = '$employer_name', employer_position = '$employer_position',
             company_name = '$company_name', company_address = '$company_address', company_ceo = '$company_ceo', company_size = '$company_size', 
             company_revenue = '$company_revenue', industry = '$industry', company_description = '$company_description', contact_number = '$contact_number',
-            company_logo_name = '$company_logo_new', permit_new_name = '$permit_new_name', permit_original_name = '$permit_original_name', qr_code = '$qr_code'
+            company_logo_name = '$company_logo_new', permit_new_name = '$permit_new_name', permit_original_name = '$permit_original_name', qr_code = '$qr_code_new'
              WHERE employer_id = '{$_SESSION['user_id']}'");
              InsertIntoStorage($_FILES["company_logo_new"]["tmp_name"], $company_logo_new);
-             InsertIntoStorage($_FILES["qrCode"]["tmp_name"], $qr_code);
+             InsertIntoStorage($_FILES["qr_code_new"]["tmp_name"], $qr_code_new);
              InsertIntoStorage($_FILES["permit_new_name"]["tmp_name"], $permit_new_name);
              if($updateEmployerDetailsQuery){
                 $response = array('status' => 'success', 'message' => "Updated Successfully.",'dd' => $permit_new_name, 'd' => $company_logo_new );
@@ -297,7 +299,7 @@ if (isset($_POST['fetchData'])) {
                 }
             // $response = array('status' => 'success', 'message' => "Successfully updated.");
         } else {
-            $response = array('status' => 'error', 'message' => "Please fill up all the fields.", 'permitRR' => $permit_new_namerr, 'companyRR' => $company_logo_newrr);
+            $response = array('status' => 'error', 'message' => "Please fill up all the fields.", 'permitRR' => $permit_new_namerr, 'companyRR' => $company_logo_newrr, 'qrRR' => $qr_code_newrr);
         }
         // return this as a json object and exit
         echo json_encode($response);

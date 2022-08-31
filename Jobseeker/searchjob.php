@@ -27,7 +27,7 @@
                 <a href="#" class="navbar-brand ms-3">
                 <img src="image/light-logo.png" alt="Job Portal Logo" width="120" height="95"></a>
     <form class="search-first d-flex">
-        <input class="form-control1 icon1" type="search" placeholder="Search for a job title" aria-label="Search">
+        <input class="form-control1 icon1" type="search" id="search_jobt" placeholder="Search for a job title" aria-label="Search">
         <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
     </form>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -215,7 +215,7 @@
                         </li>
                     </ul><br>
                     <span class="input-icons"><i class="bi bi-search ps-2 pt-1 ms-3" ></i>
-                        <input class="form-control me-2 ps-5 ms-2" type="search" placeholder="Enter specific company" aria-label="Search">
+                        <input class="form-control me-2 ps-5 ms-2" type="search" id="search_comp" placeholder="Enter specific company" aria-label="Search">
                     </span>
                     <div class="d-flex mt-5 refine">
                         <button type="submit" class=" text-dark btn4"> Refine Search Outcomes</button>

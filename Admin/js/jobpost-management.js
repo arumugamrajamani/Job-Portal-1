@@ -31,6 +31,7 @@ $(document).ready(function () {
         dataType: 'JSON',
         success: function (response) {
             $('#employername').val(response.name);
+            
             $('#body-h').html(response.tableData);
             $('#pagination').html(response.pagination);
             $('#entries').html(response.entries);
@@ -105,6 +106,20 @@ $(document).ready(function () {
     $('#body-h').on('click','.edit-Btn', function () {
         let postId = $(this).attr('data-id');
         $('#save-edit').val(postId);
+
+        $.ajax({
+            url: 'php/job-management.inc.php',
+            type: 'POST',
+            data: {
+                displayData: true,
+                postId: postId
+            },
+            dataType: 'json',
+            success: function (data) {
+                $("#company").val(data.companyName);
+                $("#jobcategory").val(data.job_category);
+            }
+        })
     });
 
     $('#save-edit').click(function () {

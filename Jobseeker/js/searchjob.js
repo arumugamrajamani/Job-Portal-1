@@ -16,40 +16,67 @@ function closeNav() {
 //     });
 // });
 
-
-
 $(document).ready(function () {
     var list_emstatus = ['Full-Time', 'Freelancer', 'Part-Time'];
     var list_salary = [5000, 10000, 15000, 20000];
 
     // Function for getting the current value in search box
-    function GetCheckBoxEMSTAUSValue() {
-        let sqlValue = `('${list_emstatus.join("','")}')`;
-        return sqlValue;
+    function GetCheckBoxEMSTATUSValue() {
+        console.log(list_emstatus.length);
+        if (list_emstatus.length != 0) {
+            let sqlValue = `('${list_emstatus.join("','")}')`;
+            return sqlValue;
+        }
+        else {
+            return undefined;
+        }
     }
 
-    function GetSearchValue() {
-        var search = $('#search').val();
-        return search;
+    // function GetCheckBoxSalaryValue() {
+
+    // }
+
+    // Function for getting the search value in Company
+    function GetSearchCompValue() {
+        let search = $('#search_comp').val();
+        if (search != '') {
+            return search;
+        }
+        else {
+            return undefined;
+        }
+        
+    }
+
+    // Function for getting the search value in Job Title
+    function GetSearchJobtValue() {
+        let search = $('#search_jobt').val();
+        if (search != '') {
+            return search;
+        }
+        else {
+            return undefined;
+        }
     }
 
     // Function for getting the current page number
     function getCurrentPage() {
-        var page = $('#pagination').find('.active').attr('data-page');
+        let page = $('#pagination').find('.active').attr('data-page');
         return page;
     }
 
-    load_data(GetCheckBoxEMSTAUSValue(), list_salary);
+    load_data(GetCheckBoxEMSTATUSValue(), list_salary, GetSearchCompValue(), GetSearchJobtValue());
 
-    function load_data(checkbox_emstaus, checkbox_salary, search, page){
+    function load_data(checkbox_emstatus, checkbox_salary, search_comp, search_jobt, page){
         $.ajax({
             url: 'php/searchjob.inc.php',
             type: 'POST',
             data: {
                 fetchData: true,
-                checkbox_emstaus: checkbox_emstaus,
+                checkbox_emstatus: checkbox_emstatus,
                 checkbox_salary: checkbox_salary,
-                search: search,
+                search_comp: search_comp,
+                search_jobt: search_jobt,
                 page: page
             },
             dataType: 'JSON',
@@ -58,6 +85,7 @@ $(document).ready(function () {
                 // $('#entries').html(response.entries);
                 $('#body-h').html(data.tableData);
                 console.log(data.check_salary);
+                console.log(data.statement);
             }
         });
     }
@@ -65,6 +93,28 @@ $(document).ready(function () {
     $('#body-h').on('click', '#detail', function () {
         let postId = $(this).attr('data-id');
         $('#del-yes').val(postId);
+    });
+
+    $("#search_comp").keyup(function () {
+        // console.log("Comp Tested");
+        let search = $(this).val();
+        if (search != '') {
+            load_data(GetCheckBoxEMSTATUSValue(), list_salary, search, GetSearchJobtValue());
+        }
+        else {
+            load_data(GetCheckBoxEMSTATUSValue(), list_salary, undefined, GetSearchJobtValue());
+        }
+    });
+
+    $("#search_jobt").keyup(function () {
+        // console.log("Jobt Tested");
+        let search = $(this).val();
+        if (search != '') {
+            load_data(GetCheckBoxEMSTATUSValue(), list_salary, GetSearchCompValue(), search);
+        }
+        else {
+            load_data(GetCheckBoxEMSTATUSValue(), list_salary, GetSearchCompValue(), undefined)
+        }
     });
     
     $(".checkbox_emstatus").click(function() {
@@ -77,9 +127,7 @@ $(document).ready(function () {
             list_emstatus = list_emstatus.filter(function(e) {return e !== value})
         }
 
-        console.log(list_emstatus);
-        let sqlValue = `('${list_emstatus.join("','")}')`;
-        load_data(sqlValue);
+        load_data(GetCheckBoxEMSTATUSValue(), list_salary, GetSearchCompValue(), GetSearchJobtValue());
     });
 
     $(".checkbox_salary").click(function() {
@@ -94,7 +142,7 @@ $(document).ready(function () {
         }
 
         // let sqlValue = `('${list_salary.join("','")}')`;
-        load_data(GetCheckBoxEMSTAUSValue(), list_salary);
+        load_data(GetCheckBoxEMSTATUSValue(), list_salary, GetSearchCompValue(), GetSearchJobtValue());
     });
 
     $('#del-yes').click(function () {

@@ -23,49 +23,48 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-    <div class="container-fluid">
-      <a class="navbar-brand me-1" href="#"></a>
-      <img src="image/flogo.png" alt="Job Portal Logo" width="100" height="70"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <form class="d-flex ms-2">
-        <input class="form-control icon" type="search" placeholder="Search for a job title" aria-label="Search">
-        <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
-      </form>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link text-dark message active" aria-current="page" href="message-jobseekers.php">MESSAGE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark about active" href="jobcategories.php">JOB BOARD</a>
-          </li>
-          <li class="nav-item">
+  	<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+    	<div class="container-fluid">
+      		<a class="navbar-brand me-1" href="#"></a>
+      		<img src="image/flogo.png" alt="Job Portal Logo" width="100" height="70"></a>
+      		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      		  	<span class="navbar-toggler-icon"></span>
+      		</button>
+      		<form class="d-flex ms-2">
+        		<input class="form-control icon" type="search" placeholder="Search for a job title" aria-label="Search">
+        		<button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
+      		</form>
+      		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+        		<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          			<li class="nav-item">
+            			<a class="nav-link text-dark message active" aria-current="page" href="message-jobseekers.php">MESSAGE</a>
+          			</li>
+          			<li class="nav-item">
+            			<a class="nav-link text-dark about active" href="jobcategories.php">JOB BOARD</a>
+          			</li>
+          			<li class="nav-item">
 						<a class="nav-link text-dark about active text-center" href="searchjob.php">AVAILABLE JOBS</a>
 					</li>
-          <li class="nav-item account dropdown active">
-            <a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown"
-              role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
-            <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-              <li><a id = "upperName" class="dropdown-item text-light menubar" href="applicant-profile.php"></a></li>
-              <li>
-                <hr class="dropdown-divider bg-white">
-              </li>
-              <li><a class="dropdown-item text-light" href="jobapplication.php">JOB APPLICATIONS</a></li>
-              <li><a class="dropdown-item text-light" href="bookmark-job.php">BOOKMARKED JOBS</a></li>
-              <li><a class="dropdown-item text-light" href="manage-account-1.php">ACCOUNT SETTINGS</a></li>
-              <li><a class="dropdown-item text-light" href="../Resume-Builder/resume-builder1.php">RESUME BUILDER</a></li>
-              <li><a class="dropdown-item text-light" href="manage-account-2.php">CHANGE PASSWORD</a></li>
-              <li><a class="dropdown-item logout text-light" href="../logout.php">LOGOUT</a></li>
-            </ul>
-        </ul>
-      </div>
-    </div>
-  </nav><br>
+          			<li class="nav-item account dropdown active">
+            			<a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown"
+              				role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              				<img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT
+						</a>
+            			<ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
+              				<li><a id = "upperName" class="dropdown-item text-light menubar" href="applicant-profile.php"></a></li>
+              				<li><hr class="dropdown-divider bg-white"></li>
+              				<li><a class="dropdown-item text-light" href="jobapplication.php">JOB APPLICATIONS</a></li>
+              				<li><a class="dropdown-item text-light" href="bookmark-job.php">BOOKMARKED JOBS</a></li>
+							<li><a class="dropdown-item text-light" href="manage-account-1.php">ACCOUNT SETTINGS</a></li>
+							<li><a class="dropdown-item text-light" href="Resume-Builder/resume-builder1.php">RESUME BUILDER</a></li>
+							<li><a class="dropdown-item text-light" href="manage-account-2.php">CHANGE PASSWORD</a></li>
+							<li><a class="dropdown-item logout text-light" href="../logout.php">LOGOUT</a></li>
+						</ul>
+        		</ul>
+      		</div>
+    	</div>
+  	</nav>
+	<br>
   <div class="container shadow">
     <div class="masthead" style="background-image: url('./image/bg3.png');">
       <br>
@@ -203,11 +202,6 @@
     <h6 class="h6">Developed by MCC Interns 2022, Job Portal</h6>
     <br>
   </div>
-
-
-
-
-
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

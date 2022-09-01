@@ -173,7 +173,7 @@ body{
     overflow-x: hidden;
     width: 627px;
     height: 842px;
-    background-image: url(/Resume-Builder/image/Untitled\ design.png);
+    background-image: url("../image/Untitled\ design.png");
 }
 .cont2{
     display: flex;

@@ -198,19 +198,19 @@
                     <h5 class="fw-bold text-center mt-3">SALARY RANGES</h5>
                     <ul class="list-group mt-4 ps-4" >
                         <li class="list-group-item fw-bold " >
-                            <input class="form-check-input me-1 checkbox_salary" type="checkbox" id="cb_wage5k" value='5000' aria-label="..." checked>
+                            <input class="form-check-input me-1 checkbox_salary" type="checkbox" id="cb_wage5k" value='5000' checked>
                             <label for="cb_wage5k">₱5,000 - 10,000</label>
                         </li>
                         <li class="list-group-item fw-bold" >
-                            <input class="form-check-input me-1 checkbox_salary" type="checkbox" id="cb_wage10k" value='10000' aria-label="..." checked>
+                            <input class="form-check-input me-1 checkbox_salary" type="checkbox" id="cb_wage10k" value='10000' checked>
                             <label for="cb_wage10k">₱10,000 - 15,000</label>
                         </li>
                         <li class="list-group-item fw-bold" >
-                            <input class="form-check-input me-1 checkbox_salary" type="checkbox" id="cb_wage15k" value='15000' aria-label="..." checked>
+                            <input class="form-check-input me-1 checkbox_salary" type="checkbox" id="cb_wage15k" value='15000' checked>
                             <label for="cb_wage15k">₱15,000 - 20,000</label>
                         </li>
                         <li class="list-group-item fw-bold" >
-                            <input class="form-check-input me-1 checkbox_salary" type="checkbox" id="cb_wage20k" value='20000' aria-label="..." checked>
+                            <input class="form-check-input me-1 checkbox_salary" type="checkbox" id="cb_wage20k" value='20000' checked>
                             <label for="cb_wage20k">₱20,000+</label> 
                         </li>
                     </ul><br>
@@ -233,16 +233,16 @@
 
                 <nav aria-label="Page navigation example">
                     <div class="entries" id="entries">
-                        </span>Show 1 to 3 of 3 entries</span>
+                        <!-- </span>Show 1 to 3 of 3 entries</span> -->
                     </div>
                     <ul class="pagination" id="pagination">
-                        <li class="page-item num1"><a class="page-link page1" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <!-- <li class="page-item" data-page="0"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item" data-page="1"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item" data-page="2"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item" data-page="3"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item" data-page="4"><a class="page-link" href="#">5</a></li>
                         <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Last</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Last</a></li> -->
                     </ul>
                 </nav>
             </div>

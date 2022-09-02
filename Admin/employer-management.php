@@ -1,7 +1,3 @@
-<!-- Problems:
-- Both preloader.css and preloader.js detected (Non-existing in the source code)
-- Picture "storage/135a5e3b0a34a3aedb95ceab21e19bf3.png" doesn't exist... Probably the logo from BTech (least problematic) -->
-
 <!doctype html>
 <html lang="en">
 
@@ -20,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/employer-management.css">
-    <!-- <link rel="stylesheet" href="../css/preloader.css"> -->
+    <link rel="stylesheet" href="../css/preloader.css">
     <title>Employer Management | Admin</title>
 </head>
 
@@ -177,55 +173,55 @@
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="companyaddress" class="col-sm-3 ">Company Address:</label>
                                 <div class="col-sm-8">
-                                    <h5 id="v-companyaddress"></h5>
+                                    <h5 id="e-companyaddress"></h5>
                                 </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="companyceoname" class="col-sm-3 ">Company CEO Name:</label>
                                 <div class="col-sm-8">
-                                    <h5 id="v-companyceoname"></h5>
+                                    <h5 id="e-companyceoname"></h5>
                                 </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="companysize" class="col-sm-3 ">Company Size:</label>
                                 <div class="col-sm-8">
-                                    <h5 id="v-companysize"></h5>
+                                    <h5 id="e-companysize"></h5>
                                 </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="companyrevenue" class="col-sm-3 ">Company Revenue:</label>
                                 <div class="col-sm-8">
-                                    <h5 id="v-companyrevenue"></h5>
+                                    <h5 id="e-companyrevenue"></h5>
                                 </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="industry" class="col-sm-3 ">Industry:</label>
                                 <div class="col-sm-8">
-                                    <h5 id="v-industry"></h5>
+                                    <h5 id="e-industry"></h5>
                                 </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="companynumber" class="col-sm-3 ">Company Number:</label>
                                 <div class="col-sm-8">
-                                    <h5 id="v-companynumber"></h5>
+                                    <h5 id="e-companynumber"></h5>
                                 </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="companyemail" class="col-sm-3 ">Company Email:</label>
                                 <div class="col-sm-8">
-                                    <h5 id="v-companyemail"></h5>
+                                    <h5 id="e-companyemail"></h5>
                                 </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4">
                                 <label for="companydescription" class="col-sm-3 fw-bold ">Company Description:</label>
                                 <div class="col-sm-8">
-                                    <p id="v-companydescription"></p>
+                                    <p id="e-companydescription"></p>
                                 </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4">
                                 <label for="datecreated" class="col-sm-3 fw-bold">Date/Time Created:</label>
                                 <div class="col-sm-8">
-                                    <h5 id="v-datecreated"></h5>
+                                    <h5 id="e-datecreated"></h5>
                                 </div>
                             </div>
                         </form>
@@ -413,7 +409,7 @@
     
     <script src="js/employer-management.js"></script>
     <script src="js/navbar.js"></script>
-    <!-- <script src="../js/preloader.js"></script> -->
+    <script src="../js/preloader.js"></script>
 </body>
 
 </html>

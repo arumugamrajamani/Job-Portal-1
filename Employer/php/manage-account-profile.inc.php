@@ -231,7 +231,7 @@ if (isset($_POST['fetchData'])) {
     $allowed_logo_extension = array("png", "jpg", "jpeg");
     $allowed_qr_code_newextension = array("png", "jpg", "jpeg");
 	
-    if($logoPic == null){
+
 	if (!isset($_FILES["company_logo_new"])) {
         $company_logo_newrr = array('status' => 'error', 'message' => 'Company Logo is required.');
     } elseif (!in_array(pathinfo($_FILES["company_logo_new"]["name"], PATHINFO_EXTENSION), $allowed_logo_extension)) {
@@ -242,8 +242,7 @@ if (isset($_POST['fetchData'])) {
         $company_logo_newrr = array('status' => 'success');
         $company_logo_newExtension = pathinfo($_FILES["company_logo_new"]["name"], PATHINFO_EXTENSION);
     }
-}
-    if ($permitOriginalName == null){
+
     if (!isset($_FILES["permit_new_name"])) {
         $permit_new_namerr = array('status' => 'error', 'message' => 'Permit is required.');
     } elseif (!in_array(pathinfo($_FILES["permit_new_name"]["name"], PATHINFO_EXTENSION), $allowed_permit_new_name_extension)) {
@@ -254,7 +253,7 @@ if (isset($_POST['fetchData'])) {
         $permit_new_namerr = array('status' => 'success');
         $permit_new_nameExtension = pathinfo($_FILES["permit_new_name"]["name"], PATHINFO_EXTENSION);
     }
-}
+
    
     if (!isset($_FILES["qr_code_new"])) {
         $qr_code_newrr = array('status' => 'error', 'message' => 'QR Code is required.');

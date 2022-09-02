@@ -12,7 +12,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/faq-settings.css">
-    <link rel="stylesheet" href="../css/preloader.css">
+
+        <!-- Toast CDN for functionality of toastr -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Toast CDN for design of toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- <link rel="stylesheet" href="../css/preloader.css"> -->
     <title>FAQ | Settings</title>
 </head>
 
@@ -101,8 +107,8 @@
                     <th class="col-lg-4">Actions</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
+            <tbody id="body-system">
+                <!-- <tr>
                     <td>What is Tech-Ployment?</td>
                     <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae accusantium voluptatum delectus reprehenderit blanditiis ipsa corporis fuga recusandae. Totam, cumque!</td>
                     <td>
@@ -117,7 +123,7 @@
                         <button type="submit" title="Edit" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>
                         <button type="submit" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></button>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
         <div class="d-flex justify-content-between px-4 div2 pt-3">
@@ -136,8 +142,8 @@
                     <th class="col-lg-4">Actions</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
+            <tbody id="body-application">
+                <!-- <tr>
                     <td>What is Tech-Ployment?</td>
                     <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae accusantium voluptatum delectus reprehenderit blanditiis ipsa corporis fuga recusandae. Totam, cumque!</td>
                     <td>
@@ -152,7 +158,7 @@
                         <button type="submit" title="Edit" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>
                         <button type="submit" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></button>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
         <div class="d-flex justify-content-between px-4 div2 pt-3">
@@ -171,8 +177,8 @@
                     <th class="col-lg-4">Actions</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
+            <tbody id="body-interview">
+                <!-- <tr>
                     <td>What is Tech-Ployment?</td>
                     <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae accusantium voluptatum delectus reprehenderit blanditiis ipsa corporis fuga recusandae. Totam, cumque!</td>
                     <td>
@@ -187,7 +193,7 @@
                         <button type="submit" title="Edit" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>
                         <button type="submit" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></button>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
         <div class="d-flex justify-content-between px-4 div2 pt-3">
@@ -206,8 +212,8 @@
                     <th class="col-lg-4">Actions</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
+            <tbody id="body-general">
+                <!-- <tr>
                     <td>What is Tech-Ployment?</td>
                     <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae accusantium voluptatum delectus reprehenderit blanditiis ipsa corporis fuga recusandae. Totam, cumque!</td>
                     <td>
@@ -222,7 +228,7 @@
                         <button type="submit" title="Edit" data-bs-toggle="modal" data-bs-target="#modal-editdetails"><i class="fa-solid fa-pen-to-square"></i></button>
                         <button type="submit" title="Delete" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></button>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </div>
@@ -235,7 +241,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="delete modal-body">
-                    <button type="button" class="yes-no btn btn-success">Yes</button>
+                    <button type="button" id="del-yes" class="yes-no btn btn-success">Yes</button>
                     <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
                 </div>
             </div>
@@ -252,13 +258,14 @@
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="jobcategory" class="col-sm-3 ">Question</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="jobcategory">
+                                    <input type="text" class="form-control" id="add-f-question">
                                 </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="jobcategory" class="col-sm-3 ">Answer</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="jobcategory">
+                                    <!-- <input type="text" class="form-control" id="jobcategory"> -->
+                                    <textarea class="form-control" style="resize:none;" id="add-f-answer" cols="30" rows="10"></textarea>
                                 </div>
                             </div>
 
@@ -284,19 +291,20 @@
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="Faq Setting" class="col-sm-3 ">Question</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="jobcategory">
+                                    <input type="text" class="form-control" id="faq-question">
                                 </div>
                             </div>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="Faq Setting" class="col-sm-3 ">Answer</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="jobcategory">
+                                    <!-- <input type="text" class="form-control" id="faq-answer"> -->
+                                    <textarea class="form-control" style="resize:none;" id="faq-answer" cols="30" rows="10"></textarea>
                                 </div>
                             </div>
                         </form>
                     </div><br>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-success save">Save Details</button>
+                        <button type="button" id="save-edit" class="btn btn-success save">Save Details</button>
                         <button type="button" class="close btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -387,8 +395,9 @@
     }
     </script>
 
+    <script src="js/faq-settings.js"></script>
     <script src="js/navbar.js"></script>
-    <script src="../js/preloader.js"></script>
+    <!-- <script src="../js/preloader.js"></script> -->
 </body>
 
 </html>

@@ -10,7 +10,7 @@
   <!-- jQuery cdn link below -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <title>Inside the Job</title>
-    <link rel="stylesheet" href="css/InsideJob.css">
+  <link rel="stylesheet" href="css/InsideJob.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-0" id="nav0">
@@ -53,6 +53,7 @@
         </div>
     </div>
     </nav>
+
     <div class="swits">
     <div class = 'toggle-switch'>
       <label class="lab">
@@ -130,8 +131,17 @@
           • Capacity to clearly explain a technical problem</p>
         </div>
       </div>
-    </div>    
+    </div>  
+
+    
     <script>
+      <?php 
+        $testing = isset($_GET['testing']) ? $_GET['testing'] : '';  
+      ?>
+
+      var testing = "<?= $testing ?>";
+      console.log(testing);
+
       var icon2 = document.getElementById("icon2")
   
       icon2.onclick = function(){

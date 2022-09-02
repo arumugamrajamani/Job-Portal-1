@@ -96,7 +96,7 @@ $(document).ready(function () {
 
                 // console.log(data.check_salary);
                 // console.log(data.statement);
-                console.log(data.data_test);
+                console.log(data.testing);
             }
         });
     }
@@ -172,7 +172,7 @@ $(document).ready(function () {
                 postId: postId
             },
             success: function (data) {
-                window.location = 'insidejob.php';
+                window.location = 'insidejob.php?testing=52';
             }
         });
     });

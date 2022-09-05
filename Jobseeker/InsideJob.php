@@ -1,3 +1,4 @@
+<?php include_once 'include/header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
   <!-- jQuery cdn link below -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <title>Inside the Job</title>
-    <link rel="stylesheet" href="css/InsideJob.css">
+  <link rel="stylesheet" href="css/InsideJob.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-0" id="nav0">
@@ -53,6 +54,7 @@
         </div>
     </div>
     </nav>
+
     <div class="swits">
     <div class = 'toggle-switch'>
       <label class="lab">
@@ -110,19 +112,18 @@
           <h4><b id="salaryy1"></b></h4>
           <p>You must qualified to this position</p>
           <div class="butt">
-            <div class="logapp">
-              <a class="appnow" onclick="apply()" style="text-decoration: none;">APPLY NOW</a>
-            </div>
-            <div class="markb">
-              <a><img id="bmark" onclick="update()" src="image/Vector.png" alt=""></a>
-            </div>
+            <button id="applyJob" class="logapp appnow" style="text-decoration: none;"></button>
+            <button id="bookmarkJob" class="markb">
+              <a><img id="bmark" src="image/Vector.png" alt=""></a>
+            </button>
           </div>
         </div>
       </div>
-    </div>
+    </div><!-- <a class="appnow" onclick="apply()" style="text-decoration: none;">APPLY NOW</a> -->
     <div class="container shadow-lg" id="content2">
       <div class="container-fluid" id="req">
         <div class="requirements">
+          <ul id="bullet"></ul>
           <h4><b>SKILL REQUIREMENTS</b></h4><br>
           <p>• Expert knowledge in operating systems<br>
           • Expert knowledge in working system<br>
@@ -130,11 +131,19 @@
           • Capacity to clearly explain a technical problem</p>
         </div>
       </div>
-    </div>    
+    </div>  
+
+    
     <script>
+      <?php 
+        $postId = isset($_GET['postId']) ? $_GET['postId'] : '';  
+      ?>
+
+      var postId = "<?= $postId ?>";
+
       var icon2 = document.getElementById("icon2")
   
-      icon2.onclick = function(){
+      icon2.onclick = function() {
         document.body.classList.toggle("dark-theme");
       }
       

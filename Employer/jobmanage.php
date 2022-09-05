@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container-fluid"> 
             <a class="navbar-brand me-1" href="#"></a>
-            <img src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70"></a>
+            <img src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70" onclick="window.location.href='company-profile.php'"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -131,7 +131,84 @@
             </div>
         </div>
     </div>
+
+    <!--Edit detail modal-->
+    <div class="modal fade" id="modal-editdetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body edit-detail">
+                    <div class="container">
+                        <form class="container">
+                                <h2 class="text-black text-center mt-0 fw-bold">EDIT DETAILS</h2>
+                                <hr>
+                                <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                    <label for="e-companyname" class="col-sm-3 ">Company Name:</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="e-companyname">
+                                    </div>
+                                </div>
+                                <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                    <label for="e-jobtitle" class="col-sm-3 ">Job Title:</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="e-jobtitle">
+                                    </div>
+                                </div>
+                                <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                    <label for="e-employment" class="col-sm-3 ">Employment:</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="e-employment">
+                                    </div>
+                                </div>
+                                <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                    <label for="e-jobcategory" class="col-sm-3 ">Job Category:</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="e-jobcategory">
+                                    </div>
+                                </div>
+                                <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                    <label for="e-jobdescription" class="col-sm-3 ">Job Description:</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="e-jobdescription">
+                                    </div>
+                                </div>
+                                <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                    <label for="e-salarywage" class="col-sm-3 ">Salary Wage:</label>
+                                    <div class="col-sm-8">
+                                        <input type="number" class="form-control" id="e-salarywage">
+                                    </div>
+                                </div>
+                                <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                    <label for="e-employeremail" class="col-sm-3 ">Employer Email:</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="e-employeremail">
+                                    </div>
+                                </div>
+                                <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                    <label for="e-primaryskill" class="col-sm-3 ">Primary Skill:</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="e-primaryskill">
+                                    </div>
+                                </div>
+                                <div class="row mb-3 mt-0 ms-4 fw-bold">
+                                    <label for="e-secondaryskill" class="col-sm-3 ">Secondary Skill:</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="e-secondaryskill">
+                                    </div>
+                                </div>
+                        </form>
+                        
+                    </div><br>
+                    <div class="modal-footer">
+                        <button type="button" id="save-edit" class="btn btn-success">Save</button>
+                        <button type="button" class="close btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 <script src="js/jobmanage.js"></script>
 <script src="js/pfp.js"></script>
+<script src="../js/preloader.js"></script>
 </html>

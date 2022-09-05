@@ -78,7 +78,7 @@
             if ($search[0] == 20000 ) {
                 switch ($count) {
                     case 1:
-                        $statement .= " AND salary >= 1000";
+                        $statement .= " AND salary >= 20000";
                     break;
                     case 2:
                         $statement .= " AND salary BETWEEN $search[1] AND $search[1] + 5000 OR salary >= $search[0]";
@@ -121,7 +121,7 @@
 
         while($row = mysqli_fetch_assoc($getPosts)) {
             $uid = $row['postedby_uid'];
-            $postId = $row['post_iud'];
+            $postId = $row['post_id'];
             $getEmployerName = mysqli_query($conn, "SELECT * FROM `employer` WHERE `employer_id` = '$uid'");
             
             while($name = mysqli_fetch_assoc($getEmployerName)) {
@@ -233,6 +233,7 @@
         $response = array('qr' => $qrCode,);
         echo json_encode($response);
     }   
-    else {
+    else if (isset($_POST['details'])) {
         // $_SESSION['postId'] = $_POST["postId"];
+        // session_destroy();
     }

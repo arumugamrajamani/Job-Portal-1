@@ -1,5 +1,22 @@
 $(document).ready(function(){
     // Trigger this when user click login button
+    $.ajax({
+        url: 'php/login.inc.php',
+        type: 'POST',
+        data: {
+            fetchLogin: true
+        },
+        success: function(data) {
+            if(data == "jobseeker"){
+                window.location.href = 'Jobseeker/applicant-profile.php';
+            } else if(data == "employer") {
+                window.location.href = 'Employer/company-profile.php';
+            } else if(data == "admin") {
+                window.location.href = 'Admin/dashboard.php';
+            }
+        }
+    });
+
     $('form').submit(function(event){
         event.preventDefault();
         let email = $('#email').val();

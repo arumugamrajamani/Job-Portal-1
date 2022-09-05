@@ -46,7 +46,7 @@
         $getPosts = mysqli_query($conn, $statement);
         while($row = mysqli_fetch_assoc($getPosts)){
             $uid = $row['postedby_uid'];
-            $postId = $row['post_iud'];
+            $postId = $row['post_id'];
             $getEmployerName = mysqli_query($conn, "SELECT * FROM `employer` WHERE `employer_id` = '$uid'");
             while($name = mysqli_fetch_assoc($getEmployerName)){
             $employer = $name['employer_name'];}
@@ -129,7 +129,7 @@
     // This portion will fetch the data and print it into the input bar of the edit modal.
     if (isset($_POST['displayData'])) {
         $postId = mysqli_real_escape_string($conn, $_POST['postId']);
-        $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_iud` = '$postId'");
+        $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_id` = '$postId'");
         $row = mysqli_fetch_assoc($fetchDeletedQuery);
         $companyName = $row['company_name'];
         $jobCategory = $row['job_category'];
@@ -146,7 +146,7 @@
         $postId = mysqli_real_escape_string($conn, $_POST['postId']);
         
         //deleting the jobpost and moving it to recycle bin
-        $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_iud` = '$postId'");
+        $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_id` = '$postId'");
         $row = mysqli_fetch_assoc($fetchDeletedQuery);
         $companyName = $row['company_name'];
         $jobTitle = $row['job_title'];
@@ -187,13 +187,13 @@
             '$date'
         )");
 
-        mysqli_query($conn, "DELETE FROM `jobpost` WHERE `post_iud` = '$postId'");
+        mysqli_query($conn, "DELETE FROM `jobpost` WHERE `post_id` = '$postId'");
     }
     else if (isset($_POST['edit'])) {
         $postId = $_POST['postId'];
         $company = $_POST['company'];
         $jobcategory = $_POST['jobcategory'];
-        mysqli_query($conn, "UPDATE jobpost SET company_name = '$company', job_category = '$jobcategory' WHERE post_iud = '$postId'");
+        mysqli_query($conn, "UPDATE jobpost SET company_name = '$company', job_category = '$jobcategory' WHERE post_id = '$postId'");
 
         // Has errors to be fixed soon [Incomplete codes were present]
         $response = array(

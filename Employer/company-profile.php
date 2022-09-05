@@ -1,11 +1,11 @@
 <?php
+include_once 'include/header.php';
 require './../php/db-connection.php';
-session_start();
 $employerId = $_SESSION['user_id'];
 $user = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM employer WHERE employer_id = '$employerId'"));
 ?>
 
-<?php include_once 'include/header.php'; ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

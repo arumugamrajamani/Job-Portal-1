@@ -10,7 +10,7 @@
                     <button class='fetch-details' type='submit' title='Edit' data-id={$_id} data-bs-toggle='modal' data-bs-target='#modal-editdetails'>
                         <i class='fa-solid fa-pen-to-square'></i>
                     </button>
-                    <button type='submit' title='Delete' data-id={$_id} data-bs-toggle='modal' data-bs-target='#exampleModal'>
+                    <button class='fetch-details' type='submit' title='Delete' data-id={$_id} data-bs-toggle='modal' data-bs-target='#modal-delete'>
                         <i class='fa-solid fa-trash-can'></i>
                     </button>
                 </td>
@@ -108,6 +108,43 @@
         }
 
         // Return the response
+        echo json_encode($response);
+    }
+
+    if (isset($_POST['addNewFaq'])) {
+        
+        if (!empty($_POST['faqAddQuestion']) && !empty($_POST['faqAddAnswer'])) {
+            $faqCategory = mysqli_real_escape_string($conn, $_POST['faqCategory']);
+            $faqQuestion = mysqli_real_escape_string($conn, $_POST['faqAddQuestion']);
+            $faqAnswer = mysqli_real_escape_string($conn, $_POST['faqAddAnswer']);
+            mysqli_query($conn, "INSERT INTO faq_settings (category, question, answer) 
+                VALUES ('$faqCategory','$faqQuestion','$faqAnswer')");
+    
+            $response = array(
+                'status' => 'success'
+            );
+        } else {
+            $response = array(
+                'status' => 'error'
+            );
+        }
+
+        echo json_encode($response);
+    }
+
+    if (isset($_POST['deleteData'])) {
+        $faqId = mysqli_real_escape_string($conn, $_POST['faqId']);
+
+        if (mysqli_query($conn, "DELETE FROM faq_settings WHERE id = '$faqId'")) {
+            $response = array(
+                'status' => 'success'
+            );
+          } else {
+            $response = array(
+                'status' => 'error'
+            );
+          }
+
         echo json_encode($response);
     }
 ?>

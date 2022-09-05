@@ -1,4 +1,3 @@
-<?php include_once 'include/header.php'; ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -31,7 +30,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container-fluid"> 
             <a class="navbar-brand me-1" href="#"></a>
-            <img class="logo" src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70"></a>
+            <img class="logo" onclick="window.location.href='company-profile.php'" src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

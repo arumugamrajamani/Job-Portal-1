@@ -1,3 +1,10 @@
+<?php
+require './../php/db-connection.php';
+session_start();
+$employerId = $_SESSION['user_id'];
+$user = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM employer WHERE employer_id = '$employerId'"));
+?>
+
 <!doctype html>
 <html lang="en">
     <meta charset="utf-8">
@@ -6,6 +13,7 @@
     <!--Font-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,455;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@300&display=swap" rel="stylesheet">
     <!-- Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -61,7 +69,105 @@
                 </button>
             </div>
             <div class="d-flex">
-                <img class="company_logo mx-5 fa-5x" src="" id="company_logo_name"></img>
+                <form class="form" id = "form" action="" enctype="multipart/form-data" method="post">
+                <div class="upload" style="
+                    height: 200px;
+                    width: 200px;
+                    position: relative;
+                    ">
+                    <?php
+
+                    $name = $user["employer_name"];
+                    $image = $user["company_logo_name"];
+                    ?>
+                    
+                    <img src="../storage/<?php echo $image; ?>" width = 200 height = 200 id="company_logo_name" style="
+                        border-radius: 50%;
+                        border: 8px solid #ffffff;
+                        ">
+                        <div class="round" style="
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            background: #00B4FF;
+                            width: 50px;
+                            height: 50px;
+                            line-height: 33px;
+                            text-align: center;
+                            border-radius: 50%;
+                            
+                            ">
+                            <input type="hidden" name="id" value="<?php echo $employerId; ?>">
+                            <input type="hidden" name="name" value="<?php echo $name; ?>">
+                            <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png" style="
+                                position: absolute;
+                                transform: scale(2);
+                                opacity: 0;
+                                width:24px;
+                                height:24px;
+                                bottom:13px;
+                                right:13px;
+                                ">
+                            <i class = "fa fa-camera" style = "color: #fff; font-size:32px; margin: 8px 0 0 1px" ></i>
+                        </div>
+                </div>
+                </form>
+                <script type="text/javascript">
+                    document.getElementById("image").onchange = function(){
+                    document.getElementById("form").submit();
+                    };
+                </script>
+                <?php
+                function InsertIntoStorage($tmp_name, $filename)
+                {
+                    //$target_directory = "../storage/";
+                    $path =  "../storage/" . $filename;
+                    move_uploaded_file($tmp_name, $path);
+                }
+    if(isset($_FILES["image"]["name"])){
+      $name = $_POST["name"];
+
+      $imageName = $_FILES["image"]["name"];
+      $imageSize = $_FILES["image"]["size"];
+      $tmpName = $_FILES["image"]["tmp_name"];
+
+      // Image validation
+      $validImageExtension = ['jpg', 'jpeg', 'png'];
+      $imageExtension = explode('.', $imageName);
+      $imageExtension = strtolower(end($imageExtension));
+      if (!in_array($imageExtension, $validImageExtension)){
+        echo
+        "
+        <script>
+          alert('Invalid Image Extension');
+          document.location.href = 'company-profile.php';
+        </script>
+        ";
+      }
+      elseif ($imageSize > 2000000){
+        echo
+        "
+        <script>
+          alert('Image Size Is Too Large');
+          document.location.href = '    company-profile.php';
+        </script>
+        ";
+      }
+      else{
+        $newImageName = $name . " - " . date("Y.m.d") . " - " . date("h.i.sa"); // Generate new image name
+        $newImageName .= '.' . $imageExtension;
+        $updateEmployerDetailsQuery = mysqli_query($conn, "UPDATE employer SET company_logo_name = '$newImageName' WHERE employer_id = '{$_SESSION['user_id']}'");
+        InsertIntoStorage($_FILES["image"]["tmp_name"], $newImageName);
+        echo
+        "
+        <script>
+        document.location.href = 'company-profile.php';
+        </script>
+        ";
+      }
+    }
+    ?>
+                <!-- <img class="company_logo mx-5 fa-5x" src="" id="company_logo_name"></img> -->
                 <div class="block info text-center">
                     <h4 class="fw-bold" id="employer_name"></h4>
                     <h5 id="employer_position"></h5>
@@ -69,14 +175,14 @@
                 </div>
             </div>
             <br>
-                <div class="block position-relative div2">
+                <!-- <div class="block position-relative div2">
                     <div class="position-absolute bottom-0 end-0 ">
                         <button class="my-5 mx-3 shadow btn1 fw-bold" type="button" onclick="location.href='message-new.php'">Send Message</button> 
                     </div>
                     <div class="position-absolute bottom-0 end-0">
                         <button class=" mx-3 shadow btn2 text-dark fw-bold" type="button">Follow</button>
                     </div>
-                </div>
+                </div> -->
         </div>
         <div class="row">
             <div class="column">

@@ -162,7 +162,6 @@
             </div>
         </form>
         <br><br><br><br><br>
-
         <script src="js/manage-account-profile.js"></script>
         <script src="js/pfp.js"></script>   
 </body>

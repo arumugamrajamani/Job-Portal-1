@@ -122,10 +122,10 @@
                                 <td data-title='status'>Active</td>
                                 <td data-title='drive'>sample.com</td>
                                 <td data-title='action'>
-                                <button  class='btn' type='button' id='btn-info' >Edit</button>
+                                <button class='btn-success fetch-details' type='button' id='btn-info' data-id='{$id}' data-bs-toggle='modal' data-bs-target='#modal-editdetails'>Edit</button>
                                 <button class='btn delete-Btn' data-id='{$id}' type='button' id='btn-info'  data-bs-toggle='modal' data-bs-target='#exampleModal'>Delete</button>
                                 </td>
-                                </tr>";
+                            </tr>";
                             }
                             $getDeletedPosts = mysqli_query($conn, "SELECT * FROM `jobpost_recycler` WHERE `postedby_uid` = '$uid'");
                             while($row1 = mysqli_fetch_assoc($getDeletedPosts)){
@@ -145,7 +145,7 @@
                                                     <td data-title='status'>Inactive</td>
                                                     <td data-title='drive'>sample.com</td>
                                                     <td data-title='action'>
-                                                    <button  class='btn' type='button' id='btn-info'>Edit</button>
+                                                    <button class='btn-success fetch-details' type='button' id='btn-info' data-id='{$id}' data-bs-toggle='modal' data-bs-target='#modal-editdetails'>Edit</button>
                                                     </td>
                                                 </tr>";
                             }

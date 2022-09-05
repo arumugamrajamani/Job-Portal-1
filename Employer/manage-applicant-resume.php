@@ -71,7 +71,7 @@
                     <div class="bg-color-header">
                        
                         <h2 class="text-start"><b>MANAGE APPLICATION'S RESUME</b>
-                            <form class="d-flex mt-4 form2">
+                            <form class="d-flex mt-4 form2" id = 'main'>
                                 <input class="form-control icon1" id="search" placeholder="Search for a message" aria-label="Search">
                                 <button class="btn text-dark fw-bold search1" type="submit"><i class="bi bi-search"></i></button>
                             </form>
@@ -113,14 +113,14 @@
             </div>
             <nav aria-label="Page navigation example">
                 <div class="entries" id= "entries">
-                    <!-- </span>Show 1 to 3 of 3 entries</span>  -->
+                    </span>Show 1 to 3 of 3 entries</span> 
                 </div>
                 <ul class="pagination" id = 'pagination'>
-                     <!-- <li class="page-item"><a class="page-link next text-dark" href="#">Previous</a></li>
+                     <li class="page-item"><a class="page-link next text-dark" href="#">Previous</a></li>
                     <li class="page-item"><a class="page-link num text-dark" href="#">1</a></li>
                     <li class="page-item"><a class="page-link num text-dark" href="#">2</a></li>
                     <li class="page-item"><a class="page-link num text-dark" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link next text-dark" href="#">Next</a></li>  -->
+                    <li class="page-item"><a class="page-link next text-dark" href="#">Next</a></li> 
                 </ul>
             </nav>   
         </form>

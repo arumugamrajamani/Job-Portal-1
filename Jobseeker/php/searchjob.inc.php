@@ -121,7 +121,7 @@
 
         while($row = mysqli_fetch_assoc($getPosts)) {
             $uid = $row['postedby_uid'];
-            $postId = $row['post_iud'];
+            $postId = $row['post_id'];
             $getEmployerName = mysqli_query($conn, "SELECT * FROM `employer` WHERE `employer_id` = '$uid'");
             
             while($name = mysqli_fetch_assoc($getEmployerName)) {
@@ -233,6 +233,7 @@
         $response = array('qr' => $qrCode,);
         echo json_encode($response);
     }   
-    else {
-        $_SESSION['postId'] = $_POST["postId"];
+    else if (isset($_POST['details'])) {
+        // $_SESSION['postId'] = $_POST["postId"];
+        // session_destroy();
     }

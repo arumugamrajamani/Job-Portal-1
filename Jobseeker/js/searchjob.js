@@ -96,7 +96,7 @@ $(document).ready(function () {
 
                 // console.log(data.check_salary);
                 // console.log(data.statement);
-                console.log(data.testing);
+                console.log(data.data_test);
             }
         });
     }
@@ -163,16 +163,16 @@ $(document).ready(function () {
 
     $('#del-yes').click(function () {
         let postId = $(this).val();
-        console.log(postId);
+        // console.log(postId);
         $.ajax({
             url: 'php/searchjob.inc.php',
             type: 'POST',
             data: {
                 details: true,
-                postId: postId
+                // postId: postId
             },
             success: function (data) {
-                window.location = 'insidejob.php?testing=52';
+                window.location = 'insidejob.php?postId=' + postId;
             }
         });
     });

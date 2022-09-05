@@ -1,11 +1,16 @@
 $(document).ready(function () {
+    // Note: the variable "postId" was located at the bottom portion of insidejob.php
+    
+    console.log(postId);
     load_data();
     function load_data(){
+        
         $.ajax({
             url: 'php/insidejob.inc.php',
             type: 'POST',
             data: {
                 fetchData: true,
+                postId: postId
             },
             dataType: 'JSON',
             success: function (response) {
@@ -22,36 +27,70 @@ $(document).ready(function () {
                 $('#description').html(response.description);
                 $('#datePosted').html(response.date);
                 // console.log(response.test);
+
+                // Check if the jobseeker was applied or not based on the fetched database on 'applied_jobs'
+                if (response.isApplied == true) {
+                    $("#applyJob").text("APPLIED");
+                }
+                else {
+                    $("#applyJob").text("APPLY NOW");
+                }
             }
         });
     }
+
+    $("#applyJob").click(function() {
+        if ($(this).text() == "APPLY NOW") {
+            console.log("Applied!")
+            $.ajax({
+                url: 'php/insidejob.inc.php',
+                type: 'POST',
+                data: {
+                    apply: true,
+                    postId: postId
+                },
+                dataType: 'JSON',
+                success: function (response) {
+                    window.location = 'jobapplication.php';
+                }
+            });
+        }
+        else if ($(this).text() == "APPLIED") {
+            console.log("You have already applied."); 
+        }
+    });
+
+    $("#bookmarkJob").click(function() {
+
+    });
+
 });
 
-function update(){
-    $.ajax({
-        url: 'php/insidejob.inc.php',
-        type: 'POST',
-        data: {
-            update: true,
-        },
-        //dataType: 'JSON',
-        success: function (response) {
-            console.log(response);
-            window.location = 'bookmark-job.php';
-        }
-    });
-}
-function apply(){
-    $.ajax({
-        url: 'php/insidejob.inc.php',
-        type: 'POST',
-        data: {
-            apply: true,
-        },
-        dataType: 'JSON',
-        success: function (response) {
-            console.log(response);
-            window.location = 'jobapplication.php';
-        }
-    });
-}
+// function update(){
+//     $.ajax({
+//         url: 'php/insidejob.inc.php',
+//         type: 'POST',
+//         data: {
+//             update: true,
+//         },
+//         //dataType: 'JSON',
+//         success: function (response) {
+//             console.log(response);
+//             window.location = 'bookmark-job.php';
+//         }
+//     });
+// }
+// function apply(){
+//     $.ajax({
+//         url: 'php/insidejob.inc.php',
+//         type: 'POST',
+//         data: {
+//             apply: true,
+//             postId: postId
+//         },
+//         dataType: 'JSON',
+//         success: function (response) {
+//             window.location = 'jobapplication.php';
+//         }
+//     });
+// }

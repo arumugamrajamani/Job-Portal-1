@@ -111,19 +111,18 @@
           <h4><b id="salaryy1"></b></h4>
           <p>You must qualified to this position</p>
           <div class="butt">
-            <div class="logapp">
-              <a class="appnow" onclick="apply()" style="text-decoration: none;">APPLY NOW</a>
-            </div>
-            <div class="markb">
+            <button id="applyJob" class="logapp appnow" style="text-decoration: none;"></button>
+            <button id="bookmarkJob" class="markb">
               <a><img id="bmark" onclick="update()" src="image/Vector.png" alt=""></a>
-            </div>
+            </button>
           </div>
         </div>
       </div>
-    </div>
+    </div><!-- <a class="appnow" onclick="apply()" style="text-decoration: none;">APPLY NOW</a> -->
     <div class="container shadow-lg" id="content2">
       <div class="container-fluid" id="req">
         <div class="requirements">
+          <ul id="bullet"></ul>
           <h4><b>SKILL REQUIREMENTS</b></h4><br>
           <p>• Expert knowledge in operating systems<br>
           • Expert knowledge in working system<br>
@@ -136,15 +135,14 @@
     
     <script>
       <?php 
-        $testing = isset($_GET['testing']) ? $_GET['testing'] : '';  
+        $postId = isset($_GET['postId']) ? $_GET['postId'] : '';  
       ?>
 
-      var testing = "<?= $testing ?>";
-      console.log(testing);
+      var postId = "<?= $postId ?>";
 
       var icon2 = document.getElementById("icon2")
   
-      icon2.onclick = function(){
+      icon2.onclick = function() {
         document.body.classList.toggle("dark-theme");
       }
       

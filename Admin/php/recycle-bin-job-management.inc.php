@@ -46,7 +46,7 @@
         $getPosts = mysqli_query($conn, $statement);
         while($row = mysqli_fetch_assoc($getPosts)){
             $uid = $row['postedby_uid'];
-            $postId = $row['post_iud'];
+            $postId = $row['post_id'];
             $getEmployerName = mysqli_query($conn, "SELECT * FROM `employer` WHERE `employer_id` = '$uid'");
             while($name = mysqli_fetch_assoc($getEmployerName)){
             $employer = $name['employer_name'];}
@@ -127,7 +127,7 @@
   // when user deleted in jobpost recycler
 if (isset($_POST['deleteJobPost'])) {
     $postId = mysqli_real_escape_string($conn, $_POST['postId']);
-    mysqli_query($conn, "DELETE FROM `jobpost_recycler` WHERE post_iud = '$postId'");
+    mysqli_query($conn, "DELETE FROM `jobpost_recycler` WHERE post_id = '$postId'");
 }
   
   
@@ -136,9 +136,9 @@ if (isset($_POST['restoreJobPost'])) {
     $postId = mysqli_real_escape_string($conn, $_POST['postId']);
     
     //restoring the deleted job
-    $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM `jobpost_recycler` WHERE post_iud = '$postId'");
+    $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM `jobpost_recycler` WHERE post_id = '$postId'");
     $row = mysqli_fetch_assoc($fetchDeletedQuery);
-    $postId = $row['post_iud'];
+    $postId = $row['post_id'];
     $companyName = $row['company_name'];
     $jobTitle = $row['job_title'];
     $employment = $row['employment_type'];
@@ -151,10 +151,10 @@ if (isset($_POST['restoreJobPost'])) {
     $postedby = $row['postedby_uid'];
     $date = dateTimeConvertion($row['date_posted']);
 
-    mysqli_query($conn, "INSERT INTO jobpost (post_iud, company_name, job_title, employment_type, job_category, job_description, salary, employer_email, primary_skill, secondary_skill, postedby_uid, date_posted)
+    mysqli_query($conn, "INSERT INTO jobpost (post_id, company_name, job_title, employment_type, job_category, job_description, salary, employer_email, primary_skill, secondary_skill, postedby_uid, date_posted)
                             VALUES ('$postId', '$companyName', '$jobTitle', '$employment', '$jobCategory', '$jobDescription', '$salary', '$employerEmail', '$primarySkill', '$secondarySkill', '$postedby', '$date')");
     
-    mysqli_query($conn, "DELETE FROM jobpost_recycler WHERE post_iud = '$postId'");
+    mysqli_query($conn, "DELETE FROM jobpost_recycler WHERE post_id = '$postId'");
 }
   
  ?>

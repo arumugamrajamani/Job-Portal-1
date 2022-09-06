@@ -6,7 +6,7 @@
     function dateTimeConvertion($date_posted){
         return date('M d, Y, h:i A', strtotime($date_posted));
     }
-    function getProfilePicLoc($profilePic){
+    function getProfilePicLoc($profilePic) {
         if ($profilePic != NULL && file_exists("../../storage/" . $profilePic)) {
             return "../storage/" . $profilePic;
         } 
@@ -79,8 +79,8 @@
     
     if(isset($_POST['apply'])) {
         $postId = ($_POST['postId']);
-        $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_id` = '$postId'");
-        $row = mysqli_fetch_assoc($fetchDeletedQuery);
+        $query = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_id` = '$postId'");
+        $row = mysqli_fetch_assoc($query);
         $company_name = $row['company_name'];
         $job_title = $row['job_title'];
         $employment_type = $row['employment_type'];
@@ -93,7 +93,9 @@
         $postedby = $row['postedby_uid'];
         $date_posted = dateTimeConvertion($row['date_posted']);
         $id = ($_SESSION['user_id']);
-            
+        
+        $test = array(5,10,15,20);
+        
         mysqli_query($conn, "INSERT INTO `applied_jobs`(
         `post_id`,
         `company_name`,
@@ -119,7 +121,7 @@
             '$jobDescription',
             '$salary',
             '$employerEmail',
-            '$primarySkill',
+            '(5, 10, 15)',
             '$secondarySkill',
             '$postedby',
             NOW(),
@@ -148,5 +150,84 @@
         // }
         // $data = array('tableData' => $tableData);
         // echo json_encode($data);
+    }
+
+    if(isset($_POST['bookmark'])) {
+        $post_id = ($_POST['postId']);
+
+        // Check if the user already bookmarked the jobpost
+        // Put code here
+        // ----------------------------------------
+        $count = "SELECT COUNT(jobpost_id) as total FROM jobpost_bookmark WHERE jobpost_id='$post_id'";
+        $count = mysqli_query($conn, $count);
+        $count = mysqli_fetch_assoc($count);
+
+        if ($count['total'] == 0)
+        {
+            $query = "SELECT * FROM `jobpost` WHERE `post_id` = '$post_id'";
+            $query = mysqli_query($conn, $query);
+            $row = mysqli_fetch_assoc($query);
+    
+            $company_name = $row['company_name'];
+            $job_title = $row['job_title'];
+            $employer_id = $row['postedby_uid'];
+            $job_description = $row['job_description'];
+
+            $jobseeker_id = $_SESSION['user_id'];
+    
+            $insert = "INSERT INTO `jobpost_bookmark`(
+                `jobpost_id`, 
+                `jobseeker_id`, 
+                `employer_id`,
+                `job_title`, 
+                `company_name`,
+                `job_description`,
+                `date_bookmarked`
+            ) 
+            VALUES ( 
+                '$post_id',
+                '$jobseeker_id',
+                '$employer_id',
+                '$job_title',
+                '$company_name',
+                '$job_description',
+                NOW()
+            )";
+            mysqli_query($conn, $insert);
+
+            $string = "Bookmark Complete";
+        }
+        else
+        {
+            $string = "Already Bookmarked";
+        }
+
+        $data = array('status' => 'success',
+                      'string' => $string);
+        echo json_encode($data);
+    }
+
+    if(isset($_POST['testing'])) {
+        $postId = ($_POST['postId']);
+        $query = mysqli_query($conn, "SELECT * FROM `applied_jobs` WHERE `post_id` = '$postId'");    
+        $row = mysqli_fetch_assoc($query);
+
+        $json = $row['primary_skill'];
+
+        $json = json_decode($json, true);
+        
+        $test = '(' . join(",", $json) . ')';
+        // $test = json_encode($json);
+        
+
+        // var_dump(json_decode($json));
+        // var_dump(json_decode($json, true));
+    
+        // $primarySkill = $row['primary_skill'];
+        $data = array (  
+            'status' => 'success',
+            'test' => $test
+        );
+        echo json_encode($data);
     }
 ?>

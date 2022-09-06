@@ -96,7 +96,7 @@ $(document).ready(function () {
 
                 // console.log(data.check_salary);
                 // console.log(data.statement);
-                console.log(data.data_test);
+                // console.log(data.data_test);
             }
         });
     }

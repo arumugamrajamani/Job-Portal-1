@@ -153,6 +153,14 @@
     echo json_encode($response);
     }
 
+    else if (isset($_POST['fetchDetails'])) {
+        $categoryId = mysqli_real_escape_string($conn, $_POST['postId']);
+        // Create query to get the employer information
+        $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM jobpost WHERE post_id = '$postId");
+        $row = mysqli_fetch_assoc($fetchDetailsQuery);
+        // Get the employer information needed to edit modal
+        echo $companyName = $row['post_id'];
+
     else if (isset($_POST['deleteJobPost'])) {
         $postId = mysqli_real_escape_string($conn, $_POST['postId']);
         // deleting the jobseeker in the database

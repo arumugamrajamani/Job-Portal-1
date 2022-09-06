@@ -1,5 +1,4 @@
-<?php include_once 'include/header.php'; ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -212,5 +211,4 @@
 <script src="js/jobmanage.js"></script>
 <script src="js/pfp.js"></script>
 <script src="../js/preloader.js"></script>
-
 </html>

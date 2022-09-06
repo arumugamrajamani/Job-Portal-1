@@ -106,7 +106,7 @@
         $uid = ($_SESSION['user_id']);
         $getPosts = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `postedby_uid` = '$uid'");
         while($row = mysqli_fetch_assoc($getPosts)){
-            $id = $row['post_iud'];
+            $id = $row['post_id'];
             $companyName = $row['company_name'];
             $jobTitle = $row['job_title'];
             $employment = $row['employment_type'];
@@ -129,7 +129,7 @@
                             }
                             $getDeletedPosts = mysqli_query($conn, "SELECT * FROM `jobpost_recycler` WHERE `postedby_uid` = '$uid'");
                             while($row1 = mysqli_fetch_assoc($getDeletedPosts)){
-                                $id = $row1['post_iud'];
+                                $id = $row1['post_id'];
                                 $companyName = $row1['company_name'];
                                 $jobTitle = $row1['job_title'];
                                 $employment = $row1['employment_type'];
@@ -152,28 +152,39 @@
             $response = array('tableData' => $tableData);
     echo json_encode($response);
     }
-    else {
+
+    else if (isset($_POST['deleteJobPost'])) {
         $postId = mysqli_real_escape_string($conn, $_POST['postId']);
+        // deleting the jobseeker in the database
+        mysqli_query($conn, "DELETE FROM jobpost WHERE post_id = '$postId'");
+        // Return nothing to the ajax call
+    }
+    
+    //else {
+       // $postId = mysqli_real_escape_string($conn, $_POST['postId']);
         //$postId = 56;
         //deleting the jobpost and moving it to recycle bin
-        $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_iud` = '$postId'");
-        $row = mysqli_fetch_assoc($fetchDeletedQuery);
-        $companyName = $row['company_name'];
-        $jobTitle = $row['job_title'];
-        $employment = $row['employment_type'];
-        $jobCategory = $row['job_category'];
-        $jobDescription = $row['job_description'];
-        $salary = $row['salary'];
-        $employerEmail = $row['employer_email'];
-        $primarySkill = $row['primary_skill'];
-        $secondarySkill = $row['secondary_skill'];
-        $postedby = $row['postedby_uid'];
-        $date = dateTimeConvertion($row['date_posted']);
+        //$fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_id` = '$postId'");
+        //$row = mysqli_fetch_assoc($fetchDeletedQuery);
+        //$companyName = $row['company_name'];
+        //$jobTitle = $row['job_title'];
+        //$employment = $row['employment_type'];
+        //$jobCategory = $row['job_category'];
+        //$jobDescription = $row['job_description'];
+        //$salary = $row['salary'];
+        //$employerEmail = $row['employer_email'];
+        //$primarySkill = $row['primary_skill'];
+        //$secondarySkill = $row['secondary_skill'];
+        //$postedby = $row['postedby_uid'];
+        //$date = dateTimeConvertion($row['date_posted']);
             
-        mysqli_query($conn, "INSERT INTO `jobpost_recycler`(`company_name`,`job_title`,`employment_type`,`job_category`,`job_description`,`salary`,`employer_email`,`primary_skill`,`secondary_skill`,`postedby_uid`,`date_posted`
-    ) VALUES('$companyName', '$jobTitle', '$employment', '$jobCategory', '$jobDescription', '$salary', '$employerEmail', '$primarySkill', '$secondarySkill', '$postedby', '$date'
-    )");
+        //mysqli_query($conn, "INSERT INTO `jobpost_recycler`(`company_name`,`job_title`,`employment_type`,`job_category`,`job_description`,`salary`,`employer_email`,`primary_skill`,`secondary_skill`,`postedby_uid`,`date_posted`
+    //) VALUES('$companyName', '$jobTitle', '$employment', '$jobCategory', '$jobDescription', '$salary', '$employerEmail', '$primarySkill', '$secondarySkill', '$postedby', '$date'
+    //)");
     
-        mysqli_query($conn, "DELETE FROM `jobpost` WHERE `post_iud` = '$postId'");
-    }
+        //mysqli_query($conn, "DELETE FROM `jobpost` WHERE `post_id` = '$postId'");
+    //}
+
+    
+    
 ?>

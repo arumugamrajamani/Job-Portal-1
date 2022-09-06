@@ -51,17 +51,47 @@ $(document).ready(function () {
                 },
                 dataType: 'JSON',
                 success: function (response) {
-                    window.location = 'jobapplication.php';
+                    // window.location = 'jobapplication.php';
+
                 }
             });
         }
         else if ($(this).text() == "APPLIED") {
             console.log("You have already applied."); 
+            $.ajax({
+                url: 'php/insidejob.inc.php',
+                type: 'POST',
+                data: {
+                    testing: true,
+                    // postId: postId
+                },
+                dataType: 'JSON',
+                success: function (response) {
+                    // window.location = 'jobapplication.php';
+                    console.log(response.test);
+
+                }
+            });
         }
+        
     });
 
     $("#bookmarkJob").click(function() {
-
+        $.ajax({
+            url: 'php/insidejob.inc.php',
+            type: 'POST',
+            data: {
+                bookmark: true,
+                postId: postId
+            },
+            dataType: 'JSON',
+            success: function (response) {
+                // window.location = 'jobapplication.php';
+                // console.log(response.test);
+                console.log("Finished");
+                console.log(response.count);
+            }
+        });
     });
 
 });

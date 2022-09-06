@@ -113,7 +113,7 @@
           <div class="butt">
             <button id="applyJob" class="logapp appnow" style="text-decoration: none;"></button>
             <button id="bookmarkJob" class="markb">
-              <a><img id="bmark" onclick="update()" src="image/Vector.png" alt=""></a>
+              <a><img id="bmark" src="image/Vector.png" alt=""></a>
             </button>
           </div>
         </div>

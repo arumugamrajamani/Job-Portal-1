@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container-fluid"> 
             <a class="navbar-brand me-1" href="#"></a>
-            <img src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70"></a>
+            <img src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70" onclick="window.location.href='company-profile.php'"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -180,7 +180,7 @@
                                 <div class="row mb-3 mt-0 ms-4 fw-bold">
                                     <label for="e-employeremail" class="col-sm-3 ">Employer Email:</label>
                                     <div class="col-sm-8">
-                                        <input type="number" class="form-control" id="e-employeremail">
+                                        <input type="text" class="form-control" id="e-employeremail">
                                     </div>
                                 </div>
                                 <div class="row mb-3 mt-0 ms-4 fw-bold">
@@ -211,4 +211,5 @@
 <script src="js/jobmanage.js"></script>
 <script src="js/pfp.js"></script>
 <script src="../js/preloader.js"></script>
+
 </html>

@@ -56,7 +56,7 @@ if (isset($_POST['getData'])) {
             $fullname= $row1['fullname'];
         }
             $jobApplied = $row['job_title'];
-            $dataId = $row['post_iud'];
+            $dataId = $row['post_id'];
             $date = $date = dateTimeConvertion($row['date_applied']);;
             $status = $row['status'];
             $title = $row['job_title'];
@@ -86,7 +86,7 @@ if (isset($_POST['getData'])) {
 else if (isset($_POST['update'])) {
     $status = $_POST['status'];
     $postId = $_POST['postId'];
-    $fetchDetailsQuery = mysqli_query($conn, "UPDATE `applied_jobs` SET `status`='$status' WHERE `post_iud` = '$postId'");
+    $fetchDetailsQuery = mysqli_query($conn, "UPDATE `applied_jobs` SET `status`='$status' WHERE `post_id` = '$postId'");
 }
 else if (isset($_POST['bookmark'])) {
     $jobseekerId = $_POST['Num'];
@@ -98,9 +98,9 @@ else if (isset($_POST['remove'])) {
 }
 if (isset($_POST['delete'])) {
     $Id = $_POST['postId'];
-    $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM `applied_jobs` WHERE post_iud = '$Id'");
+    $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM `applied_jobs` WHERE post_id = '$Id'");
     $row = mysqli_fetch_assoc($fetchDetailsQuery);
     $uid = $row['jobseeker_id'];
     mysqli_query($conn, "UPDATE `jobseeker` SET `bookmarked`='false' WHERE `jobseeker_id` = '$uid'");
-    mysqli_query($conn, "DELETE FROM `applied_jobs` WHERE post_iud = '$Id'");
+    mysqli_query($conn, "DELETE FROM `applied_jobs` WHERE post_id = '$Id'");
 }

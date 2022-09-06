@@ -86,10 +86,16 @@ $(document).ready(function () {
             },
             dataType: 'JSON',
             success: function (response) {
+<<<<<<< HEAD
                 // window.location = 'jobapplication.php';
                 // console.log(response.test);
                 console.log("Finished");
                 console.log(response.count);
+=======
+                window.location = 'bookmark-job.php';
+                console.log("Finished");
+                console.log(response.string);
+>>>>>>> 2033d177f08095d496ba5f3de6c4c2facb595406
             }
         });
     });

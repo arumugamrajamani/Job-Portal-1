@@ -91,6 +91,8 @@
                     // Create session for user id and user type
                     $_SESSION['user_id'] = isJobseeker($email)['user_id'];
                     $_SESSION['user_type'] = 'jobseeker';
+                    $_SESSION['email'] = $email;
+                    $_SESSION['password'] = $password;
                     // Add jobseeker to response variable
                     $response = "jobseeker";
                 } else {
@@ -102,6 +104,8 @@
                     // Create session for user id and user type
                     $_SESSION['user_id'] = isEmployer($email)['user_id'];
                     $_SESSION['user_type'] = 'employer';
+                    $_SESSION['email'] = $email;
+                    $_SESSION['password'] = $password;
                     // Add employer to response variable
                     $response = "employer";
                 } else {
@@ -113,6 +117,8 @@
                     // Create session for user id and user type
                     $_SESSION['user_id'] = isAdmin($email)['user_id'];
                     $_SESSION['user_type'] = 'admin';
+                    $_SESSION['email'] = $email;
+                    $_SESSION['password'] = $password;
                     // Add admin to response variable
                     $response = "admin";
                 } else {
@@ -121,6 +127,38 @@
             }
         }
         // Return as response
+        echo $response;
+    }
+
+    if (isset($_POST['fetchLogin'])) {
+        $email = $_SESSION['email'];
+        $password = $_SESSION['password'];
+
+        if (isset($_SESSION['user_id']) && $_SESSION['user_type'] == 'admin') {
+            if(isAdmin($email)['status']){
+                    // Function for checking if password is correct
+                    if(password_verify($password, isAdmin($email)['hash_password'])){
+                        // Add admin to response variable
+                        $response = "admin";
+                    } 
+                }
+        } else if (isset($_SESSION['user_id']) && $_SESSION['user_type'] =='employer') {
+            if(isEmployer($email)['status']){
+                // Function for checking if password is correct
+                if(password_verify($password, isEmployer($email)['hash_password'])){
+                    // Add admin to response variable
+                    $response = "employer";
+                }
+            }
+        } else if (isset($_SESSION['user_id']) && $_SESSION['user_type'] =='jobseeker') {
+            if(isJobseeker($email)['status']){
+                // Function for checking if password is correct
+                if(password_verify($password, isJobseeker($email)['hash_password'])){
+                    // Add admin to response variable
+                    $response = "jobseeker";
+                } 
+            }
+        }
         echo $response;
     }
 ?>

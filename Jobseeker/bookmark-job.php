@@ -1,3 +1,4 @@
+<?php include_once 'include/header.php'; ?>
 <!doctype html>
 <html lang="en">
 
@@ -75,7 +76,7 @@
         <section class="type p-1">
           <div class="bg-color-header">
             <h3 class="book"><b>BOOKMARKED JOBS</b><i class="fa-solid fa-bookmark bookmark"></i></h3>
-            <div class="table-responsive tables" id="no-more-tables">
+            <div class="table-responsive tables" id="detail_bookmark">
               <table class="table basic-table table-headers table table-hover">
                 <thead class="text-dark text-center" id="title-sub">
                   <tr>
@@ -84,84 +85,48 @@
                     <th>Action</th>
                   </tr>
                 </thead>
-                <tbody class="bg-light text-dark text-center" id="body-h">
-                  <!-- <tr class="tr1">
-                    <td data-title="Job Tittle">Administrative Assistant</td>
-                    <td data-title="Job Description" class="descript">Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Velit accusamus harum cupiditate quisquam quae dolorem non voluptatem minus.
-                    </td>
-                    <td data-title="Action" class="action"><button class="btn btn-info shadow" type="button"
-                        id="btn-info">APPLY</button>
-                      <button class="btn btn-dark btn-sm rounded-circle" type="button" data-toggle="tooltip"
-                        data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>
-                </tbody>
-                <tbody class="bg-light text-dark text-center" id="body-h">
-                  <tr class="tr1">
-                    <td data-title="Job Tittle">Voice Over Artist</td>
-                    <td data-title="Job Description" class="descript">Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Officia tenetur quis excepturi, commodi accusamus ad facere deserunt nulla quam
-                      ratione?</td>
-                    <td data-title="Action" class="action"><button class="btn btn-info shadow" type="button"
-                        id="btn-info">APPLY</button>
-                      <button class="btn btn-dark btn-sm rounded-circle" type="button" data-toggle="tooltip"
-                        data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>
-                </tbody>
-                <tbody class="bg-light text-dark text-center" id="body-h">
-                  <tr class="tr1">
-                    <td data-title="Job Tittle">Youtube Video Script Writer</td>
-                    <td data-title="Job Description" class="descript">Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Minus dolorum consectetur, animi explicabo libero recusandae vero blanditiis
-                      dicta porro!</td>
-                    <td data-title="Action" class="action"><button class="btn btn-info shadow" type="button"
-                        id="btn-info">APPLY</button>
-                      <button class="btn btn-dark btn-sm rounded-circle" type="button" data-toggle="tooltip"
-                        data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr> -->
-                </tbody>
+                <!-- Details will be shown here from bookmark-job.inc.php -->
               </table>
             </div>
           </div>
         </section>
       </div>
     </form>
+    <div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title ms-5" id="exampleModalLabel">Delete Bookmark?</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="delete modal-body">
+                  <button type="button" id="delete-yes" class="yes-no btn btn-success">Yes</button>
+                  <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
+              </div>
+          </div>
+      </div>
   </div>
-  <div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title ms-5" id="exampleModalLabel">Delete Bookmark?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="delete modal-body">
-                    <button type="button" id="del-yes" class="yes-no btn btn-success">Yes</button>
-                    <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modal-apply" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title ms-5" id="exampleModalLabel">Apply for the job?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="delete modal-body">
-                    <button type="button" id="apply-yes" class="yes-no btn btn-success">Yes</button>
-                    <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div class="modal fade" id="modal-apply" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title ms-5" id="exampleModalLabel">Apply for the job?</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="delete modal-body">
+                  <button type="button" id="apply-yes" class="yes-no btn btn-success">Yes</button>
+                  <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+  <script src= "js/bookmark-job.js"></script>
+  <script src= "js/pfp.js"></script>
 </body>
-<script src= "js/bookmark-job.js"></script>
-<script src= "js/pfp.js"></script>
+
 </html>

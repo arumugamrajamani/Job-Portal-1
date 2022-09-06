@@ -170,6 +170,7 @@
     
             $company_name = $row['company_name'];
             $job_title = $row['job_title'];
+<<<<<<< HEAD
             $jobseeker_id = $_SESSION['user_id'];
     
             $test = "INSERT INTO `jobpost_bookmark`(
@@ -177,16 +178,40 @@
                 `jobseeker_id`, 
                 `job_title`, 
                 `company_name`,
+=======
+            $employer_id = $row['postedby_uid'];
+            $job_description = $row['job_description'];
+
+            $jobseeker_id = $_SESSION['user_id'];
+    
+            $insert = "INSERT INTO `jobpost_bookmark`(
+                `jobpost_id`, 
+                `jobseeker_id`, 
+                `employer_id`,
+                `job_title`, 
+                `company_name`,
+                `job_description`,
+>>>>>>> 2033d177f08095d496ba5f3de6c4c2facb595406
                 `date_bookmarked`
             ) 
             VALUES ( 
                 '$post_id',
                 '$jobseeker_id',
+<<<<<<< HEAD
                 '$job_title',
                 '$company_name',
                 NOW()
             )";
             mysqli_query($conn, $test);
+=======
+                '$employer_id',
+                '$job_title',
+                '$company_name',
+                '$job_description',
+                NOW()
+            )";
+            mysqli_query($conn, $insert);
+>>>>>>> 2033d177f08095d496ba5f3de6c4c2facb595406
 
             $string = "Bookmark Complete";
         }
@@ -198,7 +223,10 @@
         $data = array('status' => 'success',
                       'string' => $string);
         echo json_encode($data);
+<<<<<<< HEAD
         
+=======
+>>>>>>> 2033d177f08095d496ba5f3de6c4c2facb595406
     }
 
     if(isset($_POST['testing'])) {

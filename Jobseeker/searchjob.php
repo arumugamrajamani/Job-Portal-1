@@ -265,7 +265,7 @@
     </div>
 </div>
 
-<script src="js/searchjob.js"></script>    
+  
 
 <div class="modal fade" id="qr-code" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
@@ -283,6 +283,8 @@
     </div>
     </div>
 </div>
+
+<script src="js/searchjob.js"></script>  
 
 </body>
     <script src="js/pfp.js"></script>

@@ -1,10 +1,11 @@
 $(document).ready(function () {
     // Note: the variable "postId" was located at the bottom portion of insidejob.php
+    // It's role was to get the value stored in the URL
     
-    console.log(postId);
     load_data();
+
+    // Initially loads the data for the page
     function load_data(){
-        
         $.ajax({
             url: 'php/insidejob.inc.php',
             type: 'POST',
@@ -14,7 +15,6 @@ $(document).ready(function () {
             },
             dataType: 'JSON',
             success: function (response) {
-                // console.log('response');
                 $('#jobTitle').html(response.jobTitle);
                 $('#jobTitle1').html(response.jobTitle);
                 $('#companyName').html(response.companyName);
@@ -26,7 +26,6 @@ $(document).ready(function () {
                 $('#employment').html('• '+response.employment);
                 $('#description').html(response.description);
                 $('#datePosted').html(response.date);
-                // console.log(response.test);
 
                 // Check if the jobseeker was applied or not based on the fetched database on 'applied_jobs'
                 if (response.isApplied == true) {
@@ -39,6 +38,8 @@ $(document).ready(function () {
         });
     }
 
+    // Executes the event the id "applyJob" was clicked. It will detect first the 
+    // statement of the button before performing mysql query
     $("#applyJob").click(function() {
         if ($(this).text() == "APPLY NOW") {
             console.log("Applied!")
@@ -51,31 +52,31 @@ $(document).ready(function () {
                 },
                 dataType: 'JSON',
                 success: function (response) {
-                    // window.location = 'jobapplication.php';
+                    // Will direct to the jobapplication where it shows the table of every jobpost where the jobseeker applied
+                    window.location = 'jobapplication.php';
 
                 }
             });
         }
-        else if ($(this).text() == "APPLIED") {
-            console.log("You have already applied."); 
+        else if ($(this).text() == "APPLIED") {        
             $.ajax({
                 url: 'php/insidejob.inc.php',
                 type: 'POST',
                 data: {
                     testing: true,
-                    // postId: postId
+                    postId: postId
                 },
                 dataType: 'JSON',
                 success: function (response) {
-                    // window.location = 'jobapplication.php';
-                    console.log(response.test);
-
+                    console.log("You have already applied."); 
                 }
             });
         }
         
     });
 
+
+    // Bookmark function for insidejob page. It will direct to the bookmark table if successfully performed
     $("#bookmarkJob").click(function() {
         $.ajax({
             url: 'php/insidejob.inc.php',
@@ -86,47 +87,10 @@ $(document).ready(function () {
             },
             dataType: 'JSON',
             success: function (response) {
-<<<<<<< HEAD
-                // window.location = 'jobapplication.php';
-                // console.log(response.test);
-                console.log("Finished");
-                console.log(response.count);
-=======
                 window.location = 'bookmark-job.php';
                 console.log("Finished");
                 console.log(response.string);
->>>>>>> 2033d177f08095d496ba5f3de6c4c2facb595406
             }
         });
     });
-
 });
-
-// function update(){
-//     $.ajax({
-//         url: 'php/insidejob.inc.php',
-//         type: 'POST',
-//         data: {
-//             update: true,
-//         },
-//         //dataType: 'JSON',
-//         success: function (response) {
-//             console.log(response);
-//             window.location = 'bookmark-job.php';
-//         }
-//     });
-// }
-// function apply(){
-//     $.ajax({
-//         url: 'php/insidejob.inc.php',
-//         type: 'POST',
-//         data: {
-//             apply: true,
-//             postId: postId
-//         },
-//         dataType: 'JSON',
-//         success: function (response) {
-//             window.location = 'jobapplication.php';
-//         }
-//     });
-// }

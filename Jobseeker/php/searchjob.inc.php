@@ -217,23 +217,36 @@
             'tableData' => $tableData,
             'pagination' => $pagination,
             'entries' => $entries,
-
             'check_salary' => $check_salary,
-            // 'data_test' => $data_test,
             'statement' => $statement,
         );
 
         echo json_encode($response);
     }
-    else if (isset($_POST['qr'])) {
+
+    if (isset($_POST['qr'])) {
         $qr = $_POST['data'];
         $getEmployerName = mysqli_query($conn, "SELECT * FROM `employer` WHERE `employer_id` = '$qr'");
         $name = mysqli_fetch_assoc($getEmployerName);
         $qrCode = getQrLoc($name['qr_code']);
         $response = array('qr' => $qrCode,);
         echo json_encode($response);
-    }   
-    else if (isset($_POST['details'])) {
-        // $_SESSION['postId'] = $_POST["postId"];
-        // session_destroy();
     }
+
+    if (isset($_POST['details'])) {
+        $postId = $_POST['postId'];
+
+        $query = "SELECT * from `jobpost` WHERE `post_id`=$postId";
+        $query = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($query);
+
+        $post_id = $row['post_id'];
+        $company_name = $row['company_name'];
+
+        $response = array (
+            'post_id' => $post_id,
+            'company_name' => $company_name,
+        );
+        echo json_encode($response);
+    }
+?>

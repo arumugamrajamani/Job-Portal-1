@@ -26,7 +26,7 @@
         <div class="container-fluid">
             <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light fixed-top mx-0 shadow " >
                 <a href="#" class="navbar-brand ms-3">
-                <img src="image/light-logo.png" alt="Job Portal Logo" width="120" height="95"></a>
+                <img src="image/light-logo.png" onclick="window.location.href='applicant-profile.php'" alt="Job Portal Logo" width="120" height="95"></a>
     <form class="search-first d-flex">
         <input class="form-control1 icon1" type="search" id="search_jobt" placeholder="Search for a job title" aria-label="Search">
         <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
@@ -265,7 +265,7 @@
     </div>
 </div>
 
-  
+<script src="js/searchjob.js"></script>    
 
 <div class="modal fade" id="qr-code" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
@@ -283,8 +283,6 @@
     </div>
     </div>
 </div>
-
-<script src="js/searchjob.js"></script>  
 
 </body>
     <script src="js/pfp.js"></script>

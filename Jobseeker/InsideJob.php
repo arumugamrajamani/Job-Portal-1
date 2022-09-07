@@ -10,11 +10,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <!-- jQuery cdn link below -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-  <!-- Toast CDN for functionality of toastr -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Toast CDN for design of toastr -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
   <title>Inside the Job</title>
   <link rel="stylesheet" href="css/InsideJob.css">
 </head>
@@ -22,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-0" id="nav0">
         <div class="container-fluid" id="inner">
           <a class="navbar-brand me-1" href="#"></a>
-          <img class="img" src="image/Techployment (7) 1.png" alt="Job Portal Logo" width="95" height="90" id="logo"></a>
+          <img class="img" src="image/Techployment (7) 1.png" onclick="window.location.href='applicant-profile.php'" alt="Job Portal Logo" width="95" height="90" id="logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <img src="image/selection.png" alt="" width="40px" height="50px" id="Selection">

@@ -20,7 +20,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
 		<div class="container-fluid">
 			<a class="navbar-brand me-1" href="#"></a>
-			<img src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70" id="logo"></a>
+			<img src="image/light-logo.png" onclick="window.location.href='applicant-profile.php'" alt="Job Portal Logo" width="100" height="70" id="logo"></a>
 			<button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse"
 				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 				aria-label="Toggle navigation">

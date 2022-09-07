@@ -31,8 +31,6 @@
 	<script src="https://kit.fontawesome.com/67c66657c7.js"></script>
 	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/message-new.css">
-	<!-- jQuery cdn link below -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<title>Message</title>
 </head>
 
@@ -40,7 +38,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
 		<div class="container-fluid">
 			<a class="navbar-brand me-1" href="#"></a>
-			<img src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70" id="logo"></a>
+			<img src="image/light-logo.png" onclick="window.location.href='applicant-profile.php'" alt="Job Portal Logo" width="100" height="70" id="logo"></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 				aria-label="Toggle navigation">
@@ -59,15 +57,13 @@
 					<li class="nav-item">
 						<a class="nav-link text-dark about active" href="jobcategories.php">JOB BOARD</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link text-dark about active text-center" href="searchjob.php">AVAILABLE JOBS</a>
-					</li>
 					<li class="nav-item account dropdown active">
 						<a class="nav-link text-dark dropdown-toggle account active" href="#"
 							id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img id="pfp" class="image" src="" alt="Profile" width="30" height="30" style="border-radius: 100px; object-fit: cover;"> ACCOUNT</a>
-            <ul class="dropdown-menu account-drop drop" aria-labelledby="navbarDropdown">
-                <li><a id="name" class="dropdown-item text-light text-start name" href="applicant-profile.php"></a></li>
+							<img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30">
+							ACCOUNT</a>
+						<ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item text-light" href="/Jobseeker/applicant-profile.php">FULL NAME</a></li>
 							<li>
 								<hr class="dropdown-divider bg-white">
 							</li>
@@ -231,6 +227,6 @@
         }
     }
 		</script>
-		<script src="js/pfp.js"></script>
 </body>
+
 </html>

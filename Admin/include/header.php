@@ -6,6 +6,7 @@ if (!isset($_SESSION['user_id'])) {
 } else if (isset($_SESSION['user_id']) && $_SESSION['user_type'] =='jobseeker') {
     header('location: ../Jobseeker/applicant-profile.php');
 }
+$page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'],'/')+1);
 ?>
 
 <!DOCTYPE html>
@@ -59,3 +60,104 @@ if (!isset($_SESSION['user_id'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+
+    <?php
+        if ($page == 'dashboard.php' || $page == 'index.php') {
+            ?> 
+                <link rel="stylesheet" href="css/dashboard.css">
+                <title>Dashboard | Admin</title>
+            <?php
+        }
+
+        if ($page == 'aboutus-settings.php') {
+            ?> 
+                <link rel="stylesheet" href="css/aboutus-settings.css">
+                <title>About Us | Settings</title>
+            <?php
+        }
+
+        if ($page == 'admin-change-pass.php') {
+            ?>
+                <link rel="stylesheet" href="css/admin-change-pass.css">
+                <title>Admin Change Password</title>
+            <?php
+        }
+
+        if ($page == 'admin-profile.php') {
+            ?>
+                <link rel="stylesheet" href="css/admin-profile.css">
+                <title>Profile | Admin</title>
+            <?php
+        }
+
+        if ($page == 'edit-profile.php') {
+            ?>
+                <link rel="stylesheet" href="css/edit-profile.css">
+                <title>Edit Profile | Admin</title>
+            <?php
+        }
+        
+        if ($page == 'employer-management.php') {
+            ?>
+                <link rel="stylesheet" href="css/employer-management.css">
+                <title>Employer Management | Admin</title>
+            <?php
+        }
+
+        if ($page == 'jobseeker-management.php') {
+            ?>
+                <link rel="stylesheet" href="css/jobseeker-management.css">
+                <title>Job seekers Management | Admin</title>
+            <?php
+        }
+
+        if ($page == 'jobpost-management.php') {
+            ?>
+                <link rel="stylesheet" href="css/jobpost-management.css">
+                <title>Job Post Management | Admin</title>
+            <?php
+        }
+
+        if ($page == 'jobcategories-management.php') {
+            ?>
+                <link rel="stylesheet" href="css/jobcategories-management.css">
+                <title>Job Categories Management | Admin</title>
+            <?php
+        }
+
+        if ($page == 'system-settings.php') {
+            ?>
+                <link rel="stylesheet" href="css/system-settings.css">
+                <title>System | Settings</title>
+            <?php
+        }
+
+        if ($page == 'faq-settings.php') {
+            ?>
+                <link rel="stylesheet" href="css/faq-settings.css">
+                <title>FAQ | Settings</title>
+            <?php
+        }
+
+        if ($page == 'recycle-bin-employer.php') {
+            ?>
+                <link rel="stylesheet" href="css/recycle-bin-employer.css">
+                <title>Recycle Bin | Employer</title>
+            <?php
+        }
+
+        if ($page == 'recycle-bin-jobpost.php') {
+            ?>
+                <link rel="stylesheet" href="css/recycle-bin-jobpost.css">
+                <title>Recycle Bin | Job Post</title>
+            <?php
+        }
+
+        if ($page == 'recycle-bin-jobseeker.php') {
+            ?>
+                <link rel="stylesheet" href="css/recycle-bin-jobseeker.css">
+                <title>Recycle Bin | Job seekers</title>
+            <?php
+        }
+    ?>
+</head>

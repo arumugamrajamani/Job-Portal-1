@@ -87,7 +87,7 @@ if (isset($_POST['loadData'])) {
 
     // Check if search is present
     if (isset($_POST['search'])) {
-        $search = $_POST['search'];
+        $search = trim($_POST['search']);
         $statement = "SELECT * FROM jobseeker_recyclebin WHERE fullname LIKE '%$search%' OR mobile_number LIKE '%$search%' OR email LIKE '%$search%' LIMIT $start, $pageLimit";
         $paginationStatement = "SELECT * FROM jobseeker_recyclebin WHERE fullname LIKE '%$search%' OR mobile_number LIKE '%$search%' OR email LIKE '%$search%'";
     } else {

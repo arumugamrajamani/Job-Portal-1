@@ -98,7 +98,7 @@ if (isset($_POST['loadData'])) {
 
     // Check if search is present
     if (isset($_POST['search'])) {
-        $search = $_POST['search'];
+        $search = trim($_POST['search']);
 
         $statement = "SELECT * FROM employer WHERE company_name LIKE '%$search%' OR employer_name LIKE '%$search%' OR employer_position LIKE '%$search%' OR email LIKE '%$search%' LIMIT $start, $pageLimit";
         $paginationStatement = "SELECT * FROM employer WHERE company_name LIKE '%$search%' OR employer_name LIKE '%$search%' OR employer_position LIKE '%$search%' OR email LIKE '%$search%'";

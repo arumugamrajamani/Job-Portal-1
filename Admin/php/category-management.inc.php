@@ -67,7 +67,7 @@ if (isset($_POST['loadData'])) {
 
     // Check if search is present
     if (isset($_POST['search'])) {
-        $search = $_POST['search'];
+        $search = trim($_POST['search']);
         $statement = "SELECT * FROM category WHERE job_title LIKE '%$search%' OR date_created LIKE '%$search%' LIMIT $start, $pageLimit";
         $paginationStatement = "SELECT * FROM category WHERE job_title LIKE '%$search%' OR date_created LIKE '%$search%'";
     } else {

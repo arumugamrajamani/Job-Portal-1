@@ -61,4 +61,24 @@
 
         echo json_encode($response);
     }
+
+    if (isset($_POST['input'])) {
+        
+        $input = trim(preg_replace('/\s+/',' ', $_POST['input']));
+        $searchQuery = "SELECT * FROM faq_settings WHERE question LIKE '%$input%'";
+        $result = mysqli_query($conn, $searchQuery);
+        if (mysqli_num_rows($result) > 0) {
+            echo '<h4 class="fw-bold">SEARCH RESULT</h4>';
+            while ($row = mysqli_fetch_assoc($result)) {
+                $_id = $row['id'];
+                $category = $row['category'];
+                $question = $row['question'];
+                $answer = $row['answer'];
+    
+                echo returnTable($_id, $question, $answer);
+            }
+        } else {
+            echo "<h4 style='color:red;' class='fw-bold'>Search Result Not Found</h4><br>";
+        }
+    }
 ?>

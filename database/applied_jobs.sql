@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2022 at 02:38 AM
+-- Generation Time: Sep 08, 2022 at 03:31 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `applied_jobs`;
 CREATE TABLE `applied_jobs` (
+  `apply_id` int(11) NOT NULL,
   `post_id` int(50) NOT NULL,
   `company_name` text NOT NULL,
   `job_title` text NOT NULL,
@@ -53,7 +54,17 @@ CREATE TABLE `applied_jobs` (
 -- Indexes for table `applied_jobs`
 --
 ALTER TABLE `applied_jobs`
-  ADD PRIMARY KEY (`post_id`);
+  ADD PRIMARY KEY (`apply_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `applied_jobs`
+--
+ALTER TABLE `applied_jobs`
+  MODIFY `apply_id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

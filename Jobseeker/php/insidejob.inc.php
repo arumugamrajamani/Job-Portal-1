@@ -60,9 +60,10 @@
         echo json_encode($response);
     }
     
-    // 
     if(isset($_POST['apply'])) {
         $postId = ($_POST['postId']);
+        $id = ($_SESSION['user_id']);
+
         $query = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_id` = '$postId'");
         $row = mysqli_fetch_assoc($query);
         $company_name = $row['company_name'];
@@ -76,8 +77,7 @@
         $secondarySkill = $row['secondary_skill'];
         $postedby = $row['postedby_uid'];
         $date_posted = dateTimeConvertion($row['date_posted']);
-        $id = ($_SESSION['user_id']);
-        
+
         mysqli_query($conn, "INSERT INTO `applied_jobs`(
         `post_id`,
         `company_name`,
@@ -117,9 +117,10 @@
 
     if(isset($_POST['bookmark'])) {
         $post_id = ($_POST['postId']);
+        $jobseeker_id = $_SESSION['user_id'];
 
         // The website will check if the user has already bookmarked the post
-        $count = "SELECT COUNT(jobpost_id) as total FROM jobpost_bookmark WHERE jobpost_id='$post_id'";
+        $count = "SELECT COUNT(jobpost_id) as total FROM jobpost_bookmark WHERE jobpost_id='$post_id' AND jobseeker_id='$jobseeker_id'";
         $count = mysqli_query($conn, $count);
         $count = mysqli_fetch_assoc($count);
 
@@ -134,7 +135,7 @@
             $employer_id = $row['postedby_uid'];
             $job_description = $row['job_description'];
 
-            $jobseeker_id = $_SESSION['user_id'];
+            
     
             $insert = "INSERT INTO `jobpost_bookmark`(
                 `jobpost_id`, 

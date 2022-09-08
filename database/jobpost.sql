@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2022 at 08:37 AM
+-- Generation Time: Sep 08, 2022 at 02:37 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `jobpost`
 --
 
+DROP TABLE IF EXISTS `jobpost`;
 CREATE TABLE `jobpost` (
   `post_id` int(50) NOT NULL,
   `company_name` text NOT NULL,
@@ -42,15 +43,6 @@ CREATE TABLE `jobpost` (
   `date_posted` varchar(50) NOT NULL,
   `bookmark` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `jobpost`
---
-
-INSERT INTO `jobpost` (`post_id`, `company_name`, `job_title`, `employment_type`, `job_category`, `job_description`, `salary`, `employer_email`, `primary_skill`, `secondary_skill`, `postedby_uid`, `date_posted`, `bookmark`) VALUES
-(64, 'Polytechnic University of the Philippines', 'TEst freelancer', 'Freelancer', 'comshop', 'dasdasdas', '15000', 'm.a.pandan26@gmail.com', '1', '1', 45, '2022-08-30 13:14:12', ''),
-(67, 'Jujutsu High', 'Philippines', 'Full-Time', 'comshop bantay', 'fsagdfgdfgdfgdfgdfgdfgfdgdfg', '60000', 'TPAdmin1@gmail.com', '2', '3', 45, '2022-09-01 16:06:30', ''),
-(68, 'Python Testing', 'dasdasdas', 'Freelancer', 'Janitor', 'dasdasdas', '50000', 'jujutsuhigh@gmail.com', '2', '1', 39, '2022-09-01 16:27:54', '');
 
 --
 -- Indexes for dumped tables
@@ -70,7 +62,7 @@ ALTER TABLE `jobpost`
 -- AUTO_INCREMENT for table `jobpost`
 --
 ALTER TABLE `jobpost`
-  MODIFY `post_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `post_id` int(50) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

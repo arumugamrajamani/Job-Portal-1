@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2022 at 08:36 AM
+-- Generation Time: Sep 08, 2022 at 02:38 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `applied_jobs`
 --
 
+DROP TABLE IF EXISTS `applied_jobs`;
 CREATE TABLE `applied_jobs` (
   `post_id` int(50) NOT NULL,
   `company_name` text NOT NULL,
@@ -43,14 +44,6 @@ CREATE TABLE `applied_jobs` (
   `status` varchar(255) NOT NULL,
   `jobseeker_id` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `applied_jobs`
---
-
-INSERT INTO `applied_jobs` (`post_id`, `company_name`, `job_title`, `employment_type`, `job_category`, `job_description`, `salary`, `employer_email`, `primary_skill`, `secondary_skill`, `postedby_uid`, `date_applied`, `status`, `jobseeker_id`) VALUES
-(64, 'Polytechnic University of the Philippines', 'TEst freelancer', 'Freelancer', 'comshop', 'dasdasdas', '15000', 'm.a.pandan26@gmail.com', '1', '1', 45, '2022-09-05 14:16:04', 'Pending', 51),
-(67, 'Jujutsu High', 'Philippines', 'Full-Time', 'comshop bantay', 'fsagdfgdfgdfgdfgdfgdfgfdgdfg', '60000', 'TPAdmin1@gmail.com', '2', '3', 45, '2022-09-05 13:45:52', 'Pending', 51);
 
 --
 -- Indexes for dumped tables

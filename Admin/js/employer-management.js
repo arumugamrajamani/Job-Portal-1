@@ -177,8 +177,6 @@ $(document).ready(function () {
     })
 
     //--------------------------------Start of Edit Details validation --------------------------------------------------------
-    
-    // NOTE: NOT WORKING...
 
     // Trigger this when user started to type in fullname input and validate it
     $('#e-employerfullname').on('keyup', function () {

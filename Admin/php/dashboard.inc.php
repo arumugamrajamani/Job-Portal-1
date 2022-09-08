@@ -35,7 +35,14 @@ if (isset($_POST['getCategory'])) {
         }
     }
     //associative array to store all the values needed for the chart
-    $response = array('web' => $webDev, 'virtual' => $virtualAsst, 'graphic' =>$graphic, 'projMnmt' => $projMnmt, 'count' => $count, 'low' => 0);
+    $response = array(
+        'web' => $webDev, 
+        'virtual' => $virtualAsst, 
+        'graphic' =>$graphic, 
+        'projMnmt' => $projMnmt, 
+        'count' => $count, 
+        'low' => 0
+    );
     echo json_encode($response);
 }
 

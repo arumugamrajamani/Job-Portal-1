@@ -207,9 +207,8 @@
             </div>
         </div>
     </div>
-
+    
+    <script src="js/jobmanage.js"></script>
+    <script src="js/pfp.js"></script>
 </body>
-<script src="js/jobmanage.js"></script>
-<script src="js/pfp.js"></script>
-<script src="../js/preloader.js"></script>
 </html>

@@ -6,6 +6,7 @@ $(document).ready(function () {
 
     // Initially loads the data for the page
     function load_data(){
+        // $('#applyJob').text('APPLY NOW')
         $.ajax({
             url: 'php/insidejob.inc.php',
             type: 'POST',
@@ -30,8 +31,7 @@ $(document).ready(function () {
                 // Check if the jobseeker was applied or not based on the fetched database on 'applied_jobs'
                 if (response.isApplied == true) {
                     $("#applyJob").text("APPLIED");
-                }
-                else {
+                } else {
                     $("#applyJob").text("APPLY NOW");
                 }
             }
@@ -50,11 +50,12 @@ $(document).ready(function () {
                     apply: true,
                     postId: postId
                 },
-                dataType: 'JSON',
+                // dataType: 'JSON',
                 success: function (response) {
-                    // Will direct to the jobapplication where it shows the table of every jobpost where the jobseeker applied
+                    console.log(response)
+                    // Will direct to the jobapplication where it shows the 
+                    // table of every jobpost where the jobseeker applied
                     window.location = 'jobapplication.php';
-
                 }
             });
         }
@@ -92,5 +93,9 @@ $(document).ready(function () {
                 console.log(response.string);
             }
         });
+    });
+
+    $('#logout-id').click(function() {
+        window.location = '../logout.php';
     });
 });

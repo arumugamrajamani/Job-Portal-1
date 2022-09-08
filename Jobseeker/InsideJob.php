@@ -48,7 +48,7 @@
                   <li><a class="dropdown-item text-light" href="jobapplication.php">Job Applications</a></li>
                   <li><a class="dropdown-item text-light" href="bookmark-job.php">Bookmark Jobs</a></li>
                   <li><a class="dropdown-item text-light" href="manage-resume-jobseeker.php">Manage Resume</a></li>
-                  <li><a class="dropdown-item logout text-light" href="../login.php">LOGOUT</a></li>
+                  <li><a class="dropdown-item logout text-light" id="logout-id">LOGOUT</a></li>
                 </ul>
             </div>
         </div>

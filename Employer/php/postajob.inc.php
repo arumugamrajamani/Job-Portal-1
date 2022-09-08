@@ -69,8 +69,15 @@
             $response = array('status' => 'success');
         }
         else{
-            $response = array('status' => 'error', 'companyName' => $companyNameInfo, 'jobTitle' => $jobTitleInfo,'jobCategory' => $jobCategoryInfo, 'jobDescription' => $jobDescriptionInfo, 'salaryWage' => $salaryWageInfo, 'employerEmail' => $employerEmailInfo);
-
+            $response = array(
+                'status' => 'error', 
+                'companyName' => $companyNameInfo, 
+                'jobTitle' => $jobTitleInfo,
+                'jobCategory' => $jobCategoryInfo, 
+                'jobDescription' => $jobDescriptionInfo, 
+                'salaryWage' => $salaryWageInfo, 
+                'employerEmail' => $employerEmailInfo
+            );
         }
          echo json_encode($response);
     }
@@ -97,7 +104,7 @@
                              <td>{$employerEmail}</td>";
             $response = array('tableData' => $tableData);
         }
-    echo json_encode($response);
+        echo json_encode($response);
     }
     
     
@@ -127,28 +134,28 @@
                                 </td>
                             </tr>";
                             }
-                            $getDeletedPosts = mysqli_query($conn, "SELECT * FROM `jobpost_recycler` WHERE `postedby_uid` = '$uid'");
-                            while($row1 = mysqli_fetch_assoc($getDeletedPosts)){
-                                $id = $row1['post_id'];
-                                $companyName = $row1['company_name'];
-                                $jobTitle = $row1['job_title'];
-                                $employment = $row1['employment_type'];
-                                $jobCategory = $row1['job_category'];
-                                $jobDescription = $row1['job_description'];
-                                $salaryWage = $row1['salary'];
-                                $employerEmail = $row1['employer_email'];
-                                $primarySkill = $row1['primary_skill'];
-                                $secondarySkill = $row1['secondary_skill'];
-                                $tableData .=  "<tr>
-                                                    <td  data-title='Job Title'>{$jobTitle}</td>
-                                                    <td data-title='Number applicant'>Sample</td>
-                                                    <td data-title='status'>Inactive</td>
-                                                    <td data-title='drive'>sample.com</td>
-                                                    <td data-title='action'>
-                                                    <button class='btn-success fetch-details' type='button' id='btn-info' data-id='{$id}' data-bs-toggle='modal' data-bs-target='#modal-editdetails'>Edit</button>
-                                                    </td>
-                                                </tr>";
-                            }
+                            // $getDeletedPosts = mysqli_query($conn, "SELECT * FROM `jobpost_recycler` WHERE `postedby_uid` = '$uid'");
+                            // while($row1 = mysqli_fetch_assoc($getDeletedPosts)){
+                            //     $id = $row1['post_id'];
+                            //     $companyName = $row1['company_name'];
+                            //     $jobTitle = $row1['job_title'];
+                            //     $employment = $row1['employment_type'];
+                            //     $jobCategory = $row1['job_category'];
+                            //     $jobDescription = $row1['job_description'];
+                            //     $salaryWage = $row1['salary'];
+                            //     $employerEmail = $row1['employer_email'];
+                            //     $primarySkill = $row1['primary_skill'];
+                            //     $secondarySkill = $row1['secondary_skill'];
+                            //     $tableData .=  "<tr>
+                            //                         <td  data-title='Job Title'>{$jobTitle}</td>
+                            //                         <td data-title='Number applicant'>Sample</td>
+                            //                         <td data-title='status'>Inactive</td>
+                            //                         <td data-title='drive'>sample.com</td>
+                            //                         <td data-title='action'>
+                            //                         <button class='btn-success fetch-details' type='button' id='btn-info' data-id='{$id}' data-bs-toggle='modal' data-bs-target='#modal-editdetails'>Edit</button>
+                            //                         </td>
+                            //                     </tr>";
+                            // }
             $response = array('tableData' => $tableData);
     echo json_encode($response);
     }

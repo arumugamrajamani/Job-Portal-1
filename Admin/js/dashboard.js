@@ -16,6 +16,7 @@ function closeNav() {
         },
         dataType: "JSON",
         success: function (data) {
+            console.log(data);
             //array to store the values needed for the chart
             new Array(values = []);
             values.push(data.virtual);

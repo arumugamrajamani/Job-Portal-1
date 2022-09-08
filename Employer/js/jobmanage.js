@@ -3,13 +3,14 @@ $(document).ready(function () {
 
     function fetchData() {
         $.ajax({
-            url: 'php/postajob.inc.php',
+            url: 'php/jobmanage.inc.php',
             type: 'POST',
             data: {
                 fetchData: true
             },
             dataType: "JSON",
             success: function (data) {
+                // console.log(data.tableData)
                 $('#body-h').html(data.tableData);
             }
         });
@@ -25,7 +26,7 @@ $(document).ready(function () {
 
         let postId = $('.delete-Btn').attr('data-id');
         $.ajax({
-            url: "php/postajob.inc.php",
+            url: "php/jobmanage.inc.php",
             type: "POST",
             data: {
                 deleteJobPost: true,
@@ -46,7 +47,7 @@ $(document).ready(function () {
         $('#save-edit').val(postId);
 
         $.ajax({
-            url: "php/postajob.inc.php",
+            url: "php/jobmanage.inc.php",
             type: "POST",
             data: {
                 fetchDetails: true,
@@ -83,7 +84,7 @@ $(document).ready(function () {
         let secondarySkill = $('#e-secondaryskill').val();
 
         $.ajax({
-            url: "php/postajob.inc.php",
+            url: "php/jobmanage.inc.php",
             type: "POST",
             data: {
                 saveDetails: true,
@@ -96,26 +97,18 @@ $(document).ready(function () {
                 salaryWage: salaryWage,
                 employerEmail: employerEmail,
                 primarySkill: primarySkill,
-                secondarySkill: secondarySkill,
-
+                secondarySkill: secondarySkill
             },
             dataType: 'json',
             success: function (data) {
+                console.log(data.status)
                 if (data.status == 'success') {
                     $('#modal-editdetails').modal('hide');
                     toastr.success('', 'Successfully Updated!');
-                    load_data(GetSearchValue(), getCurrentPage());
-                } 
-                
+                    // load_data(GetSearchValue(), getCurrentPage());
+                    load_data();
+                }
             }
         })
     })
-
-
-
-
-    
-
-
-    
 });

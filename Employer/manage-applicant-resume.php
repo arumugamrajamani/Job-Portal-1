@@ -127,61 +127,65 @@
         </form>
     </div>
 
-    <!-- reject button -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- edit button -->
+    <div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header ">
-                    <h5 class="modal-title ms-3" id="exampleModalLabel">Are you sure you want to reject this applicant?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <button id="del-yes1" type="button" class="btn btn-success btn1">Yes</button>
-                    <button type="button" class="btn btn-danger btn1" data-bs-dismiss="modal">No</button>
-                </div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title ms-3" id="editModalLabel">Edit Status</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
+                <label for="status">Choose a status:</label>
+                <select name="status" id="status">
+                    <option value="Pending">Pending</option>
+                    <option value="Received">Received</option>
+                    <option value="Viewed">Viewed</option>
+                    <option value="Accepted">Accepted</option>
+                </select><br>
+            </div>
+            <div class="modal-footer">
+                <button id="edit-yes" type="button" class="btn btn-success btn1" value=''>Yes</button>
+                <button type="button" class="btn btn-danger btn1" data-bs-dismiss="modal">No</button>
+            </div>
+        </div>
         </div>
     </div>
 
-    <!-- edit button -->
-    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header ">
-                    <h5 class="modal-title ms-3" id="exampleModal1Label">Edit Status</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <label for="status">Choose a status:</label>
-                    <select name="status" id="status">
-                        <option value="Pending">Pending</option>
-                        <option value="Received">Received</option>
-                        <option value="Viewed">Viewed</option>
-                        <option value="Accepted">Accepted</option>
-                    </select><br>
-                    <button id="del-yes" type="button" class="btn btn-success btn1">Yes</button>
-                    <button type="button" class="btn btn-danger btn1" data-bs-dismiss="modal">No</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- bookmark button -->
-    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
+    <div class="modal fade" id="bookmark-modal" tabindex="-1" aria-labelledby="bookmarkModalLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
-                <div class="modal-header ">
-                    <h5 class="modal-title ms-3" id="exampleModal2Label">Are you sure you want to bookmark this applicant?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <button id="accept" type="button" class="btn btn-success btn1">Yes</button>
-                    <button type="button" class="btn btn-danger btn1" data-bs-dismiss="modal">No</button>
-                </div>
+            <div class="modal-header ">
+                <h5 class="modal-title ms-3" id="bookmarkModalLabel">Are you sure you want to bookmark this applicant?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+                <button id="bookmark-yes" type="button" class="btn btn-success btn1" value=''>Yes</button>
+                <button type="button" class="btn btn-danger btn1" data-bs-dismiss="modal">No</button>
             </div>
         </div>
+        </div>
     </div>
+
+    <!-- reject button -->
+    <div class="modal fade" id="reject-modal" tabindex="-1" aria-labelledby="rejectModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header ">
+                <h5 class="modal-title ms-3" id="rejectModalLabel">Are you sure you want to reject this applicant?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+                <button id="reject-yes" type="button" class="btn btn-success btn1" value=''>Yes</button>
+                <button type="button" class="btn btn-danger btn1" data-bs-dismiss="modal">No</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <!-- remove button -->
-    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModal3Label" aria-hidden="true">
+    <!-- <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModal3Label" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
                 <div class="modal-header ">
@@ -194,7 +198,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
 <script src="js/pfp.js"></script>
 <script src="js/manage-applicant-resume.js"></script>

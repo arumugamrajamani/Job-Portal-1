@@ -111,7 +111,8 @@
 .menudrop {
   background-color: #8b8383;
 }
-#btn-info {
+
+.btn-info {
   margin-top: 0px;
   font-family: "Inter";
   font-style: normal;
@@ -124,7 +125,8 @@
   border: 2px solid #00D7E2;
   border-radius: 10px;
 }
-#btn-info:hover {
+
+.btn-info:hover {
   background-color: #50677b;
   color: white;
   border: 0;

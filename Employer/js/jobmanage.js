@@ -1,20 +1,54 @@
 $(document).ready(function () {
     fetchData();
 
-    function fetchData() {
+    // Function for getting the current page number
+    function getCurrentPage() {
+        var page = $('#pagination').find('.active').attr('data-page');
+        return page;
+    }
+
+    // Function for getting the current value in search box
+    function GetSearchValue() {
+        var search = $('#search').val();
+        return search;
+    }
+
+    function fetchData(search, page) {
         $.ajax({
             url: 'php/jobmanage.inc.php',
             type: 'POST',
             data: {
-                fetchData: true
+                fetchData: true,
+                search: search,
+                page: page
             },
             dataType: "JSON",
             success: function (data) {
-                // console.log(data.tableData)
+                // console.log(data.entries)
+                
                 $('#body-h').html(data.tableData);
+                $('#pagination').html(data.pagination)
+                $('#entries').html(data.entries)
             }
         });
     }
+
+    // Trigger this when user started to type in the search bar
+    $('#form1').keyup(function () {
+        let search = $(this).val();
+        if (search != '') {
+            fetchData(search);
+        } else {
+            fetchData();
+        }
+    });
+
+    // Trigger this when user click on the pagination 
+    $('#pagination').on('click', '.page-item', function () {
+        let page = $(this).attr('data-page');
+        console.log(page)
+        fetchData(GetSearchValue(), page);
+    });
 
     $('.delete-Btn').click(function () {
         let postId = $(this).attr('data-id');
@@ -106,7 +140,7 @@ $(document).ready(function () {
                     $('#modal-editdetails').modal('hide');
                     toastr.success('', 'Successfully Updated!');
                     // load_data(GetSearchValue(), getCurrentPage());
-                    load_data();
+                    fetchData(GetSearchValue(), getCurrentPage());
                 }
             }
         })

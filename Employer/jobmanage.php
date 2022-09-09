@@ -87,7 +87,7 @@
                             <thead class="text-dark text-center" id="title-sub">
                                 <tr>
                                     <th>Job title</th>
-                                    <th>Number Applicant</th>
+                                    <th>Number of Applicant/s</th>
                                     <th>Status (Active/Inactive)</th>
                                     <th>Drive</th>
                                     <th>Action</th>
@@ -98,19 +98,11 @@
                         </table>
                        
                         <nav aria-label="Page navigation example">
-                            <div class="entries">
-                                </span>Show 1 to 3 of 3 entries</span>
-                            </div>
-                            <ul class="pagination" id="pagination">
-                             <!--   <li class="page-item1"><a class="page-link next text-dark" href="#">Previous</a></li>
-                                <li class="page-item"><a class="page-link num text-dark" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link num text-dark" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link num text-dark" href="#">3</a></li>
-                                <li class="page-item1"><a class="page-link next text-dark" href="#">Next</a></li>-->
-                            </ul>
+                            <div class="entries" id="entries"></div>
+                            <ul class="pagination" id="pagination"></ul>
                         </nav> 
                         <div class="text-end">
-                            <button class="bt mt-1 text-dark"  type="button" id="button" onclick="location.href='postajob.php'">ADD JOB POST</button>
+                            <!-- <button class="bt mt-1 text-dark"  type="button" id="button" onclick="location.href='postajob.php'">ADD JOB POST</button> -->
                         </div>
                     </div>
                 </section>

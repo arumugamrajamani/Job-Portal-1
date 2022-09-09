@@ -66,6 +66,7 @@ if (isset($_POST['getData'])) {
 
         // Fetching the data will exclude the 'Rejected' status from applied_jobs
         if ($status != 'Rejected') {
+            // Increment the $tableData
             $tableData .= "
             <tr class = 'tr'>
                 <td  data-title='Applicant Name'><b>{$fullname}</b></td>  
@@ -77,28 +78,28 @@ if (isset($_POST['getData'])) {
                 <td data-title='Action'>
                 <button  class='btn btn-info edit-btn' type='button' data-id='{$apply_id}' data-bs-toggle='modal' data-bs-target='#edit-modal'>Edit</button>
             ";
-        }
 
-        $count = "SELECT COUNT(*) as total FROM employer_bookmark WHERE employer_id='$employer_id' AND jobseeker_id='$jobseeker_id'";
-        $count = mysqli_query($conn, $count);
-        $count = mysqli_fetch_assoc($count);
+            $count = "SELECT COUNT(*) as total FROM employer_bookmark WHERE employer_id='$employer_id' AND jobseeker_id='$jobseeker_id'";
+            $count = mysqli_query($conn, $count);
+            $count = mysqli_fetch_assoc($count);
 
-        // Will detect if the fetched applicant was already bookmarked by the employer
-        if ($count['total'] == 0) {
+            // Will detect if the fetched applicant was already bookmarked by the employer
+            if ($count['total'] == 0) {
+                $tableData .= "
+                    <button  class='btn btn-info bookmark-btn' type='button' data-id='{$jobseeker_id}' data-bs-toggle='modal' data-bs-target='#bookmark-modal' >Bookmark</button>
+                ";
+            }
+            else {
+                $tableData .= "
+                    <button  class='btn btn-info bookmark-btn' type='button' data-id='{$jobseeker_id}' data-bs-toggle='modal' data-bs-target='#bookmark-modal' disabled>Bookmarked</button>
+                ";
+            }
             $tableData .= "
-                <button  class='btn btn-info bookmark-btn' type='button' data-id='{$jobseeker_id}' data-bs-toggle='modal' data-bs-target='#bookmark-modal' >Bookmark</button>
+                    <button  class='btn btn-info remove-btn' type='button' data-id='{$jobseeker_id}' data-bs-toggle='modal' data-bs-target='#exampleModal3' >Remove Bookmark</button>
+                    <button class='btn btn-info reject-btn' type='button' data-id='{$apply_id}' data-bs-toggle='modal' data-bs-target='#reject-modal'>Reject</button></td>
+                </tr>
             ";
-        }
-        else {
-            $tableData .= "
-                <button  class='btn btn-info bookmark-btn' type='button' data-id='{$jobseeker_id}' data-bs-toggle='modal' data-bs-target='#bookmark-modal' disabled>Bookmarked</button>
-            ";
-        }
-        $tableData .= "
-                <button  class='btn btn-info remove-btn' type='button' data-id='{$jobseeker_id}' data-bs-toggle='modal' data-bs-target='#exampleModal3' >Remove Bookmark</button>
-                <button class='btn btn-info reject-btn' type='button' data-id='{$apply_id}' data-bs-toggle='modal' data-bs-target='#reject-modal'>Reject</button></td>
-            </tr>
-        ";
+        }   
     }
     
     mysqli_close($conn);
@@ -133,6 +134,7 @@ if (isset($_POST['bookmark'])) {
     $jobseeker_id = $_POST['jobseeker_id'];
     $employer_id = $_SESSION['user_id'];
 
+    // Query 1
     $query = "SELECT * FROM `jobseeker` WHERE `jobseeker_id`='$jobseeker_id'";
     $query = mysqli_query($conn, $query);
 
@@ -140,6 +142,7 @@ if (isset($_POST['bookmark'])) {
     $fullname = $row['fullname'];
     $resume = $row['resume'];
 
+    // Query 2
     $query = "SELECT * FROM `applied_jobs` WHERE `jobseeker_id`='$jobseeker_id'";
     $query = mysqli_query($conn, $query);
 

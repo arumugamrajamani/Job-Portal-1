@@ -41,11 +41,50 @@ function getFiles($jobseekerId)
 
 // When the page is loaded the js will call for this then this will get the admin's data from the DB
 if (isset($_POST['getData'])) {
+    // Get the employer_id based on the login session
     $employer_id = $_SESSION['user_id'];
+    // Variable for holding the loop result of the query
     $tableData = "";
+
+    // Pagination and Search Feature:
+    // Variables to store the data
+    $page = 0;
+    // Set the item limit per page
+    $pageLimit = 5;
+
+    // Check if the page number is set
+    if (isset($_POST['page'])) {
+        // Set the page number
+        $page = $_POST['page'];
+        // Check if search is set
+    } elseif (isset($_POST['search'])) {
+        // Set the page number to 1
+        $page = 1;
+    } else {
+        // Set the page number to 1
+        $page = 1;
+    }
+
+    // Calculate the starting row
+    $start = ($page - 1) * $pageLimit;
+
+    // Check if search is present
+    if (isset($_POST['search'])) {
+        $search = trim($_POST['search']);
+
+        // [SOON] The database needs to be fixed first
+        $fetchDetailsQuery = "SELECT * FROM applied_jobs WHERE fullname LIKE '%$search%' LIMIT $start, $pageLimit";
+        // Pagination  is the process of dividing a document into discrete pages, either electronic pages or printed pages.
+        $paginationQuery = "SELECT * FROM applied_jobs WHERE postedby_uid = '$employer_id' AND fullname LIKE '%$search%'";
+    }
+    else {
+        // Create query to get the employer information
+        $fetchDetailsQuery = "SELECT * FROM applied_jobs WHERE postedby_uid = '$employer_id' ";
+        $paginationQuery = "SELECT * FROM applied_jobs WHERE postedby_uid = '$employer_id'";
+    }
+
+    $fetchDetailsQuery = mysqli_query($conn, $fetchDetailsQuery);
     
-    // Create query to get the employer information
-    $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM applied_jobs WHERE postedby_uid = '$employer_id'");
     while($row = mysqli_fetch_assoc($fetchDetailsQuery)){
         $jobseekerId= $row['jobseeker_id'];
         $fetch = mysqli_query($conn, "SELECT * FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
@@ -102,11 +141,64 @@ if (isset($_POST['getData'])) {
         }   
     }
     
+    // Query to get the total number of employers
+    $GetRecordsQuery = mysqli_query($conn, $paginationQuery);
+    // Query to get the total number of employers
+    $totalRecords = mysqli_num_rows($GetRecordsQuery);
+    // Calculate the total number of employers. Will pass to 1 if there are no employers
+    $totalPages = ($totalRecords == 0) ? 1 : ceil($totalRecords / $pageLimit);
+    
+    $pagination = "";
+
+    // check if the page number is greater than 1
+    if ($page >= 1) {
+        // Set the previous page
+        $previous = $page - 1;
+        $pagination .=  "<li class='page-item' data-page='{$previous}'>
+                                <a class='page-link bg-info text-dark'>Previous</a>
+                            </li>";
+    } else {
+        $pagination .=  "<li class='page-item' data-page='{$previous}'>
+                                <a class='page-link bg-info text-dark'>Previous</a>
+                            </li>";
+    }
+
+    // Loop through the pages
+    for ($i = 1; $i <= $totalPages; $i++) {
+        $active = '';
+        if ($page == $i) {
+            $active = 'active';
+        }
+        $pagination .= "<li class='page-item {$active}' data-page='{$i}'>
+                                <a class='page-link text-dark'>{$i}</a>
+                            </li>";
+    }
+
+    // Check if there are more than 1 page
+    if ($page <= $totalPages) {
+        // Set the next page
+        $next = $page + 1;
+        $pagination .=  "<li class='page-item' data-page='{$next}'>
+                                <a class='page-link bg-info text-dark'>Next</a>
+                            </li>";
+    } else {
+        $pagination .=  "<li class='page-item' data-page='{$next}'>
+                                <a class='page-link text-dark'>Next</a>
+                            </li>";
+    }
+
+    // For entries display
+    $entries_start = $start + 1;
+    $entries_end = ceil($totalRecords / $pageLimit);
+    $entries = "<span>Show <b>{$entries_start}</b> to <b>{$entries_end}</b> of {$totalRecords} entries</span>";
+
     mysqli_close($conn);
 
     // Stored and return the displays for employer management page
     $response = array(
         'tableData' => $tableData,
+        'pagination' => $pagination,
+        'entries' => $entries
     );
 
     // Return this output variable to the ajax call
@@ -183,14 +275,9 @@ if (isset($_POST['reject'])) {
     $employer_id = $_SESSION['user_id'];
 
     // Check if the rejected applicant was included in the employer's bookmark
+    // $query = "SELECT COUNT(*) as "
+    // Conditions: employer_id, jobseeker_id, post_id 
     // -----------------------------------------------------
-
-    // $query = "SELECT * FROM `applied_jobs` WHERE `apply_id`='$apply_id' AND `employer_id`='$employer_id'";
-    // $query = mysqli_query($conn, $query);
-    // $row = mysqli_fetch_assoc($query);
-
-    // $jobseeker_id = $row['jobseeker_id'];
-    // $employer_id = $row['employer_id'];
 
     // Update the application status of the jobseeker
     $query = "UPDATE `applied_jobs` SET `status` = 'Rejected' WHERE `apply_id`='$apply_id'";
@@ -208,12 +295,3 @@ if (isset($_POST['reject'])) {
 
     echo json_encode($response);
 }
-
-// if (isset($_POST['remove'])) {
-//     $jobseekerId = $_POST['Num'];
-//     $fetchDetailsQuery = mysqli_query($conn, "UPDATE `jobseeker` SET `bookmarked`='false' WHERE `jobseeker_id` = '$jobseekerId'");
-
-//     $response = array(
-
-//     );
-// }

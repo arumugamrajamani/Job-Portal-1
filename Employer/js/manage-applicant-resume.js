@@ -1,31 +1,68 @@
 // The comments was used for DEMO purposes for newcomers
 $(document).ready(function () {
+    // Function for getting the current value in search box
+    function GetSearchValue() {
+        var search = $('#search').val();
+        
+        if (search != '') {
+            return search;
+        }
+        else {
+            return undefined;
+        }
+    }
+
+    // Function for getting the current page number
+    function GetCurrentPage() {
+        var page = $('#pagination').find('.active').attr('data-page');
+        return page;
+    }
+
     // Initially fetches the data from the database
     load_data();
-    function load_data(){
+    function load_data(search, page) {
         // Using AJAX function can be able to store HTTP requests and it can be loaded by an external script. 
         // In this case, to the .inc.php file
         $.ajax({
             url: 'php/manage-applicant-resume.inc.php',
             type: 'POST',
             data: {
-                getData: true
+                getData: true,
+                search: search,
+                page: page
             },
             dataType: "JSON",
             success: function (response, status, jqXHR) {
-                // The data will be display at id "body-h"
+                // The data will be displayed at id "body-h, "pagination", "entries"
                 $('#body-h').html(response.tableData);
+                $('#pagination').html(response.pagination);
+                $('#entries').html(response.entries);
             },
             // It is the best practice to put an error parameter to determine the description of the error. 
             // The results can be seen at the browser's console. 
             // You can remove the error parameter anytime if you feel comfortable that the code is working fine.
-            // Just showing here that you can debug error using this method
+            // Just showing here that you can debug the error using this method
             error: function (jqXHR, status, description) {
                 console.log(jqXHR.responseText);
                 console.log(status);
             }
         });
     }
+
+    $('#search').keyup(function () { 
+        let search = $(this).val();
+        if (search != '') {
+            load_data(search);
+        } else {
+            load_data();
+        }
+    });
+
+    // Trigger this when user click on the pagination 
+    $('#pagination').on('click', '.page-item', function () {
+        let page = $(this).attr('data-page');
+        load_data(GetSearchValue(), page);
+    });
 
     // When the "Edit" button was clicked
     $('#body-h').on('click', '.edit-btn', function () {
@@ -61,7 +98,7 @@ $(document).ready(function () {
                 toastr.success('', 'Successfully Changed!');
                 load_data();
             },
-            error: function (jqXHR, status, response) {
+            error: function (jqXHR, status, description) {
                 console.log(jqXHR.responseText);
                 console.log(status);
             }
@@ -84,7 +121,7 @@ $(document).ready(function () {
                 toastr.success('', 'Successfully Changed!');
                 load_data();
             },
-            error: function (jqXHR, status, response) {
+            error: function (jqXHR, status, description) {
                 console.log(jqXHR.responseText);
                 console.log(status);
             }
@@ -107,7 +144,7 @@ $(document).ready(function () {
                 toastr.success('', 'Successfully Changed!');
                 load_data();
             },
-            error: function (jqXHR, status, response) {
+            error: function (jqXHR, status, description) {
                 console.log(jqXHR.responseText);
                 console.log(status);
             }

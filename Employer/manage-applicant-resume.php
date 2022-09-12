@@ -112,7 +112,11 @@
                     </div>
                 </section>
             </div>
-            <nav aria-label="Page navigation example">
+            <nav aria-label="Page navigation" class="page-section">
+                <div class="entries" id="entries"></div>
+                <ul class="pagination" id="pagination"></ul>
+            </nav>
+            <!-- <nav aria-label="Page navigation example">
                 <div class="entries" id= "entries">
                     </span>Show 1 to 3 of 3 entries</span> 
                 </div>
@@ -123,7 +127,7 @@
                     <li class="page-item"><a class="page-link num text-dark" href="#">3</a></li>
                     <li class="page-item"><a class="page-link next text-dark" href="#">Next</a></li> 
                 </ul>
-            </nav>   
+            </nav>    -->
         </form>
     </div>
 

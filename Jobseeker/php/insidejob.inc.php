@@ -60,58 +60,52 @@
         echo json_encode($response);
     }
     
+    // If the jobseeker clicked "Apply Now"
     if(isset($_POST['apply'])) {
         $postId = ($_POST['postId']);
-        $id = ($_SESSION['user_id']);
+        $jobseeker_id = ($_SESSION['user_id']);
 
-        $query = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_id` = '$postId'");
+        $query = "SELECT * FROM `jobpost` WHERE `post_id`='$postId'";
+        $query = mysqli_query($conn, $query);
         $row = mysqli_fetch_assoc($query);
-        $company_name = $row['company_name'];
-        $job_title = $row['job_title'];
-        $employment_type = $row['employment_type'];
-        $job_category = $row['job_category'];
-        $jobDescription = $row['job_description'];
-        $salary = $row['salary'];
-        $employerEmail = $row['employer_email'];
-        $primarySkill = $row['primary_skill'];
-        $secondarySkill = $row['secondary_skill'];
-        $postedby = $row['postedby_uid'];
-        $date_posted = dateTimeConvertion($row['date_posted']);
 
-        mysqli_query($conn, "INSERT INTO `applied_jobs`(
+        $job_title = $row['job_title'];
+        $postedby = $row['postedby_uid'];
+
+        $query = "SELECT * FROM `jobseeker` WHERE `jobseeker_id`='$jobseeker_id'";
+        $query = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($query);
+
+        $fullname = $row['fullname'];
+        $resume = $row['resume'];
+
+        $query =  "INSERT INTO `applied_jobs`(
         `post_id`,
-        `company_name`,
+        `employer_id`,
+        `jobseeker_id`,
         `job_title`,
-        `employment_type`,
-        `job_category`,
-        `job_description`,
-        `salary`,
-        `employer_email`,
-        `primary_skill`,
-        `secondary_skill`,
-        `postedby_uid`,
-        `date_applied`,
+        `fullname`,
+        `resume`,
         `status`,
-        `jobseeker_id`
+        `date_applied`    
         )
         VALUES(
             '$postId',
-            '$company_name',
-            '$job_title',
-            '$employment_type',
-            '$job_category',
-            '$jobDescription',
-            '$salary',
-            '$employerEmail',
-            '$primarySkill',
-            '$secondarySkill',
             '$postedby',
-            NOW(),
+            '$jobseeker_id',
+            '$job_title',
+            '$fullname',
+            '$resume',
             'Pending',
-            '$id'
-        )");
+            NOW()
+        )";
 
-        $data = array('status' => 'success');
+        $query = mysqli_query($conn, $query);
+        mysqli_close($conn);
+
+        $data = array(
+            // Blank
+        );
         echo json_encode($data);
     }
 
@@ -135,8 +129,6 @@
             $employer_id = $row['postedby_uid'];
             $job_description = $row['job_description'];
 
-            
-    
             $insert = "INSERT INTO `jobpost_bookmark`(
                 `jobpost_id`, 
                 `jobseeker_id`, 

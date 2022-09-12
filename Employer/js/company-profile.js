@@ -1,36 +1,20 @@
 $(document).ready(function () {
-
-    fetchData();
-    load_data();
-    $.ajax({
-            url: 'php/postajob.inc.php',
-            type: 'POST',
-            data: {
-                fetchTableData: true
-            },
-            dataType: "JSON",
-            success: function (response) {
-            $('#body-h').html(response.tableData);
-        }
-        });
-
-        fetchData();
-    $('#editProfile').click(function(){
-        window.location = 'manage-account-profile.php';
-    });
     
     function load_data(){
         $.ajax({
             url: 'php/company-profile.inc.php',
             type: 'POST',
             data: {
-                getData: true
+                getBookmarkData: true
             },
             dataType: "JSON",
             success: function (data) {
-                console.log(data);
                 //assign got value to the html ids
                 $('#bookmark').html(data.tableData);
+            },
+            error: function (jqXHR, status, description) {
+                console.log(jqXHR.responseText);
+                console.log(status);
             }
         });
     }
@@ -58,4 +42,27 @@ $(document).ready(function () {
             }
         });
     }
+
+    fetchData();
+    load_data();
+    $.ajax({
+        url: 'php/postajob.inc.php',
+        type: 'POST',
+        data: {
+            fetchTableData: true
+        },
+        dataType: "JSON",
+        success: function (response) {
+            $('#body-h').html(response.tableData);
+            // console.log("Success")
+        },
+        error: function (jqXHR, status, description) {
+            console.log(jqXHR.responseText);
+            console.log(status);
+        }
+    });
+
+    $('#editProfile').click(function(){
+        window.location = 'manage-account-profile.php';
+    });
 });

@@ -31,6 +31,8 @@ $(document).ready(function () {
                 // Check if the jobseeker was applied or not based on the fetched database on 'applied_jobs'
                 if (response.isApplied == true) {
                     $("#applyJob").text("APPLIED");
+                    $("#applyJob").attr('disabled', true);
+                    
                 } else {
                     $("#applyJob").text("APPLY NOW");
                 }
@@ -50,12 +52,16 @@ $(document).ready(function () {
                     apply: true,
                     postId: postId
                 },
-                // dataType: 'JSON',
+                dataType: 'JSON',
                 success: function (response) {
                     console.log(response)
                     // Will direct to the jobapplication where it shows the 
                     // table of every jobpost where the jobseeker applied
                     window.location = 'jobapplication.php';
+                },
+                error: function (jqXHR, status, description) {
+                    console.log(jqXHR.responseText);
+                    console.log(status);
                 }
             });
         }

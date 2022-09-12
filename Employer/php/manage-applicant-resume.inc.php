@@ -72,36 +72,34 @@ if (isset($_POST['getData'])) {
     if (isset($_POST['search'])) {
         $search = trim($_POST['search']);
 
-        // [SOON] The database needs to be fixed first
+        // It search on the database to get the similar data based on the data that has been placed in the search bar
         $fetchDetailsQuery = "SELECT * FROM applied_jobs WHERE fullname LIKE '%$search%' LIMIT $start, $pageLimit";
         // Pagination  is the process of dividing a document into discrete pages, either electronic pages or printed pages.
-        $paginationQuery = "SELECT * FROM applied_jobs WHERE postedby_uid = '$employer_id' AND fullname LIKE '%$search%'";
+        $paginationQuery = "SELECT * FROM applied_jobs WHERE employer_id = '$employer_id' AND fullname LIKE '%$search%'";
     }
     else {
         // Create query to get the employer information
-        $fetchDetailsQuery = "SELECT * FROM applied_jobs WHERE postedby_uid = '$employer_id' ";
-        $paginationQuery = "SELECT * FROM applied_jobs WHERE postedby_uid = '$employer_id'";
+        $fetchDetailsQuery = "SELECT * FROM applied_jobs WHERE employer_id = '$employer_id' ";
+        $paginationQuery = "SELECT * FROM applied_jobs WHERE employer_id = '$employer_id'";
     }
 
     $fetchDetailsQuery = mysqli_query($conn, $fetchDetailsQuery);
     
-    while($row = mysqli_fetch_assoc($fetchDetailsQuery)){
-        $jobseekerId= $row['jobseeker_id'];
-        $fetch = mysqli_query($conn, "SELECT * FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
-        while($row1 = mysqli_fetch_assoc($fetch)){
+    while($row = mysqli_fetch_assoc($fetchDetailsQuery)) {
+        $apply_id = $row['apply_id'];
+        $jobseeker_id = $row['jobseeker_id'];
+
+        $job_title = $row['job_title'];
+        $status = $row['status'];
+        $date_applied = dateTimeConvertion($row['date_applied']);
+
+        $query = "SELECT * FROM jobseeker WHERE jobseeker_id = '$jobseeker_id'";
+        $query = mysqli_query($conn, $query);
+        while($row1 = mysqli_fetch_assoc($query)) {
             // Get the employer information needed to edit modal
             $resume = GetProfilePicLoc($row1['resume']);
             $fullname= $row1['fullname'];
         }
-        $jobApplied = $row['job_title'];
-
-        $apply_id = $row['apply_id'];
-        $dataId = $row['post_id'];
-
-        $date = $date = dateTimeConvertion($row['date_applied']);;
-        $status = $row['status'];
-        $title = $row['job_title'];
-        $jobseeker_id = $row['jobseeker_id'];
 
         // Fetching the data will exclude the 'Rejected' status from applied_jobs
         if ($status != 'Rejected') {
@@ -110,8 +108,8 @@ if (isset($_POST['getData'])) {
             <tr class = 'tr'>
                 <td  data-title='Applicant Name'><b>{$fullname}</b></td>  
                 <td  data-title='Resume'><b><a href='{$resume}' target='_blank'>View Resume</a></b></td>                                
-                <td data-title='Job Applied'><b>{$jobApplied}</b></td>
-                <td data-title='Date Applied'><b>{$date}</b></td>
+                <td data-title='Job Applied'><b>{$job_title}</b></td>
+                <td data-title='Date Applied'><b>{$date_applied}</b></td>
                 <td  data-title='Status'><b>{$status}</b></td>
 
                 <td data-title='Action'>
@@ -130,11 +128,11 @@ if (isset($_POST['getData'])) {
             }
             else {
                 $tableData .= "
-                    <button  class='btn btn-info bookmark-btn' type='button' data-id='{$jobseeker_id}' data-bs-toggle='modal' data-bs-target='#bookmark-modal' disabled>Bookmarked</button>
+                    <button  class='btn btn-info bookmark-btn' type='button' data-id='{$jobseeker_id}' data-bs-toggle='modal' data-bs-target='#bookmark-modal'>Unbookmark</button>
                 ";
             }
             $tableData .= "
-                    <button  class='btn btn-info remove-btn' type='button' data-id='{$jobseeker_id}' data-bs-toggle='modal' data-bs-target='#exampleModal3' >Remove Bookmark</button>
+                    
                     <button class='btn btn-info reject-btn' type='button' data-id='{$apply_id}' data-bs-toggle='modal' data-bs-target='#reject-modal'>Reject</button></td>
                 </tr>
             ";
@@ -243,21 +241,32 @@ if (isset($_POST['bookmark'])) {
  
     $date_applied = $row['date_applied'];
 
-    $query = "INSERT INTO `employer_bookmark` (
-        `jobseeker_id`,
-        `employer_id`,
-        `fullname`,
-        `resume`,
-        `date_applied`,
-        `date_bookmarked`
-    ) VALUES (
-        '$jobseeker_id',
-        '$employer_id',
-        '$fullname',
-        '$resume',
-        '$date_applied',
-        NOW()
-    )";
+    // Check if the data was already bookmarked. If true delete the data.
+    $count = "SELECT COUNT(*) as total FROM employer_bookmark WHERE jobseeker_id='$jobseeker_id' AND employer_id='$employer_id'";
+    $count = mysqli_query($conn, $count);
+    $count = mysqli_fetch_assoc($count);
+
+    if ($count['total'] == 0) {
+        // Delete them in bookmarks
+        $query = "INSERT INTO `employer_bookmark` (
+            `jobseeker_id`,
+            `employer_id`,
+            `fullname`,
+            `resume`,
+            `date_applied`,
+            `date_bookmarked`
+        ) VALUES (
+            '$jobseeker_id',
+            '$employer_id',
+            '$fullname',
+            '$resume',
+            '$date_applied',
+            NOW()
+        )";
+    }
+    else {
+        $query = "DELETE FROM employer_bookmark WHERE jobseeker_id='$jobseeker_id' AND employer_id='$employer_id'";
+    }
 
     $query = mysqli_query($conn, $query);
     mysqli_close($conn);
@@ -274,19 +283,28 @@ if (isset($_POST['reject'])) {
     $apply_id = $_POST['apply_id'];
     $employer_id = $_SESSION['user_id'];
 
+    $query = "SELECT * FROM employer_bookmark WHERE $apply_id";
+    $query = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($query);
+
+    $employer_id = $row['employer_id'];
+    $jobseeker_id = $row['jobseeker_id'];
+
     // Check if the rejected applicant was included in the employer's bookmark
-    // $query = "SELECT COUNT(*) as "
-    // Conditions: employer_id, jobseeker_id, post_id 
-    // -----------------------------------------------------
+    $count = "SELECT COUNT(*) as total FROM employer_bookmark WHERE jobseeker_id='$jobseeker_id' AND employer_id='$employer_id'";
+    $count = mysqli_query($conn, $count);
+    $count = mysqli_fetch_assoc($count);
+
+    if ($count['total'] != 0) {
+        // Delete them in bookmarks
+        $query = "DELETE FROM employer_bookmark WHERE jobseeker_id='$jobseeker_id' AND employer_id='$employer_id'";
+        $query = mysqli_query($conn, $query);
+    }
 
     // Update the application status of the jobseeker
     $query = "UPDATE `applied_jobs` SET `status` = 'Rejected' WHERE `apply_id`='$apply_id'";
     $query = mysqli_query($conn, $query);
 
-    // // Delete them in bookmarks
-    // $query = "DELETE FROM `employer_bookmark` WHERE `jobseeker_id`='$jobseeker_id' AND `employer_id`='$employer_id'";
-    // $query = mysqli_query($conn, $query);
-    
     mysqli_close($conn);
 
     $response = array(

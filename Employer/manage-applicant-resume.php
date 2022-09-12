@@ -73,7 +73,7 @@
                        
                         <h2 class="text-start"><b>MANAGE APPLICATION'S RESUME</b>
                             <form class="d-flex mt-4 form2" id = 'main'>
-                                <input class="form-control icon1" id="search" placeholder="Search for a message" aria-label="Search">
+                                <input class="form-control icon1" id="search" placeholder="Search for an Applicant Name" aria-label="Search">
                                 <button class="btn text-dark fw-bold search1" type="submit"><i class="bi bi-search"></i></button>
                             </form>
                         </h2>

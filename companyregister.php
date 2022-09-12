@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,43 +20,45 @@
     <link rel="stylesheet" href="css/companyregister.css">
     <link rel="stylesheet" href="css/preloader.css"> <!-- External CSS file for preloader -->
 </head>
+
 <body>
-    <?php include_once'include/preloader-display.php'; // To display the html for preloader ?>
+    <?php include_once 'include/preloader-display.php'; // To display the html for preloader 
+    ?>
     <div class="color-overlay">
         <div class="container-fluid">
-            <nav id="navbar-example2" class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow " >
+            <nav id="navbar-example2" class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow ">
                 <a href="#" class="navbar-brand ms-3">
-                <img src="image/light-logo.png" alt="Job Portal Logo" width="120" height="95" id="logo"></a>
+                    <img src="image/light-logo.png" alt="Job Portal Logo" width="100" class="logo" id="logo"></a>
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav ms-auto text-center fw-bold">
-                        <nav class="navbar navbar-light">     
+                        <nav class="navbar navbar-light">
                             <li><a class="nav-link me-5  btn1 " href="index.php">Home</a></li>
                             <li><a class="nav-link me-5  btn1 " href="index.php#aboutus">About Us</a></li>
                             <li><a class="nav-link me-5 " href="index.php#contactus">Contact Us</a></li>
                             <li><a class="nav-link me-5 " href="index.php#faq">FAQ</a></li>
                             <li class="nav-item dropdown"><a class="nav-link dropdown-toggle  mx-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item " href="companyregister.php">Employer</a></li>
-                                <li><a class="dropdown-item " href="jobseekersignup.php">JobSeeker</a></li>
-                            </ul>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item " href="companyregister.php">Employer</a></li>
+                                    <li><a class="dropdown-item " href="jobseekersignup.php">JobSeeker</a></li>
+                                </ul>
                             <li><a class="nav-link me-4 ms-3" href="login.php">Login</a></li>
                             <li><a class="nav-link" href="#"></a></li>
                         </nav>
                     </ul>
                 </div>
-            </nav>         
+            </nav>
         </div>
         <div class="container con1">
             <div class="swits">
-                <div class = 'toggle-switch'>
+                <div class='toggle-switch'>
                     <label class="lab">
-                      <input class="dar" type = 'checkbox' onclick="toggleImage()">
-                      <span id="icon2" class = 'slider'></span>
+                        <input class="dar" type='checkbox' onclick="toggleImage()">
+                        <span id="icon2" class='slider'></span>
                     </label>
-                  </div>
                 </div>
-    </div><br>
-    <div class="masthead">
+            </div>
+        </div><br>
+        <div class="masthead">
             <form class="container shadow">
                 <div class="col-sm-9 text-start row mb-3">
                     <h1 class="text-dark fw-bold ps-5" style="font-size: 30px;">COMPANY REGISTRATION FORM</h1>
@@ -142,7 +145,7 @@
                         <input type="file" class="form-control" id="dtipermit">
                     </div>
                 </div>
-                
+
                 <h2 class="text-black text-center mt-4">LOGIN DETAILS</h2>
                 <hr>
                 <div class="row mb-3 mt-3 ms-4">
@@ -169,32 +172,31 @@
                 </div>
             </form>
         </div>
-    <br><br><br><br><br><br>
-    <script>
+        <br><br><br><br><br><br>
+        <script>
             var icon2 = document.getElementById("icon2")
-        
-            icon2.onclick = function(){
-              document.body.classList.toggle("dark-theme");
+
+            icon2.onclick = function() {
+                document.body.classList.toggle("dark-theme");
             }
-            
-            function toggleImage(){
-              imgsrc= document.getElementById("logo").src;
-            if (imgsrc.indexOf("image/light-logo.png") !=-1){
-              document.getElementById("logo").src = "image/Techployment (7) 1.png";
+
+            function toggleImage() {
+                imgsrc = document.getElementById("logo").src;
+                if (imgsrc.indexOf("image/light-logo.png") != -1) {
+                    document.getElementById("logo").src = "image/Techployment (7) 1.png";
+                } else {
+                    document.getElementById("logo").src = "image/light-logo.png";
+                }
+                imgsrc = document.getElementById("burger").src;
+                if (imgsrc.indexOf("/Landing-Page/image/icons8-menu-60.png") != -1) {
+                    document.getElementById("burger").src = "/Landing-Page/image/selection.png";
+                } else {
+                    document.getElementById("burger").src = "/Landing-Page/image/icons8-menu-60.png";
+                }
             }
-            else{
-              document.getElementById("logo").src = "image/light-logo.png";
-            }
-            imgsrc= document.getElementById("burger").src;
-            if (imgsrc.indexOf("/Landing-Page/image/icons8-menu-60.png") !=-1){
-              document.getElementById("burger").src = "/Landing-Page/image/selection.png";
-            }
-            else{
-              document.getElementById("burger").src = "/Landing-Page/image/icons8-menu-60.png";
-            }
-            }
-          </script>
-    </div>    
-    <script src="js/companyregister.js"></script>  
+        </script>
+    </div>
+    <script src="js/companyregister.js"></script>
 </body>
+
 </html>

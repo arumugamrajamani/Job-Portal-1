@@ -1,39 +1,38 @@
 body {
   position: relative;
-
 }
 :root {
-  --page:#ffffff;
-  --page1:#00D7E2;
+  --page: #ffffff;
+  --page1: #00d7e2;
   --mast: #ececec;
   --primary: #ffffff;
-  --secondary: #00D7E2;
+  --secondary: #00d7e2;
   --text: black;
   --text1: black;
-  --container:#00D7E2;
-  --container1:white;
-  --button:#334553;
+  --container: #00d7e2;
+  --container1: white;
+  --button: #334553;
   --light: #d8dbe0;
   --dark: #28292c;
   --link: rgb(27, 129, 112);
   --link-hover: rgb(24, 94, 82);
 }
-.dark-theme{
-  --page:transparent;
-  --page1:transparent;
+.dark-theme {
+  --page: transparent;
+  --page1: transparent;
   --mast: #1b2a35;
-  --primary: #00D7E2;
+  --primary: #00d7e2;
   --secondary: #1b2a35;
-  --text:#ffffff;
-  --text1: #00D7E2;
-  --container:#334553;
-  --container1:#334553;
-  --button:#00D7E2;
+  --text: #ffffff;
+  --text1: #00d7e2;
+  --container: #334553;
+  --container1: #334553;
+  --button: #00d7e2;
 }
 .container {
   margin-top: 50px;
 }
-.mali{
+.mali {
   color: var(--text1);
 }
 .masthead {
@@ -59,7 +58,6 @@ body {
   font-size: 20px;
   height: 100px;
   width: 100%;
-
 }
 .dropdown-item {
   color: var(--text1);
@@ -79,7 +77,7 @@ body {
   display: block;
 }
 .nav-link:hover {
-  color: black!important;
+  color: black !important;
   background-color: var(--primary);
   border-radius: 10px;
 }
@@ -100,15 +98,15 @@ body {
 }
 @keyframes float {
   0% {
-    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(0px);
   }
   50% {
-    box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
     transform: translatey(-5px);
   }
   100% {
-    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(0px);
   }
 }
@@ -116,7 +114,7 @@ body {
 .dropdown:hover {
   border-radius: 10px;
 }
-.navbar{
+.navbar {
   padding: 0% !important;
   margin: 0% !important;
 }
@@ -145,9 +143,8 @@ body {
 }
 .img-con {
   width: 100%;
-  
 }
-.container-fluid{
+.container-fluid {
   margin: 0%;
   padding: 0%;
 }
@@ -183,7 +180,7 @@ p {
   background: var(--secondary);
   border-radius: 15px;
   width: 300px;
-  border-color: #00D7E2 !important;
+  border-color: #00d7e2 !important;
 }
 .error {
   border: 1px solid red;
@@ -222,9 +219,9 @@ p {
   font-weight: 800;
   font-size: 45px;
 }
-#aboutus{
-  border-top:5px solid #00D7E2;
-  border-bottom:5px solid #00D7E2;
+#aboutus {
+  border-top: 5px solid #00d7e2;
+  border-bottom: 5px solid #00d7e2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -240,7 +237,7 @@ p {
   font-family: "Montserrat", sans-serif;
   font-weight: 455;
 }
-.tix{
+.tix {
   padding: 10px;
   text-align: justify;
   line-height: 25px;
@@ -283,7 +280,7 @@ p {
 b {
   font-size: 25px;
 }
-#contactus{
+#contactus {
   background-color: var(--mast);
   padding-top: 10px;
 }
@@ -297,7 +294,7 @@ b {
   font-weight: 700;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.mo{
+.mo {
   color: var(--text1);
 }
 .accordion-button {
@@ -342,7 +339,7 @@ h3 {
   background: #ececec;
   border: 0;
 }
-.collapsed{
+.collapsed {
   border: 3px solid var(--primary);
 }
 .search .btn-search1 {
@@ -355,18 +352,17 @@ h3 {
 .dev-footer {
   margin-left: 1000px;
 }
-.flogo{
+.flogo {
   margin: 10px;
-  width: 110px; 
-  height: 90px;
+  margin-left: 20px;
+  width: 100px;
 }
-.search-input{
+.search-input {
   border-radius: 14px;
-  
 }
-.swits{
+.swits {
   top: 60px;
-  position:sticky;
+  position: sticky;
   padding-right: 25px;
   padding-left: 25px;
   display: flex;
@@ -384,7 +380,7 @@ h3 {
   width: 75px;
 }
 
-.lab{
+.lab {
   position: absolute;
   width: 100%;
   height: 35px;
@@ -429,163 +425,157 @@ h3 {
   background-color: var(--dark);
   box-shadow: none;
 }
-.bg2-home{
+.bg2-home {
   margin-top: -200px;
   width: 700px;
-  height: 800px;
 }
-#faq{
+#faq {
   background-color: var(--mast);
 }
-@media screen and (max-width: 1280px){
-  .flogo{
-    margin: 0px ;
+@media screen and (max-width: 1280px) {
+  .flogo {
+    margin: 0px;
     margin-left: 10px;
-    width: 100px; 
+    width: 100px;
     height: 80px;
   }
-  .bg2-home{
+  .bg2-home {
     margin-top: -100px;
     width: 500px;
     height: 600px;
   }
-  .tag2{
+  .tag2 {
     font-size: 25px;
   }
-  .search{
+  .search {
     width: 100%;
   }
-  .tag1{
+  .tag1 {
     font-size: 58px;
-  }.para{
+  }
+  .para {
     margin: 0 !important;
     width: 100%;
-  }.para2{
+  }
+  .para2 {
     margin: 0% !important;
     width: 100%;
   }
-  
 }
-@media screen and (max-width: 1140px){
-  
-  .con1{
+@media screen and (max-width: 1140px) {
+  .con1 {
     width: 60%;
     height: 100%;
   }
-  #concern{
+  #concern {
     width: 100%;
   }
-  .div3{
+  .div3 {
     display: none !important;
   }
-  .send-message{
+  .send-message {
     width: 50% !important;
     margin-bottom: 20px;
   }
-  
-  
 }
-@media screen and (max-width: 990px){
-  .bg2-home{
+@media screen and (max-width: 990px) {
+  .bg2-home {
     margin-top: 0;
     width: 300px;
     height: 250px;
   }
-  .tag1{
+  .tag1 {
     font-size: 36px;
   }
-  
 }
-@media screen and (max-width: 768px){
-  .bg2-home{
+@media screen and (max-width: 768px) {
+  .bg2-home {
     margin-left: 0 !important;
     margin-top: -90px;
     width: 300px;
     height: 400px;
     margin-right: 5px;
   }
-  .tag2{
+  .tag2 {
     font-size: 15px;
   }
-  .con-home{
+  .con-home {
     max-width: 100% !important;
     margin: 10px;
   }
-  .tag1{
+  .tag1 {
     font-size: 37px;
     margin-left: 0% !important;
     margin-bottom: 20px !important;
   }
-  .search button{
+  .search button {
     width: 70px;
   }
-  .masthead{
+  .masthead {
     min-height: 40vh !important;
   }
-  .con1{
+  .con1 {
     width: 80%;
     margin: 0% !important;
   }
-  .div2{
+  .div2 {
     margin-right: 0% !important;
   }
 }
 @media screen and (max-width: 570px) {
-  .search{
+  .search {
     position: absolute;
     width: 90%;
   }
-  .search-input{
+  .search-input {
     height: 50px !important;
   }
-  .con-home{
+  .con-home {
     max-width: 100% !important;
     margin: 0px;
   }
-  .btn-search2{
+  .btn-search2 {
     height: 40px !important;
   }
-  .browse{
+  .browse {
     position: absolute;
     margin-left: 135px;
     margin-top: 50px;
   }
-  .tag1{
+  .tag1 {
     font-size: 26px;
     margin-left: 0% !important;
     margin-top: 20px !important;
   }
-  .tag2{
+  .tag2 {
     font-size: 13px;
   }
-  .bg2-home{
+  .bg2-home {
     margin-top: 15px;
     width: 200px;
     height: 150px;
   }
-  .nav-link{
+  .nav-link {
     margin-left: 170px !important;
     text-align: center !important;
     width: 150px !important;
   }
-  .dropdown{
+  .dropdown {
     width: 100% !important;
   }
-  .dropdown-menu{
+  .dropdown-menu {
     width: 100% !important;
   }
-  .bi-search1{
+  .bi-search1 {
     display: none;
   }
-  
-  
 }
-@media screen and (max-width: 380px){
-  .browse{
+@media screen and (max-width: 380px) {
+  .browse {
     margin-left: 95px;
-    top:620px;
+    top: 620px;
   }
-  .bg2-home{
+  .bg2-home {
     position: absolute;
     left: 30px;
     top: 350px;
@@ -593,56 +583,55 @@ h3 {
     height: 270px;
     margin-bottom: 20px;
   }
-  .masthead{
+  .masthead {
     min-height: 100vh !important;
   }
-  .search{
-    top:650px;
+  .search {
+    top: 650px;
     margin-right: 30px !important;
     height: 40px !important;
   }
-  .search-input{
+  .search-input {
     height: 40px !important;
   }
-  .con1{
+  .con1 {
     width: 95%;
     margin: 0% !important;
   }
-  .browse{
+  .browse {
     margin-top: 110px;
   }
-  .div2{
+  .div2 {
     margin-right: 0% !important;
   }
-  .con-text{
+  .con-text {
     width: 95%;
     margin: 10px;
   }
-  .tag3{
+  .tag3 {
     margin: 0% !important;
   }
-  .contact-us{
+  .contact-us {
     text-align: start !important;
   }
-  .con-img{
+  .con-img {
     margin: 0% !important;
-    justify-content: left !important; 
+    justify-content: left !important;
   }
-  .nav-link{
+  .nav-link {
     margin-left: 120px !important;
     text-align: center !important;
     width: 150px !important;
   }
-  .dropdown{
+  .dropdown {
     width: 100% !important;
   }
-  .dropdown-menu{
+  .dropdown-menu {
     width: 100% !important;
   }
-  .tag1{
+  .tag1 {
     padding-top: 20px !important;
   }
-  
 }
 
 /*/Colors  #EDBEA4 #FDF6EC #00C2D6 #FDF6EC #FFFFFF/*/

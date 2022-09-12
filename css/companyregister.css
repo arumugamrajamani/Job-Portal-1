@@ -1,34 +1,34 @@
-body{
+body {
   background-color: var(--mast);
   max-height: fit-content;
 }
 :root {
-  --page:#ffffff;
-  --page1:#00D7E2;
+  --page: #ffffff;
+  --page1: #00d7e2;
   --mast: #ececec;
   --primary: #ffffff;
-  --secondary: #00D7E2;
+  --secondary: #00d7e2;
   --text: black;
   --text1: black;
-  --container:#00D7E2;
-  --container1:white;
-  --button:#334553;
+  --container: #00d7e2;
+  --container1: white;
+  --button: #334553;
   --light: #d8dbe0;
   --dark: #28292c;
   --link: rgb(27, 129, 112);
   --link-hover: rgb(24, 94, 82);
 }
-.dark-theme{
-  --page:transparent;
-  --page1:transparent;
+.dark-theme {
+  --page: transparent;
+  --page1: transparent;
   --mast: #1b2a35;
-  --primary: #00D7E2;
+  --primary: #00d7e2;
   --secondary: #1b2a35;
-  --text:#ffffff;
-  --text1: #00D7E2;
-  --container:#334553;
-  --container1:#334553;
-  --button:#00D7E2;
+  --text: #ffffff;
+  --text1: #00d7e2;
+  --container: #334553;
+  --container1: #334553;
+  --button: #00d7e2;
 }
 .navbar-light {
   background-color: var(--secondary);
@@ -50,7 +50,7 @@ body{
 .dropdown-menu {
   width: 80px;
 }
-.dropdown-menu.show{
+.dropdown-menu.show {
   background-color: var(--mast);
 }
 .dropdown-menu:hover {
@@ -109,7 +109,7 @@ h1 {
   font-size: 30px;
   line-height: 70px;
   color: #ffffff;
-  background: #00D7E2;
+  background: #00d7e2;
   border-radius: 20px 20px 0 0;
 }
 h2 {
@@ -121,8 +121,8 @@ h2 {
   text-align: center;
   color: #372732;
 }
-.text-black{
-  color: #00D7E2 !important;
+.text-black {
+  color: #00d7e2 !important;
 }
 .container {
   margin: auto;
@@ -135,7 +135,7 @@ h2 {
   background: var(--container1);
   margin-bottom: 20px;
 }
-.col-form-label{
+.col-form-label {
   color: var(--text);
 }
 .container input {
@@ -158,8 +158,8 @@ h2 {
   left: 477px;
   top: 686px;
 }
-.dropdown-item:hover{
-  background-color: #00D7E2;
+.dropdown-item:hover {
+  background-color: #00d7e2;
 }
 #SAVE-NOW {
   position: relative;
@@ -174,22 +174,23 @@ h2 {
   border: 0;
   color: var(--text1);
   background-color: var(--secondary);
-  border: 3px solid #00D7E2;
+  border: 3px solid #00d7e2;
 }
-#SAVE-NOW:hover{
-  background-color: #00D7E2;
+#SAVE-NOW:hover {
+  background-color: #00d7e2;
   color: white;
   animation: wiggle 3s linear infinite;
 }
-input::file-selector-button{
+input::file-selector-button {
   color: var(--text1) !important;
   height: 39px !important;
   border-radius: 10px !important;
   background-color: var(--secondary) !important;
-  border: 3px solid #00D7E2 !important;
+  border: 3px solid #00d7e2 !important;
 }
 @keyframes wiggle {
-  0%, 7% {
+  0%,
+  7% {
     transform: rotateZ(0);
   }
   15% {
@@ -207,7 +208,8 @@ input::file-selector-button{
   35% {
     transform: rotateZ(-4deg);
   }
-  40%, 100% {
+  40%,
+  100% {
     transform: rotateZ(0);
   }
 }
@@ -223,11 +225,11 @@ input[type="file"]::file-selector-button {
   border: 0;
   border-radius: 10px;
 }
-.navbar-brand{
+.navbar-brand {
   margin: 0px !important;
 }
-.swits{
-  position:relative;
+.swits {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center !important;
@@ -242,7 +244,7 @@ input[type="file"]::file-selector-button {
   width: 75px;
 }
 
-.lab{
+.lab {
   position: absolute;
   width: 100%;
   height: 35px;
@@ -288,17 +290,17 @@ input[type="file"]::file-selector-button {
   box-shadow: none;
 }
 @media (max-width: 1020px) {
-  .con1{
+  .con1 {
     margin: 0;
   }
 }
 @media (max-width: 991px) {
-  .con1{
+  .con1 {
     height: 100%;
     width: 100% !important;
     margin: auto !important;
   }
-  input{
+  input {
     width: 100% !important;
   }
   .navbar-nav {
@@ -306,32 +308,32 @@ input[type="file"]::file-selector-button {
     align-items: center;
     height: 100px;
   }
-  .dropdown-menu.show{
+  .dropdown-menu.show {
     position: absolute;
   }
-  .dropdown-menu{
+  .dropdown-menu {
     position: absolute !important;
   }
 }
 @media (max-width: 768px) {
-  .text-dark{
-    padding-left: 20px!important;
+  .text-dark {
+    padding-left: 20px !important;
     font-size: 20px;
   }
-  .con1{
+  .con1 {
     padding: 0;
     left: 0;
     margin: auto !important;
     width: 100%;
   }
-  input{
+  input {
     width: 100% !important;
   }
-  .text-black{
+  .text-black {
     margin-top: 20px !important;
     font-size: 16px;
   }
-  .navbar{
+  .navbar {
     align-items: center;
     display: flex !important;
     width: 100% !important;
@@ -340,100 +342,104 @@ input[type="file"]::file-selector-button {
     align-items: center;
     height: 100px;
   }
-  .dropdown-menu.show{
+  .dropdown-menu.show {
     position: absolute;
   }
-  .dropdown-menu{
+  .dropdown-menu {
     position: absolute !important;
   }
   .navbar-nav {
     margin-top: -15px;
   }
-  .container{
+  .container {
     height: 100%;
   }
-  #SAVE-NOW{
+  #SAVE-NOW {
     width: 250px;
     margin-top: 20px !important;
     margin-bottom: 30px;
   }
 }
 @media (max-width: 576px) {
-  .con1{
+  .con1 {
     padding: 0;
     width: 90% !important;
   }
-  .container{
+  .container {
     width: 100%;
   }
-  .text-dark{
+  .text-dark {
     font-size: 15px;
   }
 }
 @media (max-width: 375px) {
-  .navbar-collapse{
+  .navbar-collapse {
     width: 100% !important;
   }
-  .navbar-nav{
+  .navbar-nav {
     padding: 10px;
     height: 100% !important;
     display: grid;
     width: 100% !important;
   }
-  .nav-link{
+  .nav-link {
     font-size: 15px;
   }
-  .dropdown-item{
+  .dropdown-item {
     text-align: center;
     padding: 5px;
     font-size: 15px;
   }
-  .masthead{
+  .masthead {
     justify-content: center !important;
     width: 100% !important;
   }
-  .con1{
+  .con1 {
     left: 4px !important;
     justify-self: flex-start;
     padding: 0 !important;
     width: 100% !important;
   }
-  .container{
+  .container {
     margin: 0;
   }
-  form{
+  form {
     padding: 0 !important;
     width: 96% !important;
   }
-  h1{
+  h1 {
     font-size: 15px;
   }
-  .text-black{
+  .text-black {
     margin-top: 20px !important;
     font-size: 17px;
   }
-  .row{
+  .row {
     margin: 0 !important;
     width: 100% !important;
   }
-  input{
+  input {
     font-size: 11px !important;
     height: 29px !important;
     width: 100% !important;
   }
-  .ps-5{
+  .ps-5 {
     padding-left: 10px !important;
   }
-  label{
+  label {
     font-size: 13px !important;
   }
-  hr{
+  hr {
     margin: 10px;
   }
-  #SAVE-NOW{
+  #SAVE-NOW {
     margin-top: 20px;
     border-radius: 25px;
     font-size: 17px;
     width: 200px;
   }
+}
+.logo {
+  margin: 10px;
+  margin-left: 10px;
 }

@@ -168,16 +168,16 @@ $(document).ready(function () {
 
     $('#del-yes').click(function () {
         let postId = $(this).val();
-        // console.log(postId);
         $.ajax({
             url: 'php/searchjob-home.inc.php',
             type: 'POST',
             data: {
                 details: true,
-                // postId: postId
+                postId: postId,
             },
-            success: function (data) {
-                window.location = 'insidejob.php?postId=' + postId;
+            dataType: 'JSON',
+            success: function (response) {
+                window.location = 'insidejob-home.php?company=' + response.company_name + '&postId=' + response.post_id;
             },
             error: function (jqXHR, status, description) {
                 console.log(jqXHR.responseText);

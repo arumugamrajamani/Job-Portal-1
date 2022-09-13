@@ -10,23 +10,23 @@
 
     session_start();
     //includes db connection from 2 folders back
-    include '../../php/db-connection.php';
+    include 'db-connection.php';
 
     function dateTimeConvertion($date){
         return date('M d, Y, h:i A', strtotime($date));
     }
     function  getProfilePicLoc($profilePic){
-        if ($profilePic != NULL && file_exists("../../storage/" . $profilePic)) {
-            return "../storage/" . $profilePic;
+        if ($profilePic != NULL && file_exists("storage/" . $profilePic)) {
+            return "storage/" . $profilePic;
         } else {
             return "image/comlogo.png";
         }
     }
     function  getQrLoc($qrCode){
-        if ($qrCode != NULL && file_exists("../../storage/" . $qrCode)) {
-            return "../storage/" . $qrCode;
+        if ($qrCode != NULL && file_exists("storage/" . $qrCode)) {
+            return "storage/" . $qrCode;
         } else {
-            return "image/qrcode.png";
+            return "image/Qr-code.png";
         }
     }
 
@@ -234,6 +234,18 @@
         echo json_encode($response);
     }   
     else if (isset($_POST['details'])) {
-        // $_SESSION['postId'] = $_POST["postId"];
-        // session_destroy();
+        $postId = $_POST['postId'];
+
+        $query = "SELECT * from `jobpost` WHERE `post_id`=$postId";
+        $query = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($query);
+
+        $post_id = $row['post_id'];
+        $company_name = $row['company_name'];
+
+        $response = array (
+            'post_id' => $post_id,
+            'company_name' => $company_name,
+        );
+        echo json_encode($response);
     }

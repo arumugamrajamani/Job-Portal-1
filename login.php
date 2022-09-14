@@ -130,8 +130,8 @@
 
 	<script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
 		new Crate({
-			server: '1019045816251453450', // Job Portal Concerns Server
-			channel: '1019046617581617174', // #general
+			server: '966621976158425118', // Job Portal Concerns Server
+			channel: '1019139667989381200', // #general
 			glyph: ['image/light-logo.png', '100%'],
 			color: '#00d7e2',
 			location: ['bottom', 'right'],

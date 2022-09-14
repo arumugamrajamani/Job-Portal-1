@@ -14,6 +14,10 @@ $(document).ready(function () {
                 $("thead").after(response.tableData);
                 console.log("Success");
                 // console.log(response.tableData);
+            },
+            error: function (jqXHR, status, description) {
+                console.log(jqXHR.responseText);
+                console.log(status);
             }
         });
     }
@@ -51,6 +55,10 @@ $(document).ready(function () {
                 // Just a temporary, I didn't figured it out yet how to update the browser
                 // load_data();
                 window.location = "bookmark-job.php";
+            },
+            error: function (jqXHR, status, description) {
+                console.log(jqXHR.responseText);
+                console.log(status);
             }
         });
     })

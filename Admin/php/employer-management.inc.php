@@ -41,7 +41,7 @@ function getFiles($employerId)
 function unlinkFiles($companyLogoName, $permitName)
 {
     // Unlink the files
-    unlink("../../storage/" . $companyLogoName);
+    unlink("../../storage/profile pictures/employers/" . $companyLogoName);
     unlink("../../storage/" . $permitName);
 }
 
@@ -102,29 +102,27 @@ if (isset($_POST['loadData'])) {
 
         $statement = "SELECT * FROM employer WHERE company_name LIKE '%$search%' OR employer_name LIKE '%$search%' OR employer_position LIKE '%$search%' OR email LIKE '%$search%' LIMIT $start, $pageLimit";
         $paginationStatement = "SELECT * FROM employer WHERE company_name LIKE '%$search%' OR employer_name LIKE '%$search%' OR employer_position LIKE '%$search%' OR email LIKE '%$search%'";
-    }
-
-    else {
+    } else {
         $statement = "SELECT * FROM employer LIMIT $start, $pageLimit";
         $paginationStatement = "SELECT * FROM employer";
     }
-    
+
     // Get all employer information from the database
-    $EmployerInfoQuery = mysqli_query($conn, $statement);    
+    $EmployerInfoQuery = mysqli_query($conn, $statement);
 
     while ($row = mysqli_fetch_assoc($EmployerInfoQuery)) {
         // Get the employer information needed to table
-            $employerId = $row['employer_id'];
-            $companyLogo = "../storage/" . $row['company_logo_name'];
-            $companyName = $row['company_name'];
-            $employerName = $row['employer_name'];
-            $employerPosition = $row['employer_position'];
-            $email = $row['email'];
-            $permitName = "../storage/" . $row['permit_new_name'];
-            $permitOriginalName = $row['permit_original_name'];
-            $status = $row['is_verified'];
-            // Append the employer information to the output variable
-            $tableData .= "<tr class='tr'>
+        $employerId = $row['employer_id'];
+        $companyLogo = "../storage/profile pictures/employers/" . $row['company_logo_name'];
+        $companyName = $row['company_name'];
+        $employerName = $row['employer_name'];
+        $employerPosition = $row['employer_position'];
+        $email = $row['email'];
+        $permitName = "../storage/" . $row['permit_new_name'];
+        $permitOriginalName = $row['permit_original_name'];
+        $status = $row['is_verified'];
+        // Append the employer information to the output variable
+        $tableData .= "<tr class='tr'>
                             <td class='view-logo'><img src='{$companyLogo}' alt='' class='img-logo' data-bs-toggle='modal' data-bs-target='#companylogo'></td>
                             <td>{$companyName}</td>
                             <td>{$employerName}</td>
@@ -146,7 +144,7 @@ if (isset($_POST['loadData'])) {
     $totalRecords = mysqli_num_rows($GetRecordsQuery);
     // Calculate the total number of employers. Will pass to 1 if there are no employers
     $totalPages = ($totalRecords == 0) ? 1 : ceil($totalRecords / $pageLimit);
-    
+
     $pagination = "";
 
     // check if the page number is greater than 1
@@ -266,10 +264,10 @@ if (isset($_POST['deleteEmployer'])) {
 
     mysqli_query($conn, "INSERT INTO employer_recycle (employer_id, employer_name, employer_position, company_name, company_address, company_ceo, company_size, company_revenue, industry, company_description, contact_number, company_email, company_logo_name, permit_new_name, permit_original_name, email, password, otp_code, is_verified, date_created)
                         VALUES ('$employer_id', '$employer_name', '$employer_position', '$company_name', '$company_address', ' $company_ceo', '$company_size', '$company_revenue', '$industry', '$company_description','$contact_number', '$company_email', '$company_logo_name', '$permit_new_name', '$permit_original_name', '$email', '$password', '$otp_code', '$is_verified', '$date_created')");
-    
+
     // Create query to delete the employer
     mysqli_query($conn, "DELETE FROM employer WHERE employer_id = '$employerId'");
-   
+
     // Return nothing
 }
 

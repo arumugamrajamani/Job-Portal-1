@@ -36,38 +36,41 @@ if (isset($_POST['getData'])) {
     );
     echo json_encode($response);
 }
-else if (isset($_POST['delete'])) {
+
+if (isset($_POST['delete'])) {
     $Id = $_POST['postId'];
     $fetchDetailsQuery = mysqli_query($conn, "DELETE FROM `applied_jobs` WHERE post_id = '$Id'");
 }
+
 // When the page is loaded the js will call for this then this will get the admin's data from the DB
-else {
+if (isset($_POST['getTableData'])) {
     $jobseekerId = $_SESSION['user_id'];
     $tableData = "";
     // Create query to get the employer information
     $fetchDetailsQuery = mysqli_query($conn, "SELECT * FROM applied_jobs WHERE jobseeker_id = '$jobseekerId'");
     while($row = mysqli_fetch_assoc($fetchDetailsQuery)){
-        $employerId= $row['postedby_uid'];
+        $employerId= $row['employer_id'];
         $fetch = mysqli_query($conn, "SELECT * FROM employer WHERE employer_id = '$employerId'");
         while($row1 = mysqli_fetch_assoc($fetch)){
             // Get the employer information needed to edit modal
             $profilePic = GetProfilePicLoc($row1['company_logo_name']);
             $employerName= $row1['employer_name'];
         }
-        $jobTitle = $row['job_title'];
-        $desc = $row['job_description'];
-        $date = $row['date_applied'];
+
+        $job_title = $row['job_title'];
+        // $desc = $row['job_description'];
+        $date_applied = $row['date_applied'];
         $status = $row['status'];
-        $Id = $row['post_id'];
+        $post_id = $row['post_id'];
         $tableData .= "<tr class='tr1'>
         <td data-title='Employer' class='employ'><img src='{$profilePic}' width='20' height='20' style='border-radius: 100px; object-fit: cover;'></img> {$employerName}
         </td>
-        <td data-title='Job Title'>{$jobTitle}</td>
-        <td data-title='Job Description'>{$desc}</td>
-        <td data-title='Date Applied'>{$date}</td>
+        <td data-title='Job Title'>{$job_title}</td>
+        <td data-title='Job Description'>{}</td>
+        <td data-title='Date Applied'>{$date_applied}</td>
         <td data-title='Status'>{$status}</td>
         <td data-title='Action'>
-            <button class='btn btn-info delete-btn' type='button' data-id='{$Id}' id='btn-info'
+            <button class='btn btn-info delete-btn' type='button' data-id='{$post_id}' id='btn-info'
             data-bs-toggle='modal' data-bs-target='#exampleModal'>Withdraw Application</button></td>
       </tr>";
     }

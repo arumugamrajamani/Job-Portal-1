@@ -15,7 +15,7 @@ function  getProfilePicLoc($profilePic){
     }
 }
 
-if(isset($_POST['fetchData'])) {
+if (isset($_POST['fetchData'])) {
     $jobseeker_id = $_SESSION['user_id'];
     
     $query = "SELECT * FROM jobpost_bookmark WHERE jobseeker_id='$jobseeker_id'";
@@ -58,14 +58,13 @@ if(isset($_POST['fetchData'])) {
 
     // $row = mysqli_fetch_assoc($query);
     $response = array (
-        'status' => 'success',
         'tableData' => $tableData
     ); 
 
     echo json_encode($response);
 }
 
-if(isset($_POST['delete'])) {
+if (isset($_POST['delete'])) {
     $jobseeker_id = $_SESSION['user_id'];
     $jobpost_id = $_POST['postId'];
 
@@ -73,62 +72,53 @@ if(isset($_POST['delete'])) {
     $query = mysqli_query($conn, $query);
 
     $response = array (
-        'status' => 'success'
+        // Blank
     );
 
     echo json_encode($response);
 }
 
-if(isset($_POST['apply'])) {
+if (isset($_POST['apply'])) {
     $postId = ($_POST['postId']);
-    $query = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_id` = '$postId'");
+    $jobseeker_id = ($_SESSION['user_id']);
+
+    $query = "SELECT * FROM jobpost WHERE post_id = '$postId'";
+    $query = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($query);
-    $company_name = $row['company_name'];
+
     $job_title = $row['job_title'];
-    $employment_type = $row['employment_type'];
-    $job_category = $row['job_category'];
-    $jobDescription = $row['job_description'];
-    $salary = $row['salary'];
-    $employerEmail = $row['employer_email'];
-    $primarySkill = $row['primary_skill'];
-    $secondarySkill = $row['secondary_skill'];
     $postedby = $row['postedby_uid'];
-    $date_posted = dateTimeConvertion($row['date_posted']);
-    $id = ($_SESSION['user_id']);
-    
+
+    $query = "SELECT * FROM jobseeker WHERE jobseeker_id = '$jobseeker_id'";
+    $query = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($query);
+
+    $fullname = $row['fullname'];
+    $resume = $row['resume'];
+
     mysqli_query($conn, "INSERT INTO `applied_jobs`(
-    `post_id`,
-    `company_name`,
-    `job_title`,
-    `employment_type`,
-    `job_category`,
-    `job_description`,
-    `salary`,
-    `employer_email`,
-    `primary_skill`,
-    `secondary_skill`,
-    `postedby_uid`,
-    `date_applied`,
-    `status`,
-    `jobseeker_id`
+        `post_id`,
+        `employer_id`,
+        `jobseeker_id`,
+        `job_title`,
+        `fullname`,
+        `resume`,
+        `status`,
+        `date_applied`
     )
     VALUES(
         '$postId',
-        '$company_name',
-        '$job_title',
-        '$employment_type',
-        '$job_category',
-        '$jobDescription',
-        '$salary',
-        '$employerEmail',
-        '$primarySkill',
-        '$secondarySkill',
         '$postedby',
-        NOW(),
+        '$jobseeker_id',
+        '$job_title',
+        '$fullname',
+        '$resume',
         'Pending',
-        '$id'
+        NOW()
     )");
 
-    $response = array('status' => 'success');
+    $response = array(
+        // Blank
+    );
     echo json_encode($response);
 }

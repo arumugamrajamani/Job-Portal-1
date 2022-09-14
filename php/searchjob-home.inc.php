@@ -78,7 +78,7 @@
             if ($search[0] == 20000 ) {
                 switch ($count) {
                     case 1:
-                        $statement .= " AND salary >= 2000";
+                        $statement .= " AND salary >= 20000";
                     break;
                     case 2:
                         $statement .= " AND salary BETWEEN $search[1] AND $search[1] + 5000 OR salary >= $search[0]";

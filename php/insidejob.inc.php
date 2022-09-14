@@ -60,113 +60,59 @@
         echo json_encode($response);
     }
     
-    if(isset($_POST['apply'])) {
-        $postId = ($_POST['postId']);
-        $id = ($_SESSION['user_id']);
+    // if(isset($_POST['apply'])) {
+    //     $postId = ($_POST['postId']);
+    //     $id = ($_SESSION['user_id']);
 
-        $query = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_id` = '$postId'");
-        $row = mysqli_fetch_assoc($query);
-        $company_name = $row['company_name'];
-        $job_title = $row['job_title'];
-        $employment_type = $row['employment_type'];
-        $job_category = $row['job_category'];
-        $jobDescription = $row['job_description'];
-        $salary = $row['salary'];
-        $employerEmail = $row['employer_email'];
-        $primarySkill = $row['primary_skill'];
-        $secondarySkill = $row['secondary_skill'];
-        $postedby = $row['postedby_uid'];
-        $date_posted = dateTimeConvertion($row['date_posted']);
+    //     $query = mysqli_query($conn, "SELECT * FROM `jobpost` WHERE `post_id` = '$postId'");
+    //     $row = mysqli_fetch_assoc($query);
+    //     $company_name = $row['company_name'];
+    //     $job_title = $row['job_title'];
+    //     $employment_type = $row['employment_type'];
+    //     $job_category = $row['job_category'];
+    //     $jobDescription = $row['job_description'];
+    //     $salary = $row['salary'];
+    //     $employerEmail = $row['employer_email'];
+    //     $primarySkill = $row['primary_skill'];
+    //     $secondarySkill = $row['secondary_skill'];
+    //     $postedby = $row['postedby_uid'];
+    //     $date_posted = dateTimeConvertion($row['date_posted']);
 
-        mysqli_query($conn, "INSERT INTO `applied_jobs`(
-        `post_id`,
-        `company_name`,
-        `job_title`,
-        `employment_type`,
-        `job_category`,
-        `job_description`,
-        `salary`,
-        `employer_email`,
-        `primary_skill`,
-        `secondary_skill`,
-        `postedby_uid`,
-        `date_applied`,
-        `status`,
-        `jobseeker_id`
-        )
-        VALUES(
-            '$postId',
-            '$company_name',
-            '$job_title',
-            '$employment_type',
-            '$job_category',
-            '$jobDescription',
-            '$salary',
-            '$employerEmail',
-            '$primarySkill',
-            '$secondarySkill',
-            '$postedby',
-            NOW(),
-            'Pending',
-            '$id'
-        )");
+    //     mysqli_query($conn, "INSERT INTO `applied_jobs`(
+    //     `post_id`,
+    //     `company_name`,
+    //     `job_title`,
+    //     `employment_type`,
+    //     `job_category`,
+    //     `job_description`,
+    //     `salary`,
+    //     `employer_email`,
+    //     `primary_skill`,
+    //     `secondary_skill`,
+    //     `postedby_uid`,
+    //     `date_applied`,
+    //     `status`,
+    //     `jobseeker_id`
+    //     )
+    //     VALUES(
+    //         '$postId',
+    //         '$company_name',
+    //         '$job_title',
+    //         '$employment_type',
+    //         '$job_category',
+    //         '$jobDescription',
+    //         '$salary',
+    //         '$employerEmail',
+    //         '$primarySkill',
+    //         '$secondarySkill',
+    //         '$postedby',
+    //         NOW(),
+    //         'Pending',
+    //         '$id'
+    //     )");
 
-        $data = array('status' => 'success');
-        echo json_encode($data);
-    }
+    //     $data = array('status' => 'success');
+    //     echo json_encode($data);
+    // }
 
-    if(isset($_POST['bookmark'])) {
-        $post_id = ($_POST['postId']);
-        $jobseeker_id = $_SESSION['user_id'];
-
-        // The website will check if the user has already bookmarked the post
-        $count = "SELECT COUNT(jobpost_id) as total FROM jobpost_bookmark WHERE jobpost_id='$post_id' AND jobseeker_id='$jobseeker_id'";
-        $count = mysqli_query($conn, $count);
-        $count = mysqli_fetch_assoc($count);
-
-        if ($count['total'] == 0)
-        {
-            $query = "SELECT * FROM `jobpost` WHERE `post_id` = '$post_id'";
-            $query = mysqli_query($conn, $query);
-            $row = mysqli_fetch_assoc($query);
-    
-            $company_name = $row['company_name'];
-            $job_title = $row['job_title'];
-            $employer_id = $row['postedby_uid'];
-            $job_description = $row['job_description'];
-
-            
-    
-            $insert = "INSERT INTO `jobpost_bookmark`(
-                `jobpost_id`, 
-                `jobseeker_id`, 
-                `employer_id`,
-                `job_title`, 
-                `company_name`,
-                `job_description`,
-                `date_bookmarked`
-            ) 
-            VALUES ( 
-                '$post_id',
-                '$jobseeker_id',
-                '$employer_id',
-                '$job_title',
-                '$company_name',
-                '$job_description',
-                NOW()
-            )";
-            
-            mysqli_query($conn, $insert);
-
-            $string = "Bookmark Complete";
-        }
-        else
-        {
-            $string = "Already Bookmarked";
-        }
-
-        $data = array('status' => 'success',
-                      'string' => $string);
-        echo json_encode($data);
-    }
 ?>

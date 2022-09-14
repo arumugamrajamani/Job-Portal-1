@@ -1,4 +1,4 @@
-<?php include_once 'navbar.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,21 +10,62 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <!-- jQuery cdn link below -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-  <!-- Toast CDN for functionality of toastr -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Toast CDN for design of toastr -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        
   <title>Inside the Job</title>
   <link rel="stylesheet" href="css/InsideJob.css">
-
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar-example2">
-    <div class="color-overlay">
-        <?php include_once 'include/navbar.php'; ?>
+  <!-- <div class="color-overlay">
+          <div class="container-fluid">
+              <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light fixed-top mx-0 shadow " >
+                  <a href="#" class="navbar-brand ms-3">
+                  <img src="image/light-logo.png" alt="Job Portal Logo" width="100" height="80"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="toggleMobileMenu"> 
+                      <ul class="navbar-nav ms-auto fw-bold mb-lg-0">    
+                          <li><a class="nav-link" href="index.php#home">Home</a></li>
+                          <li><a class="nav-link" href="index.php#aboutus">About Us</a></li>
+                          <li><a class="nav-link" href="index.php#contactus">Contact Us</a></li>
+                          <li><a class="nav-link" href="index.php#faq">FAQ</a></li>
+                          <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle  mx-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item " href="companyregister.php">Employer</a></li>
+                              <li><a class="dropdown-item " href="jobseekersignup.php">JobSeeker</a></li>
+                          </ul>
+                          <li><a class="nav-link" href="login.php">Login</a></li>
+                      </ul>
+                  </div>
+              </nav>         
+          </div>
+      </div> -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-0" id="nav0">
+        <div class="container-fluid" id="inner">
+          <a class="navbar-brand me-1" href="#"></a>
+          <img class="img" src="image/Techployment (7) 1.png" onclick="window.location.href='index.php#home'" alt="Job Portal Logo" width="95" height="90" id="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="image/selection.png" alt="" width="40px" height="50px" id="Selection">
+          </button>
+          <div class="collapse navbar-collapse" id="toggleMobileMenu"> 
+                      <ul class="navbar-nav ms-auto fw-bold mb-lg-0">    
+                          <li><a class="nav-link" href="index.php#home">Home</a></li>
+                          <li><a class="nav-link" href="index.php#aboutus">About Us</a></li>
+                          <li><a class="nav-link" href="index.php#contactus">Contact Us</a></li>
+                          <li><a class="nav-link" href="index.php#faq">FAQ</a></li>
+                          <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle  mx-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item " href="companyregister.php">Employer</a></li>
+                              <li><a class="dropdown-item " href="jobseekersignup.php">JobSeeker</a></li>
+                          </ul>
+                          <li><a class="nav-link" href="login.php">Login</a></li>
+                      </ul>
+                  </div>
+        </div>
     </div>
-
-
+    </nav>
     <div class="swits">
     <div class = 'toggle-switch'>
       <label class="lab">
@@ -82,10 +123,7 @@
           <h4><b id="salaryy1"></b></h4>
           <p>You must qualified to this position</p>
           <div class="butt">
-            <button id="applyJob" class="logapp appnow" onclick="window.location.href='login.php'" style="text-decoration: none;"></button>
-            <button id="bookmarkJob" onclick="window.location.href='login.php'" class="markb">
-              <a><img id="bmark" src="image/Vector.png" alt=""></a>
-            </button>
+            <button id="applyJob" class="logapp appnow" onclick="window.location.href='login.php'" style="text-decoration: none;">APPLY NOW</button>
           </div>
         </div>
       </div>
@@ -123,14 +161,7 @@
           document.getElementById("logo").src = "image/Techployment (7) 1.png";
         }
         else{
-          document.getElementById("logo").src = "image/logo.png";
-        }
-        imgsrc= document.getElementById("bmark").src;
-        if (imgsrc.indexOf("image/Vector.png") !=-1){
-          document.getElementById("bmark").src = "image/Vectorlight.png";
-        }
-        else{
-          document.getElementById("bmark").src = "image/Vector.png";
+          document.getElementById("logo").src = "image/light-logo.png";
         }
         imgsrc= document.getElementById("Selection").src;
         if (imgsrc.indexOf("image/selection.png") !=-1){

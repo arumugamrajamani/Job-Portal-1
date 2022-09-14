@@ -5,17 +5,17 @@
     <div class="color-overlay">
         <?php include_once 'include/navbar.php'; ?>
     </div><br><br>
-    
+
     <button class="openbtn" title="Open Sidebar" onclick="openNav()">
         <i id="list-i" class="bi bi-list fa-2x"></i>
     </button>
 
     <?php include_once 'include/sidebar.php'; ?>
 
-    <div class = 'toggle-switch'>
+    <div class='toggle-switch'>
         <label class="lab">
-            <input class="dar" type = 'checkbox' name="theme" onclick="toggleImage()">
-            <span id="icon2" class = 'slider'></span>
+            <input class="dar" type='checkbox' name="theme" onclick="toggleImage()">
+            <span id="icon2" class='slider'></span>
         </label>
     </div><br><br>
 
@@ -92,10 +92,11 @@
                     <h5 class="modal-title ms-5" id="exampleModalLabel"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body ">
                     <div class="container con1">
                         <form class="container">
-                            <h2 class="text-black text-center mt-0 fw-bold">MORE DETAILS</h2><hr>
+                            <h2 class="text-black text-center mt-0 fw-bold">MORE DETAILS</h2>
+                            <hr>
                             <div class="row mb-3 mt-0 ms-4 fw-bold">
                                 <label for="companyaddress" class="col-sm-3 ">Company Address:</label>
                                 <div class="col-sm-8">
@@ -159,14 +160,15 @@
             </div>
         </div>
     </div>
-    
+
     <!--Edit detail modal-->
     <div class="modal fade" id="modal-editdetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-body company-details">
                     <form class="container">
-                        <h2 class="text-black text-center mt-0 fw-bold">EDIT DETAILS</h2><hr>
+                        <h2 class="text-black text-center mt-0 fw-bold">EDIT DETAILS</h2>
+                        <hr>
                         <div class="row mb-3 mt-0 ms-4 fw-bold">
                             <label for="e-employerfullname" class="col-sm-3 ">Employer Name:</label>
                             <div class="col-sm-8">
@@ -251,7 +253,7 @@
             </div>
         </div>
     </div>
-    
+
     <script src="js/toggle-image.js"></script>
     <script src="js/employer-management.js"></script>
     <script src="js/navbar.js"></script>

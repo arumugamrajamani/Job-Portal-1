@@ -107,15 +107,15 @@ $(document).ready(function () {
             dataType: "JSON",
             success: function (data) {
                 // Display the info reponse from the server into the more details modal
-                $('#v-companyaddress').text(data.companyAddress);
-                $('#v-companyceoname').text(data.companyCEO);
-                $('#v-companysize').text(data.companySize);
-                $('#v-companyrevenue').text(data.companyRevenue)
-                $('#v-industry').text(data.industry);
-                $('#v-companynumber').text(data.contactNumber);
-                $('#v-companyemail').text(data.companyEmail);
-                $('#v-companydescription').html(data.companyDescription)
-                $('#v-datecreated').text(data.dateCreated);
+                $('#e-companyaddress').text(data.companyAddress);
+                $('#e-companyceoname').text(data.companyCEO);
+                $('#e-companysize').text(data.companySize);
+                $('#e-companyrevenue').text(data.companyRevenue)
+                $('#e-industry').text(data.industry);
+                $('#e-companynumber').text(data.contactNumber);
+                $('#e-companyemail').text(data.companyEmail);
+                $('#e-companydescription').html(data.companyDescription)
+                $('#e-datecreated').text(data.dateCreated);
             }
         })
     })
@@ -170,7 +170,7 @@ $(document).ready(function () {
                 $('#e-companynumber').val(data.companyNumber);
                 $('#e-companyemail').val(data.companyEmail);
                 $('#e-companydescription').val(data.companyDescription);
-                $('select#verify').val(data.verificationStatus);
+                $('#verify').val(data.verificationStatus);
                 resetFields();
             }
         })

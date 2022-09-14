@@ -37,6 +37,15 @@ function getFiles($employerId)
     return $files;
 }
 
+function getPicture($fileName)
+{
+    //"../storage/profile pictures/employers/" . $row['company_logo_name']
+    if ($fileName != NULL && file_exists("../../storage/profile pictures/employers/" . $fileName)) {
+        return "../storage/profile pictures/employers/" . $fileName;
+    } else {
+        return "../storage/placeholder/noLogo.png";
+    }
+}
 // Function for unlinking the files
 function unlinkFiles($companyLogoName, $permitName)
 {
@@ -113,7 +122,7 @@ if (isset($_POST['loadData'])) {
     while ($row = mysqli_fetch_assoc($EmployerInfoQuery)) {
         // Get the employer information needed to table
         $employerId = $row['employer_id'];
-        $companyLogo = "../storage/profile pictures/employers/" . $row['company_logo_name'];
+        $companyLogo = getPicture($row['company_logo_name']);
         $companyName = $row['company_name'];
         $employerName = $row['employer_name'];
         $employerPosition = $row['employer_position'];

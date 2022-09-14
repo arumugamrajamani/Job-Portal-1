@@ -65,7 +65,7 @@ function getProfilePicLoc($profilePic)
     if ($profilePic != NULL && file_exists("../../storage/profile pictures/admin/" . $profilePic)) {
         return "../storage/profile pictures/admin/" . $profilePic;
     } else {
-        return "../storage/noProfilePic.png";
+        return "../storage/placeholder/noProfilePic.png";
     }
 }
 

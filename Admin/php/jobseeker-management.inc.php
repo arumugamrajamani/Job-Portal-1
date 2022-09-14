@@ -27,10 +27,10 @@ function getFiles($jobseekerId)
 //check if profile pic is not null && if file exists  then returns a string value of the profile picture location
 function getProfilePicLoc($profilePic)
 {
-    if ($profilePic != NULL && file_exists("../../storage/" . $profilePic)) {
-        return "../storage/" . $profilePic;
+    if ($profilePic != NULL && file_exists("../../storage/profile pictures/jobseeker/" . $profilePic)) {
+        return "../storage/profile pictures/jobseeker/" . $profilePic;
     } else {
-        return "../storage/noProfilePic.png";
+        return "../storage/placeholder/noProfilePic.png";
     }
 }
 
@@ -41,20 +41,22 @@ function dateTimeConvertion($date)
 }
 
 // Function for validating if input is valid fullname
-function isValidFullname($fullname){
-    if(preg_match("/^[a-zA-Z .]*$/", $fullname)){
-            return true;
+function isValidFullname($fullname)
+{
+    if (preg_match("/^[a-zA-Z .]*$/", $fullname)) {
+        return true;
     } else {
         return false;
     }
 }
 
 // Function for validating if inout is valid number
-function isValidNumber($number){
-    if(preg_match("/^[0-9]*$/", $number)){
-            return true;
+function isValidNumber($number)
+{
+    if (preg_match("/^[0-9]*$/", $number)) {
+        return true;
     } else {
-            return false;
+        return false;
     }
 }
 
@@ -182,7 +184,7 @@ if (isset($_POST['loadData'])) {
 if (isset($_POST['deleteJobseeker'])) {
     $jobseekerId = mysqli_real_escape_string($conn, $_POST['jobseekerId']);
     $jobseekerDP = getFiles($jobseekerId)['profile_picture'];
-    
+
     //deleting the jobseeker and moving it to recycle bin
     $fetchDeletedQuery = mysqli_query($conn, "SELECT * FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
     $row = mysqli_fetch_assoc($fetchDeletedQuery);
@@ -200,7 +202,6 @@ if (isset($_POST['deleteJobseeker'])) {
                         VALUES ('$jobseeker_id', '$fullname', '$mobile_number', '$profile_picture', '$resume', '$otp_code', '$email', '$password', '$date_created')");
 
     mysqli_query($conn, "DELETE FROM jobseeker WHERE jobseeker_id = '$jobseekerId'");
-    
 }
 
 
@@ -225,44 +226,42 @@ if (isset($_POST['fetchDetails'])) {
     echo json_encode($response);
 }
 
-    // When user click save details button in edit modal
-    if (isset($_POST['saveDetails'])) {
+// When user click save details button in edit modal
+if (isset($_POST['saveDetails'])) {
 
-        // Validation for Fullname
-        if(empty($_POST['jobseekerName'])) {
-            $fullnameRR = array('status' => 'error', 'message' => 'Fullname is required.');
-        } else if(!isValidFullname($_POST['jobseekerName'])) {
-            $fullnameRR = array('status' => 'error', 'message' => 'Only characters are allowed.');
-        } else {
-            $fullnameRR = array('status' => 'success');
-        }
-
-        // Validation for mobilenumber
-        if(empty($_POST['jobseekerNumber'])) {
-            $mobilenumberRR = array('status' => 'error', 'message' => 'Mobile number is required.');
-        } elseif(!isValidNumber($_POST['jobseekerNumber'])) {
-            $mobilenumberRR = array('status' => 'error', 'message' => 'Mobile number must be numeric.');
-        } else {
-            $mobilenumberRR = array('status' => 'success');
-            
-        }
-
-        // Check if all the validation are successful or not
-        if($fullnameRR['status'] == 'success' && $mobilenumberRR['status'] == 'success' ) {
-            // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
-            $jobseekerId = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerId']));
-            $jobseekerName = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerName']));
-            $jobseekerNumber = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerNumber']));
-            // Create query to update the jobseeker information
-            mysqli_query($conn, "UPDATE jobseeker SET fullname = '$jobseekerName', mobile_number = '$jobseekerNumber' WHERE jobseeker_id = '$jobseekerId'");
-
-            // Return this as status success response
-            $response = array('status' => 'success');
-        } else {
-            $response = array('status' => 'error','fullnameRR' => $fullnameRR, 'mobilenumberRR' => $mobilenumberRR );
-        }
-
-        // Return the response
-        echo json_encode($response);
+    // Validation for Fullname
+    if (empty($_POST['jobseekerName'])) {
+        $fullnameRR = array('status' => 'error', 'message' => 'Fullname is required.');
+    } else if (!isValidFullname($_POST['jobseekerName'])) {
+        $fullnameRR = array('status' => 'error', 'message' => 'Only characters are allowed.');
+    } else {
+        $fullnameRR = array('status' => 'success');
     }
-?>
+
+    // Validation for mobilenumber
+    if (empty($_POST['jobseekerNumber'])) {
+        $mobilenumberRR = array('status' => 'error', 'message' => 'Mobile number is required.');
+    } elseif (!isValidNumber($_POST['jobseekerNumber'])) {
+        $mobilenumberRR = array('status' => 'error', 'message' => 'Mobile number must be numeric.');
+    } else {
+        $mobilenumberRR = array('status' => 'success');
+    }
+
+    // Check if all the validation are successful or not
+    if ($fullnameRR['status'] == 'success' && $mobilenumberRR['status'] == 'success') {
+        // Assigned the post data to new variable, escape the data to prevent sql injection, and sanitize the data
+        $jobseekerId = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerId']));
+        $jobseekerName = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerName']));
+        $jobseekerNumber = mysqli_real_escape_string($conn, sanitize_input($_POST['jobseekerNumber']));
+        // Create query to update the jobseeker information
+        mysqli_query($conn, "UPDATE jobseeker SET fullname = '$jobseekerName', mobile_number = '$jobseekerNumber' WHERE jobseeker_id = '$jobseekerId'");
+
+        // Return this as status success response
+        $response = array('status' => 'success');
+    } else {
+        $response = array('status' => 'error', 'fullnameRR' => $fullnameRR, 'mobilenumberRR' => $mobilenumberRR);
+    }
+
+    // Return the response
+    echo json_encode($response);
+}

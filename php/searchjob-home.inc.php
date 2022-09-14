@@ -16,14 +16,14 @@
         return date('M d, Y, h:i A', strtotime($date));
     }
     function  getProfilePicLoc($profilePic){
-        if ($profilePic != NULL && file_exists("storage/" . $profilePic)) {
-            return "storage/" . $profilePic;
+        if ($profilePic != NULL && file_exists("../storage/profile pictures/employers/" . $profilePic)) {
+            return "storage/profile pictures/employers/" . $profilePic;
         } else {
             return "image/comlogo.png";
         }
     }
     function  getQrLoc($qrCode){
-        if ($qrCode != NULL && file_exists("storage/" . $qrCode)) {
+        if ($qrCode != NULL && file_exists("../storage/" . $qrCode)) {
             return "storage/" . $qrCode;
         } else {
             return "image/Qr-code.png";
@@ -78,7 +78,7 @@
             if ($search[0] == 20000 ) {
                 switch ($count) {
                     case 1:
-                        $statement .= " AND salary >= 20000";
+                        $statement .= " AND salary >= 2000";
                     break;
                     case 2:
                         $statement .= " AND salary BETWEEN $search[1] AND $search[1] + 5000 OR salary >= $search[0]";

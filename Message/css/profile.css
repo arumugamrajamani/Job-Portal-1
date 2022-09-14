@@ -1,0 +1,347 @@
+/* start of profile */
+.profile-con {
+    height: calc(90vh - 10px);
+    width: 100%;
+    background-color: var(--container);
+    display: none;
+}
+
+.profile-con.active {
+    display: block;
+}
+
+.profile-con .profile {
+    height: 100%;
+    width: 100%;
+}
+
+.profile .profile-main {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    padding: 12px;
+}
+
+.profile .profile-main img {
+    height: 100px;
+    width: 100px;
+    border: 2px solid var(--bg);
+    overflow: hidden;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.profile .personal-info {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.personal-info #name {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.personal-info #position {
+    font-size: 15px;
+    color: var(--medium-msg);
+    margin: 6px 0;
+}
+
+.personal-info #company {
+    font-size: 12px;
+    color: var(--medium-msg);
+}
+
+.personal-info .contact-info {
+    text-align: left;
+    margin-top: 15px;
+    line-height: 24px;
+    margin-left: 18px;
+}
+
+.personal-info .contact-info h4 {
+    font-size: 14px;
+    color: var(--medium-msg);
+}
+
+.contact-info .email,
+.contact-info .mobile-no {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: var(--light-msg);
+}
+
+.profile .media-collapse {
+    background-color: var(--chat);
+    color: var(--text-white);
+    padding: 12px 18px;
+    font-weight: 600;
+    width: 87%;
+    margin-left: 18px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.media-collapse .angle-right {
+    transition: 0.3s ease;
+    color: var(--text-white);
+}
+
+/* .profile .media-collapse:hover {
+    background-color: var(--hover);
+} */
+
+.media-files {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.media-files .media-section {
+    height: 45px;
+    width: 87%;
+    padding: 12px 18px;
+    margin-left: 18px;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.media-files .media-section a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--text-white);
+}
+.media-files .media-section i {
+    margin-right: 12px;
+    font-size: 20px;
+    color: var(--text-white);
+}
+
+.media-files .media-section:hover {
+    background-color: var(--hover);
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+/*  */
+.profile .profile-header {
+    padding: 15px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--chat);
+}
+
+.profile-header h4 {
+    text-align: left;
+    color: var(--text);
+}
+
+.profile i {
+    margin-right: 6px;
+    font-size: 18px;
+    color: var(--text);
+}
+
+.profile-body {
+    padding-bottom: 12px;
+    height: calc(100% - 48px);
+    overflow: hidden;
+    padding: 12px;
+}
+
+/* start of body header */
+.profile-body .body-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 18px;
+    margin-bottom: 18px;
+}
+
+.body-header .media-button {
+    background-color: transparent;
+    color: var(--text);
+    cursor: pointer;
+    padding: 12px 18px;
+    width: 100%;
+    font-weight: 600;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    position: relative;
+}
+
+.media-button .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    display: none;
+    background-color: var(--active);
+}
+
+.img-button.active,
+.files-button.active {
+    color: var(--active);
+}
+
+.img-button.active .underline,
+.files-button.active .underline {
+    display: block;
+}
+/* end of body header */
+
+/* start of media content */
+.profile-body .media-files::-webkit-scrollbar {
+    width: 0.3em;
+}
+
+.profile-body .media-files::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 21px;
+}
+
+.profile-body .media-files::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track);
+    border-radius: 21px;
+}
+
+.profile-body .media-files {
+    /* background-color: tomato; */
+    height: 88%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+/* files */
+.files-con {
+    display: none;
+}
+
+.files-con.active {
+    display: block;
+}
+
+.media-files .files {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 18px 18px;
+    border-bottom: 1px solid var(--hover);
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.media-files .files:hover {
+    background-color: var(--hover);
+}
+.media-files .files:last-child {
+    border-bottom: none;
+}
+
+.media-files .files i {
+    margin-right: 16px;
+    color: var(--text-white);
+}
+
+.media-files .files span {
+    color: var(--text-white);
+}
+
+/* images */
+.img-con {
+    display: none;
+    padding-left: 9px;
+}
+
+.img-con.active {
+    display: block;
+}
+
+.media-files .img-files {
+    margin: 0 auto;
+}
+
+.media-files .img-files img {
+    display: inline-block;
+    width: 85px;
+    height: 75px;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.media-files .img-files img:hover {
+    background-color: var(--hover);
+}
+/* end of profile body */
+/* end of profile */
+
+/* modal */ 
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    /* padding-top: 100px;  */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    /* margin: auto; */
+    overflow: hidden;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+  
+  /* Modal Content (image) */
+#img-modal {
+    position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 500px;
+   height: 500px;
+   margin-top: -250px; 
+   margin-left: -250px;
+   background-color: #00c2d6;
+}
+  
+/* The Close Button */
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

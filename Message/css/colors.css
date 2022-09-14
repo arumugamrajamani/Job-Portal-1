@@ -1,0 +1,51 @@
+:root {
+    /* general */
+    --bg: #ececec;
+    --container: #fff;
+    --text: #182531;
+    --text-white: #182531;
+    --scrollbar-thumb: #c1c1c1;
+    --scrollbar-track: #f1f1f1;
+    --hover: #f0f0f0;
+    --box-shadow: #00000050;
+    /* inbox */
+    --inbox-name: var(--text);
+    --input-text: var(--hover);
+    --light-msg: #b5b5b5;
+
+    /* message */
+    --chat: #00d7e2;
+    --input-message: rgb(228, 228, 228);
+    --online: #2fd867;
+    --offline: #ccc;
+
+    /* profile */
+    --medium-msg: #7e7e7e;
+    --active: #00d7e2;
+}
+
+.dark-theme{
+    /* general */
+    --bg: #293f53;
+    --container: #203242;
+    --text: #00d0e8;
+    --text-white: #c1c1c1;
+    --scrollbar-thumb: #c1c1c1;
+    --scrollbar-track: #f1f1f1;
+    --hover: #293f53;
+    --box-shadow: #0c161f;
+    /* inbox */
+    --inbox-name: var(--scrollbar-track);
+    --input-text: var(--hover);
+    --light-msg: #466b8d;
+    
+    /* message */
+    --chat: #182531;
+    --input-message: #293f53;
+    --online: #2fd867;
+    --offline: #ccc;
+
+    /* profile */
+    --medium-msg: #466b8d;
+    --active: #c1c1c1;
+}

@@ -1,0 +1,228 @@
+/* chat message */
+.chat {
+    height: calc(90vh - 10px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--container);
+}
+
+.chat .chat-name {
+    display: flex;
+    align-items: center;
+    text-indent: 16px;
+    width: 100%;
+    background-color: var(--chat);
+    height: 50px;
+}
+
+.chat-name h3 {
+    margin-right: 8px;
+    color: var(--text)
+}
+
+.chat-name .status-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--online);
+}
+
+/* start of chat body */
+.chat .chat-body {
+    width: 100%;
+    height: calc(100% - 115px);
+    /* background-color: white; */
+    overflow-y: auto;
+}
+
+.chat-body .chat-content {
+    padding: 10px 30px 20px 30px;
+}
+
+.to-message {
+    margin-top: 8px;
+    display: none;
+    align-items: center;
+}
+
+.to-message.new-message {
+    display: flex;
+}
+
+.to-message label {
+    margin-right: 8px;
+    color: var(--text-white);
+}
+
+.to-message input[type=text] {
+    width: 250px;
+    height: 25px;
+    background-color: var(--bg);
+    outline: none;
+    border: none;
+    padding: 6px 8px;
+}
+
+.to-message input[type=text]::placeholder {
+    color: var(--light-msg)
+}
+
+/* start of message received and message sent */
+/* message outgoing / sent */
+.chat-content .chatbox {
+    margin: 15px auto;
+}
+
+.chatbox:last-child {
+    margin-bottom: 0px;
+}
+
+.chat-content .chatbox p {
+    padding: 8px 16px;
+}
+
+.chat-content .outgoing {
+    display: flex;
+}
+
+.chat-content .outgoing.new-message,
+.chat-content .incoming.new-message {
+    display: none;
+}
+
+.outgoing .details {
+    margin-left: auto;
+    max-width: calc(100% - 130px);
+}
+.outgoing .details p {
+    background: var(--chat);
+    color: var(--text-white);
+    border-radius: 18px;
+}
+
+/* message received / incoming */
+.chat-content .incoming {
+    display: flex;
+    align-items: flex-start;
+}
+
+.chat-content .incoming img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--text-white);
+}
+
+.incoming .details {
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 130px);
+}
+
+.incoming .details p {
+    background-color: var(--bg);
+    color: var(--text-white);
+    border-radius: 18px;
+}
+/* end of message received and message sent */
+
+/* start of chat input */
+.chat .chat-input {
+    width: 100%;
+    min-height: 65px;
+    /* background-color: var(--chat); */
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.chat-input .typing-area {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+.chat-input .input-con {
+    background-color: var(--input-message);
+    width: 75%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+
+/* .input-con input[type='text']  */
+.input-con textarea {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 85%;
+    max-height: 85px;
+    font-size: 14px;
+    line-height: 16px;
+    height: 0;
+    padding: 8px 15px;
+    resize: none;
+    color: var(--text-white);
+}
+
+.input-con textarea::placeholder {
+    color: var(--medium-msg)
+}
+
+.input-con textarea::-webkit-scrollbar {
+    width: 0.3em;
+}
+
+.input-con textarea::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+}
+
+.chat-input .typing-area .icon-button, 
+.chat-input .typing-area .send-button {
+    height: 32px;
+    width: 32px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--text);
+    background-color: transparent;
+    /* background-color: transparent; */
+}
+/* end of chat input */
+/* end of chat body */
+
+/* accept delete */
+/* .chat-input .accept-delete-con {
+    display: flex;
+    width: 100%;
+    padding: 8px;
+}
+
+.accept-delete-con .button-con-accept-delete {
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+}
+
+.accept-delete-con .accept-delete {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.accept-delete-con .button-con-accept-delete:first-child {
+    border-right: 1px solid red;
+}
+
+.button-con-accept-delete:first-child .accept-delete {
+    color: red;
+} */

@@ -11,11 +11,19 @@
     align-items: center;
 }
 
+.archived-spam h4,
 .archived-spam a {
-    margin-right: 12px;
-    color: var(--text);
+    color: var(--text-white);
 }
 
+.archived-spam a {
+    text-decoration: none;
+    display: flex;
+}
+
+.archived-spam a i {
+    margin-right: 12px;
+}
 /* start of users inbox header */
 .inbox-header {
     height: 70px;
@@ -71,6 +79,8 @@
     display: flex;
     align-items: center;
     text-align: left;
+    width: 100%;
+    height: 100%;
     /* padding: 0 12px; */
     text-decoration: none;
     color: var(--text-white);

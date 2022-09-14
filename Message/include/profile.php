@@ -8,7 +8,7 @@
 <div class="profile-con <?php echo $media_files; ?>">
     <div class="profile">
         <div class="profile-main">
-            <img src="../image/home_section.png" alt="">
+            <img src="../image/back-end2.jpg" alt="">
             <div class="personal-info">
                 <p id="name">Full Name</p>
                 <p id="position">Human Rresource Manager</p>

@@ -31,8 +31,8 @@
                 <div class="archived-spam">
                     <a href="chat.php">
                         <i class="fas fa-long-arrow-alt-left"></i>
+                        <h4>Messages</h4>
                     </a>
-                    <h4>Messages</h4>
                 </div> 
                 ';
             } else {

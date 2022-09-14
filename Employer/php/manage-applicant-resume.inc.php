@@ -79,7 +79,7 @@ if (isset($_POST['getData'])) {
     }
     else {
         // Create query to get the employer information
-        $fetchDetailsQuery = "SELECT * FROM applied_jobs WHERE employer_id = '$employer_id' ";
+        $fetchDetailsQuery = "SELECT * FROM applied_jobs WHERE employer_id = '$employer_id' LIMIT $start, $pageLimit";
         $paginationQuery = "SELECT * FROM applied_jobs WHERE employer_id = '$employer_id'";
     }
 

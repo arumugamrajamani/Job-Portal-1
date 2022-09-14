@@ -19,7 +19,6 @@
     }
 
     function returnTable($id, $jobTitle) {
-
         $statement = "
         SELECT *, COUNT(applied_jobs.jobseeker_id) as count
         FROM jobpost 
@@ -32,7 +31,7 @@
         $getPosts = mysqli_query($GLOBALS['conn'], $statement);
 
         $row = mysqli_fetch_assoc($getPosts);
-        $count=$row['count'];
+        $count = $row['count'];
         $status = "";
         if ($count == 0) {
             $status = "Inactive";
@@ -46,7 +45,7 @@
             <td data-title='status'>$status</td>
             <td data-title='drive'>sample.com</td>
             <td data-title='action'>
-            <button class='btn-success fetch-details' type='button' 
+            <button class='btn btn-success fetch-details' type='button' 
                 id='btn-info' data-id='{$id}' data-bs-toggle='modal' 
                 data-bs-target='#modal-editdetails'>Edit</button>
             <button class='btn delete-Btn' data-id='{$id}' type='button' 
@@ -206,7 +205,7 @@
     if (isset($_POST['deleteJobPost'])) {
         $postId = mysqli_real_escape_string($conn, $_POST['postId']);
         // deleting the jobseeker in the database
-        mysqli_query($conn, "DELETE FROM jobpost WHERE post_id = '$postId'");
+        mysqli_query($conn, "DELETE FROM `jobpost` WHERE `jobpost`.`post_id` = 82");
         // Return nothing to the ajax call
     }
     
@@ -240,16 +239,16 @@
                 `secondary_skill`='$secondarySkill' WHERE `post_id`='$postId'";
             mysqli_query($conn, $updateQuery);
 
-            $updateApplication = "UPDATE applied_jobs SET `company_name`='$companyName', `job_title`='$jobTitle', 
-            `employment_type`='$employment', `job_category`='$jobCategory', `job_description`='$jobDescription', 
-            `salary`='$salaryWage', `employer_email`='$employerEmail', `primary_skill`='$primarySkill', 
-            `secondary_skill`='$secondarySkill' WHERE `post_id`='$postId'";
-
+            $updateApplication = "UPDATE applied_jobs SET `job_title`='$jobTitle' WHERE `post_id`='$postId'";
             mysqli_query($conn, $updateApplication);
             
-            $response = array('status'=>'success');
+            $response = array(
+                'status' => 'success'
+            );
         } else {
-            $response = array('status'=>'error');
+            $response = array(
+                'status' => 'failed'
+            );
         }
 
         echo json_encode($response);

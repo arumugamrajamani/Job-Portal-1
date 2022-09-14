@@ -66,11 +66,16 @@ $(document).ready(function () {
                 deleteJobPost: true,
                 postId: postId
             },
+            dataType: "JSON",
             success: function (response) {
                 $('#exampleModal').modal('hide');
                 console.log(postId);
                 toastr.success('', 'Successfully Deleted!');
                 fetchData();
+            },
+            error: function (jqXHR, status, description) {
+                console.log(jqXHR.responseText);
+                console.log(status);
             }
         });
     });
@@ -135,13 +140,16 @@ $(document).ready(function () {
             },
             dataType: 'json',
             success: function (data) {
-                console.log(data.status)
                 if (data.status == 'success') {
                     $('#modal-editdetails').modal('hide');
                     toastr.success('', 'Successfully Updated!');
                     // load_data(GetSearchValue(), getCurrentPage());
                     fetchData(GetSearchValue(), getCurrentPage());
                 }
+            },
+            error: function (jqXHR, status, description) {
+                console.log(jqXHR.responseText);
+                console.log(status);
             }
         })
     })

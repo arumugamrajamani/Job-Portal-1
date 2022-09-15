@@ -31,23 +31,23 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item me-4">
-                        <a class="nav-link text-dark message active" aria-current="page" href="message-employer.html">MESSAGE</a>
+                        <a class="nav-link text-dark message active" aria-current="page" href="message-employer.php">MESSAGE</a>
                     </li>
                     <li class="nav-item me-4">
-                        <a class="nav-link text-dark about active" href="postajob.html">POST A JOB</a>
+                        <a class="nav-link text-dark about active" href="postajob.php">POST A JOB</a>
                     </li>             
                     <li class="nav-item account dropdown active">
                         <a class="nav-link text-dark dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         ACCOUNT</a>
                         <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-dark" href="/Employer/company-profile.html"> My Profile</a></li>
+                            <li><a class="dropdown-item text-dark" href="company-profile.php"> My Profile</a></li>
                             <li><hr class="dropdown-divider bg-black"></li>
-                            <li><a class="dropdown-item text-dark" href="manage-account-profile.html"> Edit Profile</a></li>
-                            <li><a class="dropdown-item text-dark" href="reset-password.html"> Change Password</a></li>
-                            <li><a class="dropdown-item text-dark" href="manage-applicant-resume.html"> Manage Resume</a></li>
-                            <li><a class="dropdown-item text-dark" href="jobmanage.html"> Job Management</a></li>
-                            <li><a class="dropdown-item text-dark" href="job-applicant.html">Job Applicants</a></li>
-                            <li><a class="dropdown-item logout text-dark" href="/Landing-Page/login.html"> Log Out</a></li>
+                            <li><a class="dropdown-item text-dark" href="manage-account-profile.php"> Edit Profile</a></li>
+                            <li><a class="dropdown-item text-dark" href="change-password.php"> Change Password</a></li>
+                            <li><a class="dropdown-item text-dark" href="manage-applicant-resume.php"> Manage Resume</a></li>
+                            <li><a class="dropdown-item text-dark" href="jobmanage.php"> Job Management</a></li>
+                            <li><a class="dropdown-item text-dark" href="job-applicant.php">Job Applicants</a></li>
+                            <li><a class="dropdown-item logout text-dark" href="/Job-Portal/logout.php"> Log Out</a></li>
                         </ul>
                     </li>
                     <li>

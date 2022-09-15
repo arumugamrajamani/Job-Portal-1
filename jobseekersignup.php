@@ -27,7 +27,7 @@
         <div class="container-fluid">
             <nav id="navbar-example2" class="navbar navbar-expand-lg h6 navbar-light bg fixed-top mx-0 shadow ">
                 <a href="#" class="navbar-brand ms-3">
-                    <img class="logo" src="image/light-logo.png" alt="Job Portal Logo" width="100" id="logo"></a>
+                    <img class="logo" src="image/light-logo.png" alt="Job Portal Logo" onclick="window.location.href='index.php#home'" width="100" id="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

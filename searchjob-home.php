@@ -26,7 +26,7 @@
         <div class="container-fluid">
             <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light fixed-top mx-0 shadow " >
                 <a href="#" class="navbar-brand ms-3">
-                <img src="image/light-logo.png" alt="Job Portal Logo" width="120" height="95"></a>
+                <img src="image/light-logo.png" onclick="window.location.href='index.php#home'" alt="Job Portal Logo"></a>
 			<form class="search-first d-flex">
 				<input class="form-control1 icon1" type="search" placeholder="Search for a job title" aria-label="Search">
 				<button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>

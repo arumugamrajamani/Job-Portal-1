@@ -4,7 +4,7 @@ $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], '/') + 
 <div class="container-fluid">
     <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light fixed-top shadow ">
         <div class="navbar-brand">
-            <img src="image/light-logo.png" alt="Job Portal Logo" class="flogo" id="logos">
+            <img src="image/light-logo.png" onclick="window.location.href='index.php#home'" alt="Job Portal Logo" class="flogo" id="logos">
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span><img src="image/icons8-menu-60.png" alt="" id="men" width="40px" height="50px"></span>

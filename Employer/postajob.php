@@ -1,3 +1,4 @@
+<?php include_once 'include/login_session.php'; ?>
 <!doctype html>
 <html lang="en">
 <head>

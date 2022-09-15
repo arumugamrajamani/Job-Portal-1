@@ -1,4 +1,4 @@
-<?php include_once 'include/header.php'; ?>
+<?php include_once 'include/login_session.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

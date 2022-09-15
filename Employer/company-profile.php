@@ -1,5 +1,5 @@
 <?php
-include_once 'include/header.php';
+include_once 'include/login_session.php';
 require './../php/db-connection.php';
 $employerId = $_SESSION['user_id'];
 $user = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM employer WHERE employer_id = '$employerId'"));

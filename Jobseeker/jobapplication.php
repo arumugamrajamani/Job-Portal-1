@@ -45,7 +45,7 @@
               role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
               <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item text-start" href="/Employer/company-profile.php"> Full Name</a></li>
+                <li><a class="dropdown-item text-start" href="applicant-profile.php"> Full Name</a></li>
                 <li>
                   <hr class="dropdown-divider bg-black">
                 </li>

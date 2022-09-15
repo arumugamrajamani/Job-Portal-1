@@ -25,31 +25,31 @@
         <div class="text-center">
             <h3 class="div1">ABOUT US SETTINGS</h3>
         </div><br>
-        <div class="row mb-3 mt-0 fw-bold justify-content-center">
+        <div class="row mb-3 mt-0 justify-content-center">
             <label for="meetourteam" class="col-sm-2 ">Meet our team:</label>
             <div class="col-sm-8">
                 <textarea type="text" class="form-control" id="meetourteam" rows="4"></textarea>
             </div>
         </div>
-        <div class="row mb-3 mt-0 fw-bold justify-content-center">
+        <div class="row mb-3 mt-0 justify-content-center">
             <label for="vision" class="col-sm-2 ">Vision:</label>
             <div class="col-sm-8">
                 <textarea type="text" class="form-control" id="vision" rows="3"></textarea>
             </div>
         </div>
-        <div class="row mb-3 mt-0 fw-bold justify-content-center">
+        <div class="row mb-3 mt-0 justify-content-center">
             <label for="mission" class="col-sm-2 ">Mission:</label>
             <div class="col-sm-8">
                 <textarea type="text" class="form-control" id="mission" rows="3"></textarea>
             </div>
         </div>
-        <div class="row mb-3 mt-0 fw-bold justify-content-center">
+        <div class="row mb-3 mt-0 justify-content-center">
             <label for="goal" class="col-sm-2 ">Goal:</label>
             <div class="col-sm-8">
                 <textarea type="text" class="form-control" id="goal" rows="3"></textarea>
             </div>
         </div>
-        <div class="row mb-3 mt-0 fw-bold justify-content-center">
+        <div class="row mb-3 mt-0 justify-content-center">
             <label for="services" class="col-sm-2 ">Our services:</label>
             <div class="col-sm-8">
                 <textarea type="text" class="form-control" id="services" rows="4"></textarea>

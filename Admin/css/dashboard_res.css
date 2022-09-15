@@ -1,0 +1,171 @@
+@media (max-width:1280px) {
+    .navbar{
+      width: 100% !important;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .position-relative{
+      margin: 0;
+      align-self: center;
+    }
+    .ms-auto{
+      margin-left: 0 !important;
+    }
+    .container-responsive{
+      padding: 5px;
+      align-self: flex-end !important;
+      margin: 0;
+      margin-top: 10px;
+      width: 79%;
+    }
+    .employers-jobseekers{
+      justify-content: center;
+      margin-left: 0px;
+    }
+    #numberofjob-active {
+      justify-content: center;
+      margin-left: 0px;
+    }
+    #main{
+      transition: margin-left .5s;
+      padding-top: 100px !important;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .kk{
+      justify-content: space-evenly;
+      margin-bottom: 20px !important;
+      display: flex;
+      flex-direction: row !important;
+    }
+    .dash{
+      width: 480px !important;
+    }
+    #myChart{
+      height: 220px !important;
+      margin: 0;
+      width: auto;
+    }
+    #myChart1{
+      margin: 0 !important;
+      margin-top: 20px !important;
+      width: auto;
+    }
+  }
+  @media (max-width: 768px) {
+    .navbar{
+      align-content: center;
+    }
+    .dash{
+      width: 300px !important;
+    }
+    .container-responsive{
+      width: 100%;
+      justify-content: center !important;
+    }
+    .employers-jobseekers{
+      width: 100% !important;
+    }
+    #main{
+      margin-left: 0 !important;
+      width: 100%;
+      transition: none !important;
+    }
+    #numberofjobs{
+      width: 350px !important;
+    }
+    .myChart{
+      justify-self: flex-start !important;
+      width: 400px !important;
+    }
+    #active-inactive{
+      width: 350px !important;
+    }
+    #registered-employer,#registered-jobseekers{
+      width: 350px;
+    }
+  }
+  @media (max-width: 375px) {
+    .navbar{
+      align-content: flex-start;
+    }
+    .container-responsive{
+      height: 100% !important;
+    }
+    .navbar-brand{
+      margin-left: 10px !important;
+    }
+    .lolo{
+      width: 80px;
+    }
+    h6{
+      display: none;
+      align-self: flex-start !important;
+      font-size: 20px !important;
+    }
+    .position-relative{
+      position: relative;
+    }
+    .dropdown{
+      position: absolute;
+      right: 30px;
+      font-size: 15px;
+    }
+    .homie{
+      display: none;
+    }
+    .dash{
+      width: 200px !important;
+    }
+    #main{
+      width: 100% !important;
+    }
+    #registered-jobseekers, #numberofjob-active, #active-inactive, #numberofjobs{
+      margin: 0 !important;
+      height: 210px !important;
+    }
+    #numberofjob-active{
+      height: 456px !important;
+      align-items: center !important;
+      display: block !important;
+    }
+    .employers-jobseekers {
+      margin-top: 0;
+      width: 100% !important;
+      height: 456px;
+    }
+    p{
+      margin: 0;
+      margin-top: 20px;
+    }
+    #registered-employer{
+      height: 210px;
+    }
+    #myChart {
+      margin-left: -30px;
+      margin-top: -20px;
+      width: 100% !important;
+      height: 130px !important;
+    }
+    #myChart1{
+      height: 130px !important;
+      margin: 0 !important;
+    }
+    .char{
+      width: 100%;
+    }
+    h2{
+      font-size: 15px;
+    }
+    #numberofjobs{
+      margin-left: 8px !important;
+      margin-bottom: 30px !important;
+    }
+    #active-inactive{
+      margin-left: 8px !important;
+    }
+}

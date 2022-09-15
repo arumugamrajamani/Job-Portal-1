@@ -205,8 +205,14 @@
     if (isset($_POST['deleteJobPost'])) {
         $postId = mysqli_real_escape_string($conn, $_POST['postId']);
         // deleting the jobseeker in the database
-        mysqli_query($conn, "DELETE FROM `jobpost` WHERE `jobpost`.`post_id` = 82");
+        mysqli_query($conn, "DELETE FROM `jobpost` WHERE `jobpost`.`post_id` = $postId");
+        
         // Return nothing to the ajax call
+        $response = array (
+            // Blank
+        );
+
+        echo json_encode($response);
     }
     
     if (isset($_POST['saveDetails'])) {

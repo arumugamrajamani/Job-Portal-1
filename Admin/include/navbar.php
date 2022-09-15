@@ -7,7 +7,6 @@
         <img src="image/light-logo.png" alt="Job Portal Logo" width="80" height="60" id="logo"></a>
     <h6 class="position-relative ms-auto header-text">
         <?php
-
             if ($page == 'dashboard.php') echo 'Admin Dashboard';
             else if ($page == 'employer-management.php') echo 'Employers Management';
             else if ($page == 'jobseeker-management.php') echo 'Job Seekers Management';
@@ -26,7 +25,10 @@
         ?>
     </h6>
     <div class="dropdown ms-auto d-flex">
-        <h6 class="mt-2 fw-bold" id="adminFullName"></h6>
+        <h6 class="mt-2 fw-bold" id="adminFullName">
+            <!-- Profile Picture and Account was loaded here  -->
+        </h6>
+        
         <button class="btn-dropdown ms-2 me-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
             aria-expanded="false">
             <i class="fa-solid fa-caret-down"></i>

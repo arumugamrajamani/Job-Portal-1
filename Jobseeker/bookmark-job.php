@@ -1,6 +1,11 @@
+<<<<<<< Updated upstream
 <?php include_once 'include/login_session.php'; ?>
 <!doctype html>
 <html lang="en">
+=======
+<!doctype php>
+<php lang="en">
+>>>>>>> Stashed changes
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,25 +40,25 @@ crossorigin="anonymous"></script>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item me-0">
-                <a class="nav-link text-dark message active " aria-current="page" href="message-jobseekers.html">MESSAGE</a>
+                <a class="nav-link text-dark message active " aria-current="page" href="message-jobseekers.php">MESSAGE</a>
                 </li>
                 <li class="nav-item ">
-                <a class="nav-link text-dark about active text-center" href="searchjob.html">JOB BOARD</a>
+                <a class="nav-link text-dark about active text-center" href="searchjob.php">JOB BOARD</a>
                 </li>
                 <li class="nav-item account dropdown active">
                 <a class="nav-link text-dark  dropdown-toggle account active" href="#" id="navbarDropdown"
                     role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img class="image" src="image/profileicon1.png" alt="Profile" width="50" height="30"> ACCOUNT</a>
                 <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item text-start" href="/Employer/company-profile.html"> Full Name</a></li>
+                    <li><a class="dropdown-item text-start" href="/Employer/company-profile.php"> Full Name</a></li>
                     <li>
                         <hr class="dropdown-divider bg-black">
                     </li>
-                    <li><a class="dropdown-item text-start" href="manage-account-1.html"> Edit Profile</a></li>
-                    <li><a class="dropdown-item text-start" href="manage-account-2.html"> Change Password</a></li>
-                    <li><a class="dropdown-item text-start" href="jobapplication.html"> Job Applications</a></li>
-                    <li><a class="dropdown-item bookmark1 text-start" href="bookmark-job.html"> Bookmarked jobs</a></li>
-                    <li><a class="dropdown-item text-start" href="resume.html"> Manage Resume</a></li>
+                    <li><a class="dropdown-item text-start" href="manage-account-1.php"> Edit Profile</a></li>
+                    <li><a class="dropdown-item text-start" href="manage-account-2.php"> Change Password</a></li>
+                    <li><a class="dropdown-item text-start" href="jobapplication.php"> Job Applications</a></li>
+                    <li><a class="dropdown-item bookmark1 text-start" href="bookmark-job.php"> Bookmarked jobs</a></li>
+                    <li><a class="dropdown-item text-start" href="resume.php"> Manage Resume</a></li>
                     <li><a class="dropdown-item logout text-start" href="#"> LOGOUT</a></li>
                 </ul>
                 <li>
@@ -178,4 +183,4 @@ function toggleImage() {
     }
 </script>
 </body>
-</html>
+</php>

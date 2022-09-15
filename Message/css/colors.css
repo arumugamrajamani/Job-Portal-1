@@ -8,6 +8,7 @@
     --scrollbar-track: #f1f1f1;
     --hover: #f0f0f0;
     --box-shadow: #00000050;
+    --button: var(--scrollbar-track);
     /* inbox */
     --inbox-name: var(--text);
     --input-text: var(--hover);
@@ -22,6 +23,18 @@
     /* profile */
     --medium-msg: #7e7e7e;
     --active: #00d7e2;
+
+    /* filter logo image */
+    --invert: 0;
+    --sepia: 97%;
+    --saturate: 4%;
+    --hue-rotate: 95deg;
+    --brightness: 115%;
+    --contrast: 100%;
+
+    /* toggle switch */
+    --slider: #28292c;
+    --toggle: #d8dbe0;
 }
 
 .dark-theme{
@@ -34,6 +47,8 @@
     --scrollbar-track: #f1f1f1;
     --hover: #293f53;
     --box-shadow: #0c161f;
+    --button: var(--text);
+    
     /* inbox */
     --inbox-name: var(--scrollbar-track);
     --input-text: var(--hover);
@@ -48,4 +63,16 @@
     /* profile */
     --medium-msg: #466b8d;
     --active: #c1c1c1;
+
+    /* filter logo image */
+    --invert: 1;
+    --sepia: 5%;
+    --saturate: 10;
+    --hue-rotate: 180deg;
+    --brightness: 1;
+    --contrast: 100%;
+
+    /* toggle switch */
+    --slider: #d8dbe0;
+    --toggle: #28292c;
 }

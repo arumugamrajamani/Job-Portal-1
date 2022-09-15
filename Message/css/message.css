@@ -1,10 +1,7 @@
 /* chat message */
 .chat {
-    height: calc(90vh - 10px);
-    width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: var(--container);
 }
 
 .chat .chat-name {
@@ -32,7 +29,6 @@
 .chat .chat-body {
     width: 100%;
     height: calc(100% - 115px);
-    /* background-color: white; */
     overflow-y: auto;
 }
 

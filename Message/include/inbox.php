@@ -7,18 +7,18 @@
                 else echo '<h3>MESSAGE</h3>';
             ?>
             <div class="option">
-                <a href="chat.php?new-message"><i class="fas fa-edit"></i></a>
+                <a href="?new-message"><i class="fas fa-edit"></i></a>
                 <i class="fas fa-sliders-h"></i>
             </div>
             <div class="popup-archive-spam"> <!--class = show -->
                 <div class="archive-popup ">
-                    <a href="chat.php?archive">
+                    <a href="?archive">
                         <i class="fas fa-archive"></i>
                         <p>Archive</p>
                     </a>
                 </div>
                 <div class="spam-popup">
-                    <a href="chat.php?spam">
+                    <a href="?spam">
                         <i class="fas fa-exclamation-triangle"></i>
                         <p>Spam</p>
                     </a>
@@ -27,14 +27,14 @@
         </div>
         <?php 
             if ($link == 'archive' || $link == 'spam') {
-                echo '
-                <div class="archived-spam">
-                    <a href="chat.php">
-                        <i class="fas fa-long-arrow-alt-left"></i>
-                        <h4>Messages</h4>
-                    </a>
-                </div> 
-                ';
+                echo <<<EOF
+                    <div class="archived-spam">
+                        <a href="$pageArray[0]">
+                            <i class="fas fa-long-arrow-alt-left"></i>
+                            <h4>Messages</h4>
+                        </a>
+                    </div>     
+                EOF;
             } else {
                 echo '
                 <div class="search">

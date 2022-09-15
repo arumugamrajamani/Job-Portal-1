@@ -1,6 +1,6 @@
 <?php 
     $media_files = '';
-    if ($link == 'media-files' || $link == 'chat.php' ||
+    if ($link == 'media-files' || $link == $pageArray[0] ||
         $link == 'archive' || $link == 'spam') {
             $media_files = 'active';
         }
@@ -28,13 +28,13 @@
             <button class="media-collapse">Media and Files <i class="fas fa-angle-right angle-right"></i></button>
             <div class="media-files">
                 <div class="media-section">
-                    <a href="chat.php?media">
+                    <a href="?media">
                         <i class="fas fa-file-image"></i>
                         <span>Media</span>
                     </a>
                 </div>
                 <div class="media-section">
-                    <a href="chat.php?files">
+                    <a href="?files">
                         <i class="fas fa-file-alt"></i>
                         <span>Files</span>
                     </a>
@@ -43,10 +43,10 @@
         </div>
     </div>
 </div>
-<div class="profile-con <?php if ($link == 'media' || $link == 'files') echo 'active'; ?>">
+<div class="profile-con <?php if ($link == 'media' || $link == 'files') echo 'active'; else echo '' ?>">
     <div class="profile">
         <div class="profile-header">
-            <a href="chat.php?media-files">
+            <a href="?media-files">
                 <i class="fas fa-long-arrow-alt-left"></i>
             </a>
             <h4>Media and Files</h4>

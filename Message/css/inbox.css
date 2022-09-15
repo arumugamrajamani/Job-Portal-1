@@ -1,10 +1,4 @@
 /* users inbox */
-.inbox {
-    height: calc(90vh - 10px);
-    width: 100%;
-    background-color: var(--container);
-}
-
 .archived-spam {
     margin-top: 23px;
     display: flex;

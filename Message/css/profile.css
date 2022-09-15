@@ -1,8 +1,5 @@
 /* start of profile */
 .profile-con {
-    height: calc(90vh - 10px);
-    width: 100%;
-    background-color: var(--container);
     display: none;
 }
 

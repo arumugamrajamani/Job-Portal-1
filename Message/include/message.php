@@ -36,7 +36,6 @@
                     </p>
                 </div>
             </div>
-            <input type="checkbox" name="" id="dark-mode">
         </div>
     </div>
     <!-- <div class="chat-input">

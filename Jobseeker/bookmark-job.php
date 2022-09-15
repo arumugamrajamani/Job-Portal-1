@@ -28,7 +28,7 @@ crossorigin="anonymous"></script>
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container-fluid">
             <a class="navbar-brand me-1" href="#"></a>
-            <img src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70" id="logo"></a>
+            <img src="image/light-logo.png" onclick="window.location.href='applicant-profile.php'" alt="Job Portal Logo" width="100" height="70" id="logo">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -95,14 +95,14 @@ crossorigin="anonymous"></script>
             <table class="table basic-table table-headers table table-hover">
             <thead class="text-dark text-center" id="title-sub">
                 <tr>
-                <th>Job Tittle</th>
+                <th>Job Title</th>
                 <th>Job Description</th>
                 <th>Action</th>
                 </tr>
             </thead>
             <tbody class="text-dark text-center" id="body-h">
                 <tr class="tr1">
-                <td data-title="Job Tittle">Administrative Assistant</td>
+                <td data-title="Job Title">Administrative Assistant</td>
                 <td data-title="Job Description" class="descript">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Velit accusamus harum cupiditate quisquam quae dolorem non voluptatem minus.
                 </td>
@@ -115,7 +115,7 @@ crossorigin="anonymous"></script>
             </tbody>
             <tbody class="bg-light text-dark text-center" id="body-h">
                 <tr class="tr1">
-                <td data-title="Job Tittle">Voice Over Artist</td>
+                <td data-title="Job Title">Voice Over Artist</td>
                 <td data-title="Job Description" class="descript">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Officia tenetur quis excepturi, commodi accusamus ad facere deserunt nulla quam
                     ratione?</td>
@@ -128,7 +128,7 @@ crossorigin="anonymous"></script>
             </tbody>
             <tbody class="bg-light text-dark text-center" id="body-h">
                 <tr class="tr1">
-                <td data-title="Job Tittle">Youtube Video Script Writer</td>
+                <td data-title="Job Title">Youtube Video Script Writer</td>
                 <td data-title="Job Description" class="descript">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Minus dolorum consectetur, animi explicabo libero recusandae vero blanditiis
                     dicta porro!</td>

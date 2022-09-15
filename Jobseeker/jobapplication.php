@@ -23,7 +23,7 @@
   <nav class="navbar navbar-expand-lg navbar-light shadow">
     <div class="container-fluid">
       <a class="navbar-brand me-1" href="#"></a>
-      <img src="image/light-logo.png" alt="Job Portal Logo" width="100" height="70" id="logo"></a>
+      <img src="image/flogo.png" onclick="window.location.href='applicant-profile.php'" alt="Job Portal Logo" width="100" height="70">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
             <a class="nav-link  message active " aria-current="page" href="message-jobseekers.php">MESSAGE</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link  about active text-center" href="/Jobseeker/jobcategories.php">JOB BOARD</a>
+            <a class="nav-link  about active text-center" href="jobcategories.php">JOB BOARD</a>
           </li>
           <li class="nav-item account dropdown active">
             <a class="nav-link dropdown-toggle account active" href="#" id="navbarDropdown"

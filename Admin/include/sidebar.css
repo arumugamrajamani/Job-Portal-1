@@ -1,0 +1,88 @@
+.closebtn{
+    color: var(--text-color);
+}
+
+.sidebar {
+    margin: 0;
+    padding-top: 55px;
+    width: 340px;
+    background-color: var(--bg-sidebar);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+.sidebar .menu .item .sub-menu a {
+    padding-left: 100px;
+}
+
+.sidebar .menu .item a .dropdown {
+    position: absolute;
+    right: 0;
+    margin-right: 25px;
+    margin-top: 5px;
+    transition: 0.1s ease;
+}
+
+/* ------------- Duplicates ----------- */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a {
+    display: block;
+    color: var(--text-color);
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    color: white;
+}
+  
+/* ------------- Duplicates ----------- */
+.sidebar a:hover {
+    background-color: var(--sidebar-hover) !important;
+    color: var(--hover-text) !important;
+}
+
+.sidebar a:hover {
+    color: var(--sidebar-hover);
+}
+
+/* ------------- Duplicates ----------- */
+.sidebar a:hover:not(.active) {
+    background-color: var(--sidebar-hover);
+    color: black;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: var(--secondary); /**#00c2d6**/;
+    color: black;
+}
+
+/* ------------- Duplicates ----------- */
+.sidebar .closebtn {
+    font-size: 36px;
+    margin-left: 270px;
+    margin-bottom: 35px;
+}
+
+.sidebar .closebtn {
+    margin-top: 20px;
+    font-size: 36px;
+    margin-left: 270px;
+    margin-bottom: 35px;
+    color: var(--text-color);
+}
+
+.sidebar .closebtn:hover {
+    background-color: transparent !important;
+}

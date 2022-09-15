@@ -77,7 +77,25 @@ $(document).ready(function () {
     });
 
 
-    
+    // Bookmark function for insidejob page. It will direct to the bookmark table if successfully performed
+    $("#bookmarkJob").click(function() {
+        $.ajax({
+            url: 'php/insidejob.inc.php',
+            type: 'POST',
+            data: {
+                bookmark: true,
+                postId: postId
+            },
+            dataType: 'JSON',
+            success: function (response) {
+                window.location = 'bookmark-job.php';
+                console.log("Finished");
+                console.log(response.string);
+            }
+        });
+    });
 
-    
+    $('#logout-id').click(function() {
+        window.location = '../logout.php';
+    });
 });

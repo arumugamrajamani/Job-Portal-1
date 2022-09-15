@@ -1,0 +1,93 @@
+@media screen and (max-width: 1280px){
+  .container-fluid{
+    position:relative;
+    top: 20px;
+    margin-left: 80px !important;
+    width: 90%;
+
+  }
+  .sidebar{
+    margin-top: 50px;
+    width: 340px;
+    left: -100%;
+
+  }
+  .closebtn{
+    position: absolute;
+    right: 0;
+    margin-top: -50px;
+  }
+}
+@media screen and (max-width: 580px){
+  .logo{
+    position: relative;
+    right:30px;
+  }
+  .header-text{
+    font-size: 20px;
+    position:relative;
+    right:70px;
+  }
+  .dropdown{
+    position: relative;
+    bottom: 50px;
+  }
+  .admin-name{
+    display: none;
+  } .closebtn{
+    position: absolute;
+    right: 0;
+    margin-top: -50px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .sidebar {
+    width: 340px;
+    left: -100%;
+    padding-top: 80px;
+    height: 100%;
+    position: fixed;
+  }
+  .openbtn:active .sidebar{
+    left: 0%;
+  }
+  .openbtn:after .container-fluid{
+    margin-left: 500px;
+  }
+  .justify-content-center{
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .navbar-expand-lg {
+    width: 100%;
+  }
+  .position-relative {
+    width: 100%;
+    margin-left: 170px;
+    margin-top: -70px;
+  }
+  .container-responsive {
+    height: auto;
+    width: 100%;
+    margin-left: -100px !important;
+  }
+  .edit-section {
+    width: 100%;
+  }.container-fluid{
+    right: left;
+    margin:40px !important;
+    margin-top: 70px;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    float: none;
+    
+  }
+  .container-fluid{
+    margin: 20px !important;
+    margin-top: 40px !important;
+  }
+}

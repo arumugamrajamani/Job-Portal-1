@@ -39,7 +39,8 @@ if (isset($_POST['getData'])) {
 
 if (isset($_POST['delete'])) {
     $Id = $_POST['postId'];
-    $fetchDetailsQuery = mysqli_query($conn, "DELETE FROM `applied_jobs` WHERE post_id = '$Id'");
+    $jobseeker_id = $_SESSION['user_id'];
+    $fetchDetailsQuery = mysqli_query($conn, "DELETE FROM `applied_jobs` WHERE post_id = '$Id' AND jobseeker_id='$jobseeker_id'");
 }
 
 // When the page is loaded the js will call for this then this will get the admin's data from the DB
@@ -62,6 +63,7 @@ if (isset($_POST['getTableData'])) {
         $date_applied = $row['date_applied'];
         $status = $row['status'];
         $post_id = $row['post_id'];
+        
         $tableData .= "<tr class='tr1'>
         <td data-title='Employer' class='employ'><img src='{$profilePic}' width='20' height='20' style='border-radius: 100px; object-fit: cover;'></img> {$employerName}
         </td>

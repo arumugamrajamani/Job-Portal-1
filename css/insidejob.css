@@ -179,7 +179,7 @@ body{
     margin-top: 25px;
     margin-right: 50px;
     width: 30%;
-    height: 78%;
+    height: 155px;
     margin-left: 8%;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -194,7 +194,7 @@ body{
 #content{
     padding: 0;
     background-color: #ffff;
-    margin-top: 0px;
+    /* margin-top: 0px; */
     margin-right: 1000px;
     width: 850px;
     height: 700px;
@@ -224,8 +224,8 @@ body{
 #req {
     font-size: 18px;
     position: relative;
-    top: 20px;
-    left: 40px;
+    /* top: 20px;
+    left: 40px; */
 }
 #ITS {
     font-size: 18px;
@@ -263,6 +263,7 @@ body{
     border-radius: 30px;
     background-color: var(--secondary);
     border:5px solid #00D7E2;
+    margin-right: 100px;
 
 }
 .appnow,.appnow:hover{

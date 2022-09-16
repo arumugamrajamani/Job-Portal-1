@@ -11,7 +11,7 @@
   <!-- jQuery cdn link below -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <title>Inside the Job</title>
-  <link rel="stylesheet" href="css/InsideJob.css">
+  <link rel="stylesheet" href="css/insidejob.css">
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar-example2">
   <!-- <div class="color-overlay">
@@ -96,7 +96,7 @@
       <div class="container-fluid" id="job">
         <div class="job desc">
           <h5><b>JOB DESCRIPTION</b> (Includes skill requirements/text type)</h5>
-          <p><u id="description"></u></p>
+          <p><u id="description1"></u></p>
         </div>
       </div>
       <div class="container-fluid" id="hire">
@@ -125,7 +125,7 @@
       <div class="container-fluid" id="sal1">
         <div class="salary1">
           <h4><b id="salaryy1"></b></h4>
-          <p>You must qualified to this position</p>
+          <p>What are you waiting for? Apply now! </p>
           <div class="butt">
             <button id="applyJob" class="logapp appnow" onclick="window.location.href='login.php'" style="text-decoration: none;">APPLY NOW</button>
           </div>

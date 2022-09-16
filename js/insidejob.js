@@ -8,7 +8,7 @@ $(document).ready(function () {
     function load_data(){
         // $('#applyJob').text('APPLY NOW')
         $.ajax({
-            url: 'php/insidejob.inc.php',
+            url: 'php/Insidejob.inc.php',
             type: 'POST',
             data: {
                 fetchData: true,
@@ -25,7 +25,7 @@ $(document).ready(function () {
                 $('#address').text(response.companyAddress);
                 $('#salaryy1').html(response.salary+' a month');
                 $('#employment').html('• '+response.employment);
-                $('#description').html(response.description);
+                $('#description1').html(response.description);
                 $('#datePosted').html(response.date);
 
                 // Check if the jobseeker was applied or not based on the fetched database on 'applied_jobs'
@@ -44,7 +44,7 @@ $(document).ready(function () {
         if ($(this).text() == "APPLY NOW") {
             console.log("Applied!")
             $.ajax({
-                url: 'php/insidejob.inc.php',
+                url: 'php/Insidejob.inc.php',
                 type: 'POST',
                 data: {
                     apply: true,
@@ -55,13 +55,13 @@ $(document).ready(function () {
                     console.log(response)
                     // Will direct to the jobapplication where it shows the 
                     // table of every jobpost where the jobseeker applied
-                    window.location = 'jobapplication.php';
+                    window.location = 'login.php';
                 }
             });
         }
         else if ($(this).text() == "APPLIED") {        
             $.ajax({
-                url: 'php/insidejob.inc.php',
+                url: 'php/Insidejob.inc.php',
                 type: 'POST',
                 data: {
                     testing: true,

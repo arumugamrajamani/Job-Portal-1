@@ -59,7 +59,7 @@ function isEmailExist($email)
 }
 
 // Function for storing files into storage folder for profile pictures
-function InsertIntoPPStorage($tmp_name, $filename)
+function InsertIntoPicStorage($tmp_name, $filename)
 {
     $target_directory = "../storage/profile pictures/employers/";
     $path =  $target_directory . $filename;
@@ -293,7 +293,7 @@ if (isset($_POST['submit'])) {
                 '$companyAddress', '$companyCEO', '$companySize', '$companyRevenue', '$industry', '$companyDescription', '$contactNumber',
                 '$companyEmail', '$companyLogoNewName', '$permitNewName', '$permitOriginalName', '$email', '$password', '0', NOW())");
 
-        InsertIntoPPStorage($_FILES["companyLogo"]["tmp_name"], $companyLogoNewName);
+        InsertIntoPicStorage($_FILES["companyLogo"]["tmp_name"], $companyLogoNewName);
         InsertIntoDTIStorage($_FILES["permit"]["tmp_name"], $permitNewName);
 
         // Return success status

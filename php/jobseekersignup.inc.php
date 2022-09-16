@@ -57,7 +57,7 @@ function isEmailExist($email)
     }
 }
 // Function for storing files into storage folder for profile pictures
-function InsertIntoPPStorage($tmp_name, $filename)
+function InsertIntoPicStorage($tmp_name, $filename)
 {
     //$target_directory = "../storage/jobseeker/";
     $path =  "../storage/profile pictures/jobseeker/" . $filename;
@@ -233,7 +233,7 @@ if (isset($_POST['submit'])) {
         mysqli_query($conn, "INSERT INTO jobseeker (fullname, mobile_number, profile_picture, resume, email, password, date_created, address, birthday, experience, salary, attainment, hours, html, js, py, csharp, cpp, php) 
                     VALUES ('$fullname', '$mobilenumber', '$profilePicNewName', '$resumeNewName', '$email', '$hashpassword', now(), '$address', '$birthday', '$experience', '$salary', '$attainment', '$hours', '$html', '$js', '$py', '$csharp', '$cpp', '$php')");
 
-        InsertIntoPPStorage($_FILES["profilePic"]["tmp_name"], $profilePicNewName);
+        InsertIntoPicStorage($_FILES["profilePic"]["tmp_name"], $profilePicNewName);
         InsertIntoResumeStorage($_FILES["resume"]["tmp_name"], $resumeNewName);
         // Return this as status success response
         $response = array('status' => 'success', 'pfp' => $profilePicNewName, 're' => $resumeNewName);

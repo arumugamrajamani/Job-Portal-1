@@ -58,10 +58,18 @@ function isEmailExist($email)
     }
 }
 
-// Function for storing files into storage folder
-function InsertIntoStorage($tmp_name, $filename)
+// Function for storing files into storage folder for profile pictures
+function InsertIntoPPStorage($tmp_name, $filename)
 {
-    $target_directory = "../storage/";
+    $target_directory = "../storage/profile pictures/employers/";
+    $path =  $target_directory . $filename;
+    move_uploaded_file($tmp_name, $path);
+}
+
+// Function for storing files into storage folder for the DTI FILES
+function InsertIntoDTIStorage($tmp_name, $filename)
+{
+    $target_directory = "../storage/DTI/";
     $path =  $target_directory . $filename;
     move_uploaded_file($tmp_name, $path);
 }
@@ -285,8 +293,8 @@ if (isset($_POST['submit'])) {
                 '$companyAddress', '$companyCEO', '$companySize', '$companyRevenue', '$industry', '$companyDescription', '$contactNumber',
                 '$companyEmail', '$companyLogoNewName', '$permitNewName', '$permitOriginalName', '$email', '$password', '0', NOW())");
 
-        InsertIntoStorage($_FILES["companyLogo"]["tmp_name"], $companyLogoNewName);
-        InsertIntoStorage($_FILES["permit"]["tmp_name"], $permitNewName);
+        InsertIntoPPStorage($_FILES["companyLogo"]["tmp_name"], $companyLogoNewName);
+        InsertIntoDTIStorage($_FILES["permit"]["tmp_name"], $permitNewName);
 
         // Return success status
         $response = array('status' => 'success');

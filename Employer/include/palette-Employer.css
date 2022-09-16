@@ -1,0 +1,29 @@
+ /* Light and Dark theme */
+ :root {
+    --page:#ECECEC;
+    --mast: #ffffff;
+    --primary: black;
+    --secondary: #00D7E2;
+    --bg: #00D7E2;
+    --border: #ececec;
+    --text: black;
+    --text1: #ffffff;
+    --container:#ffffff;
+    --button:#334553;
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+}
+
+.dark-theme {
+    --primary: #00c2d6;
+    --secondary: #182531;
+    --page: #293f53;
+    --mast: #d7e8fa; 
+    --another: #50677B;
+    --text: black;
+    --text1: black;
+    --bg: #50677B;
+    --border: #00c2d6;
+}

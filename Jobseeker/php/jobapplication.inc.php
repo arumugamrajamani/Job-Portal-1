@@ -71,6 +71,7 @@ if (isset($_POST['getTableData'])) {
         <td data-title='Job Description'>{}</td>
         <td data-title='Date Applied'>{$date_applied}</td>
         <td data-title='Status'>{$status}</td>
+        <td data-title='Interview Schedule'>{}</td>
         <td data-title='Action'>
             <button class='btn btn-info delete-btn' type='button' data-id='{$post_id}' id='btn-info'
             data-bs-toggle='modal' data-bs-target='#exampleModal'>Withdraw Application</button></td>

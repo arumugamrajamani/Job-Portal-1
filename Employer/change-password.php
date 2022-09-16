@@ -1,159 +1,112 @@
-<?php include_once 'include/login_session.php'; ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="css/change-password.css">
-    <!-- jQuery cdn link below -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <!-- Sweet alert cdn link below -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <title>Change password</title>
-</head>
+<?php 
+    include_once 'include/login-session-Employer.php';
+    include_once 'include/header-Employer.php'; 
+?>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light shadow">
-    <div class="container-fluid">
-      <a class="navbar-brand me-1" href="#"></a>
-      <img src="image/light-logo.png" onclick="window.location.href='company-profile.php'" alt="Job Portal Logo" width="100" height="70"  id="logo"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <form class="d-flex">
-        <input class="form-control searchbar" type="search" placeholder="Search for a job title" aria-label="Search">
-        <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
-      </form>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item me-0">
-            <a class="nav-link text-light message active" aria-current="page" href="message-employer.php">MESSAGE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light about active text-center" href="postajob.php">POST A JOB</a>
-          </li>
-          <li class="nav-item account dropdown active">
-            <a class="nav-link text-light dropdown-toggle account active" href="#" id="navbarDropdown"
-              role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img id="pfp" class="image" style="border-radius: 100px; object-fit: cover;" src="" alt="Profile" width="30" height="30"> ACCOUNT</a>
-            <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-              </li>
-              <li><a class="dropdown-item text-start" href="company-profile.php">MY ACCOUNT</a></li>
-                        <li><hr class="dropdown-divider bg-black"></li>
-                        <li><a class="dropdown-item text-start" href="jobmanage.php">JOB MANAGEMENT</a></li>
-                        <li><a class="dropdown-item text-start" href="manage-applicant-resume.php">MANAGE RESUME</a></li>
-                        <li><a class="dropdown-item text-start" href="manage-account-profile.php">EDIT PROFILE</a></li>
-                        <li><a class="dropdown-item logout text-start" href="../logout.php">LOGOUT</a></li>
-            </ul>
-        </ul>
-      </div>
-    </div>
-  </nav><br><br>
-  <div class="container contain"><br>
-      <div class="container block align-items-center text-center">
-        <h4 class="p-3 shadow-sm fw-bold head">Change Your Password</h4>
-        <div class="mt-3 cons">
-          <div class=" space">
-            <span class="icon" onclick="showHide()">
-              <i class='bi bi-eye-slash icon' aria-hidden="true"></i>
-              <i class='bi bi-eye icon'></i>
-            </span>
-            <label class="fw-bold mt-3 box">Current Password:</label>
-            <input type="password" id="currentpassword" class="Bcolor"><br><br>
-          </div>
-          <div class="mt-3 boxs">
-            <span class="icon1" onclick="showHide1()">
-              <i class='bi bi-eye-slash icon1' aria-hidden="true"></i>
-              <i class='bi bi-eye icon1'></i>
-            </span>
-            <label class="fw-bold mt-3 box">New Password:</label>
-            <input type="password" id="newpassword" class="Bcolor">
-        
-          </div>
-          <div class=" mt-3 boxs1">
-            <span class="icon2" onclick="showHide2()">
-              <i class='bi bi-eye-slash icon2' aria-hidden="true"></i>
-              <i class='bi bi-eye icon2'></i>
-            </span>
-            <label class="fw-bold mt-3 box1">Confirm Password:</label>
-            <input type="password" id="confirmpassword" class="Bcolor">
-          </div>
-          <label class="characters text-danger"></label><br><br><br>
-          <button type="button" class=" save fw-bold btn3" title="Save password" data-bs-toggle="modal" data-bs-target="#modal-save">Save</button>
-          <button type="button" onclick="window.location.href='company-profile.php'" class="fw-bold btn3">Cancel</button>
-        </div>
-      </div>
-  </div> 
-  <div class="modal fade" id="modal-save" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title ms-2" id="exampleModalLabel">Are you sure you want to change your password?</h5>
-            </div>
-            <div class="delete modal-body">
-                <button type="button" id="confirm" class="yes-no btn btn-success">Yes</button>
-                <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class = 'toggle-switch'>
-    <label class="lab">
-      <input class="dar" type = 'checkbox' onclick="toggleImage()">
-      <span id="icon2" class = 'slider'></span>
-    </label>
-</div>
-<script>
-    function showHide() {
-    let icon = document.querySelector(".icon"),
-        input = document.getElementById("currentpassword");
-    if (input.type === "password") {
-        input.type = "text";
-    } else {
-        input.type = "password";
-    }
-    icon.classList.toggle('is-active');
-    } function showHide1() {
-    let icon = document.querySelector(".icon1"),
-        input = document.getElementById("newpassword");
-    if (input.type === "password") {
-    } else {
-        input.type = "password";
-    }
-    icon.classList.toggle('is-active');
-    } function showHide2() {
-    let icon = document.querySelector(".icon2"),
-        input = document.getElementById("confirmpassword");
-    if (input.type === "password") {
-        input.type = "text";
-    } else {
-        input.type = "password";
-    }
-    icon.classList.toggle('is-active');
-    }
-    var icon2 = document.getElementById("icon2");
+    <?php include_once '../include/preloader-display.php'; ?>
+    <div class="color-overlay">
+        <?php include_once 'include/navbar-Employer.php'; ?>
+    </div><br>
 
-        icon2.onclick = function() {
-            document.body.classList.toggle("dark-theme")
+    <div class="container contain"><br>
+        <div class="container block align-items-center text-center">
+          <h4 class="p-3 shadow-sm fw-bold head">Change Your Password</h4>
+          <div class="mt-3 cons">
+            <div class=" space">
+              <span class="icon" onclick="showHide()">
+                <i class='bi bi-eye-slash icon' aria-hidden="true"></i>
+                <i class='bi bi-eye icon'></i>
+              </span>
+              <label class="fw-bold mt-3 box">Current Password:</label>
+              <input type="password" id="currentpassword" class="Bcolor"><br><br>
+            </div>
+            <div class="mt-3 boxs">
+              <span class="icon1" onclick="showHide1()">
+                <i class='bi bi-eye-slash icon1' aria-hidden="true"></i>
+                <i class='bi bi-eye icon1'></i>
+              </span>
+              <label class="fw-bold mt-3 box">New Password:</label>
+              <input type="password" id="newpassword" class="Bcolor">
+          
+            </div>
+            <div class=" mt-3 boxs1">
+              <span class="icon2" onclick="showHide2()">
+                <i class='bi bi-eye-slash icon2' aria-hidden="true"></i>
+                <i class='bi bi-eye icon2'></i>
+              </span>
+              <label class="fw-bold mt-3 box1">Confirm Password:</label>
+              <input type="password" id="confirmpassword" class="Bcolor">
+            </div>
+            <label class="characters text-danger"></label><br><br><br>
+            <button type="button" class=" save fw-bold btn3" title="Save password" data-bs-toggle="modal" data-bs-target="#modal-save">Save</button>
+            <button type="button" onclick="window.location.href='company-profile.php'" class="fw-bold btn3">Cancel</button>
+          </div>
+        </div>
+    </div> 
+    <div class="modal fade" id="modal-save" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title ms-2" id="exampleModalLabel">Are you sure you want to change your password?</h5>
+              </div>
+              <div class="delete modal-body">
+                  <button type="button" id="confirm" class="yes-no btn btn-success">Yes</button>
+                  <button type="button" class="yes-no btn btn-danger" data-bs-dismiss="modal">No</button>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class = 'toggle-switch'>
+        <label class="lab">
+          <input class="dar" type = 'checkbox' onclick="toggleImage()">
+          <span id="icon2" class = 'slider'></span>
+        </label>
+    </div>
+    <script>
+        function showHide() {
+        let icon = document.querySelector(".icon"),
+            input = document.getElementById("currentpassword");
+        if (input.type === "password") {
+            input.type = "text";
+        } else {
+            input.type = "password";
         }
-        function toggleImage() {
-        imgsrc= document.getElementById("logo").src;
-        if (imgsrc.indexOf("image/light-logo.png") !=-1){
-          document.getElementById("logo").src = "image/Techployment (7) 1.png";
+        icon.classList.toggle('is-active');
+        } function showHide1() {
+        let icon = document.querySelector(".icon1"),
+            input = document.getElementById("newpassword");
+        if (input.type === "password") {
+        } else {
+            input.type = "password";
         }
-        else{
-          document.getElementById("logo").src = "image/light-logo.png";
+        icon.classList.toggle('is-active');
+        } function showHide2() {
+        let icon = document.querySelector(".icon2"),
+            input = document.getElementById("confirmpassword");
+        if (input.type === "password") {
+            input.type = "text";
+        } else {
+            input.type = "password";
         }
-    }
-</script>
-      <script src="js/change-password.js"></script>
-      <script src="js/pfp.js"></script>
+        icon.classList.toggle('is-active');
+        }
+        var icon2 = document.getElementById("icon2");
+
+            icon2.onclick = function() {
+                document.body.classList.toggle("dark-theme")
+            }
+            function toggleImage() {
+            imgsrc= document.getElementById("logo").src;
+            if (imgsrc.indexOf("image/light-logo.png") !=-1){
+              document.getElementById("logo").src = "image/Techployment (7) 1.png";
+            }
+            else{
+              document.getElementById("logo").src = "image/light-logo.png";
+            }
+        }
+    </script>
+    <script src="js/change-password.js"></script>
+    <script src="js/pfp.js"></script>
 </body>
-
 </html>

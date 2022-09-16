@@ -12,15 +12,7 @@
 .btn-outline {
   background-color: #00c2d6;
 }
-.navbar-light {
-  background: #00D7E2;
-}
-.navbar-expand-lg {
-  width: 100%;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 17px;
-}
+
 .btn-outline-secondary {
   background-color: #00c2d6;
   color: white;
@@ -34,33 +26,23 @@
 .message {
   text-align: center;
 }
-.account {
-  text-align: center;
-  text-indent: -15px;
-  width: 250px;
-}
+
 .icon1{
   color: black !important;
 }
-.logout {
+
+/* .logout {
   background-color: #00c2d6;
   position: relative;
   left: 45px;
   border-radius: 10px;
   width: 100px;
-}
+} */
+
 .about {
   text-indent: 20px;
 }
-.account-drop {
-  text-align: center;
-  background: #ECECEC;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 250px;
-}
-.nav-item .dropdown-item:hover {
-  background-color: #8b8383;
-}
+
 .menudrop {
   background-color: #8b8383;
 }
@@ -297,9 +279,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .message {
   margin-left: 40px;
   }
-.navbar-nav .dropdown-menu {
-  padding-left: 20px;
-  }
   .logout {
     width: 110px;
   }
@@ -318,9 +297,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   .ms-auto {
    margin-left: 350px !important;
   }
-  .navbar-nav .dropdown-menu {
-    margin-left: -50px;
-  }
+
   .pagination {
     margin-left: 250px;
     }
@@ -361,7 +338,5 @@ p {
   .ms-auto {
     margin-left: 140px !important;
 }
-.account-drop {
-  margin-left: -40px;
-}
+
 }

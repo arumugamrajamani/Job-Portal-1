@@ -1,15 +1,15 @@
 
 <?php 
-    include_once 'include/login-session-Employer.php';
+    include_once 'include/login-session-Employer.php'; 
     include_once 'include/header-Employer.php'; 
 ?>
 
 <body>
-    <?php include_once '../include/preloader-display.php'; ?>
-    <div class="color-overlay">
-        <?php include_once 'include/navbar-Employer.php'; ?>
-    </div><br>
-
+    <?php 
+        include_once '../include/preloader-display.php';
+        include_once 'include/navbar-Employer.php'; 
+    ?>
+        
     <form class="container" id="background">
         <div class="col-sm-9 text-start row mb-3" >
             <h1 class="text-dark">EDIT ACCOUNT DETAILS</h1>

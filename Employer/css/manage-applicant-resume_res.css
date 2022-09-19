@@ -1,0 +1,160 @@
+@media screen and (max-width: 1400px){
+    .icon1 {
+      width: 300px;
+      margin-left: 700px;
+    }
+    .search1 {
+      width: 40px;
+      margin-left: 1000px;
+      margin-top: -82px;
+    }
+    .pagination {
+      margin-left: 400px;
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    .icon1 {
+      width: 300px;
+      margin-left: 590px;
+    }
+    .search1 {
+      width: 40px;
+      margin-left: 890px;
+      margin-top: -82px;
+    }
+    .pagination {
+      margin-left: 360px;
+    }
+  }
+  @media screen and (max-width: 1200px){
+    .icon1 {
+      width: 300px;
+      margin-left: 520px;
+      margin-top: 0px;
+    }
+    .search1 {
+      width: 40px;
+      margin-left: 820px;
+      margin-top: -82px;
+    }
+    .pagination {
+      margin-left: 320px;
+    }
+  }
+  @media screen and (max-width: 992px){
+    .icon {
+      width: 240px;
+    }
+    .icon1 {
+      margin-left: 320px;
+  }
+  .search1 {
+    margin-left: 620px;
+    margin-top: -79px;
+  }
+  .entries {
+    margin-left: 10px;
+  }
+  .pagination {
+    margin-left: 220px;
+  }
+  }
+  @media screen and (max-width: 768px) {
+    .ms-auto {
+      margin-left: 550px !important;
+    }
+    .about {
+      margin-left: 40px;
+    }
+    .form1 {
+      margin-left: -100px;
+    }
+    .search {
+      width: 40px;
+      margin-right: 20px;
+    }
+    .icon1 {
+      width: 250px;
+      margin-left: 140px;
+      margin-top: -35px;
+    }
+    .search1 {
+      margin-left: 390px;
+      margin-top: -76px;
+    }
+    .entries {
+      margin-left: 0px;
+      font-size: 12px;
+    }
+    .pagination {
+      margin-left: 255px;
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 576px){
+    .ms-auto {
+      margin-left: 360px !important;
+  }
+    .icon1 {
+      width: 300px;
+      margin-left: 5px;
+      margin-top: -5px;
+  }
+  .search1 {
+    margin-left: 305px;
+    margin-top: -73px;
+  }
+  .entries {
+    margin-left: 110px;
+    font-size: 12px;
+  }
+  .pagination {
+    margin-left: 70px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  }
+  @media screen and (max-width: 375px) {
+    .ms-auto {
+      margin-left: 150px !important;
+    }
+    #container {
+      width: 300px;
+      margin-left: 40px;
+    }
+    .icon {
+      width: 320px;
+      margin-left: 75px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+    .icon1 {
+      width: 220px;
+      margin-left: 5px;
+      margin-top: -2px;
+      height: 30px;
+    }
+    .search1 {
+      width: 30px;
+      margin-left: 225px;
+      margin-top: -54px;
+      height: 30px;
+    }
+    .bi-search::before {
+      margin-left: -5px;
+    }
+    .entries {
+      margin-left: 90px;
+      font-size: 10px;
+    }
+    .pagination {
+      margin-left: 255px;
+      font-size: 12px;
+    }
+    .pagination {
+      margin-left: 40px;
+      margin-top: 20px;
+      font-size: 10px;
+    }
+  }

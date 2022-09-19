@@ -1,4 +1,4 @@
-icon2.onclick = function() {
+toggle_slider.onclick = function() {
     document.body.classList.toggle("dark-theme")
 }
 

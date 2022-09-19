@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!--Added--->
-    <link rel="stylesheet" href="css/developer-team1.css">
+    <link rel="stylesheet" href="css/developer-backend.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <a href="https://www.flaticon.com/free-icons/graphic-design" title="graphic design icons">Graphic design icons created by Freepik - Flaticon</a>
     <a href="https://www.flaticon.com/free-icons/web-development" title="web development icons">Web development icons created by Freepik - Flaticon</a>
@@ -31,7 +31,7 @@
         <ul>
             <li>
                 <img src="image/maintenance.png">
-                <a href="#">Maintenance & Upgrade</a>
+                <a href="developer-team.php">Maintenance & Upgrade</a>
             </li>
             <li>
                 <img src="image/tester.png">
@@ -47,7 +47,7 @@
             </li>
             <li>
                 <img src="image/web-development.png">
-                <a href="developer-backend.php">Back-End Developers</a>
+                <a href="#">Back-End Developers</a>
             </li>
         </ul>
     </div>
@@ -55,7 +55,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg  h6 navbar-light bg fixed-top mx-0 shadow">
                 <a href="index.php" class="navbar-brand ms-3">
-                    <img src="image/light-logo.png" alt="Job Portal Logo"  id="logo"></a>
+                    <img src="image/light-logo.png" alt="Job Portal Logo"id="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
                     <img src="/Landing-Page/image/icons8-menu-60.png" alt="" width="40px" height="50px" id="burger">                    </button>
                     <div class="collapse navbar-collapse" id="toggleMobileMenu">
@@ -92,76 +92,126 @@
         <div class="container-responsive">
             <h1>MEET THE TEAM <br> JOP PORTAL DEVELOPERS</h1>
             <div class="container-box">
-                <h5>Maintenance & Upgrade</h5>
+                <h5>Back-End Developers</h5>
                 <div class="grid">
-                    <div class="card" id="card2">
-                        <img class="image" src="image/leader.jpg" class="card-img-top" alt="...">
-                        <div class="card-body" id="card3">
-                            <h5 class="card-title">Kimberly Ann S. Flores</h5>
-                            <p class="card-text">1st Team Leader/Maintenance</p>
-                        </div>
-                    </div>
-                    <div class="card" id="card2">
-                        <img class="image1" src="image/Borromeo, Ma. Cielo A 1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body" id="card3">
-                            <h5 class="card-title">Ma Cielo A. Borromeo</h5>
-                            <p class="card-text">2nd Team Leader/Upgrade</p>
-                        </div>
-                    </div>
-                    <div  class="card">
-                        <img class="image1" src="image/Gileanne Mae N. Estoesta.png" class="card-img-top" alt="...">
+                    <div class="card">
+                        <img class="image1" src="image/Carl Louie C. Cumpio.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Gileanne Mae N. Estoesta</h5>
-                            <p class="card-text">3rd Team Leader/Upgrade</p>
+                            <h5 class="card-title">Carl Louie C. Cumpio</h5>
+                            <p class="card-text">Back-end Developer</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img class="image1" src="image/Jessica M. Gullon.png" class="card-img-top" alt="...">
+                        <img class="image1" src="image/Alejandro B. Babilonia.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Jessica M. Gullon</h5>
-                            <p class="card-text">4th Team Leader/Upgrade</p>
-                        </div>
-                    </div>
-                    <div class="card" id="card2">
-                        <img class="image" src="image/coleader.jpg" class="card-img-top" alt="...">
-                        <div class="card-body" id="card3">
-                            <h5 class="card-title">Bryan D. Ubalde</h5>
-                            <p class="card-text">1st Co-Leader/Maintenance</p>
-                        </div>
-                    </div>
-                    <div class="card" id="card2">
-                        <img class="image" src="image/doc1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body" id="card3">
-                            <h5 class="card-title">Angelo Kenneth Arojo</h5>
-                            <p class="card-text">2nd Co-Leader/Maintenance</p>
-                        </div>
-                    </div>
-                    <div class="card" id="card2">
-                        <img class="image1" src="image/Valenzuela_Kristelle_Asereht_DS.jpg" class="card-img-top" alt="...">
-                        <div class="card-body" id="card3">
-                            <h5 class="card-title">Kristelle DS. Valenzuela</h5>
-                            <p class="card-text">3rd Co-Leader/Maintenance</p>
+                            <h5 class="card-title">Alejandro B. Babilonia</h5>
+                            <p class="card-text">Back-end Developer</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img class="image1" src="image/Hanna Catherine M. Borja.png" class="card-img-top" alt="...">
+                        <img class="image1" src="image/Mark Anthony S. Pandan.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Hannah Cathrine M. Borja</h5>
-                            <p class="card-text">4th Co-Leader/Maintenance</p>
+                            <h5 class="card-title">Mark Anthony S. Pandan</h5>
+                            <p class="card-text">Back-end Developer</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img class="image1" src="image/Bataller.png" class="card-img-top" alt="...">
+                        <img class="image1" src="image/Silas Samuel B. Baguhin.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Russel Ivan B. Bataller</h5>
-                            <p class="card-text">5th Co-Leader/Maintenance</p>
+                            <h5 class="card-title">Silas Samuel B. Baguhin</h5>
+                            <p class="card-text">Back-end Developer</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="image1" src="image/Viel M. Asiddao.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Viel M. Asiddao</h5>
+                            <p class="card-text">Back-end Developer</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="image1" src="image/Mark Ain James P. Ello.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mark Ain James P. Ello</h5>
+                            <p class="card-text">Back-end Developer</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="image1" src="image/Raymwel Selibio.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Raymwel Selibio</h5>
+                            <p class="card-text">Back-end Developer</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="image1" src="image/Sami L. Zine.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Sami L. Zine</h5>
+                            <p class="card-text">Back-end Developer</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="image" src="image/back-end2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Justine Rome M. Gullermo</h5>
+                            <p class="card-text">Back-end Developer</p>
+                        </div>
+                    </div>
+                    <div class="card" id="card2">
+                        <img class="image1" src="image/Teodoro, James Philiph O.jpg" class="card-img-top" alt="...">
+                        <div class="card-body" id="card3">
+                                <h5 class="card-title">James Philiph D. Teodoro</h5>
+                                <p class="card-text">Former Back-end Developer</p>
+                            </div>
+                        </div>
+                    <div class="card" id="card2">
+                        <img class="image1" src="image/Guiao.png" class="card-img-top" alt="...">
+                        <div class="card-body" id="card3">
+                            <h5 class="card-title">Roi P. Guiao</h5>
+                            <p class="card-text">Former Back-End Developer</p>
+                        </div>
+                    </div>
+                    <div class="card" id="card2">
+                        <img class="image1" src="image/Obrero.png" class="card-img-top" alt="...">
+                        <div class="card-body" id="card3">
+                            <h5 class="card-title">Mark Frederick B. Obrero</h5>
+                            <p class="card-text">Former Back-end Developer</p>
+                        </div>
+                    </div>
+                    <div class="card" id="card2">
+                        <img class="image" src="image/back-end1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body" id="card3">
+                            <h5 class="card-title">Mark John B. Castillo</h5>
+                            <p class="card-text">Former Back-end Developer</p>
+                        </div>
+                    </div>
+                    <div class="card" id="card2">
+                        <img class="image" src="image/back-end5.jpg" class="card-img-top" alt="...">
+                        <div class="card-body" id="card3">
+                            <h5 class="card-title">Kier John A. Manubay</h5>
+                            <p class="card-text">Former Back-end Developer</p>
+                        </div>
+                    </div>
+                    <div class="card" id="card2">
+                        <img class="image" src="image/back-end3.png" class="card-img-top" alt="...">
+                        <div class="card-body" id="card3">
+                            <h5 class="card-title">Ralph Eriez I. Ronquillo</h5>
+                            <p class="card-text">Former Back-end Developer</p>
+                        </div>
+                    </div>
+                    <div class="card" id="card2">
+                        <img class="image" src="image/back-end4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body" id="card3">
+                            <h5 class="card-title">Philip Czar A. Abrero</h5>
+                            <p class="card-text">Former Back-end Developer</p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>    
         </div>
     </div>
-    <footer class="page-footer shadow"><br>
+</div>
+<footer class="page-footer shadow"><br>
         <div class="container-fluid text-start text-md-left mt-5 px-5">
             <div class="row">
 				<div class="col-md-2 col-lg-2 mx-auto mb-4">
@@ -251,3 +301,4 @@
 
       </script>
 </body>
+</php>

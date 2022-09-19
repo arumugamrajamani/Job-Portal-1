@@ -1,4 +1,25 @@
 /* Note: d-flex is universally used outside navbar  */
+/* ---------------------- IDs --------------------- */
+#btn-navsearch {
+    background: #00d7e2;
+    border-radius: 0px 9px 9px 0px;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    font-weight: 500;
+    width: 50px;
+    border-radius: 0%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#navsearch {
+    border-radius: 0%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* --------------------- Classes --------------------*/
+
+/* For the navigation bar itself */
 .navbar-light {
     background-color: var(--secondary) !important;
     border-bottom: 1px solid #00D7E2;
@@ -18,11 +39,55 @@
     color: #554350 !important;
 }
 
+/* For the Account button and its outputted dropdown */
+.account {
+    text-align: center;
+  
+    width: 250px;
+}
 
-.i-search {
-    border-radius: 0%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+.account-drop {
+    text-align: left;
+    background-color: #ECECEC;
+    width: 200px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* For the dropdown items inside */
+.dropdown-menu{
+    position: absolute !important;
+    background-color:#ECECEC;
+    border-color: none;
+}
+
+.dropdown-menu.show{
+    line-height: 30px;
+    box-shadow: 1px 1px 5px;
+    border-radius: 15px;
+    border: none;
+    align-items: flex-start !important;
+}
+
+.dropdown-item{
+    padding-left: 10px;
+    text-align: start !important;
+    color:black;
+}
+
+.dropdown-item:hover {
+    background-color: #554350 !important;
+    color: white;
+}
+
+/* For toggling light and dark mode */
+.icon {
+    width: 350px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
 
 .swits {
@@ -88,25 +153,6 @@
     background-color: var(--light);
 }
 
-.dropdown-item:hover {
-    background-color: #554350 !important;
-    /* color: white; */
-}
-
-.account {
-    text-align: center;
-  
-    width: 250px;
-}
-
-.account-drop {
-    text-align: left;
-    background-color: #ECECEC;
-    width: 200px;
-    padding: 10px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 /* ---------- css Design for specific Screen Resolutions ----------*/
 @media screen and (max-width: 1100px) {
     .nav-link {

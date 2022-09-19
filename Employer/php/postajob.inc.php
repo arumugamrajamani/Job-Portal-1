@@ -14,8 +14,6 @@
             $companyNameInfo = array('status' => 'success');
             $companyName =($_POST['companyName']);
             $employment = ($_POST['employment']);
-            $primarySkill = ($_POST['primarySkill']);
-            $secondarySkill = ($_POST['secondarySkill']);
          }
         if(empty($_POST['jobTitle'])) {
             $jobTitleInfo = array('status' => 'error', 'message' => 'Job Title is required.');
@@ -61,10 +59,8 @@
             $jobDescription = mysqli_real_escape_string($conn, $jobDescription);
             $salaryWage = mysqli_real_escape_string($conn, $salaryWage);
             $employerEmail = mysqli_real_escape_string($conn, $employerEmail);
-            $primarySkill = mysqli_real_escape_string($conn, $primarySkill);
-            $secondarySkill = mysqli_real_escape_string($conn, $secondarySkill);
             $uid = mysqli_real_escape_string($conn, $_SESSION['user_id']);
-            mysqli_query($conn,"INSERT INTO `jobpost`(`company_name`, `job_title`, `employment_type`, `job_category`, `job_description`, `salary`, `employer_email`, `primary_skill`, `secondary_skill`, `postedby_uid`, `date_posted`) VALUES ('$companyName', '$jobTitle', '$employment', '$jobCategory', '$jobDescription', '$salaryWage', '$employerEmail','$primarySkill', '$secondarySkill','$uid',NOW())");
+            mysqli_query($conn,"INSERT INTO `jobpost`(`company_name`, `job_title`, `employment_type`, `job_category`, `job_description`, `salary`, `employer_email`, `postedby_uid`, `date_posted`) VALUES ('$companyName', '$jobTitle', '$employment', '$jobCategory', '$jobDescription', '$salaryWage', '$employerEmail','$uid',NOW())");
 
             $response = array('status' => 'success');
         }
@@ -92,8 +88,6 @@
             $jobDescription = $row['job_description'];
             $salaryWage = $row['salary'];
             $employerEmail = $row['employer_email'];
-            $primarySkill = $row['primary_skill'];
-            $secondarySkill = $row['secondary_skill'];
             $tableData =  "<tr class='tr'>
                              <td>{$companyName}</td>
                              <td>{$jobTitle}</td>
@@ -121,8 +115,6 @@
             $jobDescription = $row['job_description'];
             $salaryWage = $row['salary'];
             $employerEmail = $row['employer_email'];
-            $primarySkill = $row['primary_skill'];
-            $secondarySkill = $row['secondary_skill'];
             $tableData .=  "<tr>
                                 <td  data-title='Job Title'>{$jobTitle}</td>
                                 <td data-title='Number applicant'>Sample</td>
@@ -144,8 +136,6 @@
                             //     $jobDescription = $row1['job_description'];
                             //     $salaryWage = $row1['salary'];
                             //     $employerEmail = $row1['employer_email'];
-                            //     $primarySkill = $row1['primary_skill'];
-                            //     $secondarySkill = $row1['secondary_skill'];
                             //     $tableData .=  "<tr>
                             //                         <td  data-title='Job Title'>{$jobTitle}</td>
                             //                         <td data-title='Number applicant'>Sample</td>
@@ -187,13 +177,11 @@
         $jobDescription = $row['job_description'];
         $salary = $row['salary'];
         $employerEmail = $row['employer_email'];
-        $primarySkill = $row['primary_skill'];
-        $secondarySkill = $row['secondary_skill'];
         $postedby = $row['postedby_uid'];
         $date = dateTimeConvertion($row['date_posted']);
             
-        mysqli_query($conn, "INSERT INTO `jobpost_recycler`(`company_name`,`job_title`,`employment_type`,`job_category`,`job_description`,`salary`,`employer_email`,`primary_skill`,`secondary_skill`,`postedby_uid`,`date_posted`
-    ) VALUES('$companyName', '$jobTitle', '$employment', '$jobCategory', '$jobDescription', '$salary', '$employerEmail', '$primarySkill', '$secondarySkill', '$postedby', '$date'
+        mysqli_query($conn, "INSERT INTO `jobpost_recycler`(`company_name`,`job_title`,`employment_type`,`job_category`,`job_description`,`salary`,`employer_email`,`postedby_uid`,`date_posted`
+    ) VALUES('$companyName', '$jobTitle', '$employment', '$jobCategory', '$jobDescription', '$salary', '$employerEmail', '$postedby', '$date'
     )");
     
         mysqli_query($conn, "DELETE FROM `jobpost` WHERE `post_id` = '$postId'");

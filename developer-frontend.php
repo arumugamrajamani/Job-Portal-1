@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!--Added--->
-    <link rel="stylesheet" href="css/developer-team1.css">
+    <link rel="stylesheet" href="css/developer-documentation.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <a href="https://www.flaticon.com/free-icons/graphic-design" title="graphic design icons">Graphic design icons created by Freepik - Flaticon</a>
     <a href="https://www.flaticon.com/free-icons/web-development" title="web development icons">Web development icons created by Freepik - Flaticon</a>
@@ -31,11 +31,11 @@
         <ul>
             <li>
                 <img src="image/maintenance.png">
-                <a href="#">Maintenance & Upgrade</a>
+                <a href="developer-team.php">Maintenance & Upgrade</a>
             </li>
             <li>
                 <img src="image/tester.png">
-                <a href="developer-documentation.php">Documentation & Testers</a>
+                <a href="#">Documentation & Testers</a>
             </li>
             <li>
                 <img src="image/graphic-design.png">
@@ -92,69 +92,62 @@
         <div class="container-responsive">
             <h1>MEET THE TEAM <br> JOP PORTAL DEVELOPERS</h1>
             <div class="container-box">
-                <h5>Maintenance & Upgrade</h5>
+                <h5>Documentation and Testers</h5>
                 <div class="grid">
-                    <div class="card" id="card2">
-                        <img class="image" src="image/leader.jpg" class="card-img-top" alt="...">
-                        <div class="card-body" id="card3">
-                            <h5 class="card-title">Kimberly Ann S. Flores</h5>
-                            <p class="card-text">1st Team Leader/Maintenance</p>
-                        </div>
-                    </div>
-                    <div class="card" id="card2">
-                        <img class="image1" src="image/Borromeo, Ma. Cielo A 1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body" id="card3">
-                            <h5 class="card-title">Ma Cielo A. Borromeo</h5>
-                            <p class="card-text">2nd Team Leader/Upgrade</p>
-                        </div>
-                    </div>
-                    <div  class="card">
-                        <img class="image1" src="image/Gileanne Mae N. Estoesta.png" class="card-img-top" alt="...">
+                    <div class="card">
+                        <img class="image1" src="image/Untitled design (6) 1micaela.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Gileanne Mae N. Estoesta</h5>
-                            <p class="card-text">3rd Team Leader/Upgrade</p>
+                            <h5 class="card-title">Micaela Aurora C. Fuego</h5>
+                            <p class="card-text">Tester</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img class="image1" src="image/Jessica M. Gullon.png" class="card-img-top" alt="...">
+                        <img class="image1" src="image/Untitled design (7) 1welson.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Jessica M. Gullon</h5>
-                            <p class="card-text">4th Team Leader/Upgrade</p>
-                        </div>
-                    </div>
-                    <div class="card" id="card2">
-                        <img class="image" src="image/coleader.jpg" class="card-img-top" alt="...">
-                        <div class="card-body" id="card3">
-                            <h5 class="card-title">Bryan D. Ubalde</h5>
-                            <p class="card-text">1st Co-Leader/Maintenance</p>
-                        </div>
-                    </div>
-                    <div class="card" id="card2">
-                        <img class="image" src="image/doc1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body" id="card3">
-                            <h5 class="card-title">Angelo Kenneth Arojo</h5>
-                            <p class="card-text">2nd Co-Leader/Maintenance</p>
-                        </div>
-                    </div>
-                    <div class="card" id="card2">
-                        <img class="image1" src="image/Valenzuela_Kristelle_Asereht_DS.jpg" class="card-img-top" alt="...">
-                        <div class="card-body" id="card3">
-                            <h5 class="card-title">Kristelle DS. Valenzuela</h5>
-                            <p class="card-text">3rd Co-Leader/Maintenance</p>
+                            <h5 class="card-title">Welson D.Mondano</h5>
+                            <p class="card-text">Tester</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img class="image1" src="image/Hanna Catherine M. Borja.png" class="card-img-top" alt="...">
+                        <img class="image1" src="image/Carl Joseph R. Pagalanan.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Hannah Cathrine M. Borja</h5>
-                            <p class="card-text">4th Co-Leader/Maintenance</p>
+                            <h5 class="card-title">Carl Joseph R. Pagalanan</h5>
+                            <p class="card-text">Tester</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img class="image1" src="image/Bataller.png" class="card-img-top" alt="...">
+                        <img class="image1" src="image/Mark Joseph B. Poniado.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Russel Ivan B. Bataller</h5>
-                            <p class="card-text">5th Co-Leader/Maintenance</p>
+                            <h5 class="card-title">Mark Joseph B. Poniado</h5>
+                            <p class="card-text">Tester</p>
+                        </div>
+                    </div>
+                    <div class="card" id="card2">
+                        <img class="image1" src="image/Añonuevo, Kim Bryant Joshua 1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body" id="card3">
+                            <h5 class="card-title">Kim Bryant Joshua Añonuevo</h5>
+                            <p class="card-text">Former Tester</p>
+                        </div>
+                    </div>
+                    <div class="card" id="card2">
+                        <img class="image" src="image/doc2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body" id="card3">
+                            <h5 class="card-title">Jeanelle L. Cansino</h5>
+                            <p class="card-text">Former Tester</p>
+                        </div>
+                    </div>
+                    <div class="card" id="card2">
+                        <img class="image" src="image/doc3.png" class="card-img-top" alt="...">
+                        <div class="card-body" id="card3">
+                            <h5 class="card-title">John Christian G. Galang</h5>
+                            <p class="card-text">Former Documentation</p>
+                        </div>
+                    </div>
+                    <div class="card" id="card2">
+                        <img class="image" src="image/doc4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body" id="card3">
+                            <h5 class="card-title">Adrian S. Nunag</h5>
+                            <p class="card-text">Former Documentation</p>
                         </div>
                     </div>
                 </div>
@@ -251,3 +244,4 @@
 
       </script>
 </body>
+    </html>

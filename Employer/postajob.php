@@ -143,8 +143,9 @@
                     <input type="text" name="skill[]" id="skill_0" class="input form-control" placeholder="Add a skill">
                     <input type="button" class="addbtn" value="+" onclick="addSkill()">
                 </div>
+                <div id="skills">
+                </div>
                 
-                <div id="skills"></div>
                 <div class="col text-center">
                     <button type="submit" name="submit" class="btn mt-4 btn1" id="submit">SUBMIT</button>
                 </div>

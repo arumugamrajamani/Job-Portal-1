@@ -292,7 +292,6 @@ if (isset($_POST['submit'])) {
                 permit_original_name, email, password, is_verified, date_created) VALUES ('$employerName', '$employerPosition', '$companyName', 
                 '$companyAddress', '$companyCEO', '$companySize', '$companyRevenue', '$industry', '$companyDescription', '$contactNumber',
                 '$companyEmail', '$companyLogoNewName', '$permitNewName', '$permitOriginalName', '$email', '$password', '0', NOW())");
-
         InsertIntoPicStorage($_FILES["companyLogo"]["tmp_name"], $companyLogoNewName);
         InsertIntoDTIStorage($_FILES["permit"]["tmp_name"], $permitNewName);
 

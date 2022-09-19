@@ -2,7 +2,7 @@
     session_start();
 
     //includes db connection from 2 folders back
-    include '../../php/db-connection.php';
+    include 'db-connection.php';
 
     function dateTimeConvertion($date_posted){
         return date('M d, Y, h:i A', strtotime($date_posted));
@@ -43,7 +43,7 @@
         $date_posted = dateTimeConvertion($row['date_posted']);
         
         // The website will check if the user has already applied in this jobpost
-        $checkPost = mysqli_query($conn, "SELECT * FROM applied_jobs WHERE post_id='$post_id' AND jobseeker_id='$jobseeker_id'");
+        $checkPost = mysqli_query($conn, "SELECT * FROM applied_jobs WHERE post_id='$post_id'");
         $isApplied = (mysqli_num_rows($checkPost) != 0) ? true : false; 
 
         $response = array(
@@ -54,7 +54,7 @@
             'companyAddress' => $company_address, 
             'companyName' => $company_name, 
             'salary' => $salary, 
-            'description' => $job_description,
+            'description1' => $job_description,
             'isApplied' => $isApplied
         );
         echo json_encode($response);

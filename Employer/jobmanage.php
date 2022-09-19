@@ -5,9 +5,10 @@
 
 <body>
     <?php include_once '../include/preloader-display.php'; ?>
-    <div class="color-overlay">
-        <?php include_once 'include/navbar-Employer.php'; ?>
-    </div><br>
+    <?php 
+        include_once '../include/preloader-display.php';
+        include_once 'include/navbar-Employer.php'; 
+    ?>
 
     <div class="container p-md-4 mt-4" id="container">
         <form id="main-form"> 

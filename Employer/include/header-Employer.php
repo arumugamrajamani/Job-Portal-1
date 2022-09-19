@@ -24,9 +24,8 @@
 
     <!-- css design for Navbar -->
     <link rel="stylesheet" href="include/navbar-Employer.css">
-</head>
 
-<?php
+    <?php
     switch ($page) {
         case 'company-profile.php': case 'index.php': 
             ?>
@@ -36,6 +35,7 @@
         break;
         case 'change-password.php':
             ?>
+                <link rel="stylesheet" href="css/change-password_res.css">
                 <link rel="stylesheet" href="css/change-password.css">
                 <title>Change password</title>
             <?php
@@ -48,11 +48,13 @@
         case 'jobmanage.php':
             ?>
                 <link rel="stylesheet" href="css/jobmanage.css">
+                <link rel="stylesheet" href="css/jobmanage_res.css">
                 <title>Company Profile</title>
             <?php
         break;
         case 'manage-account-profile.php':
             ?>
+                <link rel="stylesheet" href="css/manage-account-profile_res.css">
                 <link rel="stylesheet" href="css/manage-account-profile.css">
                 <title>Edit Profile</title>
             <?php
@@ -60,6 +62,7 @@
         case 'manage-applicant-resume.php':
             ?>  
                 <link rel="stylesheet" href="css/manage-applicant-resume.css">
+                <link rel="stylesheet" href="css/manage-applicant-resume_res.css">
                 <title>Manage Applicant Resume</title>
             <?php
         break;
@@ -70,4 +73,7 @@
         break;
     }
 ?>
+</head>
+
+
 

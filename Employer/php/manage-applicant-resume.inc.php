@@ -153,12 +153,12 @@ if (isset($_POST['getData'])) {
         // Set the previous page
         $previous = $page - 1;
         $pagination .=  "<li class='page-item' data-page='{$previous}'>
-                                <a class='page-link bg-info text-dark'>Previous</a>
-                            </li>";
+                                <a class='page-link next text-dark'>Previous</a>
+                        </li>";
     } else {
         $pagination .=  "<li class='page-item' data-page='{$previous}'>
-                                <a class='page-link bg-info text-dark'>Previous</a>
-                            </li>";
+                                <a class='page-link next text-dark'>Previous</a>
+                        </li>";
     }
 
     // Loop through the pages
@@ -168,8 +168,8 @@ if (isset($_POST['getData'])) {
             $active = 'active';
         }
         $pagination .= "<li class='page-item {$active}' data-page='{$i}'>
-                                <a class='page-link text-dark'>{$i}</a>
-                            </li>";
+                                <a class='page-link num text-dark'>{$i}</a>
+                        </li>";
     }
 
     // Check if there are more than 1 page
@@ -177,20 +177,18 @@ if (isset($_POST['getData'])) {
         // Set the next page
         $next = $page + 1;
         $pagination .=  "<li class='page-item' data-page='{$next}'>
-                                <a class='page-link bg-info text-dark'>Next</a>
-                            </li>";
+                                <a class='page-link next text-dark'>Next</a>
+                        </li>";
     } else {
         $pagination .=  "<li class='page-item' data-page='{$next}'>
-                                <a class='page-link text-dark'>Next</a>
-                            </li>";
+                                <a class='page-link next text-dark'>Next</a>
+                        </li>";
     }
 
     // For entries display
     $entries_start = $start + 1;
     $entries_end = ceil($totalRecords / $pageLimit);
     $entries = "<span>Show <b>{$entries_start}</b> to <b>{$entries_end}</b> of {$totalRecords} entries</span>";
-
-    mysqli_close($conn);
 
     // Stored and return the displays for employer management page
     $response = array(
@@ -199,6 +197,7 @@ if (isset($_POST['getData'])) {
         'entries' => $entries
     );
 
+    mysqli_close($conn);
     // Return this output variable to the ajax call
     echo json_encode($response);
 }
@@ -216,6 +215,8 @@ if (isset($_POST['edit'])) {
     $response = array(
         // Blank
     );
+
+    mysqli_close($conn);
     echo json_encode($response);
 }
 
@@ -269,12 +270,12 @@ if (isset($_POST['bookmark'])) {
     }
 
     $query = mysqli_query($conn, $query);
-    mysqli_close($conn);
 
     $response = array(
         // Blank
     );
 
+    mysqli_close($conn);
     echo json_encode($response);
 }
 
@@ -305,11 +306,10 @@ if (isset($_POST['reject'])) {
     $query = "UPDATE `applied_jobs` SET `status` = 'Rejected' WHERE `apply_id`='$apply_id'";
     $query = mysqli_query($conn, $query);
 
-    mysqli_close($conn);
-
     $response = array(
         // Blank
     );
 
+    mysqli_close($conn);
     echo json_encode($response);
 }

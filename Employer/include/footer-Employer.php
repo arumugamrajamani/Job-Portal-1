@@ -18,7 +18,7 @@
         break;
         case 'change-password.php':
             ?>
-
+                <script src="js/change-password.js"></script>
             <?php
         break;
         case 'employer-message.php':

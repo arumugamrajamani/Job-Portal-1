@@ -1,7 +1,3 @@
-<?php
-    $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'],'/')+1);
-?>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
     <div class="container-fluid"> 
         <a class="navbar-brand me-1" href="#"></a>
@@ -9,10 +5,10 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <form class="d-flex">      
-            <input class="form-control icon i-search" type="search" placeholder="Search for a job title" aria-label="Search">
-            <button class="btn text-dark search" type="submit"><i class="bi bi-search"></i></button>
-        </form>
+        <!-- <form class="d-flex">      
+            <input class="form-control icon navsearch" id="navsearch" type="search" placeholder="Search for a job title" aria-label="Search">
+            <button class="btn text-dark" id="btn-navsearch" type="submit"><i class="bi bi-search"></i></button>
+        </form> -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item me-4">
@@ -27,13 +23,13 @@
                     ACCOUNT
                     </a>
                     <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-dark" id="name" href="company-profile.php"> employer_name </a></li>
+                        <li><a class="dropdown-item" id="name" href="company-profile.php"> employer_name </a></li>
                         <li><hr class="dropdown-divider bg-black"></li>
-                        <li><a class="dropdown-item text-dark" href="manage-account-profile.php"> Edit Profile</a></li>
-                        <li><a class="dropdown-item text-dark" href="change-password.php"> Change Password</a></li>
-                        <li><a class="dropdown-item text-dark" href="manage-applicant-resume.php"> Manage Resume</a></li>
-                        <li><a class="dropdown-item text-dark" href="jobmanage.php"> Job Management</a></li>
-                        <li><a class="dropdown-item logout text-dark" href="../logout.php"> Log Out</a></li>
+                        <li><a class="dropdown-item" href="manage-account-profile.php"> Edit Profile</a></li>
+                        <li><a class="dropdown-item" href="change-password.php"> Change Password</a></li>
+                        <li><a class="dropdown-item" href="manage-applicant-resume.php"> Manage Resume</a></li>
+                        <li><a class="dropdown-item" href="jobmanage.php"> Job Management</a></li>
+                        <li><a class="dropdown-item logout" href="../logout.php"> Log Out</a></li>
                     </ul>
                 </li>
                 <li>
@@ -41,7 +37,7 @@
                         <div class = 'toggle-switch'>
                             <label class="lab">
                                 <input class="dar" type = 'checkbox' onclick="toggleImage()">
-                                <span id="icon2" class = 'slider'></span>
+                                <span id="toggle_slider" class = 'slider'></span>
                             </label>
                         </div>
                     </div>

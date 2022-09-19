@@ -116,11 +116,11 @@
             // Set the previous page
             $previous = $page - 1;
             $pagination .=  "<li class='page-item' data-page='{$previous}'>
-                                    <a class='page-link bg-info text-dark'>Previous</a>
+                                    <a class='page-link next text-dark'>Previous</a>
                                 </li>";
         } else {
             $pagination .=  "<li class='page-item' data-page='{$previous}'>
-                                <a class='page-link bg-info text-dark'>Previous</a>
+                                <a class='page-link next text-dark'>Previous</a>
                             </li>";
         }
 
@@ -133,7 +133,7 @@
             
             $pagination .= "
                 <li class='page-item {$active}' data-page='{$i}'>
-                    <a class='page-link text-dark'>{$i}</a>
+                    <a class='page-link num text-dark'>{$i}</a>
                 </li>
             ";
         }
@@ -144,13 +144,13 @@
             $next = $page + 1;
             $pagination .=  "
                 <li class='page-item' data-page='{$next}'>
-                    <a class='page-link bg-info text-dark'>Next</a>
+                    <a class='page-link next text-dark'>Next</a>
                 </li>
             ";
         } else {
             $pagination .=  "
                 <li class='page-item' data-page='{$next}'>
-                    <a class='page-link bg-info text-dark'>Next</a>
+                    <a class='page-link next text-dark'>Next</a>
                 </li>
             ";
         }
@@ -168,6 +168,7 @@
             'entries' => $entries
         );
 
+        mysqli_close($conn);
         echo json_encode($response);
     }
 
@@ -199,6 +200,7 @@
             'secondarySkill' => $secondarySkill
         );
 
+        mysqli_close($conn);
         echo json_encode($response);
     }
     
@@ -212,6 +214,7 @@
             // Blank
         );
 
+        mysqli_close($conn);
         echo json_encode($response);
     }
     
@@ -257,6 +260,7 @@
             );
         }
 
+        mysqli_close($conn);
         echo json_encode($response);
     }
  

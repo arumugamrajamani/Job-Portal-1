@@ -1,0 +1,196 @@
+@media screen and (max-width: 1280px) {
+    .arrow {
+        margin-top: -73px;
+        margin-left: -100px !important;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .arrow {
+        margin-top: -73px;
+        margin-left: -90px !important;
+    }
+    .container{
+        height: 1700px !important;
+        width: 650px;
+        margin-left: 80px;
+    }
+    .drop{
+        margin-left: -100px;
+    }
+    h2{
+        font-size: 20px;
+        margin-left: 180px;
+    }
+    .form-control{
+        width: 350px !important;
+    }
+    .c1{
+        margin-left: -10px !important;
+    }
+    .icons1{
+        margin-left: -100px;
+        margin-top: 115px;
+    }
+    .div1{
+        width: 350px;
+    }
+    .smlogo{
+        margin-left: 80px;
+    }
+    .searches{
+        margin-right: 15px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .container{
+        height: 1750px !important;
+    }
+    .drop{
+        margin-left: -90px;
+    }
+    h2{
+        font-size: 18px;
+        margin-left: 180px;
+    }
+    .form-control{
+        width: 280px !important;
+    }
+    .icons1{
+        margin-left: -185px;
+        margin-top: 138px;
+    }
+    .div1{
+        width: 280px;
+    }
+    .smlogo{
+        margin-left: 45px;
+    }
+    .icon{
+        width: 300px !important;
+    }
+    .searches{
+        margin-right: 15px;
+    }
+    .input-container{
+        margin-left: 30px;
+    }
+
+}
+@media screen and (max-width: 670px) {
+    .arrow {
+        width: 50px;
+        margin-top: -73px;
+        margin-left: -70px !important;
+    }
+    .flat6{
+        width: 25px;
+    }
+    .container{
+        height: 1750px !important;
+        width: 650px;
+        margin-left: 60px;
+    }
+    .drop{
+        margin-left: -110px;
+    }
+    .form-control{
+        width: 280px !important;
+    }
+    .c1{
+        margin-left: -10px !important;
+    }
+    .col-form-label{
+        margin-left: -20px;
+    }
+    h2{
+        margin-left: 150px;
+    }
+    .icons1{
+        margin-top: 139.5px;
+        margin-left: -208px;
+    }
+    .submits{
+        margin-left: 150px !important;
+        width: 200px !important;
+    }
+}
+@media screen and (max-width: 375px) {
+    .arrow {
+        width: 50px;
+        margin-top: -130px;
+        margin-left: -10px !important;
+    }
+    .flat6{
+        width: 25px;
+    }
+    .container{
+        height: 1940px !important;
+        width: 363px;
+        margin-left: -5px;
+        margin-top: 20px;
+        background: linear-gradient(to right, rgba(0, 194, 214, 0.5) 0%, rgba(0, 194, 214, 0.5) 10%, white 10%, white 100%);
+    }
+    .drop{
+        margin-left: -110px;
+    }
+    .form-control{
+        width: 250px !important;
+    }
+    .c1{
+        margin-left: -70px !important;
+    }
+    #l1, #l2,#l7{
+        margin-left: 85px;
+    }
+    #l3,#l4{
+        margin-left: 90px;
+    }
+    #l5{
+        margin-left: 75px;
+    }
+    #l6,#l10,#l11,#l12{
+        margin-left: 100px;
+    }
+    #l8{
+        margin-left: 125px;
+    }
+    #l9{
+        margin-left: 80px;
+    }
+    #l13{
+        margin-left: 30px;
+    }
+    .input-field{
+        width: 150px !important;
+    }
+    .input-container{
+        margin-left: 50px;
+    }
+    h1{
+        font-size: 20px !important;
+    }
+    h2{
+        margin-left: 50px;
+    }
+    .icons1{
+        margin-top: 328px;
+        margin-left: -311px;
+    }
+    .submits{
+        margin-left: 50px !important;
+        width: 130px !important;
+        font-size: 10px !important;
+    }
+    .div1{
+        width: 250px;
+        height: 150px;
+    }
+    .smlogo{
+        margin-top: -25px;
+        margin-left: 50px;
+        width: 150px;
+    }
+}

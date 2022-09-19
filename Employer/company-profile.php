@@ -1,15 +1,18 @@
 <?php 
     include_once 'include/login-session-Employer.php';
     include_once 'include/header-Employer.php'; 
-    include_once "../php/db-connection.php";
+    require "../php/db-connection.php";
+
+    $employerId = $_SESSION['user_id'];
+    $user = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM employer WHERE employer_id = '$employerId'"));
 ?>
 
 <body>
-    <?php include_once '../include/preloader-display.php'; ?>   
-    <div class="color-overlay">
-        <?php include_once 'include/navbar-Employer.php'; ?>
-    </div><br>
-
+    <?php 
+        include_once '../include/preloader-display.php'; 
+        include_once 'include/navbar-Employer.php'; 
+    ?>
+    
     <div class="container bg-white my-4"> <br>
         <div class="banner mx-5">
             <div class="btn div1 text-end">

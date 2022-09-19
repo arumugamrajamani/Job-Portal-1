@@ -272,12 +272,9 @@ hr {
   }
 }
 @media screen and (max-width: 375px) {
-
   #inner{
     width: 100% !important;
   }
-
-
 }
 .company_logo{
   width: 11rem;

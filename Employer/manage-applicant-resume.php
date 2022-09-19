@@ -5,10 +5,10 @@
 
 <!-- Navigation bar -->
 <body>
-    <?php include_once '../include/preloader-display.php'; ?>
-    <div class="color-overlay">
-        <?php include_once 'include/navbar-Employer.php'; ?>
-    </div><br>
+    <?php 
+        include_once '../include/preloader-display.php';
+        include_once 'include/navbar-Employer.php'; 
+    ?>
 
     <!-- Manage Resume Table -->
     <div class="container-responsive p-md-5 mt-4" id="container">
@@ -16,13 +16,15 @@
             <div class=" col-auto text-center">
                 <section class="type p-1">
                     <div class="bg-color-header">
-                       
-                        <h2 class="text-start"><b>MANAGE APPLICATION'S RESUME</b>
-                            <form class="d-flex mt-4 form2" id = 'main'>
-                                <input class="form-control icon1" id="search" placeholder="Search for an Applicant Name" aria-label="Search">
+                    <div class="bg-header">
+                            <!--transfer class=form2 outside h2-->
+                            <h2 class="text-start"><b>MANAGE APPLICANTS RESUME</b></h2>
+                            <form class="d-flex">
+                                <input class="form-control icon1" type="search" id="search" placeholder="Search for an applicant" aria-label="Search">
                                 <button class="btn text-dark fw-bold search1" type="submit"><i class="bi bi-search"></i></button>
                             </form>
-                        </h2>
+                        </div>
+
                         <div class="table-responsive" id="no-more-tables">
                             <table class="table basic-table table-headers table table-hover">
                                 <thead class="text-dark text-center" id="title-sub">

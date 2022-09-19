@@ -38,7 +38,7 @@ $(document).ready(function () {
 
     // Whenever the "Yes" button was clicked, it select that row based on the jobpost_id and proceed to the event
     $("#apply-yes").click(function() {
-        let postId = $(this).val();
+        let postId = $('.btn-apply').attr('data-id');
         $.ajax({
             url: 'php/bookmark-job.inc.php',
             type: 'POST',
@@ -61,7 +61,7 @@ $(document).ready(function () {
     })
 
     $("#delete-yes").click(function() {
-        let postId = $(this).val();
+        let postId = $('.btn-delete').attr('data-id');
         $.ajax({
             url: 'php/bookmark-job.inc.php',
             type: 'POST',

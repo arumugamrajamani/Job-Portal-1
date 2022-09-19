@@ -51,7 +51,7 @@ $(document).ready(function (){
                  postId: postId
             },
             success: function (response) {
-                $('#exampleModal').modal('hide');
+                $('#reject-Modal').modal('hide');
                 console.log(postId);
                 toastr.options = {
                     positionClass : "toast-top-center"

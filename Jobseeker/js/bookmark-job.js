@@ -13,7 +13,11 @@ $(document).ready(function () {
             success: function (response) {
                 $("thead").after(response.tableData);
                 console.log("Success");
-                // console.log(response.tableData);
+                console.log(response.tableData);
+            },
+            error: function (jqXHR, status, description) {
+                console.log(jqXHR.responseText);
+                console.log(status);
             }
         });
     }
@@ -30,6 +34,7 @@ $(document).ready(function () {
         let jobpost_id = $(this).attr('data-id');
         $("#delete-yes").val(jobpost_id);
     });
+    
 
     // Whenever the "Yes" button was clicked, it select that row based on the jobpost_id and proceed to the event
     $("#apply-yes").click(function() {

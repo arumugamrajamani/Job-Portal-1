@@ -68,7 +68,7 @@ if (isset($_POST['delete'])) {
     $jobseeker_id = $_SESSION['user_id'];
     $jobpost_id = $_POST['postId'];
 
-    $query = "DELETE FROM `jobpost_bookmark` WHERE jobseeker_id='$jobseeker_id' AND jobpost_id='$jobpost_id'";
+    $query = "DELETE FROM 'jobpost_bookmark' WHERE jobseeker_id='$jobseeker_id' AND jobpost_id='$jobpost_id'";
     $query = mysqli_query($conn, $query);
 
     $response = array (

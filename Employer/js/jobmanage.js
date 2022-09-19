@@ -29,6 +29,10 @@ $(document).ready(function () {
                 $('#body-h').html(data.tableData);
                 $('#pagination').html(data.pagination)
                 $('#entries').html(data.entries)
+            },
+            error: function (jqXHR, status, description) {
+                console.log(jqXHR.responseText);
+                console.log(status);
             }
         });
     }

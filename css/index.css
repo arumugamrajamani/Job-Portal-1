@@ -159,7 +159,7 @@ h1 {
   font-size: 36px;
 }
 p {
-  color: var(--text1) !important;
+  color: var(--text) !important;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;

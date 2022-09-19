@@ -1,0 +1,207 @@
+/* Note: d-flex is universally used outside navbar  */
+.navbar-light {
+    background-color: var(--secondary) !important;
+    border-bottom: 1px solid #00D7E2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav-link {
+    border-radius: 10px;
+    width: 150px;
+    font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 17px;
+      color: var(--primary) !important;
+}
+
+.nav-link:hover {
+    color: #554350 !important;
+}
+
+
+.i-search {
+    border-radius: 0%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.swits {
+    position: relative;
+    top: -38px;
+    padding-right: 100px;
+    padding-left: 25px;
+}
+
+.toggle-switch {
+    right: 50px;
+    align-self: flex-end;
+    float: right;
+    height: 35px;
+    margin-top: 42px;
+    position: absolute;
+    width: 75px;
+}
+
+.toggle-switch .lab{
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    background-color: var(--dark);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+  
+.lab .slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+  
+.lab .slider::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: inset 8px -8px 0px 0px var(--light);
+    background-color: var(--dark);
+    transition: 0.3s;
+}
+  
+.lab .dar {
+    position: absolute;
+    display: none;
+}
+
+.lab .dar:checked ~ .slider::before {
+    transform: translateX(40px);
+    background-color: var(--dark);
+    box-shadow: none;
+}
+
+.lab .dar:checked ~ .slider {
+    background-color: var(--light);
+}
+
+.dropdown-item:hover {
+    background-color: #554350 !important;
+    /* color: white; */
+}
+
+.account {
+    text-align: center;
+  
+    width: 250px;
+}
+
+.account-drop {
+    text-align: left;
+    background-color: #ECECEC;
+    width: 200px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* ---------- css Design for specific Screen Resolutions ----------*/
+@media screen and (max-width: 1100px) {
+    .nav-link {
+        padding: 0% !important;
+    }
+    .navbar {
+        width: 1100px;
+    }
+}
+@media screen and (max-width: 990px) {
+    .navbar {
+        width: 1000px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .logo {
+        position: relative;
+        right: 60px;
+    }
+    .navbar-toggler {
+        position: relative; 
+    }
+    .navbar-collapse {
+        text-align: end;
+        display:inline;
+    }
+    .d-flex {
+        position: relative;
+        left: 10px;
+    }
+    .nav-item {
+        width: 150px;
+    }
+    .navbar {
+        width: 768px;
+    }
+    .navbar-nav{
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media screen and (max-width: 375px) {
+    .logo {
+        position: relative;
+        right: 130px;
+        width: 60px;
+        height: 50px;
+    }
+    .d-flex {
+        position: relative;
+        left: -380px;
+    }
+    .navbar-toggler {
+        position: relative;
+        right: 250px;
+    }
+    .form-control {
+        width: 180px;
+    }
+
+    .dropdown-divider{
+        margin: 3px;
+    }
+    .navbar-nav{
+        margin: 0 !important;
+        width: 100% !important;
+        flex-direction: row;
+        margin-left: -10px!important;
+    }
+
+    .nav-link{
+        text-align: center;
+        font-size: 9px;
+        width: 100%;
+    }
+    .nav-item{
+        align-items: center;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        margin: 0% !important;
+        position: relative;
+        right: 200px;
+    }
+    .dropdown-menu.show{
+        padding: 5px;
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .dropdown-item{
+        width: auto;
+        padding: 0;
+        font-size: 10px;
+    }
+}

@@ -1,67 +1,14 @@
-<?php
-include_once 'include/login_session.php';
-require './../php/db-connection.php';
-$employerId = $_SESSION['user_id'];
-$user = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM employer WHERE employer_id = '$employerId'"));
+<?php 
+    include_once 'include/login-session-Employer.php';
+    include_once 'include/header-Employer.php'; 
+    include_once "../php/db-connection.php";
 ?>
 
-
-
-<!DOCTYPE html>
-<html lang="en">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://kit.fontawesome.com/e5ed048aee.js" crossorigin="anonymous"></script>
-    <!--Font-->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,455;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <!-- Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/company-profile.css">
-    <!-- jQuery cdn link below -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <!-- Toast CDN for functionality of toastr -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Company Profile</title>
-</head>
 <body>
-    <?php include_once '../include/preloader-display.php'; ?>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-        <div class="container-fluid"> 
-            <a class="navbar-brand me-1" href="#"></a>
-            <img src="image/light-logo.png" onclick="window.location.href='company-profile.php'" alt="Job Portal Logo" width="100" height="70" id="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <form class="d-flex">      
-                <input class="form-control icon" type="search" placeholder="Search for a job title" aria-label="Search">
-                <button class="btn text-dark fw-bold search" type="submit"><i class="bi bi-search"></i></button>
-            </form>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item me-4"><a class="nav-link text-dark  message active" aria-current="page" href="message-employer.php">MESSAGE</a></li>
-                    <li class="nav-item me-4"><a class="nav-link text-dark  about active" href="postajob.php">POST A JOB</a></li>             
-                    <li class="nav-item account dropdown active">
-                    <a class="nav-link text-dark  dropdown-toggle account active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img id="pfp" class="image" style="border-radius: 100px; object-fit: cover;" src="" alt="Profile" width="30" height="30"> ACCOUNT</a>
-                    <ul class="dropdown-menu account-drop" aria-labelledby="navbarDropdown">
-                        <li><a id="compname" class="dropdown-item text-light" href="company-profile.php"></a></li>
-                        <li><hr class="dropdown-divider bg-white"></li>
-                        <li><a class="dropdown-item text-light" href="jobmanage.php">JOB MANAGEMENT</a></li>
-                        <li><a class="dropdown-item text-light" href="manage-applicant-resume.php">MANAGE RESUME</a></li>
-                        <li><a class="dropdown-item text-light" href="manage-account-profile.php">EDIT PROFILE</a></li>
-                        <li><a class="dropdown-item text-light" href="change-password.php">CHANGE PASSWORD</a></li>
-                        <li><a class="dropdown-item logout text-light" href="../logout.php">LOGOUT</a></li>
-                    </ul>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include_once '../include/preloader-display.php'; ?>   
+    <div class="color-overlay">
+        <?php include_once 'include/navbar-Employer.php'; ?>
+    </div><br>
 
     <div class="container bg-white my-4"> <br>
         <div class="banner mx-5">
@@ -248,28 +195,7 @@ $user = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM employer WHERE emp
         </section><br>
     </div>
     </div>
-    <div class = 'toggle-switch'>
-        <label class="lab">
-          <input class="dar" type = 'checkbox' onclick="toggleImage()">
-          <span id="icon2" class = 'slider'></span>
-        </label>
-    </div>
-    <script>
-        var icon2 = document.getElementById("icon2");
-
-icon2.onclick = function() {
-    document.body.classList.toggle("dark-theme")
-}
-function toggleImage() {
-        imgsrc= document.getElementById("logo").src;
-        if (imgsrc.indexOf("image/light-logo.png") !=-1){
-          document.getElementById("logo").src = "image/Techployment (7) 1.png";
-        }
-        else{
-          document.getElementById("logo").src = "image/light-logo.png";
-        }
-    }
-    </script>
-    <script src="js/company-profile.js"></script>
+    
+    <?php include_once 'include/footer-Employer.php' ?>    
 </body>
 </html>

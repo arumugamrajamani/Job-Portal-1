@@ -108,7 +108,7 @@ $(document).ready(function() {
             $('#salarywage').popover({ placement: 'right', content: 'Amount is required.'}).popover('show');
         } else if(isNaN(fullname)) {
             $('#salarywage').removeClass().addClass('form-control border-danger').popover('dispose');
-            $('#salarywage').popover({ placement: 'right', content: 'Only characters are allowed.' }).popover('show');
+            $('#salarywage').popover({ placement: 'right', content: 'Only numbers are allowed.' }).popover('show');
         } else {
             $('#salarywage').removeClass().addClass('form-control border-success').popover('dispose');
         }

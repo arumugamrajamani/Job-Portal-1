@@ -15,17 +15,6 @@
     background-color: #00C2D6;
 }
 
-.navbar-light {
-    background-color: #00D7E2 !important;
-}
-
-.navbar-expand-lg {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 17px;
-    width: 100%;
-}
-
 .btn-outline-secondary {
     background-color: #00C2D6;
     color: white;
@@ -38,39 +27,16 @@
     left: 20px;
 }
 
-.nav-link {
-    border-radius: 10px;
-    width: 150px;
-}
-
 .message {
     text-align: center;
 
-}
-
-.account {
-    text-align: center;
-    text-indent: -15px;
-
-    width: 250px;
 }
 
 .about {
     text-indent: 20px;
 }
 
-.account-drop {
-    text-align: center;
-    background: #ECECEC;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 250px;
-}
-
 .menudrop {
-    background-color: #8B8383;
-}
-
-.nav-item .dropdown-item:hover {
     background-color: #8B8383;
 }
 
@@ -234,12 +200,6 @@ input[type=file]::file-selector-button {
     border: 2px solid dodgerblue;
 }
 
-.i-search {
-    border-radius: 0%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
 .descrip {
     width: 72%;
     background: #ECECEC;
@@ -305,12 +265,6 @@ input[type=file]::file-selector-button {
         height: 1700px !important;
         width: 650px;
         margin-left: 80px;
-    }
-    .navbar-nav {
-        margin-left: 590px !important;
-    }
-    #navbarDropdown{
-        margin-left:  -50px;
     }
     .drop{
         margin-left: -100px;
@@ -390,12 +344,6 @@ input[type=file]::file-selector-button {
         width: 650px;
         margin-left: 60px;
     }
-    .navbar-nav {
-        margin-left: 480px !important;
-    }
-    #navbarDropdown{
-        margin-left:  -50px;
-    }
     .drop{
         margin-left: -110px;
     }
@@ -435,12 +383,6 @@ input[type=file]::file-selector-button {
         margin-left: -5px;
         margin-top: 20px;
         background: linear-gradient(to right, rgba(0, 194, 214, 0.5) 0%, rgba(0, 194, 214, 0.5) 10%, white 10%, white 100%);
-    }
-    .navbar-nav {
-        margin-left: 200px !important;
-    }
-    #navbarDropdown{
-        margin-left:  -50px;
     }
     .drop{
         margin-left: -110px;

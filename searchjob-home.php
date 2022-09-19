@@ -224,18 +224,18 @@
                 </div>
 
                 <nav aria-label="Page navigation example">
-                    <div class="entries" id="entries">
+                    <div class="entries" >
                         <!-- </span>Show 1 to 3 of 3 entries</span> -->
                     </div>
-                    <ul class="pagination" id="pagination">
-                        <!-- <li class="page-item" data-page="0"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item" data-page="1"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item" data-page="2"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item" data-page="3"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item" data-page="4"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Last</a></li> -->
-                    </ul>
+                    <ul class="pagination">
+                            <li class="page-item num1"><a class="page-link page1" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Last</a></li>
+                        </ul>
                 </nav>
             </div>
         </div>
